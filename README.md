@@ -109,3 +109,7 @@ src/           pipeline code (frame sampling, model calls, parsing, evaluation)
 notebooks/     exploration and analysis
 outputs/       model responses and results (not tracked in git)
 ```
+
+## License
+
+MIT, see [LICENSE](LICENSE). Security reports: see [SECURITY.md](SECURITY.md).
