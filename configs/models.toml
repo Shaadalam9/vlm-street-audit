@@ -1,0 +1,55 @@
+# The VLMs that analyse the footage. All run on device, one at a time, on one
+# RTX 5090 (32 GB). Chosen 2026-10-25: four developers and model lineages, so a
+# finding shared by several models is not one family's bias.
+#
+# Fitting 32 GB: a ~27-31B model in BF16 needs ~55-62 GB, so those run as 4-bit
+# (W4A16) checkpoints; 8B models run in BF16. Every model keeps roughly 10 GB or
+# more for the vision encoder, image tokens and KV cache.
+#
+# Serving: vLLM (Linux or WSL2, CUDA 12.8+ build for Blackwell) with its
+# OpenAI-compatible API on localhost, so one client talks to every model.
+# Pin `revision` to a commit hash before the real runs.
+
+[[model]]
+key = "qwen3.8-27b"
+family = "Qwen (Alibaba)"
+checkpoint = "RedHatAI/Qwen3.8-27B-INT4"   # W4A16 of Qwen/Qwen3.8-27B (Aug 2026)
+base = "Qwen/Qwen3.8-27B"
+precision = "int4-w4a16"
+approx_weights_gb = 17
+license = "apache-2.0"
+role = "strongest general model; image + video; Qwen grounding format"
+notes = "Thinking is on by default: set enable_thinking=false for structured JSON output, or log the reasoning separately."
+
+[[model]]
+key = "gemma4-31b"
+family = "Gemma (Google)"
+checkpoint = "google/gemma-4-31B-it-qat-w4a16-ct"   # Google's own quantisation-aware 4-bit
+base = "google/gemma-4-31B-it"
+precision = "int4-w4a16 (QAT)"
+approx_weights_gb = 19
+license = "apache-2.0"
+role = "second large model from another lineage; object detection and pointing listed on its card"
+notes = "Video only as frames, at most 60 s at 1 fps. Set the visual token budget (70-1120) explicitly and keep it the same across runs."
+
+[[model]]
+key = "molmo2-8b"
+family = "Molmo (Ai2)"
+checkpoint = "allenai/Molmo2-8B"
+base = "allenai/Molmo2-8B"
+precision = "bf16"
+approx_weights_gb = 18
+license = "apache-2.0"
+role = "localisation specialist: points and video tracks; open weights and open training data"
+notes = "Outputs <points>/<tracks> with coordinates scaled to 0-1000, no boxes. Needs trust_remote_code."
+
+[[model]]
+key = "internvl3.5-8b"
+family = "InternVL (Shanghai AI Lab)"
+checkpoint = "OpenGVLab/InternVL3_5-8B-HF"
+base = "OpenGVLab/InternVL3_5-8B"
+precision = "bf16"
+approx_weights_gb = 17
+license = "apache-2.0"
+role = "fourth lineage; older (Aug 2025), a reference point for how much newer models gain"
+notes = "The -HF checkpoint loads with plain transformers, no remote code."

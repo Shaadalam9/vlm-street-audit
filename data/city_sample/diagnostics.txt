@@ -1,0 +1,13 @@
+LPM CITY SAMPLING DIAGNOSTICS
+Implementation: M-Colley/lpm-sampling
+Input rows: 8889
+Eligible cities: 1618 in 175 countries
+Vehicle type: 0, time of day: 0, minimum footage: 1.0 h
+Sample size: 75, method: LPM2, seed: 20260818, alpha: 0.5
+sum(pi): 75.000000000000
+Certainty cities: 0
+Selected countries: 43
+Spatial balance (lower is better): 0.134266
+Population-weighted distance to nearest selected city (km): 369.43
+Kish effective sample size: 42.19
+Design weight range: 2.93 - 83.25

@@ -1,0 +1,18 @@
+[project]
+name = "vlm-street-audit"
+version = "0.1.0"
+description = "VLM analysis of street footage for pedestrian issues and street improvements"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "lpm-sampling>=0.1.0",
+    "numpy>=2.5.4",
+    "pandas>=3.1.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+# Not on PyPI; pinned to a tag so the draw stays reproducible (uv.lock records the commit).
+lpm-sampling = { git = "https://github.com/M-Colley/lpm-sampling.git", tag = "v0.1.0" }
