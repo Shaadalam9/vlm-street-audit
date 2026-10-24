@@ -260,7 +260,9 @@ class FileServer:
             return None
         if response.status_code >= 500:
             response.close()
-            raise TransientDownloadError(f"File server returned HTTP {response.status_code}")
+            # 530 is Cloudflare's "origin unreachable": the machine serving the drives is off or offline.
+            hint = ": the machine behind the server is unreachable" if response.status_code == 530 else ""
+            raise TransientDownloadError(f"File server unavailable (HTTP {response.status_code}){hint}")
         if response.status_code >= 400:
             response.close()
             raise DownloadError(f"File server returned HTTP {response.status_code}")

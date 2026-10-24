@@ -159,3 +159,11 @@ def test_credentials_in_the_url_are_refused(tmp_path):
     with pytest.raises(ValueError, match="secret"):
         FileServer("https://user:pw@files.example.org/", "u", "p", video_aliases=["tue4"],
                    video_download_dir=tmp_path, bbox_download_dir=tmp_path, session_factory=FakeSession)
+
+
+def test_server_errors_are_retried_then_reported(tmp_path, monkeypatch):
+    monkeypatch.setattr("vlm_street_audit.file_server.RETRY_DELAY_SECONDS", 0)
+    session = FakeSession({}, status={f"{BASE}v/tue4/files/abc.mp4": 530})
+    with pytest.raises(DownloadError, match="unreachable"):
+        make_server(tmp_path, session).video("abc")
+    assert session.requested.count(f"{BASE}v/tue4/files/abc.mp4") == 3
