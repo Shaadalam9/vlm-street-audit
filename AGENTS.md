@@ -27,9 +27,10 @@
 ## Layout
 
 ```
-src/vlm_street_audit/   package: config, file_server (CROWD videos and track CSVs), mapping, figures
-scripts/                sample_cities.py, fetch_data.py, plot_city_sample.py
-configs/models.toml     the VLMs and how they run
+src/vlm_street_audit/   package: config, file_server (CROWD videos and track CSVs), mapping,
+                        snippets + semantics (choosing and cutting snippets), figures
+scripts/                sample_cities.py, fetch_data.py, make_snippets.py, plot_city_sample.py
+configs/                models.toml (the VLMs), snippet_prompts.json (snippet ranking)
 data/                   mapping, city sample; videos/frames/bbox are downloaded, not tracked
 tests/                  uv run pytest
 ```
@@ -41,3 +42,11 @@ authenticated HTTP server; its login is called `ftp_username` / `ftp_password`).
 `FileServer.from_config()`: it takes local drives first (`video_dirs`, `bbox_dirs`, present on
 lin4080), then the download folders, then the server. The sample holds ~5,500 videos, so
 fetch a selection (`scripts/fetch_data.py --videos-per-city N`), not everything.
+
+## Snippets
+
+`scripts/make_snippets.py` follows opticarvis-global's candidate selection: windows inside
+the mapped segments, SigLIP2 keyframe margins over routine-scene prompts, packet energy
+as tie break, one window per event, plus random windows. Keep the random windows: they
+are the unbiased part of the sample. Changing `configs/snippet_prompts.json` changes which
+snippets the VLMs see, so record such changes in the commit message.

@@ -131,15 +131,23 @@ class FileServer:
         self._listings: dict[tuple[str, ...], list[str]] = {}
 
     @classmethod
-    def from_config(cls, settings: dict[str, Any] | None = None, secret: dict[str, str] | None = None) -> "FileServer":
+    def from_config(cls, settings: dict[str, Any] | None = None, secret: dict[str, str] | None = None,
+                    require_login: bool = True) -> "FileServer":
+        """A client from the settings and `secret`; without `require_login` it may only look up local copies."""
         settings = settings or load_config()
-        secret = secret if secret is not None else load_secret()
-        if not secret.get("ftp_username") or not secret.get("ftp_password"):
+        if secret is None:
+            try:
+                secret = load_secret()
+            except FileNotFoundError:
+                if require_login:
+                    raise
+                secret = {}
+        if require_login and (not secret.get("ftp_username") or not secret.get("ftp_password")):
             raise ValueError("Set ftp_username and ftp_password in 'secret'.")
         return cls(
             settings["file_server"],
-            secret["ftp_username"],
-            secret["ftp_password"],
+            secret.get("ftp_username", ""),
+            secret.get("ftp_password", ""),
             secret.get("ftp_token"),
             video_aliases=settings["video_aliases"],
             video_dirs=[project_path(d) for d in settings["video_dirs"]],
@@ -161,14 +169,19 @@ class FileServer:
 
     # ---- public API ------------------------------------------------------------
 
-    def video(self, video_id: str) -> Path:
-        """Local path of `<video_id>.mp4`, downloading it if no local copy exists."""
+    def local_video(self, video_id: str) -> Path | None:
+        """Path of a local copy of `<video_id>.mp4` (drives, then download folder), or None."""
         name = _safe_name(video_id if video_id.lower().endswith(".mp4") else f"{video_id}.mp4")
         for folder in [*self.video_dirs, self.video_download_dir]:
             candidate = folder / name
             if candidate.is_file() and candidate.stat().st_size > 0:
                 return candidate
-        return self._retrying(lambda: self._download_video(name))
+        return None
+
+    def video(self, video_id: str) -> Path:
+        """Local path of `<video_id>.mp4`, downloading it if no local copy exists."""
+        name = _safe_name(video_id if video_id.lower().endswith(".mp4") else f"{video_id}.mp4")
+        return self.local_video(video_id) or self._retrying(lambda: self._download_video(name))
 
     def track_file(self, video_id: str, start_second: int, fps: float | None = None) -> Path | None:
         """Local path of the segment's track CSV, downloading it if needed; None if the server has none."""

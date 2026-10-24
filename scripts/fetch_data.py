@@ -16,7 +16,7 @@ from collections import defaultdict
 
 from vlm_street_audit.config import load_config, project_path
 from vlm_street_audit.file_server import DownloadError, FileServer
-from vlm_street_audit.mapping import read_segments
+from vlm_street_audit.mapping import pick_videos, read_segments
 
 
 def main() -> int:
@@ -34,21 +34,17 @@ def main() -> int:
         s for s in read_segments(project_path(settings["mapping"]))
         if (not args.city or s.locality in args.city) and (not args.country or s.country in args.country)
     ]
-    footage: dict[tuple[str, str], dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    for segment in segments:
-        footage[(segment.locality, segment.country)][segment.video_id] += segment.duration_seconds
-    chosen = {
-        video_id
-        for videos in footage.values()
-        for video_id, _ in sorted(videos.items(), key=lambda item: (-item[1], item[0]))[: args.videos_per_city]
-    }
+    chosen = pick_videos(segments, args.videos_per_city)
     plan = [s for s in segments if s.video_id in chosen]
-    print(f"{len(footage)} cities, {len(chosen)} videos, {len(plan)} segments, "
+    cities: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for segment in plan:
+        if segment.video_id not in cities[(segment.locality, segment.country)]:
+            cities[(segment.locality, segment.country)].append(segment.video_id)
+    print(f"{len(cities)} cities, {len(chosen)} videos, {len(plan)} segments, "
           f"{sum(s.duration_seconds for s in plan) / 3600:.1f} h of qualifying footage")
     if args.dry_run:
-        for (locality, country), videos in sorted(footage.items()):
-            picked = [v for v in videos if v in chosen]
-            print(f"  {locality}, {country}: {', '.join(picked)}")
+        for (locality, country), videos in sorted(cities.items()):
+            print(f"  {locality}, {country}: {', '.join(videos)}")
         return 0
 
     server = FileServer.from_config(settings)

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "description": "Prompts that rank candidate snippets by how likely they show a pedestrian problem. A window scores by how much a group's best prompt beats the best routine-scene prompt on the same keyframes. They only rank windows for the VLMs; they decide nothing about the scene. British English throughout.",
+  "positive_groups": {
+    "pavement_condition": [
+      "a street with no pavement where people have to walk in the road",
+      "a broken, cracked or uneven pavement beside the road",
+      "a pavement too narrow for two people to walk side by side"
+    ],
+    "pavement_obstruction": [
+      "cars parked on the pavement blocking pedestrians",
+      "street stalls, bins or poles blocking the pavement",
+      "roadworks or construction closing the pavement"
+    ],
+    "crossing_facilities": [
+      "a busy wide road with no pedestrian crossing",
+      "a faded or missing zebra crossing at a junction",
+      "a large junction where pedestrians have no signal or refuge island"
+    ],
+    "pedestrian_exposure": [
+      "pedestrians walking in the carriageway next to moving traffic",
+      "people crossing the road between moving cars",
+      "pedestrians waiting in the middle of the road to cross busy traffic"
+    ],
+    "accessibility": [
+      "a high kerb with no dropped kerb or ramp at a crossing",
+      "steps or barriers on the footway that block wheelchair users",
+      "a person with a pushchair or wheelchair struggling along the street"
+    ],
+    "vulnerable_users": [
+      "children or elderly people walking close to fast traffic",
+      "a crowded street where people spill into the road",
+      "a market or school area with many pedestrians beside traffic"
+    ]
+  },
+  "negative_prompts": [
+    "an empty motorway with no pedestrians or buildings",
+    "a road through countryside with no people and no pavements",
+    "the inside of a road tunnel",
+    "a tidy street with wide clear pavements and marked crossings",
+    "the inside of a car park or garage",
+    "a car dashboard or interior filling the view"
+  ]
+}

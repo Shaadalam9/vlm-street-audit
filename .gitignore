@@ -26,3 +26,7 @@ outputs/*
 
 # Downloaded track files
 data/bbox/*
+
+# Snippets and embedding caches (rebuilt by scripts/make_snippets.py)
+data/snippets/
+data/embeddings/

@@ -89,6 +89,37 @@ uv run python scripts/fetch_data.py --videos-per-city 1 --tracks
 uv run python scripts/fetch_data.py --country Japan --videos-per-city 3
 ```
 
+## Snippets for the VLMs
+
+The VLMs see short snippets, not whole drives. They are chosen the way
+opticarvis-global chooses its candidate clips (`src/candidates/` there), retuned for
+pedestrian problems:
+
+1. **Windows**: 10 s windows every 5 s inside each mapped (daytime, car) segment.
+2. **Semantic rank**: SigLIP2 (`google/siglip2-base-patch16-224`) embeds keyframes at
+   least 2 s apart. For each window, each prompt group in
+   [`configs/snippet_prompts.json`](configs/snippet_prompts.json) (pavement condition,
+   pavement obstruction, crossing facilities, pedestrian exposure, accessibility,
+   vulnerable users) is scored by how much it beats the best routine-scene prompt
+   (motorway, countryside, tunnel, tidy street) on the same keyframes.
+3. **Tie break**: packet energy, the encoded bytes per second from ffprobe (no decoding).
+4. **One window per event**: the best window claims its neighbours within 30 s.
+5. **Per video**: the 3 best events plus 1 random window. The random ones are not
+   chosen for problems, so they show what an ordinary stretch looks like and keep
+   prevalence estimates honest.
+6. **Output**: an H.264 clip and 1 frame per second as JPEGs, plus
+   `data/snippets/snippets.csv` with every snippet's scores and selection type.
+
+```bash
+uv run python scripts/make_snippets.py --videos-per-city 1            # local videos only
+uv run python scripts/make_snippets.py --videos-per-city 1 --download # fetch missing ones
+uv run python scripts/make_snippets.py --video some_clip.mp4          # one file, whole length
+```
+
+All numbers are settings in `default.config` (`snippet_*`, `semantic_*`). On wsl5090
+a 49-minute drive takes about a minute (591 windows); keyframe embeddings are cached in
+`data/embeddings/`, so changing the prompts or the selection reruns quickly.
+
 ## Figures
 
 All figures are made with Plotly and saved by `vlm_street_audit.figures.save_figure` to
@@ -136,15 +167,16 @@ Output in `data/city_sample/`:
 ## Structure
 
 ```
-configs/       models.toml (the VLMs and how they run)
-scripts/       sample_cities.py, fetch_data.py, plot_city_sample.py
-src/vlm_street_audit/       config, file_server, mapping, figures
+configs/       models.toml (the VLMs), snippet_prompts.json (snippet ranking)
+scripts/       sample_cities.py, fetch_data.py, make_snippets.py, plot_city_sample.py
+src/vlm_street_audit/       config, file_server, mapping, snippets, semantics, figures
 tests/         pytest, no network
 default.config / default.secret   settings and an empty login (local copies: config, secret)
 data/mapping_original.csv   the CROWD mapping (sampling frame)
 data/city_sample/           the drawn sample and its design files
 data/videos/   downloaded footage (not tracked in git)
 data/bbox/     downloaded YOLO track CSVs (not tracked in git)
+data/snippets/ snippet clips, frames and snippets.csv (not tracked in git)
 data/frames/   extracted frames (not tracked in git)
 prompts/       prompt templates for detection, localisation and suggestions
 notebooks/     exploration and analysis
