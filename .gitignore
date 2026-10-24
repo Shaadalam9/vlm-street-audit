@@ -19,3 +19,10 @@ outputs/*
 .DS_Store
 .vscode/
 .idea/
+
+# Local settings and credentials (copy default.config / default.secret)
+/config
+/secret
+
+# Downloaded track files
+data/bbox/*

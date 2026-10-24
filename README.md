@@ -14,7 +14,7 @@ carried out entirely by VLMs/LLMs.
 
 Given street footage, a VLM should:
 
-1. **Detect** pedestrian or infrastructure issues (e.g. missing or blocked sidewalks,
+1. **Detect** pedestrian or infrastructure issues (e.g. missing or blocked pavements,
    unsafe crossings, poor visibility, conflicts with vehicles).
 2. **Localise** each issue in the frame (timestamp + bounding box or point).
 3. **Describe** the issue in plain language.
@@ -58,6 +58,44 @@ The project uses [uv](https://docs.astral.sh/uv/) (Python 3.12):
 
 ```bash
 uv sync
+cp default.secret secret      # then fill in the file-server login (never commit it)
+uv run pytest                 # tests, no network needed
+```
+
+Settings live in `default.config`; to change one locally, copy it to `config` and edit
+that (an unknown setting there is an error). Code and text follow [AGENTS.md](AGENTS.md):
+British English, Plotly for every figure, uv for every package operation.
+
+## Getting the footage
+
+Videos and CROWD's YOLO track CSVs come from the CROWD file server
+(`files.mobility-squad.com`). It is an authenticated HTTP server, though its login is
+stored as `ftp_username` / `ftp_password` in `secret`, as in the other CROWD projects.
+`vlm_street_audit.file_server.FileServer` looks in this order:
+
+1. the local drives (`video_dirs`, `bbox_dirs`; they exist on lin4080),
+2. the download folders (`data/videos/`, `data/bbox/`),
+3. the server: the file's URL under each alias (`tue4`, `tue5`, `tue3`, `tue2`, `tue1` for
+   videos, `data` for track files), then a walk of the server's folder pages.
+
+Downloads are written to a `.part` file and renamed only when complete.
+
+The 75 cities hold about 5,500 videos, so fetch a selection: the videos with the most
+qualifying footage per city.
+
+```bash
+uv run python scripts/fetch_data.py --dry-run                   # what would be fetched
+uv run python scripts/fetch_data.py --videos-per-city 1 --tracks
+uv run python scripts/fetch_data.py --country Japan --videos-per-city 3
+```
+
+## Figures
+
+All figures are made with Plotly and saved by `vlm_street_audit.figures.save_figure` to
+`outputs/figures/` as HTML (static PNG/PDF through Kaleido on request).
+
+```bash
+uv run python scripts/plot_city_sample.py    # world map of the drawn cities
 ```
 
 ## Choosing the cities
@@ -99,17 +137,20 @@ Output in `data/city_sample/`:
 
 ```
 configs/       models.toml (the VLMs and how they run)
-scripts/       sample_cities.py (city/country selection)
+scripts/       sample_cities.py, fetch_data.py, plot_city_sample.py
+src/vlm_street_audit/       config, file_server, mapping, figures
+tests/         pytest, no network
+default.config / default.secret   settings and an empty login (local copies: config, secret)
 data/mapping_original.csv   the CROWD mapping (sampling frame)
 data/city_sample/           the drawn sample and its design files
-data/videos/   raw street footage (not tracked in git)
+data/videos/   downloaded footage (not tracked in git)
+data/bbox/     downloaded YOLO track CSVs (not tracked in git)
 data/frames/   extracted frames (not tracked in git)
 prompts/       prompt templates for detection, localisation and suggestions
-src/           pipeline code (frame sampling, model calls, parsing, evaluation)
 notebooks/     exploration and analysis
 outputs/       model responses and results (not tracked in git)
 ```
 
-## License
+## Licence
 
 MIT, see [LICENSE](LICENSE). Security reports: see [SECURITY.md](SECURITY.md).
