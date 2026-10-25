@@ -40,6 +40,9 @@ def command(key: str) -> list[str]:
         args += ["--revision", model["revision"]]
     if model.get("trust_remote_code"):
         args.append("--trust-remote-code")
+    kv_cache_gib = model.get("kv_cache_gib", server.get("kv_cache_gib"))
+    if kv_cache_gib:
+        args += ["--kv-cache-memory-bytes", str(int(kv_cache_gib * 2**30))]
     args += server.get("vllm_args", []) + model.get("vllm_args", [])
     return args
 
