@@ -79,7 +79,9 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
         for clip in clips.itertuples():
             path = out_dir / f"{clip.clip_id}.json"
             if path.is_file():
-                continue
+                previous = json.loads(path.read_text(encoding="utf-8"))
+                if previous.get("prompt_version") == PROMPT_VERSION and previous.get("answer") is not None:
+                    continue  # answered with this prompt already; otherwise ask again
             frames = [PROJECT_ROOT / f for f in clip.frames.split(";")]
             record = {"clip_id": clip.clip_id, "set": set_name, "role": clip.role, "model": model["key"],
                       "checkpoint": model["checkpoint"], "revision": model.get("revision", ""),

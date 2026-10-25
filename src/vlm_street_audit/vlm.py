@@ -98,7 +98,8 @@ PROMPT = """You are auditing a street for pedestrians. The {n} images are frames
 dashcam clip, in time order, about {step:.0f} s apart (frame 1 is the first).
 
 Ignore anything that is not part of the street: the car's own bonnet or dashboard, reflections on the \
-windscreen, and any date, time, speed or logo overlaid on the picture.
+windscreen, and any date, time, speed or logo overlaid on the picture. People on bicycles, scooters or \
+motorbikes are not pedestrians.
 
 1. Scene facts, over all frames:
    - road_type: the kind of road the car is on.
@@ -114,8 +115,10 @@ roadway used by vehicles.
 For each, give the category, a short description of what you see, the frame where it is clearest, \
 and the point (x, y) on that frame where it is, as integers from 0 to 1000 (x from the left edge, y from \
 the top). Add the severity, the standard measure that would fix it best, a one-sentence suggestion \
-specific to this place, and your confidence from 0 to 1. Report only what is visible. If the street \
-works well for pedestrians, return an empty issue list.
+specific to this place, and your confidence from 0 to 1. A suggestion must change the street (its design, \
+layout, crossings, signals, parking or enforcement), never tell people how to behave, and must match the \
+measure you chose. Report only what is visible; if no person on foot is visible, report no issue that \
+depends on one. If the street works well for pedestrians, return an empty issue list.
 
 Answer with JSON only, in British English."""
 
