@@ -53,10 +53,11 @@ approx_weights_gb = 19
 license = "apache-2.0"
 role = "second large model from another lineage; object detection and pointing listed on its card"
 notes = "Video only as frames, at most 60 s at 1 fps. Set the visual token budget (70-1120) explicitly and keep it the same across runs."
-# The largest model (19.8 GB of weights): a smaller context and KV cache keep it clear of the
-# CROWD workers' share of the GPU. Our prompts are ~5k tokens.
-max_model_len = 8192
-kv_cache_gib = 2
+# The largest model (19.8 GB of weights) with a large KV per token (8k context = 6.9 GiB).
+# Its prompts are ~2k tokens (about 280 per image) plus up to 2k of answer, so a 4.6k
+# context in a 4 GiB cache; that keeps it clear of the CROWD workers' share of the GPU.
+max_model_len = 4608
+kv_cache_gib = 4
 
 [[model]]
 key = "molmo2-8b"
