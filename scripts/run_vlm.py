@@ -114,6 +114,7 @@ def main() -> int:
     server = models.pop("server")
     keys = list(models) if args.models == ["all"] else args.models
     base_url = f"http://127.0.0.1:{server['port']}"
+    failures: list[str] = []
     for key in keys:
         process = None
         if args.start_server:
@@ -125,10 +126,16 @@ def main() -> int:
             for set_name in args.sets:
                 done, failed = run_set(models[key], set_name, settings, base_url, args.limit)
                 logger.info("%s %s: %d answered, %d without a valid answer", key, set_name, done, failed)
+        except (RuntimeError, TimeoutError) as error:
+            # One model failing to start must not stop the others.
+            failures.append(key)
+            logger.error("%s skipped: %s", key, error)
         finally:
             if process is not None:
                 stop_server(process)
-    return 0
+    if failures:
+        logger.error("models that did not run: %s", ", ".join(failures))
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":

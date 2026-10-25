@@ -46,6 +46,12 @@ approx_weights_gb = 19
 license = "apache-2.0"
 role = "second large model from another lineage; object detection and pointing listed on its card"
 notes = "Video only as frames, at most 60 s at 1 fps. Set the visual token budget (70-1120) explicitly and keep it the same across runs."
+# 19.8 GB of weights left no KV cache in the default 23.5 GB share: start-up profiling is sized
+# for 16k-token prompts and 256 parallel requests. Ours are ~5k tokens, sent one at a time.
+# These limits change memory use, not the answers. ~7 GB stays free for the CROWD workers.
+gpu_memory_utilization = 0.78
+max_model_len = 8192
+vllm_args = ["--max-num-seqs", "4", "--max-num-batched-tokens", "8192"]
 
 [[model]]
 key = "molmo2-8b"
