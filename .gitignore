@@ -33,3 +33,6 @@ data/embeddings/
 
 # Run logs
 logs/
+
+# Clip sets (JAAD frames may not be redistributed)
+data/clip_sets/
