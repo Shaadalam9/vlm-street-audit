@@ -10,6 +10,13 @@
 # OpenAI-compatible API on localhost, so one client talks to every model.
 # Pin `revision` to a commit hash before the real runs.
 
+[server]
+port = 8000
+# Fraction of the 32 GB card vLLM may take; the CROWD workers already hold ~6 GB.
+gpu_memory_utilization = 0.72
+max_model_len = 16384
+max_images = 10
+
 [[model]]
 key = "qwen3.8-27b"
 family = "Qwen (Alibaba)"
@@ -42,6 +49,7 @@ approx_weights_gb = 18
 license = "apache-2.0"
 role = "localisation specialist: points and video tracks; open weights and open training data"
 notes = "Outputs <points>/<tracks> with coordinates scaled to 0-1000, no boxes. Needs trust_remote_code."
+trust_remote_code = true
 
 [[model]]
 key = "internvl3.5-8b"

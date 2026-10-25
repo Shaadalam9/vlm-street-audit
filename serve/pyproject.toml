@@ -1,0 +1,15 @@
+[project]
+name = "vlm-street-audit-serve"
+version = "0.1.0"
+description = "vLLM server environment for the on-device VLMs (separate from the analysis environment)"
+requires-python = ">=3.12,<3.13"
+# vLLM pins its own torch and transformers, which clash with the analysis
+# environment one folder up, so the server lives in its own uv project.
+dependencies = [
+    "vllm==0.32.0",
+]
+
+[tool.uv]
+package = false
+# vLLM ships Linux wheels only; the server runs on wsl5090 (Linux x86_64, RTX 5090).
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
