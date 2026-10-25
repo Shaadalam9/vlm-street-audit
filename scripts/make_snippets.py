@@ -11,6 +11,7 @@ and data/snippets/snippets.csv (one row per snippet, with its scores).
 
 Run:  uv run python scripts/make_snippets.py --videos-per-city 1
       uv run python scripts/make_snippets.py --country Japan --download
+      uv run python scripts/make_snippets.py --local-only   # only videos already on disk
       uv run python scripts/make_snippets.py --video path/to/clip.mp4   # one local file, whole length
 """
 
@@ -50,6 +51,8 @@ def main() -> int:
     parser.add_argument("--city", action="append", help="locality name; repeat for several")
     parser.add_argument("--country", action="append", help="country name; repeat for several")
     parser.add_argument("--download", action="store_true", help="fetch videos missing locally from the file server")
+    parser.add_argument("--local-only", action="store_true",
+                        help="per city, choose only among videos already on disk (e.g. another project's downloads)")
     parser.add_argument("--no-semantics", action="store_true", help="rank by packet energy only (no SigLIP2)")
     parser.add_argument("--video", type=Path, help="one local video, used whole (for testing)")
     parser.add_argument("--output-dir", type=Path, help="default: snippet_dir from the config")
@@ -68,12 +71,16 @@ def main() -> int:
     else:
         segments = [s for s in read_segments(project_path(settings["mapping"]))
                     if (not args.city or s.locality in args.city) and (not args.country or s.country in args.country)]
+        server = FileServer.from_config(settings, require_login=args.download)
+        if args.local_only:
+            # Choose among the videos already on disk: cities without one are skipped.
+            local = {v for v in {s.video_id for s in segments} if server.local_video(v) is not None}
+            segments = [s for s in segments if s.video_id in local]
         chosen = pick_videos(segments, args.videos_per_city)
         per_video: dict[tuple[str, str, str], list[tuple[float, float]]] = defaultdict(list)
         for s in segments:
             if s.video_id in chosen:
                 per_video[(s.locality, s.country, s.video_id)].append((s.start_second, s.end_second))
-        server = FileServer.from_config(settings, require_login=args.download)
         for (locality, country, video_id), intervals in sorted(per_video.items()):
             path = server.local_video(video_id)
             if path is None and args.download:

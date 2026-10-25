@@ -113,6 +113,7 @@ pedestrian problems:
 ```bash
 uv run python scripts/make_snippets.py --videos-per-city 1            # local videos only
 uv run python scripts/make_snippets.py --videos-per-city 1 --download # fetch missing ones
+uv run python scripts/make_snippets.py --local-only                  # only videos already on disk
 uv run python scripts/make_snippets.py --video some_clip.mp4          # one file, whole length
 ```
 
