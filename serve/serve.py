@@ -40,7 +40,7 @@ def command(key: str) -> list[str]:
         args += ["--revision", model["revision"]]
     if model.get("trust_remote_code"):
         args.append("--trust-remote-code")
-    args += model.get("vllm_args", [])
+    args += server.get("vllm_args", []) + model.get("vllm_args", [])
     return args
 
 
@@ -52,6 +52,8 @@ def main() -> None:
     cmd = command(args.model)
     # Triton compiles small C helpers at run time and needs a C compiler.
     os.environ.setdefault("CC", str(Path(__file__).resolve().with_name("cc")))
+    for name, value in tomllib.loads(MODELS.read_text(encoding="utf-8"))["server"].get("env", {}).items():
+        os.environ.setdefault(name, str(value))
     print(" ".join(cmd), flush=True)
     if not args.print:
         os.execvp(cmd[0], cmd)

@@ -16,6 +16,10 @@ port = 8000
 gpu_memory_utilization = 0.72
 max_model_len = 16384
 max_images = 10
+# wsl5090 has no CUDA toolkit (nvcc), so FlashInfer cannot compile its kernels there;
+# Triton attention needs only a C compiler (serve/cc). Same backend for every model.
+vllm_args = ["--attention-backend", "TRITON_ATTN"]
+env = { VLLM_USE_FLASHINFER_SAMPLER = "0" }
 
 [[model]]
 key = "qwen3.8-27b"
