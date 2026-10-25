@@ -25,8 +25,10 @@ def command(key: str) -> list[str]:
     if key not in models:
         raise SystemExit(f"Unknown model {key!r}; choose from {sorted(models)}")
     model = models[key]
+    # The vllm entry point of this environment, which need not be on PATH.
+    executable = Path(sys.executable).with_name("vllm")
     args = [
-        "vllm", "serve", model["checkpoint"],
+        str(executable) if executable.is_file() else "vllm", "serve", model["checkpoint"],
         "--served-model-name", key,
         "--host", "127.0.0.1", "--port", str(server["port"]),
         "--gpu-memory-utilization", str(server["gpu_memory_utilization"]),
