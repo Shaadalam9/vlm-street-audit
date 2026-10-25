@@ -8,7 +8,7 @@
 #
 # Serving: vLLM (Linux or WSL2, CUDA 12.8+ build for Blackwell) with its
 # OpenAI-compatible API on localhost, so one client talks to every model.
-# Pin `revision` to a commit hash before the real runs.
+# Each model is pinned to the commit downloaded on 2026-10-25 (`revision`).
 
 [server]
 port = 8000
@@ -18,13 +18,16 @@ max_model_len = 16384
 max_images = 10
 # wsl5090 has no CUDA toolkit (nvcc), so FlashInfer cannot compile its kernels there;
 # Triton attention needs only a C compiler (serve/cc). Same backend for every model.
-vllm_args = ["--attention-backend", "TRITON_ATTN"]
+# --enforce-eager: no torch.compile or CUDA graphs. Capturing graphs took ~19 min per graph
+# under WSL with the CROWD workers on the same GPU; eager is slower per answer but starts fast.
+vllm_args = ["--attention-backend", "TRITON_ATTN", "--enforce-eager"]
 env = { VLLM_USE_FLASHINFER_SAMPLER = "0" }
 
 [[model]]
 key = "qwen3.8-27b"
 family = "Qwen (Alibaba)"
 checkpoint = "RedHatAI/Qwen3.8-27B-INT4"   # W4A16 of Qwen/Qwen3.8-27B (Aug 2026)
+revision = "91bd022d5b49442a868bc35008f6c21e1860edfa"   # downloaded 2026-10-25
 base = "Qwen/Qwen3.8-27B"
 precision = "int4-w4a16"
 approx_weights_gb = 17
@@ -36,6 +39,7 @@ notes = "Thinking is on by default: set enable_thinking=false for structured JSO
 key = "gemma4-31b"
 family = "Gemma (Google)"
 checkpoint = "google/gemma-4-31B-it-qat-w4a16-ct"   # Google's own quantisation-aware 4-bit
+revision = "52f3f65bc7a02d555763bc923bd1d9094898219d"   # downloaded 2026-10-25
 base = "google/gemma-4-31B-it"
 precision = "int4-w4a16 (QAT)"
 approx_weights_gb = 19
@@ -47,18 +51,20 @@ notes = "Video only as frames, at most 60 s at 1 fps. Set the visual token budge
 key = "molmo2-8b"
 family = "Molmo (Ai2)"
 checkpoint = "allenai/Molmo2-8B"
+revision = "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b"   # downloaded 2026-10-25
 base = "allenai/Molmo2-8B"
 precision = "bf16"
 approx_weights_gb = 18
 license = "apache-2.0"
 role = "localisation specialist: points and video tracks; open weights and open training data"
 notes = "Outputs <points>/<tracks> with coordinates scaled to 0-1000, no boxes. Needs trust_remote_code."
-trust_remote_code = true
+trust_remote_code = true   # code reviewed at this revision 2026-10-25: network use only for video URLs, which are never sent
 
 [[model]]
 key = "internvl3.5-8b"
 family = "InternVL (Shanghai AI Lab)"
 checkpoint = "OpenGVLab/InternVL3_5-8B-HF"
+revision = "741a7d03020411e666c6109218ab71e08151ef86"   # downloaded 2026-10-25
 base = "OpenGVLab/InternVL3_5-8B"
 precision = "bf16"
 approx_weights_gb = 17

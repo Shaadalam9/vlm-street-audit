@@ -13,6 +13,7 @@ Run on wsl5090:
 import argparse
 import json
 import logging
+import os
 import signal
 import subprocess
 import sys
@@ -51,13 +52,20 @@ def start_server(model_key: str, log_path: Path) -> subprocess.Popen:
 
 
 def stop_server(process: subprocess.Popen) -> None:
-    if process.poll() is None:
-        process.send_signal(signal.SIGINT)
-        try:
-            process.wait(timeout=120)
-        except subprocess.TimeoutExpired:
-            process.kill()
-            process.wait()
+    """Stop vLLM's whole process group: its engine runs in a child process that holds the GPU memory."""
+    try:
+        os.killpg(process.pid, signal.SIGINT)
+        process.wait(timeout=120)
+    except ProcessLookupError:
+        return
+    except subprocess.TimeoutExpired:
+        pass
+    time.sleep(5)  # give the engine child a moment to exit after the API server
+    try:
+        os.killpg(process.pid, signal.SIGKILL)
+    except ProcessLookupError:
+        pass
+    process.wait()
 
 
 def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None) -> tuple[int, int]:
