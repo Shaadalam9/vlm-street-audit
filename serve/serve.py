@@ -50,6 +50,8 @@ def main() -> None:
     parser.add_argument("--print", action="store_true", help="print the command instead of running it")
     args = parser.parse_args()
     cmd = command(args.model)
+    # Triton compiles small C helpers at run time and needs a C compiler.
+    os.environ.setdefault("CC", str(Path(__file__).resolve().with_name("cc")))
     print(" ".join(cmd), flush=True)
     if not args.print:
         os.execvp(cmd[0], cmd)

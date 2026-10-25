@@ -7,6 +7,7 @@ requires-python = ">=3.12,<3.13"
 # environment one folder up, so the server lives in its own uv project.
 dependencies = [
     "vllm==0.32.0",
+    "ziglang>=0.17.0",
 ]
 
 [tool.uv]

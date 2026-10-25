@@ -1,0 +1,4 @@
+#!/bin/sh
+# C compiler for Triton's run-time kernel helpers: Zig's clang from this environment,
+# since wsl5090 has no system compiler (installing gcc there needs sudo).
+exec "$(dirname "$0")/.venv/bin/python" -m ziglang cc "$@"
