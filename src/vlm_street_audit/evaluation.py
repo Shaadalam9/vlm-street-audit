@@ -14,19 +14,21 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from .vlm import issues_of
+
 SCENE_BOOLEANS = ["zebra_crossing_visible", "traffic_signal_visible", "pedestrians_visible",
                   "pedestrians_in_carriageway"]
 PEDESTRIAN_CATEGORIES = {"pedestrian_exposure", "vulnerable_users"}
 
 
 def load_answers(root: Path, set_name: str) -> pd.DataFrame:
-    """One row per (model, clip) with the scene facts flattened and the issues kept as a list."""
+    """Answers under root/<set>/<model>/ (root is one prompt variant's folder)."""
     rows = []
     for path in sorted((root / set_name).glob("*/*.json")):
         record = json.loads(path.read_text(encoding="utf-8"))
         answer = record.get("answer") or {}
         row = {"model": record["model"], "clip_id": record["clip_id"], "role": record.get("role", "main"),
-               "valid": bool(answer), "seconds": record.get("seconds"), "issues": answer.get("issues", [])}
+               "valid": bool(answer), "seconds": record.get("seconds"), "issues": issues_of(answer) if answer else []}
         row.update({f"scene_{k}": v for k, v in (answer.get("scene") or {}).items()})
         rows.append(row)
     return pd.DataFrame(rows)

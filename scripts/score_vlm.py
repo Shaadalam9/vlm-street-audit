@@ -1,11 +1,12 @@
 """Score the VLM answers: JAAD accuracy, pedestrian point hits, main vs control, model agreement.
 
-Writes CSV tables to outputs/vlm/summary/ and Plotly figures to outputs/figures/, and
+Writes CSV tables to outputs/vlm/<prompt variant>/summary/ and Plotly figures to outputs/figures/, and
 prints the tables.
 
-Run:  uv run python scripts/score_vlm.py
+Run:  uv run python scripts/score_vlm.py [--prompt checklist]
 """
 
+import argparse
 import json
 import sys
 
@@ -31,8 +32,11 @@ def show(title: str, table: pd.DataFrame) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--prompt", default="open", help="prompt variant folder under outputs/vlm")
+    args = parser.parse_args()
     settings = load_config()
-    root = project_path(settings["vlm_output_dir"])
+    root = project_path(settings["vlm_output_dir"]) / args.prompt
     summary = root / "summary"
     summary.mkdir(parents=True, exist_ok=True)
 
@@ -53,7 +57,7 @@ def main() -> int:
                         title="JAAD: balanced accuracy of the scene facts (0.5 = chance)",
                         labels={"field": "", "balanced_accuracy": "Balanced accuracy"})
         figure.add_hline(y=0.5, line_dash="dot")
-        save_figure(style(figure), "jaad_scene_balanced_accuracy")
+        save_figure(style(figure), f"jaad_scene_balanced_accuracy_{args.prompt}")
 
     cities = load_answers(root, "cities")
     if not cities.empty:
@@ -71,7 +75,7 @@ def main() -> int:
         figure = px.bar(per_role, x="model", y="share_with_issue", color="role", barmode="group",
                         title="Share of clips with at least one reported problem",
                         labels={"model": "", "share_with_issue": "Share of clips", "role": "Clip"})
-        save_figure(style(figure), "cities_main_vs_control")
+        save_figure(style(figure), f"cities_main_vs_control_{args.prompt}")
     return 0
 
 

@@ -3,7 +3,8 @@
 Every model gets the same frames, the same prompt and the same JSON schema, which
 vLLM enforces while decoding (structured output), so answers are comparable field
 by field. The `scene` part holds plain facts that can be checked against labelled
-data (JAAD); the `issues` part is the audit itself.
+data (JAAD); the rest is the audit itself. Two prompt variants: "open" (a free list
+of up to 5 issues) and "checklist" (a verdict for every problem type).
 
 Coordinates are integers 0-1000 on the frame named by `frame` (1 = first frame
 sent), x from the left edge, y from the top, whatever the model's native format.
@@ -124,6 +125,123 @@ Answer with JSON only, in British English."""
 
 PROMPT_VERSION = hashlib.sha256((PROMPT + json.dumps(SCHEMA, sort_keys=True)).encode()).hexdigest()[:12]
 
+# ---- "checklist" variant -------------------------------------------------------------
+# The open prompt above let every model report almost only pedestrian exposure (first run,
+# 2026-10-25): problems only where a person was visible, pavements nearly always "unclear".
+# This variant asks for a verdict on every problem type, evidence first, and judges the
+# street even when it is empty. Its scene facts are the same, except that the pavement
+# answer "unclear" becomes "not_visible", allowed only when that side is out of view.
+
+CATEGORY_DEFINITIONS = {
+    "pavement_condition": "Is there a usable footway along the road? A problem if a footway is missing on a "
+                          "side where people would walk (bare ground, verge, ditch or the carriageway's edge "
+                          "instead), or is broken, uneven or too narrow for two people to pass.",
+    "pavement_obstruction": "Is the footway kept clear? A problem if parked vehicles, stalls, goods, bins, "
+                            "poles, signs or works block it or force people off it.",
+    "crossing_facilities": "Can people cross safely where they would need to? A problem if a wide or busy road, "
+                           "junction or bus stop has no marked crossing, the markings are faded, the crossing is "
+                           "far too long without a refuge island, or a signalled junction has no pedestrian signal.",
+    "pedestrian_exposure": "Are people on foot exposed to traffic? Needs at least one visible person on foot: a "
+                           "problem if they walk, wait or cross in the carriageway, or have no separation from "
+                           "fast traffic.",
+    "accessibility": "Could someone in a wheelchair or with a pushchair get along and across? A problem if kerbs "
+                     "are high with no dropped kerb, there are steps, gaps or barriers, or no tactile paving at a "
+                     "crossing.",
+    "vulnerable_users": "Are children, older people or crowds close to traffic? Needs visible people: a problem "
+                        "if a school, market, stop or crowd sits next to traffic without protection.",
+}
+
+_CHECK = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["evidence", "verdict", "frame", "x", "y", "severity", "measure", "suggestion", "confidence"],
+    "properties": {
+        "evidence": {"type": "string", "maxLength": 250},
+        "verdict": {"enum": ["problem", "no_problem", "cannot_tell"]},
+        "frame": {"type": "integer", "minimum": 0, "maximum": 10},
+        "x": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "y": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "severity": {"enum": ["none", "low", "medium", "high"]},
+        "measure": {"enum": ["none"] + MEASURES},
+        "suggestion": {"type": "string", "maxLength": 300},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    },
+}
+
+CHECKLIST_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["scene", "checks"],
+    "properties": {
+        "scene": {
+            **SCHEMA["properties"]["scene"],
+            "properties": {
+                **SCHEMA["properties"]["scene"]["properties"],
+                "pavement_left": {"enum": ["present", "absent", "not_visible"]},
+                "pavement_right": {"enum": ["present", "absent", "not_visible"]},
+            },
+        },
+        "checks": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": list(CATEGORY_DEFINITIONS),
+            "properties": {category: _CHECK for category in CATEGORY_DEFINITIONS},
+        },
+    },
+}
+
+CHECKLIST_PROMPT = """You are auditing a street for pedestrians. The {n} images are frames from a {seconds:.0f}-second \
+dashcam clip, in time order, about {step:.0f} s apart (frame 1 is the first).
+
+Ignore anything that is not part of the street: the car's own bonnet or dashboard, reflections on the \
+windscreen, and any date, time, speed, map or logo overlaid on the picture. People on bicycles, scooters or \
+motorbikes are not pedestrians.
+
+1. Scene facts, over all frames:
+   - road_type: the kind of road the car is on.
+   - pavement_left / pavement_right: "present" if a raised or clearly separated footway runs along that side; \
+"absent" if you can see that side of the road but there is no such footway (bare ground, verge, ditch, \
+parked cars or the carriageway's edge); "not_visible" only if that side is out of view.
+   - zebra_crossing_visible: a marked pedestrian crossing (zebra or striped crossing) is visible in any frame.
+   - traffic_signal_visible: a traffic light is visible in any frame.
+   - pedestrians_visible: at least one person on foot is visible.
+   - pedestrians_in_carriageway: at least one person on foot is walking, standing or crossing in the \
+roadway used by vehicles.
+
+2. Checks: judge the street itself for each of the six problem types below, one by one. A street can fail \
+people on foot even when nobody is walking there: judge the infrastructure you can see. For each type, first \
+write the evidence (what you see that decides it), then the verdict: "problem", "no_problem", or \
+"cannot_tell" if the frames do not show enough. For a problem, give the frame where it is clearest and the \
+point (x, y) on that frame as integers from 0 to 1000 (x from the left edge, y from the top), the severity, \
+the standard measure that would fix it best, a one-sentence suggestion specific to this place that changes \
+the street (never what people should do) and matches the measure, and your confidence from 0 to 1. For \
+"no_problem" or "cannot_tell", use frame 0, x 0, y 0, severity "none", measure "none" and an empty \
+suggestion.
+
+{definitions}
+
+Answer with JSON only, in British English."""
+
+VARIANTS: dict[str, tuple[str, dict]] = {
+    "open": (PROMPT, SCHEMA),
+    "checklist": (CHECKLIST_PROMPT.replace("{definitions}", "\n".join(
+        f"   - {category}: {text}" for category, text in CATEGORY_DEFINITIONS.items())), CHECKLIST_SCHEMA),
+}
+
+
+def prompt_version(variant: str) -> str:
+    prompt, schema = VARIANTS[variant]
+    return hashlib.sha256((prompt + json.dumps(schema, sort_keys=True)).encode()).hexdigest()[:12]
+
+
+def issues_of(answer: dict) -> list[dict]:
+    """The reported problems of either variant, as issue dicts (checklist: verdict "problem")."""
+    if "checks" in answer:
+        return [{"category": category, "description": check["evidence"], **{k: check[k] for k in (
+            "frame", "x", "y", "severity", "measure", "suggestion", "confidence")}}
+            for category, check in answer["checks"].items() if check["verdict"] == "problem"]
+    return answer.get("issues", [])
+
 
 def load_models() -> dict[str, dict]:
     config = tomllib.loads(MODELS_TOML.read_text(encoding="utf-8"))
@@ -142,15 +260,16 @@ def encode_image(path: Path, max_side: int) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(buffer.getvalue()).decode()
 
 
-def build_messages(frames: list[Path], seconds: float, max_side: int) -> list[dict]:
+def build_messages(frames: list[Path], seconds: float, max_side: int, variant: str = "open") -> list[dict]:
     step = seconds / max(1, len(frames))
     content: list[dict] = [{"type": "image_url", "image_url": {"url": encode_image(f, max_side)}} for f in frames]
-    content.append({"type": "text", "text": PROMPT.format(n=len(frames), seconds=seconds, step=step)})
+    prompt = VARIANTS[variant][0]
+    content.append({"type": "text", "text": prompt.format(n=len(frames), seconds=seconds, step=step)})
     return [{"role": "user", "content": content}]
 
 
 def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 600,
-        max_tokens: int = 2048, session=None) -> dict:
+        max_tokens: int = 2048, session=None, variant: str = "open") -> dict:
     """One request; returns the raw text, the parsed answer (or None) and timing."""
     import requests
 
@@ -160,7 +279,7 @@ def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 
         "temperature": 0,
         "seed": 0,
         "max_tokens": max_tokens,
-        "response_format": {"type": "json_schema", "json_schema": {"name": "street_audit", "schema": SCHEMA,
+        "response_format": {"type": "json_schema", "json_schema": {"name": "street_audit", "schema": VARIANTS[variant][1],
                                                                      "strict": True}},
         # Qwen and other "thinking" models: answer directly, so the output is the JSON alone.
         "chat_template_kwargs": {"enable_thinking": False},

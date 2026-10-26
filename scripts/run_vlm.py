@@ -2,7 +2,7 @@
 
 Each model is served by vLLM (serve/serve.py) one at a time; with --start-server
 this script starts it, waits until it answers, runs every clip and stops it again.
-Answers go to outputs/vlm/<set>/<model>/<clip_id>.json; clips already answered are
+Answers go to outputs/vlm/<prompt variant>/<set>/<model>/<clip_id>.json; clips already answered are
 skipped, so a stopped run resumes where it left off.
 
 Run on wsl5090:
@@ -24,7 +24,7 @@ import pandas as pd
 import requests
 
 from vlm_street_audit.config import PROJECT_ROOT, load_config, project_path
-from vlm_street_audit.vlm import PROMPT_VERSION, ask, build_messages, load_models
+from vlm_street_audit.vlm import VARIANTS, ask, build_messages, issues_of, load_models, prompt_version
 
 logger = logging.getLogger("run_vlm")
 SERVE_DIR = PROJECT_ROOT / "serve"
@@ -68,11 +68,15 @@ def stop_server(process: subprocess.Popen) -> None:
     process.wait()
 
 
-def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None) -> tuple[int, int]:
+def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None, variant: str,
+            only: set[str] | None) -> tuple[int, int]:
     clips = pd.read_csv(project_path(settings["clip_sets_dir"]) / f"{set_name}.csv")
+    if only:
+        clips = clips[clips.clip_id.isin(only)]
     if limit:
         clips = clips.head(limit)
-    out_dir = project_path(settings["vlm_output_dir"]) / set_name / model["key"]
+    version = prompt_version(variant)
+    out_dir = project_path(settings["vlm_output_dir"]) / variant / set_name / model["key"]
     out_dir.mkdir(parents=True, exist_ok=True)
     done = failed = 0
     with requests.Session() as session:
@@ -80,16 +84,16 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
             path = out_dir / f"{clip.clip_id}.json"
             if path.is_file():
                 previous = json.loads(path.read_text(encoding="utf-8"))
-                if previous.get("prompt_version") == PROMPT_VERSION and previous.get("answer") is not None:
+                if previous.get("prompt_version") == version and previous.get("answer") is not None:
                     continue  # answered with this prompt already; otherwise ask again
             frames = [PROJECT_ROOT / f for f in clip.frames.split(";")]
             record = {"clip_id": clip.clip_id, "set": set_name, "role": clip.role, "model": model["key"],
                       "checkpoint": model["checkpoint"], "revision": model.get("revision", ""),
-                      "prompt_version": PROMPT_VERSION, "frames": clip.frames.split(";")}
+                      "prompt_variant": variant, "prompt_version": version, "frames": clip.frames.split(";")}
             try:
                 record.update(ask(model["key"], build_messages(frames, float(clip.seconds),
-                                                               int(settings["vlm_image_max_side"])),
-                                  base_url, session=session))
+                                                               int(settings["vlm_image_max_side"]), variant),
+                                  base_url, session=session, variant=variant))
             except requests.RequestException as error:
                 record.update({"answer": None, "error": f"request failed: {error}"})
             failed += record.get("answer") is None
@@ -98,7 +102,7 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
             partial.write_text(json.dumps(record, indent=1, ensure_ascii=False), encoding="utf-8")
             partial.replace(path)
             logger.info("%s %s %s: %s", model["key"], set_name, clip.clip_id,
-                        record.get("error") or f"{len(record['answer']['issues'])} issues, {record['seconds']} s")
+                        record.get("error") or f"{len(issues_of(record['answer']))} issues, {record['seconds']} s")
     return done, failed
 
 
@@ -108,6 +112,8 @@ def main() -> int:
     parser.add_argument("--sets", nargs="+", default=["jaad", "cities"])
     parser.add_argument("--start-server", action="store_true", help="start and stop vLLM for each model")
     parser.add_argument("--limit", type=int, help="first N clips of each set only (smoke test)")
+    parser.add_argument("--prompt", choices=sorted(VARIANTS), default="open", help="prompt variant")
+    parser.add_argument("--clips", type=Path, help="file with one clip_id per line: run only these")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
@@ -116,6 +122,7 @@ def main() -> int:
     server = models.pop("server")
     keys = list(models) if args.models == ["all"] else args.models
     base_url = f"http://127.0.0.1:{server['port']}"
+    only = set(args.clips.read_text().split()) if args.clips else None
     failures: list[str] = []
     for key in keys:
         process = None
@@ -126,7 +133,7 @@ def main() -> int:
             if process is not None:
                 wait_until_ready(base_url, process)
             for set_name in args.sets:
-                done, failed = run_set(models[key], set_name, settings, base_url, args.limit)
+                done, failed = run_set(models[key], set_name, settings, base_url, args.limit, args.prompt, only)
                 logger.info("%s %s: %d answered, %d without a valid answer", key, set_name, done, failed)
         except (RuntimeError, TimeoutError) as error:
             # One model failing to start must not stop the others.
