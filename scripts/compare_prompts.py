@@ -33,6 +33,7 @@ def main() -> int:
             if not answers.empty:
                 frames.append(answers.assign(variant=variant, set=set_name))
     data = pd.concat(frames, ignore_index=True)
+    data = data[data.valid]  # failed requests (e.g. timed out while the server was paused) have no answer
     shared = data.groupby(["model", "clip_id"]).variant.nunique()
     data = data.set_index(["model", "clip_id"]).loc[shared[shared == 2].index].reset_index()
     print(f"{data.clip_id.nunique()} clips answered with both prompts\n")
