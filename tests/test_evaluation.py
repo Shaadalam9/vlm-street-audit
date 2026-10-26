@@ -32,3 +32,12 @@ def test_point_hits_counts_only_pedestrian_issues():
         issue, {**issue, "x": 900}, {**issue, "category": "pavement_condition"}]]})
     row = point_hits(answers, truth).iloc[0]
     assert row.pedestrian_points == 2 and row.on_a_pedestrian == 1
+
+
+def test_wilson_interval():
+    from vlm_street_audit.evaluation import wilson
+
+    low, high = wilson(5, 10)
+    assert round(low, 3) == 0.237 and round(high, 3) == 0.763
+    assert wilson(0, 10)[0] == 0.0 and wilson(10, 10)[1] == 1.0
+    assert all(v != v for v in wilson(0, 0))

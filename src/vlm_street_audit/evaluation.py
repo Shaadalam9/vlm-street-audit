@@ -8,6 +8,7 @@
 """
 
 import json
+import math
 from itertools import combinations
 from pathlib import Path
 
@@ -124,3 +125,13 @@ def agreement(features: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
                      "share_all_agree": float((wide.astype(str).nunique(axis=1) == 1).mean()) if len(wide) else
                      float("nan")})
     return pd.DataFrame(rows)
+
+
+def wilson(successes: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """Wilson score interval for a proportion (95% by default)."""
+    if n == 0:
+        return float("nan"), float("nan")
+    p = successes / n
+    centre = (p + z * z / (2 * n)) / (1 + z * z / n)
+    half = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / (1 + z * z / n)
+    return max(0.0, centre - half), min(1.0, centre + half)
