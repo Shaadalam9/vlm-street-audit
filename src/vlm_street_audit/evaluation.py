@@ -116,6 +116,7 @@ def agreement(features: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
     for column in columns:
         wide = features.pivot(index="clip_id", columns="model", values=column).dropna()
         pairs = [cohen_kappa(wide[a], wide[b]) for a, b in combinations(models, 2) if a in wide and b in wide]
+        pairs = [p for p in pairs if not np.isnan(p)]  # undefined when both models never use a category
         rows.append({"item": column, "clips": len(wide), "fleiss_kappa": fleiss_kappa(wide),
                      "mean_pairwise_cohen_kappa": float(np.nanmean(pairs)) if pairs else float("nan"),
                      "share_all_agree": float((wide.astype(str).nunique(axis=1) == 1).mean()) if len(wide) else
