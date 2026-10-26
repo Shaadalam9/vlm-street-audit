@@ -7,7 +7,8 @@ cluster is kept, random windows are added, and each snippet is written as an
 H.264 clip plus JPEG frames. See src/vlm_street_audit/snippets.py for the method.
 
 Output: data/snippets/<video_id>/<snippet>.mp4, data/snippets/<video_id>/<snippet>/frame_NNN.jpg,
-and data/snippets/snippets.csv (one row per snippet, with its scores).
+and data/snippets/snippets.csv (one row per snippet, with its scores). Cities that already have
+snippets are skipped and their rows kept, so a run adds to the manifest (--redo cuts them again).
 
 Run:  uv run python scripts/make_snippets.py --videos-per-city 1
       uv run python scripts/make_snippets.py --country Japan --download
@@ -22,11 +23,14 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+import pandas as pd
+
 from vlm_street_audit.config import load_config, project_path
 from vlm_street_audit.file_server import DownloadError, FileServer
 from vlm_street_audit.mapping import pick_videos, read_segments
 from vlm_street_audit.semantics import SemanticScorer, finite_or_blank, top_group
 from vlm_street_audit.snippets import (
+    MANIFEST_COLUMNS,
     extract_snippet,
     make_windows,
     normalise_intervals,
@@ -55,6 +59,7 @@ def main() -> int:
                         help="per city, choose only among videos already on disk (e.g. another project's downloads)")
     parser.add_argument("--no-semantics", action="store_true", help="rank by packet energy only (no SigLIP2)")
     parser.add_argument("--video", type=Path, help="one local video, used whole (for testing)")
+    parser.add_argument("--redo", action="store_true", help="cut cities that already have snippets again")
     parser.add_argument("--output-dir", type=Path, help="default: snippet_dir from the config")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -64,13 +69,24 @@ def main() -> int:
     length = float(settings["snippet_length_s"])
     out_dir = args.output_dir or project_path(settings["snippet_dir"])
 
-    # (locality, country, video_id, path, intervals) for every video to cut.
-    jobs: list[tuple[str, str, str, Path, list[tuple[float, float]]]] = []
+    manifest = out_dir / "snippets.csv"
+    existing = pd.read_csv(manifest, dtype=str, keep_default_na=False) if manifest.is_file() else pd.DataFrame(
+        columns=MANIFEST_COLUMNS)
+    done_cities = set(zip(existing.locality, existing.country)) - {("", "")}
+
+    # (locality, country, video_id, intervals) for every video to cut; its file is found or fetched in turn.
+    jobs: list[tuple[str, str, str, list[tuple[float, float]]]] = []
+    server = None
     if args.video:
-        jobs.append(("", "", args.video.stem, args.video, [(0.0, video_duration(args.video))]))
+        jobs.append(("", "", args.video.stem, [(0.0, video_duration(args.video))]))
     else:
         segments = [s for s in read_segments(project_path(settings["mapping"]))
                     if (not args.city or s.locality in args.city) and (not args.country or s.country in args.country)]
+        if not args.redo:
+            skipped = {(s.locality, s.country) for s in segments} & done_cities
+            segments = [s for s in segments if (s.locality, s.country) not in done_cities]
+            if skipped:
+                logger.info("%d cities already have snippets and are skipped (--redo to cut them again)", len(skipped))
         server = FileServer.from_config(settings, require_login=args.download)
         if args.local_only:
             # Choose among the videos already on disk: cities without one are skipped.
@@ -81,17 +97,9 @@ def main() -> int:
         for s in segments:
             if s.video_id in chosen:
                 per_video[(s.locality, s.country, s.video_id)].append((s.start_second, s.end_second))
-        for (locality, country, video_id), intervals in sorted(per_video.items()):
-            path = server.local_video(video_id)
-            if path is None and args.download:
-                try:
-                    path = server.video(video_id)
-                except DownloadError as error:
-                    logger.error("%s: %s", video_id, error)
-            if path is None:
-                logger.warning("%s (%s): no local video; use --download", video_id, locality)
-                continue
-            jobs.append((locality, country, video_id, path, intervals))
+        jobs = [(locality, country, video_id, intervals)
+                for (locality, country, video_id), intervals in sorted(per_video.items())]
+    logger.info("%d videos to cut", len(jobs))
 
     scorer = None
     if settings["semantic_ranking"] and not args.no_semantics:
@@ -99,8 +107,21 @@ def main() -> int:
                                 settings["semantic_model"], int(settings["semantic_batch_size"]),
                                 float(settings["semantic_min_frame_gap_s"]), int(settings["semantic_top_k"]))
 
-    rows = []
-    for locality, country, video_id, path, raw_intervals in jobs:
+    rows: list[dict] = []
+    cut = 0
+    for number, (locality, country, video_id, raw_intervals) in enumerate(jobs, start=1):
+        if args.video:
+            path = args.video
+        else:
+            path = server.local_video(video_id)
+            if path is None and args.download:
+                try:
+                    path = server.video(video_id)
+                except DownloadError as error:
+                    logger.error("%s (%s): %s", video_id, locality, error)
+            if path is None:
+                logger.warning("%s (%s): no local video; use --download", video_id, locality)
+                continue
         intervals = normalise_intervals(raw_intervals)
         windows = make_windows(video_id, intervals, probe_packets(path, intervals), length,
                                float(settings["snippet_stride_s"]))
@@ -112,12 +133,13 @@ def main() -> int:
         selected = select_windows(windows, int(settings["snippets_ranked_per_video"]),
                                   int(settings["snippets_random_per_video"]), float(settings["snippet_min_gap_s"]),
                                   int(settings["snippet_seed"]))
+        video_rows = []
         for window, kind in selected:
             name = snippet_name(video_id, window.start_s, length)
             clip = out_dir / video_id / f"{name}.mp4"
             frames = extract_snippet(path, window.start_s, length, clip, out_dir / video_id / name,
                                      float(settings["snippet_frames_fps"]))
-            rows.append({
+            video_rows.append({
                 "snippet": name, "locality": locality, "country": country, "video_id": video_id,
                 "segment_start_s": window.segment_start_s, "segment_end_s": window.segment_end_s,
                 "start_s": window.start_s, "end_s": window.end_s, "selection": kind, "rank": window.rank,
@@ -126,10 +148,15 @@ def main() -> int:
                 "clip": clip.relative_to(out_dir).as_posix(),
                 "frames_dir": (out_dir / video_id / name).relative_to(out_dir).as_posix(), "frame_count": len(frames),
             })
-        logger.info("%s (%s): %d windows, %d snippets", video_id, locality or path.name, len(windows), len(selected))
+        rows.extend(video_rows)
+        cut += 1
+        # Save after every video, keeping earlier runs' rows for other videos.
+        kept = existing[~existing.video_id.isin({r["video_id"] for r in rows})].to_dict("records")
+        write_manifest(kept + rows, manifest)
+        logger.info("[%d/%d] %s (%s): %d windows, %d snippets", number, len(jobs), video_id,
+                    locality or path.name, len(windows), len(selected))
 
-    write_manifest(rows, out_dir / "snippets.csv")
-    print(f"{len(rows)} snippets from {len(jobs)} videos -> {out_dir / 'snippets.csv'}")
+    print(f"{len(rows)} snippets from {cut} of {len(jobs)} videos -> {manifest}")
     return 0
 
 
