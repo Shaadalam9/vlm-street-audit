@@ -93,17 +93,19 @@ The older *open* prompt ("list up to five problems") is still running on the 50 
 
 ### Figures
 
-![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)
+Click a figure to open its interactive version (Plotly, hover for the numbers).
 
-![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)
+[![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)](https://shaadalam9.github.io/vlm-street-audit/figures/jaad_scene_facts.html)
 
-![Ranked vs random clips](docs/figures/ranked_vs_random.png)
+[![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problem_types_by_prompt.html)
 
-![Agreement between the four models](docs/figures/model_agreement.png)
+[![Ranked vs random clips](docs/figures/ranked_vs_random.png)](https://shaadalam9.github.io/vlm-street-audit/figures/ranked_vs_random.html)
 
-![Problems by continent](docs/figures/problems_by_continent.png)
+[![Agreement between the four models](docs/figures/model_agreement.png)](https://shaadalam9.github.io/vlm-street-audit/figures/model_agreement.html)
 
-![Problem types per city](docs/figures/problems_map.png)
+[![Problems by continent](docs/figures/problems_by_continent.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problems_by_continent.html)
+
+[![Problem types per city](docs/figures/problems_map.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problems_map.html)
 
 ### Tables
 
@@ -253,11 +255,13 @@ a 49-minute drive takes about a minute (591 windows); keyframe embeddings are ca
 ## Figures
 
 All figures are made with Plotly and saved by `vlm_street_audit.figures.save_figure` to
-`outputs/figures/` as HTML (static PNG/PDF through Kaleido on request).
+`outputs/figures/` as HTML (static PNG/PDF through Kaleido on request). The README's figures are
+in `docs/figures/` as PNG and HTML; GitHub Pages serves `docs/`, so clicking a figure opens the
+interactive one.
 
 ```bash
 uv run python scripts/plot_city_sample.py    # world map of the drawn cities
-uv run python scripts/analyse.py             # the Results: tables and docs/figures/*.png
+uv run python scripts/analyse.py             # the Results: tables, docs/figures/*.png and *.html
 ```
 
 Static PNGs need a Chromium browser for Kaleido. If Chrome is not installed, point

@@ -4,7 +4,7 @@ Reads outputs/vlm/<prompt>/{jaad,cities}/<model>/*.json, JAAD's labels and the c
 sample, and writes:
   outputs/vlm/analysis/*.csv           every table
   outputs/vlm/analysis/tables.md       the README tables, in Markdown
-  docs/figures/*.png (+ outputs/figures/*.html)
+  docs/figures/*.html and *.png (+ outputs/figures/*.html)
 
 Proportions carry Wilson 95% intervals; "consensus" means at least 3 of the 4 models.
 
@@ -61,8 +61,9 @@ def markdown(table: pd.DataFrame) -> str:
 def save(fig: go.Figure, name: str, png: bool) -> None:
     style(fig)
     save_figure(fig, name)
+    # The README's PNGs link to these interactive copies, served by GitHub Pages from docs/.
+    save_figure(fig, name, directory=FIGURES)
     if png:
-        FIGURES.mkdir(parents=True, exist_ok=True)
         fig.write_image(FIGURES / f"{name}.png", width=1100, height=fig.layout.height or 500, scale=2)
 
 
