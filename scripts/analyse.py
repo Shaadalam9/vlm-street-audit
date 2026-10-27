@@ -155,7 +155,7 @@ def main() -> int:
                     labels={"flagged": "Share of city clips with the problem", "model": "", "category": ""},
                     title="Problem types reported on the city clips, by prompt", height=520)
     save(figure, "problem_types_by_prompt", png)
-    md.append("\n### City clips: share flagged with each problem type (checklist prompt, all 150 clips)\n")
+    md.append("\n### City clips: share flagged with each problem type (checklist prompt, clips all four models answered)\n")
     pivot = share[share.prompt == "checklist"].pivot(index="category", columns="model", values="flagged")
     pivot = pivot.reindex(index=CATEGORIES, columns=MODEL_ORDER)
     md.append(markdown(pd.DataFrame({"Problem type": [LABELS[c] for c in pivot.index],
@@ -246,8 +246,8 @@ def main() -> int:
     continent.to_csv(out / "by_continent.csv")
     heat = continent[[f"issue_{c}" for c in CATEGORIES]].rename(columns=lambda c: LABELS[c.removeprefix("issue_")])
     figure = px.imshow(heat, text_auto=".0%", aspect="auto", color_continuous_scale="Reds", zmin=0, zmax=1,
-                       labels={"color": "Share of clips"},
-                       y=[f"{c} ({n} cities)" for c, n in zip(heat.index, continent.cities)],
+                       labels={"color": "Share of clips", "y": ""},
+                       y=[f"{c} ({n} {'city' if n == 1 else 'cities'})" for c, n in zip(heat.index, continent.cities)],
                        title="Problems at least 3 of 4 models agree on, by continent (checklist prompt)", height=420)
     save(figure, "problems_by_continent", png)
     city = (consensus.groupby(["locality", "country", "lat", "lon"])[[f"issue_{c}" for c in CATEGORIES]].any()

@@ -30,5 +30,6 @@ lpm-sampling = { git = "https://github.com/M-Colley/lpm-sampling.git", tag = "v0
 
 [dependency-groups]
 dev = [
+    "kaleido>=1.5.0",
     "pytest>=9.1.1",
 ]
