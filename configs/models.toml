@@ -12,8 +12,12 @@
 
 [server]
 port = 8000
-# Fraction of the 32 GB card vLLM may take; the CROWD workers already hold ~6 GB.
-gpu_memory_utilization = 0.72
+# vLLM refuses to start unless this fraction of the card is free. The KV cache is fixed
+# (kv_cache_gib), so this is only that start-up check: 0.72 failed on 2026-10-26 when the
+# CROWD workers held 12 GB; 0.60 (19.1 GB) still leaves room for the largest model's weights.
+gpu_memory_utilization = 0.60
+# Requests sent at once by scripts/run_vlm.py (each server allows --max-num-seqs 4).
+parallel_requests = 4
 max_model_len = 16384
 max_images = 10
 # wsl5090 has no CUDA toolkit (nvcc), so FlashInfer cannot compile its kernels there;
@@ -54,10 +58,12 @@ license = "apache-2.0"
 role = "second large model from another lineage; object detection and pointing listed on its card"
 notes = "Video only as frames, at most 60 s at 1 fps. Set the visual token budget (70-1120) explicitly and keep it the same across runs."
 # The largest model (19.8 GB of weights) with a large KV per token (8k context = 6.9 GiB).
-# Its prompts are ~2k tokens (about 280 per image) plus up to 2k of answer, so a 4.6k
-# context in a 4 GiB cache; that keeps it clear of the CROWD workers' share of the GPU.
-max_model_len = 4608
-kv_cache_gib = 4
+# Its prompts are ~2.2k tokens (about 280 per image) and checklist answers ~750, so a 4k
+# context in a 3.5 GiB cache. With 4 GiB the card filled up next to the CROWD workers
+# (30.9 of 32 GB) and generation fell from 13 to 2.6 tokens/s (2026-10-27).
+max_model_len = 4096
+kv_cache_gib = 3.5
+max_answer_tokens = 1536   # prompt ~2.2k + answer must fit the 4k context
 
 [[model]]
 key = "molmo2-8b"

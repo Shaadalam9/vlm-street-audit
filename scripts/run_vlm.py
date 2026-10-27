@@ -18,6 +18,7 @@ import signal
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pandas as pd
@@ -69,7 +70,7 @@ def stop_server(process: subprocess.Popen) -> None:
 
 
 def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None, variant: str,
-            only: set[str] | None) -> tuple[int, int]:
+            only: set[str] | None, parallel: int = 1) -> tuple[int, int]:
     clips = pd.read_csv(project_path(settings["clip_sets_dir"]) / f"{set_name}.csv")
     if only:
         clips = clips[clips.clip_id.isin(only)]
@@ -78,30 +79,41 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
     version = prompt_version(variant)
     out_dir = project_path(settings["vlm_output_dir"]) / variant / set_name / model["key"]
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    todo = []
+    for clip in clips.itertuples():
+        path = out_dir / f"{clip.clip_id}.json"
+        if path.is_file():
+            previous = json.loads(path.read_text(encoding="utf-8"))
+            if previous.get("prompt_version") == version and previous.get("answer") is not None:
+                continue  # answered with this prompt already; otherwise ask again
+        todo.append(clip)
+
+    def answer(clip) -> dict:
+        frames = [PROJECT_ROOT / f for f in clip.frames.split(";")]
+        record = {"clip_id": clip.clip_id, "set": set_name, "role": clip.role, "model": model["key"],
+                  "checkpoint": model["checkpoint"], "revision": model.get("revision", ""),
+                  "prompt_variant": variant, "prompt_version": version, "frames": clip.frames.split(";")}
+        try:
+            record.update(ask(model["key"], build_messages(frames, float(clip.seconds),
+                                                           int(settings["vlm_image_max_side"]), variant),
+                              base_url, max_tokens=int(model.get("max_answer_tokens", 2048)), variant=variant))
+        except requests.RequestException as error:
+            record.update({"answer": None, "error": f"request failed: {error}"})
+        path = out_dir / f"{clip.clip_id}.json"
+        partial = path.with_suffix(".part")
+        partial.write_text(json.dumps(record, indent=1, ensure_ascii=False), encoding="utf-8")
+        partial.replace(path)
+        return record
+
     done = failed = 0
-    with requests.Session() as session:
-        for clip in clips.itertuples():
-            path = out_dir / f"{clip.clip_id}.json"
-            if path.is_file():
-                previous = json.loads(path.read_text(encoding="utf-8"))
-                if previous.get("prompt_version") == version and previous.get("answer") is not None:
-                    continue  # answered with this prompt already; otherwise ask again
-            frames = [PROJECT_ROOT / f for f in clip.frames.split(";")]
-            record = {"clip_id": clip.clip_id, "set": set_name, "role": clip.role, "model": model["key"],
-                      "checkpoint": model["checkpoint"], "revision": model.get("revision", ""),
-                      "prompt_variant": variant, "prompt_version": version, "frames": clip.frames.split(";")}
-            try:
-                record.update(ask(model["key"], build_messages(frames, float(clip.seconds),
-                                                               int(settings["vlm_image_max_side"]), variant),
-                                  base_url, session=session, variant=variant))
-            except requests.RequestException as error:
-                record.update({"answer": None, "error": f"request failed: {error}"})
-            failed += record.get("answer") is None
+    # Several requests at once: vLLM batches them, which raises throughput on the shared GPU.
+    # Answers stay the same in substance (temperature 0); batching can shift the last decimals.
+    with ThreadPoolExecutor(max_workers=max(1, parallel)) as pool:
+        for record in pool.map(answer, todo):
             done += 1
-            partial = path.with_suffix(".part")
-            partial.write_text(json.dumps(record, indent=1, ensure_ascii=False), encoding="utf-8")
-            partial.replace(path)
-            logger.info("%s %s %s: %s", model["key"], set_name, clip.clip_id,
+            failed += record.get("answer") is None
+            logger.info("%s %s %s [%d/%d]: %s", model["key"], set_name, record["clip_id"], done, len(todo),
                         record.get("error") or f"{len(issues_of(record['answer']))} issues, {record['seconds']} s")
     return done, failed
 
@@ -133,7 +145,8 @@ def main() -> int:
             if process is not None:
                 wait_until_ready(base_url, process)
             for set_name in args.sets:
-                done, failed = run_set(models[key], set_name, settings, base_url, args.limit, args.prompt, only)
+                done, failed = run_set(models[key], set_name, settings, base_url, args.limit, args.prompt, only,
+                                       int(server.get("parallel_requests", 1)))
                 logger.info("%s %s: %d answered, %d without a valid answer", key, set_name, done, failed)
         except (RuntimeError, TimeoutError) as error:
             # One model failing to start must not stop the others.
