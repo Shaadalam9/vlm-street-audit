@@ -61,7 +61,7 @@ def markdown(table: pd.DataFrame) -> str:
 def save(fig: go.Figure, name: str, png: bool) -> None:
     style(fig)
     save_figure(fig, name)
-    # The README's PNGs link to these interactive copies, served by GitHub Pages from docs/.
+    # The README's PNGs link to these interactive copies.
     save_figure(fig, name, directory=FIGURES)
     if png:
         fig.write_image(FIGURES / f"{name}.png", width=1100, height=fig.layout.height or 500, scale=2)

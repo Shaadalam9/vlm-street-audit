@@ -93,19 +93,20 @@ The older *open* prompt ("list up to five problems") is still running on the 50 
 
 ### Figures
 
-Click a figure to open its interactive version (Plotly, hover for the numbers).
+Each figure links to its Plotly HTML in `docs/figures/`; download it and open it in a browser for the
+interactive version (GitHub shows HTML files as source).
 
-[![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)](https://shaadalam9.github.io/vlm-street-audit/figures/jaad_scene_facts.html)
+[![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)](docs/figures/jaad_scene_facts.html)
 
-[![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problem_types_by_prompt.html)
+[![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)](docs/figures/problem_types_by_prompt.html)
 
-[![Ranked vs random clips](docs/figures/ranked_vs_random.png)](https://shaadalam9.github.io/vlm-street-audit/figures/ranked_vs_random.html)
+[![Ranked vs random clips](docs/figures/ranked_vs_random.png)](docs/figures/ranked_vs_random.html)
 
-[![Agreement between the four models](docs/figures/model_agreement.png)](https://shaadalam9.github.io/vlm-street-audit/figures/model_agreement.html)
+[![Agreement between the four models](docs/figures/model_agreement.png)](docs/figures/model_agreement.html)
 
-[![Problems by continent](docs/figures/problems_by_continent.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problems_by_continent.html)
+[![Problems by continent](docs/figures/problems_by_continent.png)](docs/figures/problems_by_continent.html)
 
-[![Problem types per city](docs/figures/problems_map.png)](https://shaadalam9.github.io/vlm-street-audit/figures/problems_map.html)
+[![Problem types per city](docs/figures/problems_map.png)](docs/figures/problems_map.html)
 
 ### Tables
 
@@ -256,8 +257,7 @@ a 49-minute drive takes about a minute (591 windows); keyframe embeddings are ca
 
 All figures are made with Plotly and saved by `vlm_street_audit.figures.save_figure` to
 `outputs/figures/` as HTML (static PNG/PDF through Kaleido on request). The README's figures are
-in `docs/figures/` as PNG and HTML; GitHub Pages serves `docs/`, so clicking a figure opens the
-interactive one.
+in `docs/figures/` as PNG and interactive HTML.
 
 ```bash
 uv run python scripts/plot_city_sample.py    # world map of the drawn cities
