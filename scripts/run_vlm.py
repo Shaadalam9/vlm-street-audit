@@ -70,7 +70,7 @@ def stop_server(process: subprocess.Popen) -> None:
 
 
 def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None, variant: str,
-            only: set[str] | None, parallel: int = 1) -> tuple[int, int]:
+            only: set[str] | None, parallel: int = 1, timeout_s: float = 600) -> tuple[int, int]:
     clips = pd.read_csv(project_path(settings["clip_sets_dir"]) / f"{set_name}.csv")
     if only:
         clips = clips[clips.clip_id.isin(only)]
@@ -97,7 +97,8 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
         try:
             record.update(ask(model["key"], build_messages(frames, float(clip.seconds),
                                                            int(settings["vlm_image_max_side"]), variant),
-                              base_url, max_tokens=int(model.get("max_answer_tokens", 2048)), variant=variant))
+                              base_url, timeout_s=timeout_s, max_tokens=int(model.get("max_answer_tokens", 2048)),
+                              variant=variant))
         except requests.RequestException as error:
             record.update({"answer": None, "error": f"request failed: {error}"})
         path = out_dir / f"{clip.clip_id}.json"
@@ -125,6 +126,8 @@ def main() -> int:
     parser.add_argument("--start-server", action="store_true", help="start and stop vLLM for each model")
     parser.add_argument("--limit", type=int, help="first N clips of each set only (smoke test)")
     parser.add_argument("--prompt", choices=sorted(VARIANTS), default="open", help="prompt variant")
+    parser.add_argument("--timeout", type=float, default=600,
+                        help="seconds to wait for one answer (longer when the GPU is shared)")
     parser.add_argument("--clips", type=Path, help="file with one clip_id per line: run only these")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -146,7 +149,7 @@ def main() -> int:
                 wait_until_ready(base_url, process)
             for set_name in args.sets:
                 done, failed = run_set(models[key], set_name, settings, base_url, args.limit, args.prompt, only,
-                                       int(server.get("parallel_requests", 1)))
+                                       int(server.get("parallel_requests", 1)), args.timeout)
                 logger.info("%s %s: %d answered, %d without a valid answer", key, set_name, done, failed)
         except (RuntimeError, TimeoutError) as error:
             # One model failing to start must not stop the others.

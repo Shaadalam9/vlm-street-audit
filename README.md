@@ -52,39 +52,37 @@ model at a time. Details and checkpoints in [`configs/models.toml`](configs/mode
 - How consistent are these observations across models, prompts, and repeated runs?
 - Can VLMs (or LLM judges) review, correct, or refine each other's observations, standing in for the human review step?
 
-## Results (first full run, 27 October 2026)
+## Results (27–28 October 2026)
 
-**Status.** The four models answered two clip sets with the main *checklist* prompt:
+**Status.** The four models answered two clip sets, each with both prompts:
 
 - **JAAD:** 120 clips with labels, 60 with a zebra crossing and 60 without.
 - **Cities:** 150 clips, 2 from each of the 75 sampled cities: the best-ranked snippet and the random one.
 
-Of the 1,080 requests, 25 timed out; they will be rerun. For the city tables below this leaves 133 clips that all four models answered.
-
-The older *open* prompt ("list up to five problems") is still running on the 50 cities added later. Where it is compared below, it covers the first 25 cities (50 clips). All numbers come from `scripts/analyse.py`. Its tables are in `outputs/vlm/analysis/`. Intervals are Wilson 95% intervals. *Consensus* means at least 3 of the 4 models agree.
+The main prompt is the *checklist*; the older *open* prompt ("list up to five problems") is kept for comparison. All 2,160 answers are valid. The 19 that first timed out on the shared GPU were rerun. All numbers come from `scripts/analyse.py`, and its tables are in `outputs/vlm/analysis/`. Intervals are Wilson 95% intervals. *Consensus* means at least 3 of the 4 models agree.
 
 ### Main findings
 
 1. **Scene facts are reliable on JAAD.**
-   - All four models spot zebra crossings with a balanced accuracy of 0.90–0.91, and visible pedestrians with 0.98–1.00.
+   - All four models spot zebra crossings with a balanced accuracy of 0.90–0.92, and visible pedestrians with 0.98–1.00.
    - They find "pedestrians walking in the road" less well (0.57–0.69). JAAD's crossing label only gives a lower bound for this.
-   - Car parks score about 0.72, except Molmo2, which is at chance.
+   - Car parks score 0.72–0.75, except Molmo2, which is at chance.
 2. **Only Qwen3.8 localises reliably.**
    - With the checklist prompt, 83% (76–89%) of Qwen's points for pedestrian problems land on a labelled pedestrian. Gemma 4's do 41% of the time.
    - Molmo2 and InternVL3.5 mostly give placeholder points rather than looking. Molmo2 uses 8 distinct points for 235 problems; 186 of InternVL3.5's 261 points are round hundreds.
    - Points from these two models should not be used.
 3. **The checklist prompt fixes the collapse onto one problem type.**
-   - With the open prompt, the models used 1–4 of the 6 problem types (mostly *pedestrian exposure*) and reported problems only where people were visible.
-   - With the checklist, every model uses all 6 types. Pavements are judged "absent" on 12–34% of sides instead of almost always "unclear". Empty streets are audited too.
-   - Agreement between the models on the problem types rises. For example, Fleiss' kappa for pavement condition goes from −0.01 to 0.36, and for crossing facilities from 0.11 to 0.32.
+   - With the open prompt, the models used 2–4 of the 6 problem types (mostly *pedestrian exposure*). They seldom reported a problem where no people were visible (0–24% of such clips).
+   - With the checklist, every model uses all 6 types. Pavements are judged "absent" on 13–35% of sides instead of almost always "unclear". Empty streets are audited too.
+   - Agreement between the models on the problem types rises. For example, Fleiss' kappa for pavement condition goes from −0.01 to 0.36, and for crossing facilities from 0.06 to 0.32.
 4. **Missing or poor crossing facilities are the most common problem.**
-   - Each model flags them on 57–78% of the city clips.
-   - At least 3 of 4 models agree on them for about 60% of clips. They are reported far more often in Asia and Africa (73–75%) than in Europe and North America (35–43%).
+   - Each model flags them on 57–77% of the city clips.
+   - At least 3 of 4 models agree on them for 58% of clips. They are reported far more often in Asia and Africa (71–73%) than in Europe and North America (37–43%).
 5. **Most streets show some problem, chosen or not.**
-   - On the ranked snippets, at least 3 models agree on at least one problem in 81% (70–88%) of clips; on the random snippets, in 83% (73–90%).
-   - Ranking picks somewhat more obstructions (12% vs 3%) and vulnerable users (13% vs 5%), but the intervals overlap.
+   - On the ranked snippets, at least 3 models agree on at least one problem in 83% (73–90%) of clips; on the random snippets, in 79% (68–86%).
+   - Ranking picks somewhat more obstructions (11% vs 3%) and vulnerable users (12% vs 4%), but the intervals overlap.
    - The random clips are therefore not "empty" controls. They are an unbiased view of the streets.
-6. **The models still disagree on whether a clip has any problem at all.** Fleiss' kappa for this is 0.28. Their verdicts are not interchangeable, which is why the results use the consensus of at least 3 of the 4 models rather than any single model.
+6. **The models still disagree on whether a clip has any problem at all.** With the checklist prompt, Fleiss' kappa for this is 0.29. Their verdicts are not interchangeable, which is why the results use the consensus of at least 3 of the 4 models rather than any single model.
 
 **Limits.**
 - There is no ground truth for the city clips. Agreement between models is not correctness.
@@ -98,15 +96,27 @@ interactive version (GitHub shows HTML files as source).
 
 [![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)](docs/figures/jaad_scene_facts.html)
 
+**Figure 1.** Scene facts against JAAD's labels (120 clips), per model and prompt: balanced accuracy, where 0.5 (dotted line) is chance.
+
 [![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)](docs/figures/problem_types_by_prompt.html)
+
+**Figure 2.** Share of city clips each model flags with each problem type, open prompt (top) and checklist prompt (bottom); all 150 clips.
 
 [![Ranked vs random clips](docs/figures/ranked_vs_random.png)](docs/figures/ranked_vs_random.html)
 
+**Figure 3.** Problems at least 3 of the 4 models agree on (checklist prompt), on the ranked snippets and the random ones; bars show Wilson 95% intervals.
+
 [![Agreement between the four models](docs/figures/model_agreement.png)](docs/figures/model_agreement.html)
+
+**Figure 4.** Agreement between the four models on the city clips (Fleiss' kappa), for the scene facts (above the line) and the problem types (below). Kappa is not defined where no model flagged the item.
 
 [![Problems by continent](docs/figures/problems_by_continent.png)](docs/figures/problems_by_continent.html)
 
+**Figure 5.** Problems at least 3 of the 4 models agree on, by continent (checklist prompt). Cells with few clips (Oceania, South America) are unreliable.
+
 [![Problem types per city](docs/figures/problems_map.png)](docs/figures/problems_map.html)
+
+**Figure 6.** Number of the six problem types at least 3 of the 4 models agree on per city (checklist prompt, up to 2 clips per city).
 
 ### Tables
 
@@ -114,11 +124,11 @@ interactive version (GitHub shows HTML files as source).
 
 | Scene fact (clips with it / 120) | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B |
 |---|---|---|---|---|
-| Zebra crossing (60) | 0.91 | 0.90 | 0.91 | 0.91 |
+| Zebra crossing (60) | 0.91 | 0.90 | 0.92 | 0.91 |
 | Traffic signal (6) | 0.98 | 0.73 | 0.82 | 0.96 |
 | Pedestrians visible (115) | 1.00 | 0.99 | 0.98 | 0.98 |
-| Pedestrians in road (86) | 0.69 | 0.63 | 0.57 | 0.67 |
-| Car park (19) | 0.75 | 0.72 | 0.49 | 0.72 |
+| Pedestrians in road (86) | 0.69 | 0.63 | 0.57 | 0.68 |
+| Car park (19) | 0.75 | 0.72 | 0.50 | 0.72 |
 
 #### JAAD: points given for pedestrian problems that land on a labelled pedestrian
 
@@ -127,62 +137,62 @@ interactive version (GitHub shows HTML files as source).
 | Qwen3.8-27B | 97% of 198 (94%–99%) | 83% of 127 (76%–89%) |
 | Gemma 4 31B | 59% of 17 (36%–78%) | 41% of 125 (33%–50%) |
 | Molmo2-8B | 69% of 430 (64%–73%) | 15% of 13 (4%–42%) |
-| InternVL3.5-8B | 5% of 301 (3%–8%) | 0% of 53 (0%–7%) |
+| InternVL3.5-8B | 5% of 301 (3%–8%) | 0% of 55 (0%–7%) |
 
-133 city clips answered by all four models with the checklist prompt, 50 with the open prompt.
+150 city clips answered by all four models with the checklist prompt, 150 with the open prompt.
 
 
 #### City clips: share flagged with each problem type (checklist prompt, clips all four models answered)
 
 | Problem type | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B |
 |---|---|---|---|---|
-| Pavement condition | 30% | 45% | 53% | 34% |
-| Pavement obstruction | 23% | 28% | 5% | 24% |
-| Crossing facilities | 57% | 64% | 73% | 78% |
-| Pedestrian exposure | 29% | 35% | 35% | 32% |
-| Accessibility | 38% | 56% | 12% | 29% |
-| Vulnerable users | 14% | 27% | 13% | 11% |
+| Pavement condition | 31% | 47% | 54% | 35% |
+| Pavement obstruction | 21% | 25% | 6% | 25% |
+| Crossing facilities | 57% | 60% | 73% | 77% |
+| Pedestrian exposure | 27% | 33% | 35% | 31% |
+| Accessibility | 37% | 57% | 13% | 30% |
+| Vulnerable users | 13% | 26% | 12% | 10% |
 
 #### Open vs checklist prompt (city clips)
 
 | Model | Prompt | Problem types used (of 6) | Pavement sides judged absent | Pavement sides unclear / not visible | Clips without people that get a problem |
 |---|---|---|---|---|---|
-| Qwen3.8-27B | open | 1 | 0% | 68% | 0% of 27 |
-| Qwen3.8-27B | checklist | 6 | 24% | 9% | 67% of 55 |
-| Gemma 4 31B | open | 4 | 6% | 50% | 0% of 25 |
-| Gemma 4 31B | checklist | 6 | 34% | 1% | 82% of 50 |
-| Molmo2-8B | open | 2 | 0% | 93% | 0% of 30 |
-| Molmo2-8B | checklist | 6 | 15% | 51% | 95% of 74 |
-| InternVL3.5-8B | open | 1 | 0% | 81% | 14% of 36 |
-| InternVL3.5-8B | checklist | 6 | 12% | 14% | 87% of 77 |
+| Qwen3.8-27B | open | 2 | 0% | 59% | 2% of 64 |
+| Qwen3.8-27B | checklist | 6 | 26% | 9% | 68% of 62 |
+| Gemma 4 31B | open | 4 | 10% | 45% | 0% of 58 |
+| Gemma 4 31B | checklist | 6 | 35% | 1% | 81% of 57 |
+| Molmo2-8B | open | 2 | 0% | 88% | 0% of 75 |
+| Molmo2-8B | checklist | 6 | 14% | 50% | 93% of 82 |
+| InternVL3.5-8B | open | 2 | 0% | 70% | 24% of 90 |
+| InternVL3.5-8B | checklist | 6 | 13% | 13% | 86% of 86 |
 
 #### Ranked vs random clips: problems the models agree on (at least 3 of 4, checklist prompt)
 
 | Problem type | Ranked clips | Random clips |
 |---|---|---|
-| Pavement condition | 33% (23%–45%) | 26% (17%–37%) |
-| Pavement obstruction | 12% (6%–22%) | 3% (1%–10%) |
-| Crossing facilities | 57% (45%–68%) | 62% (50%–73%) |
-| Pedestrian exposure | 30% (20%–42%) | 21% (13%–33%) |
-| Accessibility | 21% (13%–32%) | 18% (11%–29%) |
-| Vulnerable users | 13% (7%–24%) | 5% (2%–13%) |
-| Any problem | 81% (70%–88%) | 83% (73%–90%) |
+| Pavement condition | 36% (26%–47%) | 25% (17%–36%) |
+| Pavement obstruction | 11% (6%–20%) | 3% (1%–9%) |
+| Crossing facilities | 56% (45%–67%) | 60% (49%–70%) |
+| Pedestrian exposure | 28% (19%–39%) | 19% (11%–29%) |
+| Accessibility | 21% (14%–32%) | 19% (11%–29%) |
+| Vulnerable users | 12% (6%–21%) | 4% (1%–11%) |
+| Any problem | 83% (73%–90%) | 79% (68%–86%) |
 
 #### Agreement between the four models (Fleiss' kappa, city clips)
 
 | Item | open | checklist |
 |---|---|---|
-| Zebra crossing | 0.83 | 0.76 |
-| Traffic signal | 0.85 | 0.86 |
-| Pedestrians visible | 0.61 | 0.70 |
-| Pedestrians in road | 0.65 | 0.64 |
-| Any problem | 0.57 | 0.28 |
+| Zebra crossing | 0.84 | 0.78 |
+| Traffic signal | 0.90 | 0.87 |
+| Pedestrians visible | 0.70 | 0.72 |
+| Pedestrians in road | 0.61 | 0.60 |
+| Any problem | 0.56 | 0.29 |
 | Pavement condition | -0.01 | 0.36 |
-| Pavement obstruction | -0.01 | 0.21 |
-| Crossing facilities | 0.11 | 0.32 |
-| Pedestrian exposure | 0.42 | 0.52 |
-| Accessibility | – | 0.14 |
-| Vulnerable users | – | 0.48 |
+| Pavement obstruction | -0.02 | 0.20 |
+| Crossing facilities | 0.06 | 0.32 |
+| Pedestrian exposure | 0.41 | 0.48 |
+| Accessibility | – | 0.15 |
+| Vulnerable users | – | 0.46 |
 
 ## Setup
 

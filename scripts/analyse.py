@@ -19,6 +19,7 @@ from pathlib import Path
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 from vlm_street_audit.config import PROJECT_ROOT, load_config, project_path
 from vlm_street_audit.evaluation import (
@@ -44,6 +45,13 @@ LABELS = {"zebra_crossing_visible": "Zebra crossing", "traffic_signal_visible": 
           "pavement_obstruction": "Pavement obstruction", "crossing_facilities": "Crossing facilities",
           "pedestrian_exposure": "Pedestrian exposure", "accessibility": "Accessibility",
           "vulnerable_users": "Vulnerable users"}
+PROMPT_NAMES = {"open": "Open prompt", "checklist": "Checklist prompt"}
+# Categorical colours in a fixed order (checked for colour-blind separation): one per model,
+# the first two for two-way comparisons. Magnitudes use one blue ramp, light to dark.
+MODEL_COLOURS = {"Qwen3.8-27B": "#2a78d6", "Gemma 4 31B": "#eb6834", "Molmo2-8B": "#1baf7a",
+                 "InternVL3.5-8B": "#eda100"}
+PAIR = ["#2a78d6", "#eb6834"]
+BLUES = ["#f4f8fd", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
 FIGURES = PROJECT_ROOT / "docs" / "figures"
 
 
@@ -59,7 +67,9 @@ def markdown(table: pd.DataFrame) -> str:
 
 
 def save(fig: go.Figure, name: str, png: bool) -> None:
+    # No figure titles: the README (or a paper) gives each figure its caption.
     style(fig)
+    fig.update_layout(title=None, margin=dict(l=10, r=10, t=30, b=10), legend_title_text="")
     save_figure(fig, name)
     # The README's PNGs link to these interactive copies.
     save_figure(fig, name, directory=FIGURES)
@@ -98,13 +108,19 @@ def main() -> int:
     md.append(markdown(pd.DataFrame({
         "Scene fact (clips with it / 120)": [f"{LABELS[f]} ({positives[f]})" for f in table.index],
         **{MODEL_NAMES[m]: [f"{v:.2f}" for v in table[m]] for m in table.columns}})))
-    figure = px.bar(jaad.assign(field=jaad.field.map(LABELS), model=jaad.model.map(MODEL_NAMES)),
+    figure = px.bar(jaad.assign(field=jaad.field.map(LABELS), model=jaad.model.map(MODEL_NAMES),
+                                prompt=jaad.prompt.map(PROMPT_NAMES)),
                     x="field", y="balanced_accuracy", color="model", barmode="group", facet_row="prompt",
-                    category_orders={"model": [MODEL_NAMES[m] for m in MODEL_ORDER], "prompt": PROMPTS},
-                    labels={"field": "", "balanced_accuracy": "Balanced accuracy", "model": ""},
-                    title="Scene facts against JAAD's labels (120 clips; 0.5 = chance)", height=650)
-    figure.add_hline(y=0.5, line_dash="dot", line_color="grey")
-    figure.update_yaxes(range=[0, 1])
+                    category_orders={"model": [MODEL_NAMES[m] for m in MODEL_ORDER],
+                                     "prompt": [PROMPT_NAMES[p] for p in PROMPTS]},
+                    color_discrete_map=MODEL_COLOURS,
+                    labels={"field": "", "balanced_accuracy": "Balanced accuracy<br>(0.5 = chance)", "model": ""},
+                    height=650)
+    figure.for_each_annotation(lambda a: a.update(text=a.text.split("=")[-1]))
+    figure.add_hline(y=0.5, line_dash="dot", line_color="#52514e")
+    figure.update_yaxes(range=[0, 1.02], dtick=0.25, tickformat=".2f")
+    figure.update_layout(bargap=0.25, bargroupgap=0.08, legend=dict(orientation="h", y=1.06, x=0))
+    figure.update_traces(hovertemplate="%{x}<br>%{y:.2f}")
     save(figure, "jaad_scene_facts", png)
 
     # ---- JAAD: points on pedestrians -------------------------------------------------
@@ -149,12 +165,23 @@ def main() -> int:
     long["category"] = long.category.str.removeprefix("issue_")
     share = long.groupby(["prompt", "model", "category"]).flagged.mean().reset_index()
     share.to_csv(out / "cities_share_flagged.csv", index=False)
-    figure = px.bar(share.assign(category=share.category.map(LABELS), model=share.model.map(MODEL_NAMES)),
-                    x="model", y="flagged", color="category", facet_col="prompt", barmode="group",
-                    category_orders={"model": [MODEL_NAMES[m] for m in MODEL_ORDER], "prompt": PROMPTS,
-                                     "category": [LABELS[c] for c in CATEGORIES]},
-                    labels={"flagged": "Share of city clips with the problem", "model": "", "category": ""},
-                    title="Problem types reported on the city clips, by prompt", height=520)
+    # One heat map per prompt, stacked so the column labels fit: rows are models, columns problem types, cells the share of clips flagged.
+    prompts_here = [p for p in PROMPTS if p in set(share.prompt)]
+    figure = make_subplots(rows=len(prompts_here), cols=1, shared_xaxes=True, vertical_spacing=0.1,
+                           subplot_titles=[f"{PROMPT_NAMES[p]} ({cities[cities.prompt == p].clip_id.nunique()} clips)"
+                                           for p in prompts_here])
+    for i, prompt in enumerate(prompts_here, start=1):
+        grid = (share[share.prompt == prompt].pivot(index="model", columns="category", values="flagged")
+                .reindex(index=MODEL_ORDER, columns=CATEGORIES))
+        figure.add_heatmap(z=grid.values, x=[LABELS[c].replace(" ", "<br>", 1) for c in CATEGORIES],
+                           y=[MODEL_NAMES[m] for m in MODEL_ORDER], zmin=0, zmax=1, colorscale=BLUES,
+                           text=[[pct(v) for v in row] for row in grid.values], texttemplate="%{text}",
+                           xgap=2, ygap=2, showscale=i == len(prompts_here),
+                           colorbar=dict(title=dict(text="Share of clips", side="right"), tickformat=".0%"),
+                           hovertemplate="%{y}<br>%{x}: %{text}<extra></extra>", row=i, col=1)
+    figure.update_yaxes(autorange="reversed")
+    figure.update_xaxes(tickangle=0)
+    figure.update_layout(height=640)
     save(figure, "problem_types_by_prompt", png)
     md.append("\n### City clips: share flagged with each problem type (checklist prompt, clips all four models answered)\n")
     pivot = share[share.prompt == "checklist"].pivot(index="category", columns="model", values="flagged")
@@ -208,13 +235,18 @@ def main() -> int:
         "Random clips": f"{pct(r.control_share)} ({pct(r.control_low)}–{pct(r.control_high)})"}
         for r in roles.itertuples()])))
     figure = go.Figure()
-    for role, name in (("main", "Ranked clips"), ("control", "Random clips")):
-        figure.add_bar(name=name, x=[("Any problem" if c == "any" else LABELS[c]) for c in roles.category],
-                       y=roles[f"{role}_share"], error_y=dict(type="data", symmetric=False,
-                                                              array=roles[f"{role}_high"] - roles[f"{role}_share"],
-                                                              arrayminus=roles[f"{role}_share"] - roles[f"{role}_low"]))
-    figure.update_layout(barmode="group", title="Problems at least 3 of 4 models agree on: ranked vs random clips",
-                         yaxis_title="Share of clips (95% CI)", height=480)
+    for (role, name), colour in zip((("main", "Ranked clips"), ("control", "Random clips")), PAIR):
+        n = int(roles[f"{role}_n"].iloc[0])
+        figure.add_bar(name=f"{name} (n = {n})",
+                       x=[("Any problem" if c == "any" else LABELS[c]).replace(" ", "<br>", 1) for c in roles.category],
+                       y=roles[f"{role}_share"], marker_color=colour,
+                       error_y=dict(type="data", symmetric=False, color="#52514e", thickness=1.5, width=4,
+                                    array=roles[f"{role}_high"] - roles[f"{role}_share"],
+                                    arrayminus=roles[f"{role}_share"] - roles[f"{role}_low"]),
+                       hovertemplate="%{x}<br>%{y:.0%}<extra>" + name + "</extra>")
+    figure.update_layout(barmode="group", bargap=0.25, bargroupgap=0.08, yaxis_title="Share of clips (95% CI)",
+                         yaxis=dict(range=[0, 1], tickformat=".0%"), height=460,
+                         legend=dict(orientation="h", y=1.08, x=0))
     save(figure, "ranked_vs_random", png)
 
     # Agreement between models.
@@ -229,10 +261,22 @@ def main() -> int:
     agree["label"] = agree["item"].str.replace("scene_", "").str.replace("issue_", "").map(
         lambda k: "Any problem" if k == "any_issue" else LABELS.get(k, k))
     agree.to_csv(out / "model_agreement.csv", index=False)
-    figure = px.bar(agree, x="label", y="fleiss_kappa", color="prompt", barmode="group",
-                    category_orders={"prompt": PROMPTS},
-                    labels={"label": "", "fleiss_kappa": "Fleiss' kappa (4 models)", "prompt": "Prompt"},
-                    title="Agreement between the four models on the city clips", height=480)
+    order = [LABELS[f] for f in SCENE_BOOLEANS] + ["Any problem"] + [LABELS[c] for c in CATEGORIES]
+    figure = go.Figure()
+    for prompt, colour in zip(PROMPTS, PAIR):
+        rows = agree[agree.prompt == prompt].set_index("label").reindex(order)
+        n = cities[cities.prompt == prompt].clip_id.nunique()
+        # kappa is undefined when no model ever flags the item; say so instead of drawing nothing.
+        figure.add_bar(name=f"{PROMPT_NAMES[prompt]} ({n} clips)", y=order, x=rows.fleiss_kappa.fillna(0),
+                       orientation="h", marker_color=colour,
+                       text=["not defined (never flagged)" if v != v else f"{v:.2f}" for v in rows.fleiss_kappa],
+                       textposition="outside", cliponaxis=False,
+                       hovertemplate="%{y}<br>kappa %{text}<extra>" + PROMPT_NAMES[prompt] + "</extra>")
+    figure.add_hline(y=len(SCENE_BOOLEANS) - 0.5, line_color="#52514e", line_width=1)
+    figure.update_layout(barmode="group", bargap=0.25, bargroupgap=0.05, height=620,
+                         xaxis=dict(title="Fleiss' kappa between the four models", range=[-0.1, 1.05], dtick=0.2,
+                                    zeroline=True, zerolinecolor="#52514e"),
+                         yaxis=dict(autorange="reversed"), legend=dict(orientation="h", y=1.06, x=0))
     save(figure, "model_agreement", png)
     md.append("\n### Agreement between the four models (Fleiss' kappa, city clips)\n")
     kappa = agree.pivot(index="label", columns="prompt", values="fleiss_kappa")
@@ -246,20 +290,28 @@ def main() -> int:
                  .assign(cities=consensus.groupby("continent").locality.nunique()))
     continent.to_csv(out / "by_continent.csv")
     heat = continent[[f"issue_{c}" for c in CATEGORIES]].rename(columns=lambda c: LABELS[c.removeprefix("issue_")])
-    figure = px.imshow(heat, text_auto=".0%", aspect="auto", color_continuous_scale="Reds", zmin=0, zmax=1,
-                       labels={"color": "Share of clips", "y": ""},
-                       y=[f"{c} ({n} {'city' if n == 1 else 'cities'})" for c, n in zip(heat.index, continent.cities)],
-                       title="Problems at least 3 of 4 models agree on, by continent (checklist prompt)", height=420)
+    clips_per = consensus.groupby("continent").size()
+    figure = go.Figure(go.Heatmap(
+        z=heat.values, x=[c.replace(" ", "<br>", 1) for c in heat.columns], zmin=0, zmax=1, colorscale=BLUES,
+        y=[f"{c} ({n} {'city' if n == 1 else 'cities'}, {k} {'clip' if k == 1 else 'clips'})"
+           for c, n, k in zip(heat.index, continent.cities, clips_per.reindex(heat.index))],
+        text=[[pct(v) for v in row] for row in heat.values], texttemplate="%{text}", xgap=2, ygap=2,
+        colorbar=dict(title=dict(text="Share of clips", side="right"), tickformat=".0%"),
+        hovertemplate="%{y}<br>%{x}: %{text}<extra></extra>"))
+    figure.update_yaxes(autorange="reversed")
+    figure.update_layout(height=420)
     save(figure, "problems_by_continent", png)
     city = (consensus.groupby(["locality", "country", "lat", "lon"])[[f"issue_{c}" for c in CATEGORIES]].any()
             .sum(axis=1).rename("problem_types").reset_index())
     figure = px.scatter_geo(city, lat="lat", lon="lon", color="problem_types", hover_name="locality",
                             hover_data={"country": True, "lat": False, "lon": False}, projection="natural earth",
-                            color_continuous_scale="OrRd", range_color=[0, 6],
-                            labels={"problem_types": "Problem types"},
-                            title="Problem types the models agree on per city (checklist prompt, 2 clips per city)",
-                            height=520)
-    figure.update_traces(marker=dict(size=9, line=dict(width=0.5, color="white")))
+                            color_continuous_scale=BLUES[2:], range_color=[0, 6],
+                            labels={"problem_types": "Problem types<br>(of 6)"}, height=560)
+    figure.update_traces(marker=dict(size=10, line=dict(width=0.8, color="#0b0b0b")),
+                         hovertemplate="%{hovertext}, %{customdata[0]}<br>%{marker.color} problem types<extra></extra>")
+    figure.update_geos(showland=True, landcolor="#ecebe8", showcountries=True, countrycolor="#ffffff",
+                       coastlinecolor="#c3c2b7", showframe=False, lataxis_range=[-58, 80])
+    figure.update_coloraxes(colorbar=dict(dtick=1, title_side="right"))
     save(figure, "problems_map", png)
 
     (out / "tables.md").write_text("\n".join(md) + "\n", encoding="utf-8")
