@@ -8,6 +8,7 @@ skipped, so a stopped run resumes where it left off.
 Run on wsl5090:
     uv run python scripts/run_vlm.py --start-server --models all --sets jaad cities
     uv run python scripts/run_vlm.py --models qwen3.8-27b --sets cities --limit 3   # server already up
+    uv run python scripts/run_vlm.py --start-server --prompt audit --tag audit-1frame --frames 3   # robustness
 """
 
 import argparse
@@ -31,7 +32,9 @@ logger = logging.getLogger("run_vlm")
 SERVE_DIR = PROJECT_ROOT / "serve"
 
 
-def wait_until_ready(base_url: str, process: subprocess.Popen, timeout_s: float = 1800) -> None:
+# Long, because wsl_yield can pause the server while it loads (SIGSTOP) and the clock keeps running:
+# 30 min was too short twice on 2026-10-29/30. A server that exits early is still caught at once.
+def wait_until_ready(base_url: str, process: subprocess.Popen, timeout_s: float = 6 * 3600) -> None:
     deadline = time.monotonic() + timeout_s
     while time.monotonic() < deadline:
         if process.poll() is not None:
@@ -69,36 +72,56 @@ def stop_server(process: subprocess.Popen) -> None:
     process.wait()
 
 
-def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None, variant: str,
-            only: set[str] | None, parallel: int = 1, timeout_s: float = 600) -> tuple[int, int]:
+def full_condition(settings: dict, condition: dict | None) -> dict:
+    return {"temperature": 0.0, "seed": 0, "frames": None,
+            "max_side": int(settings["vlm_image_max_side"])} | (condition or {})
+
+
+def pending(model_key: str, set_name: str, settings: dict, limit: int | None, variant: str, only: set[str] | None,
+            condition: dict | None = None, tag: str | None = None) -> list:
+    """The clips of a set this model has not yet answered validly with this prompt and condition."""
+    condition = full_condition(settings, condition)
     clips = pd.read_csv(project_path(settings["clip_sets_dir"]) / f"{set_name}.csv")
     if only:
         clips = clips[clips.clip_id.isin(only)]
     if limit:
         clips = clips.head(limit)
     version = prompt_version(variant)
-    out_dir = project_path(settings["vlm_output_dir"]) / variant / set_name / model["key"]
-    out_dir.mkdir(parents=True, exist_ok=True)
-
+    out_dir = project_path(settings["vlm_output_dir"]) / (tag or variant) / set_name / model_key
     todo = []
     for clip in clips.itertuples():
         path = out_dir / f"{clip.clip_id}.json"
         if path.is_file():
             previous = json.loads(path.read_text(encoding="utf-8"))
-            if previous.get("prompt_version") == version and previous.get("answer") is not None:
-                continue  # answered with this prompt already; otherwise ask again
+            if (previous.get("prompt_version") == version and previous.get("answer") is not None
+                    and previous.get("condition", condition) == condition):
+                continue  # answered with this prompt and condition already; otherwise ask again
         todo.append(clip)
+    return todo
+
+
+def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: int | None, variant: str,
+            only: set[str] | None, parallel: int = 1, timeout_s: float = 600, condition: dict | None = None,
+            tag: str | None = None) -> tuple[int, int]:
+    """Answer every clip of a set; `condition` (temperature, seed, frames, max_side) varies the request."""
+    todo = pending(model["key"], set_name, settings, limit, variant, only, condition, tag)
+    condition = full_condition(settings, condition)
+    version = prompt_version(variant)
+    out_dir = project_path(settings["vlm_output_dir"]) / (tag or variant) / set_name / model["key"]
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     def answer(clip) -> dict:
-        frames = [PROJECT_ROOT / f for f in clip.frames.split(";")]
+        names = clip.frames.split(";")
+        if condition["frames"]:  # 1-based positions of the frames to keep, e.g. [3] for the middle one
+            names = [names[i - 1] for i in condition["frames"]]
         record = {"clip_id": clip.clip_id, "set": set_name, "role": clip.role, "model": model["key"],
                   "checkpoint": model["checkpoint"], "revision": model.get("revision", ""),
-                  "prompt_variant": variant, "prompt_version": version, "frames": clip.frames.split(";")}
+                  "prompt_variant": variant, "prompt_version": version, "condition": condition, "frames": names}
         try:
-            record.update(ask(model["key"], build_messages(frames, float(clip.seconds),
-                                                           int(settings["vlm_image_max_side"]), variant),
+            record.update(ask(model["key"], build_messages([PROJECT_ROOT / f for f in names], float(clip.seconds),
+                                                           condition["max_side"], variant),
                               base_url, timeout_s=timeout_s, max_tokens=int(model.get("max_answer_tokens", 2048)),
-                              variant=variant))
+                              variant=variant, temperature=condition["temperature"], seed=condition["seed"]))
         except requests.RequestException as error:
             record.update({"answer": None, "error": f"request failed: {error}"})
         path = out_dir / f"{clip.clip_id}.json"
@@ -129,7 +152,16 @@ def main() -> int:
     parser.add_argument("--timeout", type=float, default=600,
                         help="seconds to wait for one answer (longer when the GPU is shared)")
     parser.add_argument("--clips", type=Path, help="file with one clip_id per line: run only these")
+    # Robustness conditions; each run with one goes to its own folder (--tag).
+    parser.add_argument("--tag", help="output folder name instead of the prompt variant's (e.g. audit-1frame)")
+    parser.add_argument("--temperature", type=float, default=0.0)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--frames", type=int, nargs="+", help="1-based positions of the clip's frames to send")
+    parser.add_argument("--max-side", type=int, help="longest image side in pixels (default: vlm_image_max_side)")
     args = parser.parse_args()
+    condition = {"temperature": args.temperature, "seed": args.seed, "frames": args.frames}
+    if args.max_side:
+        condition["max_side"] = args.max_side
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
     settings = load_config()
@@ -141,6 +173,11 @@ def main() -> int:
     failures: list[str] = []
     for key in keys:
         process = None
+        # A resumed run (or its retry pass) need not load a model that has nothing left to answer.
+        if not any(pending(key, set_name, settings, args.limit, args.prompt, only, condition, args.tag)
+                   for set_name in args.sets):
+            logger.info("%s: nothing left to answer, not started", key)
+            continue
         if args.start_server:
             logger.info("starting vLLM for %s", key)
             process = start_server(key, PROJECT_ROOT / "logs" / f"vllm-{key}.log")
@@ -149,7 +186,7 @@ def main() -> int:
                 wait_until_ready(base_url, process)
             for set_name in args.sets:
                 done, failed = run_set(models[key], set_name, settings, base_url, args.limit, args.prompt, only,
-                                       int(server.get("parallel_requests", 1)), args.timeout)
+                                       int(server.get("parallel_requests", 1)), args.timeout, condition, args.tag)
                 logger.info("%s %s: %d answered, %d without a valid answer", key, set_name, done, failed)
         except (RuntimeError, TimeoutError) as error:
             # One model failing to start must not stop the others.

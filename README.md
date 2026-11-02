@@ -251,6 +251,8 @@ pedestrian problems:
    prevalence estimates honest.
 6. **Output**: an H.264 clip and 1 frame per second as JPEGs, plus
    `data/snippets/snippets.csv` with every snippet's scores and selection type.
+   A video fetched into `data/videos/` is deleted once its snippets are cut (it can be
+   fetched again at any time); `--keep-downloads` keeps it. Videos on the local drives stay.
 
 ```bash
 uv run python scripts/make_snippets.py --videos-per-city 1            # local videos only
@@ -322,7 +324,7 @@ tests/         pytest, no network
 default.config / default.secret   settings and an empty login (local copies: config, secret)
 data/mapping_original.csv   the CROWD mapping (sampling frame)
 data/city_sample/           the drawn sample and its design files
-data/videos/   downloaded footage (not tracked in git)
+data/videos/   downloaded footage, deleted once cut (not tracked in git)
 data/bbox/     downloaded YOLO track CSVs (not tracked in git)
 data/snippets/ snippet clips, frames and snippets.csv (not tracked in git)
 data/frames/   extracted frames (not tracked in git)

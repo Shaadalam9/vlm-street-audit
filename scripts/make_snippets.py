@@ -9,6 +9,7 @@ H.264 clip plus JPEG frames. See src/vlm_street_audit/snippets.py for the method
 Output: data/snippets/<video_id>/<snippet>.mp4, data/snippets/<video_id>/<snippet>/frame_NNN.jpg,
 and data/snippets/snippets.csv (one row per snippet, with its scores). Cities that already have
 snippets are skipped and their rows kept, so a run adds to the manifest (--redo cuts them again).
+Videos fetched into the download folder are deleted once cut (--keep-downloads keeps them).
 
 Run:  uv run python scripts/make_snippets.py --videos-per-city 1
       uv run python scripts/make_snippets.py --country Japan --download
@@ -61,6 +62,8 @@ def main() -> int:
     parser.add_argument("--video", type=Path, help="one local video, used whole (for testing)")
     parser.add_argument("--redo", action="store_true", help="cut cities that already have snippets again")
     parser.add_argument("--output-dir", type=Path, help="default: snippet_dir from the config")
+    parser.add_argument("--keep-downloads", action="store_true",
+                        help="keep videos fetched into the download folder (by default deleted once cut)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)  # one line per Hugging Face request otherwise
@@ -127,6 +130,7 @@ def main() -> int:
                                float(settings["snippet_stride_s"]))
         if not windows:
             logger.warning("%s: no segment is %.0f s long", video_id, length)
+            discard_download(path, server, args.keep_downloads)
             continue
         if scorer is not None:
             scorer.score(video_id, path, intervals, windows)
@@ -155,9 +159,18 @@ def main() -> int:
         write_manifest(kept + rows, manifest)
         logger.info("[%d/%d] %s (%s): %d windows, %d snippets", number, len(jobs), video_id,
                     locality or path.name, len(windows), len(selected))
+        discard_download(path, server, args.keep_downloads)
 
     print(f"{len(rows)} snippets from {cut} of {len(jobs)} videos -> {manifest}")
     return 0
+
+
+def discard_download(path: Path, server: FileServer | None, keep: bool) -> None:
+    """Delete a video fetched into the download folder once it is cut: it can be fetched again at any time,
+    and one video per city already took 141 GB. Videos on the local drives (lin4080) are never touched."""
+    if server is not None and not keep and path.resolve().parent == server.video_download_dir.resolve():
+        path.unlink(missing_ok=True)
+        logger.info("%s: downloaded video deleted after cutting", path.stem)
 
 
 if __name__ == "__main__":
