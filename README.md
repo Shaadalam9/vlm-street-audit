@@ -45,154 +45,343 @@ model at a time. Details and checkpoints in [`configs/models.toml`](configs/mode
 - Fixed per run: frames, prompt, image resolution, temperature 0, and each model's
   checkpoint revision.
 
-## Research questions (draft)
+## Research questions
 
-- How well can VLMs identify and localise pedestrian-related problems in real-world street footage?
-- How plausible, specific, and actionable are the improvement suggestions they generate?
-- How consistent are these observations across models, prompts, and repeated runs?
-- Can VLMs (or LLM judges) review, correct, or refine each other's observations, standing in for the human review step?
+- Which pedestrian infrastructure is present on ordinary streets around the world, and which is missing?
+- How does that differ between continents, and does it follow country indicators (road deaths, median age, inequality, literacy)?
+- Do the models audit streets outside Europe and North America as reliably as inside (model bias by region)?
+- How robust are the answers to rewording, fewer frames, lower resolution and resampling?
+- Are the suggested improvements real, specific and feasible, as rated by VLM judges?
 
-## Results (27–28 October 2026)
+## Results (28 October – 3 November 2026)
 
-**Status.** The four models answered two clip sets, each with both prompts:
+**Method.** Each model audits a clip (5 frames over 10 s) with items from two established instruments:
 
-- **JAAD:** 120 clips with labels, 60 with a zebra crossing and 60 without.
-- **Cities:** 150 clips, 2 from each of the 75 sampled cities: the best-ranked snippet and the random one.
+- **iRAP road attributes** (Star Rating Coding Manual, drive-on-left edition 3.2): pedestrian crossing facility
+  (grade separated, signalised or marked, with or without a refuge, raised, refuge only, none) and its quality,
+  footway provision per side (physical barrier, ≥ 3 m, 1–3 m, < 1 m, informal path, none), pedestrian fencing,
+  number of lanes, median. iRAP codes 100 m segments, about what a 10 s clip covers.
+- **MAPS-Mini** (Sallis et al. 2015, *Preventing Chronic Disease* 12:150098): street lighting, traffic calming,
+  kerb ramps, footway obstructions and trip hazards, transit stops, bike facilities, land use.
 
-The main prompt is the *checklist*; the older *open* prompt ("list up to five problems") is kept for comparison. All 2,160 answers are valid. The 19 that first timed out on the shared GPU were rerun. All numbers come from `scripts/analyse.py`, and its tables are in `outputs/vlm/analysis/`. Intervals are Wilson 95% intervals. *Consensus* means at least 3 of the 4 models agree.
+From the item answers, eight needs follow by fixed rules (e.g. no or informal footway on a side → *footway needed*;
+people have a reason to cross and there is no facility → *crossing needed*; 4+ lanes with an at-grade crossing and no
+refuge → *refuge needed*). The model also lists each need itself, with evidence, a measure and a suggested change.
+Prompt and schema are in `src/vlm_street_audit/vlm.py`; answers are constrained to the JSON schema by vLLM.
+
+**Data.** 5,520 valid answers, none missing:
+
+| Run | Clips | Answers |
+|---|---|---|
+| Main audit (temperature 0) | 120 JAAD + 150 city clips (2 per city, 75 cities) | 1,080 |
+| Reworded prompt | same | 1,080 |
+| One frame (the middle one) | same | 1,080 |
+| Half resolution (640 px) | same | 1,080 |
+| Two samples at temperature 0.7 | 150 city clips | 2 × 600 |
+
+Two judges (Qwen3.8 and Gemma 4) then rated each listed need and suggestion of the main run's 464 city answers that
+list any: 1,253 needs, each rated by both. All numbers come from `scripts/analyse_audit.py`; its tables and CSVs are
+in `outputs/vlm/analysis_audit/`. *Consensus* means at least 3 of the 4 models agree; cities are the unit, each
+city's two clips averaged, with 95% intervals from a bootstrap over cities (seed 20261028).
 
 ### Main findings
 
-1. **Scene facts are reliable on JAAD.**
-   - All four models spot zebra crossings with a balanced accuracy of 0.90–0.92, and visible pedestrians with 0.98–1.00.
-   - They find "pedestrians walking in the road" less well (0.57–0.69). JAAD's crossing label only gives a lower bound for this.
-   - Car parks score 0.72–0.75, except Molmo2, which is at chance.
-2. **Only Qwen3.8 localises reliably.**
-   - With the checklist prompt, 83% (76–89%) of Qwen's points for pedestrian problems land on a labelled pedestrian. Gemma 4's do 41% of the time.
-   - Molmo2 and InternVL3.5 mostly give placeholder points rather than looking. Molmo2 uses 8 distinct points for 235 problems; 186 of InternVL3.5's 261 points are round hundreds.
-   - Points from these two models should not be used.
-3. **The checklist prompt fixes the collapse onto one problem type.**
-   - With the open prompt, the models used 2–4 of the 6 problem types (mostly *pedestrian exposure*). They seldom reported a problem where no people were visible (0–24% of such clips).
-   - With the checklist, every model uses all 6 types. Pavements are judged "absent" on 13–35% of sides instead of almost always "unclear". Empty streets are audited too.
-   - Agreement between the models on the problem types rises. For example, Fleiss' kappa for pavement condition goes from −0.01 to 0.36, and for crossing facilities from 0.06 to 0.32.
-4. **Missing or poor crossing facilities are the most common problem.**
-   - Each model flags them on 57–77% of the city clips.
-   - At least 3 of 4 models agree on them for 58% of clips. They are reported far more often in Asia and Africa (71–73%) than in Europe and North America (37–43%).
-5. **Most streets show some problem, chosen or not.**
-   - On the ranked snippets, at least 3 models agree on at least one problem in 83% (73–90%) of clips; on the random snippets, in 79% (68–86%).
-   - Ranking picks somewhat more obstructions (11% vs 3%) and vulnerable users (12% vs 4%), but the intervals overlap.
-   - The random clips are therefore not "empty" controls. They are an unbiased view of the streets.
-6. **The models still disagree on whether a clip has any problem at all.** With the checklist prompt, Fleiss' kappa for this is 0.29. Their verdicts are not interchangeable, which is why the results use the consensus of at least 3 of the 4 models rather than any single model.
+1. **The crossing item is valid where it can be checked.** On JAAD's labelled clips the iRAP crossing-facility item
+   finds marked crossings with a balanced accuracy of 0.88–0.92 for all four models. *Pedestrians in the road*
+   remains the weakest scene fact (0.62–0.71).
+2. **What is there.** Street lighting is the most common feature (83% of cities by consensus), then a footway set
+   back at least 1 m (51%) and a formal footway on both sides (43%). A crossing facility is in view in 24% of
+   cities and a signalised one in 11%; refuge islands and traffic calming are never agreed on.
+3. **What is missing differs by continent.**
+   - A **crossing where people have reason to cross** is the most common need: 42% of cities, 64% in Africa,
+     47% in Asia, 40% in Europe and 27% in North America.
+   - A **footway** (none or only an informal path) is needed in 50% of African cities and 30% of North American
+     ones, against 10–12% in Europe and Asia. North America's share comes from roads built without footways,
+     not from poor ones.
+   - **Street lighting** is missing mostly in Africa (21%) and North America (17%).
+   - African cities have the fewest formal footways on both sides (7% against 42–57%) and crossings (7%).
+     Africa has 7 cities, South America 5 and Oceania 1, so their intervals are wide.
+4. **Needs follow country indicators.** Over the 75 cities, the number of needs rises with road deaths per
+   100,000 (Spearman's rho 0.41, 0.21 to 0.58) and falls with median age (−0.43) and literacy (−0.54, 51 cities
+   with data). Formal footways on both sides rise with median age (0.42) and literacy (0.50). Inequality (Gini)
+   shows little, except more cities needing footways where it is higher (0.28). These are country-level figures
+   and correlate with national income, so they describe a pattern, not a cause.
+5. **Model bias by region: agreement is lower outside Europe and North America for crossings and lighting.**
+   - The four models agree on the crossing items less in the rest of the world than in Europe and North America:
+     crossing quality kappa 0.59 against 0.73, crossing facility 0.47 against 0.61, reason to cross 0.25 against
+     0.42, street lighting 0.26 against 0.45. The intervals overlap for each item, but the direction is the same
+     for all four.
+   - Qwen3.8 lists needs that match its own item answers in 57% of answers in Europe and North America but in 33%
+     elsewhere; Gemma 4 is consistent in 90% of answers in both.
+   - The footway items have kappa near 0 in both regions: the models do not agree on a side's footway type, so the
+     footway results above rest on the clips where at least 3 of 4 happen to agree. Kerb ramps (−0.04) and traffic
+     calming are not usable.
+6. **Robust to wording and resolution, less to fewer frames and resampling.** Against the main answers, mean
+   Cohen's kappa over items and models is 0.74 for a reworded prompt and 0.76 at half resolution, but 0.59 with one
+   frame instead of five, and two samples at temperature 0.7 agree with each other at only 0.55. The footway item
+   is the least stable (0.33 between samples). Robustness is about the same in both regions.
+7. **The large models' suggestions hold up; the small models' do not.**
+   - Both judges rate most needs listed by Qwen3.8 and Gemma 4 as visible in the frames (70–92%), but most of
+     Molmo2's and InternVL3.5's as not (13–47%).
+   - Almost every suggestion would fix its stated deficit (both judges, 67–99%; judge agreement kappa 0.77).
+     Suggestions are seldom specific to the street (0–61%), and none tells people to behave differently.
+   - The judges disagree on feasibility (kappa 0.07): Gemma rates 76% of the large models' suggestions feasible,
+     Qwen 10–13%. Gemma is more lenient on every auditor by a similar margin, including Qwen's own suggestions,
+     so there is no clear sign that a judge favours its own model.
+   - Judged quality is about the same for both regions (deficit visible 51% against 54%).
+
+**Earlier runs (27–28 October).** An open prompt ("list up to five problems") made the models collapse onto one
+problem type and ignore streets without people; a six-type checklist fixed that but gave no basis for comparing
+countries, which is why the audit uses iRAP and MAPS-Mini items. Only Qwen3.8 localised problems reliably
+(83% of its points on a labelled pedestrian in JAAD); Molmo2 and InternVL3.5 mostly returned placeholder points.
+Those results are in commit e3020d3.
 
 **Limits.**
-- There is no ground truth for the city clips. Agreement between models is not correctness.
-- JAAD is North American and European dashcam footage.
-- There are two clips per city, unweighted. The continent and city figures describe the clips, not the cities' streets as a whole.
+- There is no human ground truth for the city clips; agreement between models is not correctness, and the
+  footway items are not reliable.
+- JAAD is North American and European footage, so validity outside those regions is not checked.
+- Two clips per city, from YouTube driving videos: the figures describe the streets those videos cover, not a
+  city's streets as a whole.
+- Country indicators are national, and literacy is missing for 24 cities.
 
 ### Figures
 
 Each figure links to its Plotly HTML in `docs/figures/`; download it and open it in a browser for the
 interactive version (GitHub shows HTML files as source).
 
-[![Scene facts against JAAD's labels](docs/figures/jaad_scene_facts.png)](docs/figures/jaad_scene_facts.html)
+[![Validity on JAAD](docs/figures/audit_jaad_validity.png)](docs/figures/audit_jaad_validity.html)
 
-**Figure 1.** Scene facts against JAAD's labels (120 clips), per model and prompt: balanced accuracy, where 0.5 (dotted line) is chance.
+**Figure 1.** Scene facts and the iRAP crossing-facility item against JAAD's labels (120 clips): balanced
+accuracy per model, where 0.5 (dotted line) is chance.
 
-[![Problem types per model and prompt](docs/figures/problem_types_by_prompt.png)](docs/figures/problem_types_by_prompt.html)
+[![Infrastructure present by continent](docs/figures/audit_present_by_continent.png)](docs/figures/audit_present_by_continent.html)
 
-**Figure 2.** Share of city clips each model flags with each problem type, open prompt (top) and checklist prompt (bottom); all 150 clips.
+**Figure 2.** Share of cities where at least 3 of the 4 models agree a feature is present, by continent (number of
+cities in brackets). Refuge islands and traffic calming are at 0% everywhere and only in the table.
 
-[![Ranked vs random clips](docs/figures/ranked_vs_random.png)](docs/figures/ranked_vs_random.html)
+[![Infrastructure needed by continent](docs/figures/audit_needed_by_continent.png)](docs/figures/audit_needed_by_continent.html)
 
-**Figure 3.** Problems at least 3 of the 4 models agree on (checklist prompt), on the ranked snippets and the random ones; bars show Wilson 95% intervals.
+**Figure 3.** Share of cities with each need, by continent. Needs that no city has (blocked footway, better
+crossing, kerb ramps) are only in the table.
 
-[![Agreement between the four models](docs/figures/model_agreement.png)](docs/figures/model_agreement.html)
+[![Country indicators](docs/figures/audit_country_indicators.png)](docs/figures/audit_country_indicators.html)
 
-**Figure 4.** Agreement between the four models on the city clips (Fleiss' kappa), for the scene facts (above the line) and the problem types (below). Kappa is not defined where no model flagged the item.
+**Figure 4.** Spearman's rho between what cities have or need and their country's indicators (73–75 cities; 51
+for literacy). An asterisk marks a 95% bootstrap interval that excludes 0; blank cells have too few cities with
+or without the feature.
 
-[![Problems by continent](docs/figures/problems_by_continent.png)](docs/figures/problems_by_continent.html)
+[![Agreement by region](docs/figures/audit_agreement_by_region.png)](docs/figures/audit_agreement_by_region.html)
 
-**Figure 5.** Problems at least 3 of the 4 models agree on, by continent (checklist prompt). Cells with few clips (Oceania, South America) are unreliable.
+**Figure 5.** Agreement between the four models (Fleiss' kappa) on each item, for clips from Europe and North
+America and from the rest of the world, with 95% bootstrap intervals over clips. Road items above the first line,
+footway items (per side) between the lines, crossing items below.
 
-[![Problem types per city](docs/figures/problems_map.png)](docs/figures/problems_map.html)
+[![Robustness](docs/figures/audit_robustness.png)](docs/figures/audit_robustness.html)
 
-**Figure 6.** Number of the six problem types at least 3 of the 4 models agree on per city (checklist prompt, up to 2 clips per city).
+**Figure 6.** Cohen's kappa between the main answers and each changed condition, mean of the four models (city
+clips); "Resampled" compares two temperature-0.7 samples with each other. Traffic calming is almost never
+reported, so its kappa is 0.
+
+[![Suggestion quality](docs/figures/audit_suggestion_quality.png)](docs/figures/audit_suggestion_quality.html)
+
+**Figure 7.** Share of each auditor model's listed needs and suggestions rated yes, by each judge, with 95% Wilson
+intervals. No suggestion was rated as about behaviour, so that criterion is only in the table.
 
 ### Tables
 
-#### JAAD: balanced accuracy of the scene facts (checklist prompt)
+120 JAAD clips and 150 city clips (75 cities) answered by all four models.
 
-| Scene fact (clips with it / 120) | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B |
+#### JAAD: balanced accuracy against the labels
+
+| Item | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B |
 |---|---|---|---|---|
-| Zebra crossing (60) | 0.91 | 0.90 | 0.92 | 0.91 |
-| Traffic signal (6) | 0.98 | 0.73 | 0.82 | 0.96 |
-| Pedestrians visible (115) | 1.00 | 0.99 | 0.98 | 0.98 |
-| Pedestrians in road (86) | 0.69 | 0.63 | 0.57 | 0.68 |
-| Car park (19) | 0.75 | 0.72 | 0.50 | 0.72 |
+| Zebra crossing | 0.92 | 0.90 | 0.92 | 0.91 |
+| Traffic signal | 0.98 | 0.73 | 0.82 | 0.95 |
+| Pedestrians visible | 0.90 | 0.99 | 0.98 | 0.99 |
+| Pedestrians in road | 0.71 | 0.64 | 0.67 | 0.62 |
+| Crossing facility (iRAP item) | 0.92 | 0.88 | 0.92 | 0.89 |
 
-#### JAAD: points given for pedestrian problems that land on a labelled pedestrian
-
-| Model | open prompt | checklist prompt |
-|---|---|---|
-| Qwen3.8-27B | 97% of 198 (94%–99%) | 83% of 127 (76%–89%) |
-| Gemma 4 31B | 59% of 17 (36%–78%) | 41% of 125 (33%–50%) |
-| Molmo2-8B | 69% of 430 (64%–73%) | 15% of 13 (4%–42%) |
-| InternVL3.5-8B | 5% of 301 (3%–8%) | 0% of 55 (0%–7%) |
-
-150 city clips answered by all four models with the checklist prompt, 150 with the open prompt.
+The crossing-facility item counts a marked, signalised or raised crossing and is scored against JAAD's crossing label.
 
 
-#### City clips: share flagged with each problem type (checklist prompt, clips all four models answered)
+#### Infrastructure present, by continent (share of cities; at least 3 of 4 models agree)
 
-| Problem type | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B |
+|  | Asia (32) | Europe (15) | North America (15) | Africa (7) | South America (5) | Oceania (1) | All (75) |
+|---|---|---|---|---|---|---|---|
+| Formal footway on both sides | 42% (27%–58%) | 57% (40%–73%) | 43% (23%–63%) | 7% (0%–21%) | 50% (20%–80%) | 50% | 43% (33%–51%) |
+| Footway set back ≥ 1 m or behind a barrier | 52% (36%–67%) | 60% (40%–80%) | 47% (27%–67%) | 29% (7%–43%) | 60% (30%–90%) | 50% | 51% (41%–59%) |
+| Footways free of obstruction | 54% (37%–72%) | 42% (19%–65%) | 62% (38%–85%) | 62% (25%–100%) | 80% (60%–100%) | 100% | 57% (46%–67%) |
+| Crossing facility | 22% (12%–33%) | 20% (7%–33%) | 30% (10%–53%) | 7% (0%–21%) | 50% (20%–80%) | 50% | 24% (17%–31%) |
+| Signalised or grade-separated crossing | 9% (3%–17%) | 7% (0%–17%) | 17% (3%–33%) | 0% (0%–0%) | 20% (0%–40%) | 50% | 11% (6%–15%) |
+| Refuge island | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
+| Kerb ramps at the crossing | 0% (0%–0%) | 33% (0%–100%) | 0% (0%–0%) | – | 0% (0%–0%) | – | 7% (0%–21%) |
+| Street lighting | 94% (88%–98%) | 83% (67%–97%) | 70% (50%–87%) | 57% (36%–79%) | 80% (40%–100%) | 100% | 83% (75%–89%) |
+| Traffic calming | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
+| Pedestrian fencing | 8% (2%–16%) | 3% (0%–10%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 4% (1%–8%) |
+| Bike facility | 3% (0%–8%) | 0% (0%–0%) | 10% (0%–20%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 3% (1%–7%) |
+| Transit stop | 12% (5%–20%) | 3% (0%–10%) | 3% (0%–10%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 7% (3%–11%) |
+
+#### Infrastructure needed, by continent (share of cities)
+
+|  | Asia (32) | Europe (15) | North America (15) | Africa (7) | South America (5) | Oceania (1) | All (75) |
+|---|---|---|---|---|---|---|---|
+| Footway (none or informal) | 12% (5%–22%) | 10% (0%–20%) | 30% (17%–47%) | 50% (21%–79%) | 20% (0%–40%) | 50% | 20% (14%–27%) |
+| Clear a blocked footway | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
+| Repair trip hazards | 5% (0%–12%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 10% (0%–30%) | 0% | 3% (0%–6%) |
+| Crossing where people need one | 47% (33%–59%) | 40% (20%–63%) | 27% (7%–47%) | 64% (36%–93%) | 40% (10%–70%) | 0% | 42% (33%–51%) |
+| Better crossing | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
+| Refuge on a wide road | 5% (0%–9%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 10% (0%–30%) | 0% | 3% (1%–5%) |
+| Kerb ramps | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
+| Street lighting | 3% (0%–8%) | 7% (0%–17%) | 17% (3%–33%) | 21% (0%–50%) | 0% (0%–0%) | 0% | 8% (3%–13%) |
+
+Cities are the unit: each city's two clips are averaged, and intervals come from a bootstrap over cities. Oceania is one city.
+
+
+#### Infrastructure and country indicators (Spearman's rho over cities, 95% bootstrap interval)
+
+|  | Road deaths per 100k (n = 73) | Median age (n = 75) | Gini index (n = 74) | Literacy rate (n = 51) |
 |---|---|---|---|---|
-| Pavement condition | 31% | 47% | 54% | 35% |
-| Pavement obstruction | 21% | 25% | 6% | 25% |
-| Crossing facilities | 57% | 60% | 73% | 77% |
-| Pedestrian exposure | 27% | 33% | 35% | 31% |
-| Accessibility | 37% | 57% | 13% | 30% |
-| Vulnerable users | 13% | 26% | 12% | 10% |
+| Formal footway on both sides | -0.25 (-0.46 to -0.03) | 0.42 (0.19 to 0.61) | -0.13 (-0.34 to 0.09) | 0.50 (0.28 to 0.67) |
+| Footway set back ≥ 1 m or behind a barrier | -0.20 (-0.42 to 0.04) | 0.37 (0.15 to 0.57) | -0.16 (-0.37 to 0.07) | 0.33 (0.08 to 0.55) |
+| Footways free of obstruction | 0.03 (-0.23 to 0.28) | 0.01 (-0.27 to 0.30) | 0.01 (-0.25 to 0.26) | -0.03 (-0.37 to 0.30) |
+| Crossing facility | -0.21 (-0.42 to 0.02) | 0.28 (0.07 to 0.48) | -0.01 (-0.23 to 0.23) | 0.19 (-0.06 to 0.43) |
+| Signalised or grade-separated crossing | -0.02 (-0.24 to 0.20) | 0.04 (-0.15 to 0.23) | 0.09 (-0.14 to 0.31) | 0.18 (-0.08 to 0.41) |
+| Street lighting | -0.24 (-0.43 to -0.03) | 0.35 (0.14 to 0.53) | -0.26 (-0.46 to -0.02) | 0.23 (-0.07 to 0.48) |
+| Pedestrian fencing | 0.12 (-0.07 to 0.29) | 0.07 (-0.15 to 0.25) | -0.00 (-0.14 to 0.12) | 0.23 (0.06 to 0.41) |
+| Bike facility | 0.11 (-0.03 to 0.26) | 0.06 (-0.05 to 0.17) | 0.17 (0.02 to 0.31) | – |
+| Transit stop | -0.07 (-0.32 to 0.19) | 0.23 (0.04 to 0.39) | -0.27 (-0.44 to -0.09) | 0.34 (0.13 to 0.51) |
+| Needed: Footway (none or informal) | 0.18 (-0.05 to 0.40) | -0.37 (-0.57 to -0.15) | 0.28 (0.06 to 0.48) | -0.55 (-0.73 to -0.30) |
+| Needed: Crossing where people need one | 0.28 (0.06 to 0.48) | -0.30 (-0.50 to -0.09) | -0.05 (-0.29 to 0.19) | -0.36 (-0.58 to -0.10) |
+| Needed: Street lighting | 0.19 (-0.01 to 0.36) | -0.24 (-0.43 to -0.02) | 0.14 (-0.09 to 0.35) | -0.25 (-0.49 to 0.06) |
+| Number of needs | 0.41 (0.21 to 0.58) | -0.43 (-0.61 to -0.20) | 0.17 (-0.08 to 0.40) | -0.54 (-0.72 to -0.29) |
 
-#### Open vs checklist prompt (city clips)
+Country figures from the city sample (CROWD mapping); a positive rho means the item is more common where the indicator is higher.
 
-| Model | Prompt | Problem types used (of 6) | Pavement sides judged absent | Pavement sides unclear / not visible | Clips without people that get a problem |
+
+#### Agreement between the four models, by region (Fleiss' kappa, city clips, 95% interval)
+
+| Item | All clips | Europe & North America (60 clips) | Rest of the world (90 clips) |
+|---|---|---|---|
+| Area type | 0.68 | 0.64 (0.42 to 0.78) | 0.73 (0.12 to 0.94) |
+| Land use | 0.42 | 0.42 (0.28 to 0.54) | 0.40 (0.29 to 0.51) |
+| Lanes | 0.33 | 0.26 (0.14 to 0.37) | 0.31 (0.21 to 0.41) |
+| Median | 0.12 | 0.01 (-0.09 to 0.08) | 0.18 (0.09 to 0.25) |
+| Street lighting | 0.35 | 0.45 (0.28 to 0.59) | 0.26 (0.13 to 0.39) |
+| Traffic calming | -0.00 | -0.00 (-0.02 to -0.00) | – |
+| Pedestrian fencing | 0.23 | 0.22 (0.04 to 0.37) | 0.22 (0.10 to 0.32) |
+| Transit stops | 0.46 | 0.53 (-0.01 to 0.83) | 0.43 (0.26 to 0.57) |
+| Bike facility | 0.48 | 0.42 (0.23 to 0.64) | 0.55 (0.16 to 0.83) |
+| Footway (per side) | 0.02 | 0.01 (-0.05 to 0.05) | 0.02 (-0.02 to 0.07) |
+| Footway obstruction (per side) | 0.11 | 0.09 (0.03 to 0.13) | 0.12 (0.07 to 0.17) |
+| Trip hazards (per side) | 0.05 | 0.04 (-0.03 to 0.10) | 0.05 (-0.01 to 0.10) |
+| Reason to cross | 0.34 | 0.42 (0.25 to 0.57) | 0.25 (0.08 to 0.39) |
+| Crossing facility | 0.53 | 0.61 (0.49 to 0.73) | 0.47 (0.39 to 0.56) |
+| Crossing quality | 0.65 | 0.73 (0.60 to 0.85) | 0.59 (0.47 to 0.70) |
+| Kerb ramps | -0.04 | -0.04 (-0.12 to 0.02) | -0.04 (-0.09 to 0.00) |
+
+#### Listed needs against the item answers, by region
+
+| Model | Region | Needs per clip | Item needs listed | Listed needs backed by an item | Answers fully consistent |
 |---|---|---|---|---|---|
-| Qwen3.8-27B | open | 2 | 0% | 59% | 2% of 64 |
-| Qwen3.8-27B | checklist | 6 | 26% | 9% | 68% of 62 |
-| Gemma 4 31B | open | 4 | 10% | 45% | 0% of 58 |
-| Gemma 4 31B | checklist | 6 | 35% | 1% | 81% of 57 |
-| Molmo2-8B | open | 2 | 0% | 88% | 0% of 75 |
-| Molmo2-8B | checklist | 6 | 14% | 50% | 93% of 82 |
-| InternVL3.5-8B | open | 2 | 0% | 70% | 24% of 90 |
-| InternVL3.5-8B | checklist | 6 | 13% | 13% | 86% of 86 |
+| Qwen3.8-27B | Europe & North America | 1.4 | 86% | 80% | 57% |
+| Qwen3.8-27B | Rest of the world | 1.6 | 83% | 75% | 33% |
+| Gemma 4 31B | Europe & North America | 1.4 | 94% | 100% | 90% |
+| Gemma 4 31B | Rest of the world | 1.8 | 95% | 100% | 90% |
+| Molmo2-8B | Europe & North America | 0.6 | 67% | 24% | 43% |
+| Molmo2-8B | Rest of the world | 0.6 | 88% | 28% | 52% |
+| InternVL3.5-8B | Europe & North America | 1.2 | 40% | 25% | 15% |
+| InternVL3.5-8B | Rest of the world | 1.5 | 53% | 37% | 21% |
 
-#### Ranked vs random clips: problems the models agree on (at least 3 of 4, checklist prompt)
+#### Robustness: Cohen's kappa with the main answers (city clips, mean of the four models)
 
-| Problem type | Ranked clips | Random clips |
+| Item | Reworded prompt | One frame | Half resolution | Resampled (T = 0.7) |
+|---|---|---|---|---|
+| Area type | 0.84 | 0.87 | 0.91 | 0.86 |
+| Land use | 0.89 | 0.74 | 0.85 | 0.54 |
+| Lanes | 0.83 | 0.76 | 0.87 | 0.63 |
+| Median | 0.83 | 0.65 | 0.79 | 0.46 |
+| Street lighting | 0.91 | 0.62 | 0.86 | 0.53 |
+| Traffic calming | 0.33 | 0.00 | 0.00 | 0.00 |
+| Pedestrian fencing | 0.64 | 0.61 | 0.65 | 0.55 |
+| Transit stops | 0.92 | 0.52 | 0.78 | 0.72 |
+| Bike facility | 0.83 | 0.38 | 0.68 | 0.56 |
+| Footway | 0.47 | 0.46 | 0.73 | 0.33 |
+| Footway obstruction | 0.58 | 0.51 | 0.73 | 0.43 |
+| Trip hazards | 0.54 | 0.52 | 0.71 | 0.42 |
+| Reason to cross | 0.82 | 0.63 | 0.77 | 0.66 |
+| Crossing facility | 0.77 | 0.68 | 0.76 | 0.66 |
+| Crossing quality | 0.78 | 0.69 | 0.81 | 0.72 |
+| Kerb ramps | 0.55 | 0.43 | 0.65 | 0.41 |
+
+#### Robustness by region (mean Cohen's kappa over items and models, city clips)
+
+| Change | Europe & North America | Rest of the world |
 |---|---|---|
-| Pavement condition | 36% (26%–47%) | 25% (17%–36%) |
-| Pavement obstruction | 11% (6%–20%) | 3% (1%–9%) |
-| Crossing facilities | 56% (45%–67%) | 60% (49%–70%) |
-| Pedestrian exposure | 28% (19%–39%) | 19% (11%–29%) |
-| Accessibility | 21% (14%–32%) | 19% (11%–29%) |
-| Vulnerable users | 12% (6%–21%) | 4% (1%–11%) |
-| Any problem | 83% (73%–90%) | 79% (68%–86%) |
+| Reworded prompt | 0.75 | 0.73 |
+| One frame | 0.61 | 0.57 |
+| Half resolution | 0.75 | 0.77 |
+| Resampled (T = 0.7) | 0.57 | 0.54 |
 
-#### Agreement between the four models (Fleiss' kappa, city clips)
+"Resampled" compares two runs at temperature 0.7 with each other, not with the main run.
 
-| Item | open | checklist |
+
+#### Suggestions: share rated yes by each judge (city clips)
+
+
+##### Judge: Qwen3.8-27B
+
+| Criterion | Qwen3.8-27B (n = 307) | Gemma 4 31B (n = 282) | Molmo2-8B (n = 289) | InternVL3.5-8B (n = 375) |
+|---|---|---|---|---|
+| Deficit visible | 70% | 71% | 22% | 13% |
+| Fixes the deficit | 97% | 98% | 96% | 67% |
+| Specific to the street | 41% | 18% | 3% | 0% |
+| Feasible | 13% | 10% | 1% | 1% |
+| About behaviour | 0% | 0% | 0% | 0% |
+
+##### Judge: Gemma 4 31B
+
+| Criterion | Qwen3.8-27B (n = 307) | Gemma 4 31B (n = 282) | Molmo2-8B (n = 289) | InternVL3.5-8B (n = 375) |
+|---|---|---|---|---|
+| Deficit visible | 92% | 91% | 34% | 47% |
+| Fixes the deficit | 96% | 99% | 95% | 72% |
+| Specific to the street | 61% | 45% | 9% | 6% |
+| Feasible | 76% | 76% | 51% | 38% |
+| About behaviour | 0% | 0% | 0% | 0% |
+
+##### Judged quality by region (both judges, all auditors)
+
+| Criterion | Europe & North America (n = 896) | Rest of the world (n = 1610) |
 |---|---|---|
-| Zebra crossing | 0.84 | 0.78 |
-| Traffic signal | 0.90 | 0.87 |
-| Pedestrians visible | 0.70 | 0.72 |
-| Pedestrians in road | 0.61 | 0.60 |
-| Any problem | 0.56 | 0.29 |
-| Pavement condition | -0.01 | 0.36 |
-| Pavement obstruction | -0.02 | 0.20 |
-| Crossing facilities | 0.06 | 0.32 |
-| Pedestrian exposure | 0.41 | 0.48 |
-| Accessibility | – | 0.15 |
-| Vulnerable users | – | 0.46 |
+| Deficit visible | 51% | 54% |
+| Fixes the deficit | 85% | 90% |
+| Specific to the street | 19% | 24% |
+| Feasible | 32% | 32% |
+| About behaviour | 0% | 0% |
+
+##### Agreement between the judges (1253 suggestions rated by both)
+
+| Criterion | Same rating | Cohen's kappa |
+|---|---|---|
+| Deficit visible | 71% | 0.44 |
+| Fixes the deficit | 95% | 0.77 |
+| Specific to the street | 80% | 0.42 |
+| Feasible | 47% | 0.07 |
+| About behaviour | 100% | – |
+
+##### Self-preference: a judge's yes-share minus the other judge's, in points
+
+| Judge | Criterion | On its own model | On the two neutral models |
+|---|---|---|---|
+| Qwen3.8-27B | Deficit visible | -22 | -23 |
+| Qwen3.8-27B | Fixes the deficit | +1 | -2 |
+| Qwen3.8-27B | Specific to the street | -21 | -6 |
+| Qwen3.8-27B | Feasible | -62 | -43 |
+| Qwen3.8-27B | About behaviour | +0 | +0 |
+| Gemma 4 31B | Deficit visible | +20 | +23 |
+| Gemma 4 31B | Fixes the deficit | +1 | +2 |
+| Gemma 4 31B | Specific to the street | +27 | +6 |
+| Gemma 4 31B | Feasible | +67 | +43 |
+| Gemma 4 31B | About behaviour | +0 | +0 |
 
 ## Setup
 
@@ -273,7 +462,7 @@ in `docs/figures/` as PNG and interactive HTML.
 
 ```bash
 uv run python scripts/plot_city_sample.py    # world map of the drawn cities
-uv run python scripts/analyse.py             # the Results: tables, docs/figures/*.png and *.html
+uv run python scripts/analyse_audit.py       # the Results: tables, docs/figures/audit_*.png and *.html
 ```
 
 Static PNGs need a Chromium browser for Kaleido. If Chrome is not installed, point
@@ -318,7 +507,8 @@ Output in `data/city_sample/`:
 
 ```
 configs/       models.toml (the VLMs), snippet_prompts.json (snippet ranking)
-scripts/       sample_cities.py, fetch_data.py, make_snippets.py, plot_city_sample.py
+scripts/       sample_cities.py, fetch_data.py, make_snippets.py, build_clip_sets.py, run_vlm.py,
+               judge_suggestions.py, analyse_audit.py (analyse.py: the earlier prompts), plot_city_sample.py
 src/vlm_street_audit/       config, file_server, mapping, snippets, semantics, figures
 tests/         pytest, no network
 default.config / default.secret   settings and an empty login (local copies: config, secret)

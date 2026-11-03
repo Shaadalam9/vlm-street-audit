@@ -207,6 +207,8 @@ def main() -> int:
     fields = SCENE_BOOLEANS + ["crossing_marked"]
     rows = []
     for tag in tags:
+        if runs[(tag, "jaad")].empty:  # the T = 0.7 runs cover the city clips only
+            continue
         for model, group in runs[(tag, "jaad")].groupby("model"):
             labels = pd.DataFrame([truth[c] for c in group.clip_id])
             for field in fields:
@@ -287,6 +289,7 @@ def main() -> int:
         grid = by_continent[by_continent.key.str.startswith(prefix)].pivot(index="key", columns="continent",
                                                                            values="share")
         grid = grid.reindex(index=[prefix + k for k in labels], columns=order)
+        grid = grid[grid.fillna(0).gt(0).any(axis=1)]  # rows at 0% everywhere stay in the table only
         figure = go.Figure(go.Heatmap(
             z=grid.values, x=[names[c].replace(" (", "<br>(") for c in order],
             y=[labels[k.removeprefix(prefix)] for k in grid.index], zmin=0, zmax=1, colorscale=BLUES,
@@ -295,7 +298,7 @@ def main() -> int:
             hovertemplate="%{y}<br>%{x}: %{text}<extra></extra>"))
         figure.update_yaxes(autorange="reversed")
         figure.add_vline(x=len(order) - 1.5, line_color="#52514e", line_width=1)
-        figure.update_layout(height=120 + 38 * len(labels))
+        figure.update_layout(height=120 + 38 * len(grid))
         save(figure, name, png)
 
     # ---- Country indicators -----------------------------------------------------------------------
@@ -303,7 +306,9 @@ def main() -> int:
     for key in keys + ["needs"]:
         for indicator in INDICATORS:
             pair = city[[key, indicator]].dropna()
-            if len(pair) < 10:
+            # A rho on an item that (almost) every city has or lacks rests on a few ties and its bootstrap
+            # interval can miss the estimate (kerb ramps: present in 2 cities), so at least 5 cities each way.
+            if len(pair) < 10 or (pair[key] > pair[key].min()).sum() < 5 or (pair[key] < pair[key].max()).sum() < 5:
                 continue
             rho = spearman(pair[key], pair[indicator])
             low, high = bootstrap(pair, lambda d, k=key, i=indicator: spearman(d[k], d[i]))
@@ -316,7 +321,7 @@ def main() -> int:
     md.append("\n### Infrastructure and country indicators (Spearman's rho over cities, 95% bootstrap interval)\n")
     t = indicators.assign(cell=[fmt(r.rho, r.low, r.high) for r in indicators.itertuples()]).pivot(
         index="key", columns="indicator", values="cell").reindex(index=[k for k in all_labels if k in
-                                                                         set(indicators.key)])
+                                                                         set(indicators.key)]).fillna("–")
     md.append(markdown(pd.DataFrame({"": [all_labels[k] for k in t.index],
                                      **{f"{INDICATORS[i]} (n = {indicators[indicators.indicator == i].cities.max()})":
                                         t[i] for i in INDICATORS if i in t}})))
@@ -527,7 +532,8 @@ def main() -> int:
                 q = quality[(quality.judge == judge) & (quality.auditor == auditor)].set_index("criterion")
                 if q.empty:
                     continue
-                q = q.reindex(list(CRITERIA))
+                # "About behaviour" was never rated yes, so it stays in the tables only.
+                q = q.reindex([c for c in CRITERIA if quality[quality.criterion == c].share.max() > 0])
                 figure.add_bar(name=MODEL_NAMES[auditor], legendgroup=auditor, showlegend=row == 1,
                                x=[CRITERIA[c].replace(" ", "<br>", 1) for c in q.index], y=q.share,
                                marker_color=MODEL_COLOURS[MODEL_NAMES[auditor]],
@@ -539,18 +545,6 @@ def main() -> int:
         figure.update_layout(barmode="group", bargap=0.25, bargroupgap=0.06, height=330 * len(judges) + 70,
                              legend=dict(orientation="h", y=1.1, x=0))
         save(figure, "audit_suggestion_quality", png)
-
-    # ---- Map: how much is needed per city --------------------------------------------------------
-    figure = px.scatter_geo(city.dropna(subset=["lat"]), lat="lat", lon="lon", color="needs", hover_name="locality",
-                            hover_data={"country": True, "lat": False, "lon": False, "needs": ":.1f"},
-                            projection="natural earth", color_continuous_scale=BLUES[2:],
-                            range_color=[0, max(3, float(np.ceil(city.needs.max())))],
-                            labels={"needs": "Needs per<br>clip"}, height=560)
-    figure.update_traces(marker=dict(size=10, line=dict(width=0.8, color="#0b0b0b")))
-    figure.update_geos(showland=True, landcolor="#ecebe8", showcountries=True, countrycolor="#ffffff",
-                       coastlinecolor="#c3c2b7", showframe=False, lataxis_range=[-58, 80])
-    figure.update_coloraxes(colorbar=dict(dtick=1, title_side="right"))
-    save(figure, "audit_needs_map", png)
 
     (out / "tables.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(md))
