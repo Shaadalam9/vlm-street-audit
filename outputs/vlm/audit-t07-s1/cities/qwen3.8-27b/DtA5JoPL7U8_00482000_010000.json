@@ -1,0 +1,92 @@
+{
+ "clip_id": "DtA5JoPL7U8_00482000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_00482000_010000/frame_002.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_00482000_010000/frame_004.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_00482000_010000/frame_006.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_00482000_010000/frame_008.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_00482000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"painted_line\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"The camera moves past a continuous building frontage and a green 'bike route' sign indicating access to a facility, creating a clear reason for pedestrians to.\",\"frame\":5,\"x\":90,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a raised pedestrian crossing at the junction with the bike route to provide a safe, level crossing point for users leaving the facility.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"The stretch of road in front of the large building is lit only by the distant street lamps visible on the right and far left, leaving the immediate roadside in\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install additional street lighting along the building frontage to illuminate the roadside and improve visibility for any future crossing points.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "painted_line"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "The camera moves past a continuous building frontage and a green 'bike route' sign indicating access to a facility, creating a clear reason for pedestrians to.",
+    "frame": 5,
+    "x": 90,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a raised pedestrian crossing at the junction with the bike route to provide a safe, level crossing point for users leaving the facility."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "The stretch of road in front of the large building is lit only by the distant street lamps visible on the right and far left, leaving the immediate roadside in",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install additional street lighting along the building frontage to illuminate the roadside and improve visibility for any future crossing points."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 124.26,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6004,
+  "completion_tokens": 392,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

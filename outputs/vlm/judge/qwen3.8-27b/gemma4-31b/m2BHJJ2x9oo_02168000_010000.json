@@ -1,0 +1,47 @@
+{
+ "clip_id": "m2BHJJ2x9oo_02168000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in the carriageway without any designated crossing facility.",
+   "frame": 1,
+   "x": 510,
+   "y": 580,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated area for people to cross the road."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The lack of any crossing facility makes the crossing point poor quality and dangerous.",
+   "frame": 1,
+   "x": 510,
+   "y": 580,
+   "measure": "add_marked_crossing",
+   "suggestion": "Implement a signalised or marked crossing to improve safety for pedestrians crossing this busy urban street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians crossing without a marked facility, and adding a crossing is a standard, feasible fix, though the suggestion is generic."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The lack of a crossing makes the point poor quality, and the suggestion to add one is a valid, feasible, but generic measure."
+  }
+ ],
+ "error": null
+}

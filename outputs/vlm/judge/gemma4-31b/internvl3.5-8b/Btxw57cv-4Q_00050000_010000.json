@@ -1,0 +1,65 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true but no crossing_facility",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to improve crossing safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is obscured by vehicles and buildings, making it impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is heavily obscured by traffic and foliage, so the presence of a footway cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a congested road segment but do not provide a clear view of the intersection or crossing demand areas to verify the deficit."
+  }
+ ],
+ "error": null
+}

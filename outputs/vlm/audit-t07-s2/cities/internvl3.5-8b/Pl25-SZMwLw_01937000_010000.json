@@ -1,0 +1,92 @@
+{
+ "clip_id": "Pl25-SZMwLw_01937000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_01937000_010000/frame_002.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_01937000_010000/frame_004.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_01937000_010000/frame_006.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_01937000_010000/frame_008.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_01937000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk 1 to 3m visible\",\"frame\":1,\"x\":780,\"y\":720,\"measure\":\"build_footway\",\"suggestion\":\"Expand the sidewalk to improve accessibility on the right side.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"some street lighting\",\"frame\":3,\"x\":150,\"y\":600,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights along the left side for better illumination.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk 1 to 3m visible",
+    "frame": 1,
+    "x": 780,
+    "y": 720,
+    "measure": "build_footway",
+    "suggestion": "Expand the sidewalk to improve accessibility on the right side."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "some street lighting",
+    "frame": 3,
+    "x": 150,
+    "y": 600,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights along the left side for better illumination."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 32.29,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13021,
+  "completion_tokens": 314,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,82 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_002.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_004.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_006.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_008.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"No marked or physical crossing is visible along the 100m segment, despite the high crossing demand from the continuous parking and pedestrian activity.\",\"frame\":4,\"x\":500,\"y\":680,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with clear signage to provide a safe and legal place for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "No marked or physical crossing is visible along the 100m segment, despite the high crossing demand from the continuous parking and pedestrian activity.",
+    "frame": 4,
+    "x": 500,
+    "y": 680,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with clear signage to provide a safe and legal place for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 299.11,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5899,
+  "completion_tokens": 287,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

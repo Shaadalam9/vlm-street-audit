@@ -1,0 +1,83 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left sidewalk to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right sidewalk to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show an informal dirt shoulder on the left, but it is not clear if a formal footway is missing or just not built yet."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a grassy verge and some parked cars, but it is not clear if a formal footway is missing or just not built yet."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, defined footway on the left that is being blocked by obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, defined footway on the right that is being blocked by obstructions."
+  }
+ ],
+ "error": null
+}

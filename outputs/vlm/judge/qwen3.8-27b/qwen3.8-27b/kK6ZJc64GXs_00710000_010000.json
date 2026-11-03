@@ -1,0 +1,65 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No continuous sidewalk; people are walking on the road edge and a trodden strip is visible.",
+   "frame": 3,
+   "x": 200,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous 1.5 m paved footway on the left side to separate pedestrians from traffic."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven with debris and a low step at the building entrance.",
+   "frame": 3,
+   "x": 200,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Resurface and level the left-side path to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High pedestrian activity and frontage on both sides, but no marked or raised crossing is visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the point of highest demand."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians on the road edge, but the suggestion to build a 1.5m footway is a standard, generic measure that does not reference the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the uneven surface is visible, the suggestion to resurface and level the path is a generic maintenance task that does not identify the specific location or nature of the trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The lack of a crossing is evident, but the suggestion to install a marked crossing is a standard, generic solution that does not specify where on this particular street it should be placed."
+  }
+ ],
+ "error": null
+}

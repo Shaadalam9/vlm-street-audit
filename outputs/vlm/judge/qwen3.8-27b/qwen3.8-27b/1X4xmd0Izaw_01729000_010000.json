@@ -1,0 +1,101 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A person in a high-visibility vest is walking on the asphalt of the road, indicating the footway is obstructed or unusable.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to provide a clear, unobstructed path for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A white van is parked on the footway, completely blocking the path for pedestrians.",
+   "frame": 1,
+   "x": 50,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+   "frame": 1,
+   "x": 150,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven and broken sections of the left-side footway to ensure a safe walking surface."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+   "frame": 1,
+   "x": 850,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven and broken sections of the right-side footway to ensure a safe walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to shops and a junction, but no marked or purpose-built crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left-side footway clearly enough to confirm it is missing or unusable."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The white van is parked on the road, not the footway, and the footway itself is not clearly visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the left-side footway is not visible in the frames to assess its condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the right-side footway is not visible in the frames to assess its condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible, but the frames do not show enough of the junction to confirm the need for one."
+  }
+ ],
+ "error": null
+}

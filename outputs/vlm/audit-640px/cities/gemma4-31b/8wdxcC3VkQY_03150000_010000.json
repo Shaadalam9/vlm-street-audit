@@ -1,0 +1,112 @@
+{
+ "clip_id": "8wdxcC3VkQY_03150000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/8wdxcC3VkQY/8wdxcC3VkQY_03150000_010000/frame_002.jpg",
+  "data/snippets/8wdxcC3VkQY/8wdxcC3VkQY_03150000_010000/frame_004.jpg",
+  "data/snippets/8wdxcC3VkQY/8wdxcC3VkQY_03150000_010000/frame_006.jpg",
+  "data/snippets/8wdxcC3VkQY/8wdxcC3VkQY_03150000_010000/frame_008.jpg",
+  "data/snippets/8wdxcC3VkQY/8wdxcC3VkQY_03150000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"grass verge with no paved sidewalk\",\"frame\":1,\"x\":200,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side of the road to provide a safe walking space for residents.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"grass verge with no paved sidewalk\",\"frame\":1,\"x\":800,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the right side of the road to provide a safe walking space for residents.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"residential homes on both sides with no designated crossing facility\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to allow residents to safely cross between homes on opposite sides of the street.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban residential area with no visible street lights\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for pedestrians and drivers at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "grass verge with no paved sidewalk",
+    "frame": 1,
+    "x": 200,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe walking space for residents."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "grass verge with no paved sidewalk",
+    "frame": 1,
+    "x": 800,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe walking space for residents."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "residential homes on both sides with no designated crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to allow residents to safely cross between homes on opposite sides of the street."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban residential area with no visible street lights",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for pedestrians and drivers at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 763.77,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3065,
+  "completion_tokens": 479,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,132 @@
+{
+ "clip_id": "cKRt8KHugxA_00850000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_00850000_010000/frame_002.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_00850000_010000/frame_004.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_00850000_010000/frame_006.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_00850000_010000/frame_008.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_00850000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has a narrow, informal path rather than a proper sidewalk.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built sidewalk on the left side to provide a safe walking space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side has a narrow, informal path rather than a proper sidewalk.\",\"frame\":1,\"x\":900,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built sidewalk on the right side to provide a safe walking space.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Parked vehicles are obstructing the narrow path on the left.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles from the left-side path to clear the obstruction.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Parked vehicles are obstructing the narrow path on the right.\",\"frame\":1,\"x\":900,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles from the right-side path to clear the obstruction.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to residential properties on both sides, but no crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at a logical point along the street.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is in an urban area but has no street lights.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has a narrow, informal path rather than a proper sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built sidewalk on the left side to provide a safe walking space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side has a narrow, informal path rather than a proper sidewalk.",
+    "frame": 1,
+    "x": 900,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built sidewalk on the right side to provide a safe walking space."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Parked vehicles are obstructing the narrow path on the left.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles from the left-side path to clear the obstruction."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Parked vehicles are obstructing the narrow path on the right.",
+    "frame": 1,
+    "x": 900,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles from the right-side path to clear the obstruction."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to residential properties on both sides, but no crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point along the street."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is in an urban area but has no street lights.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 400.32,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2942,
+  "completion_tokens": 630,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

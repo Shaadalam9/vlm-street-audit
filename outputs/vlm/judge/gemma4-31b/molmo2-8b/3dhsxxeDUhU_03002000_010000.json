@@ -1,0 +1,29 @@
+{
+ "clip_id": "3dhsxxeDUhU_03002000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "3 lanes and signalised crossing without refuge",
+   "frame": 1,
+   "x": 300,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a raised crossing platform at this signalised junction to provide a refuge for pedestrians crossing the wide road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A raised crossing is not a pedestrian refuge; a central island or refuge island would address the deficit."
+  }
+ ],
+ "error": null
+}

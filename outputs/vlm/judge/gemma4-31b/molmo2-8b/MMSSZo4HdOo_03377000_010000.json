@@ -1,0 +1,119 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is an informal path or none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk along the left side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is an informal path or none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk along the right side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand is true and crossing_facility is none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this busy junction to improve safety for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more lanes and a signalised, marked or raised crossing without a refuge",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island at the signalised crossing to provide a safe waiting area for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "kerb_ramps is none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the signalised crossing to allow wheelchair access and improve pedestrian safety."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "an urban road with street_lighting none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for both pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though space is limited by shops."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A raised, paved footway is clearly visible on the right side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road without any designated facility."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is not 4 or more lanes wide, and there is no signalised crossing present."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no signalised crossing visible to evaluate the presence of kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The images are taken during daylight, so the presence or absence of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

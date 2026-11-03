@@ -1,0 +1,29 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no_crossing_facility_visible_in_any_frame",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this busy junction to improve safety for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a busy junction but do not provide a clear view of the entire crossing area to confirm the absence of a pedestrian crossing, and the suggestion is a generic measure that does not refer"
+  }
+ ],
+ "error": null
+}

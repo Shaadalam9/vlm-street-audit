@@ -1,0 +1,110 @@
+{
+ "clip_id": "PYFB7nMiFTM_00766000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is an open, unpaved dirt and gravel shoulder with no constructed sidewalk or path.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway on the left side, separated from the carriageway by a kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is an unpaved dirt shoulder with no constructed sidewalk or path.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway on the right side, separated from the carriageway by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road passes a residential area, creating a high demand for crossing, but there is no marked or purpose-built crossing facility visible.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe place for residents to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in either direction.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is an open, unpaved dirt and gravel shoulder with no constructed sidewalk or path.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway on the left side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is an unpaved dirt shoulder with no constructed sidewalk or path.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway on the right side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road passes a residential area, creating a high demand for crossing, but there is no marked or purpose-built crossing facility visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe place for residents to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in either direction.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 103.64,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2582,
+  "completion_tokens": 519,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

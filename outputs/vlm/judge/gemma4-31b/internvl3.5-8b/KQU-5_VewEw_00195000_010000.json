@@ -1,0 +1,29 @@
+{
+ "clip_id": "KQU-5_VewEw_00195000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper footway on the left side to provide a safe walking area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side consists of a steep rocky embankment and a barrier, making footway construction physically challenging."
+  }
+ ],
+ "error": null
+}

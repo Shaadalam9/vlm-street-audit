@@ -1,0 +1,102 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Continuous concrete barrier separates the carriageway from the roadside, with no visible path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a protected sidewalk on the right side, separated from the barrier, to provide a safe walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road has multiple lanes and buildings on both sides, creating a high demand for crossing, but no marked or physical crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to safely manage the high crossing demand on this wide road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"While some streetlights are visible, they are sparse and do not provide adequate illumination for the entire stretch of the road, especially on the right.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Increase the density of streetlights along both sides of the road to ensure continuous and adequate lighting for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Continuous concrete barrier separates the carriageway from the roadside, with no visible path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a protected sidewalk on the right side, separated from the barrier, to provide a safe walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road has multiple lanes and buildings on both sides, creating a high demand for crossing, but no marked or physical crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to safely manage the high crossing demand on this wide road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "While some streetlights are visible, they are sparse and do not provide adequate illumination for the entire stretch of the road, especially on the right.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Increase the density of streetlights along both sides of the road to ensure continuous and adequate lighting for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 39.2,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6067,
+  "completion_tokens": 455,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

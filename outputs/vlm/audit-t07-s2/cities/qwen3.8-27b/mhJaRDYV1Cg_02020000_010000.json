@@ -1,0 +1,102 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_002.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_004.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_006.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_008.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A grass verge and a dense tree line run along the entire left side of the road, with no path or sidewalk for pedestrians.\",\"frame\":1,\"x\":250,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the left side to provide a safe path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road consists of a grass verge and a curb, with no visible path or sidewalk for pedestrians.\",\"frame\":1,\"x\":750,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Build a sidewalk on the right side of the road to offer a safe and accessible route for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There is only one street light visible on the right side in the entire 10-second clip, which is insufficient for the whole road segment.\",\"frame\":1,\"x\":650,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of streetlights along both sides of the road to ensure adequate illumination for safety at all times.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A grass verge and a dense tree line run along the entire left side of the road, with no path or sidewalk for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the left side to provide a safe path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road consists of a grass verge and a curb, with no visible path or sidewalk for pedestrians.",
+    "frame": 1,
+    "x": 750,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Build a sidewalk on the right side of the road to offer a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There is only one street light visible on the right side in the entire 10-second clip, which is insufficient for the whole road segment.",
+    "frame": 1,
+    "x": 650,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of streetlights along both sides of the road to ensure adequate illumination for safety at all times."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 281.73,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6063,
+  "completion_tokens": 451,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

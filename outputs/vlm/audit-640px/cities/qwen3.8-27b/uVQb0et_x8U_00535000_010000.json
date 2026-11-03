@@ -1,0 +1,82 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_002.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_004.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_006.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_008.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"A four-lane road with a signalised crossing but no central refuge island\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island at the signalised crossing to allow pedestrians to cross one direction of traffic at a time.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "A four-lane road with a signalised crossing but no central refuge island",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island at the signalised crossing to allow pedestrians to cross one direction of traffic at a time."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 121.58,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2595,
+  "completion_tokens": 283,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

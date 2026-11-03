@@ -1,0 +1,102 @@
+{
+ "clip_id": "xU2OkJ_OY6c_02695000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"There is no paved footway; only a grassy verge and a dirt shoulder are visible along the roadside.\",\"frame\":5,\"x\":800,\"y\":850,\"measure\":\"add_street_lighting\",\"suggestion\":\"Construct a purpose-built, lit sidewalk on the right side to provide a safe, separated space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side consists of an open field and a fence line with no formal path or sidewalk for pedestrians.\",\"frame\":5,\"x\":150,\"y\":850,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a lit pedestrian path on the left side to offer a safe alternative to walking on the narrow shoulder.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lamps are visible along the road in any frame, which is a risk for a road passing a residential area.\",\"frame\":3,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of streetlights along the road to improve visibility and safety for all road users during the evening.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "There is no paved footway; only a grassy verge and a dirt shoulder are visible along the roadside.",
+    "frame": 5,
+    "x": 800,
+    "y": 850,
+    "measure": "add_street_lighting",
+    "suggestion": "Construct a purpose-built, lit sidewalk on the right side to provide a safe, separated space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side consists of an open field and a fence line with no formal path or sidewalk for pedestrians.",
+    "frame": 5,
+    "x": 150,
+    "y": 850,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a lit pedestrian path on the left side to offer a safe alternative to walking on the narrow shoulder."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lamps are visible along the road in any frame, which is a risk for a road passing a residential area.",
+    "frame": 3,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of streetlights along the road to improve visibility and safety for all road users during the evening."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 271.88,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6065,
+  "completion_tokens": 453,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

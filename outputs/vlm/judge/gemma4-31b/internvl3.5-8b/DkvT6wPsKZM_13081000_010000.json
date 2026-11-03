@@ -1,0 +1,83 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair any broken or uneven sections on the left side footway to reduce trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair any broken or uneven sections on the right side footway to reduce trip hazards."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though space is extremely limited by the wall."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal footway, with the road edge occupied by parked vehicles and buildings."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no formal footway visible to have trip hazards."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no formal footway visible to have trip hazards."
+  }
+ ],
+ "error": null
+}

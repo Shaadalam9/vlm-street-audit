@@ -1,0 +1,132 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No purpose-built sidewalk, only a narrow dirt verge\",\"frame\":5,\"x\":100,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the left side of the road to separate pedestrians from traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No purpose-built sidewalk, only a narrow dirt verge\",\"frame\":5,\"x\":900,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the right side of the road to provide a safe walking environment.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven, unpaved dirt surface\",\"frame\":5,\"x\":100,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left to remove trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Uneven, unpaved dirt surface\",\"frame\":5,\"x\":900,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the right to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Residential and commercial buildings on both sides with no designated crossing point\",\"frame\":5,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to facilitate safe crossing between the mixed-use developments.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Urban area with no visible street lighting poles providing illumination for the carriageway\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"build_footway\",\"suggestion\":\"Install street lighting along the length of the road to improve visibility and safety at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No purpose-built sidewalk, only a narrow dirt verge",
+    "frame": 5,
+    "x": 100,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the left side of the road to separate pedestrians from traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No purpose-built sidewalk, only a narrow dirt verge",
+    "frame": 5,
+    "x": 900,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the right side of the road to provide a safe walking environment."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven, unpaved dirt surface",
+    "frame": 5,
+    "x": 100,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left to remove trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Uneven, unpaved dirt surface",
+    "frame": 5,
+    "x": 900,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the right to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Residential and commercial buildings on both sides with no designated crossing point",
+    "frame": 5,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to facilitate safe crossing between the mixed-use developments."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Urban area with no visible street lighting poles providing illumination for the carriageway",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "build_footway",
+    "suggestion": "Install street lighting along the length of the road to improve visibility and safety at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 38.26,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3216,
+  "completion_tokens": 630,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

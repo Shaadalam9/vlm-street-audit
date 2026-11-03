@@ -1,0 +1,29 @@
+{
+ "clip_id": "tE2MILY7pGY_00518000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "left_side",
+   "evidence": "4_or_more lanes and no refuge island",
+   "frame": 3,
+   "x": 400,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "install a refuge island to provide a safe waiting area for pedestrians on wide roads with multiple lanes."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is wide with multiple lanes and no visible refuge island, but the suggestion is a generic measure not tied to a specific location or feature in the frames."
+  }
+ ],
+ "error": null
+}

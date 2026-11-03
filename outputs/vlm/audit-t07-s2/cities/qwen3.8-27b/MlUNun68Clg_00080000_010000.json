@@ -1,0 +1,102 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_002.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_004.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_006.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_008.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous or purpose-built footway is visible on the left side, only an informal path.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side to provide a safe path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left side has visible uneven and broken sections.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections of the informal path on the left side to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a crossing demand due to the presence of shops and homes, but no purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at the location where the informal path on the left side meets the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous or purpose-built footway is visible on the left side, only an informal path.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side to provide a safe path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left side has visible uneven and broken sections.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections of the informal path on the left side to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a crossing demand due to the presence of shops and homes, but no purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at the location where the informal path on the left side meets the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 240.5,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6046,
+  "completion_tokens": 434,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

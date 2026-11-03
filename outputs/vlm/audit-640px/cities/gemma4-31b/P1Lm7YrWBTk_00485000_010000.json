@@ -1,0 +1,102 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_002.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_004.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_006.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_008.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are present and crossing the road without any designated facility.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"The kerbs at the crossing point are not dropped.\",\"frame\":1,\"x\":400,\"y\":650,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the crossing point to improve accessibility for all pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The crossing is poor as there is no designated facility and pedestrians are crossing in the carriageway.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Implement a marked crossing to improve the safety and visibility of pedestrians crossing the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are present and crossing the road without any designated facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "The kerbs at the crossing point are not dropped.",
+    "frame": 1,
+    "x": 400,
+    "y": 650,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the crossing point to improve accessibility for all pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The crossing is poor as there is no designated facility and pedestrians are crossing in the carriageway.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Implement a marked crossing to improve the safety and visibility of pedestrians crossing the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 183.58,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3021,
+  "completion_tokens": 435,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip separates the road from the shops, but it is not a proper sidewalk.",
+   "frame": 4,
+   "x": 100,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, 1.5m-wide footway on the left side to provide a safe, continuous path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area under the overpass is a rough, uneven strip with debris, not a usable footway.",
+   "frame": 4,
+   "x": 800,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Create a formal, paved footway on the right side, clearing the current debris and providing a safe route for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A blue auto-rickshaw is parked on the narrow path, blocking pedestrian access.",
+   "frame": 1,
+   "x": 150,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left footway to keep it clear for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Debris and what appears to be a person sitting on the ground are obstructing the path under the overpass.",
+   "frame": 4,
+   "x": 750,
+   "y": 650,
+   "measure": "clear_footway",
+   "suggestion": "Implement a regular cleaning schedule for the right-side footway to remove debris and ensure it remains passable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved surface is uneven and appears to have loose gravel.",
+   "frame": 4,
+   "x": 100,
+   "y": 600,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side footway with a smooth, even material to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground is littered with trash and has an uneven, broken surface.",
+   "frame": 4,
+   "x": 800,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side footway to create a level, hazard-free surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a junction and shops on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked zebra crossing at the junction to provide a safe and visible place for pedestrians to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal paved footway, and building one is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The area under the overpass is unpaved and uneven, making a formal footway necessary and feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A blue rickshaw is clearly seen obstructing the left-side pedestrian area."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Debris and people are visible on the right-side strip under the overpass."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved left edge is visibly uneven and dusty."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side under the overpass is visibly littered and broken."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings despite the high activity and junction layout."
+  }
+ ],
+ "error": null
+}

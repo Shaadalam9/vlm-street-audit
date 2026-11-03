@@ -1,0 +1,65 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A large, wheeled cart loaded with goods is positioned on the footway, significantly narrowing the usable path for pedestrians.",
+   "frame": 4,
+   "x": 750,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the right-hand footway or install a physical barrier to create a dedicated, unobstructed pedestrian corridor separate from the commercial loading area."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The footway is obstructed by a row of bollards, a large menu board, and outdoor seating from the adjacent restaurant, forcing pedestrians to navigate a narrow,迂",
+   "frame": 4,
+   "x": 200,
+   "y": 850,
+   "measure": "clear_footway",
+   "suggestion": "Relocate the restaurant's outdoor seating and menu boards to a designated zone or the building's facade to restore a clear, continuous pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High pedestrian activity and commercial frontages on both sides create a strong demand for crossing, but no marked or signalised crossing is visible in the 100m",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing with dropped kerbs at a logical point, such as near the restaurant entrance, to provide a safe and legal crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily congested with vehicles and loading carts, making the footway effectively non-existent or unusable."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway is clearly obstructed by signage and restaurant furniture."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings visible despite the high pedestrian volume and commercial activity."
+  }
+ ],
+ "error": null
+}

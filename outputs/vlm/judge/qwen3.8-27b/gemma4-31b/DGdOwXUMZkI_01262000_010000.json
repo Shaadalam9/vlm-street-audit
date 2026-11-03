@@ -1,0 +1,29 @@
+{
+ "clip_id": "DGdOwXUMZkI_01262000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The road has 4 or more lanes and the signalised crossing lacks a central refuge island.",
+   "frame": 1,
+   "x": 500,
+   "y": 550,
+   "measure": "traffic_calming",
+   "suggestion": "Install a pedestrian refuge island in the centre of the crossing to improve safety on this wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show the total number of lanes or the full width of the road, so the deficit of a wide road without a refuge cannot be confirmed."
+  }
+ ],
+ "error": null
+}

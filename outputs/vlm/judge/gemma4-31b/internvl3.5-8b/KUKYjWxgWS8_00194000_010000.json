@@ -1,0 +1,47 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the parked vehicles from the footway to ensure it is fully usable."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the parked vehicles from the footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The footway is blocked by parked cars, but the suggested measure 'improve_crossing' does not match the deficit 'no_footway' or the suggestion to clear vehicles."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has a clear, continuous footway; it is not blocked by vehicles."
+  }
+ ],
+ "error": null
+}

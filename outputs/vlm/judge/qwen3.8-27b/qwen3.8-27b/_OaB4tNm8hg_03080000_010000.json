@@ -1,0 +1,47 @@
+{
+ "clip_id": "_OaB4tNm8hg_03080000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "A continuous row of active shops and businesses lines the left side of the street, creating a high demand for pedestrians to cross, yet no marked or physical at",
+   "frame": 4,
+   "x": 150,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at the junction of the main commercial frontage to provide a safe, designated point for shoppers to cross."
+  },
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "The right side features a mix of residential and commercial buildings with active ground-floor entrances, indicating a need for safe crossing points that are c",
+   "frame": 1,
+   "x": 850,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Provide a marked pedestrian crossing near the cluster of right-side businesses to allow residents and customers to cross the street safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a continuous commercial frontage on the left with no visible crossing, making the deficit clear, but the suggestion is a generic measure that does not reference any specific feature of"
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has active ground-floor entrances and parked cars, indicating a need for a crossing, yet the suggestion is generic and does not specify a location or design detail."
+  }
+ ],
+ "error": null
+}

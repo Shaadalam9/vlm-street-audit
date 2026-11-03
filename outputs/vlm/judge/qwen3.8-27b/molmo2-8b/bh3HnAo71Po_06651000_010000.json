@@ -1,0 +1,119 @@
+{
+ "clip_id": "bh3HnAo71Po_06651000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the left side of the road to provide a safe pedestrian route."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the right side of the road to provide a safe pedestrian route."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this busy junction to improve safety for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more_lanes_and_signalised_crossing_without_refuge",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the signalised crossing to provide a safe place for pedestrians to wait."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "kerb_ramps_not_visible",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to improve accessibility for pedestrians and cyclists."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by parked cars and buildings, making it impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is cluttered with parked scooters and pedestrians, obscuring the road edge and any potential footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The specific junction area is blocked by heavy traffic, so the presence or absence of a crossing facility cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Since the crossing itself is not visible, the presence of a refuge island cannot be assessed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road surface at the crossing point is hidden by vehicles, preventing verification of kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Street lamps are visible in the frame, but it is unclear if they are currently lit or if the lighting is sufficient for the whole road."
+  }
+ ],
+ "error": null
+}

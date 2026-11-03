@@ -1,0 +1,29 @@
+{
+ "clip_id": "P8Uh9f0EaU8_02405000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Commercial buildings and pedestrians on the footway indicate crossing demand, but no designated crossing is visible.",
+   "frame": 4,
+   "x": 850,
+   "y": 650,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the commercial shops on the right and the rest of the area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a busy commercial street with pedestrians, but the specific location for a crossing and the available space are not clearly visible, making the deficit and feasibility uncertain."
+  }
+ ],
+ "error": null
+}

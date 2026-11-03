@@ -1,0 +1,119 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the left side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this busy junction to improve safety for pedestrians crossing the road."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more lanes and a signalised, marked or raised crossing without a refuge",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the road to provide a safe place for pedestrians to wait when using the signalised crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "kerb_ramps is none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the pedestrian crossing to improve accessibility for wheelchair users and people with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "an urban road with street_lighting none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a busy street with pedestrians, but the specific left-side infrastructure is obscured by parked vehicles and market stalls, making it impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily occupied by market stalls and pedestrians, obscuring the road edge and making it difficult to verify the presence or absence of a formal footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While there is high pedestrian activity, the frames do not clearly show a specific junction or crossing point where a signalised crossing would be required."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width is difficult to assess due to the narrow view and congestion, so it is unclear if the road is wide enough to require a refuge island."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrian crossing is clearly visible in the frames to evaluate the presence or absence of kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The images are taken during the day, so the presence or absence of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

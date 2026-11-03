@@ -1,0 +1,92 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_002.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_004.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_006.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_008.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has an informal, unpaved shoulder with parked cars, not a proper footway.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway on the right side of the road, separated from the carriageway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to residential properties on both sides, but no marked or purpose-built crossing is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility signage at a point of high demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has an informal, unpaved shoulder with parked cars, not a proper footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway on the right side of the road, separated from the carriageway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to residential properties on both sides, but no marked or purpose-built crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility signage at a point of high demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 32.52,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2682,
+  "completion_tokens": 370,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

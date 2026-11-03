@@ -1,0 +1,112 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"There is no designated footway for pedestrians on the right side of the road.\",\"frame\":1,\"x\":700,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built sidewalk on the right side of the road to separate pedestrians from vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is blocked by piles of goods and debris.\",\"frame\":1,\"x\":100,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the obstructions and debris from the left side of the road to provide a clear path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground on the left side is uneven and littered with debris, creating trip hazards.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road without any designated crossing facility.\",\"frame\":3,\"x\":400,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked zebra crossing to provide a safe and designated point for pedestrians to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "There is no designated footway for pedestrians on the right side of the road.",
+    "frame": 1,
+    "x": 700,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built sidewalk on the right side of the road to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is blocked by piles of goods and debris.",
+    "frame": 1,
+    "x": 100,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Remove the obstructions and debris from the left side of the road to provide a clear path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground on the left side is uneven and littered with debris, creating trip hazards.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road without any designated crossing facility.",
+    "frame": 3,
+    "x": 400,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked zebra crossing to provide a safe and designated point for pedestrians to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 193.14,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 3125,
+  "completion_tokens": 513,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

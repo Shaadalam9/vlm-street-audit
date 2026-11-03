@@ -1,0 +1,112 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_002.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_004.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_006.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_008.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is obstructed by a large food trailer, forcing pedestrians to navigate around it.\",\"frame\":1,\"x\":220,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the food trailer to a dedicated market area to clear the footway.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A large food trailer is parked directly on the footway, blocking pedestrian access.\",\"frame\":1,\"x\":220,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Create a separate, clear zone for market stalls away from the primary pedestrian route.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are present on both sides and a car is in the middle of the road, but there is no designated crossing facility.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at this high-demand location.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along this urban road segment in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of energy-efficient street lights to improve visibility for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is obstructed by a large food trailer, forcing pedestrians to navigate around it.",
+    "frame": 1,
+    "x": 220,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the food trailer to a dedicated market area to clear the footway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A large food trailer is parked directly on the footway, blocking pedestrian access.",
+    "frame": 1,
+    "x": 220,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Create a separate, clear zone for market stalls away from the primary pedestrian route."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are present on both sides and a car is in the middle of the road, but there is no designated crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at this high-demand location."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along this urban road segment in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of energy-efficient street lights to improve visibility for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 436.96,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6121,
+  "completion_tokens": 509,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

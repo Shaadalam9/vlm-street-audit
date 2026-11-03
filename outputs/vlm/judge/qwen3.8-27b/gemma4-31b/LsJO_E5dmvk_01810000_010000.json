@@ -1,0 +1,65 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no designated sidewalk for pedestrians on the right side of the road.",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a purpose-built sidewalk on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is unpaved and uneven.",
+   "frame": 3,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Pave the informal path on the left to remove trip hazards and improve accessibility."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to commercial buildings on the right, but no designated crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a sidewalk, but the suggestion is a generic measure that does not account for the specific layout or space constraints visible in the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side has an unpaved path, but the suggestion is a generic measure that does not address the specific conditions or space available."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no marked crossing, but the suggestion is a generic measure that does not consider the specific traffic conditions or space available for a crossing."
+  }
+ ],
+ "error": null
+}

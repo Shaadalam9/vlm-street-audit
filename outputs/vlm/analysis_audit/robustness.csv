@@ -1,0 +1,961 @@
+comparison,set,model,item,region,units,same,cohen_kappa
+Reworded prompt,jaad,qwen3.8-27b,area_type,All,120,1.0,1.0
+Reworded prompt,jaad,qwen3.8-27b,land_use,All,120,0.975,0.9515412572351594
+Reworded prompt,jaad,qwen3.8-27b,number_of_lanes,All,120,0.9583333333333334,0.8123240538004382
+Reworded prompt,jaad,qwen3.8-27b,median,All,120,0.9666666666666667,0.7844634036820836
+Reworded prompt,jaad,qwen3.8-27b,street_lighting,All,120,0.9166666666666666,0.7950819672131147
+Reworded prompt,jaad,qwen3.8-27b,traffic_calming,All,120,1.0,1.0
+Reworded prompt,jaad,qwen3.8-27b,pedestrian_fencing,All,120,0.975,0.6551724137931038
+Reworded prompt,jaad,qwen3.8-27b,transit_stops,All,120,0.9833333333333333,0.9467613132209404
+Reworded prompt,jaad,qwen3.8-27b,bike_facility,All,120,1.0,
+Reworded prompt,jaad,qwen3.8-27b,footway,All,240,0.8958333333333334,0.7880757276066687
+Reworded prompt,jaad,qwen3.8-27b,obstruction,All,240,0.925,0.8277717976318623
+Reworded prompt,jaad,qwen3.8-27b,trip_hazards,All,240,0.9583333333333334,0.8525707967319861
+Reworded prompt,jaad,qwen3.8-27b,crossing_demand,All,120,1.0,
+Reworded prompt,jaad,qwen3.8-27b,crossing_facility,All,120,0.9833333333333333,0.9691119691119691
+Reworded prompt,jaad,qwen3.8-27b,crossing_quality,All,120,0.9833333333333333,0.9680935921297529
+Reworded prompt,jaad,qwen3.8-27b,kerb_ramps,All,120,0.8833333333333333,0.8125
+Reworded prompt,jaad,gemma4-31b,area_type,All,120,1.0,1.0
+Reworded prompt,jaad,gemma4-31b,land_use,All,120,0.975,0.9522483087942698
+Reworded prompt,jaad,gemma4-31b,number_of_lanes,All,120,0.9583333333333334,0.7979117547995961
+Reworded prompt,jaad,gemma4-31b,median,All,120,0.975,0.8760757314974181
+Reworded prompt,jaad,gemma4-31b,street_lighting,All,120,0.8833333333333333,0.7586206896551724
+Reworded prompt,jaad,gemma4-31b,traffic_calming,All,120,1.0,
+Reworded prompt,jaad,gemma4-31b,pedestrian_fencing,All,120,0.9833333333333333,0.9545454545454544
+Reworded prompt,jaad,gemma4-31b,transit_stops,All,120,0.9583333333333334,0.8150431565967943
+Reworded prompt,jaad,gemma4-31b,bike_facility,All,120,1.0,
+Reworded prompt,jaad,gemma4-31b,footway,All,240,0.8666666666666667,0.7093001249101026
+Reworded prompt,jaad,gemma4-31b,obstruction,All,240,0.8666666666666667,0.6927262543010323
+Reworded prompt,jaad,gemma4-31b,trip_hazards,All,240,0.9166666666666666,0.7518995193053185
+Reworded prompt,jaad,gemma4-31b,crossing_demand,All,120,0.9833333333333333,0.49367088607594667
+Reworded prompt,jaad,gemma4-31b,crossing_facility,All,120,0.95,0.9019607843137254
+Reworded prompt,jaad,gemma4-31b,crossing_quality,All,120,0.875,0.7968855788761001
+Reworded prompt,jaad,gemma4-31b,kerb_ramps,All,120,0.875,0.7818710615608336
+Reworded prompt,jaad,molmo2-8b,area_type,All,120,0.9916666666666667,0.7959183673469403
+Reworded prompt,jaad,molmo2-8b,land_use,All,120,0.925,0.7240674501788453
+Reworded prompt,jaad,molmo2-8b,number_of_lanes,All,120,0.9833333333333333,0.6610169491525415
+Reworded prompt,jaad,molmo2-8b,median,All,120,0.9666666666666667,0.7867614393602844
+Reworded prompt,jaad,molmo2-8b,street_lighting,All,120,0.9833333333333333,0.9346761023407728
+Reworded prompt,jaad,molmo2-8b,traffic_calming,All,120,1.0,
+Reworded prompt,jaad,molmo2-8b,pedestrian_fencing,All,120,0.9916666666666667,0.0
+Reworded prompt,jaad,molmo2-8b,transit_stops,All,120,1.0,1.0
+Reworded prompt,jaad,molmo2-8b,bike_facility,All,120,1.0,
+Reworded prompt,jaad,molmo2-8b,footway,All,240,0.9666666666666667,0.0
+Reworded prompt,jaad,molmo2-8b,obstruction,All,240,0.7833333333333333,0.2121212121212125
+Reworded prompt,jaad,molmo2-8b,trip_hazards,All,240,0.8583333333333333,0.0395480225988702
+Reworded prompt,jaad,molmo2-8b,crossing_demand,All,120,0.9833333333333333,0.8484848484848482
+Reworded prompt,jaad,molmo2-8b,crossing_facility,All,120,0.9583333333333334,0.9206139190261976
+Reworded prompt,jaad,molmo2-8b,crossing_quality,All,120,0.9916666666666667,0.9831365935919056
+Reworded prompt,jaad,molmo2-8b,kerb_ramps,All,120,0.9833333333333333,0.49367088607594667
+Reworded prompt,jaad,internvl3.5-8b,area_type,All,120,1.0,1.0
+Reworded prompt,jaad,internvl3.5-8b,land_use,All,120,0.9333333333333333,0.8482932996207333
+Reworded prompt,jaad,internvl3.5-8b,number_of_lanes,All,120,0.9,0.7457627118644069
+Reworded prompt,jaad,internvl3.5-8b,median,All,120,0.7833333333333333,0.5077311454717576
+Reworded prompt,jaad,internvl3.5-8b,street_lighting,All,120,0.9666666666666667,0.6509090909090908
+Reworded prompt,jaad,internvl3.5-8b,traffic_calming,All,120,1.0,
+Reworded prompt,jaad,internvl3.5-8b,pedestrian_fencing,All,120,1.0,
+Reworded prompt,jaad,internvl3.5-8b,transit_stops,All,120,0.95,0.7525773195876286
+Reworded prompt,jaad,internvl3.5-8b,bike_facility,All,120,1.0,
+Reworded prompt,jaad,internvl3.5-8b,footway,All,240,0.3958333333333333,0.1317581896659265
+Reworded prompt,jaad,internvl3.5-8b,obstruction,All,240,0.8791666666666667,0.46428571428571436
+Reworded prompt,jaad,internvl3.5-8b,trip_hazards,All,240,0.8958333333333334,0.2957746478873243
+Reworded prompt,jaad,internvl3.5-8b,crossing_demand,All,120,0.9833333333333333,0.791666666666666
+Reworded prompt,jaad,internvl3.5-8b,crossing_facility,All,120,0.9166666666666666,0.8455598455598455
+Reworded prompt,jaad,internvl3.5-8b,crossing_quality,All,120,0.925,0.8470254957507083
+Reworded prompt,jaad,internvl3.5-8b,kerb_ramps,All,120,0.7083333333333334,0.5180722891566265
+Reworded prompt,cities,qwen3.8-27b,area_type,All,150,0.9533333333333334,0.6445497630331757
+Reworded prompt,cities,qwen3.8-27b,area_type,Europe & North America,60,0.9,0.45945945945945976
+Reworded prompt,cities,qwen3.8-27b,area_type,Rest of the world,90,0.9888888888888889,0.8831168831168836
+Reworded prompt,cities,qwen3.8-27b,land_use,All,150,0.9533333333333334,0.9270428015564203
+Reworded prompt,cities,qwen3.8-27b,land_use,Europe & North America,60,0.9333333333333333,0.9074431160817586
+Reworded prompt,cities,qwen3.8-27b,land_use,Rest of the world,90,0.9666666666666667,0.9390106166704315
+Reworded prompt,cities,qwen3.8-27b,number_of_lanes,All,150,0.96,0.9217050891692039
+Reworded prompt,cities,qwen3.8-27b,number_of_lanes,Europe & North America,60,0.9833333333333333,0.9581589958158995
+Reworded prompt,cities,qwen3.8-27b,number_of_lanes,Rest of the world,90,0.9444444444444444,0.8875
+Reworded prompt,cities,qwen3.8-27b,median,All,150,0.9733333333333334,0.9393694421988683
+Reworded prompt,cities,qwen3.8-27b,median,Europe & North America,60,0.9833333333333333,0.9402985074626864
+Reworded prompt,cities,qwen3.8-27b,median,Rest of the world,90,0.9666666666666667,0.9360795454545455
+Reworded prompt,cities,qwen3.8-27b,street_lighting,All,150,0.96,0.9297369037395581
+Reworded prompt,cities,qwen3.8-27b,street_lighting,Europe & North America,60,0.9666666666666667,0.9363057324840764
+Reworded prompt,cities,qwen3.8-27b,street_lighting,Rest of the world,90,0.9555555555555556,0.9227799227799228
+Reworded prompt,cities,qwen3.8-27b,traffic_calming,All,150,0.9933333333333333,0.6636771300448403
+Reworded prompt,cities,qwen3.8-27b,traffic_calming,Europe & North America,60,1.0,1.0
+Reworded prompt,cities,qwen3.8-27b,traffic_calming,Rest of the world,90,0.9888888888888889,0.0
+Reworded prompt,cities,qwen3.8-27b,pedestrian_fencing,All,150,0.9733333333333334,0.8794696665327444
+Reworded prompt,cities,qwen3.8-27b,pedestrian_fencing,Europe & North America,60,0.9833333333333333,0.8799999999999997
+Reworded prompt,cities,qwen3.8-27b,pedestrian_fencing,Rest of the world,90,0.9666666666666667,0.8767123287671234
+Reworded prompt,cities,qwen3.8-27b,transit_stops,All,150,0.9866666666666667,0.938448912597456
+Reworded prompt,cities,qwen3.8-27b,transit_stops,Europe & North America,60,0.9833333333333333,0.8799999999999997
+Reworded prompt,cities,qwen3.8-27b,transit_stops,Rest of the world,90,0.9888888888888889,0.9580810433162554
+Reworded prompt,cities,qwen3.8-27b,bike_facility,All,150,0.9933333333333333,0.9061913696060032
+Reworded prompt,cities,qwen3.8-27b,bike_facility,Europe & North America,60,0.9833333333333333,0.8816568047337274
+Reworded prompt,cities,qwen3.8-27b,bike_facility,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,qwen3.8-27b,footway,All,300,0.8233333333333334,0.7443935374969857
+Reworded prompt,cities,qwen3.8-27b,footway,Europe & North America,120,0.85,0.7601332593003887
+Reworded prompt,cities,qwen3.8-27b,footway,Rest of the world,180,0.8055555555555556,0.7319148936170213
+Reworded prompt,cities,qwen3.8-27b,obstruction,All,300,0.9133333333333333,0.8696306200902557
+Reworded prompt,cities,qwen3.8-27b,obstruction,Europe & North America,120,0.95,0.9215771702428929
+Reworded prompt,cities,qwen3.8-27b,obstruction,Rest of the world,180,0.8888888888888888,0.8362147406733393
+Reworded prompt,cities,qwen3.8-27b,trip_hazards,All,300,0.9133333333333333,0.8430646654058186
+Reworded prompt,cities,qwen3.8-27b,trip_hazards,Europe & North America,120,0.9583333333333334,0.9140647378974507
+Reworded prompt,cities,qwen3.8-27b,trip_hazards,Rest of the world,180,0.8833333333333333,0.8016476885134072
+Reworded prompt,cities,qwen3.8-27b,crossing_demand,All,150,0.98,0.831712789827973
+Reworded prompt,cities,qwen3.8-27b,crossing_demand,Europe & North America,60,0.9666666666666667,0.7826086956521738
+Reworded prompt,cities,qwen3.8-27b,crossing_demand,Rest of the world,90,0.9888888888888889,0.8831168831168836
+Reworded prompt,cities,qwen3.8-27b,crossing_facility,All,150,0.96,0.9185151652331371
+Reworded prompt,cities,qwen3.8-27b,crossing_facility,Europe & North America,60,0.9666666666666667,0.9300699300699301
+Reworded prompt,cities,qwen3.8-27b,crossing_facility,Rest of the world,90,0.9555555555555556,0.9106699751861043
+Reworded prompt,cities,qwen3.8-27b,crossing_quality,All,150,0.96,0.9109175492427991
+Reworded prompt,cities,qwen3.8-27b,crossing_quality,Europe & North America,60,0.9666666666666667,0.9230769230769231
+Reworded prompt,cities,qwen3.8-27b,crossing_quality,Rest of the world,90,0.9555555555555556,0.9031476997578693
+Reworded prompt,cities,qwen3.8-27b,kerb_ramps,All,150,0.94,0.8796791443850266
+Reworded prompt,cities,qwen3.8-27b,kerb_ramps,Europe & North America,60,0.95,0.896670493685419
+Reworded prompt,cities,qwen3.8-27b,kerb_ramps,Rest of the world,90,0.9333333333333333,0.8682926829268292
+Reworded prompt,cities,gemma4-31b,area_type,All,150,0.9933333333333333,0.9298409728718424
+Reworded prompt,cities,gemma4-31b,area_type,Europe & North America,60,0.9833333333333333,0.8799999999999997
+Reworded prompt,cities,gemma4-31b,area_type,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,gemma4-31b,land_use,All,150,0.9533333333333334,0.9286442405708462
+Reworded prompt,cities,gemma4-31b,land_use,Europe & North America,60,0.9666666666666667,0.9529042386185241
+Reworded prompt,cities,gemma4-31b,land_use,Rest of the world,90,0.9444444444444444,0.9077112387202625
+Reworded prompt,cities,gemma4-31b,number_of_lanes,All,150,0.9666666666666667,0.9410562716127007
+Reworded prompt,cities,gemma4-31b,number_of_lanes,Europe & North America,60,0.9333333333333333,0.8701298701298701
+Reworded prompt,cities,gemma4-31b,number_of_lanes,Rest of the world,90,0.9888888888888889,0.9781075164193627
+Reworded prompt,cities,gemma4-31b,median,All,150,0.94,0.9008956100425781
+Reworded prompt,cities,gemma4-31b,median,Europe & North America,60,0.9666666666666667,0.9258343634116193
+Reworded prompt,cities,gemma4-31b,median,Rest of the world,90,0.9222222222222223,0.8827688872348345
+Reworded prompt,cities,gemma4-31b,street_lighting,All,150,0.9266666666666666,0.8728911486018026
+Reworded prompt,cities,gemma4-31b,street_lighting,Europe & North America,60,0.9333333333333333,0.8803589232303091
+Reworded prompt,cities,gemma4-31b,street_lighting,Rest of the world,90,0.9222222222222223,0.8646325741297809
+Reworded prompt,cities,gemma4-31b,traffic_calming,All,150,0.9933333333333333,0.0
+Reworded prompt,cities,gemma4-31b,traffic_calming,Europe & North America,60,0.9833333333333333,0.0
+Reworded prompt,cities,gemma4-31b,traffic_calming,Rest of the world,90,1.0,
+Reworded prompt,cities,gemma4-31b,pedestrian_fencing,All,150,0.9733333333333334,0.9339207048458151
+Reworded prompt,cities,gemma4-31b,pedestrian_fencing,Europe & North America,60,0.95,0.8392857142857142
+Reworded prompt,cities,gemma4-31b,pedestrian_fencing,Rest of the world,90,0.9888888888888889,0.975206611570248
+Reworded prompt,cities,gemma4-31b,transit_stops,All,150,1.0,1.0
+Reworded prompt,cities,gemma4-31b,transit_stops,Europe & North America,60,1.0,1.0
+Reworded prompt,cities,gemma4-31b,transit_stops,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,gemma4-31b,bike_facility,All,150,0.9933333333333333,0.9345549738219892
+Reworded prompt,cities,gemma4-31b,bike_facility,Europe & North America,60,0.9833333333333333,0.9082568807339446
+Reworded prompt,cities,gemma4-31b,bike_facility,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,gemma4-31b,footway,All,300,0.84,0.7638066494989091
+Reworded prompt,cities,gemma4-31b,footway,Europe & North America,120,0.85,0.770286078910986
+Reworded prompt,cities,gemma4-31b,footway,Rest of the world,180,0.8333333333333334,0.7577932271809822
+Reworded prompt,cities,gemma4-31b,obstruction,All,300,0.91,0.8556818586751239
+Reworded prompt,cities,gemma4-31b,obstruction,Europe & North America,120,0.9,0.8315001170138077
+Reworded prompt,cities,gemma4-31b,obstruction,Rest of the world,180,0.9166666666666666,0.8695273992461581
+Reworded prompt,cities,gemma4-31b,trip_hazards,All,300,0.9266666666666666,0.8679207524514708
+Reworded prompt,cities,gemma4-31b,trip_hazards,Europe & North America,120,0.9333333333333333,0.8744933978297817
+Reworded prompt,cities,gemma4-31b,trip_hazards,Rest of the world,180,0.9222222222222223,0.8625504527108107
+Reworded prompt,cities,gemma4-31b,crossing_demand,All,150,0.9666666666666667,0.8738647830474269
+Reworded prompt,cities,gemma4-31b,crossing_demand,Europe & North America,60,0.95,0.8484848484848483
+Reworded prompt,cities,gemma4-31b,crossing_demand,Rest of the world,90,0.9777777777777777,0.8965517241379308
+Reworded prompt,cities,gemma4-31b,crossing_facility,All,150,0.9266666666666666,0.836179507545671
+Reworded prompt,cities,gemma4-31b,crossing_facility,Europe & North America,60,0.95,0.8803986710963454
+Reworded prompt,cities,gemma4-31b,crossing_facility,Rest of the world,90,0.9111111111111111,0.8092209856915739
+Reworded prompt,cities,gemma4-31b,crossing_quality,All,150,0.9066666666666666,0.8029279279279279
+Reworded prompt,cities,gemma4-31b,crossing_quality,Europe & North America,60,0.9333333333333333,0.8529411764705883
+Reworded prompt,cities,gemma4-31b,crossing_quality,Rest of the world,90,0.8888888888888888,0.7717474004565051
+Reworded prompt,cities,gemma4-31b,kerb_ramps,All,150,0.9266666666666666,0.8332322619769557
+Reworded prompt,cities,gemma4-31b,kerb_ramps,Europe & North America,60,0.9333333333333333,0.8575667655786351
+Reworded prompt,cities,gemma4-31b,kerb_ramps,Rest of the world,90,0.9222222222222223,0.8145422431557258
+Reworded prompt,cities,molmo2-8b,area_type,All,150,0.98,0.907521578298397
+Reworded prompt,cities,molmo2-8b,area_type,Europe & North America,60,1.0,1.0
+Reworded prompt,cities,molmo2-8b,area_type,Rest of the world,90,0.9666666666666667,0.7513812154696132
+Reworded prompt,cities,molmo2-8b,land_use,All,150,0.9733333333333334,0.922849427799923
+Reworded prompt,cities,molmo2-8b,land_use,Europe & North America,60,0.95,0.8817345597897502
+Reworded prompt,cities,molmo2-8b,land_use,Rest of the world,90,0.9888888888888889,0.9608865710560627
+Reworded prompt,cities,molmo2-8b,number_of_lanes,All,150,0.9066666666666666,0.8012304779933743
+Reworded prompt,cities,molmo2-8b,number_of_lanes,Europe & North America,60,0.95,0.8382749326145551
+Reworded prompt,cities,molmo2-8b,number_of_lanes,Rest of the world,90,0.8777777777777778,0.7763217352010845
+Reworded prompt,cities,molmo2-8b,median,All,150,0.9733333333333334,0.9315381104518485
+Reworded prompt,cities,molmo2-8b,median,Europe & North America,60,0.9666666666666667,0.9010717230008244
+Reworded prompt,cities,molmo2-8b,median,Rest of the world,90,0.9777777777777777,0.9473222124670763
+Reworded prompt,cities,molmo2-8b,street_lighting,All,150,0.9533333333333334,0.8576850094876661
+Reworded prompt,cities,molmo2-8b,street_lighting,Europe & North America,60,0.9333333333333333,0.8243045387994145
+Reworded prompt,cities,molmo2-8b,street_lighting,Rest of the world,90,0.9666666666666667,0.884763124199744
+Reworded prompt,cities,molmo2-8b,traffic_calming,All,150,1.0,
+Reworded prompt,cities,molmo2-8b,traffic_calming,Europe & North America,60,1.0,
+Reworded prompt,cities,molmo2-8b,traffic_calming,Rest of the world,90,1.0,
+Reworded prompt,cities,molmo2-8b,pedestrian_fencing,All,150,0.98,0.7588424437299033
+Reworded prompt,cities,molmo2-8b,pedestrian_fencing,Europe & North America,60,0.9833333333333333,0.6590909090909087
+Reworded prompt,cities,molmo2-8b,pedestrian_fencing,Rest of the world,90,0.9777777777777777,0.7882352941176468
+Reworded prompt,cities,molmo2-8b,transit_stops,All,150,0.9866666666666667,0.9067454149829035
+Reworded prompt,cities,molmo2-8b,transit_stops,Europe & North America,60,0.9833333333333333,0.791666666666666
+Reworded prompt,cities,molmo2-8b,transit_stops,Rest of the world,90,0.9888888888888889,0.9392302498311954
+Reworded prompt,cities,molmo2-8b,bike_facility,All,150,0.96,0.7697620874904065
+Reworded prompt,cities,molmo2-8b,bike_facility,Europe & North America,60,0.95,0.765013054830287
+Reworded prompt,cities,molmo2-8b,bike_facility,Rest of the world,90,0.9666666666666667,0.7727272727272728
+Reworded prompt,cities,molmo2-8b,footway,All,300,0.94,0.1753207086133165
+Reworded prompt,cities,molmo2-8b,footway,Europe & North America,120,0.9416666666666667,0.2142188961646391
+Reworded prompt,cities,molmo2-8b,footway,Rest of the world,180,0.9388888888888889,0.14838709677419265
+Reworded prompt,cities,molmo2-8b,obstruction,All,300,0.8066666666666666,0.14099526066350732
+Reworded prompt,cities,molmo2-8b,obstruction,Europe & North America,120,0.8166666666666667,0.22352941176470562
+Reworded prompt,cities,molmo2-8b,obstruction,Rest of the world,180,0.8,0.08111174134997154
+Reworded prompt,cities,molmo2-8b,trip_hazards,All,300,0.8766666666666667,0.06612821807168204
+Reworded prompt,cities,molmo2-8b,trip_hazards,Europe & North America,120,0.8916666666666667,0.195876288659794
+Reworded prompt,cities,molmo2-8b,trip_hazards,Rest of the world,180,0.8666666666666667,-0.020793950850661862
+Reworded prompt,cities,molmo2-8b,crossing_demand,All,150,0.9333333333333333,0.8601007274762171
+Reworded prompt,cities,molmo2-8b,crossing_demand,Europe & North America,60,0.9666666666666667,0.930635838150289
+Reworded prompt,cities,molmo2-8b,crossing_demand,Rest of the world,90,0.9111111111111111,0.8125
+Reworded prompt,cities,molmo2-8b,crossing_facility,All,150,0.8866666666666667,0.6483243690525446
+Reworded prompt,cities,molmo2-8b,crossing_facility,Europe & North America,60,0.85,0.5673076923076923
+Reworded prompt,cities,molmo2-8b,crossing_facility,Rest of the world,90,0.9111111111111111,0.7104945717732206
+Reworded prompt,cities,molmo2-8b,crossing_quality,All,150,0.92,0.7392815758980302
+Reworded prompt,cities,molmo2-8b,crossing_quality,Europe & North America,60,0.8666666666666667,0.5945945945945947
+Reworded prompt,cities,molmo2-8b,crossing_quality,Rest of the world,90,0.9555555555555556,0.8484848484848486
+Reworded prompt,cities,molmo2-8b,kerb_ramps,All,150,0.94,-0.009723261032161723
+Reworded prompt,cities,molmo2-8b,kerb_ramps,Europe & North America,60,0.9333333333333333,0.0
+Reworded prompt,cities,molmo2-8b,kerb_ramps,Rest of the world,90,0.9444444444444444,-0.013513513513514964
+Reworded prompt,cities,internvl3.5-8b,area_type,All,150,0.9866666666666667,0.892857142857143
+Reworded prompt,cities,internvl3.5-8b,area_type,Europe & North America,60,0.9666666666666667,0.8382749326145553
+Reworded prompt,cities,internvl3.5-8b,area_type,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,internvl3.5-8b,land_use,All,150,0.9,0.7770290357744526
+Reworded prompt,cities,internvl3.5-8b,land_use,Europe & North America,60,0.9,0.7972972972972974
+Reworded prompt,cities,internvl3.5-8b,land_use,Rest of the world,90,0.9,0.7591436217662801
+Reworded prompt,cities,internvl3.5-8b,number_of_lanes,All,150,0.8533333333333334,0.6474358974358975
+Reworded prompt,cities,internvl3.5-8b,number_of_lanes,Europe & North America,60,0.9,0.7692307692307693
+Reworded prompt,cities,internvl3.5-8b,number_of_lanes,Rest of the world,90,0.8222222222222222,0.5336787564766838
+Reworded prompt,cities,internvl3.5-8b,median,All,150,0.7533333333333333,0.5335742499369694
+Reworded prompt,cities,internvl3.5-8b,median,Europe & North America,60,0.7166666666666667,0.44140197152245336
+Reworded prompt,cities,internvl3.5-8b,median,Rest of the world,90,0.7777777777777778,0.5749704840613932
+Reworded prompt,cities,internvl3.5-8b,street_lighting,All,150,0.9933333333333333,0.9680851063829785
+Reworded prompt,cities,internvl3.5-8b,street_lighting,Europe & North America,60,0.9833333333333333,0.9374999999999998
+Reworded prompt,cities,internvl3.5-8b,street_lighting,Rest of the world,90,1.0,1.0
+Reworded prompt,cities,internvl3.5-8b,traffic_calming,All,150,1.0,
+Reworded prompt,cities,internvl3.5-8b,traffic_calming,Europe & North America,60,1.0,
+Reworded prompt,cities,internvl3.5-8b,traffic_calming,Rest of the world,90,1.0,
+Reworded prompt,cities,internvl3.5-8b,pedestrian_fencing,All,150,0.9933333333333333,0.0
+Reworded prompt,cities,internvl3.5-8b,pedestrian_fencing,Europe & North America,60,1.0,
+Reworded prompt,cities,internvl3.5-8b,pedestrian_fencing,Rest of the world,90,0.9888888888888889,0.0
+Reworded prompt,cities,internvl3.5-8b,transit_stops,All,150,0.96,0.8190591073582628
+Reworded prompt,cities,internvl3.5-8b,transit_stops,Europe & North America,60,0.9666666666666667,0.7000000000000002
+Reworded prompt,cities,internvl3.5-8b,transit_stops,Rest of the world,90,0.9555555555555556,0.8454935622317599
+Reworded prompt,cities,internvl3.5-8b,bike_facility,All,150,0.98,0.7199751088985679
+Reworded prompt,cities,internvl3.5-8b,bike_facility,Europe & North America,60,0.9833333333333333,0.79381443298969
+Reworded prompt,cities,internvl3.5-8b,bike_facility,Rest of the world,90,0.9777777777777777,0.6577946768060831
+Reworded prompt,cities,internvl3.5-8b,footway,All,300,0.44333333333333336,0.20789261490300243
+Reworded prompt,cities,internvl3.5-8b,footway,Europe & North America,120,0.31666666666666665,0.11748878923766813
+Reworded prompt,cities,internvl3.5-8b,footway,Rest of the world,180,0.5277777777777778,0.2739179954441914
+Reworded prompt,cities,internvl3.5-8b,obstruction,All,300,0.6866666666666666,0.44872346248582706
+Reworded prompt,cities,internvl3.5-8b,obstruction,Europe & North America,120,0.6916666666666667,0.41701680672268904
+Reworded prompt,cities,internvl3.5-8b,obstruction,Rest of the world,180,0.6833333333333333,0.4653743942473035
+Reworded prompt,cities,internvl3.5-8b,trip_hazards,All,300,0.7,0.38750510412413225
+Reworded prompt,cities,internvl3.5-8b,trip_hazards,Europe & North America,120,0.7333333333333333,0.37090432503276527
+Reworded prompt,cities,internvl3.5-8b,trip_hazards,Rest of the world,180,0.6777777777777778,0.39132462686567177
+Reworded prompt,cities,internvl3.5-8b,crossing_demand,All,150,0.9,0.7010364071219772
+Reworded prompt,cities,internvl3.5-8b,crossing_demand,Europe & North America,60,0.9333333333333333,0.8414795244385733
+Reworded prompt,cities,internvl3.5-8b,crossing_demand,Rest of the world,90,0.8777777777777778,0.5299145299145297
+Reworded prompt,cities,internvl3.5-8b,crossing_facility,All,150,0.8866666666666667,0.6864240039350715
+Reworded prompt,cities,internvl3.5-8b,crossing_facility,Europe & North America,60,0.9166666666666666,0.7983870967741935
+Reworded prompt,cities,internvl3.5-8b,crossing_facility,Rest of the world,90,0.8666666666666667,0.5893536121673004
+Reworded prompt,cities,internvl3.5-8b,crossing_quality,All,150,0.8866666666666667,0.6723207401696224
+Reworded prompt,cities,internvl3.5-8b,crossing_quality,Europe & North America,60,0.9166666666666666,0.7844827586206896
+Reworded prompt,cities,internvl3.5-8b,crossing_quality,Rest of the world,90,0.8666666666666667,0.577133907595928
+Reworded prompt,cities,internvl3.5-8b,kerb_ramps,All,150,0.6733333333333333,0.5140817136057121
+Reworded prompt,cities,internvl3.5-8b,kerb_ramps,Europe & North America,60,0.6666666666666666,0.4974874371859296
+Reworded prompt,cities,internvl3.5-8b,kerb_ramps,Rest of the world,90,0.6777777777777778,0.5203087667708143
+One frame,jaad,qwen3.8-27b,area_type,All,120,1.0,1.0
+One frame,jaad,qwen3.8-27b,land_use,All,120,0.8833333333333333,0.7946461312797944
+One frame,jaad,qwen3.8-27b,number_of_lanes,All,120,0.925,0.500693481276006
+One frame,jaad,qwen3.8-27b,median,All,120,0.9583333333333334,0.6466431095406364
+One frame,jaad,qwen3.8-27b,street_lighting,All,120,0.7666666666666667,0.4890510948905111
+One frame,jaad,qwen3.8-27b,traffic_calming,All,120,0.9916666666666667,0.0
+One frame,jaad,qwen3.8-27b,pedestrian_fencing,All,120,0.9833333333333333,0.7419354838709664
+One frame,jaad,qwen3.8-27b,transit_stops,All,120,0.875,0.47826086956521746
+One frame,jaad,qwen3.8-27b,bike_facility,All,120,1.0,
+One frame,jaad,qwen3.8-27b,footway,All,240,0.7875,0.5634807417974321
+One frame,jaad,qwen3.8-27b,obstruction,All,240,0.7958333333333333,0.5341098169717137
+One frame,jaad,qwen3.8-27b,trip_hazards,All,240,0.8208333333333333,0.489967381634872
+One frame,jaad,qwen3.8-27b,crossing_demand,All,120,1.0,
+One frame,jaad,qwen3.8-27b,crossing_facility,All,120,0.875,0.7635933806146571
+One frame,jaad,qwen3.8-27b,crossing_quality,All,120,0.875,0.7565264439334506
+One frame,jaad,qwen3.8-27b,kerb_ramps,All,120,0.7083333333333334,0.5196706312900276
+One frame,jaad,gemma4-31b,area_type,All,120,1.0,1.0
+One frame,jaad,gemma4-31b,land_use,All,120,0.9,0.8218262806236081
+One frame,jaad,gemma4-31b,number_of_lanes,All,120,0.9166666666666666,0.6742671009771986
+One frame,jaad,gemma4-31b,median,All,120,0.8916666666666667,0.3389830508474583
+One frame,jaad,gemma4-31b,street_lighting,All,120,0.9083333333333333,0.7624617599424149
+One frame,jaad,gemma4-31b,traffic_calming,All,120,1.0,
+One frame,jaad,gemma4-31b,pedestrian_fencing,All,120,0.875,0.5833333333333333
+One frame,jaad,gemma4-31b,transit_stops,All,120,0.8916666666666667,0.4281524926686219
+One frame,jaad,gemma4-31b,bike_facility,All,120,1.0,
+One frame,jaad,gemma4-31b,footway,All,240,0.8666666666666667,0.6804526920196389
+One frame,jaad,gemma4-31b,obstruction,All,240,0.8416666666666667,0.6021289590786145
+One frame,jaad,gemma4-31b,trip_hazards,All,240,0.9125,0.724755611381137
+One frame,jaad,gemma4-31b,crossing_demand,All,120,0.9833333333333333,0.49367088607594667
+One frame,jaad,gemma4-31b,crossing_facility,All,120,0.8416666666666667,0.6771452846219201
+One frame,jaad,gemma4-31b,crossing_quality,All,120,0.7833333333333333,0.6073496098665995
+One frame,jaad,gemma4-31b,kerb_ramps,All,120,0.7833333333333333,0.6141479099678456
+One frame,jaad,molmo2-8b,area_type,All,120,1.0,1.0
+One frame,jaad,molmo2-8b,land_use,All,120,0.9,0.6733953277387162
+One frame,jaad,molmo2-8b,number_of_lanes,All,120,0.9583333333333334,0.26918392204628605
+One frame,jaad,molmo2-8b,median,All,120,0.9,0.4153471376370281
+One frame,jaad,molmo2-8b,street_lighting,All,120,0.9083333333333333,0.6485623003194887
+One frame,jaad,molmo2-8b,traffic_calming,All,120,1.0,
+One frame,jaad,molmo2-8b,pedestrian_fencing,All,120,0.9833333333333333,0.0
+One frame,jaad,molmo2-8b,transit_stops,All,120,0.95,0.5499999999999998
+One frame,jaad,molmo2-8b,bike_facility,All,120,1.0,
+One frame,jaad,molmo2-8b,footway,All,240,0.9583333333333334,0.4296577946768065
+One frame,jaad,molmo2-8b,obstruction,All,240,0.7333333333333333,0.22891566265060223
+One frame,jaad,molmo2-8b,trip_hazards,All,240,0.8833333333333333,0.2425608656447247
+One frame,jaad,molmo2-8b,crossing_demand,All,120,0.9833333333333333,0.8799999999999997
+One frame,jaad,molmo2-8b,crossing_facility,All,120,0.8916666666666667,0.7823660714285715
+One frame,jaad,molmo2-8b,crossing_quality,All,120,0.8916666666666667,0.777015437392796
+One frame,jaad,molmo2-8b,kerb_ramps,All,120,0.9916666666666667,0.0
+One frame,jaad,internvl3.5-8b,area_type,All,120,1.0,1.0
+One frame,jaad,internvl3.5-8b,land_use,All,120,0.8916666666666667,0.7843516726568982
+One frame,jaad,internvl3.5-8b,number_of_lanes,All,120,0.8416666666666667,0.48741007194244607
+One frame,jaad,internvl3.5-8b,median,All,120,0.7166666666666667,0.4143820869814842
+One frame,jaad,internvl3.5-8b,street_lighting,All,120,0.8916666666666667,0.43600867678958827
+One frame,jaad,internvl3.5-8b,traffic_calming,All,120,1.0,
+One frame,jaad,internvl3.5-8b,pedestrian_fencing,All,120,0.9916666666666667,0.0
+One frame,jaad,internvl3.5-8b,transit_stops,All,120,0.9,0.5219123505976095
+One frame,jaad,internvl3.5-8b,bike_facility,All,120,1.0,
+One frame,jaad,internvl3.5-8b,footway,All,240,0.7666666666666667,0.5889279706377123
+One frame,jaad,internvl3.5-8b,obstruction,All,240,0.8625,0.3483626789534312
+One frame,jaad,internvl3.5-8b,trip_hazards,All,240,0.9166666666666666,0.13669064748201293
+One frame,jaad,internvl3.5-8b,crossing_demand,All,120,0.9666666666666667,0.6511627906976744
+One frame,jaad,internvl3.5-8b,crossing_facility,All,120,0.8,0.6327935738875431
+One frame,jaad,internvl3.5-8b,crossing_quality,All,120,0.85,0.6927453769559032
+One frame,jaad,internvl3.5-8b,kerb_ramps,All,120,0.65,0.4148380355276908
+One frame,cities,qwen3.8-27b,area_type,All,150,0.9866666666666667,0.915824915824916
+One frame,cities,qwen3.8-27b,area_type,Europe & North America,60,0.9666666666666667,0.8561151079136692
+One frame,cities,qwen3.8-27b,area_type,Rest of the world,90,1.0,1.0
+One frame,cities,qwen3.8-27b,land_use,All,150,0.9133333333333333,0.8672023971669844
+One frame,cities,qwen3.8-27b,land_use,Europe & North America,60,0.9333333333333333,0.9075500770416025
+One frame,cities,qwen3.8-27b,land_use,Rest of the world,90,0.9,0.8226406831618129
+One frame,cities,qwen3.8-27b,number_of_lanes,All,150,0.8666666666666667,0.7342545841084241
+One frame,cities,qwen3.8-27b,number_of_lanes,Europe & North America,60,0.9166666666666666,0.7923875432525951
+One frame,cities,qwen3.8-27b,number_of_lanes,Rest of the world,90,0.8333333333333334,0.6785714285714286
+One frame,cities,qwen3.8-27b,median,All,150,0.8733333333333333,0.7094505046385972
+One frame,cities,qwen3.8-27b,median,Europe & North America,60,0.9166666666666666,0.7029702970297028
+One frame,cities,qwen3.8-27b,median,Rest of the world,90,0.8444444444444444,0.7011385199240986
+One frame,cities,qwen3.8-27b,street_lighting,All,150,0.8133333333333334,0.6895098691505878
+One frame,cities,qwen3.8-27b,street_lighting,Europe & North America,60,0.8666666666666667,0.7685631629701062
+One frame,cities,qwen3.8-27b,street_lighting,Rest of the world,90,0.7777777777777778,0.6309963099630996
+One frame,cities,qwen3.8-27b,traffic_calming,All,150,0.9933333333333333,0.0
+One frame,cities,qwen3.8-27b,traffic_calming,Europe & North America,60,0.9833333333333333,0.0
+One frame,cities,qwen3.8-27b,traffic_calming,Rest of the world,90,1.0,
+One frame,cities,qwen3.8-27b,pedestrian_fencing,All,150,0.9666666666666667,0.8458692971639952
+One frame,cities,qwen3.8-27b,pedestrian_fencing,Europe & North America,60,0.9666666666666667,0.7333333333333336
+One frame,cities,qwen3.8-27b,pedestrian_fencing,Rest of the world,90,0.9666666666666667,0.8767123287671234
+One frame,cities,qwen3.8-27b,transit_stops,All,150,0.9266666666666666,0.564298917348825
+One frame,cities,qwen3.8-27b,transit_stops,Europe & North America,60,0.9666666666666667,0.6511627906976744
+One frame,cities,qwen3.8-27b,transit_stops,Rest of the world,90,0.9,0.5336787564766841
+One frame,cities,qwen3.8-27b,bike_facility,All,150,0.9666666666666667,0.4322482967448908
+One frame,cities,qwen3.8-27b,bike_facility,Europe & North America,60,0.9333333333333333,0.47368421052631654
+One frame,cities,qwen3.8-27b,bike_facility,Rest of the world,90,0.9888888888888889,0.0
+One frame,cities,qwen3.8-27b,footway,All,300,0.6933333333333334,0.5697315499017865
+One frame,cities,qwen3.8-27b,footway,Europe & North America,120,0.7083333333333334,0.54402345022256
+One frame,cities,qwen3.8-27b,footway,Rest of the world,180,0.6833333333333333,0.5779861796643633
+One frame,cities,qwen3.8-27b,obstruction,All,300,0.7466666666666667,0.626682385303075
+One frame,cities,qwen3.8-27b,obstruction,Europe & North America,120,0.75,0.6157540826128722
+One frame,cities,qwen3.8-27b,obstruction,Rest of the world,180,0.7444444444444445,0.6308350795844665
+One frame,cities,qwen3.8-27b,trip_hazards,All,300,0.79,0.644047686309961
+One frame,cities,qwen3.8-27b,trip_hazards,Europe & North America,120,0.8083333333333333,0.6462445526788003
+One frame,cities,qwen3.8-27b,trip_hazards,Rest of the world,180,0.7777777777777778,0.6390615600561459
+One frame,cities,qwen3.8-27b,crossing_demand,All,150,0.94,0.6349378042184964
+One frame,cities,qwen3.8-27b,crossing_demand,Europe & North America,60,0.9333333333333333,0.6774193548387097
+One frame,cities,qwen3.8-27b,crossing_demand,Rest of the world,90,0.9444444444444444,0.587155963302752
+One frame,cities,qwen3.8-27b,crossing_facility,All,150,0.88,0.7332542975696502
+One frame,cities,qwen3.8-27b,crossing_facility,Europe & North America,60,0.95,0.8863636363636362
+One frame,cities,qwen3.8-27b,crossing_facility,Rest of the world,90,0.8333333333333334,0.6350364963503651
+One frame,cities,qwen3.8-27b,crossing_quality,All,150,0.9,0.7587390092215313
+One frame,cities,qwen3.8-27b,crossing_quality,Europe & North America,60,0.9666666666666667,0.9180327868852459
+One frame,cities,qwen3.8-27b,crossing_quality,Rest of the world,90,0.8555555555555555,0.6564885496183206
+One frame,cities,qwen3.8-27b,kerb_ramps,All,150,0.8266666666666667,0.6113602391629298
+One frame,cities,qwen3.8-27b,kerb_ramps,Europe & North America,60,0.8333333333333334,0.6287128712871288
+One frame,cities,qwen3.8-27b,kerb_ramps,Rest of the world,90,0.8222222222222222,0.600997506234414
+One frame,cities,gemma4-31b,area_type,All,150,0.9866666666666667,0.8502994011976052
+One frame,cities,gemma4-31b,area_type,Europe & North America,60,0.9666666666666667,0.7333333333333336
+One frame,cities,gemma4-31b,area_type,Rest of the world,90,1.0,1.0
+One frame,cities,gemma4-31b,land_use,All,150,0.88,0.8143053645116919
+One frame,cities,gemma4-31b,land_use,Europe & North America,60,0.85,0.7880690737833593
+One frame,cities,gemma4-31b,land_use,Rest of the world,90,0.9,0.8291499683611053
+One frame,cities,gemma4-31b,number_of_lanes,All,150,0.9133333333333333,0.8449674034027668
+One frame,cities,gemma4-31b,number_of_lanes,Europe & North America,60,0.8833333333333333,0.7678275290215589
+One frame,cities,gemma4-31b,number_of_lanes,Rest of the world,90,0.9333333333333333,0.8698167791706847
+One frame,cities,gemma4-31b,median,All,150,0.8066666666666666,0.650124668221668
+One frame,cities,gemma4-31b,median,Europe & North America,60,0.8833333333333333,0.7158322056833557
+One frame,cities,gemma4-31b,median,Rest of the world,90,0.7555555555555555,0.6090819348469891
+One frame,cities,gemma4-31b,street_lighting,All,150,0.8133333333333334,0.6807540285801156
+One frame,cities,gemma4-31b,street_lighting,Europe & North America,60,0.8166666666666667,0.671805072103431
+One frame,cities,gemma4-31b,street_lighting,Rest of the world,90,0.8111111111111111,0.6762589928057553
+One frame,cities,gemma4-31b,traffic_calming,All,150,0.9933333333333333,0.0
+One frame,cities,gemma4-31b,traffic_calming,Europe & North America,60,0.9833333333333333,0.0
+One frame,cities,gemma4-31b,traffic_calming,Rest of the world,90,1.0,
+One frame,cities,gemma4-31b,pedestrian_fencing,All,150,0.9333333333333333,0.823943661971831
+One frame,cities,gemma4-31b,pedestrian_fencing,Europe & North America,60,0.9333333333333333,0.7391304347826086
+One frame,cities,gemma4-31b,pedestrian_fencing,Rest of the world,90,0.9333333333333333,0.8474576271186441
+One frame,cities,gemma4-31b,transit_stops,All,150,0.9333333333333333,0.551435406698565
+One frame,cities,gemma4-31b,transit_stops,Europe & North America,60,0.9666666666666667,0.0
+One frame,cities,gemma4-31b,transit_stops,Rest of the world,90,0.9111111111111111,0.5899772209567198
+One frame,cities,gemma4-31b,bike_facility,All,150,0.9733333333333334,0.6551724137931038
+One frame,cities,gemma4-31b,bike_facility,Europe & North America,60,0.9666666666666667,0.7826086956521738
+One frame,cities,gemma4-31b,bike_facility,Rest of the world,90,0.9777777777777777,0.0
+One frame,cities,gemma4-31b,footway,All,300,0.75,0.6200222920255345
+One frame,cities,gemma4-31b,footway,Europe & North America,120,0.7583333333333333,0.6223138701975255
+One frame,cities,gemma4-31b,footway,Rest of the world,180,0.7444444444444445,0.6171629369336047
+One frame,cities,gemma4-31b,obstruction,All,300,0.7733333333333333,0.6315494789314935
+One frame,cities,gemma4-31b,obstruction,Europe & North America,120,0.7666666666666667,0.6066034422198807
+One frame,cities,gemma4-31b,obstruction,Rest of the world,180,0.7777777777777778,0.6455646352269371
+One frame,cities,gemma4-31b,trip_hazards,All,300,0.8333333333333334,0.6937337934132349
+One frame,cities,gemma4-31b,trip_hazards,Europe & North America,120,0.8416666666666667,0.6992877868636244
+One frame,cities,gemma4-31b,trip_hazards,Rest of the world,180,0.8277777777777777,0.6887202945442373
+One frame,cities,gemma4-31b,crossing_demand,All,150,0.9066666666666666,0.6528925619834709
+One frame,cities,gemma4-31b,crossing_demand,Europe & North America,60,0.85,0.5178571428571428
+One frame,cities,gemma4-31b,crossing_demand,Rest of the world,90,0.9444444444444444,0.7692307692307692
+One frame,cities,gemma4-31b,crossing_facility,All,150,0.92,0.797730082031689
+One frame,cities,gemma4-31b,crossing_facility,Europe & North America,60,0.9166666666666666,0.7774480712166171
+One frame,cities,gemma4-31b,crossing_facility,Rest of the world,90,0.9222222222222223,0.8094373865698732
+One frame,cities,gemma4-31b,crossing_quality,All,150,0.9066666666666666,0.7650218194024839
+One frame,cities,gemma4-31b,crossing_quality,Europe & North America,60,0.9,0.7345132743362832
+One frame,cities,gemma4-31b,crossing_quality,Rest of the world,90,0.9111111111111111,0.7834586466165413
+One frame,cities,gemma4-31b,kerb_ramps,All,150,0.8733333333333333,0.6687587168758716
+One frame,cities,gemma4-31b,kerb_ramps,Europe & North America,60,0.85,0.6338983050847457
+One frame,cities,gemma4-31b,kerb_ramps,Rest of the world,90,0.8888888888888888,0.6943972835314091
+One frame,cities,molmo2-8b,area_type,All,150,0.9533333333333334,0.7489239598278339
+One frame,cities,molmo2-8b,area_type,Europe & North America,60,0.9333333333333333,0.7777777777777778
+One frame,cities,molmo2-8b,area_type,Rest of the world,90,0.9666666666666667,0.6511627906976744
+One frame,cities,molmo2-8b,land_use,All,150,0.8733333333333333,0.580265095729013
+One frame,cities,molmo2-8b,land_use,Europe & North America,60,0.8666666666666667,0.6539293439077145
+One frame,cities,molmo2-8b,land_use,Rest of the world,90,0.8777777777777778,0.47619047619047605
+One frame,cities,molmo2-8b,number_of_lanes,All,150,0.8933333333333333,0.7795535960319647
+One frame,cities,molmo2-8b,number_of_lanes,Europe & North America,60,0.95,0.8376916140667267
+One frame,cities,molmo2-8b,number_of_lanes,Rest of the world,90,0.8555555555555555,0.7445972495088407
+One frame,cities,molmo2-8b,median,All,150,0.8866666666666667,0.7051341350601297
+One frame,cities,molmo2-8b,median,Europe & North America,60,0.95,0.8572561459159396
+One frame,cities,molmo2-8b,median,Rest of the world,90,0.8444444444444444,0.617137648131267
+One frame,cities,molmo2-8b,street_lighting,All,150,0.8733333333333333,0.5692261185006044
+One frame,cities,molmo2-8b,street_lighting,Europe & North America,60,0.8833333333333333,0.671618451915559
+One frame,cities,molmo2-8b,street_lighting,Rest of the world,90,0.8666666666666667,0.46428571428571425
+One frame,cities,molmo2-8b,traffic_calming,All,150,1.0,
+One frame,cities,molmo2-8b,traffic_calming,Europe & North America,60,1.0,
+One frame,cities,molmo2-8b,traffic_calming,Rest of the world,90,1.0,
+One frame,cities,molmo2-8b,pedestrian_fencing,All,150,0.98,0.7588424437299033
+One frame,cities,molmo2-8b,pedestrian_fencing,Europe & North America,60,1.0,1.0
+One frame,cities,molmo2-8b,pedestrian_fencing,Rest of the world,90,0.9666666666666667,0.6493506493506496
+One frame,cities,molmo2-8b,transit_stops,All,150,0.8933333333333333,0.37369519832985404
+One frame,cities,molmo2-8b,transit_stops,Europe & North America,60,0.9666666666666667,0.4871794871794877
+One frame,cities,molmo2-8b,transit_stops,Rest of the world,90,0.8444444444444444,0.3385826771653543
+One frame,cities,molmo2-8b,bike_facility,All,150,0.9066666666666666,0.05020352781546713
+One frame,cities,molmo2-8b,bike_facility,Europe & North America,60,0.8833333333333333,0.10638297872340466
+One frame,cities,molmo2-8b,bike_facility,Rest of the world,90,0.9222222222222223,-0.014492753623187776
+One frame,cities,molmo2-8b,footway,All,300,0.9266666666666666,0.1922653286011494
+One frame,cities,molmo2-8b,footway,Europe & North America,120,0.9416666666666667,0.4411177644710577
+One frame,cities,molmo2-8b,footway,Rest of the world,180,0.9166666666666666,-0.01925254813137016
+One frame,cities,molmo2-8b,obstruction,All,300,0.73,0.2114485981308409
+One frame,cities,molmo2-8b,obstruction,Europe & North America,120,0.65,0.1173380035026271
+One frame,cities,molmo2-8b,obstruction,Rest of the world,180,0.7833333333333333,0.29191042969538017
+One frame,cities,molmo2-8b,trip_hazards,All,300,0.8433333333333334,0.19104991394148038
+One frame,cities,molmo2-8b,trip_hazards,Europe & North America,120,0.7833333333333333,0.01732283464566948
+One frame,cities,molmo2-8b,trip_hazards,Rest of the world,180,0.8833333333333333,0.3400837988826814
+One frame,cities,molmo2-8b,crossing_demand,All,150,0.84,0.6701484332050577
+One frame,cities,molmo2-8b,crossing_demand,Europe & North America,60,0.8333333333333334,0.6648044692737431
+One frame,cities,molmo2-8b,crossing_demand,Rest of the world,90,0.8444444444444444,0.6742502585315409
+One frame,cities,molmo2-8b,crossing_facility,All,150,0.82,0.5087336244541483
+One frame,cities,molmo2-8b,crossing_facility,Europe & North America,60,0.8666666666666667,0.630484988452656
+One frame,cities,molmo2-8b,crossing_facility,Rest of the world,90,0.7888888888888889,0.4333996023856858
+One frame,cities,molmo2-8b,crossing_quality,All,150,0.86,0.5878042397278199
+One frame,cities,molmo2-8b,crossing_quality,Europe & North America,60,0.8833333333333333,0.6534653465346534
+One frame,cities,molmo2-8b,crossing_quality,Rest of the world,90,0.8444444444444444,0.5512820512820513
+One frame,cities,molmo2-8b,kerb_ramps,All,150,0.9466666666666667,0.0
+One frame,cities,molmo2-8b,kerb_ramps,Europe & North America,60,0.9333333333333333,0.0
+One frame,cities,molmo2-8b,kerb_ramps,Rest of the world,90,0.9555555555555556,0.0
+One frame,cities,internvl3.5-8b,area_type,All,150,0.9933333333333333,0.9488054607508529
+One frame,cities,internvl3.5-8b,area_type,Europe & North America,60,0.9833333333333333,0.9238578680203043
+One frame,cities,internvl3.5-8b,area_type,Rest of the world,90,1.0,1.0
+One frame,cities,internvl3.5-8b,land_use,All,150,0.8466666666666667,0.7037100652696668
+One frame,cities,internvl3.5-8b,land_use,Europe & North America,60,0.85,0.7242083758937691
+One frame,cities,internvl3.5-8b,land_use,Rest of the world,90,0.8444444444444444,0.6863330843913369
+One frame,cities,internvl3.5-8b,number_of_lanes,All,150,0.86,0.6741828713280926
+One frame,cities,internvl3.5-8b,number_of_lanes,Europe & North America,60,0.9,0.7600000000000001
+One frame,cities,internvl3.5-8b,number_of_lanes,Rest of the world,90,0.8333333333333334,0.6071012805587894
+One frame,cities,internvl3.5-8b,median,All,150,0.7133333333333334,0.5205530364974357
+One frame,cities,internvl3.5-8b,median,Europe & North America,60,0.75,0.5358432181536874
+One frame,cities,internvl3.5-8b,median,Rest of the world,90,0.6888888888888889,0.5098229916358685
+One frame,cities,internvl3.5-8b,street_lighting,All,150,0.8733333333333333,0.5340091563113144
+One frame,cities,internvl3.5-8b,street_lighting,Europe & North America,60,0.8833333333333333,0.627659574468085
+One frame,cities,internvl3.5-8b,street_lighting,Rest of the world,90,0.8666666666666667,0.44444444444444453
+One frame,cities,internvl3.5-8b,traffic_calming,All,150,1.0,
+One frame,cities,internvl3.5-8b,traffic_calming,Europe & North America,60,1.0,
+One frame,cities,internvl3.5-8b,traffic_calming,Rest of the world,90,1.0,
+One frame,cities,internvl3.5-8b,pedestrian_fencing,All,150,0.9933333333333333,0.0
+One frame,cities,internvl3.5-8b,pedestrian_fencing,Europe & North America,60,1.0,
+One frame,cities,internvl3.5-8b,pedestrian_fencing,Rest of the world,90,0.9888888888888889,0.0
+One frame,cities,internvl3.5-8b,transit_stops,All,150,0.9066666666666666,0.5808383233532932
+One frame,cities,internvl3.5-8b,transit_stops,Europe & North America,60,0.9833333333333333,0.850746268656716
+One frame,cities,internvl3.5-8b,transit_stops,Rest of the world,90,0.8555555555555555,0.5002135839384877
+One frame,cities,internvl3.5-8b,bike_facility,All,150,0.96,0.38733832539142177
+One frame,cities,internvl3.5-8b,bike_facility,Europe & North America,60,0.95,0.3814432989690715
+One frame,cities,internvl3.5-8b,bike_facility,Rest of the world,90,0.9666666666666667,0.3932584269662908
+One frame,cities,internvl3.5-8b,footway,All,300,0.6166666666666667,0.44998884035328257
+One frame,cities,internvl3.5-8b,footway,Europe & North America,120,0.5416666666666666,0.35521688159437276
+One frame,cities,internvl3.5-8b,footway,Rest of the world,180,0.6666666666666666,0.5056755767118272
+One frame,cities,internvl3.5-8b,obstruction,All,300,0.78,0.5673927767703031
+One frame,cities,internvl3.5-8b,obstruction,Europe & North America,120,0.7666666666666667,0.5217081850533809
+One frame,cities,internvl3.5-8b,obstruction,Rest of the world,180,0.7888888888888889,0.5956729916651888
+One frame,cities,internvl3.5-8b,trip_hazards,All,300,0.8266666666666667,0.5426695200961567
+One frame,cities,internvl3.5-8b,trip_hazards,Europe & North America,120,0.8416666666666667,0.5322117357406647
+One frame,cities,internvl3.5-8b,trip_hazards,Rest of the world,180,0.8166666666666667,0.5474285714285714
+One frame,cities,internvl3.5-8b,crossing_demand,All,150,0.8333333333333334,0.5591347284269929
+One frame,cities,internvl3.5-8b,crossing_demand,Europe & North America,60,0.85,0.6715328467153284
+One frame,cities,internvl3.5-8b,crossing_demand,Rest of the world,90,0.8222222222222222,0.41605839416058377
+One frame,cities,internvl3.5-8b,crossing_facility,All,150,0.8666666666666667,0.6642041638683681
+One frame,cities,internvl3.5-8b,crossing_facility,Europe & North America,60,0.9,0.7628458498023717
+One frame,cities,internvl3.5-8b,crossing_facility,Rest of the world,90,0.8444444444444444,0.5906432748538012
+One frame,cities,internvl3.5-8b,crossing_quality,All,150,0.8733333333333333,0.6632001890805955
+One frame,cities,internvl3.5-8b,crossing_quality,Europe & North America,60,0.9,0.7457627118644069
+One frame,cities,internvl3.5-8b,crossing_quality,Rest of the world,90,0.8555555555555555,0.6033898305084744
+One frame,cities,internvl3.5-8b,kerb_ramps,All,150,0.6466666666666666,0.45081514230450387
+One frame,cities,internvl3.5-8b,kerb_ramps,Europe & North America,60,0.7333333333333333,0.5389048991354465
+One frame,cities,internvl3.5-8b,kerb_ramps,Rest of the world,90,0.5888888888888889,0.39044481054365743
+Half resolution,jaad,qwen3.8-27b,area_type,All,120,1.0,1.0
+Half resolution,jaad,qwen3.8-27b,land_use,All,120,0.9416666666666667,0.8916688160949187
+Half resolution,jaad,qwen3.8-27b,number_of_lanes,All,120,0.9166666666666666,0.5432051770079936
+Half resolution,jaad,qwen3.8-27b,median,All,120,0.95,0.6002220988339805
+Half resolution,jaad,qwen3.8-27b,street_lighting,All,120,0.9166666666666666,0.8175182481751824
+Half resolution,jaad,qwen3.8-27b,traffic_calming,All,120,0.9916666666666667,0.0
+Half resolution,jaad,qwen3.8-27b,pedestrian_fencing,All,120,0.9666666666666667,0.48387096774193467
+Half resolution,jaad,qwen3.8-27b,transit_stops,All,120,0.925,0.731743666169896
+Half resolution,jaad,qwen3.8-27b,bike_facility,All,120,1.0,
+Half resolution,jaad,qwen3.8-27b,footway,All,240,0.8958333333333334,0.7797599383327828
+Half resolution,jaad,qwen3.8-27b,obstruction,All,240,0.8875,0.7415237335460708
+Half resolution,jaad,qwen3.8-27b,trip_hazards,All,240,0.9333333333333333,0.7773396729676447
+Half resolution,jaad,qwen3.8-27b,crossing_demand,All,120,1.0,
+Half resolution,jaad,qwen3.8-27b,crossing_facility,All,120,0.95,0.9082334947744073
+Half resolution,jaad,qwen3.8-27b,crossing_quality,All,120,0.9583333333333334,0.9199038846615939
+Half resolution,jaad,qwen3.8-27b,kerb_ramps,All,120,0.8583333333333333,0.7696476964769646
+Half resolution,jaad,gemma4-31b,area_type,All,120,1.0,1.0
+Half resolution,jaad,gemma4-31b,land_use,All,120,0.9833333333333333,0.9679658302188998
+Half resolution,jaad,gemma4-31b,number_of_lanes,All,120,0.9666666666666667,0.8435462842242504
+Half resolution,jaad,gemma4-31b,median,All,120,0.9833333333333333,0.924480805538074
+Half resolution,jaad,gemma4-31b,street_lighting,All,120,0.9583333333333334,0.9045953251709334
+Half resolution,jaad,gemma4-31b,traffic_calming,All,120,1.0,
+Half resolution,jaad,gemma4-31b,pedestrian_fencing,All,120,0.9583333333333334,0.8758278145695365
+Half resolution,jaad,gemma4-31b,transit_stops,All,120,0.95,0.804028307022319
+Half resolution,jaad,gemma4-31b,bike_facility,All,120,1.0,
+Half resolution,jaad,gemma4-31b,footway,All,240,0.9125,0.8065036280569738
+Half resolution,jaad,gemma4-31b,obstruction,All,240,0.8833333333333333,0.7341772151898733
+Half resolution,jaad,gemma4-31b,trip_hazards,All,240,0.9291666666666667,0.7907048322560788
+Half resolution,jaad,gemma4-31b,crossing_demand,All,120,1.0,1.0
+Half resolution,jaad,gemma4-31b,crossing_facility,All,120,0.95,0.9023596419853539
+Half resolution,jaad,gemma4-31b,crossing_quality,All,120,0.9166666666666666,0.8563562365333971
+Half resolution,jaad,gemma4-31b,kerb_ramps,All,120,0.8916666666666667,0.8168154062940348
+Half resolution,jaad,molmo2-8b,area_type,All,120,1.0,1.0
+Half resolution,jaad,molmo2-8b,land_use,All,120,0.9833333333333333,0.9374674309536215
+Half resolution,jaad,molmo2-8b,number_of_lanes,All,120,0.9833333333333333,0.6610169491525415
+Half resolution,jaad,molmo2-8b,median,All,120,0.9166666666666666,0.5321637426900582
+Half resolution,jaad,molmo2-8b,street_lighting,All,120,0.9416666666666667,0.7943192948090108
+Half resolution,jaad,molmo2-8b,traffic_calming,All,120,1.0,
+Half resolution,jaad,molmo2-8b,pedestrian_fencing,All,120,0.9916666666666667,0.0
+Half resolution,jaad,molmo2-8b,transit_stops,All,120,0.9416666666666667,0.6347826086956523
+Half resolution,jaad,molmo2-8b,bike_facility,All,120,1.0,
+Half resolution,jaad,molmo2-8b,footway,All,240,0.9833333333333333,0.6590909090909087
+Half resolution,jaad,molmo2-8b,obstruction,All,240,0.8333333333333334,0.5238095238095237
+Half resolution,jaad,molmo2-8b,trip_hazards,All,240,0.9166666666666666,0.4088669950738907
+Half resolution,jaad,molmo2-8b,crossing_demand,All,120,0.9666666666666667,0.7826086956521738
+Half resolution,jaad,molmo2-8b,crossing_facility,All,120,0.9166666666666666,0.8386229155459924
+Half resolution,jaad,molmo2-8b,crossing_quality,All,120,0.9333333333333333,0.8653198653198653
+Half resolution,jaad,molmo2-8b,kerb_ramps,All,120,0.9916666666666667,0.0
+Half resolution,jaad,internvl3.5-8b,area_type,All,120,1.0,1.0
+Half resolution,jaad,internvl3.5-8b,land_use,All,120,0.925,0.8440658388680335
+Half resolution,jaad,internvl3.5-8b,number_of_lanes,All,120,0.9416666666666667,0.8214285714285714
+Half resolution,jaad,internvl3.5-8b,median,All,120,0.8583333333333333,0.6621957277694981
+Half resolution,jaad,internvl3.5-8b,street_lighting,All,120,0.95,0.6439169139465875
+Half resolution,jaad,internvl3.5-8b,traffic_calming,All,120,1.0,
+Half resolution,jaad,internvl3.5-8b,pedestrian_fencing,All,120,1.0,
+Half resolution,jaad,internvl3.5-8b,transit_stops,All,120,0.9583333333333334,0.8178506375227689
+Half resolution,jaad,internvl3.5-8b,bike_facility,All,120,1.0,
+Half resolution,jaad,internvl3.5-8b,footway,All,240,0.7291666666666666,0.5295536791314837
+Half resolution,jaad,internvl3.5-8b,obstruction,All,240,0.9083333333333333,0.6416938110749185
+Half resolution,jaad,internvl3.5-8b,trip_hazards,All,240,0.9541666666666667,0.4027149321266967
+Half resolution,jaad,internvl3.5-8b,crossing_demand,All,120,0.9833333333333333,0.791666666666666
+Half resolution,jaad,internvl3.5-8b,crossing_facility,All,120,0.9,0.8279569892473119
+Half resolution,jaad,internvl3.5-8b,crossing_quality,All,120,0.9666666666666667,0.9326788218793829
+Half resolution,jaad,internvl3.5-8b,kerb_ramps,All,120,0.8083333333333333,0.6502787633046123
+Half resolution,cities,qwen3.8-27b,area_type,All,150,0.9933333333333333,0.9593054801953335
+Half resolution,cities,qwen3.8-27b,area_type,Europe & North America,60,0.9833333333333333,0.9315068493150682
+Half resolution,cities,qwen3.8-27b,area_type,Rest of the world,90,1.0,1.0
+Half resolution,cities,qwen3.8-27b,land_use,All,150,0.9066666666666666,0.8573466476462196
+Half resolution,cities,qwen3.8-27b,land_use,Europe & North America,60,0.9666666666666667,0.9537750385208013
+Half resolution,cities,qwen3.8-27b,land_use,Rest of the world,90,0.8666666666666667,0.7655232305688232
+Half resolution,cities,qwen3.8-27b,number_of_lanes,All,150,0.9266666666666666,0.8539435248296008
+Half resolution,cities,qwen3.8-27b,number_of_lanes,Europe & North America,60,0.95,0.8686131386861312
+Half resolution,cities,qwen3.8-27b,number_of_lanes,Rest of the world,90,0.9111111111111111,0.8230958230958231
+Half resolution,cities,qwen3.8-27b,median,All,150,0.9,0.7579864472410456
+Half resolution,cities,qwen3.8-27b,median,Europe & North America,60,0.95,0.8217821782178216
+Half resolution,cities,qwen3.8-27b,median,Rest of the world,90,0.8666666666666667,0.7259578787109872
+Half resolution,cities,qwen3.8-27b,street_lighting,All,150,0.9,0.8289883712092423
+Half resolution,cities,qwen3.8-27b,street_lighting,Europe & North America,60,0.9833333333333333,0.9694501018329938
+Half resolution,cities,qwen3.8-27b,street_lighting,Rest of the world,90,0.8444444444444444,0.7378277153558053
+Half resolution,cities,qwen3.8-27b,traffic_calming,All,150,0.9933333333333333,0.0
+Half resolution,cities,qwen3.8-27b,traffic_calming,Europe & North America,60,0.9833333333333333,0.0
+Half resolution,cities,qwen3.8-27b,traffic_calming,Rest of the world,90,1.0,
+Half resolution,cities,qwen3.8-27b,pedestrian_fencing,All,150,0.96,0.819204499799116
+Half resolution,cities,qwen3.8-27b,pedestrian_fencing,Europe & North America,60,0.95,0.6399999999999998
+Half resolution,cities,qwen3.8-27b,pedestrian_fencing,Rest of the world,90,0.9666666666666667,0.8767123287671234
+Half resolution,cities,qwen3.8-27b,transit_stops,All,150,0.9333333333333333,0.639423076923077
+Half resolution,cities,qwen3.8-27b,transit_stops,Europe & North America,60,0.9333333333333333,0.1891891891891902
+Half resolution,cities,qwen3.8-27b,transit_stops,Rest of the world,90,0.9333333333333333,0.7312095569935292
+Half resolution,cities,qwen3.8-27b,bike_facility,All,150,0.98,0.7185741088180112
+Half resolution,cities,qwen3.8-27b,bike_facility,Europe & North America,60,0.95,0.6449704142011832
+Half resolution,cities,qwen3.8-27b,bike_facility,Rest of the world,90,1.0,1.0
+Half resolution,cities,qwen3.8-27b,footway,All,300,0.7966666666666666,0.7131391666927924
+Half resolution,cities,qwen3.8-27b,footway,Europe & North America,120,0.85,0.7703349282296652
+Half resolution,cities,qwen3.8-27b,footway,Rest of the world,180,0.7611111111111111,0.6765295887662988
+Half resolution,cities,qwen3.8-27b,obstruction,All,300,0.8366666666666667,0.7585810477910987
+Half resolution,cities,qwen3.8-27b,obstruction,Europe & North America,120,0.85,0.76878612716763
+Half resolution,cities,qwen3.8-27b,obstruction,Rest of the world,180,0.8277777777777777,0.7503243993019821
+Half resolution,cities,qwen3.8-27b,trip_hazards,All,300,0.8733333333333333,0.7798675343232857
+Half resolution,cities,qwen3.8-27b,trip_hazards,Europe & North America,120,0.9,0.8068151328145963
+Half resolution,cities,qwen3.8-27b,trip_hazards,Rest of the world,180,0.8555555555555555,0.7611635621331972
+Half resolution,cities,qwen3.8-27b,crossing_demand,All,150,0.9266666666666666,0.5538128718226071
+Half resolution,cities,qwen3.8-27b,crossing_demand,Europe & North America,60,0.9,0.5161290322580646
+Half resolution,cities,qwen3.8-27b,crossing_demand,Rest of the world,90,0.9444444444444444,0.587155963302752
+Half resolution,cities,qwen3.8-27b,crossing_facility,All,150,0.8933333333333333,0.7704008418635798
+Half resolution,cities,qwen3.8-27b,crossing_facility,Europe & North America,60,0.95,0.8863636363636362
+Half resolution,cities,qwen3.8-27b,crossing_facility,Rest of the world,90,0.8555555555555555,0.6989966555183946
+Half resolution,cities,qwen3.8-27b,crossing_quality,All,150,0.92,0.8122261631546005
+Half resolution,cities,qwen3.8-27b,crossing_quality,Europe & North America,60,0.9666666666666667,0.9180327868852459
+Half resolution,cities,qwen3.8-27b,crossing_quality,Rest of the world,90,0.8888888888888888,0.7461928934010151
+Half resolution,cities,qwen3.8-27b,kerb_ramps,All,150,0.8866666666666667,0.7580415599202961
+Half resolution,cities,qwen3.8-27b,kerb_ramps,Europe & North America,60,0.95,0.8876404494382022
+Half resolution,cities,qwen3.8-27b,kerb_ramps,Rest of the world,90,0.8444444444444444,0.674502712477396
+Half resolution,cities,gemma4-31b,area_type,All,150,1.0,1.0
+Half resolution,cities,gemma4-31b,area_type,Europe & North America,60,1.0,1.0
+Half resolution,cities,gemma4-31b,area_type,Rest of the world,90,1.0,1.0
+Half resolution,cities,gemma4-31b,land_use,All,150,0.94,0.9062369773579663
+Half resolution,cities,gemma4-31b,land_use,Europe & North America,60,0.95,0.9291896144767898
+Half resolution,cities,gemma4-31b,land_use,Rest of the world,90,0.9333333333333333,0.8846153846153847
+Half resolution,cities,gemma4-31b,number_of_lanes,All,150,0.96,0.9284464938782
+Half resolution,cities,gemma4-31b,number_of_lanes,Europe & North America,60,0.9666666666666667,0.9326599326599326
+Half resolution,cities,gemma4-31b,number_of_lanes,Rest of the world,90,0.9555555555555556,0.9132321041214752
+Half resolution,cities,gemma4-31b,median,All,150,0.94,0.9005817806907724
+Half resolution,cities,gemma4-31b,median,Europe & North America,60,0.95,0.888406695598264
+Half resolution,cities,gemma4-31b,median,Rest of the world,90,0.9333333333333333,0.8992537313432836
+Half resolution,cities,gemma4-31b,street_lighting,All,150,0.96,0.9317975143983025
+Half resolution,cities,gemma4-31b,street_lighting,Europe & North America,60,0.9666666666666667,0.9416342412451362
+Half resolution,cities,gemma4-31b,street_lighting,Rest of the world,90,0.9555555555555556,0.9232736572890025
+Half resolution,cities,gemma4-31b,traffic_calming,All,150,0.9933333333333333,0.0
+Half resolution,cities,gemma4-31b,traffic_calming,Europe & North America,60,0.9833333333333333,0.0
+Half resolution,cities,gemma4-31b,traffic_calming,Rest of the world,90,1.0,
+Half resolution,cities,gemma4-31b,pedestrian_fencing,All,150,0.9533333333333334,0.8777648428405123
+Half resolution,cities,gemma4-31b,pedestrian_fencing,Europe & North America,60,0.9666666666666667,0.8695652173913043
+Half resolution,cities,gemma4-31b,pedestrian_fencing,Rest of the world,90,0.9444444444444444,0.8739495798319328
+Half resolution,cities,gemma4-31b,transit_stops,All,150,0.98,0.8978665456196094
+Half resolution,cities,gemma4-31b,transit_stops,Europe & North America,60,0.9833333333333333,0.791666666666666
+Half resolution,cities,gemma4-31b,transit_stops,Rest of the world,90,0.9777777777777777,0.9154135338345863
+Half resolution,cities,gemma4-31b,bike_facility,All,150,0.9933333333333333,0.9380421313506812
+Half resolution,cities,gemma4-31b,bike_facility,Europe & North America,60,1.0,1.0
+Half resolution,cities,gemma4-31b,bike_facility,Rest of the world,90,0.9888888888888889,0.7959183673469398
+Half resolution,cities,gemma4-31b,footway,All,300,0.8933333333333333,0.842089679902622
+Half resolution,cities,gemma4-31b,footway,Europe & North America,120,0.9166666666666666,0.872813990461049
+Half resolution,cities,gemma4-31b,footway,Rest of the world,180,0.8777777777777778,0.8211301323456344
+Half resolution,cities,gemma4-31b,obstruction,All,300,0.9366666666666666,0.8988518801128601
+Half resolution,cities,gemma4-31b,obstruction,Europe & North America,120,0.9333333333333333,0.8885146905121357
+Half resolution,cities,gemma4-31b,obstruction,Rest of the world,180,0.9388888888888889,0.9045783132530121
+Half resolution,cities,gemma4-31b,trip_hazards,All,300,0.9333333333333333,0.8787609367738286
+Half resolution,cities,gemma4-31b,trip_hazards,Europe & North America,120,0.925,0.8561342746769682
+Half resolution,cities,gemma4-31b,trip_hazards,Rest of the world,180,0.9388888888888889,0.8915187376725838
+Half resolution,cities,gemma4-31b,crossing_demand,All,150,0.9666666666666667,0.864376130198915
+Half resolution,cities,gemma4-31b,crossing_demand,Europe & North America,60,0.9166666666666666,0.732142857142857
+Half resolution,cities,gemma4-31b,crossing_demand,Rest of the world,90,1.0,1.0
+Half resolution,cities,gemma4-31b,crossing_facility,All,150,0.92,0.820574162679426
+Half resolution,cities,gemma4-31b,crossing_facility,Europe & North America,60,0.8833333333333333,0.7265624999999999
+Half resolution,cities,gemma4-31b,crossing_facility,Rest of the world,90,0.9444444444444444,0.8783783783783783
+Half resolution,cities,gemma4-31b,crossing_quality,All,150,0.9066666666666666,0.7939358257285839
+Half resolution,cities,gemma4-31b,crossing_quality,Europe & North America,60,0.8833333333333333,0.736015084852294
+Half resolution,cities,gemma4-31b,crossing_quality,Rest of the world,90,0.9222222222222223,0.8310085836909873
+Half resolution,cities,gemma4-31b,kerb_ramps,All,150,0.92,0.8117942283563364
+Half resolution,cities,gemma4-31b,kerb_ramps,Europe & North America,60,0.9,0.7827398913699458
+Half resolution,cities,gemma4-31b,kerb_ramps,Rest of the world,90,0.9333333333333333,0.832920792079208
+Half resolution,cities,molmo2-8b,area_type,All,150,0.96,0.8344370860927152
+Half resolution,cities,molmo2-8b,area_type,Europe & North America,60,0.95,0.857142857142857
+Half resolution,cities,molmo2-8b,area_type,Rest of the world,90,0.9666666666666667,0.7826086956521738
+Half resolution,cities,molmo2-8b,land_use,All,150,0.94,0.8286584591953292
+Half resolution,cities,molmo2-8b,land_use,Europe & North America,60,0.9166666666666666,0.8022412656558997
+Half resolution,cities,molmo2-8b,land_use,Rest of the world,90,0.9555555555555556,0.8475867908552076
+Half resolution,cities,molmo2-8b,number_of_lanes,All,150,0.96,0.9188458070333633
+Half resolution,cities,molmo2-8b,number_of_lanes,Europe & North America,60,0.9833333333333333,0.9500416319733553
+Half resolution,cities,molmo2-8b,number_of_lanes,Rest of the world,90,0.9444444444444444,0.9017681728880157
+Half resolution,cities,molmo2-8b,median,All,150,0.92,0.8080614203454896
+Half resolution,cities,molmo2-8b,median,Europe & North America,60,0.9,0.7470133520730852
+Half resolution,cities,molmo2-8b,median,Rest of the world,90,0.9333333333333333,0.8453608247422681
+Half resolution,cities,molmo2-8b,street_lighting,All,150,0.9266666666666666,0.7876994338651568
+Half resolution,cities,molmo2-8b,street_lighting,Europe & North America,60,0.9,0.7471910112359552
+Half resolution,cities,molmo2-8b,street_lighting,Rest of the world,90,0.9444444444444444,0.8186215235792019
+Half resolution,cities,molmo2-8b,traffic_calming,All,150,1.0,
+Half resolution,cities,molmo2-8b,traffic_calming,Europe & North America,60,1.0,
+Half resolution,cities,molmo2-8b,traffic_calming,Rest of the world,90,1.0,
+Half resolution,cities,molmo2-8b,pedestrian_fencing,All,150,0.9933333333333333,0.9196141479099673
+Half resolution,cities,molmo2-8b,pedestrian_fencing,Europe & North America,60,1.0,1.0
+Half resolution,cities,molmo2-8b,pedestrian_fencing,Rest of the world,90,0.9888888888888889,0.8831168831168836
+Half resolution,cities,molmo2-8b,transit_stops,All,150,0.9533333333333334,0.7173620457604307
+Half resolution,cities,molmo2-8b,transit_stops,Europe & North America,60,0.9666666666666667,0.6491228070175442
+Half resolution,cities,molmo2-8b,transit_stops,Rest of the world,90,0.9444444444444444,0.7341996455995272
+Half resolution,cities,molmo2-8b,bike_facility,All,150,0.9333333333333333,0.4758909853249476
+Half resolution,cities,molmo2-8b,bike_facility,Europe & North America,60,0.9,0.45945945945945976
+Half resolution,cities,molmo2-8b,bike_facility,Rest of the world,90,0.9555555555555556,0.4871794871794877
+Half resolution,cities,molmo2-8b,footway,All,300,0.9733333333333334,0.7677344430465503
+Half resolution,cities,molmo2-8b,footway,Europe & North America,120,0.9666666666666667,0.7379912663755457
+Half resolution,cities,molmo2-8b,footway,Rest of the world,180,0.9777777777777777,0.7909407665505221
+Half resolution,cities,molmo2-8b,obstruction,All,300,0.8433333333333334,0.5116375727348299
+Half resolution,cities,molmo2-8b,obstruction,Europe & North America,120,0.7916666666666666,0.41702293043140276
+Half resolution,cities,molmo2-8b,obstruction,Rest of the world,180,0.8777777777777778,0.5873280533555649
+Half resolution,cities,molmo2-8b,trip_hazards,All,300,0.9166666666666666,0.4729074425469111
+Half resolution,cities,molmo2-8b,trip_hazards,Europe & North America,120,0.925,0.4955628211116305
+Half resolution,cities,molmo2-8b,trip_hazards,Rest of the world,180,0.9111111111111111,0.45864661654135364
+Half resolution,cities,molmo2-8b,crossing_demand,All,150,0.94,0.8771163298743855
+Half resolution,cities,molmo2-8b,crossing_demand,Europe & North America,60,0.9666666666666667,0.9314285714285714
+Half resolution,cities,molmo2-8b,crossing_demand,Rest of the world,90,0.9222222222222223,0.8411497730711045
+Half resolution,cities,molmo2-8b,crossing_facility,All,150,0.86,0.6349942062572422
+Half resolution,cities,molmo2-8b,crossing_facility,Europe & North America,60,0.8833333333333333,0.7054698457223001
+Half resolution,cities,molmo2-8b,crossing_facility,Rest of the world,90,0.8444444444444444,0.5862068965517241
+Half resolution,cities,molmo2-8b,crossing_quality,All,150,0.92,0.7718052738336716
+Half resolution,cities,molmo2-8b,crossing_quality,Europe & North America,60,0.9333333333333333,0.8148148148148149
+Half resolution,cities,molmo2-8b,crossing_quality,Rest of the world,90,0.9111111111111111,0.7435897435897435
+Half resolution,cities,molmo2-8b,kerb_ramps,All,150,0.9533333333333334,0.44591029023746726
+Half resolution,cities,molmo2-8b,kerb_ramps,Europe & North America,60,0.95,0.5511221945137157
+Half resolution,cities,molmo2-8b,kerb_ramps,Rest of the world,90,0.9555555555555556,0.31818181818181823
+Half resolution,cities,internvl3.5-8b,area_type,All,150,0.98,0.8589341692789968
+Half resolution,cities,internvl3.5-8b,area_type,Europe & North America,60,0.95,0.7954545454545452
+Half resolution,cities,internvl3.5-8b,area_type,Rest of the world,90,1.0,1.0
+Half resolution,cities,internvl3.5-8b,land_use,All,150,0.9,0.801131341700548
+Half resolution,cities,internvl3.5-8b,land_use,Europe & North America,60,0.8833333333333333,0.7854954034729315
+Half resolution,cities,internvl3.5-8b,land_use,Rest of the world,90,0.9111111111111111,0.8114689709347996
+Half resolution,cities,internvl3.5-8b,number_of_lanes,All,150,0.9066666666666666,0.7861942577886377
+Half resolution,cities,internvl3.5-8b,number_of_lanes,Europe & North America,60,0.8833333333333333,0.7119341563786008
+Half resolution,cities,internvl3.5-8b,number_of_lanes,Rest of the world,90,0.9222222222222223,0.8226351351351353
+Half resolution,cities,internvl3.5-8b,median,All,150,0.8266666666666667,0.6926229508196722
+Half resolution,cities,internvl3.5-8b,median,Europe & North America,60,0.75,0.53125
+Half resolution,cities,internvl3.5-8b,median,Rest of the world,90,0.8777777777777778,0.7859459459459459
+Half resolution,cities,internvl3.5-8b,street_lighting,All,150,0.9733333333333334,0.881282152750297
+Half resolution,cities,internvl3.5-8b,street_lighting,Europe & North America,60,0.95,0.8275862068965515
+Half resolution,cities,internvl3.5-8b,street_lighting,Rest of the world,90,0.9888888888888889,0.936260623229462
+Half resolution,cities,internvl3.5-8b,traffic_calming,All,150,1.0,
+Half resolution,cities,internvl3.5-8b,traffic_calming,Europe & North America,60,1.0,
+Half resolution,cities,internvl3.5-8b,traffic_calming,Rest of the world,90,1.0,
+Half resolution,cities,internvl3.5-8b,pedestrian_fencing,All,150,0.9933333333333333,0.0
+Half resolution,cities,internvl3.5-8b,pedestrian_fencing,Europe & North America,60,1.0,
+Half resolution,cities,internvl3.5-8b,pedestrian_fencing,Rest of the world,90,0.9888888888888889,0.0
+Half resolution,cities,internvl3.5-8b,transit_stops,All,150,0.9666666666666667,0.8592342342342342
+Half resolution,cities,internvl3.5-8b,transit_stops,Europe & North America,60,0.9666666666666667,0.6541786743515854
+Half resolution,cities,internvl3.5-8b,transit_stops,Rest of the world,90,0.9666666666666667,0.8943248532289628
+Half resolution,cities,internvl3.5-8b,bike_facility,All,150,0.9666666666666667,0.602543720190779
+Half resolution,cities,internvl3.5-8b,bike_facility,Europe & North America,60,0.9666666666666667,0.6541786743515854
+Half resolution,cities,internvl3.5-8b,bike_facility,Rest of the world,90,0.9666666666666667,0.5595432300163125
+Half resolution,cities,internvl3.5-8b,footway,All,300,0.7166666666666667,0.5811776299581177
+Half resolution,cities,internvl3.5-8b,footway,Europe & North America,120,0.6916666666666667,0.5623891188645772
+Half resolution,cities,internvl3.5-8b,footway,Rest of the world,180,0.7333333333333333,0.5934308973695355
+Half resolution,cities,internvl3.5-8b,obstruction,All,300,0.8566666666666667,0.7351727535874855
+Half resolution,cities,internvl3.5-8b,obstruction,Europe & North America,120,0.8666666666666667,0.7426618415761963
+Half resolution,cities,internvl3.5-8b,obstruction,Rest of the world,180,0.85,0.7299549924987497
+Half resolution,cities,internvl3.5-8b,trip_hazards,All,300,0.9033333333333333,0.7085134184340135
+Half resolution,cities,internvl3.5-8b,trip_hazards,Europe & North America,120,0.9166666666666666,0.6661101836393989
+Half resolution,cities,internvl3.5-8b,trip_hazards,Rest of the world,180,0.8944444444444445,0.7232337946103424
+Half resolution,cities,internvl3.5-8b,crossing_demand,All,150,0.9333333333333333,0.7742323901264299
+Half resolution,cities,internvl3.5-8b,crossing_demand,Europe & North America,60,0.9666666666666667,0.917920656634747
+Half resolution,cities,internvl3.5-8b,crossing_demand,Rest of the world,90,0.9111111111111111,0.5505617977528088
+Half resolution,cities,internvl3.5-8b,crossing_facility,All,150,0.9266666666666666,0.8318214249311996
+Half resolution,cities,internvl3.5-8b,crossing_facility,Europe & North America,60,0.9666666666666667,0.9290780141843972
+Half resolution,cities,internvl3.5-8b,crossing_facility,Rest of the world,90,0.9,0.7560975609756099
+Half resolution,cities,internvl3.5-8b,crossing_quality,All,150,0.94,0.8523299059286806
+Half resolution,cities,internvl3.5-8b,crossing_quality,Europe & North America,60,0.9833333333333333,0.9609374999999999
+Half resolution,cities,internvl3.5-8b,crossing_quality,Rest of the world,90,0.9111111111111111,0.7728706624605678
+Half resolution,cities,internvl3.5-8b,kerb_ramps,All,150,0.74,0.5969964177459356
+Half resolution,cities,internvl3.5-8b,kerb_ramps,Europe & North America,60,0.8333333333333334,0.7275204359673025
+Half resolution,cities,internvl3.5-8b,kerb_ramps,Rest of the world,90,0.6777777777777778,0.5106861642294714
+Resampled (T = 0.7),cities,qwen3.8-27b,area_type,All,150,0.98,0.8464163822525594
+Resampled (T = 0.7),cities,qwen3.8-27b,area_type,Europe & North America,60,0.95,0.7413793103448273
+Resampled (T = 0.7),cities,qwen3.8-27b,area_type,Rest of the world,90,1.0,1.0
+Resampled (T = 0.7),cities,qwen3.8-27b,land_use,All,150,0.8733333333333333,0.809847878302642
+Resampled (T = 0.7),cities,qwen3.8-27b,land_use,Europe & North America,60,0.9,0.8624904507257448
+Resampled (T = 0.7),cities,qwen3.8-27b,land_use,Rest of the world,90,0.8555555555555555,0.7579644187008687
+Resampled (T = 0.7),cities,qwen3.8-27b,number_of_lanes,All,150,0.58,0.2970319125195268
+Resampled (T = 0.7),cities,qwen3.8-27b,number_of_lanes,Europe & North America,60,0.6333333333333333,0.29712460063897755
+Resampled (T = 0.7),cities,qwen3.8-27b,number_of_lanes,Rest of the world,90,0.5444444444444444,0.24862553451435548
+Resampled (T = 0.7),cities,qwen3.8-27b,median,All,150,0.66,0.4632332304238002
+Resampled (T = 0.7),cities,qwen3.8-27b,median,Europe & North America,60,0.6833333333333333,0.41024314536989126
+Resampled (T = 0.7),cities,qwen3.8-27b,median,Rest of the world,90,0.6444444444444445,0.47712418300653603
+Resampled (T = 0.7),cities,qwen3.8-27b,street_lighting,All,150,0.7866666666666666,0.6120271580989329
+Resampled (T = 0.7),cities,qwen3.8-27b,street_lighting,Europe & North America,60,0.8,0.6290571870170016
+Resampled (T = 0.7),cities,qwen3.8-27b,street_lighting,Rest of the world,90,0.7777777777777778,0.5983935742971888
+Resampled (T = 0.7),cities,qwen3.8-27b,traffic_calming,All,150,0.98,0.0
+Resampled (T = 0.7),cities,qwen3.8-27b,traffic_calming,Europe & North America,60,0.9666666666666667,0.0
+Resampled (T = 0.7),cities,qwen3.8-27b,traffic_calming,Rest of the world,90,0.9888888888888889,0.0
+Resampled (T = 0.7),cities,qwen3.8-27b,pedestrian_fencing,All,150,0.9,0.6987951807228915
+Resampled (T = 0.7),cities,qwen3.8-27b,pedestrian_fencing,Europe & North America,60,0.9333333333333333,0.7920277296360486
+Resampled (T = 0.7),cities,qwen3.8-27b,pedestrian_fencing,Rest of the world,90,0.8777777777777778,0.6399999999999999
+Resampled (T = 0.7),cities,qwen3.8-27b,transit_stops,All,150,0.8866666666666667,0.5815556284870366
+Resampled (T = 0.7),cities,qwen3.8-27b,transit_stops,Europe & North America,60,0.9166666666666666,0.41860465116279033
+Resampled (T = 0.7),cities,qwen3.8-27b,transit_stops,Rest of the world,90,0.8666666666666667,0.6140100071479629
+Resampled (T = 0.7),cities,qwen3.8-27b,bike_facility,All,150,0.9866666666666667,0.8511904761904765
+Resampled (T = 0.7),cities,qwen3.8-27b,bike_facility,Europe & North America,60,0.9666666666666667,0.8181818181818183
+Resampled (T = 0.7),cities,qwen3.8-27b,bike_facility,Rest of the world,90,1.0,1.0
+Resampled (T = 0.7),cities,qwen3.8-27b,footway,All,300,0.49666666666666665,0.3522649279341111
+Resampled (T = 0.7),cities,qwen3.8-27b,footway,Europe & North America,120,0.5833333333333334,0.4410285075461152
+Resampled (T = 0.7),cities,qwen3.8-27b,footway,Rest of the world,180,0.4388888888888889,0.29285464234314834
+Resampled (T = 0.7),cities,qwen3.8-27b,obstruction,All,300,0.6266666666666667,0.47434292866082606
+Resampled (T = 0.7),cities,qwen3.8-27b,obstruction,Europe & North America,120,0.7166666666666667,0.5894546186355404
+Resampled (T = 0.7),cities,qwen3.8-27b,obstruction,Rest of the world,180,0.5666666666666667,0.39807073954983924
+Resampled (T = 0.7),cities,qwen3.8-27b,trip_hazards,All,300,0.7266666666666667,0.5379847873039723
+Resampled (T = 0.7),cities,qwen3.8-27b,trip_hazards,Europe & North America,120,0.7916666666666666,0.6215943491422805
+Resampled (T = 0.7),cities,qwen3.8-27b,trip_hazards,Rest of the world,180,0.6833333333333333,0.4835917052546809
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_demand,All,150,0.94,0.6341463414634141
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_demand,Europe & North America,60,0.9333333333333333,0.7142857142857143
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_demand,Rest of the world,90,0.9444444444444444,0.5161290322580647
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_facility,All,150,0.9133333333333333,0.8266204321152307
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_facility,Europe & North America,60,0.9166666666666666,0.8338870431893686
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_facility,Rest of the world,90,0.9111111111111111,0.8208063713290193
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_quality,All,150,0.9266666666666666,0.8359188544152744
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_quality,Europe & North America,60,0.9166666666666666,0.8149290561381862
+Resampled (T = 0.7),cities,qwen3.8-27b,crossing_quality,Rest of the world,90,0.9333333333333333,0.8500832870627429
+Resampled (T = 0.7),cities,qwen3.8-27b,kerb_ramps,All,150,0.74,0.5314752522825565
+Resampled (T = 0.7),cities,qwen3.8-27b,kerb_ramps,Europe & North America,60,0.7333333333333333,0.5321637426900584
+Resampled (T = 0.7),cities,qwen3.8-27b,kerb_ramps,Rest of the world,90,0.7444444444444445,0.5306122448979592
+Resampled (T = 0.7),cities,gemma4-31b,area_type,All,150,0.9866666666666667,0.8502994011976052
+Resampled (T = 0.7),cities,gemma4-31b,area_type,Europe & North America,60,0.9666666666666667,0.7333333333333336
+Resampled (T = 0.7),cities,gemma4-31b,area_type,Rest of the world,90,1.0,1.0
+Resampled (T = 0.7),cities,gemma4-31b,land_use,All,150,0.9266666666666666,0.8897353648757015
+Resampled (T = 0.7),cities,gemma4-31b,land_use,Europe & North America,60,0.95,0.9302055060100813
+Resampled (T = 0.7),cities,gemma4-31b,land_use,Rest of the world,90,0.9111111111111111,0.8541329011345217
+Resampled (T = 0.7),cities,gemma4-31b,number_of_lanes,All,150,0.9466666666666667,0.9024865919063871
+Resampled (T = 0.7),cities,gemma4-31b,number_of_lanes,Europe & North America,60,0.9666666666666667,0.924812030075188
+Resampled (T = 0.7),cities,gemma4-31b,number_of_lanes,Rest of the world,90,0.9333333333333333,0.8727615457115929
+Resampled (T = 0.7),cities,gemma4-31b,median,All,150,0.9466666666666667,0.9123383738768353
+Resampled (T = 0.7),cities,gemma4-31b,median,Europe & North America,60,0.95,0.8913043478260868
+Resampled (T = 0.7),cities,gemma4-31b,median,Rest of the world,90,0.9444444444444444,0.9168207024029574
+Resampled (T = 0.7),cities,gemma4-31b,street_lighting,All,150,0.9533333333333334,0.9205388224610263
+Resampled (T = 0.7),cities,gemma4-31b,street_lighting,Europe & North America,60,0.9666666666666667,0.9417475728155342
+Resampled (T = 0.7),cities,gemma4-31b,street_lighting,Rest of the world,90,0.9444444444444444,0.903948772678762
+Resampled (T = 0.7),cities,gemma4-31b,traffic_calming,All,150,0.9866666666666667,0.0
+Resampled (T = 0.7),cities,gemma4-31b,traffic_calming,Europe & North America,60,0.9666666666666667,0.0
+Resampled (T = 0.7),cities,gemma4-31b,traffic_calming,Rest of the world,90,1.0,
+Resampled (T = 0.7),cities,gemma4-31b,pedestrian_fencing,All,150,0.9533333333333334,0.8816234498308907
+Resampled (T = 0.7),cities,gemma4-31b,pedestrian_fencing,Europe & North America,60,0.9833333333333333,0.9494949494949493
+Resampled (T = 0.7),cities,gemma4-31b,pedestrian_fencing,Rest of the world,90,0.9333333333333333,0.844559585492228
+Resampled (T = 0.7),cities,gemma4-31b,transit_stops,All,150,0.9933333333333333,0.9659555152065363
+Resampled (T = 0.7),cities,gemma4-31b,transit_stops,Europe & North America,60,1.0,1.0
+Resampled (T = 0.7),cities,gemma4-31b,transit_stops,Rest of the world,90,0.9888888888888889,0.9589041095890413
+Resampled (T = 0.7),cities,gemma4-31b,bike_facility,All,150,0.9866666666666667,0.8825371965544246
+Resampled (T = 0.7),cities,gemma4-31b,bike_facility,Europe & North America,60,1.0,1.0
+Resampled (T = 0.7),cities,gemma4-31b,bike_facility,Rest of the world,90,0.9777777777777777,0.6577946768060831
+Resampled (T = 0.7),cities,gemma4-31b,footway,All,300,0.9066666666666666,0.861237300735112
+Resampled (T = 0.7),cities,gemma4-31b,footway,Europe & North America,120,0.95,0.9214316892186817
+Resampled (T = 0.7),cities,gemma4-31b,footway,Rest of the world,180,0.8777777777777778,0.8229138717467132
+Resampled (T = 0.7),cities,gemma4-31b,obstruction,All,300,0.9333333333333333,0.8937112488928255
+Resampled (T = 0.7),cities,gemma4-31b,obstruction,Europe & North America,120,0.9416666666666667,0.9011299435028248
+Resampled (T = 0.7),cities,gemma4-31b,obstruction,Rest of the world,180,0.9277777777777778,0.8883214814107766
+Resampled (T = 0.7),cities,gemma4-31b,trip_hazards,All,300,0.92,0.8556101473979747
+Resampled (T = 0.7),cities,gemma4-31b,trip_hazards,Europe & North America,120,0.9333333333333333,0.8682042833607908
+Resampled (T = 0.7),cities,gemma4-31b,trip_hazards,Rest of the world,180,0.9111111111111111,0.846547314578005
+Resampled (T = 0.7),cities,gemma4-31b,crossing_demand,All,150,0.9333333333333333,0.76
+Resampled (T = 0.7),cities,gemma4-31b,crossing_demand,Europe & North America,60,0.9166666666666666,0.7474747474747473
+Resampled (T = 0.7),cities,gemma4-31b,crossing_demand,Rest of the world,90,0.9444444444444444,0.7678018575851391
+Resampled (T = 0.7),cities,gemma4-31b,crossing_facility,All,150,0.9666666666666667,0.9175280404662415
+Resampled (T = 0.7),cities,gemma4-31b,crossing_facility,Europe & North America,60,0.9833333333333333,0.9554565701559019
+Resampled (T = 0.7),cities,gemma4-31b,crossing_facility,Rest of the world,90,0.9555555555555556,0.89492119089317
+Resampled (T = 0.7),cities,gemma4-31b,crossing_quality,All,150,0.9533333333333334,0.8938965238480194
+Resampled (T = 0.7),cities,gemma4-31b,crossing_quality,Europe & North America,60,0.95,0.881578947368421
+Resampled (T = 0.7),cities,gemma4-31b,crossing_quality,Rest of the world,90,0.9555555555555556,0.9015317286652079
+Resampled (T = 0.7),cities,gemma4-31b,kerb_ramps,All,150,0.94,0.8490945674044265
+Resampled (T = 0.7),cities,gemma4-31b,kerb_ramps,Europe & North America,60,0.9333333333333333,0.8361774744027304
+Resampled (T = 0.7),cities,gemma4-31b,kerb_ramps,Rest of the world,90,0.9444444444444444,0.8567791215786122
+Resampled (T = 0.7),cities,molmo2-8b,area_type,All,150,0.9733333333333334,0.8427672955974846
+Resampled (T = 0.7),cities,molmo2-8b,area_type,Europe & North America,60,0.9666666666666667,0.8695652173913043
+Resampled (T = 0.7),cities,molmo2-8b,area_type,Rest of the world,90,0.9777777777777777,0.7887323943661968
+Resampled (T = 0.7),cities,molmo2-8b,land_use,All,150,0.4533333333333333,0.192807455046594
+Resampled (T = 0.7),cities,molmo2-8b,land_use,Europe & North America,60,0.55,0.288224956063269
+Resampled (T = 0.7),cities,molmo2-8b,land_use,Rest of the world,90,0.3888888888888889,0.12974683544303794
+Resampled (T = 0.7),cities,molmo2-8b,number_of_lanes,All,150,0.8333333333333334,0.7174076865109269
+Resampled (T = 0.7),cities,molmo2-8b,number_of_lanes,Europe & North America,60,0.7833333333333333,0.4983922829581994
+Resampled (T = 0.7),cities,molmo2-8b,number_of_lanes,Rest of the world,90,0.8666666666666667,0.7938537888910098
+Resampled (T = 0.7),cities,molmo2-8b,median,All,150,0.49333333333333335,0.22311571486983786
+Resampled (T = 0.7),cities,molmo2-8b,median,Europe & North America,60,0.5333333333333333,0.26701570680628267
+Resampled (T = 0.7),cities,molmo2-8b,median,Rest of the world,90,0.4666666666666667,0.19806942639688138
+Resampled (T = 0.7),cities,molmo2-8b,street_lighting,All,150,0.7333333333333333,0.19181034482758605
+Resampled (T = 0.7),cities,molmo2-8b,street_lighting,Europe & North America,60,0.75,0.262899262899263
+Resampled (T = 0.7),cities,molmo2-8b,street_lighting,Rest of the world,90,0.7222222222222222,0.1457858769931661
+Resampled (T = 0.7),cities,molmo2-8b,traffic_calming,All,150,1.0,
+Resampled (T = 0.7),cities,molmo2-8b,traffic_calming,Europe & North America,60,1.0,
+Resampled (T = 0.7),cities,molmo2-8b,traffic_calming,Rest of the world,90,1.0,
+Resampled (T = 0.7),cities,molmo2-8b,pedestrian_fencing,All,150,0.94,0.6376811594202897
+Resampled (T = 0.7),cities,molmo2-8b,pedestrian_fencing,Europe & North America,60,0.9333333333333333,0.5698924731182797
+Resampled (T = 0.7),cities,molmo2-8b,pedestrian_fencing,Rest of the world,90,0.9444444444444444,0.6781115879828326
+Resampled (T = 0.7),cities,molmo2-8b,transit_stops,All,150,0.92,0.7129186602870815
+Resampled (T = 0.7),cities,molmo2-8b,transit_stops,Europe & North America,60,0.9833333333333333,0.8484848484848482
+Resampled (T = 0.7),cities,molmo2-8b,transit_stops,Rest of the world,90,0.8777777777777778,0.6696696696696697
+Resampled (T = 0.7),cities,molmo2-8b,bike_facility,All,150,0.8933333333333333,0.26470588235294107
+Resampled (T = 0.7),cities,molmo2-8b,bike_facility,Europe & North America,60,0.9,0.4618834080717492
+Resampled (T = 0.7),cities,molmo2-8b,bike_facility,Rest of the world,90,0.8888888888888888,0.047619047619047436
+Resampled (T = 0.7),cities,molmo2-8b,footway,All,300,0.3466666666666667,0.00413251134746968
+Resampled (T = 0.7),cities,molmo2-8b,footway,Europe & North America,120,0.425,0.05371428571428579
+Resampled (T = 0.7),cities,molmo2-8b,footway,Rest of the world,180,0.29444444444444445,-0.018353528153955866
+Resampled (T = 0.7),cities,molmo2-8b,obstruction,All,300,0.42,0.055049691352437466
+Resampled (T = 0.7),cities,molmo2-8b,obstruction,Europe & North America,120,0.36666666666666664,-0.05898745935903403
+Resampled (T = 0.7),cities,molmo2-8b,obstruction,Rest of the world,180,0.45555555555555555,0.137112948197427
+Resampled (T = 0.7),cities,molmo2-8b,trip_hazards,All,300,0.7866666666666666,0.06877485692113718
+Resampled (T = 0.7),cities,molmo2-8b,trip_hazards,Europe & North America,120,0.7333333333333333,0.07825252040326447
+Resampled (T = 0.7),cities,molmo2-8b,trip_hazards,Rest of the world,180,0.8222222222222222,0.04509283819628611
+Resampled (T = 0.7),cities,molmo2-8b,crossing_demand,All,150,0.8333333333333334,0.6149106592729514
+Resampled (T = 0.7),cities,molmo2-8b,crossing_demand,Europe & North America,60,0.9166666666666666,0.8148148148148148
+Resampled (T = 0.7),cities,molmo2-8b,crossing_demand,Rest of the world,90,0.7777777777777778,0.47460595446584947
+Resampled (T = 0.7),cities,molmo2-8b,crossing_facility,All,150,0.6066666666666667,0.28525278630269746
+Resampled (T = 0.7),cities,molmo2-8b,crossing_facility,Europe & North America,60,0.7166666666666667,0.408695652173913
+Resampled (T = 0.7),cities,molmo2-8b,crossing_facility,Rest of the world,90,0.5333333333333333,0.22110035029878422
+Resampled (T = 0.7),cities,molmo2-8b,crossing_quality,All,150,0.7333333333333333,0.4274809160305342
+Resampled (T = 0.7),cities,molmo2-8b,crossing_quality,Europe & North America,60,0.8,0.5294117647058824
+Resampled (T = 0.7),cities,molmo2-8b,crossing_quality,Rest of the world,90,0.6888888888888889,0.36523929471032746
+Resampled (T = 0.7),cities,molmo2-8b,kerb_ramps,All,150,0.84,0.11569638909358837
+Resampled (T = 0.7),cities,molmo2-8b,kerb_ramps,Europe & North America,60,0.85,0.05594405594405562
+Resampled (T = 0.7),cities,molmo2-8b,kerb_ramps,Rest of the world,90,0.8333333333333334,0.151477058453803
+Resampled (T = 0.7),cities,internvl3.5-8b,area_type,All,150,0.9866666666666667,0.8929336188436834
+Resampled (T = 0.7),cities,internvl3.5-8b,area_type,Europe & North America,60,0.9666666666666667,0.8387096774193549
+Resampled (T = 0.7),cities,internvl3.5-8b,area_type,Rest of the world,90,1.0,1.0
+Resampled (T = 0.7),cities,internvl3.5-8b,land_use,All,150,0.76,0.28124584054305884
+Resampled (T = 0.7),cities,internvl3.5-8b,land_use,Europe & North America,60,0.7333333333333333,0.27051671732522775
+Resampled (T = 0.7),cities,internvl3.5-8b,land_use,Rest of the world,90,0.7777777777777778,0.28909952606635086
+Resampled (T = 0.7),cities,internvl3.5-8b,number_of_lanes,All,150,0.8333333333333334,0.6121224658667771
+Resampled (T = 0.7),cities,internvl3.5-8b,number_of_lanes,Europe & North America,60,0.8,0.4943820224719104
+Resampled (T = 0.7),cities,internvl3.5-8b,number_of_lanes,Rest of the world,90,0.8555555555555555,0.6717171717171717
+Resampled (T = 0.7),cities,internvl3.5-8b,median,All,150,0.5533333333333333,0.24820466786355472
+Resampled (T = 0.7),cities,internvl3.5-8b,median,Europe & North America,60,0.45,0.08163265306122455
+Resampled (T = 0.7),cities,internvl3.5-8b,median,Rest of the world,90,0.6222222222222222,0.35808684707363125
+Resampled (T = 0.7),cities,internvl3.5-8b,street_lighting,All,150,0.9266666666666666,0.39114391143911426
+Resampled (T = 0.7),cities,internvl3.5-8b,street_lighting,Europe & North America,60,0.9,0.36283185840707977
+Resampled (T = 0.7),cities,internvl3.5-8b,street_lighting,Rest of the world,90,0.9444444444444444,0.4252873563218389
+Resampled (T = 0.7),cities,internvl3.5-8b,traffic_calming,All,150,1.0,
+Resampled (T = 0.7),cities,internvl3.5-8b,traffic_calming,Europe & North America,60,1.0,
+Resampled (T = 0.7),cities,internvl3.5-8b,traffic_calming,Rest of the world,90,1.0,
+Resampled (T = 0.7),cities,internvl3.5-8b,pedestrian_fencing,All,150,0.98,0.0
+Resampled (T = 0.7),cities,internvl3.5-8b,pedestrian_fencing,Europe & North America,60,1.0,
+Resampled (T = 0.7),cities,internvl3.5-8b,pedestrian_fencing,Rest of the world,90,0.9666666666666667,0.0
+Resampled (T = 0.7),cities,internvl3.5-8b,transit_stops,All,150,0.8733333333333333,0.6224165341812399
+Resampled (T = 0.7),cities,internvl3.5-8b,transit_stops,Europe & North America,60,0.9333333333333333,0.704433497536946
+Resampled (T = 0.7),cities,internvl3.5-8b,transit_stops,Rest of the world,90,0.8333333333333334,0.5842315983985218
+Resampled (T = 0.7),cities,internvl3.5-8b,bike_facility,All,150,0.96,0.2443324937027693
+Resampled (T = 0.7),cities,internvl3.5-8b,bike_facility,Europe & North America,60,0.9666666666666667,0.4915254237288139
+Resampled (T = 0.7),cities,internvl3.5-8b,bike_facility,Rest of the world,90,0.9555555555555556,0.0
+Resampled (T = 0.7),cities,internvl3.5-8b,footway,All,300,0.35,0.11301816417503102
+Resampled (T = 0.7),cities,internvl3.5-8b,footway,Europe & North America,120,0.35833333333333334,0.10343489229575001
+Resampled (T = 0.7),cities,internvl3.5-8b,footway,Rest of the world,180,0.34444444444444444,0.11536859641815908
+Resampled (T = 0.7),cities,internvl3.5-8b,obstruction,All,300,0.5866666666666667,0.2804363805176216
+Resampled (T = 0.7),cities,internvl3.5-8b,obstruction,Europe & North America,120,0.6583333333333333,0.3524611739931561
+Resampled (T = 0.7),cities,internvl3.5-8b,obstruction,Rest of the world,180,0.5388888888888889,0.23380686189035324
+Resampled (T = 0.7),cities,internvl3.5-8b,trip_hazards,All,300,0.72,0.2056487202118271
+Resampled (T = 0.7),cities,internvl3.5-8b,trip_hazards,Europe & North America,120,0.7916666666666666,0.16387959866220753
+Resampled (T = 0.7),cities,internvl3.5-8b,trip_hazards,Rest of the world,180,0.6722222222222223,0.20982142857142858
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_demand,All,150,0.8866666666666667,0.6330935251798563
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_demand,Europe & North America,60,0.8333333333333334,0.5562130177514795
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_demand,Rest of the world,90,0.9222222222222223,0.6968238691049088
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_facility,All,150,0.8133333333333334,0.5935352753314623
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_facility,Europe & North America,60,0.8,0.5948227349465393
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_facility,Rest of the world,90,0.8222222222222222,0.5898604386214753
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_quality,All,150,0.8866666666666667,0.725156283681828
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_quality,Europe & North America,60,0.9,0.7701149425287357
+Resampled (T = 0.7),cities,internvl3.5-8b,crossing_quality,Rest of the world,90,0.8777777777777778,0.691588785046729
+Resampled (T = 0.7),cities,internvl3.5-8b,kerb_ramps,All,150,0.3933333333333333,0.12382052763335252
+Resampled (T = 0.7),cities,internvl3.5-8b,kerb_ramps,Europe & North America,60,0.3333333333333333,0.059929494712103376
+Resampled (T = 0.7),cities,internvl3.5-8b,kerb_ramps,Rest of the world,90,0.43333333333333335,0.16393442622950818

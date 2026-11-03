@@ -1,0 +1,29 @@
+{
+ "clip_id": "94SBevAbFik_02838000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A large crowd of pedestrians is gathered on the pavement in the distance, indicating a high demand to cross, but there is no marked or signalised crossing at or",
+   "frame": 5,
+   "x": 600,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the point where the crowd is gathered to provide a safe and legal place to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a crowd in the distance but do not clearly show the pavement edge or the specific crossing point, so the deficit is not clearly visible; the suggestion is generic and feasibility is un"
+  }
+ ],
+ "error": null
+}

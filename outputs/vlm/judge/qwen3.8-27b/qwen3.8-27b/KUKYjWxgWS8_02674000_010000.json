@@ -1,0 +1,83 @@
+{
+ "clip_id": "KUKYjWxgWS8_02674000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous wall and overgrown vegetation line the road edge, leaving no space for a pedestrian to walk safely off the carriageway.",
+   "frame": 1,
+   "x": 200,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway along the left side by reclaiming space from the verge."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A high, weathered wall and dense vegetation run along the right edge, providing no safe path for pedestrians.",
+   "frame": 1,
+   "x": 800,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway along the right side by reclaiming space from the verge."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road is lined with buildings on both sides, creating a need to cross, but there is no marked or physical crossing facility visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe crossing point."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the length of the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of LED street lights along both sides of the road to improve visibility and safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The wall and vegetation are visible, but there is no space to build a footway on the left side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The wall and vegetation are visible, but there is no space to build a footway on the right side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the road is narrow and a refuge island may not fit."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible, but it is unclear if there is space to install them."
+  }
+ ],
+ "error": null
+}

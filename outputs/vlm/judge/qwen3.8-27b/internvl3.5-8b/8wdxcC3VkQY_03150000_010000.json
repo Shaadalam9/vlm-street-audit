@@ -1,0 +1,47 @@
+{
+ "clip_id": "8wdxcC3VkQY_03150000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the right side to provide a safe pedestrian path."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide grassy verge on the left with no pavement, so the deficit is visible and a sidewalk is a realistic, space-appropriate fix, though the wording is generic."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side also shows only grass and a driveway with no footway, so the deficit is visible and building a sidewalk is feasible, but the suggestion is generic."
+  }
+ ],
+ "error": null
+}

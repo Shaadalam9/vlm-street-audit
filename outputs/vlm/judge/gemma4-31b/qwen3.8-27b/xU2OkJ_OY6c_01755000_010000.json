@@ -1,0 +1,83 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Vehicles are parked directly against the building line, leaving no space for a pedestrian path.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a 1.5 m wide footway on the left by narrowing the parking bays."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side is occupied by a row of parked cars with no separate path for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Create a 1.5 m wide footway on the right by reorganising the parking layout."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand to cross due to the mixed-use buildings, but no marked or physical crossing is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a raised pedestrian crossing at the centre of the segment to provide a safe crossing point."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lamps are visible along the length of the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of LED street lights along both sides of the road to improve visibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a footway, and narrowing parking bays is a feasible way to create one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a footway, and reorganising parking is a feasible solution."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, and a raised crossing is a feasible addition to this street layout."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible, though the suggestion is a generic fix for any unlit street."
+  }
+ ],
+ "error": null
+}

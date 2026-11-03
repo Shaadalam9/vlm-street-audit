@@ -1,0 +1,29 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "Pedestrians are visible and there is a pedestrian crossing sign, but no marked crossing is present on the road surface.",
+   "frame": 1,
+   "x": 535,
+   "y": 410,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing where the pedestrian sign is located to provide a safe crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian crossing sign is present, but there are no markings on the road surface, and the suggested fix is a standard infrastructure improvement."
+  }
+ ],
+ "error": null
+}

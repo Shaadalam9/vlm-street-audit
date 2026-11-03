@@ -1,0 +1,100 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is lined with parked cars directly against the building line, with no visible sidewalk or path for pedestrians.\",\"frame\":1,\"x\":200,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separating the pedestrian route from the parked vehicles and the building frontage.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has cars parked in a row, and there is no dedicated space for pedestrians to walk safely.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Create a new footway on the right side by reallocating space from the parking area or the building setback to provide a safe walking path.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street has residential and commercial buildings on both sides, creating a high demand for crossing, but there is no marked or unmarked crossing facility.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing, such as a zebra crossing, at a logical point along the street to provide a safe place for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is lined with parked cars directly against the building line, with no visible sidewalk or path for pedestrians.",
+    "frame": 1,
+    "x": 200,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, separating the pedestrian route from the parked vehicles and the building frontage."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has cars parked in a row, and there is no dedicated space for pedestrians to walk safely.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Create a new footway on the right side by reallocating space from the parking area or the building setback to provide a safe walking path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street has residential and commercial buildings on both sides, creating a high demand for crossing, but there is no marked or unmarked crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing, such as a zebra crossing, at a logical point along the street to provide a safe place for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 103.26,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2538,
+  "completion_tokens": 475,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

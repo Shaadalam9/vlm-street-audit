@@ -1,0 +1,83 @@
+{
+ "clip_id": "0Yk6N23uVxs_02100000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal path under 1m and is blocked by construction equipment and parked bikes.",
+   "frame": 4,
+   "x": 150,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper, continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The left side is blocked by a cherry picker and construction workers.",
+   "frame": 4,
+   "x": 250,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Ensure construction activities do not completely block pedestrian access to the footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and obstructed by debris and equipment.",
+   "frame": 4,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Level the surface of the left-side pedestrian path to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are seen crossing the road in the carriageway without any designated crossing facility.",
+   "frame": 1,
+   "x": 680,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe place for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal, continuous sidewalk, though space is limited by buildings and trees."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A cherry picker and workers are clearly obstructing the pedestrian area on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The area on the left is cluttered with bikes and construction debris, creating trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road in the carriageway without designated markings."
+  }
+ ],
+ "error": null
+}

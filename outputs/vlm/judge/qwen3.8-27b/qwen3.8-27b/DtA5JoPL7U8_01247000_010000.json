@@ -1,0 +1,65 @@
+{
+ "clip_id": "DtA5JoPL7U8_01247000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A grassy, sloping embankment runs directly from the road edge to the buildings; there is no paved or trodden path for pedestrians.",
+   "frame": 1,
+   "x": 150,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway along the left side, set back from the carriageway on the grassy slope."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is bordered by a guardrail and a grassy verge, with no visible path for pedestrians to walk on.",
+   "frame": 1,
+   "x": 850,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Install a footway on the right side, separated from the road by the existing guardrail and a grass buffer."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the length of the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of street lights along both sides of the road to improve visibility for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a steep, grassy embankment with no path, making the deficit visible, but the slope makes the feasibility of a footway unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a guardrail and a narrow verge with no path, so the deficit is visible, but the space for a new footway is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible in the frames, but the suggestion is a generic measure that could apply to any unlit road."
+  }
+ ],
+ "error": null
+}

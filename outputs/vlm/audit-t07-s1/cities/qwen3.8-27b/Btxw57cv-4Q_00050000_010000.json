@@ -1,0 +1,102 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The usable pedestrian space is an informal, narrow strip rather than a continuous, purpose-built sidewalk.\",\"frame\":3,\"x\":20,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built sidewalk along the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The pedestrian area on the right is an informal path that is obstructed by the high density of parked and moving motorbikes.\",\"frame\":3,\"x\":80,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Build a dedicated, continuous sidewalk on the right to provide a safe, unobstructed path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand to cross due to the commercial nature of the street, but no marked or purpose-built pedestrian crossing is visible.\",\"frame\":3,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to manage the high crossing demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The usable pedestrian space is an informal, narrow strip rather than a continuous, purpose-built sidewalk.",
+    "frame": 3,
+    "x": 20,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built sidewalk along the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The pedestrian area on the right is an informal path that is obstructed by the high density of parked and moving motorbikes.",
+    "frame": 3,
+    "x": 80,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Build a dedicated, continuous sidewalk on the right to provide a safe, unobstructed path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand to cross due to the commercial nature of the street, but no marked or purpose-built pedestrian crossing is visible.",
+    "frame": 3,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to manage the high crossing demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 214.7,
+ "usage": {
+  "prompt_tokens": 4612,
+  "total_tokens": 5054,
+  "completion_tokens": 442,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

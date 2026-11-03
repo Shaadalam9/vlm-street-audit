@@ -1,0 +1,47 @@
+{
+ "clip_id": "KDHjh4WQvug_00040000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A wide, multi-lane urban road with commercial buildings and a park on the right, creating a high demand for crossing, but no marked or signalised crossing is in",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island at the junction of the park and the commercial area on the right."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "The road has four or more lanes in both directions with no physical median or refuge island, making it difficult and dangerous for pedestrians to cross in",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_refuge_island",
+   "suggestion": "Construct a central refuge island in the median to allow pedestrians to cross the wide road in two stages."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide road with no visible pedestrian crossings on the right side near the park."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is clearly wide with multiple lanes and lacks a central refuge island."
+  }
+ ],
+ "error": null
+}

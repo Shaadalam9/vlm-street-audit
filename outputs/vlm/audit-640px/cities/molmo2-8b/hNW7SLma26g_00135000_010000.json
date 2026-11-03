@@ -1,0 +1,82 @@
+{
+ "clip_id": "hNW7SLma26g_00135000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/hNW7SLma26g/hNW7SLma26g_00135000_010000/frame_002.jpg",
+  "data/snippets/hNW7SLma26g/hNW7SLma26g_00135000_010000/frame_004.jpg",
+  "data/snippets/hNW7SLma26g/hNW7SLma26g_00135000_010000/frame_006.jpg",
+  "data/snippets/hNW7SLma26g/hNW7SLma26g_00135000_010000/frame_008.jpg",
+  "data/snippets/hNW7SLma26g/hNW7SLma26g_00135000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"no_crossing_facility_visible_in_any_frame\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at this junction to provide a safe crossing point for pedestrians\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "no_crossing_facility_visible_in_any_frame",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at this junction to provide a safe crossing point for pedestrians"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 139.13,
+ "usage": {
+  "prompt_tokens": 3868,
+  "total_tokens": 4124,
+  "completion_tokens": 256,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

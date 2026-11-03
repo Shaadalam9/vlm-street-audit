@@ -1,0 +1,122 @@
+{
+ "clip_id": "KxNelAeELQ8_00425000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_002.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_004.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_006.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_008.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A raised concrete wall runs along the left edge of the road, with no sidewalk or path for pedestrians.\",\"frame\":1,\"x\":200,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a new, level sidewalk on the left side of the road, separated from the carriageway by a low, permeable barrier.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area to the right of the parked vehicles is an uneven, unpaved strip of dirt and gravel, not a proper footway.\",\"frame\":1,\"x\":900,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Pave the informal path on the right side to create a safe and stable surface for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved path on the right is uneven and littered with small stones and debris, creating a significant trip hazard.\",\"frame\":1,\"x\":900,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Grade and pave the right-side path to eliminate the uneven surface and trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There are no marked or unmarked pedestrian crossings visible along this 100m stretch of road, despite high pedestrian activity.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a clearly marked zebra crossing at a logical point, such as near the cluster of shops on the right.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The existing kerbs, particularly on the left, are high and abrupt, with no dropped sections to facilitate access for pedestrians, especially those with mobility\",\"frame\":1,\"x\":200,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct dropped kerbs at any new or existing crossing points to allow safe and easy access for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A raised concrete wall runs along the left edge of the road, with no sidewalk or path for pedestrians.",
+    "frame": 1,
+    "x": 200,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a new, level sidewalk on the left side of the road, separated from the carriageway by a low, permeable barrier."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area to the right of the parked vehicles is an uneven, unpaved strip of dirt and gravel, not a proper footway.",
+    "frame": 1,
+    "x": 900,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Pave the informal path on the right side to create a safe and stable surface for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved path on the right is uneven and littered with small stones and debris, creating a significant trip hazard.",
+    "frame": 1,
+    "x": 900,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Grade and pave the right-side path to eliminate the uneven surface and trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There are no marked or unmarked pedestrian crossings visible along this 100m stretch of road, despite high pedestrian activity.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Install a clearly marked zebra crossing at a logical point, such as near the cluster of shops on the right."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The existing kerbs, particularly on the left, are high and abrupt, with no dropped sections to facilitate access for pedestrians, especially those with mobility",
+    "frame": 1,
+    "x": 200,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct dropped kerbs at any new or existing crossing points to allow safe and easy access for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 235.22,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6280,
+  "completion_tokens": 645,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

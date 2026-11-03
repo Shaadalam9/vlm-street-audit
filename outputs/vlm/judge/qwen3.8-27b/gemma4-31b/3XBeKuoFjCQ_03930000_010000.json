@@ -1,0 +1,65 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "pedestrians walking in the carriageway as there is no designated sidewalk",
+   "frame": 4,
+   "x": 230,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated footway on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "pedestrians walking in the carriageway as there is no designated sidewalk",
+   "frame": 4,
+   "x": 780,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated footway on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are present and homes line both sides, but no designated crossing facility exists",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow, historic street where the distinction between carriageway and footway is ambiguous, making it impossible to confirm the deficit or the feasibility of a new build."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "As with the left side, the visual evidence is insufficient to confirm the absence of a footway or the space available for one on the right."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear point where a crossing is needed or where it would be located, making the deficit and the specific placement of the suggestion unclear."
+  }
+ ],
+ "error": null
+}

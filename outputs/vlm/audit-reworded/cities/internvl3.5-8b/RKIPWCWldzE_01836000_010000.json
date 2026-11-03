@@ -1,0 +1,122 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_002.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_004.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_006.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_008.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"frame 1, (200, 400)\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Expand the sidewalk on the left side to improve pedestrian safety.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"frame 3, (800, 400)\",\"frame\":3,\"x\":800,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Expand the sidewalk on the right side to improve pedestrian safety.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"frame 2, (150, 500)\",\"frame\":2,\"x\":150,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the left sidewalk to reduce trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"frame 4, (750, 500)\",\"frame\":4,\"x\":750,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the right sidewalk to reduce trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"frame 5, (500, 300)\",\"frame\":5,\"x\":500,\"y\":300,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a pedestrian crossing with signals to improve crossing safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "frame 1, (200, 400)",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Expand the sidewalk on the left side to improve pedestrian safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "frame 3, (800, 400)",
+    "frame": 3,
+    "x": 800,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Expand the sidewalk on the right side to improve pedestrian safety."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "frame 2, (150, 500)",
+    "frame": 2,
+    "x": 150,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the left sidewalk to reduce trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "frame 4, (750, 500)",
+    "frame": 4,
+    "x": 750,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the right sidewalk to reduce trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "frame 5, (500, 300)",
+    "frame": 5,
+    "x": 500,
+    "y": 300,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a pedestrian crossing with signals to improve crossing safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.84,
+ "usage": {
+  "prompt_tokens": 12730,
+  "total_tokens": 13263,
+  "completion_tokens": 533,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

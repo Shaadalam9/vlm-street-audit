@@ -1,0 +1,90 @@
+{
+ "clip_id": "RKIPWCWldzE_03516000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous concrete retaining wall and a line of bollards run along the left edge of the carriageway, leaving no usable footway.\",\"frame\":1,\"x\":150,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Rebuild the left edge as a purpose-built footway by relocating the bollards and providing a walkable strip between the wall and the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A continuous metal guardrail and a row of advertising hoardings run along the right edge of the carriageway, leaving no usable footway.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Provide a right-side footway by setting the hoardings back and replacing the guardrail with a walkable strip separated from the carriageway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous concrete retaining wall and a line of bollards run along the left edge of the carriageway, leaving no usable footway.",
+    "frame": 1,
+    "x": 150,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Rebuild the left edge as a purpose-built footway by relocating the bollards and providing a walkable strip between the wall and the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A continuous metal guardrail and a row of advertising hoardings run along the right edge of the carriageway, leaving no usable footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Provide a right-side footway by setting the hoardings back and replacing the guardrail with a walkable strip separated from the carriageway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 114.01,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2450,
+  "completion_tokens": 387,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

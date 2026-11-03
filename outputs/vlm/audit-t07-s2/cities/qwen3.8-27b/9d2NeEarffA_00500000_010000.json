@@ -1,0 +1,112 @@
+{
+ "clip_id": "9d2NeEarffA_00500000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_002.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_004.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_006.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_008.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"No marked or signalised pedestrian crossing is visible on the 100 m stretch despite shops on both sides and a footbridge far ahead.\",\"frame\":4,\"x\":480,\"y\":690,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Provide a marked crossing with dropped kerbs at the junction under the footbridge to give pedestrians a safe point to cross.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"The only formal crossing is a footbridge far ahead, so pedestrians are forced to cross at uncontrolled points in a wide, multi-lane road.\",\"frame\":4,\"x\":520,\"y\":320,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island at the new marked crossing to let pedestrians cross one direction of traffic at a time.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A parked vehicle and roadside stalls encroach onto the left footway, narrowing the usable walking space.\",\"frame\":4,\"x\":80,\"y\":680,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicle and regulate stall placement so the left footway is kept clear for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway surface is uneven and broken in places, presenting a significant trip risk.\",\"frame\":4,\"x\":120,\"y\":720,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the damaged sections of the left footway to create a smooth, even walking surface.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "No marked or signalised pedestrian crossing is visible on the 100 m stretch despite shops on both sides and a footbridge far ahead.",
+    "frame": 4,
+    "x": 480,
+    "y": 690,
+    "measure": "add_marked_crossing",
+    "suggestion": "Provide a marked crossing with dropped kerbs at the junction under the footbridge to give pedestrians a safe point to cross."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "The only formal crossing is a footbridge far ahead, so pedestrians are forced to cross at uncontrolled points in a wide, multi-lane road.",
+    "frame": 4,
+    "x": 520,
+    "y": 320,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island at the new marked crossing to let pedestrians cross one direction of traffic at a time."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A parked vehicle and roadside stalls encroach onto the left footway, narrowing the usable walking space.",
+    "frame": 4,
+    "x": 80,
+    "y": 680,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicle and regulate stall placement so the left footway is kept clear for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway surface is uneven and broken in places, presenting a significant trip risk.",
+    "frame": 4,
+    "x": 120,
+    "y": 720,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the damaged sections of the left footway to create a smooth, even walking surface."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 115.37,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6158,
+  "completion_tokens": 546,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

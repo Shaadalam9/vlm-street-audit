@@ -1,0 +1,92 @@
+{
+ "clip_id": "xU2OkJ_OY6c_02695000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal_path_under_1m\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a proper footpath to enhance safety.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_under_1m\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Expand and separate the informal footpath for better accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal_path_under_1m",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a proper footpath to enhance safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_under_1m",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Expand and separate the informal footpath for better accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 245.67,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13026,
+  "completion_tokens": 319,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

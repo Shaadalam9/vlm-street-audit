@@ -1,0 +1,65 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No sidewalk or path is visible on the left; the road edge is a grassy verge.",
+   "frame": 1,
+   "x": 100,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No sidewalk or path is visible on the right; the road edge is a grassy verge.",
+   "frame": 1,
+   "x": 900,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "A junction is visible in the distance, but there is no marked or signalised pedestrian crossing at the location.",
+   "frame": 4,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with refuge at the junction."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a footway, and building one is feasible given the verge space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a footway, and building one is feasible given the verge space."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The junction in the distance is too far and blurry to confirm the absence of a crossing."
+  }
+ ],
+ "error": null
+}

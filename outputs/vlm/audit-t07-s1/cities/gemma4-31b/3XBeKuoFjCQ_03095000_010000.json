@@ -1,0 +1,122 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03095000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_002.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_004.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_006.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_008.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The walking area is an unpaved, informal path rather than a purpose-built sidewalk.\",\"frame\":4,\"x\":760,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a formal, paved sidewalk on the right side of the street to provide a safe, designated walking area.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The sidewalk is completely blocked by construction equipment and temporary fencing.\",\"frame\":2,\"x\":100,\"y\":700,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate construction materials and equipment to clear the sidewalk for pedestrian use.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven surfaces and construction debris create significant trip hazards.\",\"frame\":2,\"x\":120,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Level the sidewalk surface and remove debris to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is unpaved and uneven.\",\"frame\":4,\"x\":780,\"y\":880,\"measure\":\"repair_footway\",\"suggestion\":\"Pave the informal path on the right side to create a smooth, level walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing in the roadway despite high demand, but no designated crossing facility exists.\",\"frame\":3,\"x\":420,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The walking area is an unpaved, informal path rather than a purpose-built sidewalk.",
+    "frame": 4,
+    "x": 760,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a formal, paved sidewalk on the right side of the street to provide a safe, designated walking area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The sidewalk is completely blocked by construction equipment and temporary fencing.",
+    "frame": 2,
+    "x": 100,
+    "y": 700,
+    "measure": "clear_footway",
+    "suggestion": "Relocate construction materials and equipment to clear the sidewalk for pedestrian use."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven surfaces and construction debris create significant trip hazards.",
+    "frame": 2,
+    "x": 120,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Level the sidewalk surface and remove debris to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is unpaved and uneven.",
+    "frame": 4,
+    "x": 780,
+    "y": 880,
+    "measure": "repair_footway",
+    "suggestion": "Pave the informal path on the right side to create a smooth, level walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing in the roadway despite high demand, but no designated crossing facility exists.",
+    "frame": 3,
+    "x": 420,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 216.82,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3162,
+  "completion_tokens": 576,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

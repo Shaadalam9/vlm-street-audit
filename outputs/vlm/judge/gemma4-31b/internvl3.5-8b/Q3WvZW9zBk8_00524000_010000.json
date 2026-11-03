@@ -1,0 +1,47 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00524000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is obscured by vehicles and foliage, making it impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is mostly obscured by vehicles, and only a small concrete edge is visible, which is insufficient to determine if a footway is missing."
+  }
+ ],
+ "error": null
+}

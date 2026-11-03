@@ -1,0 +1,29 @@
+{
+ "clip_id": "OgpB09d_cRA_01086000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A commercial building with a visible entrance and a row of parked cars creates a destination, but there is no marked crossing or refuge for pedestrians to cross",
+   "frame": 1,
+   "x": 850,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island in front of the commercial building to provide a safe crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a commercial destination with no marked crossing, and a marked crossing with a refuge is a feasible infrastructure improvement."
+  }
+ ],
+ "error": null
+}

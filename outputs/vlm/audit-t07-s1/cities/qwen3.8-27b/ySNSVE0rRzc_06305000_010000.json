@@ -1,0 +1,92 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_002.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_004.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_006.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_008.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The continuous paved footway on the right terminates, leaving a grassy verge and a narrow, trodden dirt path leading towards the 'MOYKA SHINKA' entrance.\",\"frame\":3,\"x\":620,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a hard-surfaced, continuous footway along the right side to provide a safe, formal walking surface for the pedestrian.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A pedestrian is walking on the footway near an access point for a commercial service, creating a demand to cross, but there is no marked crossing or refuge.\",\"frame\":2,\"x\":550,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Provide a formal pedestrian crossing or a raised table at the access point to facilitate safe crossing for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The continuous paved footway on the right terminates, leaving a grassy verge and a narrow, trodden dirt path leading towards the 'MOYKA SHINKA' entrance.",
+    "frame": 3,
+    "x": 620,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a hard-surfaced, continuous footway along the right side to provide a safe, formal walking surface for the pedestrian."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A pedestrian is walking on the footway near an access point for a commercial service, creating a demand to cross, but there is no marked crossing or refuge.",
+    "frame": 2,
+    "x": 550,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Provide a formal pedestrian crossing or a raised table at the access point to facilitate safe crossing for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 197.82,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5997,
+  "completion_tokens": 385,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

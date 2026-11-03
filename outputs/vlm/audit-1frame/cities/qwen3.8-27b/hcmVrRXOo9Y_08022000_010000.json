@@ -1,0 +1,100 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left edge of the carriageway is bordered directly by a dense, unbroken hedge and vegetation, with no constructed or trodden path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the left edge, separating the road from the vegetation.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right edge of the carriageway is bordered by a grassy verge and a temple wall, with no path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the right edge, separating the road from the grass verge and temple wall.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the length of the road in the frame.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left edge of the carriageway is bordered directly by a dense, unbroken hedge and vegetation, with no constructed or trodden path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the left edge, separating the road from the vegetation."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right edge of the carriageway is bordered by a grassy verge and a temple wall, with no path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the right edge, separating the road from the grass verge and temple wall."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the length of the road in the frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 112.73,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2498,
+  "completion_tokens": 435,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

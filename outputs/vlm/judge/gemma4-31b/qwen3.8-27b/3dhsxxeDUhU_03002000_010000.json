@@ -1,0 +1,29 @@
+{
+ "clip_id": "3dhsxxeDUhU_03002000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A signalised junction with commercial buildings on the left and a barriered carriageway on the right, but no marked or signalised pedestrian crossing is visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with dropped kerbs at the junction to provide a safe crossing point for people accessing the shops."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a signalised junction with no pedestrian crossing on the right, and the suggested change is a standard infrastructure improvement for this layout."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing on the right side to provide a safe crossing point for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide road with no marked pedestrian crossings on the right side, and adding one is a standard feasible improvement."
+  }
+ ],
+ "error": null
+}

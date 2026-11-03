@@ -1,0 +1,29 @@
+{
+ "clip_id": "94SBevAbFik_03438000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A row of parked rental bicycles and scooters occupies a significant portion of the footway, narrowing the clear path for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a dedicated, physically separated parking bay for micromobility vehicles to keep the pedestrian path clear."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show rental bikes and scooters cluttering the left footway, but the suggestion is a generic measure that does not specify a location or design for this particular street."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "green fence separates the road from a vegetated area with no usable sidewalk",
+   "frame": 4,
+   "x": 150,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road behind the green fence."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "commercial buildings and a junction are present, but there is no designated pedestrian crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to safely facilitate crossing demand."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The green fence clearly separates the road from a vegetated area where no sidewalk exists."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is a clear junction with commercial activity but no marked or signalised pedestrian crossing."
+  }
+ ],
+ "error": null
+}

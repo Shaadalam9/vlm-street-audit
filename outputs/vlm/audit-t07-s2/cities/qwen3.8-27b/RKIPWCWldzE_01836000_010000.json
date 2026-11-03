@@ -1,0 +1,102 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_002.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_004.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_006.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_008.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A large, wrapped cart is being pushed on the sidewalk, significantly narrowing the usable path for pedestrians.\",\"frame\":2,\"x\":590,\"y\":770,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a dedicated, unobstructed pedestrian path or widen the existing sidewalk to allow safe passage for both pedestrians and goods carts.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is obstructed by a large cart loaded with goods, forcing pedestrians to move into the roadway.\",\"frame\":2,\"x\":590,\"y\":770,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce footway clearance regulations or provide a designated loading zone to keep the pedestrian path clear.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is high pedestrian activity and commercial demand, but no marked or physical crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a zebra crossing or a raised pedestrian platform to provide a safe and visible point for pedestrians to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A large, wrapped cart is being pushed on the sidewalk, significantly narrowing the usable path for pedestrians.",
+    "frame": 2,
+    "x": 590,
+    "y": 770,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a dedicated, unobstructed pedestrian path or widen the existing sidewalk to allow safe passage for both pedestrians and goods carts."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The footway is obstructed by a large cart loaded with goods, forcing pedestrians to move into the roadway.",
+    "frame": 2,
+    "x": 590,
+    "y": 770,
+    "measure": "clear_footway",
+    "suggestion": "Enforce footway clearance regulations or provide a designated loading zone to keep the pedestrian path clear."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is high pedestrian activity and commercial demand, but no marked or physical crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a zebra crossing or a raised pedestrian platform to provide a safe and visible point for pedestrians to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 226.69,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6071,
+  "completion_tokens": 459,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to at least 3 meters for better accessibility."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to at least 3 meters for better accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear sidewalk on the left, and the suggestion is a generic expansion that does not address the visible lack of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is dominated by the elevated structure, making it impossible to verify a sidewalk, and the suggestion is a generic expansion that does not address the visible lack of a footway."
+  }
+ ],
+ "error": null
+}

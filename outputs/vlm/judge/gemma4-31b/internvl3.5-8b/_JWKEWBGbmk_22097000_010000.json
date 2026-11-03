@@ -1,0 +1,29 @@
+{
+ "clip_id": "_JWKEWBGbmk_22097000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked footway with stalls",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove stalls from the footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show vendor stalls obstructing the pedestrian path on the right side."
+  }
+ ],
+ "error": null
+}

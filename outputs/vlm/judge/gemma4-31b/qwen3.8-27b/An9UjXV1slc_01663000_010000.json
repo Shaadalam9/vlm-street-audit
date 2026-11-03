@@ -1,0 +1,29 @@
+{
+ "clip_id": "An9UjXV1slc_01663000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "A signalised crossing on a wide, multi-lane road with no central refuge island.",
+   "frame": 1,
+   "x": 500,
+   "y": 530,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a central refuge island in the median to shorten the pedestrian crossing distance."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide multi-lane road with a signalised crossing and a narrow median that does not function as a safe pedestrian refuge."
+  }
+ ],
+ "error": null
+}

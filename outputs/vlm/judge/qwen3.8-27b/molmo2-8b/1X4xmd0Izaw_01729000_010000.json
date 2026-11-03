@@ -1,0 +1,155 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the left side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this junction to provide a safe crossing point for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more_lanes_and_a_signalised_crossing_without_a_refuge",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the signalised crossing to provide a safe place for pedestrians to wait."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "kerb_ramps_not_visible",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to provide wheelchair access and improve pedestrian safety."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "left_side",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the left side of the road to improve visibility and safety for pedestrians and drivers."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "right_side",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the right side of the road to improve visibility and safety for pedestrians and drivers."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more_lanes_and_a_signalised_crossing_without_a_refuge",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the signalised crossing to provide a safe place for pedestrians to wait."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the specific location of the proposed crossing, so the absence of a footway at that point cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the specific location of the proposed crossing, so the absence of a footway at that point cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No junction or crossing is visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road appears to have only two lanes, so the condition of four or more lanes is not met."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible in the frames, so the absence of kerb ramps cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so the presence or absence of street lighting cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so the presence or absence of street lighting cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road appears to have only two lanes, so the condition of four or more lanes is not met."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "ZSpZc67IvIo_00220000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing the busy street."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "wide_road_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the wide road to provide a safe place for pedestrians to wait when crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to assist wheelchair users and those with mobility aids in safely crossing the road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "left_side",
+   "evidence": "no_street_lighting_visible",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting on the left side of the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the full extent of the right side to confirm the absence of all crossings."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide road, but it is unclear if the entire crossing sequence lacks a refuge."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The resolution is too low to determine the presence or absence of kerb ramps at crossings."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is partially obscured by trees and the camera angle, making it impossible to confirm a total lack of lighting."
+  }
+ ],
+ "error": null
+}

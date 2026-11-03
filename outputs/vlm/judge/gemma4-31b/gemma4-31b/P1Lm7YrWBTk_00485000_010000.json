@@ -1,0 +1,47 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are present and crossing the road without any designated facility.",
+   "frame": 1,
+   "x": 450,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "The kerbs at the crossing point are not dropped.",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing point to improve accessibility for all pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road without a marked crossing, and adding one is a standard feasible measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The kerb is clearly not dropped where pedestrians are crossing, and installing dropped kerbs is a standard feasible measure."
+  }
+ ],
+ "error": null
+}

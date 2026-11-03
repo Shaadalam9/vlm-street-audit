@@ -1,0 +1,112 @@
+{
+ "clip_id": "PYFB7nMiFTM_01951000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_002.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_004.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_006.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_008.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road consists of a steep, uneven embankment with a security fence and dense vegetation, leaving no safe or usable path for pedestrians.\",\"frame\":4,\"x\":350,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footpath on the left side, set back from the road edge, to provide a safe and accessible route for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is a narrow, unpaved shoulder with loose debris, where a pedestrian is seen walking directly next to the traffic lane.\",\"frame\":4,\"x\":750,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a formal sidewalk on the right side to separate pedestrians from the carriageway and the adjacent drop-off.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a clear need for crossing due to the presence of parked cars and a pedestrian on the road, but no designated crossing facility exists.\",\"frame\":4,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Provide a marked pedestrian crossing with a central refuge to allow people to safely cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the length of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along both sides of the road to improve visibility for both drivers and pedestrians during low-light conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road consists of a steep, uneven embankment with a security fence and dense vegetation, leaving no safe or usable path for pedestrians.",
+    "frame": 4,
+    "x": 350,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footpath on the left side, set back from the road edge, to provide a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is a narrow, unpaved shoulder with loose debris, where a pedestrian is seen walking directly next to the traffic lane.",
+    "frame": 4,
+    "x": 750,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a formal sidewalk on the right side to separate pedestrians from the carriageway and the adjacent drop-off."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a clear need for crossing due to the presence of parked cars and a pedestrian on the road, but no designated crossing facility exists.",
+    "frame": 4,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Provide a marked pedestrian crossing with a central refuge to allow people to safely cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the length of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along both sides of the road to improve visibility for both drivers and pedestrians during low-light conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 526.59,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6161,
+  "completion_tokens": 549,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

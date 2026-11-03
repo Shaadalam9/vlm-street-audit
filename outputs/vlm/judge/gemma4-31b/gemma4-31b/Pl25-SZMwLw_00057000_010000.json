@@ -1,0 +1,47 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk or informal path provided along the motorway edge",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian path along the left side of the motorway to provide safe passage."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no sidewalk or informal path provided along the motorway edge",
+   "frame": 1,
+   "x": 900,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian path along the right side of the motorway to provide safe passage."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "This is a high-speed motorway where pedestrian footways are not appropriate or feasible for safety reasons."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "This is a high-speed motorway where pedestrian footways are not appropriate or feasible for safety reasons."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUKYjWxgWS8_02674000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous wall with a narrow, overgrown strip of vegetation separates the road from the buildings, leaving no usable space for pedestrians.\",\"frame\":1,\"x\":250,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built sidewalk between the wall and the carriageway edge to provide a safe pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side is bounded by a tall wall with overgrown vegetation at its base, and no pavement exists for walking.\",\"frame\":1,\"x\":750,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a sidewalk along the base of the wall to create a safe and accessible route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road passes between industrial buildings with no marked or physical crossing facilities visible in any frame.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with refuge islands to allow safe passage across the single-lane road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The scene is illuminated by daylight, and no street light poles or fixtures are visible along the length of the road in any frame.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"build_footway\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for both pedestrians and drivers during low-light hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous wall with a narrow, overgrown strip of vegetation separates the road from the buildings, leaving no usable space for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built sidewalk between the wall and the carriageway edge to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side is bounded by a tall wall with overgrown vegetation at its base, and no pavement exists for walking.",
+    "frame": 1,
+    "x": 750,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a sidewalk along the base of the wall to create a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road passes between industrial buildings with no marked or physical crossing facilities visible in any frame.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with refuge islands to allow safe passage across the single-lane road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The scene is illuminated by daylight, and no street light poles or fixtures are visible along the length of the road in any frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "build_footway",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for both pedestrians and drivers during low-light hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 101.41,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6133,
+  "completion_tokens": 521,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

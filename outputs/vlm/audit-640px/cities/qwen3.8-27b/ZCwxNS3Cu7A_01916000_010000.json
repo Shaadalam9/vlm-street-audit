@@ -1,0 +1,122 @@
+{
+ "clip_id": "ZCwxNS3Cu7A_01916000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_002.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_004.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_006.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_008.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has a narrow sidewalk, less than 1m wide, with no physical barrier separating it from the road.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the left-side footway to a minimum of 1.5m and add a physical barrier to separate it from the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side has a narrow sidewalk, less than 1m wide, with no physical barrier separating it from the road.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-side footway to a minimum of 1.5m and add a physical barrier to separate it from the road.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand for crossing due to the presence of shops and a gas station on both sides, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps are visible at the potential crossing points.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add a raised crossing with kerb ramps to improve accessibility and safety for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road has some street lighting, but it is not ample, especially in the areas near the gas station and shops.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Increase the number of street lights along the road to ensure adequate lighting for both pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has a narrow sidewalk, less than 1m wide, with no physical barrier separating it from the road.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the left-side footway to a minimum of 1.5m and add a physical barrier to separate it from the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side has a narrow sidewalk, less than 1m wide, with no physical barrier separating it from the road.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-side footway to a minimum of 1.5m and add a physical barrier to separate it from the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand for crossing due to the presence of shops and a gas station on both sides, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps are visible at the potential crossing points.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add a raised crossing with kerb ramps to improve accessibility and safety for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road has some street lighting, but it is not ample, especially in the areas near the gas station and shops.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Increase the number of street lights along the road to ensure adequate lighting for both pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 122.77,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2956,
+  "completion_tokens": 644,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

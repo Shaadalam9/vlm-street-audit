@@ -1,0 +1,100 @@
+{
+ "clip_id": "DkvT6wPsKZM_14311000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_14311000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Buildings open directly onto the road with no designated sidewalk.\",\"frame\":1,\"x\":600,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built sidewalk on the right side to separate pedestrians from vehicle traffic.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The road edge and informal path are uneven with debris and potholes.\",\"frame\":1,\"x\":400,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left side to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Commercial buildings on both sides create crossing demand, but no designated facility exists.\",\"frame\":1,\"x\":500,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Buildings open directly onto the road with no designated sidewalk.",
+    "frame": 1,
+    "x": 600,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built sidewalk on the right side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The road edge and informal path are uneven with debris and potholes.",
+    "frame": 1,
+    "x": 400,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left side to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Commercial buildings on both sides create crossing demand, but no designated facility exists.",
+    "frame": 1,
+    "x": 500,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 120.08,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1920,
+  "completion_tokens": 420,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

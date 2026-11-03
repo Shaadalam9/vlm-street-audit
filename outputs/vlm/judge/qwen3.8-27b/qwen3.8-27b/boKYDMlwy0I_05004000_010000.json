@@ -1,0 +1,65 @@
+{
+ "clip_id": "boKYDMlwy0I_05004000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The paved area on the left is occupied by a large tent and numerous plastic chairs, leaving no clear, continuous path for pedestrians.",
+   "frame": 3,
+   "x": 250,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Relocate the market stall and seating to a designated area to restore a clear, continuous footway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A large tent and multiple chairs are set up on the sidewalk, completely obstructing the path for pedestrians.",
+   "frame": 3,
+   "x": 250,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove the tent and chairs from the sidewalk to ensure the footway is unobstructed and safe for all users."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the residential building and the market activity on the left, but no marked or physical crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at the junction to provide a safe and visible place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a paved area with a tent and chairs, but it is unclear if this is a formal footway or a public square, making the deficit and feasibility uncertain."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "As with the first point, it is not possible to confirm if the paved area is a designated footway that is being blocked, so the deficit cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear junction or a specific point where a crossing would be needed, so the deficit of a missing crossing cannot be confirmed."
+  }
+ ],
+ "error": null
+}

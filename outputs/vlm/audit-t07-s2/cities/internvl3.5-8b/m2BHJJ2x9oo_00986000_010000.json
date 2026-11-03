@@ -1,0 +1,152 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_002.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_004.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_006.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_008.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":410,\"y\":730,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the left side to provide a safe walking area.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":810,\"y\":730,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to provide a safe walking area.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":410,\"y\":730,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions from the left footway to improve accessibility.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":810,\"y\":730,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions from the right footway to improve accessibility.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"some\",\"frame\":1,\"x\":410,\"y\":730,\"measure\":\"repair_footway\",\"suggestion\":\"Repair any uneven sections on the left footway to prevent trips.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"some\",\"frame\":1,\"x\":810,\"y\":730,\"measure\":\"repair_footway\",\"suggestion\":\"Repair any uneven sections on the right footway to prevent trips.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":500,\"y\":320,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island to improve crossing safety at this busy junction.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"not_applicable\",\"frame\":1,\"x\":500,\"y\":320,\"measure\":\"improve_crossing\",\"suggestion\":\"Enhance visibility of the crossing area to ensure pedestrians are clearly seen.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 410,
+    "y": 730,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 810,
+    "y": 730,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 410,
+    "y": 730,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions from the left footway to improve accessibility."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 810,
+    "y": 730,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions from the right footway to improve accessibility."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 410,
+    "y": 730,
+    "measure": "repair_footway",
+    "suggestion": "Repair any uneven sections on the left footway to prevent trips."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 810,
+    "y": 730,
+    "measure": "repair_footway",
+    "suggestion": "Repair any uneven sections on the right footway to prevent trips."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 500,
+    "y": 320,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island to improve crossing safety at this busy junction."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "not_applicable",
+    "frame": 1,
+    "x": 500,
+    "y": 320,
+    "measure": "improve_crossing",
+    "suggestion": "Enhance visibility of the crossing area to ensure pedestrians are clearly seen."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.55,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13384,
+  "completion_tokens": 677,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "0Yk6N23uVxs_02100000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to improve pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to improve pedestrian safety."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Clear obstructions from the left sidewalk to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Clear obstructions from the right sidewalk to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow street with parked vehicles and construction, but the specific condition of a 'no footway' on the left is not clearly distinguishable from a blocked one."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily occupied by parked cars and a construction zone, making it impossible to confirm if a footway is entirely missing or just blocked."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is clearly obstructed by a large yellow crane and construction equipment, confirming a blocked footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obstructed by a row of parked cars and a pedestrian in a high-visibility jacket, confirming a blocked footway."
+  }
+ ],
+ "error": null
+}

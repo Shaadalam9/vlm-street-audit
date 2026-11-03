@@ -1,0 +1,102 @@
+{
+ "clip_id": "OgpB09d_cRA_01086000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_002.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_004.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_006.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_008.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No sidewalk is visible on the left side of the road, only a parking lot.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a continuous sidewalk with a dropped kerb to provide a safe, separated path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk is visible on the right side of the road, only a parking lot.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a continuous sidewalk with a dropped kerb to provide a safe, separated path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is no marked or unmarked crossing at the junction with the main road.\",\"frame\":5,\"x\":500,\"y\":650,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction to manage the high demand from the commercial area.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No sidewalk is visible on the left side of the road, only a parking lot.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a continuous sidewalk with a dropped kerb to provide a safe, separated path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk is visible on the right side of the road, only a parking lot.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a continuous sidewalk with a dropped kerb to provide a safe, separated path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is no marked or unmarked crossing at the junction with the main road.",
+    "frame": 5,
+    "x": 500,
+    "y": 650,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction to manage the high demand from the commercial area."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 394.72,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6047,
+  "completion_tokens": 435,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

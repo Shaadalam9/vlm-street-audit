@@ -1,0 +1,137 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this junction to improve safety for pedestrians crossing the road."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "2 lanes and no crossing facility",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island at the crossing to provide a safe place for pedestrians to wait when crossing a two-lane road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps and no crossing facility",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to improve accessibility for pedestrians and wheelchair users."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "left_side",
+   "evidence": "urban road with street_lighting none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the left side of the road to improve visibility and safety for pedestrians and drivers."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "right_side",
+   "evidence": "urban road with street_lighting none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the right side of the road to improve visibility and safety for pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though there is a dirt shoulder."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has some paved areas in front of shops but lacks a continuous, dedicated footway."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No specific junction or crossing demand is clearly visible in the frames to justify a signalised crossing."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing facility is present to evaluate the need for a refuge island."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing facility is present to evaluate the need for kerb ramps."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is a lack of consistent street lighting on the left side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is a lack of consistent street lighting on the right side."
+  }
+ ],
+ "error": null
+}

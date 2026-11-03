@@ -1,0 +1,102 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_002.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_004.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_006.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_008.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a building wall and a grassy verge, with no paved or defined path for pedestrians.\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the left side of the road, separating it from the building and the grassy verge.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bordered by a grassy verge and a field, with no path for pedestrians.\",\"frame\":1,\"x\":750,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Create a footway on the right side of the road, separating the carriageway from the adjacent field.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a building wall and a grassy verge, with no paved or defined path for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the left side of the road, separating it from the building and the grassy verge."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bordered by a grassy verge and a field, with no path for pedestrians.",
+    "frame": 1,
+    "x": 750,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Create a footway on the right side of the road, separating the carriageway from the adjacent field."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 176.86,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6049,
+  "completion_tokens": 437,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

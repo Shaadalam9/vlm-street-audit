@@ -1,0 +1,132 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left side of the road is a dirt shoulder cluttered with a large pile of sacks, parked motorbikes and a makeshift shelter, leaving no safe space for a\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the left side, relocating the informal market and parking to a designated area.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is a continuous metal fence with no space for a pedestrian to walk alongside the carriageway.\",\"frame\":1,\"x\":900,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Provide a pedestrian walkway on the right side of the road, either by widening the road or building a path on the other side of the fence.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are seen walking in the road with no marked crossing, refuge, or other facility to cross safely, despite clear crossing demand from the\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing with clear markings and signage at this location to provide a safe, designated crossing point.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"There are no kerbs or ramps visible at any potential crossing point, as the road edge is undefined.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"When constructing a footway and crossing, include dropped kerbs (kerb ramps) to ensure accessibility for all pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"The lack of any crossing facility means any attempt to cross is inherently poor quality due to the risk of vehicle-pedestrian\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"The installation of a formal crossing facility will directly address the poor crossing quality by providing a predictable and safe space for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left side is an informal path with significant trip hazards, including a large pile of goods, uneven ground, and parked vehicles.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"A new, well-maintained sidewalk would eliminate the current trip hazards by providing a clear, flat, and unobstructed path for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left side of the road is a dirt shoulder cluttered with a large pile of sacks, parked motorbikes and a makeshift shelter, leaving no safe space for a",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the left side, relocating the informal market and parking to a designated area."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is a continuous metal fence with no space for a pedestrian to walk alongside the carriageway.",
+    "frame": 1,
+    "x": 900,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Provide a pedestrian walkway on the right side of the road, either by widening the road or building a path on the other side of the fence."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are seen walking in the road with no marked crossing, refuge, or other facility to cross safely, despite clear crossing demand from the",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing with clear markings and signage at this location to provide a safe, designated crossing point."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "There are no kerbs or ramps visible at any potential crossing point, as the road edge is undefined.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "When constructing a footway and crossing, include dropped kerbs (kerb ramps) to ensure accessibility for all pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "The lack of any crossing facility means any attempt to cross is inherently poor quality due to the risk of vehicle-pedestrian",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "The installation of a formal crossing facility will directly address the poor crossing quality by providing a predictable and safe space for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left side is an informal path with significant trip hazards, including a large pile of goods, uneven ground, and parked vehicles.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "A new, well-maintained sidewalk would eliminate the current trip hazards by providing a clear, flat, and unobstructed path for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 547.36,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6359,
+  "completion_tokens": 747,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

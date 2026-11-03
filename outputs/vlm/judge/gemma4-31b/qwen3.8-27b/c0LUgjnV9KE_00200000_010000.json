@@ -1,0 +1,29 @@
+{
+ "clip_id": "c0LUgjnV9KE_00200000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A bus is stopped at the curb with its door open, indicating a bus stop, but there is no marked crossing or refuge for passengers to cross the road.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island at the bus stop location to allow safe crossing for passengers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a bus stop area without a marked crossing, though the width of the road makes a signalised crossing with a refuge island potentially difficult to implement."
+  }
+ ],
+ "error": null
+}

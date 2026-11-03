@@ -1,0 +1,65 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03095000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Construction equipment and barriers occupy the entire space between the building and the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side once construction is complete."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground surface is uneven, unpaved, and contains debris.",
+   "frame": 5,
+   "x": 700,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Pave the right-hand pedestrian area to remove trip hazards and provide a smooth surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in a mixed-use urban area without any designated crossing facility.",
+   "frame": 2,
+   "x": 350,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by construction equipment, making it impossible to confirm the permanent state of the footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side clearly shows an unpaved, uneven surface with debris that constitutes a trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road without a designated facility, but the space for a crossing is unclear due to the construction."
+  }
+ ],
+ "error": null
+}

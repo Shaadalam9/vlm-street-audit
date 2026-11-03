@@ -1,0 +1,83 @@
+{
+ "clip_id": "HFqbSPeAPbU_01803000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians crossing road",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "no crossing facility visible",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Mark a pedestrian crossing to enhance visibility and safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by parked cars, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially visible but lacks clear detail to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road without a marked crossing, indicating a deficit."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The lack of a marked crossing is evident, and the suggestion to add one is appropriate."
+  }
+ ],
+ "error": null
+}

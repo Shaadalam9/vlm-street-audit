@@ -1,0 +1,47 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is a concrete wall and grass verge but no dedicated footway for pedestrians.",
+   "frame": 1,
+   "x": 750,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to the transit stop and commercial buildings, but no designated crossing facility is provided.",
+   "frame": 3,
+   "x": 400,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing or a signalised crossing to allow people to cross the road safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a wall and grass but no visible footway, so the deficit is present, though the suggestion is generic and feasibility is unclear due to the wall."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible near the transit stop, but the suggestion is generic and feasibility is unclear without knowing the road width or traffic volume."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,82 @@
+{
+ "clip_id": "HmHCTeUYA9c_00802000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_002.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_004.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_006.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_008.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"both_kerbs\"},\"needed\":[{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the urban road segment.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along this road to improve visibility and safety for pedestrians and drivers at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "both_kerbs"
+  },
+  "needed": [
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the urban road segment.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along this road to improve visibility and safety for pedestrians and drivers at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 586.79,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2866,
+  "completion_tokens": 280,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

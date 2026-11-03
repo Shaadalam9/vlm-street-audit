@@ -1,0 +1,102 @@
+{
+ "clip_id": "DtA5JoPL7U8_01247000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_002.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_004.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_006.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_008.jpg",
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A wide, grassy verge and a steep embankment rise directly from the road edge, with no continuous sidewalk or informal path visible.\",\"frame\":3,\"x\":250,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised sidewalk on the left side to separate pedestrians from the fast-moving traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A grassy shoulder and a metal guardrail separate the road from the residential buildings, with no usable pedestrian path present.\",\"frame\":3,\"x\":800,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a dedicated footway on the right side to provide a safe, protected route for residents.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is illuminated only by natural light with no street lamps visible on either side despite the overcast conditions.\",\"frame\":3,\"x\":500,\"y\":950,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A wide, grassy verge and a steep embankment rise directly from the road edge, with no continuous sidewalk or informal path visible.",
+    "frame": 3,
+    "x": 250,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised sidewalk on the left side to separate pedestrians from the fast-moving traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A grassy shoulder and a metal guardrail separate the road from the residential buildings, with no usable pedestrian path present.",
+    "frame": 3,
+    "x": 800,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a dedicated footway on the right side to provide a safe, protected route for residents."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is illuminated only by natural light with no street lamps visible on either side despite the overcast conditions.",
+    "frame": 3,
+    "x": 500,
+    "y": 950,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 91.17,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6054,
+  "completion_tokens": 442,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,132 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_002.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_004.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_006.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_008.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"Shops and businesses line the street, creating a high demand for pedestrians to cross, but there are no marked crosswalks or traffic signals.\",\"frame\":1,\"x\":50,\"y\":80,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with clear signage to provide a safe and legal place for people to cross the busy commercial street.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The visible kerbs are vertical, which creates a barrier for wheelchair users and those with strollers at the potential crossing point.\",\"frame\":1,\"x\":50,\"y\":80,\"measure\":\"improve_crossing\",\"suggestion\":\"Add a dropped kerb at the new pedestrian crossing to ensure accessible and safe passage for all users.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The narrow sidewalk is partially obstructed by a large parked truck and other roadside clutter.\",\"frame\":1,\"x\":20,\"y\":70,\"measure\":\"improve_crossing\",\"suggestion\":\"Designate and enforce a no-parking zone along this section to keep the footway clear and usable.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The path on the right is obstructed by a parked vehicle and general roadside items.\",\"frame\":4,\"x\":80,\"y\":75,\"measure\":\"improve_crossing\",\"suggestion\":\"Install bollards to prevent vehicles from parking on the footway and to protect pedestrians from traffic.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The footway surface appears uneven and poorly maintained, posing a trip risk.\",\"frame\":1,\"x\":30,\"y\":85,\"measure\":\"improve_crossing\",\"suggestion\":\"Re-pave the footway to create a smooth, continuous surface that is safe for walking.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is irregular and contains potential trip hazards.\",\"frame\":4,\"x\":85,\"y\":85,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a proper, level sidewalk with a smooth surface to eliminate trip hazards.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "Shops and businesses line the street, creating a high demand for pedestrians to cross, but there are no marked crosswalks or traffic signals.",
+    "frame": 1,
+    "x": 50,
+    "y": 80,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with clear signage to provide a safe and legal place for people to cross the busy commercial street."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The visible kerbs are vertical, which creates a barrier for wheelchair users and those with strollers at the potential crossing point.",
+    "frame": 1,
+    "x": 50,
+    "y": 80,
+    "measure": "improve_crossing",
+    "suggestion": "Add a dropped kerb at the new pedestrian crossing to ensure accessible and safe passage for all users."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The narrow sidewalk is partially obstructed by a large parked truck and other roadside clutter.",
+    "frame": 1,
+    "x": 20,
+    "y": 70,
+    "measure": "improve_crossing",
+    "suggestion": "Designate and enforce a no-parking zone along this section to keep the footway clear and usable."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The path on the right is obstructed by a parked vehicle and general roadside items.",
+    "frame": 4,
+    "x": 80,
+    "y": 75,
+    "measure": "improve_crossing",
+    "suggestion": "Install bollards to prevent vehicles from parking on the footway and to protect pedestrians from traffic."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The footway surface appears uneven and poorly maintained, posing a trip risk.",
+    "frame": 1,
+    "x": 30,
+    "y": 85,
+    "measure": "improve_crossing",
+    "suggestion": "Re-pave the footway to create a smooth, continuous surface that is safe for walking."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is irregular and contains potential trip hazards.",
+    "frame": 4,
+    "x": 85,
+    "y": 85,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a proper, level sidewalk with a smooth surface to eliminate trip hazards."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 194.52,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6287,
+  "completion_tokens": 675,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

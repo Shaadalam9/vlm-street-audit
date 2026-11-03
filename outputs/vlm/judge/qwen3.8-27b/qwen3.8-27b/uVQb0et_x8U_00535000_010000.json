@@ -1,0 +1,47 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous green metal fence runs along the left side of the road, preventing pedestrians from accessing the carriageway or a footway.",
+   "frame": 1,
+   "x": 100,
+   "y": 850,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe point for crossing the fenced road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway on the right is obstructed by parked vehicles, including a blue jeepney and several cars, forcing pedestrians to walk in the road.",
+   "frame": 1,
+   "x": 850,
+   "y": 850,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Provide a signalised crossing at the junction to allow safe passage for pedestrians navigating the obstructed footway."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left-side fence is visible, but a signalised crossing does not address the lack of a footway and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side obstruction is visible, but a signalised crossing does not fix the missing footway and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

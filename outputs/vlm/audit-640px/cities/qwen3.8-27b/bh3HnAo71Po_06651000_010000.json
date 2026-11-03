@@ -1,0 +1,102 @@
+{
+ "clip_id": "bh3HnAo71Po_06651000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_002.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_004.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_006.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_008.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is heavily obstructed by a large, dense cluster of parked scooters and bicycles, leaving no clear, continuous path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is completely blocked by a large, dense cluster of parked scooters and bicycles, leaving no clear, continuous path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the presence of shops, a bus stop, and a large number of pedestrians, but no formal crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is heavily obstructed by a large, dense cluster of parked scooters and bicycles, leaving no clear, continuous path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The footway is completely blocked by a large, dense cluster of parked scooters and bicycles, leaving no clear, continuous path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the presence of shops, a bus stop, and a large number of pedestrians, but no formal crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised crossing to provide a safe, level crossing point for pedestrians navigating the obstructed footway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 166.64,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2797,
+  "completion_tokens": 485,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

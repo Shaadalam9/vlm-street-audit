@@ -1,0 +1,47 @@
+{
+ "clip_id": "MlUNun68Clg_00205000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The path is an unpaved, informal strip of land rather than a purpose-built sidewalk.",
+   "frame": 1,
+   "x": 350,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous sidewalk on the left side of the road to provide a safe walking environment."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no designated footway or informal path on the right side of the road.",
+   "frame": 1,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a paved sidewalk on the right side of the road to ensure pedestrian safety and accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows an unpaved strip, but the frames do not show enough of the roadside space to confirm if a paved footway could be built."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a hard shoulder with no footway, but the frames do not show enough of the roadside space to confirm if a paved footway could be built."
+  }
+ ],
+ "error": null
+}

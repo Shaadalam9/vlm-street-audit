@@ -1,0 +1,90 @@
+{
+ "clip_id": "rSqSgrCGwRA_06528000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_06528000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left side of the carriageway is bounded by a continuous concrete wall and a planted median strip, with no sidewalk or path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, level footway on the left side, separated from the carriageway by a kerb and a buffer of planting.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a wide, multi-lane commercial street with no visible pedestrian crossing facilities, forcing pedestrians to cross a significant distance of traffic.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a central refuge island to provide a safe and controlled point for crossing the wide road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left side of the carriageway is bounded by a continuous concrete wall and a planted median strip, with no sidewalk or path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, level footway on the left side, separated from the carriageway by a kerb and a buffer of planting."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a wide, multi-lane commercial street with no visible pedestrian crossing facilities, forcing pedestrians to cross a significant distance of traffic.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a central refuge island to provide a safe and controlled point for crossing the wide road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 115.74,
+ "usage": {
+  "prompt_tokens": 2023,
+  "total_tokens": 2407,
+  "completion_tokens": 384,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

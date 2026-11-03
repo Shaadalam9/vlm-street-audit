@@ -1,0 +1,65 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side lacks a purpose-built sidewalk, consisting of an unpaved informal path.",
+   "frame": 4,
+   "x": 200,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved surface on the left side is uneven and broken.",
+   "frame": 4,
+   "x": 200,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the informal path on the left to remove trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There are shops and homes on both sides creating crossing demand, but no designated crossing facility is provided.",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side is clearly unpaved and lacks a formal sidewalk."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved area on the left is visibly uneven and fragmented."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings despite the presence of commercial activity."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "Et3NBh7E87A_00226000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous footway on the left side, and the suggestion is a generic width expansion that does not address the specific layout or visible deficits."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous footway on the right side, and the suggestion is a generic width expansion that does not address the specific layout or visible deficits."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,142 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_002.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_004.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_006.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_008.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, unpaved strip of ground between the building and the road, with no clear sidewalk.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, 1.5m-wide footway on the left side, separating pedestrians from the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area next to the road is occupied by market stalls and has no defined pedestrian path.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Create a 1.5m-wide footway on the right side, relocating the market stalls to a designated area.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The entire available space on the right is occupied by market stalls and goods.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a clear zone for the new footway by moving the market stalls to a designated market area.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved ground is uneven and has debris, creating trip hazards.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the new footway to create a smooth, even surface.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground is uneven and cluttered with goods from the market stalls.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the new footway to create a smooth, even surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand to cross due to shops and market on both sides, but no formal crossing is present.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised, marked pedestrian crossing at the main access point to the market.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED streetlights along both sides of the road to improve visibility at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, unpaved strip of ground between the building and the road, with no clear sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, 1.5m-wide footway on the left side, separating pedestrians from the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area next to the road is occupied by market stalls and has no defined pedestrian path.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Create a 1.5m-wide footway on the right side, relocating the market stalls to a designated area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The entire available space on the right is occupied by market stalls and goods.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a clear zone for the new footway by moving the market stalls to a designated market area."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved ground is uneven and has debris, creating trip hazards.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the new footway to create a smooth, even surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground is uneven and cluttered with goods from the market stalls.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the new footway to create a smooth, even surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand to cross due to shops and market on both sides, but no formal crossing is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised, marked pedestrian crossing at the main access point to the market."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED streetlights along both sides of the road to improve visibility at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 332.29,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 3043,
+  "completion_tokens": 731,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

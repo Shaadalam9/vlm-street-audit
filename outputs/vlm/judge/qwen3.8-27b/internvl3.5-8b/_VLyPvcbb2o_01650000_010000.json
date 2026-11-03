@@ -1,0 +1,29 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the construction barriers on the right footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a clear, unobstructed footway on the left, and the right side is a construction barrier, not a footway, so the claimed deficit is not visible and the suggested measure does not address"
+  }
+ ],
+ "error": null
+}

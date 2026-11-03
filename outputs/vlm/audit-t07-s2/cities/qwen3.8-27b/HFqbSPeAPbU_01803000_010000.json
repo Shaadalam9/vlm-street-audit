@@ -1,0 +1,102 @@
+{
+ "clip_id": "HFqbSPeAPbU_01803000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/HFqbSPeAPbU/HFqbSPeAPbU_01803000_010000/frame_002.jpg",
+  "data/snippets/HFqbSPeAPbU/HFqbSPeAPbU_01803000_010000/frame_004.jpg",
+  "data/snippets/HFqbSPeAPbU/HFqbSPeAPbU_01803000_010000/frame_006.jpg",
+  "data/snippets/HFqbSPeAPbU/HFqbSPeAPbU_01803000_010000/frame_008.jpg",
+  "data/snippets/HFqbSPeAPbU/HFqbSPeAPbU_01803000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous line of parked cars occupies the edge of the carriageway, leaving no separate paved or informal path for pedestrians to walk safely.\",\"frame\":1,\"x\":420,\"y\":590,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the left side to provide a safe, dedicated space for pedestrians separate from the parked vehicles.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are walking directly on the asphalt next to the parked cars, as there is no physical separation or sidewalk on the right edge.\",\"frame\":2,\"x\":750,\"y\":620,\"measure\":\"build_footway\",\"suggestion\":\"Provide a pedestrian walkway on the right side of the road to remove the need for people to walk in the traffic area.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians, including children, are crossing the road between parked cars without any marked crossing, signals, or refuge island to protect them.\",\"frame\":3,\"x\":500,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island to provide a safe point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous line of parked cars occupies the edge of the carriageway, leaving no separate paved or informal path for pedestrians to walk safely.",
+    "frame": 1,
+    "x": 420,
+    "y": 590,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the left side to provide a safe, dedicated space for pedestrians separate from the parked vehicles."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Pedestrians are walking directly on the asphalt next to the parked cars, as there is no physical separation or sidewalk on the right edge.",
+    "frame": 2,
+    "x": 750,
+    "y": 620,
+    "measure": "build_footway",
+    "suggestion": "Provide a pedestrian walkway on the right side of the road to remove the need for people to walk in the traffic area."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians, including children, are crossing the road between parked cars without any marked crossing, signals, or refuge island to protect them.",
+    "frame": 3,
+    "x": 500,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 112.43,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6077,
+  "completion_tokens": 465,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

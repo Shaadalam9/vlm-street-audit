@@ -1,0 +1,92 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_002.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_004.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_006.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_008.jpg",
+  "data/snippets/TKXHxRzvNIE/TKXHxRzvNIE_02087000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road lacks a formal sidewalk, consisting of an unpaved dirt shoulder where vehicles are parked.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a long, straight stretch with residential properties on the left and a scenic view on the right, creating a high demand for crossing, yet there are \",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to allow safe passage across the two lanes.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road lacks a formal sidewalk, consisting of an unpaved dirt shoulder where vehicles are parked.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a long, straight stretch with residential properties on the left and a scenic view on the right, creating a high demand for crossing, yet there are ",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to allow safe passage across the two lanes."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 118.86,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6017,
+  "completion_tokens": 382,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

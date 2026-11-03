@@ -1,0 +1,47 @@
+{
+ "clip_id": "hcmVrRXOo9Y_05647000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has a narrow, informal concrete path that is partially obstructed by construction debris and rubble, making it a trip hazard and not a proper, un-",
+   "frame": 1,
+   "x": 300,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved sidewalk on the left side, at least 1.5m wide, to provide a safe and unobstructed path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a clear demand for crossing due to the presence of shops and homes on both sides, but no marked or unmarked crossing facility is visible in the 100m",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing (e.g., a zebra crossing) at a logical point, such as near the visible shopfronts, to provide a safe and designated area for pe"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side has a narrow, debris-strewn path that does not meet footway standards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No pedestrian crossing is visible in the provided frames despite the built-up environment."
+  }
+ ],
+ "error": null
+}

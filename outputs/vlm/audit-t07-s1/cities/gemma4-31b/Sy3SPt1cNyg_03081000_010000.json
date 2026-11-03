@@ -1,0 +1,92 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_002.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_004.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_006.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_008.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"There is a concrete wall and grass verge but no dedicated path for pedestrians.\",\"frame\":1,\"x\":700,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a continuous sidewalk on the right side of the road to provide safe pedestrian access.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"High demand due to the transit stop and large buildings, but no designated crossing facility is present.\",\"frame\":3,\"x\":450,\"y\":650,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a marked or signalised pedestrian crossing near the transit stop to facilitate safe crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "There is a concrete wall and grass verge but no dedicated path for pedestrians.",
+    "frame": 1,
+    "x": 700,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a continuous sidewalk on the right side of the road to provide safe pedestrian access."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "High demand due to the transit stop and large buildings, but no designated crossing facility is present.",
+    "frame": 3,
+    "x": 450,
+    "y": 650,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a marked or signalised pedestrian crossing near the transit stop to facilitate safe crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 420.36,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2950,
+  "completion_tokens": 364,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

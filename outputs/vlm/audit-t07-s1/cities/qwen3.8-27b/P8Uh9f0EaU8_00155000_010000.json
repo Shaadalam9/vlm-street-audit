@@ -1,0 +1,82 @@
+{
+ "clip_id": "P8Uh9f0EaU8_00155000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_002.jpg",
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_004.jpg",
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_006.jpg",
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_008.jpg",
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"Four lanes of traffic with a signalised crossing and no central refuge\",\"frame\":4,\"x\":650,\"y\":750,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a raised central refuge island at the signalised crossing to shorten the pedestrian crossing distance.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "Four lanes of traffic with a signalised crossing and no central refuge",
+    "frame": 4,
+    "x": 650,
+    "y": 750,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a raised central refuge island at the signalised crossing to shorten the pedestrian crossing distance."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 333.22,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5890,
+  "completion_tokens": 278,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

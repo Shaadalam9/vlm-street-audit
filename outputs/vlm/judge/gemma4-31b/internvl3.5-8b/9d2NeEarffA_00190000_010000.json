@@ -1,0 +1,47 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to at least 3 meters for better accessibility."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to at least 3 meters for better accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The auditor identifies a missing footway but suggests improving a crossing, which does not address the lack of a sidewalk; furthermore, the right side is dominated by a bridge structure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The auditor identifies a missing footway but suggests improving a crossing, which does not address the lack of a sidewalk."
+  }
+ ],
+ "error": null
+}

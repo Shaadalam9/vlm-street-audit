@@ -1,0 +1,112 @@
+{
+ "clip_id": "gmDBzijaIAA_00309000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_002.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_004.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_006.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_008.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The paved sidewalk on the left is obstructed by parked motorcycles and a roadside stall, leaving no clear, continuous path for pedestrians, forcing them to use \",\"frame\":5,\"x\":20,\"y\":70,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the roadside stalls and enforce a no-parking zone on the sidewalk to restore a clear, continuous pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A woman is standing in the painted hatched area of the carriageway, waiting to cross a wide, multi-lane road that has no visible pedestrian crossing, refuge, or\",\"frame\":3,\"x\":840,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a central refuge island at this location to provide a safe crossing point for people waiting on the roadside.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"The curb at the pedestrian waiting area on the right is a continuous, raised structure with no visible dropped ramps or ramps at the crossing point.\",\"frame\":3,\"x\":840,\"y\":850,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised crossing platform with integrated dropped kerbs to provide step-free access and improve safety at the crossing point.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is an urban street, but there are no streetlights visible along the stretch of road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a full line of streetlights along both sides of the road to improve visibility and safety for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The paved sidewalk on the left is obstructed by parked motorcycles and a roadside stall, leaving no clear, continuous path for pedestrians, forcing them to use ",
+    "frame": 5,
+    "x": 20,
+    "y": 70,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the roadside stalls and enforce a no-parking zone on the sidewalk to restore a clear, continuous pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A woman is standing in the painted hatched area of the carriageway, waiting to cross a wide, multi-lane road that has no visible pedestrian crossing, refuge, or",
+    "frame": 3,
+    "x": 840,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a central refuge island at this location to provide a safe crossing point for people waiting on the roadside."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "The curb at the pedestrian waiting area on the right is a continuous, raised structure with no visible dropped ramps or ramps at the crossing point.",
+    "frame": 3,
+    "x": 840,
+    "y": 850,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised crossing platform with integrated dropped kerbs to provide step-free access and improve safety at the crossing point."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is an urban street, but there are no streetlights visible along the stretch of road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a full line of streetlights along both sides of the road to improve visibility and safety for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 56.23,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6207,
+  "completion_tokens": 595,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

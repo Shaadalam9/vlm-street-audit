@@ -1,0 +1,112 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_002.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_004.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_006.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_008.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"Shops and businesses line the right side, creating a demand for pedestrians to cross, but there is no marked or signalised crossing facility visible.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with kerb ramps at the frontage of the businesses on the right to provide a safe point of crossing.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The left side has a purpose-built sidewalk, but there are no visible dropped kerbs to facilitate safe access to the road or a crossing.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised crossing on the left to provide a level transition for pedestrians and a traffic-calming feature for drivers.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The surface of the sidewalk on the left appears uneven and poorly maintained, presenting trip hazards for pedestrians.\",\"frame\":5,\"x\":500,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the sidewalk on the left side to eliminate trip hazards and create a safe, accessible path.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right side is unpaved and uneven, with visible debris and a lack of a defined surface, creating significant trip hazards.\",\"frame\":5,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper, paved footway on the right side to replace the unsafe informal path and provide a safe route for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "Shops and businesses line the right side, creating a demand for pedestrians to cross, but there is no marked or signalised crossing facility visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with kerb ramps at the frontage of the businesses on the right to provide a safe point of crossing."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The left side has a purpose-built sidewalk, but there are no visible dropped kerbs to facilitate safe access to the road or a crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised crossing on the left to provide a level transition for pedestrians and a traffic-calming feature for drivers."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The surface of the sidewalk on the left appears uneven and poorly maintained, presenting trip hazards for pedestrians.",
+    "frame": 5,
+    "x": 500,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the sidewalk on the left side to eliminate trip hazards and create a safe, accessible path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right side is unpaved and uneven, with visible debris and a lack of a defined surface, creating significant trip hazards.",
+    "frame": 5,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper, paved footway on the right side to replace the unsafe informal path and provide a safe route for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 417.1,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6182,
+  "completion_tokens": 570,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

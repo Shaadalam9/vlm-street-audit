@@ -1,0 +1,47 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has an unpaved, informal path rather than a purpose-built sidewalk.",
+   "frame": 1,
+   "x": 200,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous sidewalk on the left side of the road to provide a safe walking environment."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to residential and commercial buildings on both sides, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to allow people to cross the road safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, but the suggestion is a generic measure that does not reference the specific street layout or visible features."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible, but the suggestion is generic and does not specify where on this street the crossing should be placed."
+  }
+ ],
+ "error": null
+}

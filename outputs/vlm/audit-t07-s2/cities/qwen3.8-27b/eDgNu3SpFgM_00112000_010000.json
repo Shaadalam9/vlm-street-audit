@@ -1,0 +1,122 @@
+{
+ "clip_id": "eDgNu3SpFgM_00112000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_002.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_004.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_006.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_008.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"grade_separated\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"No marked or signalised pedestrian crossing is visible on the ground level, although pedestrians are seen crossing the road in the foreground.\",\"frame\":1,\"x\":40,\"y\":80,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with clear signage at this high-demand location to provide a safe crossing point.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"No marked or signalised pedestrian crossing is visible on the ground level, although pedestrians are seen crossing the road in the foreground.\",\"frame\":1,\"x\":90,\"y\":80,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with clear signage at this high-demand location to provide a safe crossing point.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A row of parked bicycles is visible on the footway, partially obstructing the path for pedestrians.\",\"frame\":1,\"x\":10,\"y\":80,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Provide a dedicated, off-street bicycle parking area to keep the footway clear for pedestrian use.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"left_side\",\"evidence\":\"The road has four or more lanes, and there is no central refuge island for pedestrians to use when crossing.\",\"frame\":1,\"x\":40,\"y\":80,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island to allow pedestrians to cross the wide road in two stages, reducing their exposure to traffic.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"The road has four or more lanes, and there is no central refuge island for pedestrians to use when crossing.\",\"frame\":1,\"x\":90,\"y\":80,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island to allow pedestrians to cross the wide road in two stages, reducing their exposure to traffic.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "grade_separated",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "No marked or signalised pedestrian crossing is visible on the ground level, although pedestrians are seen crossing the road in the foreground.",
+    "frame": 1,
+    "x": 40,
+    "y": 80,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with clear signage at this high-demand location to provide a safe crossing point."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "No marked or signalised pedestrian crossing is visible on the ground level, although pedestrians are seen crossing the road in the foreground.",
+    "frame": 1,
+    "x": 90,
+    "y": 80,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with clear signage at this high-demand location to provide a safe crossing point."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A row of parked bicycles is visible on the footway, partially obstructing the path for pedestrians.",
+    "frame": 1,
+    "x": 10,
+    "y": 80,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Provide a dedicated, off-street bicycle parking area to keep the footway clear for pedestrian use."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "left_side",
+    "evidence": "The road has four or more lanes, and there is no central refuge island for pedestrians to use when crossing.",
+    "frame": 1,
+    "x": 40,
+    "y": 80,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island to allow pedestrians to cross the wide road in two stages, reducing their exposure to traffic."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "The road has four or more lanes, and there is no central refuge island for pedestrians to use when crossing.",
+    "frame": 1,
+    "x": 90,
+    "y": 80,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island to allow pedestrians to cross the wide road in two stages, reducing their exposure to traffic."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 170.68,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6246,
+  "completion_tokens": 634,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

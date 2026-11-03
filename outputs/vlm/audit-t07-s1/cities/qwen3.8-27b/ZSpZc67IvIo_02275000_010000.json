@@ -1,0 +1,92 @@
+{
+ "clip_id": "ZSpZc67IvIo_02275000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_002.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_004.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_006.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_008.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A visible junction with a blue directional sign and traffic lights, but no marked or signalised pedestrian crossing is present.\",\"frame\":1,\"x\":550,\"y\":400,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction indicated by the blue directional sign.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road is a two-way urban street with two lanes of traffic and no central refuge or median for pedestrians.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a central refuge island to the two-lane road to provide a safe waiting area for pedestrians crossing the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A visible junction with a blue directional sign and traffic lights, but no marked or signalised pedestrian crossing is present.",
+    "frame": 1,
+    "x": 550,
+    "y": 400,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction indicated by the blue directional sign."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road is a two-way urban street with two lanes of traffic and no central refuge or median for pedestrians.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a central refuge island to the two-lane road to provide a safe waiting area for pedestrians crossing the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 456.0,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5973,
+  "completion_tokens": 361,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

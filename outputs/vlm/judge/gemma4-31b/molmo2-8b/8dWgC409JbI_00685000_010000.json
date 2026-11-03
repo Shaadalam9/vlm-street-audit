@@ -1,0 +1,119 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the left side to provide a safe pedestrian path away from the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side to provide a safe pedestrian path away from the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this busy market junction to allow safe crossing when traffic is stopped."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "2 lanes and no crossing facility",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island at the centre of the crossing to provide a safe place for pedestrians to wait when traffic is stopped."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps and no crossing facility",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to allow wheelchair access and improve pedestrian safety."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban road with street_lighting none",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially during evening hours."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though some space exists between buildings and the road."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is occupied by market stalls and lacks a dedicated footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "While a crossing is needed, a signalised crossing is unrealistic for this narrow, informal market street."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The road is not wide enough to justify or accommodate a central refuge island."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no visible kerb ramps to facilitate accessibility."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames are taken during daylight, so the presence or absence of street lighting cannot be confirmed."
+  }
+ ],
+ "error": null
+}

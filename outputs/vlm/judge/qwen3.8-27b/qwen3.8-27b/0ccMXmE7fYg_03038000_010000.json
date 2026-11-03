@@ -1,0 +1,47 @@
+{
+ "clip_id": "0ccMXmE7fYg_03038000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway is visible on the left side of the road.",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built footway on the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway is visible on the right side of the road.",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built footway on the right side of the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a green barrier and trees, so the absence of a footway cannot be confirmed from the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows a grass verge and trees, but it is not clear if a footway is present or if there is space to build one."
+  }
+ ],
+ "error": null
+}

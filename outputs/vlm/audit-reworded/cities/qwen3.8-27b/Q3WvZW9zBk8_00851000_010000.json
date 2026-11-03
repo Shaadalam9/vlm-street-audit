@@ -1,0 +1,152 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00851000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_002.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_004.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_006.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_008.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A trodden strip of dirt and gravel serves as the path, with no paved sidewalk.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved, continuous footway on the left side to provide a safe, level surface for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area beside the road is an unpaved, uneven strip of dirt and gravel.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved, continuous footway on the right side to provide a safe, level surface for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Market stalls and goods are set up on the informal path, obstructing pedestrian movement.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the market stalls to a designated area away from the pedestrian path to clear the obstruction.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A building and a satellite dish are located directly on the informal path, blocking it.\",\"frame\":1,\"x\":900,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the building or create a clear, paved path around it to ensure the footway is unobstructed.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface is uneven and has debris, creating trip hazards.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved surface is uneven and has debris, creating trip hazards.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no marked or purpose-built crossing facility on this stretch of road.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at a logical point, such as near the market stalls, to provide a safe place to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for all road users, especially at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A trodden strip of dirt and gravel serves as the path, with no paved sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved, continuous footway on the left side to provide a safe, level surface for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area beside the road is an unpaved, uneven strip of dirt and gravel.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved, continuous footway on the right side to provide a safe, level surface for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Market stalls and goods are set up on the informal path, obstructing pedestrian movement.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the market stalls to a designated area away from the pedestrian path to clear the obstruction."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A building and a satellite dish are located directly on the informal path, blocking it.",
+    "frame": 1,
+    "x": 900,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the building or create a clear, paved path around it to ensure the footway is unobstructed."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface is uneven and has debris, creating trip hazards.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved surface is uneven and has debris, creating trip hazards.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no marked or purpose-built crossing facility on this stretch of road.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing at a logical point, such as near the market stalls, to provide a safe place to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for all road users, especially at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 287.35,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6470,
+  "completion_tokens": 835,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "fwzHuma5fe0_02305000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The area to the left of the road is unpaved and lacks a formal sidewalk, consisting of a snow-covered informal path.",
+   "frame": 3,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a formal, paved sidewalk on the left side of the road to provide a safe and accessible path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and covered in snow and slush, creating significant trip hazards.",
+   "frame": 3,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the left-side pedestrian area to eliminate trip hazards and improve accessibility."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are seen crossing the road in the carriageway, but there is no designated crossing facility provided.",
+   "frame": 3,
+   "x": 220,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal paved sidewalk, as seen in the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved, snow-covered area on the left presents clear trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing the road where no designated crossing exists."
+  }
+ ],
+ "error": null
+}

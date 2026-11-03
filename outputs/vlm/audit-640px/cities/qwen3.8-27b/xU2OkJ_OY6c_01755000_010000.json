@@ -1,0 +1,112 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Vehicles are parked directly against the building line with no visible sidewalk or path for pedestrians.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide concrete footway between the building line and the parking bays.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is lined with parked cars and residential buildings with no dedicated pedestrian path.\",\"frame\":1,\"x\":900,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a 1.5 m wide footway on the right side to provide a safe walking surface away from the parked cars.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street has residential and commercial frontages on both sides, creating a high demand for crossing, but there is no marked or physical crossing facility.\",\"frame\":3,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing with a central refuge island to manage the high crossing demand.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lamps are visible along the length of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lamps along both sides of the road to improve visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Vehicles are parked directly against the building line with no visible sidewalk or path for pedestrians.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide concrete footway between the building line and the parking bays."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is lined with parked cars and residential buildings with no dedicated pedestrian path.",
+    "frame": 1,
+    "x": 900,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a 1.5 m wide footway on the right side to provide a safe walking surface away from the parked cars."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street has residential and commercial frontages on both sides, creating a high demand for crossing, but there is no marked or physical crossing facility.",
+    "frame": 3,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing with a central refuge island to manage the high crossing demand."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lamps are visible along the length of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lamps along both sides of the road to improve visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 310.02,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2829,
+  "completion_tokens": 517,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

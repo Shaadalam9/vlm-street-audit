@@ -1,0 +1,137 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The area between the parked yellow taxi and the shopfronts is a narrow, uneven strip of ground used by pedestrians, lacking a proper paved sidewalk.",
+   "frame": 4,
+   "x": 150,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, level footway of at least 1.5m width along the left side of the road, separating pedestrians from the carriageway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The informal path on the left is completely occupied by a parked yellow taxi and market stalls with umbrellas.",
+   "frame": 4,
+   "x": 300,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone and relocate market stalls to a designated area to clear the pedestrian path on the left."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The ground surface on the left is uneven, with visible cracks, debris, and a lack of a smooth, continuous surface.",
+   "frame": 4,
+   "x": 200,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side pedestrian area with a smooth, durable material to eliminate trip hazards."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is an informal, uneven path heavily used by pedestrians and occupied by market stalls.",
+   "frame": 4,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, level footway of at least 1.5m width along the right side of the road to provide a safe walking surface."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "The informal path on the right is obstructed by numerous market stalls, umbrellas, and parked motorcycles.",
+   "frame": 4,
+   "x": 800,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Regulate the placement of market stalls and enforce a no-parking zone for motorcycles to keep the pedestrian path on the right clear."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground on the right is uneven, with scattered litter and debris, creating significant trip hazards for pedestrians.",
+   "frame": 4,
+   "x": 900,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the right-side pedestrian area with a smooth, durable material and implement a regular cleaning schedule to remove debris."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to shops and stalls on both sides, but no marked or purpose-built crossing facility is visible.",
+   "frame": 4,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point to provide a safe and designated place for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow, uneven strip on the left used by pedestrians, confirming the deficit, but the available space for a new footway is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left path is visibly blocked by a taxi and stalls, but it is unclear if there is enough space to relocate them effectively."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The uneven and cracked surface on the left is clearly visible, and resurfacing is a standard, feasible repair."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is an informal, uneven path, but the frames do not show enough of the building line to confirm if a new footway can be built."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right path is heavily obstructed by stalls and motorcycles, but the feasibility of clearing it depends on the market's operational needs."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The uneven ground and litter on the right are visible, and resurfacing and cleaning are realistic measures."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The lack of a crossing is evident given the high pedestrian activity, and installing a marked crossing is a standard, feasible solution."
+  }
+ ],
+ "error": null
+}

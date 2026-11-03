@@ -1,0 +1,120 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; only a grassy verge and a trodden strip beside the road.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m paved footway on the left, set back from the carriageway edge.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No usable footway; the roadside is a fence and open ground with no pedestrian path.\",\"frame\":1,\"x\":800,\"y\":720,\"measure\":\"build_footway\",\"suggestion\":\"Provide a 1.5 m paved footway on the right, separated from the road by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Homes and a shopfront on both sides create crossing demand, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility markings at the junction of the side road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No crossing exists, so there are no dropped kerbs to assist pedestrians.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Add dropped kerbs at both ends of the new marked crossing.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Only a few distant poles are visible; the stretch is not adequately lit for night use.\",\"frame\":1,\"x\":560,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a line of street lights along both sides of the road at roughly 40 m spacing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; only a grassy verge and a trodden strip beside the road.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m paved footway on the left, set back from the carriageway edge."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No usable footway; the roadside is a fence and open ground with no pedestrian path.",
+    "frame": 1,
+    "x": 800,
+    "y": 720,
+    "measure": "build_footway",
+    "suggestion": "Provide a 1.5 m paved footway on the right, separated from the road by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Homes and a shopfront on both sides create crossing demand, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility markings at the junction of the side road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No crossing exists, so there are no dropped kerbs to assist pedestrians.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Add dropped kerbs at both ends of the new marked crossing."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Only a few distant poles are visible; the stretch is not adequately lit for night use.",
+    "frame": 1,
+    "x": 560,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a line of street lights along both sides of the road at roughly 40 m spacing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 146.09,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2650,
+  "completion_tokens": 587,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

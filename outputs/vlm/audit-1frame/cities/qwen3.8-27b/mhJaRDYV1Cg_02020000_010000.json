@@ -1,0 +1,90 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is a grassy verge with no paved or trodden path for pedestrians.\",\"frame\":1,\"x\":300,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the left verge to provide a safe, continuous path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A bus stop is visible on the right, creating a high demand for crossing, but there is no marked or purpose-built crossing facility.\",\"frame\":1,\"x\":620,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the bus stop location to provide a safe and visible place for passengers to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is a grassy verge with no paved or trodden path for pedestrians.",
+    "frame": 1,
+    "x": 300,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the left verge to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A bus stop is visible on the right, creating a high demand for crossing, but there is no marked or purpose-built crossing facility.",
+    "frame": 1,
+    "x": 620,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the bus stop location to provide a safe and visible place for passengers to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 106.68,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2428,
+  "completion_tokens": 365,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

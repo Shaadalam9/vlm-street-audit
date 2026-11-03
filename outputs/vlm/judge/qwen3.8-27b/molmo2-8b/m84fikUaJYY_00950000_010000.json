@@ -1,0 +1,29 @@
+{
+ "clip_id": "m84fikUaJYY_00950000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing on the right side to provide a safe crossing point for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a street scene but do not provide enough detail to confirm the absence of a crossing facility on the right side, making the deficit unverifiable."
+  }
+ ],
+ "error": null
+}

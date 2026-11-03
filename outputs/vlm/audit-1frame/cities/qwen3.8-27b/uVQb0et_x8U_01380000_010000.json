@@ -1,0 +1,100 @@
+{
+ "clip_id": "uVQb0et_x8U_01380000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous green metal fence runs along the left edge of the carriageway, with no usable footway or informal path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Remove the green fence and construct a paved footway on the left side to provide a safe walking space.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"The road has commercial and residential land uses on both sides, creating a high demand for crossing, but there is no marked or purpose-built crossing facility.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility paint and signage to provide a safe place for people to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The urban road has no street lights visible along the stretch, which would be a safety issue for pedestrians and drivers at night.\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous green metal fence runs along the left edge of the carriageway, with no usable footway or informal path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Remove the green fence and construct a paved footway on the left side to provide a safe walking space."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "The road has commercial and residential land uses on both sides, creating a high demand for crossing, but there is no marked or purpose-built crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility paint and signage to provide a safe place for people to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The urban road has no street lights visible along the stretch, which would be a safety issue for pedestrians and drivers at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 130.87,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2523,
+  "completion_tokens": 460,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

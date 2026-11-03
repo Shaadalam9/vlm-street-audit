@@ -1,0 +1,112 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_002.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_004.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_006.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_008.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bordered by a yellow-painted curb and a dense, unbroken line of trees and bushes, with no visible path for pedestrians.\",\"frame\":1,\"x\":100,\"y\":900,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous, paved footway along the left side of the road, separated from the carriageway by a grass verge or a physical barrier.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road consists of a grassy verge and trees, with no designated path for pedestrians.\",\"frame\":1,\"x\":900,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous, paved footway along the right side of the road, separated from the carriageway by a grass verge or a physical barrier.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a wide, multi-lane street with no visible pedestrian crossing facilities, such as a zebra crossing or a signalised crossing.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a central refuge island to allow safe crossing of the multiple lanes.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lighting along the road to improve visibility for both pedestrians and drivers, especially at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bordered by a yellow-painted curb and a dense, unbroken line of trees and bushes, with no visible path for pedestrians.",
+    "frame": 1,
+    "x": 100,
+    "y": 900,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous, paved footway along the left side of the road, separated from the carriageway by a grass verge or a physical barrier."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road consists of a grassy verge and trees, with no designated path for pedestrians.",
+    "frame": 1,
+    "x": 900,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous, paved footway along the right side of the road, separated from the carriageway by a grass verge or a physical barrier."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a wide, multi-lane street with no visible pedestrian crossing facilities, such as a zebra crossing or a signalised crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a central refuge island to allow safe crossing of the multiple lanes."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lighting along the road to improve visibility for both pedestrians and drivers, especially at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 166.33,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6199,
+  "completion_tokens": 564,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

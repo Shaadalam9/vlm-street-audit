@@ -1,0 +1,101 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is an unpaved, dirt shoulder with no constructed sidewalk, forcing pedestrians to walk in the roadway.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, 1.5m-wide footway on the left side, separating pedestrians from the vehicle carriageway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The informal path on the left is completely obstructed by a large, covered cart and other debris, making it unusable for pedestrians.",
+   "frame": 1,
+   "x": 80,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove the parked cart and debris from the left shoulder to create a clear, usable path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved surface on the left is uneven and littered with debris, creating significant trip hazards for anyone walking there.",
+   "frame": 1,
+   "x": 100,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the left shoulder to create a smooth, even surface free of trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the commercial activity and people on foot, but no marked or purpose-built crossing facility is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked zebra crossing at a logical point to provide a safe place for pedestrians to cross."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "There are no kerb ramps visible at any potential crossing point, as no formal crossing exists.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Construct a raised crossing with dropped kerbs to provide a safe and accessible crossing point for all users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is clearly an unpaved dirt shoulder with no constructed footway, and the suggestion to build one is specific to this location."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A large cart and debris are visibly obstructing the path on the left, and removing them is a feasible and specific action."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved surface on the left is uneven and littered, creating trip hazards, and grading/paving is a specific and logical fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible on the road, and the suggestion to add one is specific to the observed lack of infrastructure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No kerb ramps are visible, and the suggestion to add a raised crossing with dropped kerbs is specific to the need for an accessible crossing."
+  }
+ ],
+ "error": null
+}

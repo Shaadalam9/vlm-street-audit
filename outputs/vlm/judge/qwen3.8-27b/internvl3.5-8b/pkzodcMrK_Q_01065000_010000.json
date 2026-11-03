@@ -1,0 +1,83 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no crossing facility visible",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this location."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "street lighting is none",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights to improve visibility and safety along the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left verge is obscured by dense trees, so it is impossible to confirm the absence of a footway or the available space for one."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a grassy verge with trees, making it unclear if a footway is missing or if there is enough space to build one."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The clip shows a continuous stretch of road without a visible intersection, so the need for a crossing cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The footage is taken during the day, so the presence or absence of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

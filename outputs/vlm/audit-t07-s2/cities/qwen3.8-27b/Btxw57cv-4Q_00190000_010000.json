@@ -1,0 +1,102 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The only space for pedestrians is an informal, unpaved strip next to the temporary barrier, with no proper sidewalk.\",\"frame\":3,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved sidewalk along the left side, behind the current temporary barrier, to provide a safe and dry walking surface.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal footway is uneven and appears to have debris or construction materials, creating significant trip hazards for pedestrians.\",\"frame\":3,\"x\":120,\"y\":880,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the informal footway on the left to create a smooth, even surface free of obstacles.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are visible on the left side, and there is a high demand for crossing due to the mixed land use, but there is no marked or signalised crossing in a \",\"frame\":3,\"x\":250,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing, such as a zebra crossing, at a logical point near the junction to provide a safe crossing point for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The only space for pedestrians is an informal, unpaved strip next to the temporary barrier, with no proper sidewalk.",
+    "frame": 3,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved sidewalk along the left side, behind the current temporary barrier, to provide a safe and dry walking surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal footway is uneven and appears to have debris or construction materials, creating significant trip hazards for pedestrians.",
+    "frame": 3,
+    "x": 120,
+    "y": 880,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the informal footway on the left to create a smooth, even surface free of obstacles."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are visible on the left side, and there is a high demand for crossing due to the mixed land use, but there is no marked or signalised crossing in a ",
+    "frame": 3,
+    "x": 250,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing, such as a zebra crossing, at a logical point near the junction to provide a safe crossing point for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 100.9,
+ "usage": {
+  "prompt_tokens": 4612,
+  "total_tokens": 5087,
+  "completion_tokens": 475,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

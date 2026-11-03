@@ -1,0 +1,65 @@
+{
+ "clip_id": "tgYTmg7hlkQ_00075000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "There is no purpose-built sidewalk, only a grass verge and shrubs.",
+   "frame": 4,
+   "x": 150,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous, paved sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no purpose-built sidewalk visible on the right side.",
+   "frame": 4,
+   "x": 850,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a paved sidewalk on the right side of the road to ensure pedestrian safety and accessibility."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a high-demand area near commercial buildings and a junction, but no designated pedestrian crossing is visible.",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to allow people to safely cross this multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows a grass verge and shrubs with no visible paved footway, so the deficit is present and the suggestion is specific to this side, though the available space for construction is not a "
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is occupied by traffic lanes and a vehicle, with no visible footway, making the deficit visible and the suggestion specific, but the feasibility is unclear due to the lack of visible "
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a multi-lane road with no marked crossing, confirming the deficit, and the suggestion is specific to this location, but the feasibility of adding a signalised crossing is unclear due"
+  }
+ ],
+ "error": null
+}

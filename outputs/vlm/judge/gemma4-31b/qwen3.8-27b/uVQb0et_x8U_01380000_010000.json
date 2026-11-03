@@ -1,0 +1,65 @@
+{
+ "clip_id": "uVQb0et_x8U_01380000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous green metal fence runs along the left edge of the road, separating the carriageway from the grass verge and properties, with no gap for a footway.",
+   "frame": 1,
+   "x": 150,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side, either by widening the verge or by relocating the fence to create a safe, continuous path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has commercial and residential buildings on both sides, creating a high demand for crossing, but there is no marked or unmarked crossing facility in a ",
+   "frame": 3,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe and legal place for people to cross the road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "There are no street lights visible along the road in any of the frames, only utility poles with power lines.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for all road users during the night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A fence blocks the left side, and a footway could be built on the verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the frames don't show enough of the road length to determine if a refuge island is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible on the poles, and adding them is a standard feasible upgrade."
+  }
+ ],
+ "error": null
+}

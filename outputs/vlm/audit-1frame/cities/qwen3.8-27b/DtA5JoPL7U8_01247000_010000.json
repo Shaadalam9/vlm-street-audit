@@ -1,0 +1,100 @@
+{
+ "clip_id": "DtA5JoPL7U8_01247000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DtA5JoPL7U8/DtA5JoPL7U8_01247000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A grassy, sloping embankment rises directly from the road edge with no path or pavement for pedestrians.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, level footway on the left side, separated from the carriageway by a kerb and a buffer strip.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is a narrow, unpaved shoulder leading to a grass verge and buildings, with no dedicated pedestrian path.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a purpose-built footway on the right side to provide a safe, separated route for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the length of the road under the overcast sky.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A grassy, sloping embankment rises directly from the road edge with no path or pavement for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, level footway on the left side, separated from the carriageway by a kerb and a buffer strip."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is a narrow, unpaved shoulder leading to a grass verge and buildings, with no dedicated pedestrian path.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a purpose-built footway on the right side to provide a safe, separated route for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the length of the road under the overcast sky.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 24.27,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2510,
+  "completion_tokens": 447,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

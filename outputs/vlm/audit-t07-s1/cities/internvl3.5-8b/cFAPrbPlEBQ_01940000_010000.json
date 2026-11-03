@@ -1,0 +1,92 @@
+{
+ "clip_id": "cFAPrbPlEBQ_01940000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cFAPrbPlEBQ/cFAPrbPlEBQ_01940000_010000/frame_002.jpg",
+  "data/snippets/cFAPrbPlEBQ/cFAPrbPlEBQ_01940000_010000/frame_004.jpg",
+  "data/snippets/cFAPrbPlEBQ/cFAPrbPlEBQ_01940000_010000/frame_006.jpg",
+  "data/snippets/cFAPrbPlEBQ/cFAPrbPlEBQ_01940000_010000/frame_008.jpg",
+  "data/snippets/cFAPrbPlEBQ/cFAPrbPlEBQ_01940000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk_1_to_3m visible\",\"frame\":2,\"x\":310,\"y\":470,\"measure\":\"improve_crossing\",\"suggestion\":\"Increase the width of the sidewalk to allow more pedestrian space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk_1_to_3m visible\",\"frame\":2,\"x\":800,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Increase the width of the sidewalk to allow more pedestrian space.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk_1_to_3m visible",
+    "frame": 2,
+    "x": 310,
+    "y": 470,
+    "measure": "improve_crossing",
+    "suggestion": "Increase the width of the sidewalk to allow more pedestrian space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk_1_to_3m visible",
+    "frame": 2,
+    "x": 800,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Increase the width of the sidewalk to allow more pedestrian space."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 54.98,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13032,
+  "completion_tokens": 325,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

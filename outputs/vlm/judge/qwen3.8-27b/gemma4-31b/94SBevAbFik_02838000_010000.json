@@ -1,0 +1,29 @@
+{
+ "clip_id": "94SBevAbFik_02838000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Pedestrians are present on the footway and there is a high-density building, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 750,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement across the road to the building."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians on the footway and a large building, but the road is narrow with parked cars on both sides, making it unclear if there is enough space to install a marked crossing."
+  }
+ ],
+ "error": null
+}

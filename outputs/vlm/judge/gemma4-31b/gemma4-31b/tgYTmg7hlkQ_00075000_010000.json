@@ -1,0 +1,65 @@
+{
+ "clip_id": "tgYTmg7hlkQ_00075000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "There is no purpose-built sidewalk, only a grass verge and shrubs.",
+   "frame": 4,
+   "x": 150,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous, paved sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no purpose-built sidewalk visible on the right side.",
+   "frame": 4,
+   "x": 850,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a paved sidewalk on the right side of the road to ensure pedestrian safety and accessibility."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a high-demand area near commercial buildings and a junction, but no designated pedestrian crossing is visible.",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to allow people to safely cross this multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side shows only grass and shrubs with no paved footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is obscured by other vehicles."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No pedestrian crossing is visible at this junction despite the urban environment."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a low wall and a grassy verge, with no paved or designated path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous, paved footway along the left side of the road, separated from the carriageway by a kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is separated from the adjacent buildings by a high concrete barrier, providing no access for pedestrians.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Provide a safe and accessible footway on the right side, either by lowering the barrier or building a new path.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the mixed-use buildings on both sides, but no marked or signalised crossing is visible in the 100m stretch.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to allow safe passage across the multi-lane road.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road has four or more lanes, and any future crossing would be difficult to cross in one go without a refuge.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Ensure that any new pedestrian crossing includes a central refuge island to allow users to cross one direction of traffic at a time.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a low wall and a grassy verge, with no paved or designated path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous, paved footway along the left side of the road, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is separated from the adjacent buildings by a high concrete barrier, providing no access for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Provide a safe and accessible footway on the right side, either by lowering the barrier or building a new path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the mixed-use buildings on both sides, but no marked or signalised crossing is visible in the 100m stretch.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to allow safe passage across the multi-lane road."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road has four or more lanes, and any future crossing would be difficult to cross in one go without a refuge.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Ensure that any new pedestrian crossing includes a central refuge island to allow users to cross one direction of traffic at a time."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 138.1,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6207,
+  "completion_tokens": 572,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

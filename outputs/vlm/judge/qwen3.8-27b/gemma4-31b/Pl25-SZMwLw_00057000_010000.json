@@ -1,0 +1,47 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk or informal path provided along the motorway edge",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian path along the left side of the motorway to provide safe passage."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no sidewalk or informal path provided along the motorway edge",
+   "frame": 1,
+   "x": 900,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian path along the right side of the motorway to provide safe passage."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a concrete barrier on the left and a grassy verge on the right, but the specific edge of the motorway is not clearly visible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows a grassy area and trees, but the exact edge of the road is not clearly defined to confirm the absence of a footway."
+  }
+ ],
+ "error": null
+}

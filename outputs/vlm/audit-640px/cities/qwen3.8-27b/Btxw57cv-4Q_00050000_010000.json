@@ -1,0 +1,112 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is a narrow, informal strip that is heavily congested with parked and moving motorbikes, leaving no clear, safe path for pedestrians.\",\"frame\":5,\"x\":850,\"y\":650,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-side footway and install a physical barrier to separate it from the carriageway, creating a safe, dedicated space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial nature of the street and the presence of a traffic signal, but no marked or signalised pedestrian is a\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction to provide a safe and visible place for people to cross the busy road.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road has four or more lanes for motor traffic, and any crossing would be a long, dangerous distance for pedestrians to cross without a central refuge.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Construct a central refuge island in the middle of the road to allow pedestrians to cross one direction of traffic at a time.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at any potential crossing point, which would be a barrier for people with mobility impairments or those with strollers.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Build a raised crossing with integrated kerb ramps to provide a safe, accessible, and level crossing point for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is a narrow, informal strip that is heavily congested with parked and moving motorbikes, leaving no clear, safe path for pedestrians.",
+    "frame": 5,
+    "x": 850,
+    "y": 650,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-side footway and install a physical barrier to separate it from the carriageway, creating a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial nature of the street and the presence of a traffic signal, but no marked or signalised pedestrian is a",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe and visible place for people to cross the busy road."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road has four or more lanes for motor traffic, and any crossing would be a long, dangerous distance for pedestrians to cross without a central refuge.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Construct a central refuge island in the middle of the road to allow pedestrians to cross one direction of traffic at a time."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at any potential crossing point, which would be a barrier for people with mobility impairments or those with strollers.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Build a raised crossing with integrated kerb ramps to provide a safe, accessible, and level crossing point for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 194.08,
+ "usage": {
+  "prompt_tokens": 2012,
+  "total_tokens": 2617,
+  "completion_tokens": 605,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

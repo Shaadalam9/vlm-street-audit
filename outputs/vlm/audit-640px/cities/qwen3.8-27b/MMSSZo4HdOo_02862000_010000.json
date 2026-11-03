@@ -1,0 +1,122 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has no footway, with vehicles and pedestrians sharing the same space.\",\"frame\":1,\"x\":850,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the right side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is obstructed by parked vehicles and goods, making it unusable.\",\"frame\":1,\"x\":150,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles and goods from the left footway to ensure it is clear and usable for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway has uneven and broken sections that pose trip hazards.\",\"frame\":1,\"x\":150,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven and broken sections of the left footway to eliminate trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is no designated crossing facility visible, despite the presence of pedestrians and vehicles.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with appropriate signage to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road lacks street lighting, which is a concern for pedestrian and vehicle safety, especially at night.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for both pedestrians and vehicles.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has no footway, with vehicles and pedestrians sharing the same space.",
+    "frame": 1,
+    "x": 850,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the right side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The left footway is obstructed by parked vehicles and goods, making it unusable.",
+    "frame": 1,
+    "x": 150,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles and goods from the left footway to ensure it is clear and usable for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway has uneven and broken sections that pose trip hazards.",
+    "frame": 1,
+    "x": 150,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven and broken sections of the left footway to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is no designated crossing facility visible, despite the presence of pedestrians and vehicles.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with appropriate signage to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road lacks street lighting, which is a concern for pedestrian and vehicle safety, especially at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for both pedestrians and vehicles."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 130.15,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2886,
+  "completion_tokens": 574,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

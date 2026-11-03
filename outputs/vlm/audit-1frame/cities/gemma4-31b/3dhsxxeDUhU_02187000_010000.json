@@ -1,0 +1,100 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No purpose-built sidewalk is present; buildings open directly onto the road edge.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side to separate pedestrians from motor traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No purpose-built sidewalk is present; the road edge meets a grassy verge and trees.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a paved sidewalk on the right side to provide a safe walking space.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"High commercial demand on the left side with no designated crossing facility provided.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to facilitate safe crossing between the commercial shops and the opposite side.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No purpose-built sidewalk is present; buildings open directly onto the road edge.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from motor traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No purpose-built sidewalk is present; the road edge meets a grassy verge and trees.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a paved sidewalk on the right side to provide a safe walking space."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "High commercial demand on the left side with no designated crossing facility provided.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to facilitate safe crossing between the commercial shops and the opposite side."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 198.86,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1941,
+  "completion_tokens": 441,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

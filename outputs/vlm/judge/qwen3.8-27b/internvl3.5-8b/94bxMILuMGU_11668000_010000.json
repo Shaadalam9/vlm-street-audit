@@ -1,0 +1,47 @@
+{
+ "clip_id": "94bxMILuMGU_11668000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide paved area on the left, but it is unclear if it is a footway or a plaza; a footbridge is a generic and infeasible solution for a missing footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a sidewalk, but its width is not clearly 3m or more; a footbridge is a generic and infeasible solution for a missing footway."
+  }
+ ],
+ "error": null
+}

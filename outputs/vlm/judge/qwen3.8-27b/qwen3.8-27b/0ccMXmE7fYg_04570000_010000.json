@@ -1,0 +1,29 @@
+{
+ "clip_id": "0ccMXmE7fYg_04570000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A row of parked bicycles and a cafe seating area occupies the footway.",
+   "frame": 5,
+   "x": 150,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the bicycle parking and cafe seating to a designated area off the footway to restore a clear pedestrian path."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a cafe seating area and bicycles on the left footway, but the suggestion is a generic measure that does not specify a location or method for this street."
+  }
+ ],
+ "error": null
+}

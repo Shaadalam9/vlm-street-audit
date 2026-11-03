@@ -1,0 +1,122 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left side of the road is occupied by market stalls, parked vehicles and goods, with no defined or usable path for pedestrians.\",\"frame\":4,\"x\":150,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, 1.5m-wide footway on the left side, separated from the carriageway by a kerb, to provide a safe route for pedestrians away from the roadside market.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The right-hand footway is obstructed by a group of people sitting on chairs and a pile of goods on the pavement.\",\"frame\":3,\"x\":900,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce footway clearances by removing the seated group and their goods from the pavement to restore a continuous walking path.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The surface of the right-hand footway is uneven, with visible cracks, potholes and scattered litter that pose a trip risk.\",\"frame\":3,\"x\":900,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-hand footway to create a smooth, even walking surface and remove the accumulated debris.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A high demand for crossing is evident from pedestrians on both sides and in the road, but there is no marked or physical crossing facility.\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the location where the man in white is walking across the road to provide a safe and legal crossing point.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames, leaving the area unlit for nighttime use.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lamps along both sides of the road to improve visibility and safety for all users during the evening.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left side of the road is occupied by market stalls, parked vehicles and goods, with no defined or usable path for pedestrians.",
+    "frame": 4,
+    "x": 150,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, 1.5m-wide footway on the left side, separated from the carriageway by a kerb, to provide a safe route for pedestrians away from the roadside market."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The right-hand footway is obstructed by a group of people sitting on chairs and a pile of goods on the pavement.",
+    "frame": 3,
+    "x": 900,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Enforce footway clearances by removing the seated group and their goods from the pavement to restore a continuous walking path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The surface of the right-hand footway is uneven, with visible cracks, potholes and scattered litter that pose a trip risk.",
+    "frame": 3,
+    "x": 900,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-hand footway to create a smooth, even walking surface and remove the accumulated debris."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A high demand for crossing is evident from pedestrians on both sides and in the road, but there is no marked or physical crossing facility.",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the location where the man in white is walking across the road to provide a safe and legal crossing point."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames, leaving the area unlit for nighttime use.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lamps along both sides of the road to improve visibility and safety for all users during the evening."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 166.64,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6281,
+  "completion_tokens": 669,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

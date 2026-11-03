@@ -1,0 +1,102 @@
+{
+ "clip_id": "tgYTmg7hlkQ_00075000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_00075000_010000/frame_002.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_00075000_010000/frame_004.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_00075000_010000/frame_006.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_00075000_010000/frame_008.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_00075000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"3\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no footway present\",\"frame\":1,\"x\":100,\"y\":300,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk on the left side to provide a safe pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no footway present\",\"frame\":1,\"x\":800,\"y\":300,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk on the right side to provide a safe pedestrian path.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"4_or_more lanes and no refuge\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a refuge island at the crossing to provide a safe waiting area for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "3",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no footway present",
+    "frame": 1,
+    "x": 100,
+    "y": 300,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk on the left side to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no footway present",
+    "frame": 1,
+    "x": 800,
+    "y": 300,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk on the right side to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "4_or_more lanes and no refuge",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a refuge island at the crossing to provide a safe waiting area for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 72.33,
+ "usage": {
+  "prompt_tokens": 5027,
+  "total_tokens": 5408,
+  "completion_tokens": 381,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

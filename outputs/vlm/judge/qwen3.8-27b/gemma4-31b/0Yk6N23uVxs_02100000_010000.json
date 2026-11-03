@@ -1,0 +1,83 @@
+{
+ "clip_id": "0Yk6N23uVxs_02100000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal path under 1m and is blocked by construction equipment and parked bikes.",
+   "frame": 4,
+   "x": 150,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper, continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The left side is blocked by a cherry picker and construction workers.",
+   "frame": 4,
+   "x": 250,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Ensure construction activities do not completely block pedestrian access to the footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and obstructed by debris and equipment.",
+   "frame": 4,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Level the surface of the left-side pedestrian path to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are seen crossing the road in the carriageway without any designated crossing facility.",
+   "frame": 1,
+   "x": 680,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe place for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow, obstructed path on the left, but the suggestion to build a sidewalk is a generic measure that does not specify how to use the visible space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The cherry picker is clearly blocking the path, and the suggestion to clear it is specific to the visible obstruction, though the feasibility of moving it is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The uneven surface is visible, but the suggestion to level it is a generic repair measure that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing without a marked facility, but the suggestion to add a crossing is generic and does not specify where on this street it would be placed."
+  }
+ ],
+ "error": null
+}

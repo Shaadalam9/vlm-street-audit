@@ -1,0 +1,47 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is lined with parked vehicles, and there is no visible sidewalk or path for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road, separated from the parking area by a physical barrier."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is lined with parked vehicles, and there is no visible sidewalk or path for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road, separated from the parking area by a physical barrier."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a bus and parked cars, so the presence of a footway cannot be confirmed, and the suggestion is a generic template."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is lined with parked cars, but the space behind them is not visible, so the absence of a footway cannot be confirmed, and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

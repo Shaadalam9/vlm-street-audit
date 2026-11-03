@@ -1,0 +1,101 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00524000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has no purpose-built sidewalk, only a narrow, obstructed dirt area.",
+   "frame": 1,
+   "x": 100,
+   "y": 950,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The left side is blocked by parked vehicles and street furniture.",
+   "frame": 1,
+   "x": 100,
+   "y": 900,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and parked vehicles from the left side to provide a clear path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and unpaved.",
+   "frame": 1,
+   "x": 100,
+   "y": 980,
+   "measure": "repair_footway",
+   "suggestion": "Pave the left side of the road to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to mixed land use, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 500,
+   "y": 950,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "This is an urban road with no visible street lighting.",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by the large white bus, so the presence or absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The view of the left side is blocked by the bus, making it impossible to verify if the footway is obstructed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface condition of the left side is not visible due to the bus blocking the view."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road surface is not visible in the frames, so the presence or absence of a marked crossing cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames only show the sky and upper portions of vehicles, so the presence of street lighting poles is not visible."
+  }
+ ],
+ "error": null
+}

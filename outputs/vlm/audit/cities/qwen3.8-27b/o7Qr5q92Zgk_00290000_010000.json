@@ -1,0 +1,102 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A continuous concrete barrier runs along the right edge of the carriageway, with no footway or path visible beyond it.\",\"frame\":1,\"x\":800,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the right side, separated from the carriageway by a kerb.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven and appears to have debris and broken sections.\",\"frame\":4,\"x\":150,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the informal path on the left to create a safe, continuous walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the mixed-use buildings and activity on both sides, but no marked or signalised crossing is visible in the 100m road.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A continuous concrete barrier runs along the right edge of the carriageway, with no footway or path visible beyond it.",
+    "frame": 1,
+    "x": 800,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the right side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven and appears to have debris and broken sections.",
+    "frame": 4,
+    "x": 150,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the informal path on the left to create a safe, continuous walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the mixed-use buildings and activity on both sides, but no marked or signalised crossing is visible in the 100m road.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 138.87,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6062,
+  "completion_tokens": 450,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_002.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_004.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_006.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_008.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"partly_blocked footway on left side\",\"frame\":3,\"x\":100,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the parked vehicle obstructing the left-side footway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"partly_blocked footway on right side\",\"frame\":3,\"x\":900,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the parked vehicle obstructing the right-side footway.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"signalised crossing with adequate visibility\",\"frame\":3,\"x\":400,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install additional pedestrian signals for clearer guidance.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"kerb_ramps is none at the crossing\",\"frame\":3,\"x\":400,\"y\":400,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Add dropped kerbs to the crossing for better accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "partly_blocked footway on left side",
+    "frame": 3,
+    "x": 100,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Clear the parked vehicle obstructing the left-side footway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "partly_blocked footway on right side",
+    "frame": 3,
+    "x": 900,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Clear the parked vehicle obstructing the right-side footway."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "signalised crossing with adequate visibility",
+    "frame": 3,
+    "x": 400,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install additional pedestrian signals for clearer guidance."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "kerb_ramps is none at the crossing",
+    "frame": 3,
+    "x": 400,
+    "y": 400,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Add dropped kerbs to the crossing for better accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 61.25,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13152,
+  "completion_tokens": 445,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

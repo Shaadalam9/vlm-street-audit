@@ -1,0 +1,122 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left side of the road lacks a constructed footway; the edge is a dirt shoulder with debris and goods, forcing pedestrians to use the roadway.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the left side, separated from the carriageway by a kerb, to provide a safe place for pedestrians to walk.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is partially obstructed by parked vehicles and roadside stalls, reducing the available walking space.\",\"frame\":3,\"x\":750,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles and stalls from the right-side path to clear the route for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground on the right side is unpaved and uneven, with visible debris and patches that create trip hazards for anyone walking.\",\"frame\":3,\"x\":850,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the right-side walking strip with a smooth, level material to eliminate the uneven ground and trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road has high crossing demand due to shops and homes on both sides, but there is no marked or purpose-built crossing facility anywhere in the view.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at a busy junction to provide a safe and visible place for people to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible on either side of the road, leaving the street completely dark at night.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lights along both sides of the road to improve visibility for drivers and pedestrians during the night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left side of the road lacks a constructed footway; the edge is a dirt shoulder with debris and goods, forcing pedestrians to use the roadway.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the left side, separated from the carriageway by a kerb, to provide a safe place for pedestrians to walk."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right is partially obstructed by parked vehicles and roadside stalls, reducing the available walking space.",
+    "frame": 3,
+    "x": 750,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles and stalls from the right-side path to clear the route for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground on the right side is unpaved and uneven, with visible debris and patches that create trip hazards for anyone walking.",
+    "frame": 3,
+    "x": 850,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the right-side walking strip with a smooth, level material to eliminate the uneven ground and trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road has high crossing demand due to shops and homes on both sides, but there is no marked or purpose-built crossing facility anywhere in the view.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at a busy junction to provide a safe and visible place for people to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible on either side of the road, leaving the street completely dark at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lights along both sides of the road to improve visibility for drivers and pedestrians during the night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 51.88,
+ "usage": {
+  "prompt_tokens": 3237,
+  "total_tokens": 3880,
+  "completion_tokens": 643,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no crossing facility visible",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this location."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "street lighting is none",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights to improve visibility and safety along the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the left side, and adding one is feasible given the grass verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the right side, and adding one is feasible given the grass verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing is visible in the frames, and adding one is a standard safety measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible along the road corridor."
+  }
+ ],
+ "error": null
+}

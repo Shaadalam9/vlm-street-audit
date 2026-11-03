@@ -1,0 +1,122 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_002.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_004.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_006.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_008.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The space between the parked vehicles and the construction fence is a narrow, un-paved strip, not a proper footway.\",\"frame\":1,\"x\":200,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, 1.5-metre-wide footway between the construction fence and the road edge.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A line of parked cars occupies the narrow strip along the left side of the road.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"clear_footway\",\"suggestion\":\"Mark a no-parking zone on the left side to keep the pedestrian path clear.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface on the left is uneven and contains weeds and small holes.\",\"frame\":3,\"x\":200,\"y\":900,\"measure\":\"repair_footway\",\"suggestion\":\"Re-surface the left-side path with a smooth, level pavement.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The footway on the right is made of pavers that are uneven and broken in places.\",\"frame\":4,\"x\":800,\"y\":900,\"measure\":\"repair_footway\",\"suggestion\":\"Replace the broken paver sections on the right footway with new, level paving.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen walking and stopping near the shops, indicating a high demand for crossing, but there is no marked crossing or signal.\",\"frame\":5,\"x\":500,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised, marked pedestrian crossing in front of the main shops to provide a safe and defined crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The space between the parked vehicles and the construction fence is a narrow, un-paved strip, not a proper footway.",
+    "frame": 1,
+    "x": 200,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, 1.5-metre-wide footway between the construction fence and the road edge."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A line of parked cars occupies the narrow strip along the left side of the road.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "clear_footway",
+    "suggestion": "Mark a no-parking zone on the left side to keep the pedestrian path clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface on the left is uneven and contains weeds and small holes.",
+    "frame": 3,
+    "x": 200,
+    "y": 900,
+    "measure": "repair_footway",
+    "suggestion": "Re-surface the left-side path with a smooth, level pavement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The footway on the right is made of pavers that are uneven and broken in places.",
+    "frame": 4,
+    "x": 800,
+    "y": 900,
+    "measure": "repair_footway",
+    "suggestion": "Replace the broken paver sections on the right footway with new, level paving."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen walking and stopping near the shops, indicating a high demand for crossing, but there is no marked crossing or signal.",
+    "frame": 5,
+    "x": 500,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Install a raised, marked pedestrian crossing in front of the main shops to provide a safe and defined crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 722.29,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6210,
+  "completion_tokens": 598,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

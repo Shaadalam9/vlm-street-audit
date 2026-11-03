@@ -1,0 +1,83 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to improve pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to improve pedestrian safety."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left footway to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows an informal path with no formal sidewalk, but the suggestion is generic and feasibility is unclear due to limited view of the full street width."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side also lacks a formal sidewalk, with people walking on an informal path; the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is partly blocked by market stalls and vehicles, but the suggestion is generic and feasibility is unclear due to the informal nature of the street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partly blocked by market stalls and parked vehicles, but the suggestion is generic and feasibility is unclear due to the informal nature of the street."
+  }
+ ],
+ "error": null
+}

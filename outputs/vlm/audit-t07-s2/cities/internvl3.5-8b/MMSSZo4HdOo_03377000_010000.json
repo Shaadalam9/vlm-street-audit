@@ -1,0 +1,132 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":410,\"y\":380,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to provide a safe walking path.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":590,\"y\":380,\"measure\":\"clear_footway\",\"suggestion\":\"Clear parked vehicles and stalls from the footway on the right side.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"some\",\"frame\":1,\"x\":670,\"y\":380,\"measure\":\"repair_footway\",\"suggestion\":\"Repair or smooth out uneven sections on the footway on the right side.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":450,\"y\":480,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a pedestrian crossing with signals at this location to improve safety.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"some\",\"frame\":1,\"x\":410,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair or smooth out uneven sections on the footway on the left side.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":330,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Clear parked vehicles and stalls from the footway on the left side.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 410,
+    "y": 380,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking path."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 590,
+    "y": 380,
+    "measure": "clear_footway",
+    "suggestion": "Clear parked vehicles and stalls from the footway on the right side."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 670,
+    "y": 380,
+    "measure": "repair_footway",
+    "suggestion": "Repair or smooth out uneven sections on the footway on the right side."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 450,
+    "y": 480,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a pedestrian crossing with signals at this location to improve safety."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 410,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair or smooth out uneven sections on the footway on the left side."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 330,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Clear parked vehicles and stalls from the footway on the left side."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 34.67,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13266,
+  "completion_tokens": 559,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

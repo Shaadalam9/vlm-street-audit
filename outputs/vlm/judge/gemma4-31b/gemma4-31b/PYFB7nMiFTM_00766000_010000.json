@@ -1,0 +1,65 @@
+{
+ "clip_id": "PYFB7nMiFTM_00766000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, people walking on dirt slope",
+   "frame": 4,
+   "x": 150,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven dirt surface and debris on the informal path",
+   "frame": 4,
+   "x": 600,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the informal path on the right side to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians present and residential/commercial buildings on both sides but no designated crossing",
+   "frame": 2,
+   "x": 370,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side consists of a dirt slope with no paved footway, and there is ample space for construction."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side shows an unpaved, uneven dirt shoulder that poses trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings visible despite the presence of residential buildings and pedestrians."
+  }
+ ],
+ "error": null
+}

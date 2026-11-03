@@ -1,0 +1,29 @@
+{
+ "clip_id": "fwzHuma5fe0_04535000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian signalised crossing at this junction to improve safety for pedestrians crossing the road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a junction without a pedestrian crossing, and installing a signalised crossing is a feasible, specific solution."
+  }
+ ],
+ "error": null
+}

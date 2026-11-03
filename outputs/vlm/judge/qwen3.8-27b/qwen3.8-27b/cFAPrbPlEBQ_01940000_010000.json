@@ -1,0 +1,47 @@
+{
+ "clip_id": "cFAPrbPlEBQ_01940000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A wide grass verge and tram tracks separate the road from the buildings; there is no paved path for pedestrians.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the left side, separated from the tram tracks by a physical barrier."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road is a two-lane urban street with commercial buildings and a tram line, creating a high demand for crossing, but no marked or signalised crossing is seen",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing with dropped kerbs at a logical point, such as near the visible bus stop on the right."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by the tram tracks and grass verge, making it impossible to confirm the absence of a footway, and the suggestion is a generic measure."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear view of the entire road to confirm the absence of a crossing, and the suggestion is a generic measure."
+  }
+ ],
+ "error": null
+}

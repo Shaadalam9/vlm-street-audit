@@ -1,0 +1,102 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_002.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_004.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_006.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_008.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the street is a continuous cobblestone surface with no raised or distinct pavement; pedestrians are walking on the same surface as the road.\",\"frame\":1,\"x\":200,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a raised, paved footway along the left side of the street to provide a safe, level path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the street is a continuous cobblestone surface with no raised or distinct pavement; pedestrians are walking on the same surface as the road.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a raised, paved footway along the right side of the street to provide a safe, level path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is no marked or purpose-built pedestrian crossing visible on this stretch of road, despite the presence of pedestrians and buildings on both sides.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at a logical point, such as near the archway, to provide a safe place for pedestrians to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the street is a continuous cobblestone surface with no raised or distinct pavement; pedestrians are walking on the same surface as the road.",
+    "frame": 1,
+    "x": 200,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a raised, paved footway along the left side of the street to provide a safe, level path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the street is a continuous cobblestone surface with no raised or distinct pavement; pedestrians are walking on the same surface as the road.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a raised, paved footway along the right side of the street to provide a safe, level path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is no marked or purpose-built pedestrian crossing visible on this stretch of road, despite the presence of pedestrians and buildings on both sides.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point, such as near the archway, to provide a safe place for pedestrians to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 133.97,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6124,
+  "completion_tokens": 489,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

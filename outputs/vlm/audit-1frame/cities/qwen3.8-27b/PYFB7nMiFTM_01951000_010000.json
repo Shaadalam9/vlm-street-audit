@@ -1,0 +1,110 @@
+{
+ "clip_id": "PYFB7nMiFTM_01951000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_01951000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is an unpaved, uneven dirt shoulder with no purpose-built footway, forcing any pedestrian to walk in the carriageway.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the left side of the road to provide a safe, continuous path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is an unpaved, uneven dirt shoulder with no purpose-built footway, forcing any pedestrian to walk in the carriageway.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the right side of the road to provide a safe, continuous path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear need for a crossing due to the presence of a pedestrian on the road, but no marked or purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island to provide a safe place for pedestrians to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is completely dark with no street lights visible, making it difficult for drivers to see pedestrians and other hazards at night.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility for both drivers and pedestrians at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is an unpaved, uneven dirt shoulder with no purpose-built footway, forcing any pedestrian to walk in the carriageway.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the left side of the road to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is an unpaved, uneven dirt shoulder with no purpose-built footway, forcing any pedestrian to walk in the carriageway.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the right side of the road to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear need for a crossing due to the presence of a pedestrian on the road, but no marked or purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe place for pedestrians to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is completely dark with no street lights visible, making it difficult for drivers to see pedestrians and other hazards at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility for both drivers and pedestrians at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 112.13,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2616,
+  "completion_tokens": 553,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

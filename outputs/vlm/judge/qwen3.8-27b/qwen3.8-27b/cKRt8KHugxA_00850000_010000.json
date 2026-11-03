@@ -1,0 +1,47 @@
+{
+ "clip_id": "cKRt8KHugxA_00850000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is a narrow, informal path that is partly blocked by parked vehicles.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to a minimum of 1.5m and install a physical barrier to separate it from the carriageway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to residential access on both sides, but no marked or unmarked crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the centre of the road segment."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous footway on the left, so the deficit is not visible, and the suggestion is a generic standard rather than specific to this street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the frames do not provide enough evidence of high crossing demand, and the suggestion is a generic standard."
+  }
+ ],
+ "error": null
+}

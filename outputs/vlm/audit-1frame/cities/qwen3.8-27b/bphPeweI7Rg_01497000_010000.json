@@ -1,0 +1,90 @@
+{
+ "clip_id": "bphPeweI7Rg_01497000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bphPeweI7Rg/bphPeweI7Rg_01497000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous white metal fence runs along the left edge of the carriageway, separating the road from the grass verge and trees, meaning there is no usable foot-\",\"frame\":1,\"x\":200,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Remove the white metal fence and construct a paved, continuous footway on the left side to provide a safe, accessible route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a wide, multi-lane urban street with residential buildings on both sides, creating a high demand for crossing, but there is no visible pedestrian\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a central refuge island to safely manage the high volume of traffic and pedestrian demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous white metal fence runs along the left edge of the carriageway, separating the road from the grass verge and trees, meaning there is no usable foot-",
+    "frame": 1,
+    "x": 200,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Remove the white metal fence and construct a paved, continuous footway on the left side to provide a safe, accessible route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a wide, multi-lane urban street with residential buildings on both sides, creating a high demand for crossing, but there is no visible pedestrian",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a central refuge island to safely manage the high volume of traffic and pedestrian demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 111.39,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2450,
+  "completion_tokens": 387,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

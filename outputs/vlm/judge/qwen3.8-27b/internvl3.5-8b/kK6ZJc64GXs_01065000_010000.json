@@ -1,0 +1,83 @@
+{
+ "clip_id": "kK6ZJc64GXs_01065000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 3,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 3,
+   "x": 900,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a refuge island to provide a safe waiting area for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "some",
+   "frame": 3,
+   "x": 500,
+   "y": 200,
+   "measure": "improve_crossing",
+   "suggestion": "Increase street lighting to improve visibility for pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific location where a footbridge is needed, and a footbridge is not a standard solution for a missing footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific location where a footbridge is needed, and a footbridge is not a standard solution for a missing footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific location where a refuge island is needed, and a refuge island is not a standard solution for a missing crossing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific location where street lighting is needed, and improving a crossing is not a standard solution for missing street lighting."
+  }
+ ],
+ "error": null
+}

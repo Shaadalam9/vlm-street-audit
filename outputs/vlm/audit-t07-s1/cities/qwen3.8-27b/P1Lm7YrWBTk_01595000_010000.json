@@ -1,0 +1,122 @@
+{
+ "clip_id": "P1Lm7YrWBTk_01595000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_002.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_004.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_006.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_008.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Bicycles are parked on the footway, narrowing the path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Widen the left footway to create a clear, unobstructed pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are seen walking close to the road edge, indicating a narrow or obstructed footway.\",\"frame\":1,\"x\":850,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Expand the right-side footway to provide a safe and comfortable walking area.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A line of parked bicycles is occupying a significant portion of the sidewalk.\",\"frame\":1,\"x\":150,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Install designated bicycle parking racks further from the path to keep the footway clear.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Crowds of people and potential stalls are visible on the footway, blocking the path.\",\"frame\":1,\"x\":850,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Manage pedestrian flow and stall placement to ensure a clear walking route on the right side.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"The kerbs at the signalised crossing are not visibly dropped, which could be a barrier for wheelchairs and prams.\",\"frame\":1,\"x\":450,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install dropped kerbs at both ends of the signalised crossing to ensure accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Bicycles are parked on the footway, narrowing the path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Widen the left footway to create a clear, unobstructed pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Pedestrians are seen walking close to the road edge, indicating a narrow or obstructed footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Expand the right-side footway to provide a safe and comfortable walking area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A line of parked bicycles is occupying a significant portion of the sidewalk.",
+    "frame": 1,
+    "x": 150,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Install designated bicycle parking racks further from the path to keep the footway clear."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Crowds of people and potential stalls are visible on the footway, blocking the path.",
+    "frame": 1,
+    "x": 850,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Manage pedestrian flow and stall placement to ensure a clear walking route on the right side."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "The kerbs at the signalised crossing are not visibly dropped, which could be a barrier for wheelchairs and prams.",
+    "frame": 1,
+    "x": 450,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install dropped kerbs at both ends of the signalised crossing to ensure accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 524.49,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6192,
+  "completion_tokens": 580,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

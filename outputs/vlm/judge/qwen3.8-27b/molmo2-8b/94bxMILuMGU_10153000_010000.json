@@ -1,0 +1,29 @@
+{
+ "clip_id": "94bxMILuMGU_10153000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "marked pedestrian crossing visible but no actual crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this junction to improve safety for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a marked crossing but do not provide enough detail to confirm the absence of a facility, and the suggestion is a generic measure that does not reference the specific street layout."
+  }
+ ],
+ "error": null
+}

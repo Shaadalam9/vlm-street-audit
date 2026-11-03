@@ -1,0 +1,92 @@
+{
+ "clip_id": "hcmVrRXOo9Y_05647000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_05647000_010000/frame_002.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_05647000_010000/frame_004.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_05647000_010000/frame_006.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_05647000_010000/frame_008.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_05647000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is an unpaved, uneven area with construction materials and no defined path for pedestrians.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway on the left side of the road to provide a safe and accessible route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the presence of shops and homes on both sides, but no marked or purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a clearly marked pedestrian crossing with dropped kerbs at a logical point along this stretch of road to provide a safe crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is an unpaved, uneven area with construction materials and no defined path for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway on the left side of the road to provide a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the presence of shops and homes on both sides, but no marked or purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a clearly marked pedestrian crossing with dropped kerbs at a logical point along this stretch of road to provide a safe crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 253.06,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2687,
+  "completion_tokens": 375,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

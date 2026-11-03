@@ -1,0 +1,112 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_002.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_004.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_006.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_008.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is a wide sidewalk, but the area immediately adjacent to the parked cars and the green fence is an informal, unpaved strip where a pedestrian (\",\"frame\":1,\"x\":100,\"y\":550,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, level concrete footway on the left to provide a safe, unobstructed path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A row of parked cars and a green utility vehicle are parked on the left, occupying the space that would otherwise be a clear footway or shoulder.\",\"frame\":4,\"x\":80,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Designate and enforce a no-parking zone along the left curb to keep the pedestrian area clear of stationary vehicles.\"},{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"People are seen crossing the road at an unmarked location between the parked cars and the moving traffic, indicating a high demand for a crossing.\",\"frame\":5,\"x\":300,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe and visible place for people to cross the wide road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The existing kerbs along the road are high and not dropped, which would impede access for wheelchairs or strollers to any potential crossing.\",\"frame\":1,\"x\":150,\"y\":680,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct dropped kerbs at the ends of any new crossing to ensure accessible and safe transition from the footway to the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left footway is a wide sidewalk, but the area immediately adjacent to the parked cars and the green fence is an informal, unpaved strip where a pedestrian (",
+    "frame": 1,
+    "x": 100,
+    "y": 550,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, level concrete footway on the left to provide a safe, unobstructed path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A row of parked cars and a green utility vehicle are parked on the left, occupying the space that would otherwise be a clear footway or shoulder.",
+    "frame": 4,
+    "x": 80,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Designate and enforce a no-parking zone along the left curb to keep the pedestrian area clear of stationary vehicles."
+   },
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "People are seen crossing the road at an unmarked location between the parked cars and the moving traffic, indicating a high demand for a crossing.",
+    "frame": 5,
+    "x": 300,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe and visible place for people to cross the wide road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The existing kerbs along the road are high and not dropped, which would impede access for wheelchairs or strollers to any potential crossing.",
+    "frame": 1,
+    "x": 150,
+    "y": 680,
+    "measure": "improve_crossing",
+    "suggestion": "Construct dropped kerbs at the ends of any new crossing to ensure accessible and safe transition from the footway to the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 504.33,
+ "usage": {
+  "prompt_tokens": 5412,
+  "total_tokens": 6007,
+  "completion_tokens": 595,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

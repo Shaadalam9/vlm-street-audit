@@ -1,0 +1,65 @@
+{
+ "clip_id": "KUjbvWs0kn8_00281000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No sidewalk or informal path is visible along the left side of the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a purpose-built sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No sidewalk or informal path is visible along the right side of the road.",
+   "frame": 1,
+   "x": 900,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a purpose-built sidewalk on the right side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a junction with traffic signals, but no designated pedestrian crossing facility is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to allow safe crossing of the multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is not visible in the frames, so the absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is not visible in the frames, so the absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The pedestrian crossing area is not visible in the frames, so the absence of a crossing cannot be confirmed."
+  }
+ ],
+ "error": null
+}

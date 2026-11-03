@@ -1,0 +1,132 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_002.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_004.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_006.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_008.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The space for pedestrians is obstructed by stalls, forcing them to walk in the roadway.\",\"frame\":2,\"x\":200,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5m wide concrete footway on the left side to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Market stalls and goods are blocking the narrow path along the left side of the road.\",\"frame\":2,\"x\":200,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stalls to a designated area away from the pedestrian path to clear the obstruction.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The space for pedestrians on the right is obstructed by stalls and parked vehicles.\",\"frame\":2,\"x\":800,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5m wide concrete footway on the right side to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Market stalls, parked vehicles, and goods are blocking the narrow path along the right side of the road.\",\"frame\":2,\"x\":800,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stalls and manage parking to clear the obstruction on the right side.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"High pedestrian activity and commercial demand exist, but there is no formal crossing facility.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at a strategic point to provide a safe place for people to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of solar-powered street lights along the road to improve visibility and safety at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The space for pedestrians is obstructed by stalls, forcing them to walk in the roadway.",
+    "frame": 2,
+    "x": 200,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5m wide concrete footway on the left side to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Market stalls and goods are blocking the narrow path along the left side of the road.",
+    "frame": 2,
+    "x": 200,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stalls to a designated area away from the pedestrian path to clear the obstruction."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The space for pedestrians on the right is obstructed by stalls and parked vehicles.",
+    "frame": 2,
+    "x": 800,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5m wide concrete footway on the right side to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Market stalls, parked vehicles, and goods are blocking the narrow path along the right side of the road.",
+    "frame": 2,
+    "x": 800,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stalls and manage parking to clear the obstruction on the right side."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "High pedestrian activity and commercial demand exist, but there is no formal crossing facility.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at a strategic point to provide a safe place for people to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of solar-powered street lights along the road to improve visibility and safety at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 246.96,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6281,
+  "completion_tokens": 669,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

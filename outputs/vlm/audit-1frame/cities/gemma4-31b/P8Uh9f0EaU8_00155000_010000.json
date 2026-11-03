@@ -1,0 +1,80 @@
+{
+ "clip_id": "P8Uh9f0EaU8_00155000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P8Uh9f0EaU8/P8Uh9f0EaU8_00155000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"both_kerbs\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"The road has 4 or more lanes and the marked crossing lacks a central refuge island.\",\"frame\":1,\"x\":450,\"y\":780,\"measure\":\"traffic_calming\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the marked crossing to improve safety on this wide road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "both_kerbs"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "The road has 4 or more lanes and the marked crossing lacks a central refuge island.",
+    "frame": 1,
+    "x": 450,
+    "y": 780,
+    "measure": "traffic_calming",
+    "suggestion": "Install a pedestrian refuge island in the middle of the marked crossing to improve safety on this wide road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 98.05,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1801,
+  "completion_tokens": 301,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

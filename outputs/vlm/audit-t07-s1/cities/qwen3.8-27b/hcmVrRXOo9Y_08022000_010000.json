@@ -1,0 +1,102 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_002.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_004.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_006.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_008.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a grassy verge and a temple wall with no dedicated path for pedestrians.\",\"frame\":1,\"x\":750,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the right edge, separating the road from the temple grounds.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a temple complex and a building on the left creating a high demand for crossing, but no marked or physical crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the junction leading to the temple complex.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along the road to improve visibility and safety for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a grassy verge and a temple wall with no dedicated path for pedestrians.",
+    "frame": 1,
+    "x": 750,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the right edge, separating the road from the temple grounds."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a temple complex and a building on the left creating a high demand for crossing, but no marked or physical crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the junction leading to the temple complex."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along the road to improve visibility and safety for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.9,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6047,
+  "completion_tokens": 435,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

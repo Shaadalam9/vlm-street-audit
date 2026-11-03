@@ -1,0 +1,47 @@
+{
+ "clip_id": "OgpB09d_cRA_01086000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only parked cars and road surface",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are visible crossing the road without any designated crossing facility",
+   "frame": 4,
+   "x": 50,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the parking area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a parking lot, not a street, so the presence of a footway or crossing cannot be assessed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The scene is a parking area, not a street, making it impossible to verify the deficit or the feasibility of the suggested change."
+  }
+ ],
+ "error": null
+}

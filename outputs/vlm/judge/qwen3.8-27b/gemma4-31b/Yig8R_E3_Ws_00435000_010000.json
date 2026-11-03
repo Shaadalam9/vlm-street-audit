@@ -1,0 +1,47 @@
+{
+ "clip_id": "Yig8R_E3_Ws_00435000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The road is bordered by a guardrail with no designated pedestrian path.",
+   "frame": 1,
+   "x": 100,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side of the bridge to provide safe pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The road is bordered by a guardrail with no designated pedestrian path.",
+   "frame": 1,
+   "x": 900,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the right side of the bridge to provide safe pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the suggestion is generic and not feasible due to the bridge structure and lack of space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the suggestion is generic and not feasible due to the bridge structure and lack of space."
+  }
+ ],
+ "error": null
+}

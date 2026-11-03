@@ -1,0 +1,122 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"frame 5, (100, 400)\",\"frame\":5,\"x\":100,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the left side to provide a safe walking area.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"frame 5, (800, 400)\",\"frame\":5,\"x\":800,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to provide a safe walking area.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"frame 5, (100, 500)\",\"frame\":5,\"x\":100,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the left sidewalk to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"frame 5, (800, 500)\",\"frame\":5,\"x\":800,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the right sidewalk to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"frame 5, (500, 300)\",\"frame\":5,\"x\":500,\"y\":300,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "frame 5, (100, 400)",
+    "frame": 5,
+    "x": 100,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "frame 5, (800, 400)",
+    "frame": 5,
+    "x": 800,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "frame 5, (100, 500)",
+    "frame": 5,
+    "x": 100,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the left sidewalk to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "frame 5, (800, 500)",
+    "frame": 5,
+    "x": 800,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the right sidewalk to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "frame 5, (500, 300)",
+    "frame": 5,
+    "x": 500,
+    "y": 300,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 28.51,
+ "usage": {
+  "prompt_tokens": 5050,
+  "total_tokens": 5589,
+  "completion_tokens": 539,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

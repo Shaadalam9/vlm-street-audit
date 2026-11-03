@@ -1,0 +1,29 @@
+{
+ "clip_id": "eDgNu3SpFgM_00112000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians are seen walking and standing in the carriageway in the foreground, indicating a lack of a safe, at-grade crossing facility at this specific point.",
+   "frame": 1,
+   "x": 400,
+   "y": 750,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with dropped kerbs at this location to provide a safe, legal place for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are clearly crossing the road mid-block without a designated crossing, and a signalised crossing is a standard feasible solution."
+  }
+ ],
+ "error": null
+}

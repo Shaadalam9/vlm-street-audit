@@ -1,0 +1,140 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous paved sidewalk; only a trodden dirt strip between the road edge and the building line.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m paved footway along the left side, set back from the carriageway edge.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous paved sidewalk; only a trodden dirt strip between the road edge and the building line.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m paved footway along the right side, set back from the carriageway edge.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A white car is parked on the informal path, blocking the walking strip.\",\"frame\":1,\"x\":140,\"y\":710,\"measure\":\"clear_footway\",\"suggestion\":\"Provide designated off-street parking bays to remove vehicles from the walking strip.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A white pickup truck is parked on the informal path, blocking the walking strip.\",\"frame\":1,\"x\":920,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Provide designated off-street parking bays to remove vehicles from the walking strip.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path is uneven dirt with visible debris and rubble.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, level concrete or asphalt surface.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is uneven dirt with visible debris and rubble.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side footway with a smooth, level concrete or asphalt surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear need to cross due to buildings and activity on both sides, but no marked or physical crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked zebra crossing at the point of highest pedestrian demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous paved sidewalk; only a trodden dirt strip between the road edge and the building line.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m paved footway along the left side, set back from the carriageway edge."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous paved sidewalk; only a trodden dirt strip between the road edge and the building line.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m paved footway along the right side, set back from the carriageway edge."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A white car is parked on the informal path, blocking the walking strip.",
+    "frame": 1,
+    "x": 140,
+    "y": 710,
+    "measure": "clear_footway",
+    "suggestion": "Provide designated off-street parking bays to remove vehicles from the walking strip."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A white pickup truck is parked on the informal path, blocking the walking strip.",
+    "frame": 1,
+    "x": 920,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Provide designated off-street parking bays to remove vehicles from the walking strip."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path is uneven dirt with visible debris and rubble.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, level concrete or asphalt surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is uneven dirt with visible debris and rubble.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side footway with a smooth, level concrete or asphalt surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear need to cross due to buildings and activity on both sides, but no marked or physical crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked zebra crossing at the point of highest pedestrian demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 120.23,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2797,
+  "completion_tokens": 734,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

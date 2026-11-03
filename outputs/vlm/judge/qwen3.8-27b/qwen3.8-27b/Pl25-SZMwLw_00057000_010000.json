@@ -1,0 +1,47 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous concrete barrier runs along the left edge of the carriageway, with no path or sidewalk for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 750,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the highway."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is an open grassy verge with no path or sidewalk for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 750,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the highway."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but a signalised crossing is not a realistic or appropriate fix for a high-speed highway with a concrete barrier."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but a signalised crossing is not a realistic or appropriate fix for a high-speed highway with a grassy verge."
+  }
+ ],
+ "error": null
+}

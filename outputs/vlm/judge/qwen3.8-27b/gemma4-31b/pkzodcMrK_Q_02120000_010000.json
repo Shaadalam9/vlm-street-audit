@@ -1,0 +1,29 @@
+{
+ "clip_id": "pkzodcMrK_Q_02120000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Residential homes on both sides create crossing demand, but no designated crossing facility is provided.",
+   "frame": 4,
+   "x": 500,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate residents crossing between the two sides of the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific intersection or crossing point, so the deficit cannot be confirmed, and the suggestion is a generic measure that does not reference any visible feature of this street"
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,122 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00524000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00524000_010000/frame_002.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00524000_010000/frame_004.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00524000_010000/frame_006.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00524000_010000/frame_008.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00524000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side lacks a purpose-built sidewalk, consisting only of a narrow, obstructed dirt area.\",\"frame\":1,\"x\":50,\"y\":950,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a proper sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The narrow path on the left is blocked by blue chairs and other items.\",\"frame\":1,\"x\":100,\"y\":900,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the chairs and obstructions from the left-hand pedestrian area.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface on the left side is uneven and contains debris.\",\"frame\":1,\"x\":50,\"y\":980,\"measure\":\"repair_footway\",\"suggestion\":\"Pave the left-hand pedestrian path to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is high crossing demand due to mixed land use and buildings on both sides, but no designated crossing facility is provided.\",\"frame\":1,\"x\":500,\"y\":950,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked zebra crossing to provide a safe place for pedestrians to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"This is an urban road with no street lighting visible along the stretch.\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility and safety at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side lacks a purpose-built sidewalk, consisting only of a narrow, obstructed dirt area.",
+    "frame": 1,
+    "x": 50,
+    "y": 950,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a proper sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The narrow path on the left is blocked by blue chairs and other items.",
+    "frame": 1,
+    "x": 100,
+    "y": 900,
+    "measure": "clear_footway",
+    "suggestion": "Remove the chairs and obstructions from the left-hand pedestrian area."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface on the left side is uneven and contains debris.",
+    "frame": 1,
+    "x": 50,
+    "y": 980,
+    "measure": "repair_footway",
+    "suggestion": "Pave the left-hand pedestrian path to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is high crossing demand due to mixed land use and buildings on both sides, but no designated crossing facility is provided.",
+    "frame": 1,
+    "x": 500,
+    "y": 950,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked zebra crossing to provide a safe place for pedestrians to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "This is an urban road with no street lighting visible along the stretch.",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility and safety at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 338.06,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3166,
+  "completion_tokens": 580,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

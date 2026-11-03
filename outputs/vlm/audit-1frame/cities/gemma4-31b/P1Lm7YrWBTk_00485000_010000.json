@@ -1,0 +1,90 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_00485000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A food trailer and associated equipment are blocking the sidewalk.\",\"frame\":1,\"x\":280,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the food trailer from the sidewalk to ensure a clear and unobstructed path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are present and there is a clear demand to cross, but no designated crossing facility is provided.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A food trailer and associated equipment are blocking the sidewalk.",
+    "frame": 1,
+    "x": 280,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Remove the food trailer from the sidewalk to ensure a clear and unobstructed path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are present and there is a clear demand to cross, but no designated crossing facility is provided.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 114.85,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1862,
+  "completion_tokens": 362,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

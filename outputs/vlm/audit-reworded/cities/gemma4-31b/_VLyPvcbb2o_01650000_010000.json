@@ -1,0 +1,82 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_002.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_004.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_006.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_008.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is blocked by construction hoarding and concrete barriers, leaving no space for pedestrians to walk.\",\"frame\":3,\"x\":850,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Provide a temporary designated footway on the right side of the road to allow pedestrian movement during construction.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is blocked by construction hoarding and concrete barriers, leaving no space for pedestrians to walk.",
+    "frame": 3,
+    "x": 850,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Provide a temporary designated footway on the right side of the road to allow pedestrian movement during construction."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 160.06,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 2910,
+  "completion_tokens": 298,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

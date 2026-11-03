@@ -1,0 +1,82 @@
+{
+ "clip_id": "gmDBzijaIAA_00309000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_002.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_004.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_006.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_008.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00309000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"A wide, multi-lane urban road with a marked crossing but no central refuge island for pedestrians.\",\"frame\":4,\"x\":500,\"y\":750,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island in the median to allow pedestrians to cross the wide road in two stages.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "A wide, multi-lane urban road with a marked crossing but no central refuge island for pedestrians.",
+    "frame": 4,
+    "x": 500,
+    "y": 750,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island in the median to allow pedestrians to cross the wide road in two stages."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 205.06,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2597,
+  "completion_tokens": 285,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

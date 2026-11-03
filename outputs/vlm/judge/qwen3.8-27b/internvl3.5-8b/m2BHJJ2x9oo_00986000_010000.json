@@ -1,0 +1,137 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left footway to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right footway to ensure it is fully usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the left footway to prevent trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the right footway to prevent trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to improve safety at this crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows an informal path with no formal sidewalk, but the suggestion is generic and feasibility is unclear due to limited view of the full street width."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side also lacks a formal sidewalk, with an informal path visible; the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway is partly blocked by market stalls and umbrellas, but the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right footway is partly blocked by market stalls and umbrellas, but the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway shows uneven sections, but the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right footway shows uneven sections, but the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no visible pedestrian crossing, but the suggestion is generic and feasibility is unclear due to limited view of the full street layout."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,152 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_002.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_004.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_006.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_008.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Footway is an informal path or none\",\"frame\":4,\"x\":20,\"y\":50,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the left side of the road to provide a safe walking surface for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Footway is an informal path or none\",\"frame\":4,\"x\":80,\"y\":50,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the right side of the road to provide a safe walking surface for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Obstruction is blocked\",\"frame\":4,\"x\":20,\"y\":50,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles and market stalls from the left footway to ensure it is clear and usable.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Obstruction is blocked\",\"frame\":4,\"x\":80,\"y\":50,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the market stalls and parked vehicles from the right footway to ensure it is clear and usable.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Trip hazards are present\",\"frame\":4,\"x\":20,\"y\":50,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the broken and uneven sections of the left footway to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Trip hazards are present\",\"frame\":4,\"x\":80,\"y\":50,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the broken and uneven sections of the right footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Crossing demand is true but no crossing facility is present\",\"frame\":4,\"x\":50,\"y\":50,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with refuge to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Urban road with no street lighting\",\"frame\":4,\"x\":50,\"y\":50,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility and safety during nighttime hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Footway is an informal path or none",
+    "frame": 4,
+    "x": 20,
+    "y": 50,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the left side of the road to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Footway is an informal path or none",
+    "frame": 4,
+    "x": 80,
+    "y": 50,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the right side of the road to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Obstruction is blocked",
+    "frame": 4,
+    "x": 20,
+    "y": 50,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles and market stalls from the left footway to ensure it is clear and usable."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Obstruction is blocked",
+    "frame": 4,
+    "x": 80,
+    "y": 50,
+    "measure": "clear_footway",
+    "suggestion": "Remove the market stalls and parked vehicles from the right footway to ensure it is clear and usable."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Trip hazards are present",
+    "frame": 4,
+    "x": 20,
+    "y": 50,
+    "measure": "repair_footway",
+    "suggestion": "Repair the broken and uneven sections of the left footway to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Trip hazards are present",
+    "frame": 4,
+    "x": 80,
+    "y": 50,
+    "measure": "repair_footway",
+    "suggestion": "Repair the broken and uneven sections of the right footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Crossing demand is true but no crossing facility is present",
+    "frame": 4,
+    "x": 50,
+    "y": 50,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with refuge to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Urban road with no street lighting",
+    "frame": 4,
+    "x": 50,
+    "y": 50,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility and safety during nighttime hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 204.71,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6315,
+  "completion_tokens": 703,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide paved area on the right with no distinct sidewalk, but the suggestion is a generic fix that does not reference the specific layout or features of this street."
+  }
+ ],
+ "error": null
+}

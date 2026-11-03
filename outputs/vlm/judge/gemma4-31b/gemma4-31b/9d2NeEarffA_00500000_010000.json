@@ -1,0 +1,47 @@
+{
+ "clip_id": "9d2NeEarffA_00500000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side lacks a purpose-built sidewalk, consisting of an informal path and parking areas.",
+   "frame": 4,
+   "x": 150,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the left side of the road to provide a safe walking space."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The surface on the left side is uneven and broken in several places.",
+   "frame": 4,
+   "x": 100,
+   "y": 900,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven and broken surfaces on the left side to eliminate trip hazards for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal sidewalk, consisting of dirt and paved parking areas."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground surface on the left is visibly uneven and degraded."
+  }
+ ],
+ "error": null
+}

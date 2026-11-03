@@ -1,0 +1,47 @@
+{
+ "clip_id": "ySNSVE0rRzc_03500000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a wide, paved sidewalk on the left side, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a wide, paved sidewalk on the right side, so the deficit is not visible and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "TKXHxRzvNIE_01842000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is a landscaped median with palm trees and hedges, with no path for pedestrians.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side, separated from the road by a kerb and a buffer of planting."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the adjacent promenade and commercial buildings, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island to safely connect the promenade to the commercial area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a landscaped verge without a footway, though space for one is limited by the existing buildings and greenery."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing is visible in the frames despite the clear pedestrian demand between the promenade and the left side."
+  }
+ ],
+ "error": null
+}

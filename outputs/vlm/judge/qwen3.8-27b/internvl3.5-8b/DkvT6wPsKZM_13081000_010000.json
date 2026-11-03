@@ -1,0 +1,83 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair any broken or uneven sections on the left side footway to reduce trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair any broken or uneven sections on the right side footway to reduce trip hazards."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The left side is a solid wall with no space for a footway, making the suggestion infeasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The right side is occupied by a large truck and parked cars, leaving no room to install a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The road surface is uneven, but the suggestion to repair a 'footway' is infeasible as no footway exists."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The road surface is uneven, but the suggestion to repair a 'footway' is infeasible as no footway exists."
+  }
+ ],
+ "error": null
+}

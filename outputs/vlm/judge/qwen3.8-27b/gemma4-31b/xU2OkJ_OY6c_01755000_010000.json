@@ -1,0 +1,83 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only parked cars and building walls",
+   "frame": 1,
+   "x": 150,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk, only parked cars and building walls",
+   "frame": 1,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side to provide a safe walking space."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "residential and commercial buildings on both sides create demand, but no designated crossing exists",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to facilitate safe movement between the two sides of the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no street lamps visible along the urban road segment",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The left side is fully occupied by parked cars and building walls, leaving no physical space to construct a sidewalk."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The right side is also lined with parked vehicles and buildings, making the construction of a new sidewalk impossible without removing existing infrastructure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible, but the suggestion to 'build a footway' is a mismatch for a crossing, and the tight space makes feasibility unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lamps are visible in the frames, and installing them is a standard and feasible measure for this type of urban street."
+  }
+ ],
+ "error": null
+}

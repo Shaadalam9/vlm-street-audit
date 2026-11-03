@@ -1,0 +1,101 @@
+{
+ "clip_id": "XcfBhMUAK_8_01907000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the left side of the road to provide a safe pedestrian route."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the right side of the road to provide a safe pedestrian route."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "2_lanes_and_signalised_crossing_without_refuge",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island in the middle of the road to provide a safe place for pedestrians to wait when crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "marked_crossing_without_kerb_ramps",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at both sides of the marked pedestrian crossing to improve accessibility for wheelchair users and those with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban_road_with_no_street_lighting",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left side of the road clearly enough to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the right side of the road clearly enough to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The wide, multi-lane road at the intersection clearly lacks a central pedestrian refuge island."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The marked crosswalks in the frames do not show any dropped kerbs or ramps for accessibility."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The urban road in the frames has no visible street lighting, which is a clear deficit."
+  }
+ ],
+ "error": null
+}

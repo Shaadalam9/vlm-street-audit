@@ -1,0 +1,152 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00851000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_002.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_004.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_006.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_008.jpg",
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A trodden strip of dirt and gravel runs alongside the road, with no paved or purpose-built sidewalk.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway on the left side to provide a safe, level surface for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area next to the roadside stalls is an unpaved, uneven dirt path, not a formal sidewalk.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Build a paved footway on the right side, separating pedestrians from the road and the roadside stalls.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A white pickup truck is parked on the unpaved shoulder, obstructing the path for pedestrians.\",\"frame\":2,\"x\":250,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left shoulder to keep the pedestrian path clear of vehicles.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Roadside market stalls and goods are set up on the unpaved path, blocking pedestrian access.\",\"frame\":1,\"x\":700,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the roadside stalls to a designated market area away from the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved path is uneven, with visible dirt, gravel, and potential potholes.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the left-side path to eliminate trip hazards and create a smooth walking surface.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved path is uneven and cluttered with debris from the nearby stalls.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Clear debris and pave the right-side path to remove trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the market stalls and buildings, but no marked or purpose-built crossing is present.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe place for people to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility and safety for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A trodden strip of dirt and gravel runs alongside the road, with no paved or purpose-built sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway on the left side to provide a safe, level surface for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area next to the roadside stalls is an unpaved, uneven dirt path, not a formal sidewalk.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Build a paved footway on the right side, separating pedestrians from the road and the roadside stalls."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A white pickup truck is parked on the unpaved shoulder, obstructing the path for pedestrians.",
+    "frame": 2,
+    "x": 250,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left shoulder to keep the pedestrian path clear of vehicles."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Roadside market stalls and goods are set up on the unpaved path, blocking pedestrian access.",
+    "frame": 1,
+    "x": 700,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the roadside stalls to a designated market area away from the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved path is uneven, with visible dirt, gravel, and potential potholes.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the left-side path to eliminate trip hazards and create a smooth walking surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved path is uneven and cluttered with debris from the nearby stalls.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Clear debris and pave the right-side path to remove trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the market stalls and buildings, but no marked or purpose-built crossing is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe place for people to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 284.01,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6444,
+  "completion_tokens": 832,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

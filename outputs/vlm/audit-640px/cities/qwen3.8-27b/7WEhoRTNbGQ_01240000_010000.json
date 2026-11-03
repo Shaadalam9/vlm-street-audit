@@ -1,0 +1,92 @@
+{
+ "clip_id": "7WEhoRTNbGQ_01240000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/7WEhoRTNbGQ/7WEhoRTNbGQ_01240000_010000/frame_002.jpg",
+  "data/snippets/7WEhoRTNbGQ/7WEhoRTNbGQ_01240000_010000/frame_004.jpg",
+  "data/snippets/7WEhoRTNbGQ/7WEhoRTNbGQ_01240000_010000/frame_006.jpg",
+  "data/snippets/7WEhoRTNbGQ/7WEhoRTNbGQ_01240000_010000/frame_008.jpg",
+  "data/snippets/7WEhoRTNbGQ/7WEhoRTNbGQ_01240000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A grassy verge and a narrow, un-paved strip run along the right edge of the road, with no continuous, purpose-built sidewalk.\",\"frame\":1,\"x\":900,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the right side, separated from the carriageway by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a wide, multi-lane urban street with a traffic signal, indicating a junction or high crossing demand, but no pedestrian crossing facility is visible\",\"frame\":1,\"x\":500,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Install a signalised pedestrian crossing with a central refuge island at the junction.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A grassy verge and a narrow, un-paved strip run along the right edge of the road, with no continuous, purpose-built sidewalk.",
+    "frame": 1,
+    "x": 900,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the right side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a wide, multi-lane urban street with a traffic signal, indicating a junction or high crossing demand, but no pedestrian crossing facility is visible",
+    "frame": 1,
+    "x": 500,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Install a signalised pedestrian crossing with a central refuge island at the junction."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 241.9,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2684,
+  "completion_tokens": 372,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

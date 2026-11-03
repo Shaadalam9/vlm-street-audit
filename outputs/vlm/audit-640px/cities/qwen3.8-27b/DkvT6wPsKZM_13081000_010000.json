@@ -1,0 +1,122 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_002.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_004.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_006.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_008.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous high wall with barbed wire runs along the entire left side, leaving no space for a footway.\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide footway on the left side by setting back the wall or using a retaining structure.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A large red truck is parked on the right, completely blocking the narrow path and forcing pedestrians into the road.\",\"frame\":1,\"x\":750,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce no-parking zones on the right side to keep the pedestrian path clear.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The narrow path on the right is uneven, with debris and a significant drop-off towards the road.\",\"frame\":3,\"x\":850,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side path with a smooth, level surface and install a protective kerb.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street is lined with shops and homes on both sides, creating high crossing demand, but there are no marked or physical crossings.\",\"frame\":3,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the junction with the side street to provide a safe crossing point.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the length of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lights along both sides of the road to improve visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous high wall with barbed wire runs along the entire left side, leaving no space for a footway.",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide footway on the left side by setting back the wall or using a retaining structure."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A large red truck is parked on the right, completely blocking the narrow path and forcing pedestrians into the road.",
+    "frame": 1,
+    "x": 750,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Enforce no-parking zones on the right side to keep the pedestrian path clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The narrow path on the right is uneven, with debris and a significant drop-off towards the road.",
+    "frame": 3,
+    "x": 850,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side path with a smooth, level surface and install a protective kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street is lined with shops and homes on both sides, creating high crossing demand, but there are no marked or physical crossings.",
+    "frame": 3,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the junction with the side street to provide a safe crossing point."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the length of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lights along both sides of the road to improve visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 58.42,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2914,
+  "completion_tokens": 602,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

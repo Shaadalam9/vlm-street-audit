@@ -1,0 +1,29 @@
+{
+ "clip_id": "R_FR8kB12sg_00298000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "shops and homes on both sides of the road with no designated crossing facility",
+   "frame": 1,
+   "x": 300,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross between the shops and residential areas."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a continuous street with no marked crossing, but the specific location and feasibility of adding one are not clearly indicated."
+  }
+ ],
+ "error": null
+}

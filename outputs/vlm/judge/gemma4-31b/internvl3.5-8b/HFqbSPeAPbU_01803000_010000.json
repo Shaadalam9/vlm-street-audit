@@ -1,0 +1,83 @@
+{
+ "clip_id": "HFqbSPeAPbU_01803000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians crossing road",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "no crossing facility visible",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Mark a pedestrian crossing to enhance visibility and safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the left, though the full width of the road edge is not clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the right, though the full width of the road edge is not clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road where no signalised crossing exists."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossing facilities visible where pedestrians are crossing."
+  }
+ ],
+ "error": null
+}

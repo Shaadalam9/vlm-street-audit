@@ -1,0 +1,47 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is lined with parked vehicles, and there is no visible sidewalk or path for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road, separated from the parking area by a physical barrier."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is lined with parked vehicles, and there is no visible sidewalk or path for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road, separated from the parking area by a physical barrier."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a visible footway, though space for one is unclear due to the trees and parked cars."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a visible footway, though space for one is unclear due to the trees and parked cars."
+  }
+ ],
+ "error": null
+}

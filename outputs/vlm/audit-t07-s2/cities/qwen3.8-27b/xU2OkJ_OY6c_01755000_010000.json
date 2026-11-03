@@ -1,0 +1,112 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_01755000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No sidewalk is visible on the left; vehicles are parked directly against the building line.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a continuous, raised sidewalk on the left side to separate pedestrians from the parked vehicles.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk is visible on the right; the edge of the road is defined only by a kerb next to the parking area.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a sidewalk along the right side to provide a safe walking space away from the traffic.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand to cross due to the residential and commercial mix, but no pedestrian crossing is marked or installed.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a marked pedestrian crossing with a central refuge island to facilitate safe crossing.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the length of the road in any frame.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No sidewalk is visible on the left; vehicles are parked directly against the building line.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a continuous, raised sidewalk on the left side to separate pedestrians from the parked vehicles."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk is visible on the right; the edge of the road is defined only by a kerb next to the parking area.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a sidewalk along the right side to provide a safe walking space away from the traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand to cross due to the residential and commercial mix, but no pedestrian crossing is marked or installed.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a marked pedestrian crossing with a central refuge island to facilitate safe crossing."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the length of the road in any frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 271.4,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6133,
+  "completion_tokens": 521,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

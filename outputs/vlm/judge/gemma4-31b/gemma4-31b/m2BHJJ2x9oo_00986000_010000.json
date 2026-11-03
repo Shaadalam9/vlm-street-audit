@@ -1,0 +1,101 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway is an informal path blocked by stalls and merchandise.",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated, unobstructed sidewalk on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Market stalls and goods completely block the pedestrian area.",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "clear_footway",
+   "suggestion": "Relocate market stalls to a designated vending area to clear the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven ground and debris from stalls create trip hazards.",
+   "frame": 4,
+   "x": 800,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Level the surface and repair the pavement on the right side to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "High pedestrian demand due to shops on both sides, but no designated crossing facility.",
+   "frame": 4,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide pedestrians with a safe place to cross the street."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing randomly in the carriageway without any safety infrastructure.",
+   "frame": 4,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Implement a formal crossing point with clear signage to improve pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal, separated footway, though a generic solution is provided."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Stalls clearly obstruct the pedestrian area on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground surface on the right appears uneven and cluttered with debris."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No designated crossing is visible despite high pedestrian activity."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the carriageway haphazardly."
+  }
+ ],
+ "error": null
+}

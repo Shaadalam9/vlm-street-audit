@@ -1,0 +1,65 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a wider sidewalk to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a wider sidewalk to enhance pedestrian safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow paved strip on the left, but it is unclear if it is a formal footway or just a shoulder, making the deficit and the feasibility of widening it uncertain."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obscured by the vehicle's dashboard and reflections, making it impossible to verify the presence or width of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the road is busy, the frames do not provide a clear view of the specific intersection or crossing point to confirm the lack of a facility or the level of demand."
+  }
+ ],
+ "error": null
+}

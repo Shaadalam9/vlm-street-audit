@@ -1,0 +1,101 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to improve pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_under_1m",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to improve pedestrian safety."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven sections on the left footway to prevent trips."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven sections on the right footway to prevent trips."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this junction."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a parked vehicle, making it impossible to verify the footway condition or available space."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is dominated by a large unfinished building, and the specific edge of the road is not clearly visible to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Since the footway itself is not clearly visible, the presence of trip hazards cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway is not clearly shown, so trip hazards cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the road is wide, the specific location for a crossing and the level of pedestrian demand are not clearly established in the frames."
+  }
+ ],
+ "error": null
+}

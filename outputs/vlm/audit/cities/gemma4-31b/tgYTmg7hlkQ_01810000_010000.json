@@ -1,0 +1,82 @@
+{
+ "clip_id": "tgYTmg7hlkQ_01810000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_01810000_010000/frame_002.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_01810000_010000/frame_004.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_01810000_010000/frame_006.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_01810000_010000/frame_008.jpg",
+  "data/snippets/tgYTmg7hlkQ/tgYTmg7hlkQ_01810000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bordered by a physical fence and trees with no usable footway for pedestrians.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the left side of the road to provide safe pedestrian access.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bordered by a physical fence and trees with no usable footway for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated sidewalk on the left side of the road to provide safe pedestrian access."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 21.23,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2883,
+  "completion_tokens": 297,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing without a refuge on a two-lane road",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a refuge island to improve safety for pedestrians crossing this busy commercial road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a parking lot, not a two-lane road with a marked crossing, so the deficit is not visible and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

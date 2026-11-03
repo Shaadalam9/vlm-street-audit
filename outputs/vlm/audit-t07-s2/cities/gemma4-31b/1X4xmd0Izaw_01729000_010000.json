@@ -1,0 +1,122 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_002.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_004.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_006.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_008.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an informal path under 1m wide, often obstructed by shop fronts and poles.\",\"frame\":1,\"x\":150,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built, continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is an informal path under 1m wide, obstructed by buildings and poles.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built, continuous sidewalk on the right side of the road to provide safe pedestrian movement.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path is uneven and broken in several places.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left to remove trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is uneven and broken.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the right to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is high crossing demand due to shops on both sides, but no purpose-built crossing facility is provided.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to facilitate safe crossing between the commercial establishments.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an informal path under 1m wide, often obstructed by shop fronts and poles.",
+    "frame": 1,
+    "x": 150,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built, continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is an informal path under 1m wide, obstructed by buildings and poles.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built, continuous sidewalk on the right side of the road to provide safe pedestrian movement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path is uneven and broken in several places.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left to remove trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is uneven and broken.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the right to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is high crossing demand due to shops on both sides, but no purpose-built crossing facility is provided.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to facilitate safe crossing between the commercial establishments."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 378.69,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3176,
+  "completion_tokens": 590,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

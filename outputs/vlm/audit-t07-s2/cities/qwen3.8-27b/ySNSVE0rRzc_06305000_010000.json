@@ -1,0 +1,112 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_002.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_004.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_006.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_008.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A narrow, unpaved strip is used as a path, lacking a proper, paved sidewalk.\",\"frame\":1,\"x\":750,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk along the right side of the road.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved path surface is uneven and has potholes, creating a significant tripping risk.\",\"frame\":1,\"x\":750,\"y\":950,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the informal path with a smooth, level material to create a safe walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are present and there is commercial activity (signs for services) that creates a need to cross, but no formal crossing is provided.\",\"frame\":1,\"x\":600,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at a logical point along this stretch of road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is an urban street but has no visible street lights, making it dark and unsafe for pedestrians and drivers at night.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a series of street lights along the road to improve visibility and safety for all users after dark.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A narrow, unpaved strip is used as a path, lacking a proper, paved sidewalk.",
+    "frame": 1,
+    "x": 750,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk along the right side of the road."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved path surface is uneven and has potholes, creating a significant tripping risk.",
+    "frame": 1,
+    "x": 750,
+    "y": 950,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the informal path with a smooth, level material to create a safe walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "Pedestrians are present and there is commercial activity (signs for services) that creates a need to cross, but no formal crossing is provided.",
+    "frame": 1,
+    "x": 600,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at a logical point along this stretch of road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is an urban street but has no visible street lights, making it dark and unsafe for pedestrians and drivers at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "improve_crossing",
+    "suggestion": "Install a series of street lights along the road to improve visibility and safety for all users after dark."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 134.39,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6133,
+  "completion_tokens": 521,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

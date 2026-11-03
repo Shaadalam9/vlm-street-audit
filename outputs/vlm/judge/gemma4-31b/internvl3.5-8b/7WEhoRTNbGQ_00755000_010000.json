@@ -1,0 +1,65 @@
+{
+ "clip_id": "7WEhoRTNbGQ_00755000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a footway on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a footway on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to improve safety at this junction."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a lack of footways on both sides of the road."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a lack of footways on both sides of the road."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a stretch of open road, not a junction, so crossing demand cannot be determined."
+  }
+ ],
+ "error": null
+}

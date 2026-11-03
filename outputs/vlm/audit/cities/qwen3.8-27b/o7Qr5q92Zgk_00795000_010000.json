@@ -1,0 +1,142 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, unpaved strip separates the road from the shops, but it is not a proper sidewalk.\",\"frame\":4,\"x\":100,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, 1.5m-wide footway on the left side to provide a safe, continuous path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area under the overpass is a rough, uneven strip with debris, not a usable footway.\",\"frame\":4,\"x\":800,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Create a formal, paved footway on the right side, clearing the current debris and providing a safe route for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A blue auto-rickshaw is parked on the narrow path, blocking pedestrian access.\",\"frame\":1,\"x\":150,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left footway to keep it clear for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Debris and what appears to be a person sitting on the ground are obstructing the path under the overpass.\",\"frame\":4,\"x\":750,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a regular cleaning schedule for the right-side footway to remove debris and ensure it remains passable.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface is uneven and appears to have loose gravel.\",\"frame\":4,\"x\":100,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, even material to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground is littered with trash and has an uneven, broken surface.\",\"frame\":4,\"x\":800,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the right-side footway to create a level, hazard-free surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a junction and shops on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked zebra crossing at the junction to provide a safe and visible place for pedestrians to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, unpaved strip separates the road from the shops, but it is not a proper sidewalk.",
+    "frame": 4,
+    "x": 100,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, 1.5m-wide footway on the left side to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area under the overpass is a rough, uneven strip with debris, not a usable footway.",
+    "frame": 4,
+    "x": 800,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Create a formal, paved footway on the right side, clearing the current debris and providing a safe route for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A blue auto-rickshaw is parked on the narrow path, blocking pedestrian access.",
+    "frame": 1,
+    "x": 150,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left footway to keep it clear for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Debris and what appears to be a person sitting on the ground are obstructing the path under the overpass.",
+    "frame": 4,
+    "x": 750,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Implement a regular cleaning schedule for the right-side footway to remove debris and ensure it remains passable."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface is uneven and appears to have loose gravel.",
+    "frame": 4,
+    "x": 100,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, even material to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground is littered with trash and has an uneven, broken surface.",
+    "frame": 4,
+    "x": 800,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the right-side footway to create a level, hazard-free surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a junction and shops on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked zebra crossing at the junction to provide a safe and visible place for pedestrians to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 278.95,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6379,
+  "completion_tokens": 767,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

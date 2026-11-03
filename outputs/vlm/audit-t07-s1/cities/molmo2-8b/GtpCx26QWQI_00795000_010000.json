@@ -1,0 +1,112 @@
+{
+ "clip_id": "GtpCx26QWQI_00795000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_002.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_004.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_006.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_008.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"partly_blocked footway\",\"frame\":3,\"x\":250,\"y\":50,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the obstruction blocking the left footway to allow safe pedestrian use.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"left_side\",\"evidence\":\"marked_with_refuge crossing on left side\",\"frame\":3,\"x\":250,\"y\":50,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a pedestrian refuge island to the left side of the marked crossing to improve safety for pedestrians crossing a potentially wider road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"none_kerb_ramps at crossing\",\"frame\":3,\"x\":250,\"y\":50,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both ends of the left side marked crossing to assist wheelchair users and reduce crossing time.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"some_street_lighting visible\",\"frame\":3,\"x\":250,\"y\":50,\"measure\":\"improve_crossing\",\"suggestion\":\"Install additional street lighting along the entire left side of the road to enhance visibility and safety for pedestrians crossing at night or in low-light conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "partly_blocked footway",
+    "frame": 3,
+    "x": 250,
+    "y": 50,
+    "measure": "clear_footway",
+    "suggestion": "Remove the obstruction blocking the left footway to allow safe pedestrian use."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "left_side",
+    "evidence": "marked_with_refuge crossing on left side",
+    "frame": 3,
+    "x": 250,
+    "y": 50,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a pedestrian refuge island to the left side of the marked crossing to improve safety for pedestrians crossing a potentially wider road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "none_kerb_ramps at crossing",
+    "frame": 3,
+    "x": 250,
+    "y": 50,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both ends of the left side marked crossing to assist wheelchair users and reduce crossing time."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "some_street_lighting visible",
+    "frame": 3,
+    "x": 250,
+    "y": 50,
+    "measure": "improve_crossing",
+    "suggestion": "Install additional street lighting along the entire left side of the road to enhance visibility and safety for pedestrians crossing at night or in low-light conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 188.91,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7616,
+  "completion_tokens": 483,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

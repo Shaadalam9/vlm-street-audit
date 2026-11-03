@@ -1,0 +1,65 @@
+{
+ "clip_id": "EEkHGo8tVSw_00260000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "right_side",
+   "evidence": "signalised crossing without refuge visible",
+   "frame": 3,
+   "x": 850,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a raised crossing platform at this signalised intersection to provide a refuge for pedestrians crossing a wide road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "no kerb ramps visible at the crossing",
+   "frame": 3,
+   "x": 850,
+   "y": 400,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at both sides of the signalised crossing to improve accessibility for wheelchair users and pedestrians with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "right_side",
+   "evidence": "some street lighting visible but not ample",
+   "frame": 3,
+   "x": 850,
+   "y": 400,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lighting along the right side of the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear refuge island, but the suggestion to add a raised crossing is a generic measure not specific to this intersection's layout."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Kerb ramps are not clearly visible in the frames, and the suggestion to add dropped kerbs is a standard, generic accessibility improvement."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While some street lights are visible, the claim that they are not ample is subjective, and the suggestion to add more is a generic measure."
+  }
+ ],
+ "error": null
+}

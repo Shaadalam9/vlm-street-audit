@@ -1,0 +1,29 @@
+{
+ "clip_id": "94SBevAbFik_02838000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper crossing facility to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, cobbled street with cars parked on both sides and pedestrians on the right, but there is no visible crossing point or specific location where a crossing facility is needed, so "
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "bphPeweI7Rg_00677000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no visible crossing facility despite pedestrian presence",
+   "frame": 1,
+   "x": 800,
+   "y": 700,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing the busy motorway"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are visible on the right side without a designated crossing, and a signalised crossing is a standard feasible infrastructure improvement."
+  }
+ ],
+ "error": null
+}

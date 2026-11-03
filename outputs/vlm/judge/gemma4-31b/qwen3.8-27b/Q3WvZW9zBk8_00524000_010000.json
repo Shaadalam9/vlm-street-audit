@@ -1,0 +1,101 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00524000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip runs between the parked vehicles and the roadside stalls, with no continuous, purpose-built sidewalk.",
+   "frame": 1,
+   "x": 100,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the left side, separating the pedestrian path from the vehicle lane and the roadside stalls."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The narrow path on the left is completely obstructed by parked chairs, tables, and goods from the roadside stalls.",
+   "frame": 1,
+   "x": 100,
+   "y": 900,
+   "measure": "clear_footway",
+   "suggestion": "Relocate the roadside stalls and their associated goods to a designated area away from the pedestrian path to ensure it is clear and usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved surface of the informal path on the left is uneven and appears to have debris, posing a significant trip hazard.",
+   "frame": 1,
+   "x": 100,
+   "y": 900,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side footway with a smooth, even material to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a clear demand for crossing due to the presence of roadside businesses and homes, but no marked or purpose-built crossing facility is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 900,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at a logical point to provide a safe place for people to cross the road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the road in any of the frames, which is a safety concern for an urban area.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of street lights along the road to improve visibility and safety for both pedestrians and drivers during the evening and night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal paved footway, though space is limited by stalls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Furniture and goods from stalls are clearly obstructing the narrow roadside area."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved ground on the left is visibly uneven and cluttered."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossings are visible in the frames provided."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible along the road corridor."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "0ccMXmE7fYg_04570000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/0ccMXmE7fYg/0ccMXmE7fYg_04570000_010000/frame_002.jpg",
+  "data/snippets/0ccMXmE7fYg/0ccMXmE7fYg_04570000_010000/frame_004.jpg",
+  "data/snippets/0ccMXmE7fYg/0ccMXmE7fYg_04570000_010000/frame_006.jpg",
+  "data/snippets/0ccMXmE7fYg/0ccMXmE7fYg_04570000_010000/frame_008.jpg",
+  "data/snippets/0ccMXmE7fYg/0ccMXmE7fYg_04570000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"frame 3, (100, 400)\",\"frame\":3,\"x\":100,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Extend the sidewalk on the left side to improve pedestrian safety.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"frame 4, (700, 400)\",\"frame\":4,\"x\":700,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Extend the sidewalk on the right side to improve pedestrian safety.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"frame 5, (500, 300)\",\"frame\":5,\"x\":500,\"y\":300,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a refuge island at the crossing to provide a safe waiting area for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "frame 3, (100, 400)",
+    "frame": 3,
+    "x": 100,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Extend the sidewalk on the left side to improve pedestrian safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "frame 4, (700, 400)",
+    "frame": 4,
+    "x": 700,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Extend the sidewalk on the right side to improve pedestrian safety."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "frame 5, (500, 300)",
+    "frame": 5,
+    "x": 500,
+    "y": 300,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a refuge island at the crossing to provide a safe waiting area for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 8.33,
+ "usage": {
+  "prompt_tokens": 12730,
+  "total_tokens": 13134,
+  "completion_tokens": 404,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

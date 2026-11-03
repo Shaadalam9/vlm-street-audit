@@ -1,0 +1,47 @@
+{
+ "clip_id": "pkzodcMrK_Q_02120000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A junction is visible ahead on the right, but there is no marked or raised crossing facility for pedestrians.",
+   "frame": 4,
+   "x": 600,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction on the right to provide a safe place for residents to cross."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "The road is in an urban residential area, but no street lights are visible along the stretch.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety for all users during the evening."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a junction on the right, so the deficit cannot be confirmed, but the suggestion is specific to that location and would address the issue if it exists."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so the presence or absence of street lighting cannot be determined, and the suggestion is a generic measure applicable to any street."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "HFqbSPeAPbU_01803000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No sidewalk or path is visible on the left side of the road, only a grassy verge and a fence.",
+   "frame": 1,
+   "x": 100,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk along the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No sidewalk or path is visible on the right side of the road, only a grassy verge and a fence.",
+   "frame": 1,
+   "x": 900,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk along the right side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "People are seen crossing the road in the parking area, but there is no designated crossing facility.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is not visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is not visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The area where people are walking appears to be a parking lot, not a road, so a crossing is not applicable."
+  }
+ ],
+ "error": null
+}

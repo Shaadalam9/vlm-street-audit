@@ -1,0 +1,132 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00290000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bordered by a continuous concrete barrier, meaning there is no dedicated footway and pedestrians would have to walk in the roadway\",\"frame\":1,\"x\":800,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a protected sidewalk on the right side of the road, separated from traffic by a physical barrier or buffer zone.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side shows a very narrow, uneven strip between the road and the buildings, insufficient for safe pedestrian use\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Widen and pave the left-side footway to provide a safe, continuous path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The narrow informal path on the left is obstructed by parked vehicles and roadside activity\",\"frame\":2,\"x\":150,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a no-parking zone and clear the left-side footway to ensure unobstructed pedestrian passage.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Despite a mixed-use urban environment with high potential for pedestrian movement, no marked or signalised crossing is visible in the 100m segment\",\"frame\":3,\"x\":500,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with refuge islands and signalisation at a strategic point along this stretch.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The lack of a formal crossing facility implies a lack of appropriate kerb ramps for accessibility\",\"frame\":3,\"x\":500,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper pedestrian crossing with dropped kerbs to ensure accessibility for all users.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Although street lights are present, the overall lighting level appears insufficient for a busy urban road at this time of day, creating dark patches\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Upgrade the street lighting to a higher standard, ensuring even illumination of the carriageway and any new footways to improve night-time safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bordered by a continuous concrete barrier, meaning there is no dedicated footway and pedestrians would have to walk in the roadway",
+    "frame": 1,
+    "x": 800,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a protected sidewalk on the right side of the road, separated from traffic by a physical barrier or buffer zone."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side shows a very narrow, uneven strip between the road and the buildings, insufficient for safe pedestrian use",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Widen and pave the left-side footway to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The narrow informal path on the left is obstructed by parked vehicles and roadside activity",
+    "frame": 2,
+    "x": 150,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Implement a no-parking zone and clear the left-side footway to ensure unobstructed pedestrian passage."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Despite a mixed-use urban environment with high potential for pedestrian movement, no marked or signalised crossing is visible in the 100m segment",
+    "frame": 3,
+    "x": 500,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with refuge islands and signalisation at a strategic point along this stretch."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The lack of a formal crossing facility implies a lack of appropriate kerb ramps for accessibility",
+    "frame": 3,
+    "x": 500,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper pedestrian crossing with dropped kerbs to ensure accessibility for all users."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Although street lights are present, the overall lighting level appears insufficient for a busy urban road at this time of day, creating dark patches",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Upgrade the street lighting to a higher standard, ensuring even illumination of the carriageway and any new footways to improve night-time safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 426.82,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6322,
+  "completion_tokens": 710,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "cKRt8KHugxA_00850000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no designated footway for pedestrians on the right side of the road, only a dirt/grass verge with parked cars.",
+   "frame": 5,
+   "x": 750,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper sidewalk on the right side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is residential demand for crossing the road, but no designated crossing facility is provided.",
+   "frame": 5,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to facilitate safe crossing between the residential areas."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a dirt verge with parked cars, confirming the deficit, but the suggestion is a generic fix and the available space for a new sidewalk is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of a crossing is visible, but the suggestion is a generic measure and the specific location for a crossing is not clearly defined in the frames."
+  }
+ ],
+ "error": null
+}

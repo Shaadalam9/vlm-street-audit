@@ -1,0 +1,112 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_002.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_004.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_006.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_008.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No defined sidewalk exists on the left; the space between the road edge and the building line is an uneven dirt and gravel verge.\",\"frame\":1,\"x\":450,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the left side to provide a safe, dedicated path for pedestrians away from the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"There is no formal sidewalk on the right side; pedestrians would have to walk on the loose, unpaved ground at the edge of the road.\",\"frame\":3,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a paved footway on the right side to create a safe walking surface and separate pedestrians from vehicle traffic.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is a two-way street with commercial buildings on both sides, creating a need to cross, but no marked or physical crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at this location to provide a designated and safer point for people to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The street is not illuminated by streetlights, which is a significant hazard for pedestrians and drivers during the night.\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for all road users during the night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No defined sidewalk exists on the left; the space between the road edge and the building line is an uneven dirt and gravel verge.",
+    "frame": 1,
+    "x": 450,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the left side to provide a safe, dedicated path for pedestrians away from the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "There is no formal sidewalk on the right side; pedestrians would have to walk on the loose, unpaved ground at the edge of the road.",
+    "frame": 3,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a paved footway on the right side to create a safe walking surface and separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is a two-way street with commercial buildings on both sides, creating a need to cross, but no marked or physical crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at this location to provide a designated and safer point for people to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The street is not illuminated by streetlights, which is a significant hazard for pedestrians and drivers during the night.",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for all road users during the night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 280.03,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6158,
+  "completion_tokens": 546,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

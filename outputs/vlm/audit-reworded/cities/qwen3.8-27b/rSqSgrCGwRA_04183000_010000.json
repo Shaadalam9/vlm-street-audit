@@ -1,0 +1,92 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_002.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_004.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_006.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_008.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"A pedestrian is seen crossing the road from the left side, where there is no marked crossing or signal.\",\"frame\":5,\"x\":220,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe place for pedestrians to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The pedestrian is stepping down from the kerb to cross the road, and no dropped kerb is visible at the crossing point.\",\"frame\":5,\"x\":220,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct dropped kerbs at the new pedestrian crossing to ensure safe and accessible access for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "A pedestrian is seen crossing the road from the left side, where there is no marked crossing or signal.",
+    "frame": 5,
+    "x": 220,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe place for pedestrians to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The pedestrian is stepping down from the kerb to cross the road, and no dropped kerb is visible at the crossing point.",
+    "frame": 5,
+    "x": 220,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Construct dropped kerbs at the new pedestrian crossing to ensure safe and accessible access for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 199.38,
+ "usage": {
+  "prompt_tokens": 5435,
+  "total_tokens": 5807,
+  "completion_tokens": 372,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No purpose-built sidewalk is visible on the left; the area beside the lane is unpaved and occupied by pedestrians and roadside activity.\",\"frame\":1,\"x\":120,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, kerbed footway on the left side to separate pedestrians from traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The right-side path is heavily obstructed by market stalls, umbrellas, and goods, leaving very little clear space for pedestrians.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stalls to a designated area away from the immediate roadside to clear the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is uneven, with scattered debris and the base of market stalls creating significant trip risks.\",\"frame\":3,\"x\":800,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the right-side path to create a smooth, level surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"High pedestrian activity from the right-side market and left-side residents indicates a need to cross, but no marked crossing or refuge is present.\",\"frame\":2,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility signage to provide a safe crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No purpose-built sidewalk is visible on the left; the area beside the lane is unpaved and occupied by pedestrians and roadside activity.",
+    "frame": 1,
+    "x": 120,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, kerbed footway on the left side to separate pedestrians from traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The right-side path is heavily obstructed by market stalls, umbrellas, and goods, leaving very little clear space for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stalls to a designated area away from the immediate roadside to clear the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right is uneven, with scattered debris and the base of market stalls creating significant trip risks.",
+    "frame": 3,
+    "x": 800,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the right-side path to create a smooth, level surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "High pedestrian activity from the right-side market and left-side residents indicates a need to cross, but no marked crossing or refuge is present.",
+    "frame": 2,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility signage to provide a safe crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 38.14,
+ "usage": {
+  "prompt_tokens": 3237,
+  "total_tokens": 3766,
+  "completion_tokens": 529,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

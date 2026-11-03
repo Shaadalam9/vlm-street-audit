@@ -1,0 +1,47 @@
+{
+ "clip_id": "m84fikUaJYY_01380000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only dirt and scrub",
+   "frame": 1,
+   "x": 300,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk, only dirt and scrub",
+   "frame": 1,
+   "x": 700,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the right side of the road to provide a safe path for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side consists of dirt and scrub with no paved footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a purpose-built sidewalk, consisting of dirt and scrub."
+  }
+ ],
+ "error": null
+}

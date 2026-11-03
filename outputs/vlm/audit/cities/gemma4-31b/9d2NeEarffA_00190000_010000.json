@@ -1,0 +1,122 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_002.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_004.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_006.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_008.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area under the overpass has no designated sidewalk for pedestrians.\",\"frame\":4,\"x\":800,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the right side under the overpass to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side consists of an informal path that is narrow and obstructed.\",\"frame\":1,\"x\":50,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Upgrade the informal path on the left to a proper, continuous sidewalk of at least 1.5m width.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven and contains debris.\",\"frame\":1,\"x\":50,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left to remove trip hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The zebra crossing is poorly marked and lacks clear visibility or priority for pedestrians.\",\"frame\":2,\"x\":450,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Repaint the zebra crossing with high-visibility thermoplastic paint and add 'Pedestrian Crossing' road markings.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"The road has 4 or more lanes but the marked crossing lacks a central refuge island.\",\"frame\":2,\"x\":450,\"y\":850,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the marked crossing to allow pedestrians to cross one direction at a time.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area under the overpass has no designated sidewalk for pedestrians.",
+    "frame": 4,
+    "x": 800,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated sidewalk on the right side under the overpass to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side consists of an informal path that is narrow and obstructed.",
+    "frame": 1,
+    "x": 50,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Upgrade the informal path on the left to a proper, continuous sidewalk of at least 1.5m width."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven and contains debris.",
+    "frame": 1,
+    "x": 50,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left to remove trip hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The zebra crossing is poorly marked and lacks clear visibility or priority for pedestrians.",
+    "frame": 2,
+    "x": 450,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Repaint the zebra crossing with high-visibility thermoplastic paint and add 'Pedestrian Crossing' road markings."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "The road has 4 or more lanes but the marked crossing lacks a central refuge island.",
+    "frame": 2,
+    "x": 450,
+    "y": 850,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the marked crossing to allow pedestrians to cross one direction at a time."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 210.92,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3192,
+  "completion_tokens": 606,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

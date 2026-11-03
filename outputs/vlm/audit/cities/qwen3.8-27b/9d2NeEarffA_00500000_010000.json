@@ -1,0 +1,122 @@
+{
+ "clip_id": "9d2NeEarffA_00500000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_002.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_004.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_006.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_008.jpg",
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00500000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is a narrow, informal strip that is partly blocked by parked vehicles and roadside stalls, forcing pedestrians to use the edge of the carriagew\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the left footway to a minimum of 1.5 m and install a physical barrier to separate it from the carriageway.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Parked vehicles and roadside stalls are obstructing the left footway, making it difficult for pedestrians to pass safely.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the left footway of parked vehicles and stalls to ensure a clear and safe path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway has broken and uneven sections, posing a significant trip hazard for pedestrians.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the broken and uneven sections of the left footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to shops and homes on both sides, but no purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with kerb ramps to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at the potential crossing points, making it difficult for pedestrians, especially those with mobility issues, to cross safely.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add raised kerb ramps at the potential crossing points to facilitate safe and easy access for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left footway is a narrow, informal strip that is partly blocked by parked vehicles and roadside stalls, forcing pedestrians to use the edge of the carriagew",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the left footway to a minimum of 1.5 m and install a physical barrier to separate it from the carriageway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Parked vehicles and roadside stalls are obstructing the left footway, making it difficult for pedestrians to pass safely.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "clear_footway",
+    "suggestion": "Clear the left footway of parked vehicles and stalls to ensure a clear and safe path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway has broken and uneven sections, posing a significant trip hazard for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Repair the broken and uneven sections of the left footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to shops and homes on both sides, but no purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with kerb ramps to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at the potential crossing points, making it difficult for pedestrians, especially those with mobility issues, to cross safely.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add raised kerb ramps at the potential crossing points to facilitate safe and easy access for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 562.43,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6253,
+  "completion_tokens": 641,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "P8Uh9f0EaU8_02405000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 850,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing the busy street."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "wide_road_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the wide road to provide a safe place for pedestrians to wait when crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing points to assist wheelchair users and those with mobility aids in safely crossing the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "left_side",
+   "evidence": "no_street_lighting_visible",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting on the left side of the road to improve visibility for both pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is visible but a crossing is not clearly shown or absent, so the deficit cannot be confirmed from the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width is not clearly measurable in the frames, so a wide road without a refuge cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing point is clearly visible, so the presence or absence of kerb ramps cannot be judged."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is partly obscured by trees and the truck, so the presence or absence of street lighting cannot be confirmed."
+  }
+ ],
+ "error": null
+}

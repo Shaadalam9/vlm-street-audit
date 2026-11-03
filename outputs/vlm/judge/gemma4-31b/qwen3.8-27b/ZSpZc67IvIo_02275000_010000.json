@@ -1,0 +1,29 @@
+{
+ "clip_id": "ZSpZc67IvIo_02275000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A continuous fence separates the footway from the road, and there is no marked or signalised crossing visible in the 100 m segment.",
+   "frame": 1,
+   "x": 800,
+   "y": 750,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe point for people to cross the multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The fence is clearly visible, and adding a signalised crossing at the upcoming junction is a standard and feasible safety improvement."
+  }
+ ],
+ "error": null
+}

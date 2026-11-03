@@ -1,0 +1,132 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_002.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_004.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_006.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_008.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is occupied by market stalls and umbrellas, leaving no dedicated, safe space for pedestrians to walk.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the market stalls to a designated area away from the road to create a clear, safe pedestrian path.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is completely blocked by market stalls and goods.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the market stalls to a designated area away from the road to create a clear, safe pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The sidewalk on the left is uneven and has debris, posing a trip hazard for pedestrians.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Repair the sidewalk to ensure it is smooth and free of debris.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no marked or purpose-built crossing facility visible on this stretch of road, despite high pedestrian activity.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island to provide a safe place for people to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"There are no dropped kerbs visible at any potential crossing points.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dropped kerbs at the new pedestrian crossing to ensure accessibility for all users.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along this urban road.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lights along the road to improve visibility and safety for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is occupied by market stalls and umbrellas, leaving no dedicated, safe space for pedestrians to walk.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the market stalls to a designated area away from the road to create a clear, safe pedestrian path."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right is completely blocked by market stalls and goods.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the market stalls to a designated area away from the road to create a clear, safe pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The sidewalk on the left is uneven and has debris, posing a trip hazard for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Repair the sidewalk to ensure it is smooth and free of debris."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no marked or purpose-built crossing facility visible on this stretch of road, despite high pedestrian activity.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe place for people to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "There are no dropped kerbs visible at any potential crossing points.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install dropped kerbs at the new pedestrian crossing to ensure accessibility for all users."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along this urban road.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lights along the road to improve visibility and safety for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 176.27,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6304,
+  "completion_tokens": 669,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

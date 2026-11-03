@@ -1,0 +1,102 @@
+{
+ "clip_id": "PYFB7nMiFTM_00766000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_002.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_004.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_006.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_008.jpg",
+  "data/snippets/PYFB7nMiFTM/PYFB7nMiFTM_00766000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bordered by a low concrete barrier and a steep, unimproved earthen bank with vegetation, providing no usable path for pedestrians.\",\"frame\":1,\"x\":800,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk along the right side, protected from the road by a kerb or bollards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The presence of a police checkpoint and dense residential buildings on both sides creates a high demand for crossing, but there is no marked or purpose-built设施.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised, marked pedestrian crossing at the location of the police checkpoint to provide a safe and defined crossing point.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"While a few streetlights are visible in the distance, there is a significant unlit stretch along the road, particularly on the left side near the construction.\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Install additional streetlights along the unlit sections of the road, particularly near the pedestrian crossing, to improve visibility for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bordered by a low concrete barrier and a steep, unimproved earthen bank with vegetation, providing no usable path for pedestrians.",
+    "frame": 1,
+    "x": 800,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk along the right side, protected from the road by a kerb or bollards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The presence of a police checkpoint and dense residential buildings on both sides creates a high demand for crossing, but there is no marked or purpose-built设施.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a raised, marked pedestrian crossing at the location of the police checkpoint to provide a safe and defined crossing point."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "While a few streetlights are visible in the distance, there is a significant unlit stretch along the road, particularly on the left side near the construction.",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Install additional streetlights along the unlit sections of the road, particularly near the pedestrian crossing, to improve visibility for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 202.91,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6096,
+  "completion_tokens": 484,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

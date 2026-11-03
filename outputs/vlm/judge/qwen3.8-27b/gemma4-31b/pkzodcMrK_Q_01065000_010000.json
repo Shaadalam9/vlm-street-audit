@@ -1,0 +1,65 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk provided, only a grass verge and trees",
+   "frame": 1,
+   "x": 150,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no sidewalk provided, only grass and trees",
+   "frame": 1,
+   "x": 850,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no street lights visible along the urban residential stretch",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows a grass verge and trees with no visible footway, but the narrow verge makes construction feasibility unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side also shows a grass verge and trees with no visible footway, but the narrow verge makes construction feasibility unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible in the frames, but the dense tree canopy and lack of visible utility poles make installation feasibility unclear."
+  }
+ ],
+ "error": null
+}

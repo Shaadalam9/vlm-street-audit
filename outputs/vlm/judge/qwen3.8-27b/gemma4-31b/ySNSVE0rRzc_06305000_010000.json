@@ -1,0 +1,83 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk or informal path visible, only the road edge",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a purpose-built sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "pedestrian walking on an unpaved, informal dirt path",
+   "frame": 1,
+   "x": 530,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Upgrade the informal dirt path on the right side to a paved, continuous sidewalk."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrian crossing demand is present but no formal crossing facility is provided",
+   "frame": 1,
+   "x": 530,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate crossing across the two lanes of traffic."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban area with no visible street lighting poles along the road",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Install street lighting along the road segment to improve visibility and safety for all road users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is not visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a pedestrian on an unpaved path on the right, confirming the deficit and the need for a paved sidewalk."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of a marked crossing is visible, but the suggestion is a generic measure that does not reference the specific location."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible in the daytime frames, confirming the deficit, but the suggestion is a generic measure."
+  }
+ ],
+ "error": null
+}

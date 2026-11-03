@@ -1,0 +1,47 @@
+{
+ "clip_id": "TKXHxRzvNIE_01842000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is a landscaped median with palm trees and hedges, with no path for pedestrians.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side, separated from the road by a kerb and a buffer of planting."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the adjacent promenade and commercial buildings, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island to safely connect the promenade to the commercial area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a landscaped median, not a roadside, so the deficit is not visible at the specified location and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible in the frames, but the high demand is inferred, and the suggestion is a generic measure not tied to a specific visible feature."
+  }
+ ],
+ "error": null
+}

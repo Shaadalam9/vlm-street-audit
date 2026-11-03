@@ -1,0 +1,83 @@
+{
+ "clip_id": "8wdxcC3VkQY_03150000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A wide, mown grass verge runs from the road edge to the houses, with no paved or trodden path for pedestrians.",
+   "frame": 1,
+   "x": 250,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway along the left verge to provide a safe, continuous route for residents."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a grassy area leading to driveways and houses, with no dedicated path for pedestrians.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Install a footway on the right side to connect the residential properties to the street safely."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road is a residential street with houses on both sides, creating a high demand for crossing, but there is no marked or physical crossing facility visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Provide a raised, marked pedestrian crossing at a logical point to allow safe passage between the houses on either side."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "There are no street lights visible along the length of the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all users during the evening and night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left verge is clearly grass with no path, but the suggestion is a generic measure that does not reference the specific layout or space constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is also a grassy area without a footway, and the suggestion is a generic measure that does not reference the specific layout or space constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible on this residential street, but the suggestion is a generic measure that does not reference the specific layout or space constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible in any frame, but the suggestion is a generic measure that does not reference the specific layout or space constraints of this street."
+  }
+ ],
+ "error": null
+}

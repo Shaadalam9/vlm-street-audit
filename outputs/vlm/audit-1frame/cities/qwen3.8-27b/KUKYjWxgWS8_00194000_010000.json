@@ -1,0 +1,100 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A wide paved area under the overpass is used for parking, with no clearly defined, continuous pedestrian footway.\",\"frame\":1,\"x\":200,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised sidewalk along the left edge of the road, separating pedestrians from the parking area.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand to cross due to the shops on the right and the road layout, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility paint and signage at the junction with the side road on the right.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No crossing is present, so there are no kerb ramps.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_raised_crossing\",\"suggestion\":\"When a crossing is installed, ensure it is a raised platform with dropped kerbs on both sides to improve accessibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A wide paved area under the overpass is used for parking, with no clearly defined, continuous pedestrian footway.",
+    "frame": 1,
+    "x": 200,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised sidewalk along the left edge of the road, separating pedestrians from the parking area."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand to cross due to the shops on the right and the road layout, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility paint and signage at the junction with the side road on the right."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No crossing is present, so there are no kerb ramps.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_raised_crossing",
+    "suggestion": "When a crossing is installed, ensure it is a raised platform with dropped kerbs on both sides to improve accessibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 29.93,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2525,
+  "completion_tokens": 462,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

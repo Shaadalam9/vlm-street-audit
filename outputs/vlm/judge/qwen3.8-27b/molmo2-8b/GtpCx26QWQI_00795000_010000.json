@@ -1,0 +1,65 @@
+{
+ "clip_id": "GtpCx26QWQI_00795000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "no_refuge_on_wide_road",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island at the marked crossing to provide a safe place for pedestrians to wait on the wide road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the marked crossing to improve accessibility for pedestrians with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a wide road or a marked crossing where a refuge island would be needed, so the deficit is not visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is clearly visible in the frames, so the absence of kerb ramps cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken in daylight, so the presence or absence of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

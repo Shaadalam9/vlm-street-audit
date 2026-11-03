@@ -1,0 +1,65 @@
+{
+ "clip_id": "DGdOwXUMZkI_01182000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better pedestrian safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 400,
+   "y": 200,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this location."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides of the street in the frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides of the street in the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or clear evidence of crossing demand."
+  }
+ ],
+ "error": null
+}

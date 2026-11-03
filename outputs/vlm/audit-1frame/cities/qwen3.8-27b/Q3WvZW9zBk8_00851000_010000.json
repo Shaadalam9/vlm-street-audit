@@ -1,0 +1,120 @@
+{
+ "clip_id": "Q3WvZW9zBk8_00851000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Q3WvZW9zBk8/Q3WvZW9zBk8_00851000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A trodden strip of ground is used for walking, but it is not a purpose-built, continuous sidewalk.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, set back from the carriageway, to provide a safe and dedicated space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is completely obstructed by market stalls, goods, and a large umbrella.\",\"frame\":1,\"x\":150,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stalls and clear all goods from the pedestrian area to create an unobstructed path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground on the left is uneven and appears to be a mix of dirt and broken paving, creating significant trip hazards.\",\"frame\":1,\"x\":200,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear demand for crossing due to the market and buildings on the left, but no formal crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at a logical point to provide a safe and visible place for people to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in the image.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along the road to improve visibility and safety for all users during the night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A trodden strip of ground is used for walking, but it is not a purpose-built, continuous sidewalk.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, set back from the carriageway, to provide a safe and dedicated space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is completely obstructed by market stalls, goods, and a large umbrella.",
+    "frame": 1,
+    "x": 150,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stalls and clear all goods from the pedestrian area to create an unobstructed path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground on the left is uneven and appears to be a mix of dirt and broken paving, creating significant trip hazards.",
+    "frame": 1,
+    "x": 200,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear demand for crossing due to the market and buildings on the left, but no formal crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at a logical point to provide a safe and visible place for people to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in the image.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along the road to improve visibility and safety for all users during the night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 135.58,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2680,
+  "completion_tokens": 617,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

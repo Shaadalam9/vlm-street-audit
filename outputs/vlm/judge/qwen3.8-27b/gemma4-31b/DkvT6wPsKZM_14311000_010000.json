@@ -1,0 +1,65 @@
+{
+ "clip_id": "DkvT6wPsKZM_14311000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side lacks a purpose-built sidewalk, consisting only of a narrow, unpaved strip of grass and dirt.",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe walking space."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved area on the left is uneven and muddy, posing a trip hazard.",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the left-side walking area to remove trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The sidewalk on the right is uneven and damaged in several places.",
+   "frame": 1,
+   "x": 600,
+   "y": 600,
+   "measure": "repair_footway",
+   "suggestion": "Repair the cracked and uneven sections of the right-side sidewalk."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side clearly lacks a paved footway, and the suggestion to build one is specific to the visible layout, though feasibility is unclear due to the lack of a visible verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved and uneven nature of the left side is visible, and the suggestion to level and pave it directly addresses the trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side sidewalk is visible and appears damaged, and the suggestion to repair it is specific to the observed condition."
+  }
+ ],
+ "error": null
+}

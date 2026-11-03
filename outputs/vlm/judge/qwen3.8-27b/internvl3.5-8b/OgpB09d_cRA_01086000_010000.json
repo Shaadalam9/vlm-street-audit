@@ -1,0 +1,47 @@
+{
+ "clip_id": "OgpB09d_cRA_01086000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper pedestrian crossing to enhance safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper pedestrian crossing to enhance safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear pedestrian crossing or a specific location where one is missing, making the deficit and the suggested fix unverifiable."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear pedestrian crossing or a specific location where one is missing, making the deficit and the suggested fix unverifiable."
+  }
+ ],
+ "error": null
+}

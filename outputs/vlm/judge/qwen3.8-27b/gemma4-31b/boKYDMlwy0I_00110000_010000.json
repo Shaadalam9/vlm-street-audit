@@ -1,0 +1,65 @@
+{
+ "clip_id": "boKYDMlwy0I_00110000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has an informal dirt and grass strip rather than a purpose-built sidewalk.",
+   "frame": 1,
+   "x": 200,
+   "y": 550,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side to provide a safe and accessible path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven with grass and dirt patches.",
+   "frame": 1,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the left-side path to remove trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There are homes and businesses on both sides, creating crossing demand, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a grassy, unpaved strip on the left, confirming the deficit, but the available space for a new sidewalk is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The uneven, grassy surface on the left is clearly visible, and paving it would address the trip hazards, though feasibility is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of a crossing is evident, but the suggestion to build a footway is a generic measure that does not directly address the need for a crossing facility."
+  }
+ ],
+ "error": null
+}

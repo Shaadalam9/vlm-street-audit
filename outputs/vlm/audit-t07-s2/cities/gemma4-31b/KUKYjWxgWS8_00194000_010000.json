@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side lacks a purpose-built sidewalk, consisting of a concrete area used for parking and storage.\",\"frame\":4,\"x\":200,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper, continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The walking area on the left is blocked by parked cars and construction materials.\",\"frame\":4,\"x\":200,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles and construction debris from the left-hand pedestrian area to ensure clear passage.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"There are uneven surfaces and piles of sand/dirt on the left walking area.\",\"frame\":4,\"x\":250,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Level the surface and clear debris from the left-hand walking area to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is high crossing demand due to shops on the right and a bus stop, but no designated crossing facility is provided.\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked or signalised pedestrian crossing to provide a safe way for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side lacks a purpose-built sidewalk, consisting of a concrete area used for parking and storage.",
+    "frame": 4,
+    "x": 200,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper, continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The walking area on the left is blocked by parked cars and construction materials.",
+    "frame": 4,
+    "x": 200,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles and construction debris from the left-hand pedestrian area to ensure clear passage."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "There are uneven surfaces and piles of sand/dirt on the left walking area.",
+    "frame": 4,
+    "x": 250,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Level the surface and clear debris from the left-hand walking area to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is high crossing demand due to shops on the right and a bus stop, but no designated crossing facility is provided.",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked or signalised pedestrian crossing to provide a safe way for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 206.58,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3125,
+  "completion_tokens": 539,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

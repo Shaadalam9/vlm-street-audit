@@ -1,0 +1,102 @@
+{
+ "clip_id": "3dhsxxeDUhU_03002000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_002.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_004.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_006.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_008.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no sidewalk visible, only buildings and greenery adjacent to the road\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side to provide a safe space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no sidewalk visible, only a fence and dirt shoulder\",\"frame\":1,\"x\":900,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a proper sidewalk on the right side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"commercial buildings on both sides and a traffic signal indicate high crossing demand, but no designated crossing facility is present\",\"frame\":1,\"x\":340,\"y\":430,\"measure\":\"build_footway\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction to safely facilitate crossing demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no sidewalk visible, only buildings and greenery adjacent to the road",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side to provide a safe space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no sidewalk visible, only a fence and dirt shoulder",
+    "frame": 1,
+    "x": 900,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a proper sidewalk on the right side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "commercial buildings on both sides and a traffic signal indicate high crossing demand, but no designated crossing facility is present",
+    "frame": 1,
+    "x": 340,
+    "y": 430,
+    "measure": "build_footway",
+    "suggestion": "Install a signalised pedestrian crossing at the junction to safely facilitate crossing demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 1326.67,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3009,
+  "completion_tokens": 423,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

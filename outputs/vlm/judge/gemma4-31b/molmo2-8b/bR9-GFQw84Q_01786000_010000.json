@@ -1,0 +1,65 @@
+{
+ "clip_id": "bR9-GFQw84Q_01786000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "no_refuge_on_wide_road",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the intersection to provide a safe place for pedestrians to wait when crossing a wide road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the marked pedestrian crossing to improve accessibility for wheelchair users and those with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with a marked crossing but no central refuge island is visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The resolution and angle of the frames do not clearly show whether kerb ramps are present or missing."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Street lighting poles are clearly visible on both sides of the road."
+  }
+ ],
+ "error": null
+}

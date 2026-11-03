@@ -1,0 +1,112 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, uneven strip of ground is used for walking, with no purpose-built sidewalk, forcing pedestrians to share space with parked cars and roadside activity.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, level paved footway on the left side, separated from the roadway by a raised kerb, to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The footway on the right is obstructed by a high density of parked motorbikes and scooters, forcing pedestrians to navigate around them or step into the carriag\",\"frame\":3,\"x\":900,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a dedicated, marked parking zone for two-wheelers set back from the footway edge to keep the pedestrian path clear and unobstructed.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The footway surface on the right appears uneven, with visible bumps and broken sections, creating a significant risk of tripping for pedestrians.\",\"frame\":2,\"x\":950,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the entire right-hand footway with a smooth, uniform concrete or paver surface to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"High pedestrian activity and commercial frontages create a clear demand for crossing, but there is no marked crossing, refuge, or signalised crossing visible in\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a high-visibility, zebra-marked pedestrian crossing at a strategic point in this segment to provide a designated and safer place for people to cross\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, uneven strip of ground is used for walking, with no purpose-built sidewalk, forcing pedestrians to share space with parked cars and roadside activity.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, level paved footway on the left side, separated from the roadway by a raised kerb, to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The footway on the right is obstructed by a high density of parked motorbikes and scooters, forcing pedestrians to navigate around them or step into the carriag",
+    "frame": 3,
+    "x": 900,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement a dedicated, marked parking zone for two-wheelers set back from the footway edge to keep the pedestrian path clear and unobstructed."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The footway surface on the right appears uneven, with visible bumps and broken sections, creating a significant risk of tripping for pedestrians.",
+    "frame": 2,
+    "x": 950,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the entire right-hand footway with a smooth, uniform concrete or paver surface to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "High pedestrian activity and commercial frontages create a clear demand for crossing, but there is no marked crossing, refuge, or signalised crossing visible in",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a high-visibility, zebra-marked pedestrian crossing at a strategic point in this segment to provide a designated and safer place for people to cross"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 114.47,
+ "usage": {
+  "prompt_tokens": 4612,
+  "total_tokens": 5215,
+  "completion_tokens": 603,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

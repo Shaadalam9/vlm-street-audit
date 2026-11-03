@@ -1,0 +1,47 @@
+{
+ "clip_id": "DkvT6wPsKZM_14311000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "A junction with a side road is visible on the left, creating a need to cross, but there is no marked or physical crossing facility.",
+   "frame": 1,
+   "x": 250,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction on the left to provide a safe place for people to cross."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "left_side",
+   "evidence": "The junction on the left lacks a formal crossing, and therefore lacks the dropped kerbs that would be required for one.",
+   "frame": 1,
+   "x": 250,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Construct dropped kerbs at the new crossing point on the left to allow safe access for pedestrians and people with mobility impairments."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a junction on the left, but the specific area where a crossing would be needed is obscured by distance and weather, making it impossible to confirm the absence of a crossing or kerb."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The lack of a visible crossing implies a lack of dropped kerbs, but the specific location is not clearly visible enough to confirm the deficit."
+  }
+ ],
+ "error": null
+}

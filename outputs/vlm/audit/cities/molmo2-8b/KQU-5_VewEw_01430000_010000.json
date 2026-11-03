@@ -1,0 +1,102 @@
+{
+ "clip_id": "KQU-5_VewEw_01430000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_01430000_010000/frame_002.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_01430000_010000/frame_004.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_01430000_010000/frame_006.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_01430000_010000/frame_008.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_01430000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no_kerb_ramps_visible\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the marked pedestrian crossing to improve accessibility for wheelchair users and those with mobility aids.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"no_refuge_on_wide_road\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a pedestrian refuge island in the middle of the marked crossing to provide a safe place for pedestrians to wait when crossing a wide road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"some_street_lighting\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no_kerb_ramps_visible",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the marked pedestrian crossing to improve accessibility for wheelchair users and those with mobility aids."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "no_refuge_on_wide_road",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a pedestrian refuge island in the middle of the marked crossing to provide a safe place for pedestrians to wait when crossing a wide road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "some_street_lighting",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 14.09,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7543,
+  "completion_tokens": 410,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "P8Uh9f0EaU8_02405000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A busy commercial street with shops and a bank on the right and a large residential block on the left, but no marked or signalised crossing is visible in the 10",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island at the junction of the U-turn lane and the main carriageway."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a short segment of the road; it is impossible to determine if there are no crossings within the entire 10m measure."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,100 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no purpose-built sidewalk provided for pedestrians\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk on the left side of the parking area to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no purpose-built sidewalk provided for pedestrians\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk on the right side of the parking area to provide a safe walking path for customers.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"commercial land use creates crossing demand but no designated crossing facility is provided\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to safely guide people across the parking lot towards the shops.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no purpose-built sidewalk provided for pedestrians",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk on the left side of the parking area to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no purpose-built sidewalk provided for pedestrians",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk on the right side of the parking area to provide a safe walking path for customers."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "commercial land use creates crossing demand but no designated crossing facility is provided",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to safely guide people across the parking lot towards the shops."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 222.04,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1916,
+  "completion_tokens": 416,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

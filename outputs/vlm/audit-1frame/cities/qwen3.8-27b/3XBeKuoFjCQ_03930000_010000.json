@@ -1,0 +1,100 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the street is a continuous cobblestone surface with no raised or distinct pavement; the pedestrians are walking directly on the road surface.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a raised, continuous footway along the left side of the street to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the street is a continuous cobblestone surface with no raised or distinct pavement; the pedestrians are walking directly on the road surface.\",\"frame\":1,\"x\":750,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a raised, continuous footway along the right side of the street to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand for crossing due to the residential nature of the street and the presence of pedestrians, but no marked or purpose-built crossing is in.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing at the junction to provide a safe and visible place for people to cross the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the street is a continuous cobblestone surface with no raised or distinct pavement; the pedestrians are walking directly on the road surface.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a raised, continuous footway along the left side of the street to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the street is a continuous cobblestone surface with no raised or distinct pavement; the pedestrians are walking directly on the road surface.",
+    "frame": 1,
+    "x": 750,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a raised, continuous footway along the right side of the street to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand for crossing due to the residential nature of the street and the presence of pedestrians, but no marked or purpose-built crossing is in.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing at the junction to provide a safe and visible place for people to cross the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 28.38,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2535,
+  "completion_tokens": 472,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

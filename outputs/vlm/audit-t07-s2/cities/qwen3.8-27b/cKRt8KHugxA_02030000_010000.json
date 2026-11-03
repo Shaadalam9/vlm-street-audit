@@ -1,0 +1,102 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_002.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_004.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_006.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_008.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"A zebra crossing sign is present, but the painted markings on the wet road surface are extremely faint and barely visible, failing to provide a clear, purpose-b\",\"frame\":1,\"x\":543,\"y\":411,\"measure\":\"repair_footway\",\"suggestion\":\"Repaint the faded zebra crossing markings to ensure they are clearly visible to approaching drivers.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A red car and a white van are parked directly on the footway, completely blocking the path for pedestrians.\",\"frame\":2,\"x\":350,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Clear the vehicles from the footway to restore a safe and unobstructed path for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"The zebra crossing is partially obscured by the vehicles parked on the adjacent footway, reducing its visibility and safety.\",\"frame\":2,\"x\":543,\"y\":411,\"measure\":\"repair_footway\",\"suggestion\":\"Remove the parked vehicles obstructing the view of the crossing to improve its visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "A zebra crossing sign is present, but the painted markings on the wet road surface are extremely faint and barely visible, failing to provide a clear, purpose-b",
+    "frame": 1,
+    "x": 543,
+    "y": 411,
+    "measure": "repair_footway",
+    "suggestion": "Repaint the faded zebra crossing markings to ensure they are clearly visible to approaching drivers."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A red car and a white van are parked directly on the footway, completely blocking the path for pedestrians.",
+    "frame": 2,
+    "x": 350,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Clear the vehicles from the footway to restore a safe and unobstructed path for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "The zebra crossing is partially obscured by the vehicles parked on the adjacent footway, reducing its visibility and safety.",
+    "frame": 2,
+    "x": 543,
+    "y": 411,
+    "measure": "repair_footway",
+    "suggestion": "Remove the parked vehicles obstructing the view of the crossing to improve its visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 102.99,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6078,
+  "completion_tokens": 466,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,110 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; a person is walking on the road edge with only a narrow, uneven strip between the carriageway and the building.\",\"frame\":1,\"x\":200,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m concrete footway along the left side, set back from the carriageway edge, to give pedestrians a safe, level path away from traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No usable sidewalk; a person is walking on a narrow, uneven strip beside the road with steps and a low wall interrupting any continuous path.\",\"frame\":1,\"x\":650,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Provide a continuous 1.5 m footway on the right side, with a level surface and dropped kerbs at access points, to separate pedestrians from the carriageway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Homes and buildings line both sides and people are present, indicating crossing demand, but there is no marked or purpose-built crossing in view.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility paint and signage at the point of highest demand to give pedestrians a defined, visible place to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No crossing is present, so there are no dropped kerbs to assist pedestrians at a crossing point.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"When the marked crossing is installed, include dropped kerbs on both sides to allow safe, step-free access for pedestrians, including those with mobility aids.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; a person is walking on the road edge with only a narrow, uneven strip between the carriageway and the building.",
+    "frame": 1,
+    "x": 200,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m concrete footway along the left side, set back from the carriageway edge, to give pedestrians a safe, level path away from traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No usable sidewalk; a person is walking on a narrow, uneven strip beside the road with steps and a low wall interrupting any continuous path.",
+    "frame": 1,
+    "x": 650,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Provide a continuous 1.5 m footway on the right side, with a level surface and dropped kerbs at access points, to separate pedestrians from the carriageway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Homes and buildings line both sides and people are present, indicating crossing demand, but there is no marked or purpose-built crossing in view.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility paint and signage at the point of highest demand to give pedestrians a defined, visible place to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No crossing is present, so there are no dropped kerbs to assist pedestrians at a crossing point.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "When the marked crossing is installed, include dropped kerbs on both sides to allow safe, step-free access for pedestrians, including those with mobility aids."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 129.78,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2664,
+  "completion_tokens": 601,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

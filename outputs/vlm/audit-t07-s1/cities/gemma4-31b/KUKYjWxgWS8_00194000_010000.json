@@ -1,0 +1,102 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Parked cars and construction materials block the footway.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Remove parked cars and construction debris from the left-hand sidewalk to provide a clear path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven ground and loose soil/rubble on the footway.\",\"frame\":4,\"x\":250,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the damaged sections of the left-hand sidewalk to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"High crossing demand due to shops and bus stop, but no marked or signalised crossing is visible.\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing near the bus stop to facilitate safe crossing across the multi-lane road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Parked cars and construction materials block the footway.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Remove parked cars and construction debris from the left-hand sidewalk to provide a clear path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven ground and loose soil/rubble on the footway.",
+    "frame": 4,
+    "x": 250,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the damaged sections of the left-hand sidewalk to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "High crossing demand due to shops and bus stop, but no marked or signalised crossing is visible.",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing near the bus stop to facilitate safe crossing across the multi-lane road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 172.38,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3030,
+  "completion_tokens": 444,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

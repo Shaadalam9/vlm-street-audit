@@ -1,0 +1,29 @@
+{
+ "clip_id": "DkvT6wPsKZM_14311000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a wider sidewalk to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear footway on the right, and the suggested measure (improve_crossing) does not address the missing sidewalk deficit."
+  }
+ ],
+ "error": null
+}

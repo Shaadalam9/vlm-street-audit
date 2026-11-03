@@ -1,0 +1,82 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_002.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_004.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_006.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_008.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is not visible\",\"frame\":1,\"x\":200,\"y\":50,\"measure\":\"improve_crossing\",\"suggestion\":\"add_a_crossing_facility_on_the_left_side_to_make_it_safe_for_pedestrians_to_cross_the_street\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is not visible",
+    "frame": 1,
+    "x": 200,
+    "y": 50,
+    "measure": "improve_crossing",
+    "suggestion": "add_a_crossing_facility_on_the_left_side_to_make_it_safe_for_pedestrians_to_cross_the_street"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 10.64,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7389,
+  "completion_tokens": 256,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

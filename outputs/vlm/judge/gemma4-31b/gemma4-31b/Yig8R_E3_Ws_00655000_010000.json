@@ -1,0 +1,29 @@
+{
+ "clip_id": "Yig8R_E3_Ws_00655000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Pedestrian fencing is present and there is a high-volume urban road, but no designated crossing facility is visible in the segment.",
+   "frame": 1,
+   "x": 750,
+   "y": 450,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross this multi-lane urban road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a short segment of the road, making it impossible to determine if a crossing exists elsewhere in the segment."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_002.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_004.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_006.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_008.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the carriageway is closed off by construction hoarding, leaving no space for pedestrians to walk.\",\"frame\":5,\"x\":900,\"y\":550,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a temporary, signalised pedestrian crossing with a refuge island to safely connect the public footway to the area on the right, which is currently inaccessible.\"},{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"There is a high demand for crossing due to the commercial buildings and footway on the left, but there is no marked or signalised crossing facility visible.\",\"frame\":5,\"x\":250,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a new, signalised pedestrian crossing at a logical point to allow safe passage from the left-hand footway.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"The absence of any crossing facility on a busy commercial street creates a high-risk situation where pedestrians are forced to cross at uncontrolled points.\",\"frame\":5,\"x\":250,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a central refuge island to a new crossing to break the crossing distance and improve safety for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the carriageway is closed off by construction hoarding, leaving no space for pedestrians to walk.",
+    "frame": 5,
+    "x": 900,
+    "y": 550,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a temporary, signalised pedestrian crossing with a refuge island to safely connect the public footway to the area on the right, which is currently inaccessible."
+   },
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "There is a high demand for crossing due to the commercial buildings and footway on the left, but there is no marked or signalised crossing facility visible.",
+    "frame": 5,
+    "x": 250,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a new, signalised pedestrian crossing at a logical point to allow safe passage from the left-hand footway."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "The absence of any crossing facility on a busy commercial street creates a high-risk situation where pedestrians are forced to cross at uncontrolled points.",
+    "frame": 5,
+    "x": 250,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a central refuge island to a new crossing to break the crossing distance and improve safety for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 344.99,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6091,
+  "completion_tokens": 479,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "Yig8R_E3_Ws_00435000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bounded by a guardrail with no visible footway or path for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a continuous footway along the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is bounded by a guardrail with no visible footway or path for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a continuous footway along the right side of the road to provide a safe path for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the measure 'add_street_lighting' does not address the lack of a footway; the suggestion is generic."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the measure 'add_street_lighting' does not address the lack of a footway; the suggestion is generic."
+  }
+ ],
+ "error": null
+}

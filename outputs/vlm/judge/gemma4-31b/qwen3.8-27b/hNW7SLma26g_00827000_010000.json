@@ -1,0 +1,47 @@
+{
+ "clip_id": "hNW7SLma26g_00827000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "Homes and a pedestrian crossing sign are present, but there is no marked or raised crossing facility.",
+   "frame": 1,
+   "x": 200,
+   "y": 320,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the location of the sign to provide a safe place for residents to cross."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "The road is in an urban area but has no street lights visible in any frame.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility for pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian crossing sign is visible, but no marked crossing exists on the road surface."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting infrastructure is visible along the stretch of road shown."
+  }
+ ],
+ "error": null
+}

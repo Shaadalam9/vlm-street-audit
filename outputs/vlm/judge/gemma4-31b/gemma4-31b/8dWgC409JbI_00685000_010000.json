@@ -1,0 +1,119 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway is an informal path blocked by market stalls and goods.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated, unobstructed sidewalk on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Market stalls and produce carts completely block the pedestrian area.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "clear_footway",
+   "suggestion": "Relocate market stalls to a designated vending area to clear the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Uneven pavement and debris are visible along the edge of the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repave the left-side sidewalk to remove uneven surfaces and trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The informal path is uneven and cluttered with market equipment.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Level the ground on the right side to provide a safe walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "High pedestrian demand due to shops on both sides, but no designated crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide pedestrians with a safe place to cross the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along this urban commercial stretch.",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal, unobstructed footway due to market activity."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Market stalls are clearly blocking the pedestrian space on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left edge shows uneven surfaces and debris."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is cluttered and uneven."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No designated crossing is visible despite the commercial activity."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible in the frames."
+  }
+ ],
+ "error": null
+}

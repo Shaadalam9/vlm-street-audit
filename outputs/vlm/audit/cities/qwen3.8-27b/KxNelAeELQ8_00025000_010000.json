@@ -1,0 +1,152 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_002.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_004.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_006.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_008.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00025000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; people and parked cars share the edge of the road.\",\"frame\":1,\"x\":200,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m paved footway on the left, set back from the parked cars.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right edge is an uneven dirt strip with no defined path.\",\"frame\":3,\"x\":800,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Lay a 1.5 m concrete footway along the right side in front of the unfinished building.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A row of parked vehicles occupies the only usable strip on the left.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Mark a no-parking zone on the left to keep the footway clear.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A parked pickup and construction materials block the right edge.\",\"frame\":3,\"x\":900,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Provide a designated parking bay away from the right footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Broken paving and debris are scattered along the left edge.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left footway to remove the broken sections.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Loose rubble and uneven ground are visible on the right.\",\"frame\":3,\"x\":850,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Clear the rubble and level the right footway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen crossing at an unmarked point with no facility.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the junction with dropped kerbs.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No dropped kerbs are visible at the crossing point.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Add dropped kerbs at both ends of the new crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; people and parked cars share the edge of the road.",
+    "frame": 1,
+    "x": 200,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m paved footway on the left, set back from the parked cars."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right edge is an uneven dirt strip with no defined path.",
+    "frame": 3,
+    "x": 800,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Lay a 1.5 m concrete footway along the right side in front of the unfinished building."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A row of parked vehicles occupies the only usable strip on the left.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Mark a no-parking zone on the left to keep the footway clear."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A parked pickup and construction materials block the right edge.",
+    "frame": 3,
+    "x": 900,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Provide a designated parking bay away from the right footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Broken paving and debris are scattered along the left edge.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left footway to remove the broken sections."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Loose rubble and uneven ground are visible on the right.",
+    "frame": 3,
+    "x": 850,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Clear the rubble and level the right footway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen crossing at an unmarked point with no facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the junction with dropped kerbs."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No dropped kerbs are visible at the crossing point.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Add dropped kerbs at both ends of the new crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 229.78,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6354,
+  "completion_tokens": 742,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

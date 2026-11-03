@@ -1,0 +1,155 @@
+{
+ "clip_id": "MlUNun68Clg_00205000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a wide, unpaved shoulder with no defined path for pedestrians.",
+   "frame": 1,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a wide, unpaved shoulder with no defined path for pedestrians.",
+   "frame": 2,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a wide, unpaved shoulder with no defined path for pedestrians.",
+   "frame": 3,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a wide, unpaved shoulder with no defined path for pedestrians.",
+   "frame": 4,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is a wide, unpaved shoulder with no defined path for pedestrians.",
+   "frame": 5,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and has a significant drop-off towards the water channel.",
+   "frame": 1,
+   "x": 150,
+   "y": 800,
+   "measure": "improve_crossing",
+   "suggestion": "Resurface the informal path on the left with a stable, level material and install a low barrier to prevent falls into the channel."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and has a significant drop-off towards the water channel.",
+   "frame": 2,
+   "x": 150,
+   "y": 800,
+   "measure": "improve_crossing",
+   "suggestion": "Resurface the informal path on the left with a stable, level material and install a low barrier to prevent falls into the channel."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and has a significant drop-off towards the water channel.",
+   "frame": 3,
+   "x": 150,
+   "y": 800,
+   "measure": "improve_crossing",
+   "suggestion": "Resurface the informal path on the left with a stable, level material and install a low barrier to prevent falls into the channel."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by the truck in the frames, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by the truck in the frames, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by the truck in the frames, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by the truck in the frames, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by the truck in the frames, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show an uneven, unpaved path on the left with a drop-off to the water channel."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show an uneven, unpaved path on the left with a drop-off to the water channel."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show an uneven, unpaved path on the left with a drop-off to the water channel."
+  }
+ ],
+ "error": null
+}

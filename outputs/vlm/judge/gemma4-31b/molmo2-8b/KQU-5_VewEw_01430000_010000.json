@@ -1,0 +1,65 @@
+{
+ "clip_id": "KQU-5_VewEw_01430000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 650,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the marked pedestrian crossing to improve accessibility for wheelchair users and those with mobility aids."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "no_refuge_on_wide_road",
+   "frame": 1,
+   "x": 500,
+   "y": 650,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the marked crossing to provide a safe place for pedestrians to wait when crossing a wide road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "some_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 650,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing lacks dropped kerbs, and adding them is a standard, feasible improvement for this specific location."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with a marked crossing but no central refuge, making a refuge island a feasible and specific fix."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Street lighting is visible in the frames, contradicting the claim that it is missing."
+  }
+ ],
+ "error": null
+}

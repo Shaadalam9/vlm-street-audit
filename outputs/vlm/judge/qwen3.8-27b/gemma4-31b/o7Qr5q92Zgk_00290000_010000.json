@@ -1,0 +1,65 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No purpose-built sidewalk is visible; the road edge meets buildings and dirt areas directly.",
+   "frame": 1,
+   "x": 100,
+   "y": 550,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous, paved sidewalk on the left side to separate pedestrians from motor traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The road is bordered by a concrete median and a wall/building line with no designated pedestrian path.",
+   "frame": 1,
+   "x": 900,
+   "y": 550,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a dedicated sidewalk on the right side to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to residential and commercial buildings on both sides, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 500,
+   "y": 550,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island to safely facilitate crossing this multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a sidewalk, but the suggestion is a generic measure that does not account for the specific layout or space constraints visible in the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is bordered by a wall with no pedestrian path, but the suggestion is generic and does not address the specific infrastructure or space limitations."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible, but the suggestion is generic and does not consider the specific road layout or traffic conditions shown in the frames."
+  }
+ ],
+ "error": null
+}

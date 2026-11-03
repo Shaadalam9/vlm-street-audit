@@ -1,0 +1,100 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left verge is occupied by a continuous row of parked cars and a box van, leaving no usable footway.\",\"frame\":1,\"x\":200,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Rebuild a continuous, unobstructed footway on the left side, relocating the current parking bays to the carriageway or a separate lot.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right verge is occupied by a row of parked cars, including a taxi, with no visible sidewalk for pedestrians.\",\"frame\":1,\"x\":750,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Construct a dedicated footway on the right side, separating pedestrians from the parked vehicles and the travel lane.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street has commercial activity and parked cars on both sides, creating a need to cross, but there is no marked or signalised crossing visible.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility signage to provide a safe point for people to cross the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left verge is occupied by a continuous row of parked cars and a box van, leaving no usable footway.",
+    "frame": 1,
+    "x": 200,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Rebuild a continuous, unobstructed footway on the left side, relocating the current parking bays to the carriageway or a separate lot."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right verge is occupied by a row of parked cars, including a taxi, with no visible sidewalk for pedestrians.",
+    "frame": 1,
+    "x": 750,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Construct a dedicated footway on the right side, separating pedestrians from the parked vehicles and the travel lane."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street has commercial activity and parked cars on both sides, creating a need to cross, but there is no marked or signalised crossing visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility signage to provide a safe point for people to cross the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 156.56,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2530,
+  "completion_tokens": 467,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

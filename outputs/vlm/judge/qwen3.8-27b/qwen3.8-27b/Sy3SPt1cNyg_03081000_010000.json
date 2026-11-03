@@ -1,0 +1,47 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway on the right is a narrow, informal path with no clear separation from the road.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous footway on the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the bus stop and buildings, but no marked or signalised crossing is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island at the bus stop location."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal footway, but the suggestion is generic and feasibility is unclear due to the low wall and grass verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible near the bus stop, and the suggestion is specific to that location, though feasibility is unclear."
+  }
+ ],
+ "error": null
+}

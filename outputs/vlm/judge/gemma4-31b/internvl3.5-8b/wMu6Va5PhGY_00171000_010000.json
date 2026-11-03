@@ -1,0 +1,65 @@
+{
+ "clip_id": "wMu6Va5PhGY_00171000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to improve safety at this junction."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a high-speed bridge environment where footways are absent, but feasibility is unclear due to the bridge structure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a high-speed bridge environment where footways are absent, but feasibility is unclear due to the bridge structure."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "There is no junction or crossing demand visible in the frames; this is a continuous bridge section."
+  }
+ ],
+ "error": null
+}

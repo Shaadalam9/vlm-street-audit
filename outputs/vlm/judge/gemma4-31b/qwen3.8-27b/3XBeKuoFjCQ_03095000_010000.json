@@ -1,0 +1,47 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03095000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The entire left side of the road is occupied by a construction site, including a large excavator, a portable toilet, and temporary fencing, leaving no space for",
+   "frame": 1,
+   "x": 150,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the construction site and its associated equipment to a different location to allow for the construction of a proper footway on the left side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a clear need for a crossing due to the presence of shops and homes on both sides of the street, but no marked or purpose-built crossing is visible in",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at a logical point, such as near the entrance to the building on the right, to provide a safe place for pedestrians to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The footway is missing due to temporary construction; relocating a construction site is not a permanent street design measure to 'repair' a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, and adding one near the building entrance is a feasible and specific improvement."
+  }
+ ],
+ "error": null
+}

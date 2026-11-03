@@ -1,0 +1,140 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an informal path blocked by stalls and goods.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a dedicated, unobstructed sidewalk on the left side of the street.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Market stalls and goods completely block the walking area.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate market stalls to a designated vending area to clear the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground surface is uneven and broken.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the left side of the street with a smooth, level surface.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is an informal path blocked by a large umbrella and stall.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a dedicated, unobstructed sidewalk on the right side of the street.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A large vendor stall and umbrella block the walking area.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Create a designated zone for street vendors to keep the pedestrian path clear.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground surface is uneven and broken.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the right side of the street with a smooth, level surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"High pedestrian demand is evident with people in the carriageway, but no formal crossing exists.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked zebra crossing to provide a safe point for pedestrians to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an informal path blocked by stalls and goods.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a dedicated, unobstructed sidewalk on the left side of the street."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Market stalls and goods completely block the walking area.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Relocate market stalls to a designated vending area to clear the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground surface is uneven and broken.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Repave the left side of the street with a smooth, level surface."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is an informal path blocked by a large umbrella and stall.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a dedicated, unobstructed sidewalk on the right side of the street."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A large vendor stall and umbrella block the walking area.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Create a designated zone for street vendors to keep the pedestrian path clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground surface is uneven and broken.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Repave the right side of the street with a smooth, level surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "High pedestrian demand is evident with people in the carriageway, but no formal crossing exists.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked zebra crossing to provide a safe point for pedestrians to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 472.63,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 2190,
+  "completion_tokens": 690,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

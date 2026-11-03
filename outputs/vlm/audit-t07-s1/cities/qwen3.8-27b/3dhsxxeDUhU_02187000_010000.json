@@ -1,0 +1,102 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_002.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_004.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_006.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_008.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"Shops and buildings line the left side, creating a clear demand for pedestrians to cross, but no formal crossing facility is visible in any frame.\",\"frame\":3,\"x\":300,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island at the frontage of the commercial strip.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is obstructed by parked vehicles and roadside stalls, forcing pedestrians to use the carriageway.\",\"frame\":4,\"x\":250,\"y\":720,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate roadside stalls and enforce parking restrictions to restore a clear, continuous footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The footway surface is uneven and broken, with significant gaps and rubble that pose a trip risk to pedestrians.\",\"frame\":3,\"x\":200,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the damaged sections of the footway to provide a smooth, level walking surface.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "Shops and buildings line the left side, creating a clear demand for pedestrians to cross, but no formal crossing facility is visible in any frame.",
+    "frame": 3,
+    "x": 300,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island at the frontage of the commercial strip."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is obstructed by parked vehicles and roadside stalls, forcing pedestrians to use the carriageway.",
+    "frame": 4,
+    "x": 250,
+    "y": 720,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate roadside stalls and enforce parking restrictions to restore a clear, continuous footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The footway surface is uneven and broken, with significant gaps and rubble that pose a trip risk to pedestrians.",
+    "frame": 3,
+    "x": 200,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the damaged sections of the footway to provide a smooth, level walking surface."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 382.74,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6066,
+  "completion_tokens": 454,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

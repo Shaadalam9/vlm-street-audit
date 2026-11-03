@@ -84,6 +84,19 @@ list any: 1,253 needs, each rated by both. All numbers come from `scripts/analys
 in `outputs/vlm/analysis_audit/`. *Consensus* means at least 3 of the 4 models agree; cities are the unit, each
 city's two clips averaged, with 95% intervals from a bootstrap over cities (seed 20261028).
 
+**Published data.** Every answer on the city clips and every judge rating is in this repository (text only, no
+frames), so each number can be checked:
+
+| Folder | Contents |
+|---|---|
+| `outputs/vlm/<run>/cities/<model>/<clip_id>.json` | 3,600 answers: runs `audit`, `audit-reworded`, `audit-1frame`, `audit-640px`, `audit-t07-s1`, `audit-t07-s2`. Each holds the model's checkpoint and revision, the prompt version, the condition (temperature, seed, frames, image size), the frame paths, the raw text and the parsed answer, with its `needed` list (need, evidence, frame, point, measure, suggestion) |
+| `outputs/vlm/judge/<judge>/<auditor>/<clip_id>.json` | 928 rated answers: the needs as listed and one rating per need |
+| `outputs/vlm/analysis_audit/` | The CSV tables behind every number above, and `tables.md` |
+
+A clip's frames can be rebuilt from its id (`<video_id>_<start ms>_<length ms>`) with the CROWD videos and
+`scripts/make_snippets.py`. The answers on the JAAD clips are not included; their scores are in
+`outputs/vlm/analysis_audit/jaad_validity.csv`.
+
 ### Main findings
 
 1. **The crossing item is valid where it can be checked.** On JAAD's labelled clips the iRAP crossing-facility item
@@ -117,7 +130,7 @@ city's two clips averaged, with 95% intervals from a bootstrap over cities (seed
      footway results above rest on the clips where at least 3 of 4 happen to agree. Kerb ramps (−0.04) and traffic
      calming are not usable.
 6. **Robust to wording and resolution, less to fewer frames and resampling.** Against the main answers, mean
-   Cohen's kappa over items and models is 0.74 for a reworded prompt and 0.76 at half resolution, but 0.59 with one
+   Cohen's kappa over items and models is 0.73 for a reworded prompt and 0.75 at half resolution, but 0.58 with one
    frame instead of five, and two samples at temperature 0.7 agree with each other at only 0.55. The footway item
    is the least stable (0.33 between samples). Robustness is about the same in both regions.
 7. **The large models' suggestions hold up; the small models' do not.**

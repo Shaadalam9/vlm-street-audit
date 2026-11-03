@@ -1,0 +1,102 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no footway present\",\"frame\":1,\"x\":100,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk along the left side to provide a safe pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no footway present\",\"frame\":1,\"x\":900,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk along the right side to provide a safe pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true but no crossing_facility\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing to improve crossing safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no footway present",
+    "frame": 1,
+    "x": 100,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk along the left side to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no footway present",
+    "frame": 1,
+    "x": 900,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk along the right side to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true but no crossing_facility",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing to improve crossing safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.33,
+ "usage": {
+  "prompt_tokens": 15267,
+  "total_tokens": 15640,
+  "completion_tokens": 373,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

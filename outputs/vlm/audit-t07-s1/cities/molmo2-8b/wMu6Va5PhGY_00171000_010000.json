@@ -1,0 +1,122 @@
+{
+ "clip_id": "wMu6Va5PhGY_00171000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_00171000_010000/frame_002.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_00171000_010000/frame_004.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_00171000_010000/frame_006.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_00171000_010000/frame_008.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_00171000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"grade_separated\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no_footway\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"build_footway\",\"suggestion\":\"Construct a footway along the left side of the road to provide a safe pedestrian crossing option.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no_footway\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"build_footway\",\"suggestion\":\"Construct a footway along the right side of the road to provide a safe pedestrian crossing option.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"grade_separated_crossing_on_wide_road_without_refuge\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the grade-separated crossing to provide a safe waiting area for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"grade_separated_crossing_without_kerb_ramps\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both ends of the grade-separated crossing to enable wheelchair access.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"grade_separated_crossing_without_kerb_ramps\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both ends of the grade-separated crossing to enable wheelchair access.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "grade_separated",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no_footway",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "build_footway",
+    "suggestion": "Construct a footway along the left side of the road to provide a safe pedestrian crossing option."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no_footway",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "build_footway",
+    "suggestion": "Construct a footway along the right side of the road to provide a safe pedestrian crossing option."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "grade_separated_crossing_on_wide_road_without_refuge",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the grade-separated crossing to provide a safe waiting area for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "grade_separated_crossing_without_kerb_ramps",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both ends of the grade-separated crossing to enable wheelchair access."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "grade_separated_crossing_without_kerb_ramps",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both ends of the grade-separated crossing to enable wheelchair access."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 282.6,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7657,
+  "completion_tokens": 524,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

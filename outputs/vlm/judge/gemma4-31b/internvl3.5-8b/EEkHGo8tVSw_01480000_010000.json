@@ -1,0 +1,47 @@
+{
+ "clip_id": "EEkHGo8tVSw_01480000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are visible on both sides of the road in the frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are visible on both sides of the road in the frames."
+  }
+ ],
+ "error": null
+}

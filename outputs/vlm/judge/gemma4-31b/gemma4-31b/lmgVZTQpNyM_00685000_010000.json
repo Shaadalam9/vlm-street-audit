@@ -1,0 +1,101 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "People are walking on a narrow, unpaved strip of land beside the road.",
+   "frame": 1,
+   "x": 120,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper, paved sidewalk on the left side of the road to separate pedestrians from traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area where people walk is unpaved and heavily obstructed by market stalls.",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Create a dedicated, paved pedestrian zone on the right side to move market activity away from the road edge."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Market stalls and umbrellas completely block the walking area.",
+   "frame": 1,
+   "x": 850,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Relocate market stalls to a designated vending area to clear the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground is uneven and cluttered with debris and stall equipment.",
+   "frame": 2,
+   "x": 800,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the walking area on the right side to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road between vehicles without any designated crossing facility.",
+   "frame": 3,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide a safe and visible point for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, and adding one is feasible given the available space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is unpaved and crowded, though feasibility depends on the land ownership behind the stalls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Market stalls clearly obstruct the pedestrian area, and relocating them is a standard urban management action."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground on the right is visibly uneven and cluttered, making paving a viable fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No designated crossing is visible while pedestrians cross the road, and a zebra crossing is a standard addition."
+  }
+ ],
+ "error": null
+}

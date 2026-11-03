@@ -1,0 +1,92 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_002.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_004.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_006.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_008.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"pedestrians are seen crossing the road in the carriageway without any marked or signalised facility\",\"frame\":1,\"x\":560,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a zebra crossing to provide a safe and designated point for pedestrians to cross the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"the footway is entirely blocked by parked cars and a delivery trolley\",\"frame\":1,\"x\":880,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Restrict parking on the right side of the road to ensure the footway remains clear for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "pedestrians are seen crossing the road in the carriageway without any marked or signalised facility",
+    "frame": 1,
+    "x": 560,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a zebra crossing to provide a safe and designated point for pedestrians to cross the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "the footway is entirely blocked by parked cars and a delivery trolley",
+    "frame": 1,
+    "x": 880,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Restrict parking on the right side of the road to ensure the footway remains clear for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 485.61,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2954,
+  "completion_tokens": 368,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

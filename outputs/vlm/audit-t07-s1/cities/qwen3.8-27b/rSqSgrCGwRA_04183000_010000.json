@@ -1,0 +1,112 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_002.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_004.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_006.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_008.jpg",
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A green three-wheeled cargo vehicle is parked on the footway, blocking the path.\",\"frame\":4,\"x\":147,\"y\":648,\"measure\":\"clear_footway\",\"suggestion\":\"Install physical bollards along the left kerb to prevent vehicles from parking on the footway.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A dense row of parked scooters and motorbikes completely blocks the footway.\",\"frame\":3,\"x\":886,\"y\":640,\"measure\":\"clear_footway\",\"suggestion\":\"Designate a specific, marked parking bay for two-wheelers on the road shoulder to clear the pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A pedestrian is seen walking across the carriageway in the middle of the road where there is no marked crossing.\",\"frame\":5,\"x\":503,\"y\":631,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised pedestrian crossing at this high-demand location to allow safe passage across the multi-lane road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The visible kerbs are vertical with no indication of dropped ramps for accessibility.\",\"frame\":1,\"x\":806,\"y\":640,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Construct dropped kerbs at all entry points to the footway to improve accessibility for wheelchairs and strollers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A green three-wheeled cargo vehicle is parked on the footway, blocking the path.",
+    "frame": 4,
+    "x": 147,
+    "y": 648,
+    "measure": "clear_footway",
+    "suggestion": "Install physical bollards along the left kerb to prevent vehicles from parking on the footway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A dense row of parked scooters and motorbikes completely blocks the footway.",
+    "frame": 3,
+    "x": 886,
+    "y": 640,
+    "measure": "clear_footway",
+    "suggestion": "Designate a specific, marked parking bay for two-wheelers on the road shoulder to clear the pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A pedestrian is seen walking across the carriageway in the middle of the road where there is no marked crossing.",
+    "frame": 5,
+    "x": 503,
+    "y": 631,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised pedestrian crossing at this high-demand location to allow safe passage across the multi-lane road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The visible kerbs are vertical with no indication of dropped ramps for accessibility.",
+    "frame": 1,
+    "x": 806,
+    "y": 640,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Construct dropped kerbs at all entry points to the footway to improve accessibility for wheelchairs and strollers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 539.74,
+ "usage": {
+  "prompt_tokens": 5412,
+  "total_tokens": 5941,
+  "completion_tokens": 529,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

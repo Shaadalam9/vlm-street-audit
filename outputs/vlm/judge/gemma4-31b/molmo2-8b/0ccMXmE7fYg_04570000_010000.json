@@ -1,0 +1,65 @@
+{
+ "clip_id": "0ccMXmE7fYg_04570000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "2-lane road with marked crossing and no refuge visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island at the marked crossing to provide a safe place for pedestrians to wait when crossing a two-lane road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "marked crossing without visible kerb ramps",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at both sides of the marked crossing to improve accessibility for wheelchair users and pedestrians with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban road with no visible street lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show a marked crossing or the full width of the road to determine if a refuge is missing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The kerb edges at the crossing points are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The images are taken during bright daylight, making it impossible to determine if street lighting is absent."
+  }
+ ],
+ "error": null
+}

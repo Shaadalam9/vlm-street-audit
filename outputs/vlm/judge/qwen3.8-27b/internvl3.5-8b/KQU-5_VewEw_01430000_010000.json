@@ -1,0 +1,47 @@
+{
+ "clip_id": "KQU-5_VewEw_01430000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk on the left side to at least 3 meters for safer pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk on the right side to at least 3 meters for safer pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left-side sidewalk clearly enough to verify its width, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side sidewalk is visible but its exact width is not discernible, making the deficit unverifiable."
+  }
+ ],
+ "error": null
+}

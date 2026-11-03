@@ -1,0 +1,29 @@
+{
+ "clip_id": "HmHCTeUYA9c_03952000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "left_side",
+   "evidence": "signalised crossing without refuge",
+   "frame": 1,
+   "x": 400,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "install a refuge island at the crossing to improve safety for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide signalised crossing without a central refuge island, and adding one is a standard feasible safety measure."
+  }
+ ],
+ "error": null
+}

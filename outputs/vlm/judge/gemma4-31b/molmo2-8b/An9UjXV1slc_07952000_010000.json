@@ -1,0 +1,29 @@
+{
+ "clip_id": "An9UjXV1slc_07952000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing the road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a limited section of the road and do not provide enough context to determine if a crossing is missing or where it should be placed."
+  }
+ ],
+ "error": null
+}

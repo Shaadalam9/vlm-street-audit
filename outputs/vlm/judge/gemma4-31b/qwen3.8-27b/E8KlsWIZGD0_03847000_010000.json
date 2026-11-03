@@ -1,0 +1,47 @@
+{
+ "clip_id": "E8KlsWIZGD0_03847000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway on the right is a narrow, informal strip of pavement that is not a continuous, purpose-built sidewalk.",
+   "frame": 2,
+   "x": 750,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a clear need to cross the road to access the buildings and parking areas, but no formal crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction with the main access road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal footway, and there is ample space in the adjacent field to construct one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No formal crossing is visible despite the presence of parking and buildings, and adding one is feasible."
+  }
+ ],
+ "error": null
+}

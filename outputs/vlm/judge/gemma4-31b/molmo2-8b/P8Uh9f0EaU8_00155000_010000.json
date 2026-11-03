@@ -1,0 +1,29 @@
+{
+ "clip_id": "P8Uh9f0EaU8_00155000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "no_kerb_ramps visible at the zebra crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the zebra crossing to improve accessibility for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The zebra crossing is not clearly visible in the provided frames to confirm the presence or absence of kerb ramps."
+  }
+ ],
+ "error": null
+}

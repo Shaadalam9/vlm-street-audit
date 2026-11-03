@@ -1,0 +1,65 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00290000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A continuous concrete barrier runs along the right edge of the carriageway, with no footway or path visible beyond it.",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side, separated from the carriageway by a kerb."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and appears to have debris and broken sections.",
+   "frame": 4,
+   "x": 150,
+   "y": 600,
+   "measure": "repair_footway",
+   "suggestion": "Resurface and level the informal path on the left to create a safe, continuous walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the mixed-use buildings and activity on both sides, but no marked or signalised crossing is visible in the 100m road.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A concrete barrier is clearly visible on the right, with no pedestrian footway present."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left edge shows an unpaved, uneven shoulder with debris."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No designated crossing is visible across the multi-lane road."
+  }
+ ],
+ "error": null
+}

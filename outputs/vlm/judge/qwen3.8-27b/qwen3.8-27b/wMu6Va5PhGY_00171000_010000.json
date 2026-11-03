@@ -1,0 +1,47 @@
+{
+ "clip_id": "wMu6Va5PhGY_00171000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous metal guardrail runs along the left edge of the carriageway, separating the road from the river, with no space for a footway.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a protected footway on the left side, separated from the traffic by a physical barrier."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A metal guardrail runs along the right edge of the carriageway, with no space for a footway.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a protected footway on the right side, separated from the traffic by a physical barrier."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a bridge over a river with no space for a footway, making the suggested construction infeasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a bridge over a river with no space for a footway, making the suggested construction infeasible."
+  }
+ ],
+ "error": null
+}

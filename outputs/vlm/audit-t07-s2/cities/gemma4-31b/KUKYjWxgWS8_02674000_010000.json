@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUKYjWxgWS8_02674000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"People must walk in the road as there is no designated sidewalk, only a wall and vegetation.\",\"frame\":1,\"x\":200,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated footway along the left wall to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"People must walk in the road as there is no designated sidewalk, only a wall and vegetation.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated footway along the right wall to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a demand for crossing between residential and commercial buildings, but no formal crossing facility is provided.\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"This is an urban road with no visible street lighting installed.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lighting along the length of the road to improve visibility and safety at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "People must walk in the road as there is no designated sidewalk, only a wall and vegetation.",
+    "frame": 1,
+    "x": 200,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated footway along the left wall to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "People must walk in the road as there is no designated sidewalk, only a wall and vegetation.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated footway along the right wall to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a demand for crossing between residential and commercial buildings, but no formal crossing facility is provided.",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "This is an urban road with no visible street lighting installed.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lighting along the length of the road to improve visibility and safety at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 195.11,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3101,
+  "completion_tokens": 515,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

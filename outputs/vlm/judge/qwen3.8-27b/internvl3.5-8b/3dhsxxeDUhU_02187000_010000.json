@@ -1,0 +1,47 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a paved area on the left, but its width and function as a footway are not clear enough to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obscured by trees and vegetation, making it impossible to verify the presence or width of a footway."
+  }
+ ],
+ "error": null
+}

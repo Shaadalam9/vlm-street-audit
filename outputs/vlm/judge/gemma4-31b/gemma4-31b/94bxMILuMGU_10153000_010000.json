@@ -1,0 +1,47 @@
+{
+ "clip_id": "94bxMILuMGU_10153000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bordered by a fence and a narrow strip of grass/dirt with no purpose-built sidewalk.",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper sidewalk on the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked crossing is heavily obstructed by parked cars on both sides, making it difficult for drivers to see pedestrians and for pedestrians to cross safely.",
+   "frame": 1,
+   "x": 600,
+   "y": 680,
+   "measure": "clear_footway",
+   "suggestion": "Implement strict no-parking zones around the zebra crossing to ensure clear visibility for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though space for one is limited by the fence."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars clearly obstruct the visibility and access of the zebra crossing."
+  }
+ ],
+ "error": null
+}

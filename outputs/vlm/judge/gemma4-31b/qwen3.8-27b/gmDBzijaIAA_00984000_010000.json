@@ -1,0 +1,47 @@
+{
+ "clip_id": "gmDBzijaIAA_00984000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is a narrow, informal strip with no clear separation from the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the left side to provide a safe walking space."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a high demand for crossing due to the commercial area and junction, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to manage the high crossing demand safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is obscured by vehicles, making it impossible to verify the footway's condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a congested road but do not provide a clear view of the junction's crossing infrastructure."
+  }
+ ],
+ "error": null
+}

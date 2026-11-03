@@ -1,0 +1,92 @@
+{
+ "clip_id": "P1Lm7YrWBTk_01595000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_002.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_004.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_006.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_008.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"painted_line\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are visible crossing the roadway in the distance, but there is no designated crossing facility provided at this point.\",\"frame\":1,\"x\":420,\"y\":390,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked or signalised pedestrian crossing to safely facilitate pedestrian movement across the road.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians must cross without a designated facility, making the crossing hazardous and hard for drivers to anticipate.\",\"frame\":1,\"x\":420,\"y\":390,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a marked pedestrian crossing to improve visibility and safety for people crossing the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "painted_line"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are visible crossing the roadway in the distance, but there is no designated crossing facility provided at this point.",
+    "frame": 1,
+    "x": 420,
+    "y": 390,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked or signalised pedestrian crossing to safely facilitate pedestrian movement across the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians must cross without a designated facility, making the crossing hazardous and hard for drivers to anticipate.",
+    "frame": 1,
+    "x": 420,
+    "y": 390,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a marked pedestrian crossing to improve visibility and safety for people crossing the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 139.7,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2951,
+  "completion_tokens": 365,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

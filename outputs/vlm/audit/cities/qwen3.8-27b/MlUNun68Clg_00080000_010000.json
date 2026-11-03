@@ -1,0 +1,102 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_002.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_004.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_006.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_008.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, unpaved strip of grass and dirt runs between the road edge and the roadside structures, with no continuous, purpose-built pavement.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separating pedestrians from the carriageway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven, with visible dips, mounds, and debris that would pose a significant trip hazard.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the left-side footway to create a smooth, even surface free of trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road has access points to properties and businesses on both sides, creating a need for crossing, but no marked or purpose-built crossing facility is visible\",\"frame\":3,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at a high-demand location to provide a safer place for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, unpaved strip of grass and dirt runs between the road edge and the roadside structures, with no continuous, purpose-built pavement.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, separating pedestrians from the carriageway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven, with visible dips, mounds, and debris that would pose a significant trip hazard.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the left-side footway to create a smooth, even surface free of trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road has access points to properties and businesses on both sides, creating a need for crossing, but no marked or purpose-built crossing facility is visible",
+    "frame": 3,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at a high-demand location to provide a safer place for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 127.5,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6075,
+  "completion_tokens": 463,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

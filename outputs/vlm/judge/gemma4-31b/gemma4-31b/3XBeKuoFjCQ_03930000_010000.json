@@ -1,0 +1,65 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "pedestrians walking in the carriageway as there is no designated sidewalk",
+   "frame": 4,
+   "x": 230,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated footway on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "pedestrians walking in the carriageway as there is no designated sidewalk",
+   "frame": 4,
+   "x": 780,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated footway on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are present and homes line both sides, but no designated crossing facility exists",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The street is extremely narrow with buildings right up to the edge, making the construction of separate footways physically impossible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The street is too narrow to accommodate dedicated footways on both sides without removing the carriageway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "While a crossing could be painted, the street is a shared-space environment where a formal crossing may be unnecessary."
+  }
+ ],
+ "error": null
+}

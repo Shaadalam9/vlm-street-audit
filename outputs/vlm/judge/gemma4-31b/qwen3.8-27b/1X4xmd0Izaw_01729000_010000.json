@@ -1,0 +1,101 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A person in a high-visibility vest is walking on the asphalt of the road, indicating the footway is obstructed or unusable.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to provide a clear, unobstructed path for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A white van is parked on the footway, completely blocking the path for pedestrians.",
+   "frame": 1,
+   "x": 50,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+   "frame": 1,
+   "x": 150,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven and broken sections of the left-side footway to ensure a safe walking surface."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+   "frame": 1,
+   "x": 850,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven and broken sections of the right-side footway to ensure a safe walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to shops and a junction, but no marked or purpose-built crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A person is walking on the road, and the left side lacks a clear, continuous footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A white vehicle is parked on the left-side pedestrian area."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is too low to definitively identify specific trip hazards or broken sections."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right-side footway is mostly obscured or too distant to assess surface quality."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The area has high commercial activity but no visible marked pedestrian crossings."
+  }
+ ],
+ "error": null
+}

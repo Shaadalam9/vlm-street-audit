@@ -1,0 +1,150 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":100,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the left side to provide a safe walking area.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to provide a safe walking area.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":100,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions from the left footway to ensure it is fully usable.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"partly_blocked\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions from the right footway to ensure it is fully usable.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"some\",\"frame\":1,\"x\":100,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the left footway to prevent trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"some\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the right footway to prevent trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a pedestrian crossing with signals to improve safety at this location.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban road with street_lighting none\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 100,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions from the left footway to ensure it is fully usable."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "partly_blocked",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions from the right footway to ensure it is fully usable."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 100,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the left footway to prevent trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "some",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the right footway to prevent trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a pedestrian crossing with signals to improve safety at this location."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban road with street_lighting none",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 56.82,
+ "usage": {
+  "prompt_tokens": 3458,
+  "total_tokens": 4140,
+  "completion_tokens": 682,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

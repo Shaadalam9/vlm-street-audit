@@ -1,0 +1,101 @@
+{
+ "clip_id": "E8KlsWIZGD0_04355000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "physical_barrier",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the left side to provide a safe pedestrian route parallel to the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "physical_barrier",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the right side to provide a safe pedestrian route parallel to the road."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "marked_crossing_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island in the middle of the marked crossing to provide a safe place for pedestrians to wait when crossing a wide road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at both sides of the marked crossing to improve accessibility for wheelchair users and pedestrians with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "some_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights along the road to improve visibility and safety for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by trees and the camera angle, making it impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially visible but the full extent of the footway is not clear enough to confirm the deficit."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a wide, unmarked crossing with no central refuge island."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The images show a standard raised kerb at the crossing, indicating a lack of dropped kerbs for accessibility."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The street appears to have limited or no street lighting, which is a common deficit in such urban environments."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "hNW7SLma26g_00827000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, people must walk in the road",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are crossing the road but no designated crossing facility is provided",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban residential street with no visible street lights",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "build_footway",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left side of the road, so the absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing the road in the provided frames, so the deficit is not visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so the presence or absence of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

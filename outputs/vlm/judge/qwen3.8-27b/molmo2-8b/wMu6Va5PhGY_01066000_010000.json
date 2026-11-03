@@ -1,0 +1,83 @@
+{
+ "clip_id": "wMu6Va5PhGY_01066000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing at this busy intersection."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "wide_road_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the road to provide a safe place for pedestrians to wait when crossing at this busy intersection."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to improve accessibility for pedestrians with mobility aids and wheelchairs."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "some_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Enhance street lighting at the crossing to improve visibility for pedestrians and drivers during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the right-side pavement or crossing area clearly enough to confirm the deficit, and the suggestion is a generic measure not tied to a specific visible feature."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width is not clearly visible from the dashcam perspective, and the suggestion to add a refuge island is a generic measure not specific to this street's layout."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The kerb ramps are not visible in the frames, and the suggestion to install them is a generic accessibility measure not specific to this street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The street lighting is not clearly visible in the frames, and the suggestion to enhance it is a generic measure not specific to this street's layout."
+  }
+ ],
+ "error": null
+}

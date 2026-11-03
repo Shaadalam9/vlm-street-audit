@@ -1,0 +1,140 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous purpose-built sidewalk; people and a parked van occupy the edge of the carriageway.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m concrete footway along the left side, set back from the parked van.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Market stalls, umbrellas and goods occupy the entire right edge, leaving no usable footway.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Provide a 1.5 m footway on the right, relocating the market to a designated area behind it.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Stalls, crates and umbrellas completely block the right edge.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the right edge of stalls and goods to restore a clear pedestrian route.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven, broken paving and debris at the road edge.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Re-lay the left edge with a smooth, level surface to remove trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Crates, boxes and uneven ground create major trip hazards.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and clear the right edge, removing crates and debris.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"High crossing demand from shops and market on both sides, but no marked or purpose-built crossing.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility paint at the market frontage.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along this urban street.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install LED street lights at 30 m intervals along both sides of the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous purpose-built sidewalk; people and a parked van occupy the edge of the carriageway.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m concrete footway along the left side, set back from the parked van."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Market stalls, umbrellas and goods occupy the entire right edge, leaving no usable footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Provide a 1.5 m footway on the right, relocating the market to a designated area behind it."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Stalls, crates and umbrellas completely block the right edge.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Clear the right edge of stalls and goods to restore a clear pedestrian route."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven, broken paving and debris at the road edge.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Re-lay the left edge with a smooth, level surface to remove trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Crates, boxes and uneven ground create major trip hazards.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and clear the right edge, removing crates and debris."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "High crossing demand from shops and market on both sides, but no marked or purpose-built crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility paint at the market frontage."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along this urban street.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install LED street lights at 30 m intervals along both sides of the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 42.83,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2775,
+  "completion_tokens": 712,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

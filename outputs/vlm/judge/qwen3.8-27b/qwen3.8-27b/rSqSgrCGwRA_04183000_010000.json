@@ -1,0 +1,65 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A green three-wheeled cargo vehicle is parked on the footway, blocking the path.",
+   "frame": 4,
+   "x": 150,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left footway to a minimum of 1.5 m and install bollards to prevent vehicles from parking on it."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A row of parked scooters and a delivery rider occupy the footway, obstructing pedestrian flow.",
+   "frame": 4,
+   "x": 850,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Create a designated, off-street parking bay for two-wheelers on the right to keep the footway clear."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "A pedestrian is seen crossing the multi-lane road at an unmarked location, indicating a high demand for a safe crossing.",
+   "frame": 5,
+   "x": 500,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island to manage the high volume of traffic and pedestrian movement."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show a footway on the left side, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show a footway on the right side, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing the road at an unmarked location, indicating a need for a safe crossing."
+  }
+ ],
+ "error": null
+}

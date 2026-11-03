@@ -1,0 +1,122 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_002.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_004.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_006.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_008.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A wide, unpaved strip of dirt and gravel runs between the road and the buildings, with no continuous, purpose-built sidewalk.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side to provide a safe, level surface for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area to the right of the road is an unpaved, uneven shoulder with no defined pedestrian path.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Build a paved footway on the right side to separate pedestrians from the carriageway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved path on the left is uneven and appears to have ruts and loose material, creating a significant trip hazard.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side path with a smooth, even material to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved area on the right is uneven and has visible ruts, posing a trip hazard for anyone walking there.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the right-side path to create a safe, even walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear junction on the right where a side road meets the main road, but no pedestrian crossing is provided.\",\"frame\":1,\"x\":700,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at the junction on the right to provide a safe place for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A wide, unpaved strip of dirt and gravel runs between the road and the buildings, with no continuous, purpose-built sidewalk.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side to provide a safe, level surface for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area to the right of the road is an unpaved, uneven shoulder with no defined pedestrian path.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Build a paved footway on the right side to separate pedestrians from the carriageway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved path on the left is uneven and appears to have ruts and loose material, creating a significant trip hazard.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side path with a smooth, even material to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved area on the right is uneven and has visible ruts, posing a trip hazard for anyone walking there.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the right-side path to create a safe, even walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear junction on the right where a side road meets the main road, but no pedestrian crossing is provided.",
+    "frame": 1,
+    "x": 700,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at the junction on the right to provide a safe place for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 105.75,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2922,
+  "completion_tokens": 610,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

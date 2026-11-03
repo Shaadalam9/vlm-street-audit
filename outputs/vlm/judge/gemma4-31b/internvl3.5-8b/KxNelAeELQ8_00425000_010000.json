@@ -1,0 +1,101 @@
+{
+ "clip_id": "KxNelAeELQ8_00425000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the left side to provide a safe walking area."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper sidewalk on the right side to provide a safe walking area."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left sidewalk to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right sidewalk to ensure it is fully usable."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this busy intersection."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though a dirt shoulder exists."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal footway, with pedestrians walking on the road edge."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no formal footway to be blocked on the left side."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no formal footway to be blocked on the right side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No formal crossing is visible despite pedestrian activity, though it is a street, not necessarily a busy intersection."
+  }
+ ],
+ "error": null
+}

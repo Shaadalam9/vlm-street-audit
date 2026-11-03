@@ -1,0 +1,65 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No continuous sidewalk; people are walking on the road edge and a trodden strip is visible.",
+   "frame": 3,
+   "x": 200,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous 1.5 m paved footway on the left side to separate pedestrians from traffic."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven with debris and a low step at the building entrance.",
+   "frame": 3,
+   "x": 200,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Resurface and level the left-side path to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High pedestrian activity and frontage on both sides, but no marked or raised crossing is visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the point of highest demand."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, and there is ample space to construct one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The edges of the road and building entrances show uneven surfaces and debris."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no pedestrian crossings despite the presence of people crossing the road."
+  }
+ ],
+ "error": null
+}

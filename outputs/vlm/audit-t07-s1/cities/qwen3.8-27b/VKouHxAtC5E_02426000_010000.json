@@ -1,0 +1,112 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_002.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_004.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_006.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_008.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is lined with parked cars, with no visible pavement or path for pedestrians.\",\"frame\":5,\"x\":150,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide concrete footway between the parking bays and the tree line on the left.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has angled parking spaces, with no dedicated space for pedestrians to walk.\",\"frame\":5,\"x\":850,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Create a paved path on the right, separating the parking area from the vegetation.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a cyclist in the roadway and vehicles parked on both sides, indicating a need to cross, but no formal crossing is present.\",\"frame\":5,\"x\":500,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with raised pavement at the point where the cyclist is riding.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lamps are visible along the length of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install solar-powered streetlights at 50 m intervals along the centre of the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is lined with parked cars, with no visible pavement or path for pedestrians.",
+    "frame": 5,
+    "x": 150,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide concrete footway between the parking bays and the tree line on the left."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has angled parking spaces, with no dedicated space for pedestrians to walk.",
+    "frame": 5,
+    "x": 850,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Create a paved path on the right, separating the parking area from the vegetation."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a cyclist in the roadway and vehicles parked on both sides, indicating a need to cross, but no formal crossing is present.",
+    "frame": 5,
+    "x": 500,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with raised pavement at the point where the cyclist is riding."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lamps are visible along the length of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install solar-powered streetlights at 50 m intervals along the centre of the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 558.52,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6124,
+  "completion_tokens": 512,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

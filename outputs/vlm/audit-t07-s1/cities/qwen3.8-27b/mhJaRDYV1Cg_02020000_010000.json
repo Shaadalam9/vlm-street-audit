@@ -1,0 +1,92 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_002.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_004.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_006.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_008.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous strip of grass and trees with no paved or trodden path separates the road from the verge.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the left verge to provide a safe, level surface for pedestrians away from the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area beside the road is a grassy verge with a speed limit sign and no dedicated pedestrian path.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Install a pedestrian path on the right side, separating the grass verge from the road edge to allow safe walking.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous strip of grass and trees with no paved or trodden path separates the road from the verge.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the left verge to provide a safe, level surface for pedestrians away from the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area beside the road is a grassy verge with a speed limit sign and no dedicated pedestrian path.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Install a pedestrian path on the right side, separating the grass verge from the road edge to allow safe walking."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.84,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5970,
+  "completion_tokens": 358,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

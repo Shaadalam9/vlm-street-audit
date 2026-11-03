@@ -1,0 +1,112 @@
+{
+ "clip_id": "MlUNun68Clg_00205000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00205000_010000/frame_002.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00205000_010000/frame_004.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00205000_010000/frame_006.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00205000_010000/frame_008.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00205000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No sidewalk or path is visible on the left; the area is a grassy verge next to a ditch.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway between the road and the ditch on the left to provide a safe place for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk or path is visible on the right; the area is open land beyond the carriageway.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the right side of the road to provide a safe place for pedestrians.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road has at least four lanes and a physical median, but no pedestrian crossing with a refuge is visible.\",\"frame\":5,\"x\":500,\"y\":750,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian crossing with a central refuge island to allow safe crossing of the wide road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Street lights are sparse and do not provide adequate illumination for the entire road segment.\",\"frame\":5,\"x\":500,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights along the road to improve visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No sidewalk or path is visible on the left; the area is a grassy verge next to a ditch.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway between the road and the ditch on the left to provide a safe place for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk or path is visible on the right; the area is open land beyond the carriageway.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the right side of the road to provide a safe place for pedestrians."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road has at least four lanes and a physical median, but no pedestrian crossing with a refuge is visible.",
+    "frame": 5,
+    "x": 500,
+    "y": 750,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian crossing with a central refuge island to allow safe crossing of the wide road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Street lights are sparse and do not provide adequate illumination for the entire road segment.",
+    "frame": 5,
+    "x": 500,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights along the road to improve visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 372.76,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6127,
+  "completion_tokens": 515,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

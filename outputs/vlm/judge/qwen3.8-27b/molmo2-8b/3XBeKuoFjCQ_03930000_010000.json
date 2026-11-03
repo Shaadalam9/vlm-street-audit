@@ -1,0 +1,155 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Add a signaised crossing on the left side to provide a safe pedestrian crossing point in this narrow residential street."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Add a signaised crossing on the right side to provide a safe pedestrian crossing point in this narrow residential street."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Add a signaised crossing to provide a safe pedestrian crossing point in this narrow residential street."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island to provide a safe pedestrian crossing point in this narrow residential street."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island to provide a safe pedestrian crossing point in this narrow residential street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "left_side",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Add street lighting to improve visibility and safety for pedestrians in this narrow residential street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "right_side",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Add street lighting to improve visibility and safety for pedestrians in this narrow residential street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "crossing",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Add street lighting to improve visibility and safety for pedestrians in this narrow residential street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a specific crossing point or enough detail to confirm the absence of a footway, and a signalised crossing is a poor fit for this narrow, low-speed street."
+  }
+ ],
+ "error": null
+}

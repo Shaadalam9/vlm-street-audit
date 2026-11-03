@@ -1,0 +1,47 @@
+{
+ "clip_id": "R_FR8kB12sg_00263000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Expand the sidewalk to 3 meters or more for better accessibility."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a sidewalk, but its exact width is not clear, so the deficit is not confirmed; the suggestion is a generic width standard and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side sidewalk is visible but its width is not clear, so the deficit is not confirmed; the suggestion is generic and feasibility is unclear."
+  }
+ ],
+ "error": null
+}

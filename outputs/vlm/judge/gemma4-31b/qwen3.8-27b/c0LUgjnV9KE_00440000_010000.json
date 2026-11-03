@@ -1,0 +1,65 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A person is walking in the carriageway between the red car and the grey car, indicating the footway is obstructed or unusable.",
+   "frame": 3,
+   "x": 500,
+   "y": 750,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the right-hand footway to a minimum of 1.5m and install bollards to prevent vehicle encroachment."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High pedestrian activity and commercial frontage on the right, but no marked crossing is visible in the 100m segment.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island at the junction with the side street on the right."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "The footway is obstructed by parked vehicles and lacks a clear, accessible path to the road edge.",
+   "frame": 3,
+   "x": 750,
+   "y": 750,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Construct dropped kerbs at the new crossing point to ensure step-free access for all pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen walking in the road, confirming the lack of a functional footway on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible despite the high-density urban environment."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The kerb edge is obscured by vehicles, making it impossible to determine if ramps exist."
+  }
+ ],
+ "error": null
+}

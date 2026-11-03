@@ -1,0 +1,142 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, trodden strip of ground serves as a path for pedestrians, with no formal sidewalk or pavement.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a formal, paved sidewalk on the left side of the road to provide a safe and dedicated space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area to the right of the road is an informal, unpaved path with people sitting and standing on it, lacking a proper footway.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Build a continuous, paved footway on the right side of the road to separate pedestrians from traffic and provide a safe walking environment.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is partially obstructed by a parked auto-rickshaw and other vehicles.\",\"frame\":1,\"x\":150,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left side to keep the pedestrian path clear of vehicles and other obstructions.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is obstructed by people sitting on the ground and various items, making it difficult to pass.\",\"frame\":1,\"x\":800,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Install barriers or signage to prevent people from sitting and placing goods on the pedestrian path, ensuring it remains clear for passage.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left appears uneven and has potential trip hazards from the lack of a proper surface.\",\"frame\":1,\"x\":100,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side path with a smooth, even material to eliminate trip hazards and improve pedestrian safety.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is uneven and has objects on it, creating significant trip hazards for pedestrians.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side path with a smooth, even material and remove any objects to eliminate trip hazards and improve pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the presence of shops and a junction, but no formal crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island at the junction to provide a safe and visible place for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, trodden strip of ground serves as a path for pedestrians, with no formal sidewalk or pavement.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a formal, paved sidewalk on the left side of the road to provide a safe and dedicated space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area to the right of the road is an informal, unpaved path with people sitting and standing on it, lacking a proper footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Build a continuous, paved footway on the right side of the road to separate pedestrians from traffic and provide a safe walking environment."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is partially obstructed by a parked auto-rickshaw and other vehicles.",
+    "frame": 1,
+    "x": 150,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left side to keep the pedestrian path clear of vehicles and other obstructions."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right is obstructed by people sitting on the ground and various items, making it difficult to pass.",
+    "frame": 1,
+    "x": 800,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Install barriers or signage to prevent people from sitting and placing goods on the pedestrian path, ensuring it remains clear for passage."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left appears uneven and has potential trip hazards from the lack of a proper surface.",
+    "frame": 1,
+    "x": 100,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side path with a smooth, even material to eliminate trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right is uneven and has objects on it, creating significant trip hazards for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side path with a smooth, even material and remove any objects to eliminate trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the presence of shops and a junction, but no formal crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island at the junction to provide a safe and visible place for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 439.79,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 3127,
+  "completion_tokens": 815,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

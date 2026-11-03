@@ -1,0 +1,90 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_01836000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A person is pushing a loaded hand-truck across the carriageway in front of parked cars, with no marked or raised crossing at the point of use.\",\"frame\":1,\"x\":650,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Provide a marked pedestrian crossing with dropped kerbs at the parking-bay gap on the right to give a safe, visible place to cross.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A market stall and display tables are set out on the left footway, narrowing the usable walking width.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stall and its display tables off the footway to restore a clear, continuous pedestrian route.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A person is pushing a loaded hand-truck across the carriageway in front of parked cars, with no marked or raised crossing at the point of use.",
+    "frame": 1,
+    "x": 650,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Provide a marked pedestrian crossing with dropped kerbs at the parking-bay gap on the right to give a safe, visible place to cross."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A market stall and display tables are set out on the left footway, narrowing the usable walking width.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stall and its display tables off the footway to restore a clear, continuous pedestrian route."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 109.75,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2448,
+  "completion_tokens": 385,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,101 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 800,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand_true_and_crossing_facility_none",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island at the crossing to provide a safe place for pedestrians to wait before crossing."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more_lanes_and_signalised_crossing_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island at the crossing to provide a safe place for pedestrians to wait before crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "kerb_ramps_none",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing to improve accessibility for pedestrians with mobility aids."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban_road_with_street_lighting_none",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has an unpaved shoulder rather than a formal footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A crossing is indicated by a sign, but the suggested fix is a refuge island rather than a crossing facility."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road does not appear to have 4 or more lanes, nor is there a signalised crossing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames do not provide a clear view of the kerb at the crossing point."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible along the stretch of road shown."
+  }
+ ],
+ "error": null
+}

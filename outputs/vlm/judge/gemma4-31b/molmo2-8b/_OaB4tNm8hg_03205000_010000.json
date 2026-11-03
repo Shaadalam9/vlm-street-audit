@@ -1,0 +1,29 @@
+{
+ "clip_id": "_OaB4tNm8hg_03205000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no_footway",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "Create a continuous footway along the left side to provide a safe pedestrian route parallel to the road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, shared-space pedestrian area on the left, not a complete absence of footway."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous, purpose-built sidewalk is present on the left side, but it is partially obstructed by parked vehicles and roadside stalls.",
+   "frame": 4,
+   "x": 150,
+   "y": 750,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to a minimum of 1.5m and install bollards to prevent vehicles from parking on it."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The footway on the left is partially blocked by parked cars and commercial stalls, forcing pedestrians to step into the roadway.",
+   "frame": 4,
+   "x": 150,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left footway and relocate roadside stalls to a designated area further from the carriageway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the commercial nature of the street, but no marked or signalised crossing is visible in any frame.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island at the busiest commercial junction."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "No kerb ramps are visible at any potential crossing point, as there are no formal crossings.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "add_raised_crossing",
+   "suggestion": "Construct a raised table crossing with dropped kerbs to provide a safe and accessible crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show a continuous footway on the left, making the deficit and the feasibility of widening it unclear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The evidence for a blocked footway is not clearly visible in the provided frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible in any frame, but the specific location for a new crossing is not identifiable from the images."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of kerb ramps is consistent with the lack of formal crossings, but the specific placement for a new raised crossing is not clear."
+  }
+ ],
+ "error": null
+}

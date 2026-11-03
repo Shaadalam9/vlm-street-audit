@@ -1,0 +1,65 @@
+{
+ "clip_id": "V5Nawx_KnGE_02884000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has high crossing demand due to residential and commercial properties on both sides, but there is no marked or signalised pedestrian crossing visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at a logical point, such as near the visible junction or a high-activity area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides; they are not missing, only potentially narrow."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides; they are not missing, only potentially narrow."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked pedestrian crossings are visible in the provided frames despite the urban environment."
+  }
+ ],
+ "error": null
+}

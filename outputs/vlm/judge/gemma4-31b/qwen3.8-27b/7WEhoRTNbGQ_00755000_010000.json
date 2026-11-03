@@ -1,0 +1,47 @@
+{
+ "clip_id": "7WEhoRTNbGQ_00755000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is an open grassy verge with no constructed path or sidewalk.",
+   "frame": 1,
+   "x": 250,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side of the road to provide a safe walking surface."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is an open grassy verge with no constructed path or sidewalk.",
+   "frame": 1,
+   "x": 750,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side of the road to provide a safe walking surface."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side is a grassy verge without a footway, and building one is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side is a grassy verge without a footway, and building one is feasible."
+  }
+ ],
+ "error": null
+}

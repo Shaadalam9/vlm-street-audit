@@ -1,0 +1,82 @@
+{
+ "clip_id": "_OaB4tNm8hg_03080000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03080000_010000/frame_002.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03080000_010000/frame_004.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03080000_010000/frame_006.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03080000_010000/frame_008.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03080000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"A continuous stretch of the road with shops and buildings on both sides, but no marked or raised crossing is visible in any frame.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a raised pedestrian crossing with dropped kerbs at the junction ahead to provide a safe and visible place for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "A continuous stretch of the road with shops and buildings on both sides, but no marked or raised crossing is visible in any frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Install a raised pedestrian crossing with dropped kerbs at the junction ahead to provide a safe and visible place for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 116.11,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 5928,
+  "completion_tokens": 293,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

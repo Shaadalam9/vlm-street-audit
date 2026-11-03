@@ -1,0 +1,122 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_002.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_004.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_006.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_008.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"the right side is a parking lane with no defined walking space for pedestrians\",\"frame\":5,\"x\":500,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a 1.5 m wide concrete footway along the right side, separated from the parking lane by a 100 mm kerb, to provide a safe, continuous path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"a fruit and vegetable stall with stacked crates and a parked red SUV occupies the footway\",\"frame\":1,\"x\":250,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stall to a designated, off-footway area and enforce a 2 m clear zone along the sidewalk to ensure unobstructed pedestrian access.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"a pedestrian crossing sign is visible, but no zebra crossing or other marked facility is present on the road\",\"frame\":1,\"x\":540,\"y\":400,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a high-visibility zebra crossing at the location of the pedestrian sign, complete with dropped kerbs and 'look left/right' signage, to provide a safe and legal place for pedestrians to cross.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"the area designated for crossing is obstructed by a parked truck and a stall, making it difficult for drivers to see pedestrians\",\"frame\":2,\"x\":800,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Create a refuge island at the centre of the road at the crossing point and enforce a no-parking zone for 10 metres on either side to ensure clear sightlines for both drivers and pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"the kerbs at the potential crossing point are not dropped, creating a barrier for wheelchairs and pushchairs\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised table crossing that includes a 1:20 gradient ramp on both kerbs, making the crossing accessible for all users while also calming traffic.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "the right side is a parking lane with no defined walking space for pedestrians",
+    "frame": 5,
+    "x": 500,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a 1.5 m wide concrete footway along the right side, separated from the parking lane by a 100 mm kerb, to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "a fruit and vegetable stall with stacked crates and a parked red SUV occupies the footway",
+    "frame": 1,
+    "x": 250,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stall to a designated, off-footway area and enforce a 2 m clear zone along the sidewalk to ensure unobstructed pedestrian access."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "a pedestrian crossing sign is visible, but no zebra crossing or other marked facility is present on the road",
+    "frame": 1,
+    "x": 540,
+    "y": 400,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a high-visibility zebra crossing at the location of the pedestrian sign, complete with dropped kerbs and 'look left/right' signage, to provide a safe and legal place for pedestrians to cross."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "the area designated for crossing is obstructed by a parked truck and a stall, making it difficult for drivers to see pedestrians",
+    "frame": 2,
+    "x": 800,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Create a refuge island at the centre of the road at the crossing point and enforce a no-parking zone for 10 metres on either side to ensure clear sightlines for both drivers and pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "the kerbs at the potential crossing point are not dropped, creating a barrier for wheelchairs and pushchairs",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised table crossing that includes a 1:20 gradient ramp on both kerbs, making the crossing accessible for all users while also calming traffic."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 634.48,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6309,
+  "completion_tokens": 697,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

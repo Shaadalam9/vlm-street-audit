@@ -1,0 +1,47 @@
+{
+ "clip_id": "KQU-5_VewEw_00195000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bounded by a steep, vegetated embankment and a guardrail, with no space for a footway.",
+   "frame": 1,
+   "x": 250,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a narrow, elevated footway on the left side, supported by retaining walls to accommodate the steep terrain."
+  },
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "There is a gas station and other commercial properties on the right, creating a high demand for pedestrians to cross the road, but no crossing facility is in.",
+   "frame": 4,
+   "x": 850,
+   "y": 550,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island at the entrance to the gas station."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a steep cliff with a guardrail, making a footway physically difficult but the deficit is visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The road is a high-speed multi-lane carriageway with a central divider, making a crossing with a refuge island impractical and dangerous."
+  }
+ ],
+ "error": null
+}

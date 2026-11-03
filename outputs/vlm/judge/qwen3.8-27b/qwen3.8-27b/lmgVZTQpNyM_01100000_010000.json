@@ -1,0 +1,119 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip runs between the road and the buildings, with no continuous, purpose-built sidewalk.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the left side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area between the road and the properties is an uneven, grassy and dirt shoulder, not a proper footway.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Build a paved footway on the right side to separate pedestrians from the carriageway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven, with visible potholes and debris.",
+   "frame": 4,
+   "x": 100,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Resurface and level the footway on the left side to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The informal path on the right is uneven, with patches of dirt and grass.",
+   "frame": 4,
+   "x": 900,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Resurface and level the footway on the right side to create a smooth, safe walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to shops and homes on both sides, but no marked or physical crossing facility is present.",
+   "frame": 3,
+   "x": 500,
+   "y": 650,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at a point of high demand, such as near the shop on the right."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "There are no street lights visible along the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users during the evening and night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a grassy shoulder, not a footway, and the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved left shoulder is uneven, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved right shoulder is uneven, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The suggestion correctly identifies a specific location (near the shop) for the crossing."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible, but the suggestion is a generic standard measure."
+  }
+ ],
+ "error": null
+}

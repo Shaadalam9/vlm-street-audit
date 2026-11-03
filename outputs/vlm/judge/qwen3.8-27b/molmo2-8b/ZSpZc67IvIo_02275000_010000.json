@@ -1,0 +1,83 @@
+{
+ "clip_id": "ZSpZc67IvIo_02275000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "physical_barrier",
+   "frame": 1,
+   "x": 800,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous footway along the right side of the road to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes and no refuge on signalised crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island in the middle of the signalised crossing to provide a safe place for pedestrians to wait."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps on signalised crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at both sides of the signalised crossing to improve accessibility for pedestrians and wheelchair users."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban road with street_lighting none",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a barrier but not enough detail to confirm the absence of a footway behind it, and the suggestion is a generic construction measure."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The signalised crossing is not clearly visible in the frames, so the absence of a refuge cannot be confirmed, and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing area is not shown in sufficient detail to verify the absence of kerb ramps, and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken in daylight, so the presence or absence of street lighting cannot be determined, and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Parked cars and construction materials block the sidewalk.",
+   "frame": 1,
+   "x": 150,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Remove parked vehicles and construction debris from the left-hand sidewalk to ensure pedestrian access."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Uneven ground and construction debris on the footway.",
+   "frame": 4,
+   "x": 250,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Level the surface and remove debris from the left-hand footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High crossing demand due to shops and transit stops, but no designated crossing facility is visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing near the bus stop to provide a safe crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show parked cars and construction materials occupying the left-hand sidewalk, making the suggested removal a specific and feasible fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Uneven ground and debris are visible on the left footway, so levelling and clearing the surface directly addresses the trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible near the bus stop and shops, but the space required for a safe crossing under the bridge is not fully clear from the frames."
+  }
+ ],
+ "error": null
+}

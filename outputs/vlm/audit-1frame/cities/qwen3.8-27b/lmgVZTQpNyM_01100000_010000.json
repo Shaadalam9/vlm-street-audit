@@ -1,0 +1,130 @@
+{
+ "clip_id": "lmgVZTQpNyM_01100000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_01100000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; only a narrow, uneven dirt strip between the road edge and the buildings, with parked cars and debris encroaching on it.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous 1.5 m paved footway on the left, set back from the carriageway, to give pedestrians a safe place to walk.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No proper sidewalk; a rough, unpaved strip runs along the road edge, partly taken up by parked vehicles and a metal gate.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Provide a continuous 1.5 m paved footway on the right, separated from the parking strip, so pedestrians are not forced onto the road.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The narrow left strip is uneven, with loose material, a discarded object and an abrupt transition to the road.\",\"frame\":1,\"x\":120,\"y\":760,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the left footway to a smooth, even standard to remove the trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The right strip is rough and uneven, with debris and an irregular edge where it meets the carriageway.\",\"frame\":1,\"x\":880,\"y\":760,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the right footway to a smooth, even standard to remove the trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Homes and shops line both sides creating crossing demand, but there is no marked or raised crossing in view.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the point of highest demand to give a safe, visible place to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along this urban stretch; only utility poles and overhead wires are present.\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along both sides of the road to improve visibility for pedestrians and drivers at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; only a narrow, uneven dirt strip between the road edge and the buildings, with parked cars and debris encroaching on it.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous 1.5 m paved footway on the left, set back from the carriageway, to give pedestrians a safe place to walk."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No proper sidewalk; a rough, unpaved strip runs along the road edge, partly taken up by parked vehicles and a metal gate.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Provide a continuous 1.5 m paved footway on the right, separated from the parking strip, so pedestrians are not forced onto the road."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The narrow left strip is uneven, with loose material, a discarded object and an abrupt transition to the road.",
+    "frame": 1,
+    "x": 120,
+    "y": 760,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the left footway to a smooth, even standard to remove the trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The right strip is rough and uneven, with debris and an irregular edge where it meets the carriageway.",
+    "frame": 1,
+    "x": 880,
+    "y": 760,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the right footway to a smooth, even standard to remove the trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Homes and shops line both sides creating crossing demand, but there is no marked or raised crossing in view.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the point of highest demand to give a safe, visible place to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along this urban stretch; only utility poles and overhead wires are present.",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along both sides of the road to improve visibility for pedestrians and drivers at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 133.39,
+ "usage": {
+  "prompt_tokens": 1588,
+  "total_tokens": 2319,
+  "completion_tokens": 731,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

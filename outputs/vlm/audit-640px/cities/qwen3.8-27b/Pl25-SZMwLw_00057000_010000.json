@@ -1,0 +1,152 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_002.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_004.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_006.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_008.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous concrete barrier separates the carriageway from the wooded embankment, with no path or footway visible.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.\",\"frame\":1,\"x\":900,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing at a designated access point to the right-side land.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.\",\"frame\":2,\"x\":100,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.\",\"frame\":2,\"x\":900,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing at a designated access point to the right-side land.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.\",\"frame\":3,\"x\":100,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.\",\"frame\":3,\"x\":900,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing at a designated access point to the right-side land.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.\",\"frame\":4,\"x\":100,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.\",\"frame\":4,\"x\":900,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing at a designated access point to the right-side land.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous concrete barrier separates the carriageway from the wooded embankment, with no path or footway visible.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.",
+    "frame": 1,
+    "x": 900,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing at a designated access point to the right-side land."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.",
+    "frame": 2,
+    "x": 100,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.",
+    "frame": 2,
+    "x": 900,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing at a designated access point to the right-side land."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.",
+    "frame": 3,
+    "x": 100,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.",
+    "frame": 3,
+    "x": 900,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing at a designated access point to the right-side land."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a concrete barrier and a wooded embankment with no visible path for pedestrians.",
+    "frame": 4,
+    "x": 100,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the nearest safe access point to the adjacent land."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a grassy verge and dense trees with no visible path for pedestrians.",
+    "frame": 4,
+    "x": 900,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing at a designated access point to the right-side land."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 48.16,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 3177,
+  "completion_tokens": 865,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

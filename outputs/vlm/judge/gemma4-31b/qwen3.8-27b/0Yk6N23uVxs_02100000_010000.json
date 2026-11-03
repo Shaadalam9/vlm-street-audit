@@ -1,0 +1,65 @@
+{
+ "clip_id": "0Yk6N23uVxs_02100000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A yellow cherry-picker truck and its crew are parked on the footway, blocking the path.",
+   "frame": 4,
+   "x": 250,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the utility vehicle to the carriageway or a designated lay-by to clear the footway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A yellow cherry-picker truck and its crew are parked on the footway, blocking the path.",
+   "frame": 4,
+   "x": 250,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the utility vehicle to the carriageway or a designated lay-by to clear the footway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is no marked or signalised crossing on this street, despite high pedestrian activity and mixed land use.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at a logical point along this street to provide a safe crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The footway exists but is temporarily blocked; 'repair_footway' is the wrong measure for a temporary obstruction."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The footway is blocked, but 'repair_footway' is an infrastructure change, not a traffic management action to move a vehicle."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the suggestion is a generic template for any street without one."
+  }
+ ],
+ "error": null
+}

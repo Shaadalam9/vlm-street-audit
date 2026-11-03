@@ -1,0 +1,102 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_002.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_004.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_006.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_008.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left edge of the cobblestone road is lined directly by building facades, with no separate path for pedestrians.\",\"frame\":5,\"x\":150,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway on the left side by slightly narrowing the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right edge of the road is bordered by a building wall and a metal gate, with no dedicated space for pedestrians.\",\"frame\":5,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Create a pedestrian path on the right by setting back the boundary wall and repaving the area.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are walking in the middle of the road, and there are no marked crossings or facilities to help them cross safely.\",\"frame\":5,\"x\":500,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Provide a continuous footway on both sides of the street to eliminate the need to cross the carriageway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left edge of the cobblestone road is lined directly by building facades, with no separate path for pedestrians.",
+    "frame": 5,
+    "x": 150,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway on the left side by slightly narrowing the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right edge of the road is bordered by a building wall and a metal gate, with no dedicated space for pedestrians.",
+    "frame": 5,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Create a pedestrian path on the right by setting back the boundary wall and repaving the area."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are walking in the middle of the road, and there are no marked crossings or facilities to help them cross safely.",
+    "frame": 5,
+    "x": 500,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Provide a continuous footway on both sides of the street to eliminate the need to cross the carriageway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 346.26,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6055,
+  "completion_tokens": 443,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_00194000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The area under the bridge is a paved, informal path with no formal kerb, used for parking and storage, rather than a purpose-built footway.\",\"frame\":1,\"x\":180,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a formal, raised sidewalk with a protective kerb along the left side to separate pedestrians from the parking area under the bridge.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is obstructed by a row of parked scooters and a large commercial delivery truck parked in front of the shops.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the parked vehicles and enforce a no-parking zone on the footway to ensure a clear, accessible path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"There is high crossing demand due to the multiple active shops on the right, but no pedestrian crossing is provided on this 4-lane road.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Provide a safe crossing facility, such as a raised table or a signalised crossing, to allow pedestrians to access the shops safely.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is completely devoid of street lights, which is unsafe for a busy commercial street in an urban area.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a full line of street lights to improve visibility and safety for all road users during the evening and at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The area under the bridge is a paved, informal path with no formal kerb, used for parking and storage, rather than a purpose-built footway.",
+    "frame": 1,
+    "x": 180,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a formal, raised sidewalk with a protective kerb along the left side to separate pedestrians from the parking area under the bridge."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The footway is obstructed by a row of parked scooters and a large commercial delivery truck parked in front of the shops.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Remove the parked vehicles and enforce a no-parking zone on the footway to ensure a clear, accessible path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "There is high crossing demand due to the multiple active shops on the right, but no pedestrian crossing is provided on this 4-lane road.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Provide a safe crossing facility, such as a raised table or a signalised crossing, to allow pedestrians to access the shops safely."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is completely devoid of street lights, which is unsafe for a busy commercial street in an urban area.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a full line of street lights to improve visibility and safety for all road users during the evening and at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 116.06,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6182,
+  "completion_tokens": 570,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "PYFB7nMiFTM_01951000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is an unpaved, uneven dirt shoulder with no constructed path, forcing pedestrians to walk in the carriageway.",
+   "frame": 1,
+   "x": 250,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side to provide a safe, separated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is an unpaved, uneven dirt shoulder with no constructed path, forcing pedestrians to walk in the carriageway.",
+   "frame": 1,
+   "x": 750,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side to provide a safe, separated space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a pedestrian walking in the road and parked cars on the shoulder, indicating a need to cross, but no marked or physical crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe place for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, though space is limited by vegetation."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a paved footway, though space is limited by trees."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No designated crossing is visible despite pedestrian presence."
+  }
+ ],
+ "error": null
+}

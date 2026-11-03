@@ -1,0 +1,29 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk is visible, only parked cars and trees",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe space for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is occupied by parked cars and trees with no visible sidewalk, though the total road width makes feasibility unclear."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal path under 1m and is blocked by goods and debris.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper, wide sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The left side is blocked by large piles of goods and materials.",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove the stored goods and debris from the left side to clear the path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The ground on the left is uneven with loose dirt and debris.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Pave the left side of the road to eliminate trip hazards and provide a smooth walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are seen crossing the road, but there is no designated crossing facility.",
+   "frame": 3,
+   "x": 400,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide a safe and designated point for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow, informal path on the left, but the space available for a proper sidewalk is unclear due to the overhead structure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Large piles of goods are clearly visible blocking the left side, and removing them is a direct and feasible action."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved, uneven ground on the left is visible, and paving it is a standard and feasible repair."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing without a facility, but the exact location and space for a new crossing are not clearly defined in the frames."
+  }
+ ],
+ "error": null
+}

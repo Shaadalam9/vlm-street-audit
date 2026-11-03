@@ -1,0 +1,102 @@
+{
+ "clip_id": "V5Nawx_KnGE_02884000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_02884000_010000/frame_002.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_02884000_010000/frame_004.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_02884000_010000/frame_006.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_02884000_010000/frame_008.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_02884000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road has high crossing demand due to residential and commercial properties on both sides, but there is no marked or signalised pedestrian crossing visible.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at a logical point, such as near the visible junction or a high-activity area.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road has high crossing demand due to residential and commercial properties on both sides, but there is no marked or signalised pedestrian crossing visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at a logical point, such as near the visible junction or a high-activity area."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 198.47,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6089,
+  "completion_tokens": 477,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,92 @@
+{
+ "clip_id": "KQU-5_VewEw_00195000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_002.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_004.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_006.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_008.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a steep, vegetated embankment and a blue retaining wall, with no sidewalk or path for pedestrians.\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a pedestrian walkway along the left side of the road, potentially on a new retaining wall or by widening the shoulder, to provide a safe route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road passes a gas station and other commercial properties, creating a need to cross, but there is no marked or unmarked crossing facility visible.\",\"frame\":4,\"x\":500,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island near the gas station entrance to allow safe crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a steep, vegetated embankment and a blue retaining wall, with no sidewalk or path for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a pedestrian walkway along the left side of the road, potentially on a new retaining wall or by widening the shoulder, to provide a safe route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road passes a gas station and other commercial properties, creating a need to cross, but there is no marked or unmarked crossing facility visible.",
+    "frame": 4,
+    "x": 500,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island near the gas station entrance to allow safe crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 159.2,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6026,
+  "completion_tokens": 391,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

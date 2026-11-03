@@ -1,0 +1,65 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No purpose-built sidewalk; pedestrians must walk in the roadway.",
+   "frame": 1,
+   "x": 150,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No purpose-built sidewalk; area is occupied by parked vehicles and building fronts.",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Create a dedicated pedestrian footway on the right side to improve safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Residential and commercial properties on both sides create crossing demand, but no designated facility exists.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a high wall with no space on the left, making it impossible to build a footway there."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The right side is completely occupied by a large truck and parked cars, leaving no room for a new footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While a crossing is missing, the suggestion is generic and feasibility is unclear due to the narrow width and parked vehicles."
+  }
+ ],
+ "error": null
+}

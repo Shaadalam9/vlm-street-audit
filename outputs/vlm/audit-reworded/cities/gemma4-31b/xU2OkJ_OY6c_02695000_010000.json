@@ -1,0 +1,102 @@
+{
+ "clip_id": "xU2OkJ_OY6c_02695000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"There is no designated footway or informal path, only a grassy verge and fence.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a paved sidewalk on the left side of the road to provide a safe walking space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The walking area is an unpaved informal path.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Upgrade the informal path on the right side to a formal, paved sidewalk.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Residential homes are present on both sides, but there is no designated crossing facility.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to allow residents to cross the road safely.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "There is no designated footway or informal path, only a grassy verge and fence.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe walking space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The walking area is an unpaved informal path.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Upgrade the informal path on the right side to a formal, paved sidewalk."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Residential homes are present on both sides, but there is no designated crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to allow residents to cross the road safely."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 176.74,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 3047,
+  "completion_tokens": 435,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

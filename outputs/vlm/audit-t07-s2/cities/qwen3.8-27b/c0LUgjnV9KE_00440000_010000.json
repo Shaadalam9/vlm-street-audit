@@ -1,0 +1,112 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_002.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_004.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_006.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_008.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"No marked or signalised crossing is visible on the road, despite heavy traffic, a fuel station on the right and a dense commercial/residential mix on the left.\",\"frame\":4,\"x\":450,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with dropped kerbs near the fuel station entrance on the right.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"Drivers in the left lane are not yielding to the pedestrian in the carriageway, and the wet road surface reduces visibility for both parties.\",\"frame\":3,\"x\":480,\"y\":780,\"measure\":\"improve_crossing\",\"suggestion\":\"Add high-visibility road markings and a 'Look Left' sign to alert drivers to the pedestrian hazard in the left lane.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The transition from the informal path to the carriageway is not smooth, and the wet conditions make it a potential slip hazard.\",\"frame\":3,\"x\":480,\"y\":780,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Construct a proper, level dropped kerb at the designated crossing point on the left to ensure safe access for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven, wet, and has a significant drop-off to the road surface.\",\"frame\":4,\"x\":450,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the informal path on the left with a smooth, non-slip material and clearly define its edge with a kerb.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "No marked or signalised crossing is visible on the road, despite heavy traffic, a fuel station on the right and a dense commercial/residential mix on the left.",
+    "frame": 4,
+    "x": 450,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with dropped kerbs near the fuel station entrance on the right."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "Drivers in the left lane are not yielding to the pedestrian in the carriageway, and the wet road surface reduces visibility for both parties.",
+    "frame": 3,
+    "x": 480,
+    "y": 780,
+    "measure": "improve_crossing",
+    "suggestion": "Add high-visibility road markings and a 'Look Left' sign to alert drivers to the pedestrian hazard in the left lane."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The transition from the informal path to the carriageway is not smooth, and the wet conditions make it a potential slip hazard.",
+    "frame": 3,
+    "x": 480,
+    "y": 780,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Construct a proper, level dropped kerb at the designated crossing point on the left to ensure safe access for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven, wet, and has a significant drop-off to the road surface.",
+    "frame": 4,
+    "x": 450,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the informal path on the left with a smooth, non-slip material and clearly define its edge with a kerb."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 1239.18,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6188,
+  "completion_tokens": 576,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

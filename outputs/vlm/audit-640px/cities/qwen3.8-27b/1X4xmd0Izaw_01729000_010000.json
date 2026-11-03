@@ -1,0 +1,122 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_002.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_004.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_006.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_008.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_01729000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A person in a high-visibility vest is walking on the paved shoulder of the road, indicating the footway is obstructed or unusable.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the left-side footway to a minimum of 1.5m and install bollards to separate it from the carriageway.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A white van is parked on the footway, completely blocking the path for pedestrians.\",\"frame\":1,\"x\":50,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The footway surface is uneven and appears to have broken sections, posing a trip hazard.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The footway surface is uneven and appears to have broken sections, posing a trip hazard.\",\"frame\":1,\"x\":850,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to shops on both sides, but no marked or purpose-built crossing is visible.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island at the junction with the side road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A person in a high-visibility vest is walking on the paved shoulder of the road, indicating the footway is obstructed or unusable.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the left-side footway to a minimum of 1.5m and install bollards to separate it from the carriageway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A white van is parked on the footway, completely blocking the path for pedestrians.",
+    "frame": 1,
+    "x": 50,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The footway surface is uneven and appears to have broken sections, posing a trip hazard.",
+    "frame": 1,
+    "x": 850,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to shops on both sides, but no marked or purpose-built crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island at the junction with the side road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 363.47,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2932,
+  "completion_tokens": 620,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

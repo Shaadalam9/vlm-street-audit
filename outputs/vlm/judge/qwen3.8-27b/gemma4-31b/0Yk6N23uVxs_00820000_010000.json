@@ -1,0 +1,29 @@
+{
+ "clip_id": "0Yk6N23uVxs_00820000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Pedestrians are visible on the footway near shops, but there is no designated crossing facility in view.",
+   "frame": 4,
+   "x": 880,
+   "y": 620,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road near the shops."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a footway and shops but do not provide enough visual information to confirm the absence of a crossing facility, and the suggestion is a generic measure that does not reference specific"
+  }
+ ],
+ "error": null
+}

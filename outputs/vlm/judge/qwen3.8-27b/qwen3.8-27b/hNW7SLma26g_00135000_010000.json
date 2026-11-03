@@ -1,0 +1,47 @@
+{
+ "clip_id": "hNW7SLma26g_00135000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A pedestrian in a green coat is walking on the edge of the carriageway, indicating the footway is obstructed or unusable.",
+   "frame": 1,
+   "x": 920,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the right-hand footway to provide a safe, unobstructed path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has shops and homes on both sides, creating a high demand for crossing, but there is no marked or purpose-built crossing facility visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous footway on the right to confirm it is missing or obstructed, and the suggestion is a generic measure that does not reference a specific feature of this road."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear junction or a specific location where a crossing is needed, and the suggestion is a generic measure that does not reference a specific feature of this road."
+  }
+ ],
+ "error": null
+}

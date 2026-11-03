@@ -1,0 +1,47 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk provided for pedestrians",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the parking area to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians need to cross the parking area to reach the shops but no marked crossing exists",
+   "frame": 1,
+   "x": 500,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely guide people across the vehicle lanes."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a parking lot, not a street with a defined left side, so the deficit and the space for a sidewalk cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear pedestrian path or a specific crossing point, making it impossible to verify the deficit or the feasibility of the change."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03391000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A continuous construction hoarding with a solid base runs along the entire right side of the road, preventing any footway from existing.",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a protected pedestrian walkway on the right side, separated from the construction site by a physical barrier."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road is a multi-lane urban street with commercial and residential land use, creating a high demand for crossing, but no pedestrian crossing facility is in a",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to allow safe crossing of the multiple traffic lanes."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "No crossing is present, so there are no kerb ramps.",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a raised pedestrian crossing with dropped kerbs to provide a safe and accessible crossing point."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a continuous construction hoarding on the right, confirming the absence of a footway, but the available space for a new walkway is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The lack of a crossing is visible, but the suggestion is a generic measure that does not reference specific features of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of kerb ramps is confirmed by the lack of a crossing, but the suggestion is generic and feasibility is unclear due to the construction site."
+  }
+ ],
+ "error": null
+}

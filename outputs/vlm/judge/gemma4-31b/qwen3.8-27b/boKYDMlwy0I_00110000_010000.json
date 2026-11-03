@@ -1,0 +1,47 @@
+{
+ "clip_id": "boKYDMlwy0I_00110000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is a narrow, informal strip of grass and dirt, not a purpose-built sidewalk.",
+   "frame": 1,
+   "x": 150,
+   "y": 550,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, 1.5m-wide footway on the left side, separating pedestrians from the carriageway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has homes on both sides, creating a high demand for crossing, but there is no marked or unmarked crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction visible in the distance to provide a safe place for residents to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal paved footway, and there is sufficient space to construct one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossing is visible on this residential street, and adding one at the junction is a standard feasible improvement."
+  }
+ ],
+ "error": null
+}

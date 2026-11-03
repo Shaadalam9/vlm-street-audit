@@ -1,0 +1,110 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/9d2NeEarffA/9d2NeEarffA_00190000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no purpose-built sidewalk visible\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side of the road to provide a safe space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no purpose-built sidewalk visible\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"the crossing is obstructed by traffic and lacks visibility/priority\",\"frame\":1,\"x\":500,\"y\":950,\"measure\":\"improve_crossing\",\"suggestion\":\"Upgrade the marked crossing with signalisation or a raised platform to increase visibility and driver compliance.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"road has 4 or more lanes and the marked crossing lacks a central refuge\",\"frame\":1,\"x\":500,\"y\":950,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the centre of the crossing to allow people to cross the wide road in two stages.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no purpose-built sidewalk visible",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no purpose-built sidewalk visible",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "the crossing is obstructed by traffic and lacks visibility/priority",
+    "frame": 1,
+    "x": 500,
+    "y": 950,
+    "measure": "improve_crossing",
+    "suggestion": "Upgrade the marked crossing with signalisation or a raised platform to increase visibility and driver compliance."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "road has 4 or more lanes and the marked crossing lacks a central refuge",
+    "frame": 1,
+    "x": 500,
+    "y": 950,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the centre of the crossing to allow people to cross the wide road in two stages."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 341.18,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 1996,
+  "completion_tokens": 496,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

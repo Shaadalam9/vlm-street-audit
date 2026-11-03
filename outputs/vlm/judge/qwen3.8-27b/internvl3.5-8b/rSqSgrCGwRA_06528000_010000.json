@@ -1,0 +1,65 @@
+{
+ "clip_id": "rSqSgrCGwRA_06528000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper footbridge to enhance pedestrian safety."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes and signalised crossing without refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a crossing, so the deficit is not visible, and a footbridge is not a standard fix for a missing footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a crossing, so the deficit is not visible, and a footbridge is not a standard fix for a missing footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a signalised crossing, so the deficit is not visible, though a refuge island would address it if it were present."
+  }
+ ],
+ "error": null
+}

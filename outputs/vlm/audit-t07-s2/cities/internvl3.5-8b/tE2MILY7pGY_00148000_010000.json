@@ -1,0 +1,102 @@
+{
+ "clip_id": "tE2MILY7pGY_00148000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_002.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_004.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_006.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_008.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"not_visible footway on left side\",\"frame\":1,\"x\":111,\"y\":427,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous footway on the left side to provide a safe path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"not_visible footway on right side\",\"frame\":1,\"x\":888,\"y\":402,\"measure\":\"build_footway\",\"suggestion\":\"Create a continuous footway on the right side to ensure pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"crossing_demand true but no crossing facility visible\",\"frame\":1,\"x\":500,\"y\":350,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing where people demand to cross on this stretch of road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "not_visible footway on left side",
+    "frame": 1,
+    "x": 111,
+    "y": 427,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous footway on the left side to provide a safe path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "not_visible footway on right side",
+    "frame": 1,
+    "x": 888,
+    "y": 402,
+    "measure": "build_footway",
+    "suggestion": "Create a continuous footway on the right side to ensure pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "crossing_demand true but no crossing facility visible",
+    "frame": 1,
+    "x": 500,
+    "y": 350,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing where people demand to cross on this stretch of road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 309.99,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13092,
+  "completion_tokens": 385,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

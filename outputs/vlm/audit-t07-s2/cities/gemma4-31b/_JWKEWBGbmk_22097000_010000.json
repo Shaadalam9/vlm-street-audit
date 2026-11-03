@@ -1,0 +1,92 @@
+{
+ "clip_id": "_JWKEWBGbmk_22097000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_002.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_004.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_006.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_008.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are seen walking in the carriageway to cross the road where there is no designated crossing facility.\",\"frame\":1,\"x\":650,\"y\":600,\"measure\":\"traffic_calming\",\"suggestion\":\"Install a marked pedestrian crossing or a raised table to facilitate safe crossing for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"right_side\",\"evidence\":\"The lack of any designated crossing facility makes the crossing experience poor and dangerous.\",\"frame\":1,\"x\":650,\"y\":600,\"measure\":\"traffic_calming\",\"suggestion\":\"Implement a signalised or marked crossing to improve pedestrian safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "Pedestrians are seen walking in the carriageway to cross the road where there is no designated crossing facility.",
+    "frame": 1,
+    "x": 650,
+    "y": 600,
+    "measure": "traffic_calming",
+    "suggestion": "Install a marked pedestrian crossing or a raised table to facilitate safe crossing for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "right_side",
+    "evidence": "The lack of any designated crossing facility makes the crossing experience poor and dangerous.",
+    "frame": 1,
+    "x": 650,
+    "y": 600,
+    "measure": "traffic_calming",
+    "suggestion": "Implement a signalised or marked crossing to improve pedestrian safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 152.1,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2954,
+  "completion_tokens": 368,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

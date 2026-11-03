@@ -1,0 +1,112 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side lacks a purpose-built sidewalk, consisting only of an informal path.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built sidewalk on the left side of the road to provide a safe space for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left side is uneven and broken.\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the informal path on the left side to remove trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The narrow sidewalk on the right side is broken and uneven.\",\"frame\":4,\"x\":600,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the broken sections of the sidewalk on the right side to ensure a smooth walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are seen crossing the wide road without any designated crossing facility.\",\"frame\":2,\"x\":400,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a signalised pedestrian crossing or a footbridge to allow pedestrians to cross this wide road safely.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side lacks a purpose-built sidewalk, consisting only of an informal path.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built sidewalk on the left side of the road to provide a safe space for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left side is uneven and broken.",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the informal path on the left side to remove trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The narrow sidewalk on the right side is broken and uneven.",
+    "frame": 4,
+    "x": 600,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Repair the broken sections of the sidewalk on the right side to ensure a smooth walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are seen crossing the wide road without any designated crossing facility.",
+    "frame": 2,
+    "x": 400,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a signalised pedestrian crossing or a footbridge to allow pedestrians to cross this wide road safely."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 134.96,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3102,
+  "completion_tokens": 516,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

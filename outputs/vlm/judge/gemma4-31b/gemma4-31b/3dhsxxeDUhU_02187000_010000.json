@@ -1,0 +1,65 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No purpose-built sidewalk is present; the area is occupied by building fronts and parked vehicles.",
+   "frame": 4,
+   "x": 100,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The pedestrian area is an unpaved, informal path.",
+   "frame": 4,
+   "x": 900,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Upgrade the informal path on the right side to a paved, purpose-built sidewalk."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "High commercial activity on the left and residential/green areas on the right create crossing demand, but no formal crossing exists.",
+   "frame": 4,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross this multi-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal sidewalk, and there is ample space between the road and buildings to build one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has an unpaved verge that could be realistically upgraded to a paved footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No formal crossing is visible despite the commercial activity, though the suggestion is a standard generic fix."
+  }
+ ],
+ "error": null
+}

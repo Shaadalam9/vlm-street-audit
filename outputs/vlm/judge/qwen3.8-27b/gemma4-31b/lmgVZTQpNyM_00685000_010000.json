@@ -1,0 +1,101 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "People are walking on a narrow, unpaved strip of land beside the road.",
+   "frame": 1,
+   "x": 120,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper, paved sidewalk on the left side of the road to separate pedestrians from traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area where people walk is unpaved and heavily obstructed by market stalls.",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Create a dedicated, paved pedestrian zone on the right side to move market activity away from the road edge."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Market stalls and umbrellas completely block the walking area.",
+   "frame": 1,
+   "x": 850,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Relocate market stalls to a designated vending area to clear the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground is uneven and cluttered with debris and stall equipment.",
+   "frame": 2,
+   "x": 800,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the walking area on the right side to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road between vehicles without any designated crossing facility.",
+   "frame": 3,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide a safe and visible point for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a narrow, unpaved strip, but the frames do not show enough of the roadside boundary to confirm if a paved sidewalk is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is clearly unpaved and obstructed, but the available space for a new dedicated zone is not fully visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Market stalls are visibly blocking the path, but it is unclear if there is a designated vending area nearby to which they could be relocated."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The ground is uneven and cluttered, but the extent of the repair needed and the space available are not fully clear from the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing between vehicles, but the frames do not show enough of the road's width or traffic flow to confirm if a marked crossing is feasible."
+  }
+ ],
+ "error": null
+}

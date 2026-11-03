@@ -1,0 +1,82 @@
+{
+ "clip_id": "94bxMILuMGU_10153000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_10153000_010000/frame_002.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_10153000_010000/frame_004.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_10153000_010000/frame_006.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_10153000_010000/frame_008.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_10153000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A fence separates the road from the adjacent property with no sidewalk provided for pedestrians.\",\"frame\":1,\"x\":150,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side of the road to provide a safe path for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A fence separates the road from the adjacent property with no sidewalk provided for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe path for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 130.63,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 2900,
+  "completion_tokens": 288,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

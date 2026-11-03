@@ -1,0 +1,92 @@
+{
+ "clip_id": "_JWKEWBGbmk_22097000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_002.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_004.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_006.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_008.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction: partly_blocked footway with balloons and stalls\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Remove stalls and obstructions from the footway on the right side.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction: partly_blocked footway with balloons and stalls\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the footway of obstructions on the right side.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "obstruction: partly_blocked footway with balloons and stalls",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Remove stalls and obstructions from the footway on the right side."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction: partly_blocked footway with balloons and stalls",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Clear the footway of obstructions on the right side."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 8.58,
+ "usage": {
+  "prompt_tokens": 5027,
+  "total_tokens": 5355,
+  "completion_tokens": 328,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

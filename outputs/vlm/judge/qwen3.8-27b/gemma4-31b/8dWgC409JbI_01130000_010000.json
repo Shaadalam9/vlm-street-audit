@@ -1,0 +1,83 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "People are walking in the roadway as there is no purpose-built sidewalk.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "People are walking in the roadway as there is no purpose-built sidewalk.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated sidewalk on the right side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "High pedestrian demand with shops on both sides but no designated crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "Urban commercial street with no visible street lighting infrastructure.",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Install street lighting along the road to improve visibility and safety at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians walking on the road, but the space available for a sidewalk is unclear due to parked vehicles and market stalls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Similar to the left side, the right side lacks a sidewalk, but the feasibility is unclear due to the presence of shops and market stalls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The high pedestrian activity and lack of a marked crossing are evident, but the feasibility of adding one is unclear due to the street's layout."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The absence of street lighting is visible, but the feasibility of installing it is unclear due to the existing infrastructure and space constraints."
+  }
+ ],
+ "error": null
+}

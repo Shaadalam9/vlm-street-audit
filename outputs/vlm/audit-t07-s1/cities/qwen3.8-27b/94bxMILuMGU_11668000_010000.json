@@ -1,0 +1,102 @@
+{
+ "clip_id": "94bxMILuMGU_11668000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_11668000_010000/frame_002.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_11668000_010000/frame_004.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_11668000_010000/frame_006.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_11668000_010000/frame_008.jpg",
+  "data/snippets/94bxMILuMGU/94bxMILuMGU_11668000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"Four lanes of traffic with a signalised crossing and no central refuge island for pedestrians\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central refuge island at the signalised crossing to shorten the pedestrian crossing distance and provide a safe waiting point.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"Kerb ramps at the crossing are not clearly visible, suggesting a potential barrier for wheelchair users\",\"frame\":1,\"x\":150,\"y\":600,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Ensure the presence of dropped kerbs at the crossing to facilitate access for pedestrians with mobility impairments.\"},{\"need\":\"no_street_lighting\",\"where\":\"right_side\",\"evidence\":\"Limited street lighting is visible, which could impact visibility during low-light conditions\",\"frame\":3,\"x\":800,\"y\":200,\"measure\":\"improve_crossing\",\"suggestion\":\"Enhance street lighting along the road to improve overall visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "Four lanes of traffic with a signalised crossing and no central refuge island for pedestrians",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central refuge island at the signalised crossing to shorten the pedestrian crossing distance and provide a safe waiting point."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "Kerb ramps at the crossing are not clearly visible, suggesting a potential barrier for wheelchair users",
+    "frame": 1,
+    "x": 150,
+    "y": 600,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Ensure the presence of dropped kerbs at the crossing to facilitate access for pedestrians with mobility impairments."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "right_side",
+    "evidence": "Limited street lighting is visible, which could impact visibility during low-light conditions",
+    "frame": 3,
+    "x": 800,
+    "y": 200,
+    "measure": "improve_crossing",
+    "suggestion": "Enhance street lighting along the road to improve overall visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 139.99,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6059,
+  "completion_tokens": 447,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "KUKYjWxgWS8_02674000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only vegetation and a wall",
+   "frame": 1,
+   "x": 200,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk, only vegetation and a wall",
+   "frame": 1,
+   "x": 800,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the right side of the road to provide a safe walking space."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "residential and commercial buildings on both sides but no designated crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to facilitate safe crossing between the two sides of the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no street lights visible along the urban road segment",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow alley with no space for a new sidewalk, making the generic suggestion infeasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The right side is a continuous wall with no room for a new footway, so the generic suggestion is not feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the suggestion to 'build a footway' is a generic measure that does not directly address the need for a crossing."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible, but it is unclear if there is space or infrastructure to install them on the existing walls."
+  }
+ ],
+ "error": null
+}

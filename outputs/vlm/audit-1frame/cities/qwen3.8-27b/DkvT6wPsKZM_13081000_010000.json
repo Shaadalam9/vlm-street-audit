@@ -1,0 +1,110 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous high wall with barbed wire runs along the left edge of the carriageway, leaving no space for a footway.\",\"frame\":1,\"x\":150,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Reprofile the left verge to create a minimum 1.5 m wide footway between the wall and the carriageway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street is lined with shops and parked cars on both sides, creating high crossing demand, but there is no marked or raised crossing facility.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility paint and signage at the junction with the shop frontages.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The visible kerbs on both sides are vertical and continuous, with no dropped sections to facilitate access.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised table crossing to provide level access for pedestrians and reduce vehicle speeds.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lamps or light poles are visible along the length of the road in the image.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lights along the right-hand side of the road to improve visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous high wall with barbed wire runs along the left edge of the carriageway, leaving no space for a footway.",
+    "frame": 1,
+    "x": 150,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Reprofile the left verge to create a minimum 1.5 m wide footway between the wall and the carriageway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street is lined with shops and parked cars on both sides, creating high crossing demand, but there is no marked or raised crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility paint and signage at the junction with the shop frontages."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The visible kerbs on both sides are vertical and continuous, with no dropped sections to facilitate access.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised table crossing to provide level access for pedestrians and reduce vehicle speeds."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lamps or light poles are visible along the length of the road in the image.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lights along the right-hand side of the road to improve visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.69,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2601,
+  "completion_tokens": 538,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

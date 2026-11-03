@@ -1,0 +1,65 @@
+{
+ "clip_id": "RKIPWCWldzE_03516000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous stone retaining wall and a line of bollards run along the entire left side, with no usable footway.",
+   "frame": 1,
+   "x": 150,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a purpose-built footway on the left side, set back from the road behind the existing bollards."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A continuous wall and a line of bollards run along the entire right side, with no usable footway.",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a purpose-built footway on the right side, set back from the road behind the existing bollards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road is a commercial street with a bus stop and a junction, but no pedestrian crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a continuous wall and bollards on the left with no footway, but the space behind the wall is not visible, making feasibility unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is lined with a wall and advertising hoardings, leaving no room for a footway, but the space behind is not visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrian crossing is visible on the road, but the space at the junction is not clearly shown, making feasibility unclear."
+  }
+ ],
+ "error": null
+}

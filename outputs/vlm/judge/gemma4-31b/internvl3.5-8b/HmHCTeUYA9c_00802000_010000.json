@@ -1,0 +1,65 @@
+{
+ "clip_id": "HmHCTeUYA9c_00802000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Create a proper footway on the right side to ensure pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway visible",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Create a proper footway on the left side to ensure pedestrian safety."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban area with no street lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights to improve visibility and safety during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A clear footway is visible on the right side in all frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A footway is visible on the left side, particularly in the first two frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames are taken in bright daylight, making it impossible to determine if street lighting is absent."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,29 @@
+{
+ "clip_id": "Pl25-SZMwLw_01937000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no_crossing_facility_visible_in_any_frame",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian signalised crossing at this intersection to improve safety for pedestrians crossing the road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a signalised intersection with no pedestrian crossing facility, but the suggestion is a generic measure that does not reference the specific street layout or features."
+  }
+ ],
+ "error": null
+}

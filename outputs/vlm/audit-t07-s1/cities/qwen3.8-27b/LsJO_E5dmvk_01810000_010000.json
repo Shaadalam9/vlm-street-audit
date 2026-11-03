@@ -1,0 +1,102 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_002.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_004.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_006.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_008.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_01810000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A trodden dirt strip runs along the left edge of the carriageway without a built, continuous pavement.\",\"frame\":5,\"x\":25,\"y\":75,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, hard-surfaced footway of at least 1.5 m along the left side to separate pedestrians from traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side is an uneven, unpaved strip of earth and gravel rather than a proper sidewalk.\",\"frame\":5,\"x\":75,\"y\":75,\"measure\":\"build_footway\",\"suggestion\":\"Install a paved footway along the right side to provide a safe, level route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road serves mixed commercial and residential uses with no marked or signalised crossing visible in the segment.\",\"frame\":5,\"x\":50,\"y\":60,\"measure\":\"build_footway\",\"suggestion\":\"Provide a marked pedestrian crossing with dropped kerbs and good visibility at the main access point to the businesses.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A trodden dirt strip runs along the left edge of the carriageway without a built, continuous pavement.",
+    "frame": 5,
+    "x": 25,
+    "y": 75,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, hard-surfaced footway of at least 1.5 m along the left side to separate pedestrians from traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side is an uneven, unpaved strip of earth and gravel rather than a proper sidewalk.",
+    "frame": 5,
+    "x": 75,
+    "y": 75,
+    "measure": "build_footway",
+    "suggestion": "Install a paved footway along the right side to provide a safe, level route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road serves mixed commercial and residential uses with no marked or signalised crossing visible in the segment.",
+    "frame": 5,
+    "x": 50,
+    "y": 60,
+    "measure": "build_footway",
+    "suggestion": "Provide a marked pedestrian crossing with dropped kerbs and good visibility at the main access point to the businesses."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 208.93,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6050,
+  "completion_tokens": 438,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

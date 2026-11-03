@@ -1,0 +1,47 @@
+{
+ "clip_id": "tgYTmg7hlkQ_01810000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no footway present",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Install a sidewalk on the right side to provide a safe pedestrian path."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A fence separates the road from a green area on the left, but it is unclear if a footway exists behind it."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side shows a road edge with trees but no visible paved footway for pedestrians."
+  }
+ ],
+ "error": null
+}

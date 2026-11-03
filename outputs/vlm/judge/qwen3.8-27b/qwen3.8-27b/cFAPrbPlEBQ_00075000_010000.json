@@ -1,0 +1,29 @@
+{
+ "clip_id": "cFAPrbPlEBQ_00075000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A continuous row of residential apartment buildings with front doors and balconies on the right, and a park on the left, creates a high demand for residents to ",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the entrance to the apartment block on the right."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show the residential block and the lack of a crossing, but the specific location for the change is not clearly defined, making feasibility uncertain."
+  }
+ ],
+ "error": null
+}

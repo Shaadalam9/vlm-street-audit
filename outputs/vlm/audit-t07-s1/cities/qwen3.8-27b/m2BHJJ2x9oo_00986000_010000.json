@@ -1,0 +1,142 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_002.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_004.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_006.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_008.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_00986000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"There is no purpose-built sidewalk; the area next to the road is an informal path under 1m wide, occupied by pedestrians and street vendors.\",\"frame\":5,\"x\":220,\"y\":710,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5m wide paved footway on the left side, set back from the carriageway, to provide a safe walking surface for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is completely blocked by a blue umbrella stall, a red table, and people sitting and standing.\",\"frame\":5,\"x\":180,\"y\":730,\"measure\":\"clear_footway\",\"suggestion\":\"Designate a formal footway on the left side and install fixed bollards or planters to prevent vendors from setting up stalls in the pedestrian zone.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The surface of the informal path on the left is uneven, with visible debris, litter, and an irregular edge where it meets the road.\",\"frame\":5,\"x\":250,\"y\":740,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, even pavement and install a proper kerb to define the edge and remove trip hazards.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"There is no purpose-built sidewalk on the right; the area is an informal path under 1m wide, cluttered with pedestrians and vendors.\",\"frame\":5,\"x\":820,\"y\":760,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5m wide paved footway on the right side to create a safe and continuous path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is completely blocked by multiple red and patterned umbrellas, clothing stalls, and a large crowd of people.\",\"frame\":5,\"x\":880,\"y\":720,\"measure\":\"clear_footway\",\"suggestion\":\"Create a formal footway on the right side and use physical barriers to separate the pedestrian area from the vendor stalls, ensuring a clear path for movement.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The surface of the informal path on the right is cluttered with debris, litter, and the legs of vendor stalls, creating significant trip hazards.\",\"frame\":5,\"x\":850,\"y\":780,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side footway and implement a strict by-law to keep the pedestrian zone free of commercial encroachment and litter.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are seen walking and standing in the roadway, and there are shops and vendors on both sides, indicating a high demand to cross, but there is no safe\",\"frame\":5,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a high-visibility marked pedestrian crossing (zebra crossing) with a raised platform to slow traffic and provide a safe point for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "There is no purpose-built sidewalk; the area next to the road is an informal path under 1m wide, occupied by pedestrians and street vendors.",
+    "frame": 5,
+    "x": 220,
+    "y": 710,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5m wide paved footway on the left side, set back from the carriageway, to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is completely blocked by a blue umbrella stall, a red table, and people sitting and standing.",
+    "frame": 5,
+    "x": 180,
+    "y": 730,
+    "measure": "clear_footway",
+    "suggestion": "Designate a formal footway on the left side and install fixed bollards or planters to prevent vendors from setting up stalls in the pedestrian zone."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The surface of the informal path on the left is uneven, with visible debris, litter, and an irregular edge where it meets the road.",
+    "frame": 5,
+    "x": 250,
+    "y": 740,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, even pavement and install a proper kerb to define the edge and remove trip hazards."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "There is no purpose-built sidewalk on the right; the area is an informal path under 1m wide, cluttered with pedestrians and vendors.",
+    "frame": 5,
+    "x": 820,
+    "y": 760,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5m wide paved footway on the right side to create a safe and continuous path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right is completely blocked by multiple red and patterned umbrellas, clothing stalls, and a large crowd of people.",
+    "frame": 5,
+    "x": 880,
+    "y": 720,
+    "measure": "clear_footway",
+    "suggestion": "Create a formal footway on the right side and use physical barriers to separate the pedestrian area from the vendor stalls, ensuring a clear path for movement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The surface of the informal path on the right is cluttered with debris, litter, and the legs of vendor stalls, creating significant trip hazards.",
+    "frame": 5,
+    "x": 850,
+    "y": 780,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side footway and implement a strict by-law to keep the pedestrian zone free of commercial encroachment and litter."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are seen walking and standing in the roadway, and there are shops and vendors on both sides, indicating a high demand to cross, but there is no safe",
+    "frame": 5,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a high-visibility marked pedestrian crossing (zebra crossing) with a raised platform to slow traffic and provide a safe point for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 80.12,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6495,
+  "completion_tokens": 883,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

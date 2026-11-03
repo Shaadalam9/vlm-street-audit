@@ -1,0 +1,102 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_002.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_004.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_006.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_008.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A person is walking in the carriageway between the red car and the grey car, indicating the footway is obstructed or unusable.\",\"frame\":3,\"x\":500,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-hand footway to a minimum of 1.5m and install bollards to prevent vehicle encroachment.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"High pedestrian activity and commercial frontage on the right, but no marked crossing is visible in the 100m segment.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island at the junction with the side street on the right.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"The footway is obstructed by parked vehicles and lacks a clear, accessible path to the road edge.\",\"frame\":3,\"x\":750,\"y\":750,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Construct dropped kerbs at the new crossing point to ensure step-free access for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A person is walking in the carriageway between the red car and the grey car, indicating the footway is obstructed or unusable.",
+    "frame": 3,
+    "x": 500,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-hand footway to a minimum of 1.5m and install bollards to prevent vehicle encroachment."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "High pedestrian activity and commercial frontage on the right, but no marked crossing is visible in the 100m segment.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island at the junction with the side street on the right."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "The footway is obstructed by parked vehicles and lacks a clear, accessible path to the road edge.",
+    "frame": 3,
+    "x": 750,
+    "y": 750,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Construct dropped kerbs at the new crossing point to ensure step-free access for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 196.87,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6080,
+  "completion_tokens": 468,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

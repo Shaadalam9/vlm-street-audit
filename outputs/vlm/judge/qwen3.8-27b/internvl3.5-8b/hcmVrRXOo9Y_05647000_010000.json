@@ -1,0 +1,101 @@
+{
+ "clip_id": "hcmVrRXOo9Y_05647000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven sections on the left sidewalk to prevent trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "some",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair the uneven sections on the right sidewalk to prevent trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "crossing_demand true and crossing_facility none",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a pedestrian crossing with signals to improve safety at this location."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is an unpaved construction area, not a sidewalk, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a narrow paved shoulder with no sidewalk, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no sidewalk on the left to have trip hazards, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no sidewalk on the right to have trip hazards, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear crossing demand or a specific location for a signalised crossing, so the deficit is not visible and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

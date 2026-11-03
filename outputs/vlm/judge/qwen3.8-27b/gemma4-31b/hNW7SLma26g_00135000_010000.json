@@ -1,0 +1,29 @@
+{
+ "clip_id": "hNW7SLma26g_00135000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Pedestrians are visible on the right footway and there are shops and homes on both sides, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 915,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians and a high-activity area on the right with no visible crossing, so the deficit is present, but the suggestion is a generic measure that would apply to any similar street."
+  }
+ ],
+ "error": null
+}

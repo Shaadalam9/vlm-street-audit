@@ -1,0 +1,132 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_002.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_004.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_006.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_008.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"People are walking on a dirt strip directly beside the road, with no paved or formalised footway.\",\"frame\":3,\"x\":250,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide concrete footway along the left side, set back from the road edge.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A large white sack and other items are placed on the narrow path, completely blocking passage.\",\"frame\":4,\"x\":80,\"y\":700,\"measure\":\"clear_footway\",\"suggestion\":\"Install a covered storage rack set back from the path to keep the walkway clear.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface is uneven and broken, with visible potholes and loose gravel.\",\"frame\":3,\"x\":250,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side path with a compacted aggregate base and a smooth concrete finish.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The path is made of uneven, loose stones with significant gaps and height differences.\",\"frame\":4,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Re-grade the right-side footway and install a level, non-slip paving surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen crossing the road near the shop area without any marked or physical crossing facility.\",\"frame\":4,\"x\":480,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a high-visibility zebra crossing with a central refuge island at the junction with the side road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No dropped kerbs are visible at the points where pedestrians are crossing the road.\",\"frame\":4,\"x\":480,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a signalised pedestrian crossing with accessible ramps at the main commercial junction.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "People are walking on a dirt strip directly beside the road, with no paved or formalised footway.",
+    "frame": 3,
+    "x": 250,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide concrete footway along the left side, set back from the road edge."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A large white sack and other items are placed on the narrow path, completely blocking passage.",
+    "frame": 4,
+    "x": 80,
+    "y": 700,
+    "measure": "clear_footway",
+    "suggestion": "Install a covered storage rack set back from the path to keep the walkway clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface is uneven and broken, with visible potholes and loose gravel.",
+    "frame": 3,
+    "x": 250,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side path with a compacted aggregate base and a smooth concrete finish."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The path is made of uneven, loose stones with significant gaps and height differences.",
+    "frame": 4,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Re-grade the right-side footway and install a level, non-slip paving surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen crossing the road near the shop area without any marked or physical crossing facility.",
+    "frame": 4,
+    "x": 480,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a high-visibility zebra crossing with a central refuge island at the junction with the side road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No dropped kerbs are visible at the points where pedestrians are crossing the road.",
+    "frame": 4,
+    "x": 480,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a signalised pedestrian crossing with accessible ramps at the main commercial junction."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 51.27,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6270,
+  "completion_tokens": 658,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

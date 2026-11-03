@@ -1,0 +1,47 @@
+{
+ "clip_id": "m2BHJJ2x9oo_02168000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in the carriageway without any designated crossing facility.",
+   "frame": 1,
+   "x": 510,
+   "y": 580,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated area for people to cross the road."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The lack of any crossing facility makes the crossing point poor quality and dangerous.",
+   "frame": 1,
+   "x": 510,
+   "y": 580,
+   "measure": "add_marked_crossing",
+   "suggestion": "Implement a signalised or marked crossing to improve safety for pedestrians crossing this busy urban street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the carriageway without markings, and a marked crossing is a standard feasible fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The lack of infrastructure is evident, and the suggested signalised or marked crossing is a feasible improvement."
+  }
+ ],
+ "error": null
+}

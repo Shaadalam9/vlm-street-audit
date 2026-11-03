@@ -1,0 +1,122 @@
+{
+ "clip_id": "HmHCTeUYA9c_00802000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_002.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_004.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_006.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_008.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_00802000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"none\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"not_visible_footway\",\"frame\":1,\"x\":750,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built footway along the right side to provide safe pedestrian access for the college community.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand_true_but_no_facility\",\"frame\":4,\"x\":600,\"y\":700,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island at the crossing to provide a safe space for pedestrians to wait before crossing, enhancing overall pedestrian safety.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"no_crossing_facility_and_demand\",\"frame\":3,\"x\":550,\"y\":675,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island at the crossing to provide a safe space for pedestrians to wait before crossing, enhancing overall pedestrian safety.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no_kerb_ramps_visible_and_demand\",\"frame\":2,\"x\":580,\"y\":670,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the crossing to improve accessibility for wheelchair users and pedestrians with mobility aids.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"some_lighting_present_but_possible_improvement\",\"frame\":1,\"x\":250,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lighting along the left side to improve visibility and safety for pedestrians and drivers, especially during evening hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "none",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "not_visible_footway",
+    "frame": 1,
+    "x": 750,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built footway along the right side to provide safe pedestrian access for the college community."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand_true_but_no_facility",
+    "frame": 4,
+    "x": 600,
+    "y": 700,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island at the crossing to provide a safe space for pedestrians to wait before crossing, enhancing overall pedestrian safety."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "no_crossing_facility_and_demand",
+    "frame": 3,
+    "x": 550,
+    "y": 675,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island at the crossing to provide a safe space for pedestrians to wait before crossing, enhancing overall pedestrian safety."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no_kerb_ramps_visible_and_demand",
+    "frame": 2,
+    "x": 580,
+    "y": 670,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the crossing to improve accessibility for wheelchair users and pedestrians with mobility aids."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "some_lighting_present_but_possible_improvement",
+    "frame": 1,
+    "x": 250,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lighting along the left side to improve visibility and safety for pedestrians and drivers, especially during evening hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 241.44,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7691,
+  "completion_tokens": 558,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,90 @@
+{
+ "clip_id": "boKYDMlwy0I_00110000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous paved sidewalk runs along the left side, but it is separated from the carriageway by a tall, solid masonry wall and a dense hedge, which acts as a \",\"frame\":1,\"x\":150,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Remove the masonry wall and hedge on the left to create a direct, unobstructed connection between the sidewalk and the road.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"The street is lined with residential and commercial buildings on both sides, creating a high demand for crossing, yet there is no marked or purpose-built\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the junction ahead to provide a safe and visible place for residents to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous paved sidewalk runs along the left side, but it is separated from the carriageway by a tall, solid masonry wall and a dense hedge, which acts as a ",
+    "frame": 1,
+    "x": 150,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Remove the masonry wall and hedge on the left to create a direct, unobstructed connection between the sidewalk and the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "The street is lined with residential and commercial buildings on both sides, creating a high demand for crossing, yet there is no marked or purpose-built",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the junction ahead to provide a safe and visible place for residents to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 111.51,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2459,
+  "completion_tokens": 396,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

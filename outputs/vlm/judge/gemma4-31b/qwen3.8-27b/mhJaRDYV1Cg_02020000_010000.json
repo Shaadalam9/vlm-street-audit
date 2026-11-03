@@ -1,0 +1,47 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road has a grassy verge and trees but no paved or informal path for pedestrians.",
+   "frame": 1,
+   "x": 200,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a bus stop on the right, indicating a need to cross, but no marked or purpose-built crossing facility is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the location of the bus stop to allow safe crossing for passengers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side clearly lacks a footway, and there is ample space on the verge to build one."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "While a bus stop is mentioned, it is not clearly identifiable in the frames to confirm the lack of a crossing at that specific spot."
+  }
+ ],
+ "error": null
+}

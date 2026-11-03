@@ -1,0 +1,65 @@
+{
+ "clip_id": "_JWKEWBGbmk_26545000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban area with no street lights visible under the toll canopy",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting under the toll plaza canopy to improve visibility and safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no designated sidewalk for pedestrians",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Provide a separated pedestrian footway on the left side of the toll plaza."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no designated sidewalk for pedestrians",
+   "frame": 1,
+   "x": 900,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Provide a separated pedestrian footway on the right side of the toll plaza."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a toll plaza, not a standard street, so the presence or absence of street lighting and footways cannot be assessed; the suggestions are generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a toll plaza, not a standard street, so the presence or absence of street lighting and footways cannot be assessed; the suggestions are generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a toll plaza, not a standard street, so the presence or absence of street lighting and footways cannot be assessed; the suggestions are generic and feasibility is unclear."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "R_FR8kB12sg_00263000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is obstructed by a continuous line of painted concrete barriers and a large billboard, forcing pedestrians to use the road edge.",
+   "frame": 1,
+   "x": 200,
+   "y": 600,
+   "measure": "clear_footway",
+   "suggestion": "Remove the concrete barriers and billboard to create a clear, continuous footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The footway surface is uneven and littered with debris, with a broken section near the barriers.",
+   "frame": 3,
+   "x": 200,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the footway and remove the debris to create a smooth, safe walking surface."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a continuous line of painted concrete barriers and a large billboard obstructing the left-side footway, making the deficit visible and the suggestion specific to this street's "
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The footway surface is visibly uneven and littered with debris, confirming the deficit, and the suggestion to resurface and remove debris is specific to this street's condition"
+  }
+ ],
+ "error": null
+}

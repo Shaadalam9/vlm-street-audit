@@ -1,0 +1,47 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is completely obscured by a large silver van parked or stopped in the adjacent lane, making the presence or condition of any footway,",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the right side of the road to provide a safe and accessible path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The scene shows a busy urban street with multiple lanes, commercial buildings, and visible pedestrian activity on the left, indicating a high demand for",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Install a clearly marked pedestrian crossing, such as a zebra crossing or a signalised crossing, at a logical point along this road segment to provide a safe"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is completely blocked by a van, so the presence of a footway cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a short segment of road without a crossing, but do not show the full context to determine if one is missing or where it should be."
+  }
+ ],
+ "error": null
+}

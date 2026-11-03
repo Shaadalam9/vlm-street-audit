@@ -1,0 +1,122 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"People are walking in the road as there is no designated sidewalk.\",\"frame\":1,\"x\":120,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a purpose-built sidewalk on the left side of the road to separate pedestrians from vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The edge of the road is blocked by market stalls and umbrellas.\",\"frame\":2,\"x\":850,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate market stalls away from the road edge to create a clear, unobstructed path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground surface on the right is uneven and unpaved.\",\"frame\":3,\"x\":800,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Pave the pedestrian area on the right side to eliminate trip hazards and improve accessibility.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road in a commercial area without any designated crossing facility.\",\"frame\":2,\"x\":550,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The lack of any crossing infrastructure makes crossing dangerous and unpredictable.\",\"frame\":2,\"x\":550,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Implement a signalised or marked crossing to improve safety and visibility for both drivers and pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "People are walking in the road as there is no designated sidewalk.",
+    "frame": 1,
+    "x": 120,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a purpose-built sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The edge of the road is blocked by market stalls and umbrellas.",
+    "frame": 2,
+    "x": 850,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Relocate market stalls away from the road edge to create a clear, unobstructed path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground surface on the right is uneven and unpaved.",
+    "frame": 3,
+    "x": 800,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Pave the pedestrian area on the right side to eliminate trip hazards and improve accessibility."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road in a commercial area without any designated crossing facility.",
+    "frame": 2,
+    "x": 550,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The lack of any crossing infrastructure makes crossing dangerous and unpredictable.",
+    "frame": 2,
+    "x": 550,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Implement a signalised or marked crossing to improve safety and visibility for both drivers and pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 266.26,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3156,
+  "completion_tokens": 570,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

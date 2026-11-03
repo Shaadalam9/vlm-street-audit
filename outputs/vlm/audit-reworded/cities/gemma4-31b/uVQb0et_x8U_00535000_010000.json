@@ -1,0 +1,112 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_002.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_004.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_006.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_008.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bordered by a green fence with no space for pedestrians to walk between the fence and the road.\",\"frame\":4,\"x\":150,\"y\":800,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the left side of the road to provide a safe path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Parked vehicles and utility poles obstruct the narrow sidewalk on the right.\",\"frame\":1,\"x\":900,\"y\":850,\"measure\":\"clear_footway\",\"suggestion\":\"Implement strict parking enforcement to keep the right-hand sidewalk clear of vehicles.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The sidewalk on the right appears uneven and fragmented with various utility poles and debris.\",\"frame\":3,\"x\":850,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the right-hand sidewalk to remove trip hazards and ensure a smooth surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is high crossing demand due to commercial shops on the right, but no marked or signalised pedestrian crossing is visible.\",\"frame\":2,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing to allow people to safely cross the multi-lane road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bordered by a green fence with no space for pedestrians to walk between the fence and the road.",
+    "frame": 4,
+    "x": 150,
+    "y": 800,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated sidewalk on the left side of the road to provide a safe path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Parked vehicles and utility poles obstruct the narrow sidewalk on the right.",
+    "frame": 1,
+    "x": 900,
+    "y": 850,
+    "measure": "clear_footway",
+    "suggestion": "Implement strict parking enforcement to keep the right-hand sidewalk clear of vehicles."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The sidewalk on the right appears uneven and fragmented with various utility poles and debris.",
+    "frame": 3,
+    "x": 850,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Repave the right-hand sidewalk to remove trip hazards and ensure a smooth surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is high crossing demand due to commercial shops on the right, but no marked or signalised pedestrian crossing is visible.",
+    "frame": 2,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a signalised pedestrian crossing to allow people to safely cross the multi-lane road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 199.61,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 3147,
+  "completion_tokens": 535,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

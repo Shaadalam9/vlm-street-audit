@@ -1,0 +1,83 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only a narrow strip of dirt and vegetation next to a wall",
+   "frame": 1,
+   "x": 250,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk, only grass and vegetation next to the temple wall",
+   "frame": 1,
+   "x": 750,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a paved footway on the right side to provide a safe walking space for visitors to the temple."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "residential and religious buildings on both sides create crossing demand, but no designated crossing exists",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to facilitate safe movement between the residential area and the temple."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban area with no visible street lighting poles along the road segment",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along this stretch to improve visibility and safety for all road users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though space is very limited by the wall."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has grass verges where a footway could be installed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible despite the presence of a temple and houses."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible in the provided frames."
+  }
+ ],
+ "error": null
+}

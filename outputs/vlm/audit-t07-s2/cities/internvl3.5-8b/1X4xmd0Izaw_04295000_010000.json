@@ -1,0 +1,152 @@
+{
+ "clip_id": "1X4xmd0Izaw_04295000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_002.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_004.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_006.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_008.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":100,\"y\":100,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to improve pedestrian safety.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":100,\"y\":200,\"measure\":\"build_footway\",\"suggestion\":\"Enhance the left side with a proper footway to provide a safe path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":100,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Improve the left sidewalk to reduce trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more\",\"frame\":1,\"x\":100,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Enhance the right sidewalk to minimize trip hazards for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":100,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalized crossing to improve safety where people need to cross the road.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"4_or_more lanes and a signalised, marked or raised crossing without a refuge\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a refuge island in the middle of the road to provide a safe crossing area for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"kerb_ramps none\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the crossing to improve pedestrian access.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban road with street_lighting none\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights to enhance visibility and safety along the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 100,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to improve pedestrian safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 200,
+    "measure": "build_footway",
+    "suggestion": "Enhance the left side with a proper footway to provide a safe path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Improve the left sidewalk to reduce trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Enhance the right sidewalk to minimize trip hazards for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 100,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalized crossing to improve safety where people need to cross the road."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "4_or_more lanes and a signalised, marked or raised crossing without a refuge",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a refuge island in the middle of the road to provide a safe crossing area for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "kerb_ramps none",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the crossing to improve pedestrian access."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban road with street_lighting none",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights to enhance visibility and safety along the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 33.74,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13433,
+  "completion_tokens": 726,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

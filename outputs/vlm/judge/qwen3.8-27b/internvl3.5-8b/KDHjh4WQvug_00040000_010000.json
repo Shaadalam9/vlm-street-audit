@@ -1,0 +1,47 @@
+{
+ "clip_id": "KDHjh4WQvug_00040000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a pedestrian crossing signal to enhance safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a pedestrian crossing signal to enhance safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear pedestrian crossing or a specific location where a signal would be installed, making the deficit and the specific placement of the suggested measure unclear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Similar to the left side, the frames do not provide enough detail to confirm a specific deficit or the exact location for a pedestrian crossing signal on the right side."
+  }
+ ],
+ "error": null
+}

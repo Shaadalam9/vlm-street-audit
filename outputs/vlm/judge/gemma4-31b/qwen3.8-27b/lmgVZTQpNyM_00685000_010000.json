@@ -1,0 +1,119 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway is a trodden strip of dirt and gravel, not a purpose-built sidewalk.",
+   "frame": 2,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous footway on the right side to separate pedestrians from the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal, unpaved strip with no clear boundary from the road.",
+   "frame": 2,
+   "x": 100,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous footway on the left side to provide a safe walking surface."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "The footway is completely occupied by market stalls and vendors.",
+   "frame": 2,
+   "x": 850,
+   "y": 700,
+   "measure": "clear_footway",
+   "suggestion": "Relocate the market stalls to a designated area away from the footway to ensure it is clear for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The unpaved footway is uneven and has debris, creating trip hazards.",
+   "frame": 2,
+   "x": 850,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the footway with a smooth, even material to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved footway is uneven and has debris, creating trip hazards.",
+   "frame": 2,
+   "x": 100,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the footway with a smooth, even material to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the market, but no formal crossing facility is present.",
+   "frame": 2,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe place to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a paved sidewalk, and building one is a standard feasible fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved sidewalk, and building one is a standard feasible fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Market stalls are clearly obstructing the pedestrian area on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved surfaces on the right are visibly uneven and debris-strewn."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved surfaces on the left are visibly uneven and debris-strewn."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No formal crossing is visible despite high pedestrian activity near the market."
+  }
+ ],
+ "error": null
+}

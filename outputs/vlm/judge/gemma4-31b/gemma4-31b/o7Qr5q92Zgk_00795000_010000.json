@@ -1,0 +1,83 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal path without a purpose-built sidewalk.",
+   "frame": 1,
+   "x": 100,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a purpose-built sidewalk on the left side of the road to provide a safe walking space."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path is uneven and broken.",
+   "frame": 1,
+   "x": 100,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the informal path on the left to remove trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The sidewalk is uneven and broken in several places.",
+   "frame": 4,
+   "x": 600,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Repair the broken sections of the sidewalk on the right side."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to the urban environment and buildings, but no designated crossing facility is provided.",
+   "frame": 2,
+   "x": 500,
+   "y": 550,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to allow people to cross the road safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal sidewalk, and building one is feasible and specific to this location."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved area on the left is clearly uneven, and repairing it is a feasible, specific fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right-side footway shows visible deterioration and debris, making repair a feasible and specific improvement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The urban setting shows high activity but no marked crossings, and installing one is a standard, feasible street design change."
+  }
+ ],
+ "error": null
+}

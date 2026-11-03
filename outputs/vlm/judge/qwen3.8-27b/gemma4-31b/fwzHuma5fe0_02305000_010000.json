@@ -1,0 +1,65 @@
+{
+ "clip_id": "fwzHuma5fe0_02305000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The area to the left of the road is unpaved and lacks a formal sidewalk, consisting of a snow-covered informal path.",
+   "frame": 3,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a formal, paved sidewalk on the left side of the road to provide a safe and accessible path for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and covered in snow and slush, creating significant trip hazards.",
+   "frame": 3,
+   "x": 100,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the left-side pedestrian area to eliminate trip hazards and improve accessibility."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are seen crossing the road in the carriageway, but there is no designated crossing facility provided.",
+   "frame": 3,
+   "x": 220,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a bus and other vehicles, making it impossible to confirm the absence of a footway or the specific nature of the surface."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The area to the left is blocked from view by the bus, so the presence of trip hazards on an informal path cannot be verified."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A pedestrian is clearly seen crossing the road in the third frame without a visible marked crossing or zebra stripes."
+  }
+ ],
+ "error": null
+}

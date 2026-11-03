@@ -1,0 +1,65 @@
+{
+ "clip_id": "DGdOwXUMZkI_01182000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is a narrow sidewalk, less than 1m wide in places, with no physical barrier separating it from the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to a minimum of 1.5m and add a physical barrier to separate pedestrians from traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a high demand for crossing due to the commercial nature of the street and the presence of pedestrians, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at a logical point along this stretch of road to provide a safe crossing point."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The road has four or more lanes, and any future crossing would need a refuge to allow pedestrians to cross in stages.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Include a central refuge island in the design of the new signalised crossing to allow pedestrians to cross the wide road in two stages."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left sidewalk is visible and appears narrow, though widening may be constrained by the building line."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible in the frames, but the suggestion is a generic solution."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is wide, but the suggestion is a generic addition to a hypothetical crossing."
+  }
+ ],
+ "error": null
+}

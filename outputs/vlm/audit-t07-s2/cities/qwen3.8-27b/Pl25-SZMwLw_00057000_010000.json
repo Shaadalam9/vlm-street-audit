@@ -1,0 +1,102 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_002.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_004.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_006.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_008.jpg",
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous concrete barrier separates the road from the embankment, providing no space for a footway.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a pedestrian bridge over the barrier to allow safe crossing for emergency or maintenance personnel.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area beside the solid white line is a grassy verge that drops away, with no path for pedestrians.\",\"frame\":1,\"x\":900,\"y\":750,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a secure pedestrian bridge spanning the grassy verge to provide a safe route for foot traffic.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road is a wide, multi-lane motorway with no physical refuge islands visible in the lanes.\",\"frame\":1,\"x\":500,\"y\":850,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a dedicated pedestrian underpass with a central refuge to manage the wide span safely.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous concrete barrier separates the road from the embankment, providing no space for a footway.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a pedestrian bridge over the barrier to allow safe crossing for emergency or maintenance personnel."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area beside the solid white line is a grassy verge that drops away, with no path for pedestrians.",
+    "frame": 1,
+    "x": 900,
+    "y": 750,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a secure pedestrian bridge spanning the grassy verge to provide a safe route for foot traffic."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road is a wide, multi-lane motorway with no physical refuge islands visible in the lanes.",
+    "frame": 1,
+    "x": 500,
+    "y": 850,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a dedicated pedestrian underpass with a central refuge to manage the wide span safely."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 179.91,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6054,
+  "completion_tokens": 442,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

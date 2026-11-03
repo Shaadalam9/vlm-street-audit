@@ -1,0 +1,47 @@
+{
+ "clip_id": "OgpB09d_cRA_01441000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has a wide, purpose-built sidewalk, so this need is not triggered.",
+   "frame": 1,
+   "x": 0,
+   "y": 0,
+   "measure": "build_footway",
+   "suggestion": "No action is required as a suitable footway is present."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a high demand for crossing due to commercial buildings on both sides, but no marked or signalised crossing is visible in the 100m segment.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing with high-visibility signage to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a wide, purpose-built sidewalk on the left, so the deficit is not visible and no action is required."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible in the segment, and the suggestion to add one is a standard, feasible measure but not specific to this street's layout."
+  }
+ ],
+ "error": null
+}

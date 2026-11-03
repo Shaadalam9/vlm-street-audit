@@ -1,0 +1,110 @@
+{
+ "clip_id": "MMSSZo4HdOo_02862000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_02862000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway on the right; the person on foot is walking in the carriageway beside the rickshaw.\",\"frame\":1,\"x\":600,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Provide a continuous footway on the right side so pedestrians are not forced to walk in the carriageway.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is occupied by a loaded cart and piled goods, blocking passage.\",\"frame\":1,\"x\":80,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the cart and goods from the left footway to restore a usable pedestrian route.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway is uneven and littered with debris and piled material.\",\"frame\":1,\"x\":80,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the left footway to remove the uneven, debris-covered trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are in the carriageway and there is commercial activity on both sides, but no crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at this high-demand point to give people a safe place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway on the right; the person on foot is walking in the carriageway beside the rickshaw.",
+    "frame": 1,
+    "x": 600,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Provide a continuous footway on the right side so pedestrians are not forced to walk in the carriageway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The left footway is occupied by a loaded cart and piled goods, blocking passage.",
+    "frame": 1,
+    "x": 80,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Clear the cart and goods from the left footway to restore a usable pedestrian route."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway is uneven and littered with debris and piled material.",
+    "frame": 1,
+    "x": 80,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the left footway to remove the uneven, debris-covered trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are in the carriageway and there is commercial activity on both sides, but no crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at this high-demand point to give people a safe place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 112.82,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2568,
+  "completion_tokens": 505,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

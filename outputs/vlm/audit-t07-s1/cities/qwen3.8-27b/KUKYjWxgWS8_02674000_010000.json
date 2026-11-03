@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUKYjWxgWS8_02674000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_002.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_004.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_006.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_008.jpg",
+  "data/snippets/KUKYjWxgWS8/KUKYjWxgWS8_02674000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous brick and plaster wall with no gap, gate or gap for pedestrians to pass onto the road.\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised crossing at the end of this wall to create a safe, controlled crossing point.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A continuous, weathered concrete wall with no gaps or gates, forcing pedestrians to walk in the road.\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Create a signalised crossing at the end of this wall to allow safe passage for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no marked crossing, refuge, or other facility visible along the entire visible length of the road.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised crossing at the far end of this road segment where the road opens up.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along either side of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a line of LED street lights along the right-hand wall to illuminate the entire road segment.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous brick and plaster wall with no gap, gate or gap for pedestrians to pass onto the road.",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised crossing at the end of this wall to create a safe, controlled crossing point."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A continuous, weathered concrete wall with no gaps or gates, forcing pedestrians to walk in the road.",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Create a signalised crossing at the end of this wall to allow safe passage for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no marked crossing, refuge, or other facility visible along the entire visible length of the road.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised crossing at the far end of this road segment where the road opens up."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along either side of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a line of LED street lights along the right-hand wall to illuminate the entire road segment."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 626.29,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6125,
+  "completion_tokens": 513,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

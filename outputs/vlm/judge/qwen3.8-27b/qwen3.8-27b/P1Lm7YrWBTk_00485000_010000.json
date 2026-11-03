@@ -1,0 +1,65 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A large food trailer is parked on the footway, blocking the path.",
+   "frame": 1,
+   "x": 250,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the food trailer to a designated off-street area to clear the footway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The food trailer is parked on the footway, blocking the path.",
+   "frame": 1,
+   "x": 250,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Relocate the food trailer to a designated off-street area to clear the footway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is no marked or unmarked crossing visible in the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a raised crossing to provide a safe place for pedestrians to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The trailer is clearly blocking the footway, and relocating it is a specific, feasible fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The footway is visibly blocked by the trailer, and the suggested action directly addresses this."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the suggestion is generic and feasibility is unclear due to limited view of the full street width."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,83 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no_crossing_facility_visible",
+   "frame": 1,
+   "x": 850,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing on the right side to improve safety for pedestrians crossing this busy urban street."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "3_lanes_without_refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a pedestrian refuge island in the middle of the road to provide a safe place for pedestrians to wait when crossing the wide, busy street."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no_kerb_ramps_visible",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install dropped kerbs at the crossing points to improve accessibility for pedestrians and wheelchair users."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "some_street_lighting",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Enhance street lighting around the crossing areas to improve visibility for pedestrians and drivers, especially during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the right-side curb or a designated crossing point, so the absence of a crossing cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width and lane markings are obscured by heavy traffic, making it impossible to verify the number of lanes or the presence of a refuge."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The view of the road edges is blocked by vehicles, so the presence or absence of kerb ramps cannot be determined."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The scene is captured during the day, so the effectiveness or presence of street lighting for low-light conditions cannot be assessed."
+  }
+ ],
+ "error": null
+}

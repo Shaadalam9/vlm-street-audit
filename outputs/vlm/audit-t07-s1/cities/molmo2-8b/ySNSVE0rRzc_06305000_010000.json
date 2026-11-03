@@ -1,0 +1,112 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_002.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_004.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_006.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_008.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"physical_barrier\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"one_kerb\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"physical_barrier\",\"frame\":3,\"x\":600,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper footway on the right side of the road to provide a safe path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"partly_blocked\",\"frame\":3,\"x\":600,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the footway on the right side to ensure it is fully usable for pedestrians.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"marked_with_refuge\",\"frame\":3,\"x\":600,\"y\":800,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the road to provide a safe area for pedestrians to wait when crossing a wide rural road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"one_kerb\",\"frame\":3,\"x\":600,\"y\":800,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the marked pedestrian crossing on the right side to assist wheelchair users and mobility scooter riders.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "physical_barrier"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "physical_barrier",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "one_kerb"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "physical_barrier",
+    "frame": 3,
+    "x": 600,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper footway on the right side of the road to provide a safe path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "partly_blocked",
+    "frame": 3,
+    "x": 600,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Clear the footway on the right side to ensure it is fully usable for pedestrians."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "marked_with_refuge",
+    "frame": 3,
+    "x": 600,
+    "y": 800,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the road to provide a safe area for pedestrians to wait when crossing a wide rural road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "one_kerb",
+    "frame": 3,
+    "x": 600,
+    "y": 800,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the marked pedestrian crossing on the right side to assist wheelchair users and mobility scooter riders."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 257.72,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7605,
+  "completion_tokens": 472,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No purpose-built sidewalk is present; pedestrians must walk in the road or on dirt edges.",
+   "frame": 1,
+   "x": 200,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No purpose-built sidewalk is present; the area consists of dirt and construction debris.",
+   "frame": 3,
+   "x": 800,
+   "y": 900,
+   "measure": "build_footway",
+   "suggestion": "Install a paved sidewalk on the right side to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to mixed land use and buildings on both sides, but no designated crossing facility exists.",
+   "frame": 2,
+   "x": 500,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and visible point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a sidewalk, but the suggestion is a generic measure and the available space is obscured by parked vehicles."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is unpaved, but the suggestion is generic and the space is occupied by a large unfinished building."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the suggestion is generic and the road width is not clearly defined in the frames."
+  }
+ ],
+ "error": null
+}

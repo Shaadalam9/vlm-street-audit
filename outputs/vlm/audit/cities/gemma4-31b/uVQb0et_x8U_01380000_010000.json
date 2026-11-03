@@ -1,0 +1,112 @@
+{
+ "clip_id": "uVQb0et_x8U_01380000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_002.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_004.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_006.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_008.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"green fence directly borders the carriageway with no space for pedestrians\",\"frame\":4,\"x\":100,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a dedicated sidewalk between the green fence and the road to provide a safe walking space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"pedestrians are walking on an unpaved, narrow strip of dirt and grass\",\"frame\":4,\"x\":900,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a paved, continuous sidewalk on the right side to improve pedestrian safety and accessibility.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven ground and debris on the informal walking area\",\"frame\":4,\"x\":900,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the right-side walking area to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"commercial and institutional buildings on both sides create demand, but no marked crossing is provided\",\"frame\":4,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked zebra crossing to allow pedestrians to cross the road safely between the two sides.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "green fence directly borders the carriageway with no space for pedestrians",
+    "frame": 4,
+    "x": 100,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a dedicated sidewalk between the green fence and the road to provide a safe walking space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "pedestrians are walking on an unpaved, narrow strip of dirt and grass",
+    "frame": 4,
+    "x": 900,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a paved, continuous sidewalk on the right side to improve pedestrian safety and accessibility."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven ground and debris on the informal walking area",
+    "frame": 4,
+    "x": 900,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the right-side walking area to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "commercial and institutional buildings on both sides create demand, but no marked crossing is provided",
+    "frame": 4,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked zebra crossing to allow pedestrians to cross the road safely between the two sides."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 33.55,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3095,
+  "completion_tokens": 509,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

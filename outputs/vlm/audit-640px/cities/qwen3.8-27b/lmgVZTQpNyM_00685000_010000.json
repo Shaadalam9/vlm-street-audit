@@ -1,0 +1,122 @@
+{
+ "clip_id": "lmgVZTQpNyM_00685000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_002.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_004.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_006.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_008.jpg",
+  "data/snippets/lmgVZTQpNyM/lmgVZTQpNyM_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is a trodden strip with no purpose-built sidewalk, and it is heavily obstructed by market stalls and parked vehicles.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built sidewalk on the right side to separate pedestrians from the carriageway and market stalls.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is completely blocked by a dense line of market stalls and parked vehicles, forcing pedestrians into the road.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stalls to a designated area away from the pedestrian path to ensure a clear and safe route for walking.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is uneven and cluttered with debris and the bases of market stalls, creating significant trip hazards.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the pedestrian path on the right side to eliminate trip hazards and provide a smooth walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the market and shops on the right, but no marked or purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at the market entrance to provide a safe and visible place for people to cross the road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at any potential crossing point, as there are no formal crossings or defined kerbs.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised pedestrian crossing with dropped kerbs to improve accessibility and safety for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is a trodden strip with no purpose-built sidewalk, and it is heavily obstructed by market stalls and parked vehicles.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built sidewalk on the right side to separate pedestrians from the carriageway and market stalls."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right is completely blocked by a dense line of market stalls and parked vehicles, forcing pedestrians into the road.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stalls to a designated area away from the pedestrian path to ensure a clear and safe route for walking."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right is uneven and cluttered with debris and the bases of market stalls, creating significant trip hazards.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the pedestrian path on the right side to eliminate trip hazards and provide a smooth walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the market and shops on the right, but no marked or purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at the market entrance to provide a safe and visible place for people to cross the road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at any potential crossing point, as there are no formal crossings or defined kerbs.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised pedestrian crossing with dropped kerbs to improve accessibility and safety for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 189.0,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2955,
+  "completion_tokens": 643,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

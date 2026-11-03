@@ -1,0 +1,65 @@
+{
+ "clip_id": "hcmVrRXOo9Y_05647000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "broken and uneven concrete surface on the sidewalk",
+   "frame": 1,
+   "x": 450,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Repair the broken concrete sections of the left-hand sidewalk to remove trip hazards."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk provided on the right side of the road",
+   "frame": 1,
+   "x": 850,
+   "y": 700,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are present and there are buildings on both sides, but no designated crossing facility is provided",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames clearly show a broken and uneven concrete surface on the left-hand sidewalk, making the deficit visible and the suggested repair both specific and feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the right side lacks a sidewalk, the suggested measure of adding a signalised crossing does not address the deficit of a missing footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The absence of a designated crossing is evident, and installing a marked crossing is a specific and feasible measure to address this deficit."
+  }
+ ],
+ "error": null
+}

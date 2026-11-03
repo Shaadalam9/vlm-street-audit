@@ -1,0 +1,29 @@
+{
+ "clip_id": "m2BHJJ2x9oo_02168000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the road in any frame.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The images are taken during broad daylight, making it impossible to determine if street lighting is absent or simply off."
+  }
+ ],
+ "error": null
+}

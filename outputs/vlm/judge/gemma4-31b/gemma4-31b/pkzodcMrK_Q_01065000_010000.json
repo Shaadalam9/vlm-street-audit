@@ -1,0 +1,65 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk provided, only a grass verge and trees",
+   "frame": 1,
+   "x": 150,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no sidewalk provided, only grass and trees",
+   "frame": 1,
+   "x": 850,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no street lights visible along the urban residential stretch",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a sidewalk, and adding one is feasible given the available verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a sidewalk, and adding one is feasible given the available verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible in the frames, and installation is a standard feasible upgrade."
+  }
+ ],
+ "error": null
+}

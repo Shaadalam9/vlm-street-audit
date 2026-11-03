@@ -1,0 +1,101 @@
+{
+ "clip_id": "1X4xmd0Izaw_04295000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, people must walk in the road or on the shoulder",
+   "frame": 4,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "the footway is an informal path under 1m and heavily blocked by shops and stalls",
+   "frame": 4,
+   "x": 900,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a proper, unobstructed sidewalk on the right side to provide a safe walking space."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "shop fronts and stalls extend into the walking area",
+   "frame": 4,
+   "x": 850,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Implement zoning regulations to ensure shop fronts do not obstruct the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven ground and debris along the informal path",
+   "frame": 4,
+   "x": 920,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the right-side pedestrian area to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "high crossing demand due to commercial shops on both sides but no designated crossing facility",
+   "frame": 4,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is not clearly visible in the frames, so the absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows a narrow, informal path, but the space available for a new sidewalk is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Stalls and shop fronts are visible on the right, but it is unclear if they can be legally or physically removed."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The ground on the right appears uneven, but the extent of the repair needed is not clear from the images."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The high traffic and commercial activity suggest a need for a crossing, but the specific location and feasibility are unclear."
+  }
+ ],
+ "error": null
+}

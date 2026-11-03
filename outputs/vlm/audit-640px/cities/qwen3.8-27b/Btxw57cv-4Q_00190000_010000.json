@@ -1,0 +1,122 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, un-paved strip between the traffic barrier and the buildings, with no continuous, purpose-built sidewalk.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separated from the carriageway by a physical barrier.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The narrow path on the left is partially obstructed by parked motorbikes and other objects.\",\"frame\":1,\"x\":120,\"y\":780,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The surface of the informal path on the left appears uneven and poorly maintained.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway to create a smooth, even surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial activity on both sides, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":900,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with a central refuge island to provide a safe place to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No dropped kerbs are visible at any potential crossing point.\",\"frame\":1,\"x\":500,\"y\":900,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Build a raised crossing platform with dropped kerbs to improve accessibility and safety for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, un-paved strip between the traffic barrier and the buildings, with no continuous, purpose-built sidewalk.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, separated from the carriageway by a physical barrier."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The narrow path on the left is partially obstructed by parked motorbikes and other objects.",
+    "frame": 1,
+    "x": 120,
+    "y": 780,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left-side footway to keep it clear for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The surface of the informal path on the left appears uneven and poorly maintained.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway to create a smooth, even surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial activity on both sides, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 900,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with a central refuge island to provide a safe place to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No dropped kerbs are visible at any potential crossing point.",
+    "frame": 1,
+    "x": 500,
+    "y": 900,
+    "measure": "add_raised_crossing",
+    "suggestion": "Build a raised crossing platform with dropped kerbs to improve accessibility and safety for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 143.27,
+ "usage": {
+  "prompt_tokens": 2012,
+  "total_tokens": 2603,
+  "completion_tokens": 591,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

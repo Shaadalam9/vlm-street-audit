@@ -1,0 +1,65 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No separate footway; pedestrians are walking on the cobblestone carriageway.",
+   "frame": 1,
+   "x": 300,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No separate footway; the right side of the street is built up with no space for pedestrians.",
+   "frame": 1,
+   "x": 700,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the residential nature and the narrowness of the street, but no crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a raised pedestrian crossing to provide a safe and visible place for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The street is too narrow to add footways without removing the carriageway or demolishing buildings."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The right side is bordered by building walls, making footway construction impossible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A raised crossing is feasible, though the suggestion is generic."
+  }
+ ],
+ "error": null
+}

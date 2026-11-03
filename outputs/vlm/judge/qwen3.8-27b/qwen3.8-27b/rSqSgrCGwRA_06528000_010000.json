@@ -1,0 +1,47 @@
+{
+ "clip_id": "rSqSgrCGwRA_06528000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is separated from the carriageway by a continuous physical barrier, meaning there is no direct footway for pedestrians on this side.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe route over the physical barrier."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the commercial area and bus stops, but no marked or signalised crossing is visible in the 100m segment.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Provide a signalised pedestrian crossing at the intersection to manage the high crossing demand safely."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is separated by a barrier, but the suggestion to add a crossing is a generic measure that does not specify where it would be located."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible in the segment, but the suggestion to add one at the intersection is generic and does not specify the exact location."
+  }
+ ],
+ "error": null
+}

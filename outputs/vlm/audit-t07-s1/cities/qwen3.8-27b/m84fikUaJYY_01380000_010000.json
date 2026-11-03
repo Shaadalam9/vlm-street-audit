@@ -1,0 +1,92 @@
+{
+ "clip_id": "m84fikUaJYY_01380000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/m84fikUaJYY/m84fikUaJYY_01380000_010000/frame_002.jpg",
+  "data/snippets/m84fikUaJYY/m84fikUaJYY_01380000_010000/frame_004.jpg",
+  "data/snippets/m84fikUaJYY/m84fikUaJYY_01380000_010000/frame_006.jpg",
+  "data/snippets/m84fikUaJYY/m84fikUaJYY_01380000_010000/frame_008.jpg",
+  "data/snippets/m84fikUaJYY/m84fikUaJYY_01380000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A rough, trodden dirt strip with loose gravel and a steep, eroded slope runs from the road edge up to the property wall; it is not a paved, continuous footway.\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the left side, retaining the slope with a low wall or kerb to provide a safe, level path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a clear junction or access point on the left where the dirt track meets the road, creating a demand for crossing, but there is no marked or physical at\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Provide a clearly marked pedestrian crossing at this junction to allow safe passage across the carriageway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A rough, trodden dirt strip with loose gravel and a steep, eroded slope runs from the road edge up to the property wall; it is not a paved, continuous footway.",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the left side, retaining the slope with a low wall or kerb to provide a safe, level path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a clear junction or access point on the left where the dirt track meets the road, creating a demand for crossing, but there is no marked or physical at",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Provide a clearly marked pedestrian crossing at this junction to allow safe passage across the carriageway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 32.91,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6016,
+  "completion_tokens": 404,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

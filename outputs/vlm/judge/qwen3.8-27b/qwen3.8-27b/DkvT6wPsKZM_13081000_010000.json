@@ -1,0 +1,83 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous high wall with barbed wire runs along the entire left side, leaving no space for a footway.",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a 1.5 m wide footway on the left side by setting back the wall or using a retaining structure."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "A large red truck and several parked cars occupy the entire right side of the road, blocking any potential footway.",
+   "frame": 1,
+   "x": 750,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Enforce no-parking zones and install bollards to keep the right-side footway clear of vehicles."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground on the right is uneven, with visible potholes and debris where the informal path is located.",
+   "frame": 4,
+   "x": 800,
+   "y": 700,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the right-side footway with a smooth, level surface to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There are shops and homes on both sides, creating a high demand for crossing, but no marked or unmarked crossing facility is visible.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with high-visibility paint and signage at the junction with the shop on the right."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The wall clearly blocks a footway, but the suggestion to build one is not feasible given the lack of visible space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The truck and cars are blocking the right side, but it is unclear if a footway exists to be cleared."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road surface is visibly uneven and wet, but it is unclear if a footway exists to be resurfaced."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the narrowness of the street makes it unclear if a marked crossing is feasible."
+  }
+ ],
+ "error": null
+}

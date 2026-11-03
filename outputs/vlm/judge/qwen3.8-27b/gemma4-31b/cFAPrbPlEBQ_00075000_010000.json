@@ -1,0 +1,29 @@
+{
+ "clip_id": "cFAPrbPlEBQ_00075000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Residential buildings on the right and a park/path on the left create crossing demand, but no designated crossing facility is provided.",
+   "frame": 4,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the residential block and the park."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a residential street with a park on one side and no visible crossing, but the suggestion is a generic measure that does not specify where on this street the crossing should be placed."
+  }
+ ],
+ "error": null
+}

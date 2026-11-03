@@ -1,0 +1,90 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_01650000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the carriageway is bounded by a continuous concrete barrier with no usable footway.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing with a central refuge to allow safe transfer across the barriered carriageway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are present and buildings line the street, yet no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised crossing with dropped kerbs at the point of highest pedestrian demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the carriageway is bounded by a continuous concrete barrier with no usable footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing with a central refuge to allow safe transfer across the barriered carriageway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are present and buildings line the street, yet no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised crossing with dropped kerbs at the point of highest pedestrian demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 117.88,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2420,
+  "completion_tokens": 357,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

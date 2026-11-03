@@ -1,0 +1,83 @@
+{
+ "clip_id": "8wdxcC3VkQY_03150000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "grass verge with no paved sidewalk",
+   "frame": 4,
+   "x": 200,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous paved sidewalk on the left side of the road to provide a safe walking space for residents."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "grass verge with no paved sidewalk",
+   "frame": 4,
+   "x": 800,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous paved sidewalk on the right side of the road to provide a safe walking space for residents."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "residential homes on both sides with no designated crossing facility",
+   "frame": 4,
+   "x": 500,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to allow residents to safely cross between homes on opposite sides of the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban residential area with no visible street lights",
+   "frame": 4,
+   "x": 500,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for pedestrians and drivers at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a grass verge with no footway, but the suggestion is a generic build instruction and the available space is not fully clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a grass verge with no footway, but the suggestion is a generic build instruction and the available space is not fully clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the measure to build a footway does not address the lack of a crossing facility."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible, but the measure to build a footway does not address the lack of lighting."
+  }
+ ],
+ "error": null
+}

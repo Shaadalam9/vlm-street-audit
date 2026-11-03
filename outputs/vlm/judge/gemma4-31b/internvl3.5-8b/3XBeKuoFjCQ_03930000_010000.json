@@ -1,0 +1,83 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the left side to provide a safe pedestrian path."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal_path_1m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk on the right side to provide a safe pedestrian path."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left sidewalk to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked",
+   "frame": 1,
+   "x": 850,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right sidewalk to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The street is a historic cobblestone lane where a modern sidewalk is not feasible and 'improve_crossing' is the wrong measure for a missing footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The street is a historic cobblestone lane where a modern sidewalk is not feasible and 'improve_crossing' is the wrong measure for a missing footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Blue bins are clearly blocking the pedestrian space on the left."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no visible obstructions on the right side of the street."
+  }
+ ],
+ "error": null
+}

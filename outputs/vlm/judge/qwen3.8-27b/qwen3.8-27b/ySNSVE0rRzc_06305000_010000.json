@@ -1,0 +1,65 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A trodden dirt and grass strip runs along the right edge of the road, with no paved or purpose-built sidewalk.",
+   "frame": 1,
+   "x": 750,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous footway on the right side to provide a safe, level surface for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A pedestrian is walking along the right side near commercial signs, indicating a need to cross, but no marked or signalised crossing is present.",
+   "frame": 1,
+   "x": 520,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the point of highest demand near the commercial signs."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a dirt strip instead of a footway, but the suggestion is a generic measure that does not specify where on this street the new footway would be built."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The pedestrian and commercial signs indicate a need for a crossing, and the suggestion correctly targets that specific location, though the available space for a crossing is not fully clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible, but the suggestion is a generic measure that does not specify where on this street the new lights would be installed."
+  }
+ ],
+ "error": null
+}

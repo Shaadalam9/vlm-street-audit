@@ -1,0 +1,83 @@
+{
+ "clip_id": "uVQb0et_x8U_01380000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "green fence directly borders the carriageway with no space for pedestrians",
+   "frame": 4,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk between the green fence and the road to provide a safe walking space."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "pedestrians are walking on an unpaved, narrow strip of dirt and grass",
+   "frame": 4,
+   "x": 900,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a paved, continuous sidewalk on the right side to improve pedestrian safety and accessibility."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven ground and debris on the informal walking area",
+   "frame": 4,
+   "x": 900,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the right-side walking area to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "commercial and institutional buildings on both sides create demand, but no marked crossing is provided",
+   "frame": 4,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to allow pedestrians to cross the road safely between the two sides."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a green fence directly bordering the road on the left, confirming the lack of a footway, but the available space for construction is not visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows an unpaved, narrow strip where pedestrians are walking, confirming the deficit, but the space for a new sidewalk is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The informal walking area on the right appears uneven and unpaved, which constitutes a trip hazard, but the feasibility of repair is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The presence of commercial and institutional buildings on both sides creates a clear demand for a crossing, but the space for a marked crossing is not visible."
+  }
+ ],
+ "error": null
+}

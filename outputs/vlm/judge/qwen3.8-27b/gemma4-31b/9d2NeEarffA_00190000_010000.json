@@ -1,0 +1,101 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area under the overpass has no designated sidewalk for pedestrians.",
+   "frame": 4,
+   "x": 800,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the right side under the overpass to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side consists of an informal path that is narrow and obstructed.",
+   "frame": 1,
+   "x": 50,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Upgrade the informal path on the left to a proper, continuous sidewalk of at least 1.5m width."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven and contains debris.",
+   "frame": 1,
+   "x": 50,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the informal path on the left to remove trip hazards."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The zebra crossing is poorly marked and lacks clear visibility or priority for pedestrians.",
+   "frame": 2,
+   "x": 450,
+   "y": 850,
+   "measure": "improve_crossing",
+   "suggestion": "Repaint the zebra crossing with high-visibility thermoplastic paint and add 'Pedestrian Crossing' road markings."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The road has 4 or more lanes but the marked crossing lacks a central refuge island.",
+   "frame": 2,
+   "x": 450,
+   "y": 850,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island in the middle of the marked crossing to allow pedestrians to cross one direction at a time."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the area under the overpass clearly enough to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by trees and vehicles, making it impossible to verify the condition of the path."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The specific surface condition of the left path is not visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The zebra crossing is visible but the quality of the markings is not clear enough to confirm they are poor."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The full width of the road and the presence of a refuge island cannot be determined from the frames."
+  }
+ ],
+ "error": null
+}

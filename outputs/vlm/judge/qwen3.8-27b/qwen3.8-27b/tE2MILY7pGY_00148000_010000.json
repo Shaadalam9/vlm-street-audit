@@ -1,0 +1,47 @@
+{
+ "clip_id": "tE2MILY7pGY_00148000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No continuous, purpose-built footway is visible on the right side of the road; the area appears to be a verge or informal path.",
+   "frame": 1,
+   "x": 900,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the right side of the road to provide a safe and accessible path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the presence of multiple bus stops and a commercial area, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the location of the bus stops to provide a safe and controlled crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by vehicles and the verge is not clearly visible, so the absence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked or signalised crossing is visible in the frames, but the demand for one is not evident from the static images."
+  }
+ ],
+ "error": null
+}

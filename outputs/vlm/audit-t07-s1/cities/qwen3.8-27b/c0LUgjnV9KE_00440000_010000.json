@@ -1,0 +1,102 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_002.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_004.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_006.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_008.jpg",
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is obscured by the white van and the blue car in the immediate foreground, making any footway or its condition impossible to see.\",\"frame\":1,\"x\":20,\"y\":550,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing on the left side to provide a safe, defined space for pedestrians, replacing the currently invisible or absent footway.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A pedestrian is seen crossing the active roadway in front of a red car, and there is no marked or signalised crossing facility at this high-demand location.\",\"frame\":3,\"x\":520,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a signalised pedestrian crossing at this location to provide a safe, controlled point for crossing the busy road.\"},{\"need\":\"poor_crossing\",\"where\":\"right_side\",\"evidence\":\"The existing crossing is an unmarked section of the road where a pedestrian is actively walking among moving vehicles, indicating a very high-risk and poor-fac.\",\"frame\":3,\"x\":520,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a raised, marked crossing with a central refuge island to slow traffic and provide a safer, more visible crossing point for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is obscured by the white van and the blue car in the immediate foreground, making any footway or its condition impossible to see.",
+    "frame": 1,
+    "x": 20,
+    "y": 550,
+    "measure": "improve_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing on the left side to provide a safe, defined space for pedestrians, replacing the currently invisible or absent footway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A pedestrian is seen crossing the active roadway in front of a red car, and there is no marked or signalised crossing facility at this high-demand location.",
+    "frame": 3,
+    "x": 520,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a signalised pedestrian crossing at this location to provide a safe, controlled point for crossing the busy road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "right_side",
+    "evidence": "The existing crossing is an unmarked section of the road where a pedestrian is actively walking among moving vehicles, indicating a very high-risk and poor-fac.",
+    "frame": 3,
+    "x": 520,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a raised, marked crossing with a central refuge island to slow traffic and provide a safer, more visible crossing point for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 645.09,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6103,
+  "completion_tokens": 491,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

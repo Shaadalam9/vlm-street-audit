@@ -1,0 +1,119 @@
+{
+ "clip_id": "1X4xmd0Izaw_01729000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is an informal path under 1m and is blocked by stalls and vehicles.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated, continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The footway is an informal path under 1m and is partly blocked by building extensions and stalls.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper sidewalk on the right side to provide a safe and unobstructed walking space."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "The walking area is blocked by stalls and parked vehicles.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "clear_footway",
+   "suggestion": "Remove the stalls and parked vehicles from the pedestrian path to ensure clear passage."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path is uneven and broken.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Repave the left-side walking area with a smooth, level surface to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The informal path is uneven and broken.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Repave the right-side walking area with a smooth, level surface to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is high crossing demand due to shops on both sides, but no designated crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide a safe point for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal, continuous sidewalk, though space is limited by buildings and stalls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal sidewalk, with building fronts extending to the road edge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Stalls and parked vehicles are clearly obstructing the informal pedestrian areas on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground surface on the left is visibly uneven and unpaved."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground surface on the right is visibly uneven and unpaved."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings despite the high density of commercial activity."
+  }
+ ],
+ "error": null
+}

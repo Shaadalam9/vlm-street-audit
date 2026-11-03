@@ -1,0 +1,29 @@
+{
+ "clip_id": "94SBevAbFik_03438000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "signalised crossing without refuge visible in frame 1",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a pedestrian refuge island at the signalised crossing to provide a safe waiting area for pedestrians"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, signalised crossing with no visible central refuge island, so the deficit is present; adding an island would address it, but the suggestion is generic and the available space/£"
+  }
+ ],
+ "error": null
+}

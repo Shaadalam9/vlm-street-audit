@@ -1,0 +1,112 @@
+{
+ "clip_id": "kK6ZJc64GXs_01065000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_01065000_010000/frame_002.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_01065000_010000/frame_004.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_01065000_010000/frame_006.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_01065000_010000/frame_008.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_01065000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is not visible\",\"frame\":2,\"x\":200,\"y\":50,\"measure\":\"improve_crossing\",\"suggestion\":\"add_a_crossing_to_improve_access_for_pedestrians\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is not visible\",\"frame\":2,\"x\":200,\"y\":50,\"measure\":\"improve_crossing\",\"suggestion\":\"add_a_crossing_to_improve_access_for_pedestrians\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing but no refuge island\",\"frame\":2,\"x\":500,\"y\":50,\"measure\":\"add_refuge_island\",\"suggestion\":\"install_a_refuge_island_in_the_center_of_the_crossing_to_improve_pedestrian_safety\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no kerb ramps visible at the crossing\",\"frame\":2,\"x\":500,\"y\":50,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"add_dropped_kerb_ramps_at_both_sides_of_the_crossing_to_improve_accessibility_for_pedestrians_and_vehicles_with_low_ground_clearance\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is not visible",
+    "frame": 2,
+    "x": 200,
+    "y": 50,
+    "measure": "improve_crossing",
+    "suggestion": "add_a_crossing_to_improve_access_for_pedestrians"
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is not visible",
+    "frame": 2,
+    "x": 200,
+    "y": 50,
+    "measure": "improve_crossing",
+    "suggestion": "add_a_crossing_to_improve_access_for_pedestrians"
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing but no refuge island",
+    "frame": 2,
+    "x": 500,
+    "y": 50,
+    "measure": "add_refuge_island",
+    "suggestion": "install_a_refuge_island_in_the_center_of_the_crossing_to_improve_pedestrian_safety"
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no kerb ramps visible at the crossing",
+    "frame": 2,
+    "x": 500,
+    "y": 50,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "add_dropped_kerb_ramps_at_both_sides_of_the_crossing_to_improve_accessibility_for_pedestrians_and_vehicles_with_low_ground_clearance"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 21.1,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7592,
+  "completion_tokens": 459,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

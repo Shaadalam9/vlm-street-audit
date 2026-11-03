@@ -1,0 +1,92 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_002.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_004.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_006.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_008.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is bounded by a low concrete wall and a grassy verge, with no paved path or sidewalk for pedestrians.\",\"frame\":1,\"x\":800,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved footway along the right side of the road, separated from the carriageway by a kerb or barrier.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road is long and straight with no visible marked crossings, zebra stripes, or pedestrian signals, despite the presence of bus stops and buildings.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island at a logical point along the road, such as near the bus stops.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is bounded by a low concrete wall and a grassy verge, with no paved path or sidewalk for pedestrians.",
+    "frame": 1,
+    "x": 800,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved footway along the right side of the road, separated from the carriageway by a kerb or barrier."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road is long and straight with no visible marked crossings, zebra stripes, or pedestrian signals, despite the presence of bus stops and buildings.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island at a logical point along the road, such as near the bus stops."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 105.98,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6021,
+  "completion_tokens": 386,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

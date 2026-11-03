@@ -1,0 +1,29 @@
+{
+ "clip_id": "DtA5JoPL7U8_00482000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Pedestrian demand is present due to the large commercial building, but no designated crossing facility is provided.",
+   "frame": 1,
+   "x": 850,
+   "y": 900,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate access to the commercial building."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a building and a sidewalk but do not provide a clear view of the road surface or the specific location where a crossing would be needed, making it impossible to confirm the deficit or,"
+  }
+ ],
+ "error": null
+}

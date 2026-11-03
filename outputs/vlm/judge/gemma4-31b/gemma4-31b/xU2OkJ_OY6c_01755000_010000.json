@@ -1,0 +1,83 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, only parked cars and building walls",
+   "frame": 1,
+   "x": 150,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk, only parked cars and building walls",
+   "frame": 1,
+   "x": 850,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side to provide a safe walking space."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "residential and commercial buildings on both sides create demand, but no designated crossing exists",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to facilitate safe movement between the two sides of the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "no street lamps visible along the urban road segment",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety at night."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a dedicated footway, though space is limited by parked cars."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a dedicated footway, though space is limited by parked cars."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible in the provided frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible along the road segment."
+  }
+ ],
+ "error": null
+}

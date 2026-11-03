@@ -1,0 +1,155 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The area beside the road is occupied by market stalls and parked vehicles, leaving no clear, continuous path for pedestrians.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the left side, relocating the market stalls to a designated area to create a safe pedestrian corridor."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Market stalls, carts, and a silver minivan are parked directly on the pedestrian area, completely blocking the path.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone and relocate the market stalls to a designated market area to clear the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The ground surface is uneven and littered with debris, with goods and carts creating significant trip hazards.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the pedestrian area with a smooth, level material and remove all debris and unauthorized stalls."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is obstructed by market stalls, parked cars, and pedestrians, leaving no safe walking space.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved sidewalk on the right side, separating the pedestrian area from the road and market stalls."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Market stalls, a purple umbrella, and parked vehicles are occupying the space where a footway would be.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Clear the right side of the road of all market stalls and parked vehicles to create a clear pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground is uneven, with goods, bags, and market equipment scattered across the pedestrian area.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the right-side pedestrian area and remove all scattered goods and market equipment to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the market and shops on both sides, but no marked or purpose-built crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island to provide a safe crossing point for the high volume of pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along both sides of the road to improve visibility and safety for pedestrians and drivers, especially in the evening."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is occupied by stalls and cars, leaving no dedicated footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The silver minivan and stalls clearly obstruct the walking space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Debris and uneven surfaces are visible on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is similarly occupied by stalls and vehicles."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The purple umbrella and stalls block the right-side walking area."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Goods and bags are scattered on the right side."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossings are visible despite high pedestrian activity."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting poles are visible in the frames."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,100 @@
+{
+ "clip_id": "An9UjXV1slc_07952000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_07952000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The usable footway on the right is a narrow strip between the parked cars and the trees, well under 1 m wide.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-hand footway to at least 1.5 m by reallocating the on-street parking bays.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A busy commercial street with buildings and parked cars on both sides, but no marked or signalised crossing is visible in the segment.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction ahead to give people a safe place to cross.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road has four or more lanes with no central refuge, so a crossing would require a long, uninterrupted crossing.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a central refuge island to the new crossing to let pedestrians cross one direction of traffic at a time.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The usable footway on the right is a narrow strip between the parked cars and the trees, well under 1 m wide.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-hand footway to at least 1.5 m by reallocating the on-street parking bays."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A busy commercial street with buildings and parked cars on both sides, but no marked or signalised crossing is visible in the segment.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction ahead to give people a safe place to cross."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road has four or more lanes with no central refuge, so a crossing would require a long, uninterrupted crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a central refuge island to the new crossing to let pedestrians cross one direction of traffic at a time."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.96,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2535,
+  "completion_tokens": 472,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

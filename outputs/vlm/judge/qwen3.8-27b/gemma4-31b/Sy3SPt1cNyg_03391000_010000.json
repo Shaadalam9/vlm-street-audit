@@ -1,0 +1,65 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03391000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bordered by a construction wall with no designated sidewalk for pedestrians.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is bordered by a construction wall with no designated sidewalk for pedestrians.",
+   "frame": 1,
+   "x": 900,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the right side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are visible near the road, but there is no designated crossing facility provided.",
+   "frame": 4,
+   "x": 150,
+   "y": 650,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by the camera's position and other vehicles, so the presence of a footway cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a construction wall, but the frames do not show enough of the road edge to definitively confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear view of the road ahead to confirm the absence of a marked crossing."
+  }
+ ],
+ "error": null
+}

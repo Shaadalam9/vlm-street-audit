@@ -1,0 +1,29 @@
+{
+ "clip_id": "KUjbvWs0kn8_00281000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "signalised crossing without refuge on a 2-lane road",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a raised crossing platform at this signalised intersection to provide a refuge for pedestrians crossing a 2-lane road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The images show a wide signalised intersection without a pedestrian refuge, and a raised crossing is a feasible engineering solution."
+  }
+ ],
+ "error": null
+}

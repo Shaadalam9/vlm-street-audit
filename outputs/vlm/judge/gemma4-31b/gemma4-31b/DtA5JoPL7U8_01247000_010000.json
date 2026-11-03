@@ -1,0 +1,47 @@
+{
+ "clip_id": "DtA5JoPL7U8_01247000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no sidewalk or informal path provided along the road edge",
+   "frame": 4,
+   "x": 150,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no sidewalk or informal path provided along the road edge",
+   "frame": 4,
+   "x": 850,
+   "y": 850,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe path for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side of the road lacks any pedestrian infrastructure, and a sidewalk could be built on the grass verge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side of the road lacks any pedestrian infrastructure, and a sidewalk could be built behind the guardrail or on the verge."
+  }
+ ],
+ "error": null
+}

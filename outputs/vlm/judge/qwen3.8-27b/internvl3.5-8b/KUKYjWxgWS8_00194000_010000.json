@@ -1,0 +1,47 @@
+{
+ "clip_id": "KUKYjWxgWS8_00194000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the parked vehicles from the footway to ensure it is fully usable."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the parked vehicles from the footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a footway on the left side, so the deficit is not visible and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a footway on the right side, so the deficit is not visible and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,101 @@
+{
+ "clip_id": "V5Nawx_KnGE_03174000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side has a narrow, informal path rather than a proper sidewalk.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the left side to provide a safe, unobstructed path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side has a narrow, informal path rather than a proper sidewalk.",
+   "frame": 1,
+   "x": 900,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, purpose-built sidewalk on the right side to provide a safe, unobstructed path for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Parked vehicles are obstructing the narrow path on the left.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Remove the parked vehicles from the left-side path to ensure it is clear and usable for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Parked vehicles are obstructing the narrow path on the right.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Remove the parked vehicles from the right-side path to ensure it is clear and usable for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the residential nature of the street, but no formal crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point along the street to provide a safe place for residents to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal, paved sidewalk, though space is limited by trees and parking."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal, paved sidewalk, with the edge of the road meeting greenery or buildings."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly encroaching on the narrow pedestrian margins on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly encroaching on the narrow pedestrian margins on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No formal pedestrian crossing is visible in the provided frames."
+  }
+ ],
+ "error": null
+}

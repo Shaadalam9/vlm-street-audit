@@ -1,0 +1,29 @@
+{
+ "clip_id": "c0LUgjnV9KE_00200000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "High crossing demand due to shops and residential buildings on both sides, but no designated crossing facility is visible.",
+   "frame": 1,
+   "x": 600,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross this busy urban street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a busy street with no visible crossing, but the specific location and feasibility of adding one are not clear from the images."
+  }
+ ],
+ "error": null
+}

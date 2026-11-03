@@ -1,0 +1,142 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_002.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_004.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_006.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_008.jpg",
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_00685000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Market stalls and goods are set up on the edge of the road, leaving no clear, safe path for pedestrians.\",\"frame\":4,\"x\":814,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Construct a proper sidewalk on the right side to separate pedestrians from the market stalls and vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The entire right side of the street is occupied by a market, with stalls and goods extending to the road edge.\",\"frame\":4,\"x\":814,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Create a designated, enclosed market area on the right side to clear the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The footway is uneven, with visible debris and a significant gap or hole near the curb.\",\"frame\":4,\"x\":114,\"y\":815,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the broken and uneven sections of the footway on the left side to ensure a safe, continuous path.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground on the right is uneven and cluttered with market goods, creating multiple trip hazards.\",\"frame\":4,\"x\":814,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Level and clear the area on the right side to remove trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to shops on both sides, but no marked or purpose-built crossing is present.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at a suitable point to provide a safe place for people to cross the road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps are visible as there is no formal crossing facility.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"As part of installing a new marked crossing, construct dropped kerbs (kerb ramps) at both sides to allow safe access.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the length of the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along the road to improve visibility and safety for both pedestrians and drivers, especially in the evening.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Market stalls and goods are set up on the edge of the road, leaving no clear, safe path for pedestrians.",
+    "frame": 4,
+    "x": 814,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Construct a proper sidewalk on the right side to separate pedestrians from the market stalls and vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The entire right side of the street is occupied by a market, with stalls and goods extending to the road edge.",
+    "frame": 4,
+    "x": 814,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Create a designated, enclosed market area on the right side to clear the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The footway is uneven, with visible debris and a significant gap or hole near the curb.",
+    "frame": 4,
+    "x": 114,
+    "y": 815,
+    "measure": "repair_footway",
+    "suggestion": "Repair the broken and uneven sections of the footway on the left side to ensure a safe, continuous path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground on the right is uneven and cluttered with market goods, creating multiple trip hazards.",
+    "frame": 4,
+    "x": 814,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Level and clear the area on the right side to remove trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to shops on both sides, but no marked or purpose-built crossing is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at a suitable point to provide a safe place for people to cross the road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps are visible as there is no formal crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "As part of installing a new marked crossing, construct dropped kerbs (kerb ramps) at both sides to allow safe access."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the length of the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along the road to improve visibility and safety for both pedestrians and drivers, especially in the evening."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 165.72,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6388,
+  "completion_tokens": 776,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

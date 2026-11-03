@@ -1,0 +1,29 @@
+{
+ "clip_id": "LsJO_E5dmvk_00370000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are visible on both sides of a residential urban street with no marked crossing facility provided.",
+   "frame": 1,
+   "x": 240,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for residents to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a residential street with pedestrians and no marked crossing, so the deficit is visible and a crossing would fix it, but the suggestion is generic and feasible given the visible road."
+  }
+ ],
+ "error": null
+}

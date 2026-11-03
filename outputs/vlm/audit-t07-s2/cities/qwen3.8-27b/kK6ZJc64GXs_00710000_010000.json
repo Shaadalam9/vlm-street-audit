@@ -1,0 +1,132 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_002.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_004.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_006.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_008.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"No marked or raised crossing is present, yet pedestrians are seen on and near the road, including one person walking in the carriageway.\",\"frame\":3,\"x\":190,\"y\":610,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with kerb ramps at the junction of the shop frontage and the houses to give people a safe place to cross.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"The area where pedestrians are trying to cross has no markings or refuge, making it invisible to drivers and unsafe to use.\",\"frame\":3,\"x\":190,\"y\":610,\"measure\":\"improve_crossing\",\"suggestion\":\"Provide a raised, marked crossing with a small refuge island to slow vehicles and give pedestrians a safe mid-road pause point.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The existing kerbs at the point of crossing are high and not dropped, blocking safe access for pedestrians, especially with limited mobility.\",\"frame\":3,\"x\":190,\"y\":610,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add dropped kerbs at both ends of a new raised crossing to allow smooth, step-free access onto the crossing surface.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side has only a narrow, uneven strip between the road and the stone wall, so people must walk in the road.\",\"frame\":4,\"x\":760,\"y\":660,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-side path or add a small paved footway separated from the carriageway to give pedestrians a safe, continuous space.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The narrow path is uneven and broken in places, creating trip risks for anyone using it.\",\"frame\":4,\"x\":760,\"y\":660,\"measure\":\"repair_footway\",\"suggestion\":\"Relevel and resurface the right-side path with a smooth, non-slip surface to remove the trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway has uneven sections and items placed on it, increasing the risk of trips.\",\"frame\":4,\"x\":150,\"y\":680,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left footway and clear the obstruction to provide a level, safe walking surface.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "No marked or raised crossing is present, yet pedestrians are seen on and near the road, including one person walking in the carriageway.",
+    "frame": 3,
+    "x": 190,
+    "y": 610,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with kerb ramps at the junction of the shop frontage and the houses to give people a safe place to cross."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "The area where pedestrians are trying to cross has no markings or refuge, making it invisible to drivers and unsafe to use.",
+    "frame": 3,
+    "x": 190,
+    "y": 610,
+    "measure": "improve_crossing",
+    "suggestion": "Provide a raised, marked crossing with a small refuge island to slow vehicles and give pedestrians a safe mid-road pause point."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The existing kerbs at the point of crossing are high and not dropped, blocking safe access for pedestrians, especially with limited mobility.",
+    "frame": 3,
+    "x": 190,
+    "y": 610,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add dropped kerbs at both ends of a new raised crossing to allow smooth, step-free access onto the crossing surface."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side has only a narrow, uneven strip between the road and the stone wall, so people must walk in the road.",
+    "frame": 4,
+    "x": 760,
+    "y": 660,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-side path or add a small paved footway separated from the carriageway to give pedestrians a safe, continuous space."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The narrow path is uneven and broken in places, creating trip risks for anyone using it.",
+    "frame": 4,
+    "x": 760,
+    "y": 660,
+    "measure": "repair_footway",
+    "suggestion": "Relevel and resurface the right-side path with a smooth, non-slip surface to remove the trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway has uneven sections and items placed on it, increasing the risk of trips.",
+    "frame": 4,
+    "x": 150,
+    "y": 680,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left footway and clear the obstruction to provide a level, safe walking surface."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 209.56,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6353,
+  "completion_tokens": 741,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

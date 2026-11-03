@@ -1,0 +1,29 @@
+{
+ "clip_id": "kK6ZJc64GXs_01065000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road has a grassy verge and trees but no paved or trodden path for pedestrians.",
+   "frame": 1,
+   "x": 200,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side of the road to provide a safe path for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side has a grass verge without a paved footway, and there is ample space to construct one."
+  }
+ ],
+ "error": null
+}

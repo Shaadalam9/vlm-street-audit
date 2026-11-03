@@ -14,6 +14,20 @@ data/videos/*
 data/frames/*
 outputs/*
 !**/.gitkeep
+# Published: the street-audit answers on the city clips, the judges' ratings and the analysis
+# tables (text only; no frames). JAAD answers, smoke tests and the earlier prompts stay local.
+!outputs/vlm/
+outputs/vlm/*
+!outputs/vlm/audit/
+!outputs/vlm/audit-reworded/
+!outputs/vlm/audit-1frame/
+!outputs/vlm/audit-640px/
+!outputs/vlm/audit-t07-s1/
+!outputs/vlm/audit-t07-s2/
+outputs/vlm/audit*/*
+!outputs/vlm/audit*/cities/
+!outputs/vlm/judge/
+!outputs/vlm/analysis_audit/
 
 # OS / editor
 .DS_Store
@@ -36,3 +50,6 @@ logs/
 
 # Clip sets (JAAD frames may not be redistributed)
 data/clip_sets/
+
+# Conference paper drafts (IHIET-AI), kept out of git
+paper/

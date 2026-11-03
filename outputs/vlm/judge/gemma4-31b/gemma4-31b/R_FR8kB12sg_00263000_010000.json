@@ -1,0 +1,29 @@
+{
+ "clip_id": "R_FR8kB12sg_00263000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "Pedestrian seen crossing the road in the carriageway without a designated crossing facility.",
+   "frame": 3,
+   "x": 455,
+   "y": 450,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe place for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing the road in the carriageway, and a marked crossing is a standard feasible solution."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "eDgNu3SpFgM_00112000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_002.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_004.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_006.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_008.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A person is walking on the paved footway, which is separated from the road by a grass verge and trees.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the junction to provide a safe, designated crossing point.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are seen crossing the multi-lane road without any marked crossing, signal, or refuge island.\",\"frame\":1,\"x\":450,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a signalised pedestrian crossing with a central refuge island to manage the high crossing demand on this wide road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The existing kerbs at the junction are not dropped, creating a barrier for pedestrians and wheelchairs.\",\"frame\":1,\"x\":450,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dropped kerbs at the new crossing point to ensure step-free access for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A person is walking on the paved footway, which is separated from the road by a grass verge and trees.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the junction to provide a safe, designated crossing point."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are seen crossing the multi-lane road without any marked crossing, signal, or refuge island.",
+    "frame": 1,
+    "x": 450,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a signalised pedestrian crossing with a central refuge island to manage the high crossing demand on this wide road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The existing kerbs at the junction are not dropped, creating a barrier for pedestrians and wheelchairs.",
+    "frame": 1,
+    "x": 450,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Install dropped kerbs at the new crossing point to ensure step-free access for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 322.22,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2766,
+  "completion_tokens": 454,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

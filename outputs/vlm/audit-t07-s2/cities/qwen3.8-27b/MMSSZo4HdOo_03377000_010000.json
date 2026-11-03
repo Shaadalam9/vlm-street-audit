@@ -1,0 +1,132 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_002.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_004.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_006.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_008.jpg",
+  "data/snippets/MMSSZo4HdOo/MMSSZo4HdOo_03377000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The space next to the parked red car is a narrow, unpaved strip littered with debris, forcing pedestrians to walk in the roadway.\",\"frame\":1,\"x\":50,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, 1.5m-wide footway on the left side by narrowing the carriageway to provide a safe pedestrian space.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is completely obstructed by a parked red car and roadside stalls.\",\"frame\":1,\"x\":150,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left side to keep the pedestrian path clear of vehicles and goods.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved path on the left is uneven and littered with trash and debris.\",\"frame\":1,\"x\":50,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side path with a smooth, level pavement to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The paved footway on the right has visible cracks, potholes, and scattered litter.\",\"frame\":1,\"x\":850,\"y\":600,\"measure\":\"repair_footway\",\"suggestion\":\"Re-pave the right-side footway to create a smooth, even surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are seen crossing the road at an uncontrolled point between the red car and the auto-rickshaws.\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing at this high-demand point to provide a safe and legal place for people to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The street is lit only by natural daylight, with no street lamps visible along the carriageway.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED streetlights along the road to improve visibility and safety for pedestrians and drivers after dark.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The space next to the parked red car is a narrow, unpaved strip littered with debris, forcing pedestrians to walk in the roadway.",
+    "frame": 1,
+    "x": 50,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, 1.5m-wide footway on the left side by narrowing the carriageway to provide a safe pedestrian space."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is completely obstructed by a parked red car and roadside stalls.",
+    "frame": 1,
+    "x": 150,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left side to keep the pedestrian path clear of vehicles and goods."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved path on the left is uneven and littered with trash and debris.",
+    "frame": 1,
+    "x": 50,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side path with a smooth, level pavement to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The paved footway on the right has visible cracks, potholes, and scattered litter.",
+    "frame": 1,
+    "x": 850,
+    "y": 600,
+    "measure": "repair_footway",
+    "suggestion": "Re-pave the right-side footway to create a smooth, even surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are seen crossing the road at an uncontrolled point between the red car and the auto-rickshaws.",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing at this high-demand point to provide a safe and legal place for people to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The street is lit only by natural daylight, with no street lamps visible along the carriageway.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED streetlights along the road to improve visibility and safety for pedestrians and drivers after dark."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 426.13,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6308,
+  "completion_tokens": 696,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

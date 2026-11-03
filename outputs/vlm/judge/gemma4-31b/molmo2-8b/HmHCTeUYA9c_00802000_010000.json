@@ -1,0 +1,29 @@
+{
+ "clip_id": "HmHCTeUYA9c_00802000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "no visible crossing facility despite pedestrian presence",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at this junction to improve safety for pedestrians crossing the road"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A marked pedestrian crossing is clearly visible in the third frame."
+  }
+ ],
+ "error": null
+}

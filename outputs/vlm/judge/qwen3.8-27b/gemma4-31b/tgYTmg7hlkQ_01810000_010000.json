@@ -1,0 +1,29 @@
+{
+ "clip_id": "tgYTmg7hlkQ_01810000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bordered by a physical fence and trees with no usable footway for pedestrians.",
+   "frame": 1,
+   "x": 250,
+   "y": 750,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side of the road to provide safe pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a fenced median with no footway, but the suggestion is a generic fix and the available space for a new sidewalk is not visible."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,150 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/8dWgC409JbI/8dWgC409JbI_01130000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A market stall with a blue tarp and piled goods sits on the only usable strip, leaving no clear path for pedestrians.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised footway on the left side, set back from the carriageway, to give pedestrians a safe, unobstructed route past the market stalls.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A large market stall and stacked goods completely occupy the narrow strip beside the road.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stall to a designated, off-street area and enforce a clear, unobstructed footway on the left side.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground is uneven and littered with goods and stall structures, creating significant trip hazards.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, level surface to eliminate trip hazards from uneven ground and debris.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"A market stall with a large umbrella and a parked car occupy the space, leaving no clear path for pedestrians.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised footway on the right side, set back from the carriageway, to provide a safe pedestrian route past the shops and stalls.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A market stall and a parked car completely block the narrow strip beside the road.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the market stall and enforce a no-parking zone to create a clear, unobstructed footway on the right side.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground is uneven and cluttered with stall structures and goods, creating trip hazards.\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side footway with a smooth, level surface to eliminate trip hazards from uneven ground and debris.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen walking in the road, and there are shops on both sides, indicating a high demand for crossing, but no formal crossing is present.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility signage to provide a safe and designated place for people to cross the street.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in the image.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of energy-efficient street lights along both sides of the road to improve visibility and safety for all road users during the evening and night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A market stall with a blue tarp and piled goods sits on the only usable strip, leaving no clear path for pedestrians.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised footway on the left side, set back from the carriageway, to give pedestrians a safe, unobstructed route past the market stalls."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A large market stall and stacked goods completely occupy the narrow strip beside the road.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stall to a designated, off-street area and enforce a clear, unobstructed footway on the left side."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground is uneven and littered with goods and stall structures, creating significant trip hazards.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, level surface to eliminate trip hazards from uneven ground and debris."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "A market stall with a large umbrella and a parked car occupy the space, leaving no clear path for pedestrians.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised footway on the right side, set back from the carriageway, to provide a safe pedestrian route past the shops and stalls."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A market stall and a parked car completely block the narrow strip beside the road.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the market stall and enforce a no-parking zone to create a clear, unobstructed footway on the right side."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground is uneven and cluttered with stall structures and goods, creating trip hazards.",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side footway with a smooth, level surface to eliminate trip hazards from uneven ground and debris."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen walking in the road, and there are shops on both sides, indicating a high demand for crossing, but no formal crossing is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility signage to provide a safe and designated place for people to cross the street."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in the image.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of energy-efficient street lights along both sides of the road to improve visibility and safety for all road users during the evening and night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 54.46,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2961,
+  "completion_tokens": 898,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

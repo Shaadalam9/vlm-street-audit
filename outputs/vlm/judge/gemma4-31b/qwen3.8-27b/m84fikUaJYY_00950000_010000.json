@@ -1,0 +1,29 @@
+{
+ "clip_id": "m84fikUaJYY_00950000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Shops and homes on both sides create crossing demand, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the shop frontage on the right."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a commercial/residential area with no pedestrian crossings, and adding one at the shop frontages is a standard, feasible improvement."
+  }
+ ],
+ "error": null
+}

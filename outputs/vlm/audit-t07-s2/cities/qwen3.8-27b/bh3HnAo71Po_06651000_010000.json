@@ -1,0 +1,92 @@
+{
+ "clip_id": "bh3HnAo71Po_06651000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_002.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_004.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_006.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_008.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"grade_separated\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The footway on the right is completely covered by a large, dense parking of electric scooters and a construction sign, leaving no space for pedestrians.\",\"frame\":1,\"x\":900,\"y\":850,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the electric scooter parking and construction signage to a designated off-street area to clear the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The footway surface is uneven and cluttered with the wheels and stands of parked scooters, creating significant trip hazards.\",\"frame\":3,\"x\":850,\"y\":880,\"measure\":\"clear_footway\",\"suggestion\":\"Provide a dedicated, level parking zone for two-wheeled vehicles away from the pedestrian walkway to ensure a safe, even path.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "grade_separated",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The footway on the right is completely covered by a large, dense parking of electric scooters and a construction sign, leaving no space for pedestrians.",
+    "frame": 1,
+    "x": 900,
+    "y": 850,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the electric scooter parking and construction signage to a designated off-street area to clear the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The footway surface is uneven and cluttered with the wheels and stands of parked scooters, creating significant trip hazards.",
+    "frame": 3,
+    "x": 850,
+    "y": 880,
+    "measure": "clear_footway",
+    "suggestion": "Provide a dedicated, level parking zone for two-wheeled vehicles away from the pedestrian walkway to ensure a safe, even path."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 314.28,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5997,
+  "completion_tokens": 385,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

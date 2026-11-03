@@ -1,0 +1,65 @@
+{
+ "clip_id": "boKYDMlwy0I_05004000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "no purpose-built sidewalk on the right side of the road",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians are present and crossing demand exists but no designated crossing facility is provided",
+   "frame": 1,
+   "x": 450,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement across the road."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "the kerb is not dropped at the crossing point",
+   "frame": 1,
+   "x": 300,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Install dropped kerbs at the crossing point to improve accessibility for all users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side of the road lacks a dedicated footway, and building one is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are present but no marked crossing exists; adding one is a standard improvement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The existing kerb is not dropped, hindering accessibility."
+  }
+ ],
+ "error": null
+}

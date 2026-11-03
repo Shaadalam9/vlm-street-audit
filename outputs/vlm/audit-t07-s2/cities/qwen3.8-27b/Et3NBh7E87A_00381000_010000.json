@@ -1,0 +1,112 @@
+{
+ "clip_id": "Et3NBh7E87A_00381000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00381000_010000/frame_002.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00381000_010000/frame_004.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00381000_010000/frame_006.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00381000_010000/frame_008.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00381000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"There is a bus stop on the right side, creating a high demand for pedestrians to cross the road, but no marked crossing, signal, or refuge is visible in the 100\",\"frame\":1,\"x\":800,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a zebra crossing with a central refuge island at the location of the bus stop to provide a safe point for passengers to cross the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A line of parked cars is visible along the left side of the road, which obstructs the footway and forces pedestrians to walk in the carriageway or in a\",\"frame\":1,\"x\":250,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Implement a designated parking bay or a contra-flow cycling lane on the left to create a clear, unobstructed path for pedestrians and cyclists.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"left_side\",\"evidence\":\"The road has four or more lanes, and if a crossing were to be added, there is no existing refuge island to protect pedestrians while they cross\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Design any new crossing on this wide road to include a central refuge island, allowing pedestrians to cross one direction of traffic at a time.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"left_side\",\"evidence\":\"The kerbs along the road are continuous and do not appear to have dropped ramps at any point, which would prevent access for wheelchairs or\",\"frame\":1,\"x\":300,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Construct dropped kerbs at the proposed crossing locations to ensure the footway is accessible to all users, including those with mobility\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "There is a bus stop on the right side, creating a high demand for pedestrians to cross the road, but no marked crossing, signal, or refuge is visible in the 100",
+    "frame": 1,
+    "x": 800,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a zebra crossing with a central refuge island at the location of the bus stop to provide a safe point for passengers to cross the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A line of parked cars is visible along the left side of the road, which obstructs the footway and forces pedestrians to walk in the carriageway or in a",
+    "frame": 1,
+    "x": 250,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Implement a designated parking bay or a contra-flow cycling lane on the left to create a clear, unobstructed path for pedestrians and cyclists."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "left_side",
+    "evidence": "The road has four or more lanes, and if a crossing were to be added, there is no existing refuge island to protect pedestrians while they cross",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Design any new crossing on this wide road to include a central refuge island, allowing pedestrians to cross one direction of traffic at a time."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "left_side",
+    "evidence": "The kerbs along the road are continuous and do not appear to have dropped ramps at any point, which would prevent access for wheelchairs or",
+    "frame": 1,
+    "x": 300,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Construct dropped kerbs at the proposed crossing locations to ensure the footway is accessible to all users, including those with mobility"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 139.53,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6234,
+  "completion_tokens": 622,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

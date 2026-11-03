@@ -1,0 +1,132 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03095000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_002.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_004.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_006.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_008.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03095000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The space is a construction zone with portable toilets, fencing and a large excavator, leaving no usable path for pedestrians.\",\"frame\":2,\"x\":150,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Reconstruct a continuous, hard-surfaced footway on the left side once the construction is complete.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left-side space is occupied by construction equipment and temporary barriers.\",\"frame\":2,\"x\":150,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Provide a temporary, clearly marked pedestrian walkway around the construction site to maintain access.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground surface in the work zone is uneven, with dirt and debris where pedestrians are forced to walk.\",\"frame\":2,\"x\":150,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Ensure any temporary pedestrian route is level and free of trip hazards like loose stones or uneven ground.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The footway surface is uneven and appears to be made of dirt or loose gravel, creating a significant trip risk.\",\"frame\":4,\"x\":800,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-hand footway with a smooth, even material to eliminate trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the mixed-use nature of the street with shops and homes, but no formal crossing point is provided.\",\"frame\":2,\"x\":500,\"y\":800,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the busiest point to provide a safe and legal place for people to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"The footways on both sides have significant kerbs with no dropped edges to facilitate access for all users.\",\"frame\":4,\"x\":800,\"y\":800,\"measure\":\"add_refuge_island\",\"suggestion\":\"Construct a central refuge island with dropped kerbs to assist pedestrians, particularly those with mobility issues, in crossing the road safely.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The space is a construction zone with portable toilets, fencing and a large excavator, leaving no usable path for pedestrians.",
+    "frame": 2,
+    "x": 150,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Reconstruct a continuous, hard-surfaced footway on the left side once the construction is complete."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The entire left-side space is occupied by construction equipment and temporary barriers.",
+    "frame": 2,
+    "x": 150,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Provide a temporary, clearly marked pedestrian walkway around the construction site to maintain access."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground surface in the work zone is uneven, with dirt and debris where pedestrians are forced to walk.",
+    "frame": 2,
+    "x": 150,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Ensure any temporary pedestrian route is level and free of trip hazards like loose stones or uneven ground."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The footway surface is uneven and appears to be made of dirt or loose gravel, creating a significant trip risk.",
+    "frame": 4,
+    "x": 800,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-hand footway with a smooth, even material to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the mixed-use nature of the street with shops and homes, but no formal crossing point is provided.",
+    "frame": 2,
+    "x": 500,
+    "y": 800,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the busiest point to provide a safe and legal place for people to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "The footways on both sides have significant kerbs with no dropped edges to facilitate access for all users.",
+    "frame": 4,
+    "x": 800,
+    "y": 800,
+    "measure": "add_refuge_island",
+    "suggestion": "Construct a central refuge island with dropped kerbs to assist pedestrians, particularly those with mobility issues, in crossing the road safely."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 199.29,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6315,
+  "completion_tokens": 703,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

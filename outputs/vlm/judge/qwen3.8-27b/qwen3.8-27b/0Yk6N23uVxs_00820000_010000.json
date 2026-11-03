@@ -1,0 +1,47 @@
+{
+ "clip_id": "0Yk6N23uVxs_00820000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A person on a bicycle is visible on the right side, but there is no designated bike lane or path, only a sidewalk.",
+   "frame": 4,
+   "x": 900,
+   "y": 600,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Install a designated bike lane with a physical barrier on the right side to separate cyclists from pedestrian and vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the presence of shops and offices on both sides, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a refuge island in the middle of the road to safely manage the high crossing demand."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a cyclist on the right, but the road layout and available space for a new lane are not clear enough to confirm the deficit or feasibility."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the street has high activity, the frames do not show enough of the road ahead to confirm the absence of a crossing or the space needed for a new one."
+  }
+ ],
+ "error": null
+}

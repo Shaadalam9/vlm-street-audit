@@ -1,0 +1,119 @@
+{
+ "clip_id": "KxNelAeELQ8_00425000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A low concrete wall and a rough, unpaved strip separate the buildings from the road, with no continuous, purpose-built sidewalk.",
+   "frame": 1,
+   "x": 250,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway along the left side, set back from the road edge to provide a safe walking surface."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area between the parked vehicles and the buildings is an uneven, unpaved strip with no defined sidewalk.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Create a formal, paved footway on the right side, separating the pedestrian area from the parking and road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "A silver pickup truck and a dark SUV are parked on the narrow strip, completely blocking the path for pedestrians.",
+   "frame": 1,
+   "x": 750,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the right side to keep the pedestrian path clear of vehicles."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The ground is uneven, with loose gravel and a broken edge where the concrete wall meets the road.",
+   "frame": 1,
+   "x": 200,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side path with a smooth, level material to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The unpaved area is uneven and has debris, creating a significant risk of tripping for anyone walking there.",
+   "frame": 1,
+   "x": 800,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side path to create a safe, even surface for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to shops and activity on both sides, but no marked or purpose-built crossing is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at a high-traffic point to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal paved sidewalk, and building one is feasible given the space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal paved sidewalk, and building one is feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Vehicles are clearly parked on the narrow pedestrian strip on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The edge of the road on the left is rough and uneven."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved area on the right is uneven and contains debris."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossings are visible despite the urban activity."
+  }
+ ],
+ "error": null
+}

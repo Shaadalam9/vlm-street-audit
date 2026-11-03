@@ -1,0 +1,29 @@
+{
+ "clip_id": "Et3NBh7E87A_00226000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "crossing_demand true and crossing_facility marked",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to improve safety for pedestrians crossing this busy urban street"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a busy urban road with no marked pedestrian crossing, and a signalised crossing is a standard feasible solution."
+  }
+ ],
+ "error": null
+}

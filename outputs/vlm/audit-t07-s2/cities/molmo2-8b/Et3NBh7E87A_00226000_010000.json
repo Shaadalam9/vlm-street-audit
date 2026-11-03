@@ -1,0 +1,92 @@
+{
+ "clip_id": "Et3NBh7E87A_00226000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_002.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_004.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_006.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_008.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"no visible crossing facility despite demand\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Add a clearly marked pedestrian crossing at this busy street junction to facilitate safe foot traffic\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"4 or more lanes and a marked crossing without a refuge\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island at the center of the marked crossing to provide a safe waiting area for pedestrians in this wide road junction\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "no visible crossing facility despite demand",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Add a clearly marked pedestrian crossing at this busy street junction to facilitate safe foot traffic"
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "4 or more lanes and a marked crossing without a refuge",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island at the center of the marked crossing to provide a safe waiting area for pedestrians in this wide road junction"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 11.03,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7471,
+  "completion_tokens": 338,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "wMu6Va5PhGY_00171000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The road is bordered by a physical barrier and fencing with no designated pedestrian path.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian footway along the left side of the bridge."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The road is bordered by a physical barrier and fencing with no designated pedestrian path.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a separated pedestrian footway along the right side of the bridge."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a bridge with no footway, but the narrow, barrier-lined structure makes adding a separated path infeasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The frames show a bridge with no footway, but the narrow, barrier-lined structure makes adding a separated path infeasible."
+  }
+ ],
+ "error": null
+}

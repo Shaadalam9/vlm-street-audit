@@ -1,0 +1,102 @@
+{
+ "clip_id": "LsJO_E5dmvk_00370000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_00370000_010000/frame_002.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_00370000_010000/frame_004.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_00370000_010000/frame_006.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_00370000_010000/frame_008.jpg",
+  "data/snippets/LsJO_E5dmvk/LsJO_E5dmvk_00370000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk_3m_or_more\",\"frame\":1,\"x\":100,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a proper pedestrian crossing with clear markings.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk_3m_or_more\",\"frame\":1,\"x\":900,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a proper pedestrian crossing with clear markings.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":400,\"y\":200,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing to improve safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk_3m_or_more",
+    "frame": 1,
+    "x": 100,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a proper pedestrian crossing with clear markings."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk_3m_or_more",
+    "frame": 1,
+    "x": 900,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a proper pedestrian crossing with clear markings."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 400,
+    "y": 200,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing to improve safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 8.79,
+ "usage": {
+  "prompt_tokens": 5027,
+  "total_tokens": 5399,
+  "completion_tokens": 372,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

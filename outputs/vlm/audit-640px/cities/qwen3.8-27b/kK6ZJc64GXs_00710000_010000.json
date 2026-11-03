@@ -1,0 +1,152 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_002.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_004.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_006.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_008.jpg",
+  "data/snippets/kK6ZJc64GXs/kK6ZJc64GXs_00710000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; people are walking on the road edge and a narrow, uneven strip beside the buildings.\",\"frame\":3,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, level footway on the left side to separate pedestrians from traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous sidewalk; pedestrians are walking on the road edge and a narrow, uneven strip beside the buildings.\",\"frame\":3,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, level footway on the right side to separate pedestrians from traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Goods and stalls are visible on the narrow path beside the pink building.\",\"frame\":4,\"x\":150,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the goods and stalls from the footway to ensure a clear path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A stone wall and vegetation encroach on the narrow path beside the road.\",\"frame\":4,\"x\":850,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the encroaching vegetation and ensure the footway is unobstructed.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The narrow path is uneven and has a significant drop to the road level.\",\"frame\":3,\"x\":150,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the footway to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The narrow path is uneven and has a significant drop to the road level.\",\"frame\":3,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen crossing the road in multiple frames, but there is no marked or purpose-built crossing facility.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at a high-demand location to provide a safe place to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"There are no kerbs or ramps at any potential crossing points.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised crossing with dropped kerbs to improve safety and accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; people are walking on the road edge and a narrow, uneven strip beside the buildings.",
+    "frame": 3,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, level footway on the left side to separate pedestrians from traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous sidewalk; pedestrians are walking on the road edge and a narrow, uneven strip beside the buildings.",
+    "frame": 3,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, level footway on the right side to separate pedestrians from traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Goods and stalls are visible on the narrow path beside the pink building.",
+    "frame": 4,
+    "x": 150,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Clear the goods and stalls from the footway to ensure a clear path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A stone wall and vegetation encroach on the narrow path beside the road.",
+    "frame": 4,
+    "x": 850,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Clear the encroaching vegetation and ensure the footway is unobstructed."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The narrow path is uneven and has a significant drop to the road level.",
+    "frame": 3,
+    "x": 150,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the footway to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The narrow path is uneven and has a significant drop to the road level.",
+    "frame": 3,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen crossing the road in multiple frames, but there is no marked or purpose-built crossing facility.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at a high-demand location to provide a safe place to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "There are no kerbs or ramps at any potential crossing points.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised crossing with dropped kerbs to improve safety and accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 283.57,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 3095,
+  "completion_tokens": 783,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

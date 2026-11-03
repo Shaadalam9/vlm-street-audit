@@ -1,0 +1,29 @@
+{
+ "clip_id": "XcfBhMUAK_8_00082000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "signalised crossing with no refuge",
+   "frame": 1,
+   "x": 400,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a refuge island to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing is wide without a central refuge, and adding one is a standard feasible engineering solution."
+  }
+ ],
+ "error": null
+}

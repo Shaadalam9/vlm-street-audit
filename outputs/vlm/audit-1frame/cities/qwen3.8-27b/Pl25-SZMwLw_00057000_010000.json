@@ -1,0 +1,110 @@
+{
+ "clip_id": "Pl25-SZMwLw_00057000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Pl25-SZMwLw/Pl25-SZMwLw_00057000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is bounded by a concrete barrier with no footway or path for pedestrians.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a refuge island at the nearest junction to provide a safe crossing point.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has a grassy shoulder and a separate slip road, but no dedicated footway for pedestrians.\",\"frame\":1,\"x\":800,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Provide a signalised crossing with a refuge island at the junction with the slip road to allow safe pedestrian access.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no visible pedestrian crossing facility on this stretch of the motorway.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Construct a grade-separated footbridge or a signalised crossing at a safe location to meet pedestrian crossing demand.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road has only a few street lights, which is not ample for a motorway.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Increase the density of street lighting along the motorway to improve visibility and safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is bounded by a concrete barrier with no footway or path for pedestrians.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a refuge island at the nearest junction to provide a safe crossing point."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has a grassy shoulder and a separate slip road, but no dedicated footway for pedestrians.",
+    "frame": 1,
+    "x": 800,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Provide a signalised crossing with a refuge island at the junction with the slip road to allow safe pedestrian access."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no visible pedestrian crossing facility on this stretch of the motorway.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Construct a grade-separated footbridge or a signalised crossing at a safe location to meet pedestrian crossing demand."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road has only a few street lights, which is not ample for a motorway.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Increase the density of street lighting along the motorway to improve visibility and safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 120.48,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2587,
+  "completion_tokens": 524,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

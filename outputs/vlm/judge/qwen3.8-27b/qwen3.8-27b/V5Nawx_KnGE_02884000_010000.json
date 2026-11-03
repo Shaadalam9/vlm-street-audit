@@ -1,0 +1,65 @@
+{
+ "clip_id": "V5Nawx_KnGE_02884000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "A continuous sidewalk is present, but it is partially obstructed by parked vehicles, reducing its effective width and usability.",
+   "frame": 1,
+   "x": 900,
+   "y": 700,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Relocate the on-street parking to a designated off-street area to restore the full width of the sidewalk."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has high crossing demand due to residential and commercial properties on both sides, but there is no marked or signalised pedestrian crossing visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at a logical point, such as near the visible junction or a high-activity area."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show parked cars on the left, but the sidewalk itself is obscured by trees and shadows, making it impossible to confirm if it is obstructed or if there is enough space to relocate parking."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obscured by trees and parked cars, so the condition of the footway and the available space for changes cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossing is visible in the frames, but the specific location for a new one is not identifiable, and the frames do not provide enough context to confirm the deficit or the feasibility of the "
+  }
+ ],
+ "error": null
+}

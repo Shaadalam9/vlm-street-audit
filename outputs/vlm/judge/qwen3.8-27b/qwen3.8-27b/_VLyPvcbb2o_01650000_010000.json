@@ -1,0 +1,47 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is completely occupied by a continuous construction hoarding and temporary barriers, leaving no space for a footway.",
+   "frame": 1,
+   "x": 850,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Construct a temporary, elevated pedestrian walkway over the construction barriers to provide a safe, continuous route on the right side."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the commercial buildings and footway on the left, but no marked or signalised crossing is visible in the 100m segment",
+   "frame": 3,
+   "x": 500,
+   "y": 700,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a raised, marked pedestrian crossing at a logical point to allow safe passage from the left-side footway."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the suggested measure (a raised crossing) does not address the lack of a footway, and building a walkway over the barriers is not feasible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, and a raised crossing would address it, but the suggestion is generic and feasibility is unclear due to the construction."
+  }
+ ],
+ "error": null
+}

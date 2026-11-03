@@ -1,0 +1,101 @@
+{
+ "clip_id": "1X4xmd0Izaw_04295000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "no purpose-built sidewalk, people must walk in the road or on the shoulder",
+   "frame": 4,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "the footway is an informal path under 1m and heavily blocked by shops and stalls",
+   "frame": 4,
+   "x": 900,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a proper, unobstructed sidewalk on the right side to provide a safe walking space."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "shop fronts and stalls extend into the walking area",
+   "frame": 4,
+   "x": 850,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Implement zoning regulations to ensure shop fronts do not obstruct the pedestrian path."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven ground and debris along the informal path",
+   "frame": 4,
+   "x": 920,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Level and pave the right-side pedestrian area to remove trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "high crossing demand due to commercial shops on both sides but no designated crossing facility",
+   "frame": 4,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal sidewalk, though space is limited by the petrol station and buildings."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has an informal, narrow path that does not meet standard footway criteria."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Shop extensions and signage clearly encroach upon the narrow pedestrian area on the right."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right-side edge is uneven and cluttered with debris and informal structures."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings despite the high density of commercial activity on both sides."
+  }
+ ],
+ "error": null
+}

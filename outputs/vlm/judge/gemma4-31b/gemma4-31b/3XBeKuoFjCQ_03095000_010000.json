@@ -1,0 +1,65 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03095000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Construction equipment and barriers occupy the entire space between the building and the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Construct a dedicated sidewalk on the left side once construction is complete."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground surface is uneven, unpaved, and contains debris.",
+   "frame": 5,
+   "x": 700,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Pave the right-hand pedestrian area to remove trip hazards and provide a smooth surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in a mixed-use urban area without any designated crossing facility.",
+   "frame": 2,
+   "x": 350,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing to safely facilitate movement between the two sides of the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side is currently occupied by construction, leaving no footway for pedestrians."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side shows unpaved, uneven ground with debris, posing a trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no designated crossing facilities visible in this urban environment."
+  }
+ ],
+ "error": null
+}

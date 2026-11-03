@@ -1,0 +1,29 @@
+{
+ "clip_id": "tgYTmg7hlkQ_01810000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A wide, multi-lane commercial road with no visible pedestrian crossing facility in the 10-second clip.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island to provide a safe crossing point on this wide, high-speed road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a wide multi-lane road without pedestrian crossings, and a signalised crossing is a standard feasible solution."
+  }
+ ],
+ "error": null
+}

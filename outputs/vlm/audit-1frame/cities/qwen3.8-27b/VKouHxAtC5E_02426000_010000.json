@@ -1,0 +1,100 @@
+{
+ "clip_id": "VKouHxAtC5E_02426000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02426000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is lined with parked cars directly against the edge of the carriageway, with no visible sidewalk or footway for pedestrians.\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway on the left side, separated from the parking lane by a physical barrier or a buffer zone.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has cars parked in marked bays, and there is no visible sidewalk or footway for pedestrians to use.\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a dedicated footway on the right side, ensuring it is clear of parked vehicles and provides a safe path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the residential nature of the street and the presence of parked cars, but no marked or purpose-built crossing is in.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility markings and signage to provide a safe crossing point for residents.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is lined with parked cars directly against the edge of the carriageway, with no visible sidewalk or footway for pedestrians.",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway on the left side, separated from the parking lane by a physical barrier or a buffer zone."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has cars parked in marked bays, and there is no visible sidewalk or footway for pedestrians to use.",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a dedicated footway on the right side, ensuring it is clear of parked vehicles and provides a safe path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the residential nature of the street and the presence of parked cars, but no marked or purpose-built crossing is in.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility markings and signage to provide a safe crossing point for residents."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 117.4,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2535,
+  "completion_tokens": 472,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

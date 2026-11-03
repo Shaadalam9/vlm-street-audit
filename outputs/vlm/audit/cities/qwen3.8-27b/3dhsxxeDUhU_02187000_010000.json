@@ -1,0 +1,112 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_002.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_004.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_006.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_008.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_02187000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous, purpose-built sidewalk is present on the left side, but it is partially obstructed by parked vehicles and roadside stalls.\",\"frame\":4,\"x\":150,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the left-side footway to a minimum of 1.5m and install bollards to prevent vehicles from parking on it.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The footway on the left is partially blocked by parked cars and commercial stalls, forcing pedestrians to step into the roadway.\",\"frame\":4,\"x\":150,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone on the left footway and relocate roadside stalls to a designated area further from the carriageway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial nature of the street, but no marked or signalised crossing is visible in any frame.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island at the busiest commercial junction.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at any potential crossing point, as there are no formal crossings.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised table crossing with dropped kerbs to provide a safe and accessible crossing point for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous, purpose-built sidewalk is present on the left side, but it is partially obstructed by parked vehicles and roadside stalls.",
+    "frame": 4,
+    "x": 150,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the left-side footway to a minimum of 1.5m and install bollards to prevent vehicles from parking on it."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The footway on the left is partially blocked by parked cars and commercial stalls, forcing pedestrians to step into the roadway.",
+    "frame": 4,
+    "x": 150,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone on the left footway and relocate roadside stalls to a designated area further from the carriageway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial nature of the street, but no marked or signalised crossing is visible in any frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island at the busiest commercial junction."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at any potential crossing point, as there are no formal crossings.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised table crossing with dropped kerbs to provide a safe and accessible crossing point for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 454.66,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6174,
+  "completion_tokens": 562,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

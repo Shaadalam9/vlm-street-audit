@@ -1,0 +1,102 @@
+{
+ "clip_id": "gmDBzijaIAA_00984000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00984000_010000/frame_002.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00984000_010000/frame_004.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00984000_010000/frame_006.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00984000_010000/frame_008.jpg",
+  "data/snippets/gmDBzijaIAA/gmDBzijaIAA_00984000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area directly in front of the bus and the red 'Taiwan' car appears to be a paved area used for parking or loading, obstructing a clear pedestrian path.\",\"frame\":1,\"x\":800,\"y\":800,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Create a raised pedestrian platform across the loading zone to provide a safe, continuous crossing point.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The sidewalk is narrow and heavily congested with parked vehicles and traffic, leaving little to no safe space for pedestrians.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Widen the footway by removing on-street parking and install a raised crossing to protect pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"High pedestrian demand from the commercial buildings and shops on the left, with no visible marked or signalised crossing in the immediate foreground.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a clearly marked, raised pedestrian crossing to provide a safe and visible place for pedestrians to cross the busy road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area directly in front of the bus and the red 'Taiwan' car appears to be a paved area used for parking or loading, obstructing a clear pedestrian path.",
+    "frame": 1,
+    "x": 800,
+    "y": 800,
+    "measure": "add_raised_crossing",
+    "suggestion": "Create a raised pedestrian platform across the loading zone to provide a safe, continuous crossing point."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The sidewalk is narrow and heavily congested with parked vehicles and traffic, leaving little to no safe space for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "add_raised_crossing",
+    "suggestion": "Widen the footway by removing on-street parking and install a raised crossing to protect pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "High pedestrian demand from the commercial buildings and shops on the left, with no visible marked or signalised crossing in the immediate foreground.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a clearly marked, raised pedestrian crossing to provide a safe and visible place for pedestrians to cross the busy road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 165.92,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6087,
+  "completion_tokens": 475,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

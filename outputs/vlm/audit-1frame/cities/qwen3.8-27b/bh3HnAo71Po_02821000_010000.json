@@ -1,0 +1,100 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has no purpose-built sidewalk; people would have to walk on a narrow, uneven dirt strip or in the road.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway on the left side, set back from the carriageway, to give pedestrians a safe place to walk.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left-side walking strip is uneven, with loose gravel, mud and a broken edge that would trip a pedestrian.\",\"frame\":1,\"x\":180,\"y\":880,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the left-side walking strip with a firm, even surface to remove the trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is clear crossing demand from the shops and homes on both sides, but no marked or purpose-built crossing is visible on this stretch.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Provide a marked pedestrian crossing at the point of highest demand, with good sightlines, to give people a safe place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has no purpose-built sidewalk; people would have to walk on a narrow, uneven dirt strip or in the road.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway on the left side, set back from the carriageway, to give pedestrians a safe place to walk."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left-side walking strip is uneven, with loose gravel, mud and a broken edge that would trip a pedestrian.",
+    "frame": 1,
+    "x": 180,
+    "y": 880,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the left-side walking strip with a firm, even surface to remove the trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is clear crossing demand from the shops and homes on both sides, but no marked or purpose-built crossing is visible on this stretch.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Provide a marked pedestrian crossing at the point of highest demand, with good sightlines, to give people a safe place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 145.69,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2534,
+  "completion_tokens": 471,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

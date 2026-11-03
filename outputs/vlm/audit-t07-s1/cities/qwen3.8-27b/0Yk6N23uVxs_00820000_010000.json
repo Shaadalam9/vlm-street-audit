@@ -1,0 +1,92 @@
+{
+ "clip_id": "0Yk6N23uVxs_00820000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_00820000_010000/frame_002.jpg",
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_00820000_010000/frame_004.jpg",
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_00820000_010000/frame_006.jpg",
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_00820000_010000/frame_008.jpg",
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_00820000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous white metal fence runs along the left side of the road, completely separating the carriageway from the sidewalk.\",\"frame\":1,\"x\":100,\"y\":650,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised pedestrian crossing over the fence line to allow safe and legal access to the shops.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial buildings on the left and residential areas on the right, but no pedestrian crossing is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised zebra crossing at the visible junction ahead to provide a safe and visible crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous white metal fence runs along the left side of the road, completely separating the carriageway from the sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 650,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised pedestrian crossing over the fence line to allow safe and legal access to the shops."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial buildings on the left and residential areas on the right, but no pedestrian crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised zebra crossing at the visible junction ahead to provide a safe and visible crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 294.01,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 5983,
+  "completion_tokens": 371,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

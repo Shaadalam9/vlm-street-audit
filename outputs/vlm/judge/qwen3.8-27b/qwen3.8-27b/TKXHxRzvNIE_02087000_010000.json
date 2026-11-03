@@ -1,0 +1,65 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road lacks a formal sidewalk, with vehicles parked on an unpaved shoulder.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The unpaved shoulder on the right is uneven and contains loose gravel and dirt.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side shoulder to create a smooth, safe surface for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There are no marked or purpose-built pedestrian crossings visible along the residential stretch.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at a high-demand location to improve safety for residents."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is an unpaved shoulder with parked cars, confirming the lack of a footway, but the suggestion is a generic template and the available space for construction is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved, uneven shoulder is clearly visible, but the suggestion to grade and pave is a generic fix that does not account for the specific layout or space constraints."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No marked crossings are visible in the frames, but the suggestion to add one is generic and does not specify a location or address the specific context of this street."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "DGdOwXUMZkI_01182000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_002.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_004.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_006.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_008.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is a narrow sidewalk, less than 1m wide.\",\"frame\":1,\"x\":900,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the right-side footway to a minimum of 1.5m to provide a safe, continuous path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to commercial activity on both sides, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the junction to provide a safe and visible place for people to cross the multi-lane road.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"The road has 4 or more lanes, and any crossing would lack a central refuge.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a central refuge island to the new crossing to allow pedestrians to cross the wide road in two stages.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at the potential crossing points.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Construct a raised crossing with dropped kerbs to improve accessibility and safety for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is a narrow sidewalk, less than 1m wide.",
+    "frame": 1,
+    "x": 900,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the right-side footway to a minimum of 1.5m to provide a safe, continuous path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to commercial activity on both sides, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the junction to provide a safe and visible place for people to cross the multi-lane road."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "The road has 4 or more lanes, and any crossing would lack a central refuge.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a central refuge island to the new crossing to allow pedestrians to cross the wide road in two stages."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at the potential crossing points.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Construct a raised crossing with dropped kerbs to improve accessibility and safety for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 69.75,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2849,
+  "completion_tokens": 537,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

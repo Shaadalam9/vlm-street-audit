@@ -1,0 +1,83 @@
+{
+ "clip_id": "LsJO_E5dmvk_00370000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper footway on the left side to improve pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a proper footway on the right side to improve pedestrian safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked",
+   "frame": 1,
+   "x": 400,
+   "y": 200,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing to enhance safety at this crossing point."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "adequate",
+   "frame": 1,
+   "x": 400,
+   "y": 200,
+   "measure": "improve_crossing",
+   "suggestion": "Improve the visibility of the marked crossing to ensure drivers stop."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides of the road in the frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Footways are clearly visible on both sides of the road in the frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A marked pedestrian crossing is visible in the first frame."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing markings appear adequate for the road type shown."
+  }
+ ],
+ "error": null
+}

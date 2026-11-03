@@ -1,0 +1,65 @@
+{
+ "clip_id": "HFqbSPeAPbU_01803000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "People are walking in the roadway as there is no designated sidewalk.",
+   "frame": 1,
+   "x": 100,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous sidewalk on the left side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "People are walking in the roadway as there is no designated sidewalk.",
+   "frame": 1,
+   "x": 900,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous sidewalk on the right side of the road to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in a residential area without any designated crossing facility.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing to provide a safe and designated point for pedestrians to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a parking area, not a through-road, so the presence of a footway on the left side cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the scene is obscured by parked cars and people, making it impossible to verify the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The area appears to be a parking lot where crossing is not the primary function, so the need for a marked crossing is not clearly established."
+  }
+ ],
+ "error": null
+}

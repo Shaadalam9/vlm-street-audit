@@ -1,0 +1,101 @@
+{
+ "clip_id": "8dWgC409JbI_00685000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The entire right side of the road is occupied by market stalls, carts and pedestrians, leaving no dedicated space for walking.",
+   "frame": 4,
+   "x": 850,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side, relocating the market stalls to a designated area to create a safe, continuous path for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A white van is parked on the left footway, completely blocking the path and forcing pedestrians to walk in the road.",
+   "frame": 2,
+   "x": 180,
+   "y": 650,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left footway to keep the pedestrian path clear and unobstructed."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The left footway is uneven, with broken paving, debris, and a large utility pole base creating significant trip hazards.",
+   "frame": 1,
+   "x": 150,
+   "y": 800,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left footway with a smooth, level material and remove debris to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a high demand for crossing due to the market and shops on both sides, but no marked or purpose-built crossing facility is present.",
+   "frame": 3,
+   "x": 500,
+   "y": 700,
+   "measure": "build_footway",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe and visible place for people to cross the street."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "There are no street lights visible along the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for pedestrians and drivers during the evening."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is clearly occupied by market stalls, but the frames do not show if there is enough space to build a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A white van is visibly parked on the left footway, and enforcing a no-parking zone is a realistic and specific measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway is visibly uneven with debris and a large pole base, making resurfacing a feasible and specific fix."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no visible crossing, but the suggestion to build a footway is a mismatch for a crossing deficit, and space for a refuge island is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lights are visible, and while adding them is feasible, the suggestion is generic and not specific to this street's layout."
+  }
+ ],
+ "error": null
+}

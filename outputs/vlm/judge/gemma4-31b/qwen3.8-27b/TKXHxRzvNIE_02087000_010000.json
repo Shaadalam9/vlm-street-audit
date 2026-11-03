@@ -1,0 +1,65 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road lacks a formal sidewalk, with vehicles parked on an unpaved shoulder.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the right side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The unpaved shoulder on the right is uneven and contains loose gravel and dirt.",
+   "frame": 1,
+   "x": 850,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side shoulder to create a smooth, safe surface for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There are no marked or purpose-built pedestrian crossings visible along the residential stretch.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at a high-demand location to improve safety for residents."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side clearly lacks a formal footway, and building one is a standard feasible improvement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved shoulder is visible and uneven, and paving it would resolve the trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No crossings are visible in the frames, though the suggestion is a generic safety measure."
+  }
+ ],
+ "error": null
+}

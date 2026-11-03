@@ -1,0 +1,47 @@
+{
+ "clip_id": "KDHjh4WQvug_00040000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A wide, multi-lane urban road with commercial buildings and a park on the right, creating a high demand for crossing, but no marked or signalised crossing is in",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a central refuge island at the junction of the park and the commercial area on the right."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "The road has four or more lanes in both directions with no physical median or refuge island, making it difficult and dangerous for pedestrians to cross in",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_refuge_island",
+   "suggestion": "Construct a central refuge island in the median to allow pedestrians to cross the wide road in two stages."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide road with no visible crossing, but the specific location on the right is not clearly defined, making the deficit and feasibility uncertain."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is wide, but the exact number of lanes and the presence of a median are not clearly visible, making the deficit and feasibility uncertain."
+  }
+ ],
+ "error": null
+}

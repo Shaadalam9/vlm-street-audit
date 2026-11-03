@@ -1,0 +1,47 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road has a grassy verge and trees but no paved or informal path for pedestrians.",
+   "frame": 1,
+   "x": 200,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway on the left side of the road to provide a safe path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is a bus stop on the right, indicating a need to cross, but no marked or purpose-built crossing facility is visible.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the location of the bus stop to allow safe crossing for passengers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a grassy verge with no path, but the frames do not show enough of the roadside to judge if there is space to build a footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A bus stop is visible on the right with no marked crossing, but the frames do not show enough of the road width to judge if a crossing can be installed."
+  }
+ ],
+ "error": null
+}

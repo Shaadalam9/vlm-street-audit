@@ -1,0 +1,92 @@
+{
+ "clip_id": "_OaB4tNm8hg_03205000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_002.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_004.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_006.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_008.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road in the carriageway without any designated crossing facility.\",\"frame\":4,\"x\":635,\"y\":720,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The lack of any formal crossing facility makes the crossing point poor for pedestrian safety.\",\"frame\":4,\"x\":635,\"y\":720,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a raised pedestrian crossing to reduce vehicle speeds and improve visibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road in the carriageway without any designated crossing facility.",
+    "frame": 4,
+    "x": 635,
+    "y": 720,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The lack of any formal crossing facility makes the crossing point poor for pedestrian safety.",
+    "frame": 4,
+    "x": 635,
+    "y": 720,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a raised pedestrian crossing to reduce vehicle speeds and improve visibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 154.76,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 2969,
+  "completion_tokens": 357,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

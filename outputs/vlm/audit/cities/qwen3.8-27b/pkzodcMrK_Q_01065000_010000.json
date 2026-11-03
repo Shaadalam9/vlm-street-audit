@@ -1,0 +1,102 @@
+{
+ "clip_id": "pkzodcMrK_Q_01065000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_002.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_004.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_006.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_008.jpg",
+  "data/snippets/pkzodcMrK_Q/pkzodcMrK_Q_01065000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No sidewalk or path is visible on the left; the road edge is a grassy verge.\",\"frame\":1,\"x\":100,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk or path is visible on the right; the road edge is a grassy verge.\",\"frame\":1,\"x\":900,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the right side of the road.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A junction is visible in the distance, but there is no marked or signalised pedestrian crossing at the location.\",\"frame\":4,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with refuge at the junction.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No sidewalk or path is visible on the left; the road edge is a grassy verge.",
+    "frame": 1,
+    "x": 100,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk or path is visible on the right; the road edge is a grassy verge.",
+    "frame": 1,
+    "x": 900,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the right side of the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A junction is visible in the distance, but there is no marked or signalised pedestrian crossing at the location.",
+    "frame": 4,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with refuge at the junction."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 159.25,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6026,
+  "completion_tokens": 414,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,155 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No continuous sidewalk; people and parked cars share the edge of the road.",
+   "frame": 1,
+   "x": 200,
+   "y": 800,
+   "measure": "build_footway",
+   "suggestion": "Construct a 1.5 m paved footway on the left, set back from the parked cars."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right edge is an uneven dirt strip with no defined path.",
+   "frame": 3,
+   "x": 800,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Lay a 1.5 m concrete footway along the right side in front of the unfinished building."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A row of parked vehicles occupies the only usable strip on the left.",
+   "frame": 1,
+   "x": 150,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Mark a no-parking zone on the left to keep the footway clear."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "A parked pickup and construction materials block the right edge.",
+   "frame": 3,
+   "x": 900,
+   "y": 750,
+   "measure": "clear_footway",
+   "suggestion": "Provide a designated parking bay away from the right footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Broken paving and debris are scattered along the left edge.",
+   "frame": 1,
+   "x": 250,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left footway to remove the broken sections."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Loose rubble and uneven ground are visible on the right.",
+   "frame": 3,
+   "x": 850,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Clear the rubble and level the right footway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "People are seen crossing at an unmarked point with no facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the junction with dropped kerbs."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "No dropped kerbs are visible at the crossing point.",
+   "frame": 1,
+   "x": 500,
+   "y": 700,
+   "measure": "add_dropped_kerbs",
+   "suggestion": "Add dropped kerbs at both ends of the new crossing."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left edge is a dirt strip with parked cars, confirming the lack of a footway, but the available space for construction is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is an uneven dirt area in front of the unfinished building, confirming the deficit, though space for a new footway is not fully clear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked vehicles are clearly visible on the left, and marking a no-parking zone is a realistic and specific measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pickup truck and rubble are visible on the right, and providing a designated parking bay is a feasible solution."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Broken paving and debris are visible on the left, and resurfacing is a standard and feasible repair."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Loose rubble and uneven ground are clearly visible on the right, and clearing/levelling is a feasible action."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "People are seen crossing at an unmarked point, and installing a marked crossing is a standard and feasible improvement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The absence of dropped kerbs at the crossing point is evident, and adding them is a standard and feasible measure."
+  }
+ ],
+ "error": null
+}

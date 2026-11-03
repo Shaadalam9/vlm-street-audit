@@ -1,0 +1,29 @@
+{
+ "clip_id": "7WEhoRTNbGQ_01240000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_1_to_3m",
+   "frame": 1,
+   "x": 800,
+   "y": 600,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper sidewalk to enhance pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a grassy verge and a curb on the right, but no paved footway, so the deficit is visible; the suggestion is a generic fix that would address it, but the available space for a new walkay"
+  }
+ ],
+ "error": null
+}

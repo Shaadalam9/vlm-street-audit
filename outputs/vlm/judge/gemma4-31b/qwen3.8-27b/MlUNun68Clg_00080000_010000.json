@@ -1,0 +1,65 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip of grass and dirt runs between the road edge and the roadside structures, with no continuous, purpose-built pavement.",
+   "frame": 1,
+   "x": 250,
+   "y": 850,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, paved footway on the left side, separating pedestrians from the carriageway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven, with visible dips, mounds, and debris that would pose a significant trip hazard.",
+   "frame": 1,
+   "x": 250,
+   "y": 850,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the left-side footway to create a smooth, even surface free of trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has access points to properties and businesses on both sides, creating a need for crossing, but no marked or purpose-built crossing facility is visible",
+   "frame": 3,
+   "x": 500,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at a high-demand location to provide a safer place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, and building one is feasible given the available space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The unpaved area is clearly uneven, and paving it would remove these hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked crossings are visible despite the presence of roadside buildings."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "Et3NBh7E87A_00381000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A continuous, purpose-built sidewalk is visible along the left side of the road, separated from the carriageway by a kerb and a line of trees.",
+   "frame": 1,
+   "x": 100,
+   "y": 850,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the bus stop location to provide a safe and legal place for pedestrians to cross the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "A bus stop is visible on the right side of the road, indicating a high demand for pedestrian crossing, but no marked or signalised crossing facility is present.",
+   "frame": 1,
+   "x": 800,
+   "y": 750,
+   "measure": "improve_crossing",
+   "suggestion": "Provide a marked pedestrian crossing with adequate visibility and dropped kerbs at the bus stop to facilitate safe crossing for passengers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The auditor claims there is no footway on the left, but then states in the evidence that a continuous sidewalk is visible; the deficit is not present."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is a bus stop on the right without a corresponding marked crossing, and the suggestion provides a specific, feasible fix."
+  }
+ ],
+ "error": null
+}

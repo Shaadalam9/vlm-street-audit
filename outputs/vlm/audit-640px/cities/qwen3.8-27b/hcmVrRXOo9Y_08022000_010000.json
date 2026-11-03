@@ -1,0 +1,112 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_002.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_004.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_006.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_008.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is a continuous white wall with no space for a footway.\",\"frame\":1,\"x\":150,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide concrete footway between the white wall and the road edge.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is a grassy verge with no path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Create a 1.5 m wide gravel or paved footway along the edge of the grassy verge.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a junction with a side road on the left, but no pedestrian crossing is provided.\",\"frame\":5,\"x\":100,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island at the junction with the side road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any frame.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lights along both sides of the road at 30 m intervals.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is a continuous white wall with no space for a footway.",
+    "frame": 1,
+    "x": 150,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide concrete footway between the white wall and the road edge."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is a grassy verge with no path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Create a 1.5 m wide gravel or paved footway along the edge of the grassy verge."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a junction with a side road on the left, but no pedestrian crossing is provided.",
+    "frame": 5,
+    "x": 100,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island at the junction with the side road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any frame.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lights along both sides of the road at 30 m intervals."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 284.8,
+ "usage": {
+  "prompt_tokens": 2312,
+  "total_tokens": 2811,
+  "completion_tokens": 499,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

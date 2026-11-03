@@ -1,0 +1,65 @@
+{
+ "clip_id": "PYFB7nMiFTM_00766000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is an unpaved, sloped embankment with no constructed path for pedestrians.",
+   "frame": 4,
+   "x": 250,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, level footway on the left side, separated from the road by a kerb."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The informal path on the right is uneven, unpaved, and has a steep, eroded edge where it meets the road.",
+   "frame": 2,
+   "x": 850,
+   "y": 750,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the informal path on the right side to create a safe, level surface for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a clear need to cross due to the junction and activity on the right, but no marked or physical crossing facility is present.",
+   "frame": 1,
+   "x": 500,
+   "y": 800,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a central refuge island at the junction on the right."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a steep, unpaved embankment with no footway, and the suggestion to build one is specific to this location, though feasibility is unclear due to the slope."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows an uneven, eroded path, and the suggestion to repair it is specific, but the extent of the work needed is not fully clear from the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A junction with activity is visible on the right without a crossing, and the suggestion is specific, but the space for a refuge island is not clearly shown."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,82 @@
+{
+ "clip_id": "ySNSVE0rRzc_03500000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_03500000_010000/frame_002.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_03500000_010000/frame_004.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_03500000_010000/frame_006.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_03500000_010000/frame_008.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_03500000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"both_kerbs\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is a physical barrier\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Create a usable footway to allow pedestrians to cross safely without entering the roadway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "physical_barrier",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "both_kerbs"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is a physical barrier",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Create a usable footway to allow pedestrians to cross safely without entering the roadway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 6.99,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7393,
+  "completion_tokens": 260,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

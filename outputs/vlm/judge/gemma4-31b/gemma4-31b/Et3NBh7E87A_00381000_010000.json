@@ -1,0 +1,29 @@
+{
+ "clip_id": "Et3NBh7E87A_00381000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "Transit stop present creating crossing demand, but no marked or signalised crossing is visible.",
+   "frame": 1,
+   "x": 800,
+   "y": 700,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing near the transit stop to facilitate safe boarding and alighting."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A bus stop is clearly visible on the right without a corresponding marked crossing, and adding one is a standard, feasible safety measure."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,101 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip separates the road from the fence line, with no continuous, purpose-built sidewalk.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, continuous footway on the left side to provide a safe, dedicated space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area between the road and the commercial buildings is an unpaved, uneven dirt shoulder, not a proper sidewalk.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Build a paved footway on the right side to separate pedestrians from the roadway and the commercial properties."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The informal path on the left is uneven, with visible ruts and a lack of a smooth, level surface.",
+   "frame": 1,
+   "x": 150,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side path with a smooth, level material to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The unpaved shoulder on the right is uneven and appears to have loose gravel and dirt, creating a significant trip hazard.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side path to create a safe, even surface for walking."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "The road has commercial properties and a junction on the right, creating a high demand for crossing, but there is no marked or signalised crossing facility.",
+   "frame": 1,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing at the junction on the right to provide a safe place for people to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a paved footway, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is an unpaved dirt shoulder, and the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved surface on the left is uneven, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The unpaved surface on the right is uneven, but the suggestion is a generic standard measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The visible junction on the right lacks a crossing, and the suggestion correctly identifies the location."
+  }
+ ],
+ "error": null
+}

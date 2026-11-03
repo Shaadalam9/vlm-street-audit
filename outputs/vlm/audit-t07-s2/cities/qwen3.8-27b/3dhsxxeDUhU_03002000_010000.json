@@ -1,0 +1,112 @@
+{
+ "clip_id": "3dhsxxeDUhU_03002000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_002.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_004.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_006.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_008.jpg",
+  "data/snippets/3dhsxxeDUhU/3dhsxxeDUhU_03002000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous, purpose-built sidewalk is visible on the left; the area between the road and the commercial buildings appears to be an informal or obstructed use\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved sidewalk along the left side, separating pedestrians from the traffic lane.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A silver car is parked on the informal path on the left side, obstructing the walking area\",\"frame\":1,\"x\":120,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-parking zone along the left side to keep the pedestrian path clear.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left appears uneven and may have debris or uneven surfaces\",\"frame\":1,\"x\":150,\"y\":900,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the left-side path with a smooth, level surface to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high-visibility commercial area on the left, indicating a need for crossing, but no pedestrian crossing facility is present\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island at the junction of the road and the commercial frontage.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous, purpose-built sidewalk is visible on the left; the area between the road and the commercial buildings appears to be an informal or obstructed use",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved sidewalk along the left side, separating pedestrians from the traffic lane."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A silver car is parked on the informal path on the left side, obstructing the walking area",
+    "frame": 1,
+    "x": 120,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-parking zone along the left side to keep the pedestrian path clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left appears uneven and may have debris or uneven surfaces",
+    "frame": 1,
+    "x": 150,
+    "y": 900,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the left-side path with a smooth, level surface to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high-visibility commercial area on the left, indicating a need for crossing, but no pedestrian crossing facility is present",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island at the junction of the road and the commercial frontage."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 158.47,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6138,
+  "completion_tokens": 526,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

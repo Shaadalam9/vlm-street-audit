@@ -1,0 +1,122 @@
+{
+ "clip_id": "boKYDMlwy0I_00110000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_002.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_004.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_006.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_008.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_00110000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk is partly blocked by vegetation\",\"frame\":1,\"x\":100,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Remove vegetation blocking the sidewalk to improve accessibility.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk is partly blocked by parked car\",\"frame\":2,\"x\":700,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate parked car to improve sidewalk accessibility.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"some trip hazards on footway\",\"frame\":3,\"x\":800,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair or smooth uneven sections of the sidewalk to prevent trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"no crossing facility visible\",\"frame\":4,\"x\":500,\"y\":400,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to improve crossing safety.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"some street lighting present but not ample\",\"frame\":5,\"x\":300,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Increase the number of street lights to enhance visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk is partly blocked by vegetation",
+    "frame": 1,
+    "x": 100,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Remove vegetation blocking the sidewalk to improve accessibility."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk is partly blocked by parked car",
+    "frame": 2,
+    "x": 700,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Relocate parked car to improve sidewalk accessibility."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "some trip hazards on footway",
+    "frame": 3,
+    "x": 800,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair or smooth uneven sections of the sidewalk to prevent trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "no crossing facility visible",
+    "frame": 4,
+    "x": 500,
+    "y": 400,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to improve crossing safety."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "some street lighting present but not ample",
+    "frame": 5,
+    "x": 300,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Increase the number of street lights to enhance visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 140.31,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13204,
+  "completion_tokens": 497,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "ZCwxNS3Cu7A_01916000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is a narrow, informal path with no clear separation from the road.",
+   "frame": 1,
+   "x": 100,
+   "y": 800,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to a minimum of 1.5m and add a physical barrier to separate it from the carriageway."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "There is no marked or signalised crossing at the junction, despite high pedestrian demand from the commercial area.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with refuge islands at the junction to manage the high volume of traffic and pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, and widening it is feasible given the available space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no crossing visible at the junction, and installing one is a standard infrastructure improvement."
+  }
+ ],
+ "error": null
+}

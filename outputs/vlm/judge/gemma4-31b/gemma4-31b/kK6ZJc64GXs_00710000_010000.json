@@ -1,0 +1,65 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "People are walking on a narrow, unpaved strip or in the road edge.",
+   "frame": 1,
+   "x": 295,
+   "y": 630,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a paved sidewalk on the left side to separate pedestrians from vehicle traffic."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The edge of the road consists of uneven dirt and stone walls with no dedicated pavement.",
+   "frame": 1,
+   "x": 850,
+   "y": 650,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, paved sidewalk on the right side to provide a safe walking space."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road without any designated crossing facility despite residential and commercial activity.",
+   "frame": 3,
+   "x": 380,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and visible point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a dedicated paved footway, and adding one is feasible given the available space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a footway, but the presence of stone walls makes it unclear if there is enough space to install one without significant demolition."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings visible despite pedestrian activity, and adding one is a standard feasible measure."
+  }
+ ],
+ "error": null
+}

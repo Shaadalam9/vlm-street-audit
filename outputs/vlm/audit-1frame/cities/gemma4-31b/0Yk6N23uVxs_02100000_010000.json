@@ -1,0 +1,110 @@
+{
+ "clip_id": "0Yk6N23uVxs_02100000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/0Yk6N23uVxs/0Yk6N23uVxs_02100000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an informal path under 1m and is blocked by construction equipment and materials.\",\"frame\":1,\"x\":200,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a proper, continuous sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Construction equipment and materials are blocking the pedestrian path.\",\"frame\":1,\"x\":200,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Remove construction materials and equipment from the pedestrian path to ensure clear passage.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven and obstructed by debris.\",\"frame\":1,\"x\":200,\"y\":700,\"measure\":\"repair_footway\",\"suggestion\":\"Level the surface of the left-side path to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are present and there are homes/buildings on both sides, but no designated crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an informal path under 1m and is blocked by construction equipment and materials.",
+    "frame": 1,
+    "x": 200,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a proper, continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Construction equipment and materials are blocking the pedestrian path.",
+    "frame": 1,
+    "x": 200,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Remove construction materials and equipment from the pedestrian path to ensure clear passage."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven and obstructed by debris.",
+    "frame": 1,
+    "x": 200,
+    "y": 700,
+    "measure": "repair_footway",
+    "suggestion": "Level the surface of the left-side path to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are present and there are homes/buildings on both sides, but no designated crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.61,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 2008,
+  "completion_tokens": 508,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

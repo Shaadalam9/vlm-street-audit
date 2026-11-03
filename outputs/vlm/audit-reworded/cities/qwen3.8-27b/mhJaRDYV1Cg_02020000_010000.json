@@ -1,0 +1,92 @@
+{
+ "clip_id": "mhJaRDYV1Cg_02020000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_002.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_004.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_006.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_008.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_02020000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"other\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road has a grassy verge and trees but no paved or formal path for pedestrians.\",\"frame\":1,\"x\":200,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved footway on the left side of the road, separated from the carriageway by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a bus stop on the right, indicating a need to cross, but no marked or signalised crossing is visible in the 100m stretch.\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the location of the bus stop.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "other",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road has a grassy verge and trees but no paved or formal path for pedestrians.",
+    "frame": 1,
+    "x": 200,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved footway on the left side of the road, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a bus stop on the right, indicating a need to cross, but no marked or signalised crossing is visible in the 100m stretch.",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the location of the bus stop."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 169.87,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6008,
+  "completion_tokens": 373,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

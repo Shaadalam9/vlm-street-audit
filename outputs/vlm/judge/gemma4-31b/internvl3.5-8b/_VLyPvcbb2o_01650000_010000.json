@@ -1,0 +1,29 @@
+{
+ "clip_id": "_VLyPvcbb2o_01650000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "partly_blocked footway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Clear the construction barriers on the right footway to ensure it is fully usable."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right footway is completely replaced by construction barriers, but 'improve_crossing' is an incorrect measure for a missing footway."
+  }
+ ],
+ "error": null
+}

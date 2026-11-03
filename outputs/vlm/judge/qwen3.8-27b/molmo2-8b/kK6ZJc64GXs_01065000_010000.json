@@ -1,0 +1,29 @@
+{
+ "clip_id": "kK6ZJc64GXs_01065000_010000",
+ "auditor": "molmo2-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "no visible crossing facility on the right side of the road",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked pedestrian crossing on the right side of the road to provide safe crossing options for residents and visitors"
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough of the right-side area to confirm a missing crossing, and the suggestion is a generic measure that does not reference any specific feature of this street."
+  }
+ ],
+ "error": null
+}

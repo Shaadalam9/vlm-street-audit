@@ -1,0 +1,29 @@
+{
+ "clip_id": "bR9-GFQw84Q_01786000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes and signalised crossing without a refuge",
+   "frame": 3,
+   "x": 450,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "install a pedestrian refuge island at the crossing to improve safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, multi-lane intersection with a crosswalk but no visible pedestrian refuge island, making the deficit visible; however, the suggestion is generic and feasibility is unclear due"
+  }
+ ],
+ "error": null
+}

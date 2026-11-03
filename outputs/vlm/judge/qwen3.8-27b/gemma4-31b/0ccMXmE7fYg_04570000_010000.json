@@ -1,0 +1,29 @@
+{
+ "clip_id": "0ccMXmE7fYg_04570000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are visible crossing the road informally in a mixed-use urban area with no designated crossing facility.",
+   "frame": 1,
+   "x": 360,
+   "y": 540,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show pedestrians crossing the road, and the suggestion is a generic measure that does not refer to a specific location or feature of the street."
+  }
+ ],
+ "error": null
+}

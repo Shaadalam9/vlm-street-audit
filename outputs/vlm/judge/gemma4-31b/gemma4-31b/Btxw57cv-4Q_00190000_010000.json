@@ -1,0 +1,29 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "Buildings and shops on both sides create crossing demand, but no designated crossing is visible.",
+   "frame": 5,
+   "x": 300,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a very limited section of the road, making it impossible to determine if a crossing is missing from the entire street."
+  }
+ ],
+ "error": null
+}

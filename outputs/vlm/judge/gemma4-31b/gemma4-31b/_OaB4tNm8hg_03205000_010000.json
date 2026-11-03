@@ -1,0 +1,29 @@
+{
+ "clip_id": "_OaB4tNm8hg_03205000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "Pedestrians are crossing the road in a high-demand area with shops and attractions, but no designated crossing facility is provided.",
+   "frame": 4,
+   "x": 530,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the street."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road without a designated crossing, and adding one is a standard feasible improvement."
+  }
+ ],
+ "error": null
+}

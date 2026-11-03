@@ -1,0 +1,112 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_002.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_004.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_006.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_008.jpg",
+  "data/snippets/ySNSVE0rRzc/ySNSVE0rRzc_06305000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No designated footway for pedestrians on the left side of the road.\",\"frame\":1,\"x\":100,\"y\":800,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are using an unpaved, informal dirt path rather than a purpose-built sidewalk.\",\"frame\":2,\"x\":600,\"y\":850,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Pave and formalise the informal path on the right side to provide a safe, all-weather footway.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrian demand is evident from the presence of a pedestrian and commercial signs, but there is no designated crossing facility.\",\"frame\":3,\"x\":550,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked zebra crossing to provide pedestrians with a safe and visible point to cross the road.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is in an urban area with commercial activity but has no visible street lighting.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road segment to improve visibility and safety for all users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No designated footway for pedestrians on the left side of the road.",
+    "frame": 1,
+    "x": 100,
+    "y": 800,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Pedestrians are using an unpaved, informal dirt path rather than a purpose-built sidewalk.",
+    "frame": 2,
+    "x": 600,
+    "y": 850,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Pave and formalise the informal path on the right side to provide a safe, all-weather footway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrian demand is evident from the presence of a pedestrian and commercial signs, but there is no designated crossing facility.",
+    "frame": 3,
+    "x": 550,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked zebra crossing to provide pedestrians with a safe and visible point to cross the road."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is in an urban area with commercial activity but has no visible street lighting.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road segment to improve visibility and safety for all users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 473.56,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3122,
+  "completion_tokens": 536,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

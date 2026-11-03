@@ -1,0 +1,29 @@
+{
+ "clip_id": "R_FR8kB12sg_00298000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "left_side",
+   "evidence": "A continuous line of shops and buildings on the left creates a high demand for pedestrians to cross, but there is no marked or signalised crossing visible in a ",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at the junction of the main road and the side street on the left to provide a safe crossing point for shoppers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a continuous line of buildings on the left, but the specific junction and the absence of a crossing cannot be confirmed from this angle."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,112 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_002.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_004.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_006.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_008.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_02821000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, uneven strip of dirt and gravel separates the parked cars from the road, with no constructed or continuous paved surface.\",\"frame\":2,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a 1.5 m wide concrete footway along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A white van and a silver car are parked directly on the informal path, completely obstructing any potential pedestrian movement.\",\"frame\":2,\"x\":100,\"y\":820,\"measure\":\"build_footway\",\"suggestion\":\"Provide a dedicated footway that is physically separated from the parking area to prevent vehicles from blocking the pedestrian route.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The ground surface on the left is highly irregular, with visible potholes, loose gravel, and debris.\",\"frame\":3,\"x\":150,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left side with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The road has commercial activity and shops on both sides, creating a high demand for crossing, but there are no marked crossings, signals, or refuge islands.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing with a central refuge island to manage traffic speed and provide a safe crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, uneven strip of dirt and gravel separates the parked cars from the road, with no constructed or continuous paved surface.",
+    "frame": 2,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a 1.5 m wide concrete footway along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A white van and a silver car are parked directly on the informal path, completely obstructing any potential pedestrian movement.",
+    "frame": 2,
+    "x": 100,
+    "y": 820,
+    "measure": "build_footway",
+    "suggestion": "Provide a dedicated footway that is physically separated from the parking area to prevent vehicles from blocking the pedestrian route."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The ground surface on the left is highly irregular, with visible potholes, loose gravel, and debris.",
+    "frame": 3,
+    "x": 150,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left side with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The road has commercial activity and shops on both sides, creating a high demand for crossing, but there are no marked crossings, signals, or refuge islands.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing with a central refuge island to manage traffic speed and provide a safe crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 538.9,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6148,
+  "completion_tokens": 536,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "gmDBzijaIAA_00309000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A person is sitting on the ground at the edge of the carriageway, indicating the footway is obstructed or unusable.",
+   "frame": 5,
+   "x": 20,
+   "y": 750,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the left-side footway to provide a clear, unobstructed path for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A pedestrian is standing in the carriageway near the median, indicating a need to cross without a facility.",
+   "frame": 3,
+   "x": 850,
+   "y": 750,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at the location where the pedestrian is waiting to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A person is seen sitting on the narrow verge/curb area, indicating insufficient footway width."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian is standing on the road edge waiting to cross, confirming the lack of a designated crossing facility."
+  }
+ ],
+ "error": null
+}

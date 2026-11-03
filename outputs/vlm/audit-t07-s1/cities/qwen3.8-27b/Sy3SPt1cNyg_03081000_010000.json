@@ -1,0 +1,92 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_002.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_004.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_006.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_008.jpg",
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03081000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"A continuous bus stop with a shelter and waiting passengers is visible on the left, indicating a high demand for people to cross the road to access the stop.\",\"frame\":5,\"x\":250,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing immediately in front of the bus shelter to provide a safe, visible place for passengers to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"The stretch of road in view has very few streetlights, and the lighting poles are spaced far apart, leaving large sections of the road and the bus stop area un-\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Increase the density of street lighting along the road, ensuring the bus stop area is well-lit for safety during the evening.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "A continuous bus stop with a shelter and waiting passengers is visible on the left, indicating a high demand for people to cross the road to access the stop.",
+    "frame": 5,
+    "x": 250,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing immediately in front of the bus shelter to provide a safe, visible place for passengers to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "The stretch of road in view has very few streetlights, and the lighting poles are spaced far apart, leaving large sections of the road and the bus stop area un-",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Increase the density of street lighting along the road, ensuring the bus stop area is well-lit for safety during the evening."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 353.47,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6008,
+  "completion_tokens": 396,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

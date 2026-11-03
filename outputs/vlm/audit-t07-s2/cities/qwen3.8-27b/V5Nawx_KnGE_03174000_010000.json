@@ -1,0 +1,102 @@
+{
+ "clip_id": "V5Nawx_KnGE_03174000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_03174000_010000/frame_002.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_03174000_010000/frame_004.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_03174000_010000/frame_006.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_03174000_010000/frame_008.jpg",
+  "data/snippets/V5Nawx_KnGE/V5Nawx_KnGE_03174000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is a narrow, purpose-built sidewalk that is partly blocked by parked cars, reducing the usable width for pedestrians.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Reconfigure the left parking bays to create a wider, continuous pedestrian walkway that is physically separated from the parking lane.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The footway on the right is obstructed by a line of parked cars, forcing pedestrians to move into the road or walk in a very narrow space.\",\"frame\":2,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Install bollards or a small physical barrier to prevent cars from parking on the footway and ensure a clear pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"The street is a residential area with homes and parking on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a raised, marked pedestrian crossing at the centre of the road segment to improve safety and visibility for people crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is a narrow, purpose-built sidewalk that is partly blocked by parked cars, reducing the usable width for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Reconfigure the left parking bays to create a wider, continuous pedestrian walkway that is physically separated from the parking lane."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The footway on the right is obstructed by a line of parked cars, forcing pedestrians to move into the road or walk in a very narrow space.",
+    "frame": 2,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Install bollards or a small physical barrier to prevent cars from parking on the footway and ensure a clear pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "The street is a residential area with homes and parking on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a raised, marked pedestrian crossing at the centre of the road segment to improve safety and visibility for people crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 296.49,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6102,
+  "completion_tokens": 490,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

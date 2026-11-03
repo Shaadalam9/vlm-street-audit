@@ -1,0 +1,102 @@
+{
+ "clip_id": "KQU-5_VewEw_00195000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_002.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_004.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_006.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_008.jpg",
+  "data/snippets/KQU-5_VewEw/KQU-5_VewEw_00195000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road has a steep, vegetated embankment and a guardrail, with no path for pedestrians to walk on.\",\"frame\":1,\"x\":300,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a protected pedestrian path on the left side, using a retaining wall or cut the embankment to create a safe walking space.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A gas station and a commercial area are on the right, and a road appears to join from the left, creating a demand to cross a wide, multi-lane road with no safe,\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with a refuge island in the median to allow people to cross the wide road safely.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"The road has at least four lanes, and the proposed crossing point near the gas station lacks a refuge in the central median.\",\"frame\":4,\"x\":500,\"y\":600,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a raised refuge island in the central median to allow pedestrians to cross the four-lane road in two stages.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road has a steep, vegetated embankment and a guardrail, with no path for pedestrians to walk on.",
+    "frame": 1,
+    "x": 300,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a protected pedestrian path on the left side, using a retaining wall or cut the embankment to create a safe walking space."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A gas station and a commercial area are on the right, and a road appears to join from the left, creating a demand to cross a wide, multi-lane road with no safe,",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with a refuge island in the median to allow people to cross the wide road safely."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "The road has at least four lanes, and the proposed crossing point near the gas station lacks a refuge in the central median.",
+    "frame": 4,
+    "x": 500,
+    "y": 600,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a raised refuge island in the central median to allow pedestrians to cross the four-lane road in two stages."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 97.04,
+ "usage": {
+  "prompt_tokens": 5612,
+  "total_tokens": 6103,
+  "completion_tokens": 491,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

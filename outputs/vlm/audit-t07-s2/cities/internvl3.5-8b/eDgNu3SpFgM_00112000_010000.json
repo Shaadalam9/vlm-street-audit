@@ -1,0 +1,92 @@
+{
+ "clip_id": "eDgNu3SpFgM_00112000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_002.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_004.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_006.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_008.jpg",
+  "data/snippets/eDgNu3SpFgM/eDgNu3SpFgM_00112000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"left_side\",\"evidence\":\"4_or_more lanes and signalised crossing without a refuge\",\"frame\":4,\"x\":320,\"y\":130,\"measure\":\"add_refuge_island\",\"suggestion\":\"install a pedestrian refuge island to provide a safe crossing point for pedestrians in a wide road with heavy traffic.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"kerb_ramps is none at the crossing\",\"frame\":5,\"x\":560,\"y\":180,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"install dropped kerbs at the pedestrian crossing to clearly define the crossing area and improve safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "left_side",
+    "evidence": "4_or_more lanes and signalised crossing without a refuge",
+    "frame": 4,
+    "x": 320,
+    "y": 130,
+    "measure": "add_refuge_island",
+    "suggestion": "install a pedestrian refuge island to provide a safe crossing point for pedestrians in a wide road with heavy traffic."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "kerb_ramps is none at the crossing",
+    "frame": 5,
+    "x": 560,
+    "y": 180,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "install dropped kerbs at the pedestrian crossing to clearly define the crossing area and improve safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.94,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13053,
+  "completion_tokens": 346,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

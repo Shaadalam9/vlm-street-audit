@@ -1,0 +1,29 @@
+{
+ "clip_id": "E8KlsWIZGD0_03847000_010000",
+ "auditor": "gemma4-31b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "There is no purpose-built sidewalk on the right side of the road, only a dirt shoulder.",
+   "frame": 1,
+   "x": 600,
+   "y": 600,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous sidewalk on the right side of the road to provide a safe space for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a dirt shoulder on the right, but the suggestion is a generic fix that does not account for the open field and potential land-use constraints."
+  }
+ ],
+ "error": null
+}

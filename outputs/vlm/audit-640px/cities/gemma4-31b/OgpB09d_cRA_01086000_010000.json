@@ -1,0 +1,92 @@
+{
+ "clip_id": "OgpB09d_cRA_01086000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_002.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_004.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_006.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_008.jpg",
+  "data/snippets/OgpB09d_cRA/OgpB09d_cRA_01086000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no purpose-built sidewalk, only parked cars and road surface\",\"frame\":4,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"pedestrians are visible crossing the road without any marked or signalised facility\",\"frame\":4,\"x\":50,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the parking area.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no purpose-built sidewalk, only parked cars and road surface",
+    "frame": 4,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "pedestrians are visible crossing the road without any marked or signalised facility",
+    "frame": 4,
+    "x": 50,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the parking area."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 161.6,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 2938,
+  "completion_tokens": 352,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

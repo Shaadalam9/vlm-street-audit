@@ -1,0 +1,65 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The left side of the road is bounded by a building wall and a grassy verge, with no paved or defined path for pedestrians.",
+   "frame": 1,
+   "x": 250,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved footway along the left side of the road, separating it from the building and the grassy verge."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The right side of the road is bordered by a grassy verge and a field, with no path for pedestrians.",
+   "frame": 1,
+   "x": 750,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Create a footway on the right side of the road, separating the carriageway from the adjacent field."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights are visible along the road in any of the frames.",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lighting along the road to improve visibility and safety for all road users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a footway, but space for construction is limited by the building wall."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a footway and has ample space on the grassy verge for construction."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible in the frames, and installing it is a standard feasible upgrade."
+  }
+ ],
+ "error": null
+}

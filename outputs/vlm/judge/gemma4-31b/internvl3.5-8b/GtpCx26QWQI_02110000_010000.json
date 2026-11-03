@@ -1,0 +1,47 @@
+{
+ "clip_id": "GtpCx26QWQI_02110000_010000",
+ "auditor": "internvl3.5-8b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper pedestrian crossing to enhance safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk_3m_or_more",
+   "frame": 1,
+   "x": 800,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a proper pedestrian crossing to enhance safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The auditor claims there is no footway but then lists 'sidewalk_3m_or_more' as evidence, which is contradictory; furthermore, the frames do not show the road edges clearly enough to confirm a lack of足"
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The auditor claims there is no footway but then lists 'sidewalk_3m_or_more' as evidence, which is contradictory; furthermore, the frames do not show the road edges clearly enough to confirm a lack of足"
+  }
+ ],
+ "error": null
+}

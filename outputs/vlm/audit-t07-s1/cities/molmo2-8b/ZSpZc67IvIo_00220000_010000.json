@@ -1,0 +1,122 @@
+{
+ "clip_id": "ZSpZc67IvIo_00220000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_00220000_010000/frame_002.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_00220000_010000/frame_004.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_00220000_010000/frame_006.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_00220000_010000/frame_008.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_00220000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"none\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"none\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"both_kerbs\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"physical_barrier\",\"frame\":2,\"x\":100,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Create a continuous footway along the left side to provide a safe pedestrian path away from the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"physical_barrier\",\"frame\":2,\"x\":900,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Create a continuous footway along the right side to provide a safe pedestrian path away from the road.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"signalised_with_refuge on 4_or_more lanes\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island at the center of the crossing to provide a safe place for pedestrians to wait when using the signalised crossing.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"kerb_ramps both_kerbs\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both sides of the crossing to improve wheelchair and mobility scooter access for all pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban_road with street_lighting some\",\"frame\":2,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights along the road to improve visibility and safety for all road users at night and in low-light conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "none",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "physical_barrier",
+   "obstruction": "none",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "both_kerbs"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "physical_barrier",
+    "frame": 2,
+    "x": 100,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Create a continuous footway along the left side to provide a safe pedestrian path away from the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "physical_barrier",
+    "frame": 2,
+    "x": 900,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Create a continuous footway along the right side to provide a safe pedestrian path away from the road."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "signalised_with_refuge on 4_or_more lanes",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island at the center of the crossing to provide a safe place for pedestrians to wait when using the signalised crossing."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "kerb_ramps both_kerbs",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both sides of the crossing to improve wheelchair and mobility scooter access for all pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban_road with street_lighting some",
+    "frame": 2,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights along the road to improve visibility and safety for all road users at night and in low-light conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 245.53,
+ "usage": {
+  "prompt_tokens": 7133,
+  "total_tokens": 7690,
+  "completion_tokens": 557,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

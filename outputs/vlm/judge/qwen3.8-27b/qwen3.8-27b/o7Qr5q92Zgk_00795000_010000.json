@@ -1,0 +1,137 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "A narrow, unpaved strip separates the road from the shops, but it is not a proper sidewalk.",
+   "frame": 4,
+   "x": 100,
+   "y": 600,
+   "measure": "build_footway",
+   "suggestion": "Construct a paved, 1.5m-wide footway on the left side to provide a safe, continuous path for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "The area under the overpass is a rough, uneven strip with debris, not a usable footway.",
+   "frame": 4,
+   "x": 800,
+   "y": 650,
+   "measure": "build_footway",
+   "suggestion": "Create a formal, paved footway on the right side, clearing the current debris and providing a safe route for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "A blue auto-rickshaw is parked on the narrow path, blocking pedestrian access.",
+   "frame": 1,
+   "x": 150,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Enforce a no-parking zone on the left footway to keep it clear for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Debris and what appears to be a person sitting on the ground are obstructing the path under the overpass.",
+   "frame": 4,
+   "x": 750,
+   "y": 650,
+   "measure": "clear_footway",
+   "suggestion": "Implement a regular cleaning schedule for the right-side footway to remove debris and ensure it remains passable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "The unpaved surface is uneven and appears to have loose gravel.",
+   "frame": 4,
+   "x": 100,
+   "y": 600,
+   "measure": "repair_footway",
+   "suggestion": "Resurface the left-side footway with a smooth, even material to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "The ground is littered with trash and has an uneven, broken surface.",
+   "frame": 4,
+   "x": 800,
+   "y": 650,
+   "measure": "repair_footway",
+   "suggestion": "Grade and pave the right-side footway to create a level, hazard-free surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a junction and shops on both sides, creating a high demand for crossing, but no marked or signalised crossing is present.",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a clearly marked zebra crossing at the junction to provide a safe and visible place for pedestrians to cross."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow, unpaved strip on the left, but the available space for a 1.5m footway is unclear due to the parked rickshaw and road width."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The area under the overpass is clearly rough and uneven, but it is unclear if there is enough space to construct a formal footway without affecting the road."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A blue auto-rickshaw is clearly parked on the left path, and enforcing a no-parking zone is a realistic and specific measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Debris and a person sitting on the ground are visible under the overpass, and a cleaning schedule is a feasible and specific solution."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left-side surface is uneven and unpaved, but the feasibility of resurfacing is unclear due to the narrow width and potential drainage issues."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side ground is littered and uneven, but the feasibility of grading and paving is unclear due to the space constraints under the overpass."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The junction and shops create a high demand for crossing, but the feasibility of adding a marked crossing is unclear due to the traffic flow and road width."
+  }
+ ],
+ "error": null
+}

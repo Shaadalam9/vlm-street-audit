@@ -1,0 +1,29 @@
+{
+ "clip_id": "LsJO_E5dmvk_00370000_010000",
+ "auditor": "qwen3.8-27b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "A blue pedestrian crossing sign is visible on the right, but there is no marked crossing, refuge, or signal on the road surface.",
+   "frame": 1,
+   "x": 975,
+   "y": 200,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the location indicated by the sign."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian crossing sign is present on the right, but no corresponding markings are visible on the road surface."
+  }
+ ],
+ "error": null
+}
