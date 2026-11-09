@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "vlm-street-audit: auditing pedestrian infrastructure with on-device vision-language models"
+authors:
+  - family-names: Alam
+    given-names: Md Shadab
+    affiliation: Eindhoven University of Technology
+  - family-names: Rouchitsas
+    given-names: Alexandros
+    affiliation: KTG Research & Innovation
+  - family-names: Bazilinskyy
+    given-names: Pavlo
+    affiliation: Eindhoven University of Technology
+repository-code: "https://github.com/Shaadalam9/vlm-street-audit"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "What Pedestrians Lack Around the World: Auditing Street Infrastructure in 75 Cities with On-Device Vision-Language Models"
+  authors:
+    - family-names: Alam
+      given-names: Md Shadab
+    - family-names: Rouchitsas
+      given-names: Alexandros
+    - family-names: Bazilinskyy
+      given-names: Pavlo
+  collection-title: "Human Interaction and Emerging Technologies (IHIET-AI 2027): Artificial Intelligence and Future Applications"
+  conference:
+    name: "IHIET-AI 2027"
+    city: "Palma de Mallorca"
+    country: ES
+  publisher:
+    name: "AHFE International"
+  year: 2027
+  notes: "Accepted for publication"

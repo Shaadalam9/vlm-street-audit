@@ -149,7 +149,7 @@ def main() -> int:
     parser.add_argument("--sets", nargs="+", default=["jaad", "cities"])
     parser.add_argument("--start-server", action="store_true", help="start and stop vLLM for each model")
     parser.add_argument("--limit", type=int, help="first N clips of each set only (smoke test)")
-    parser.add_argument("--prompt", choices=sorted(VARIANTS), default="open", help="prompt variant")
+    parser.add_argument("--prompt", choices=sorted(VARIANTS), default="audit", help="prompt variant")
     parser.add_argument("--timeout", type=float, default=600,
                         help="seconds to wait for one answer (longer when the GPU is shared)")
     parser.add_argument("--clips", type=Path, help="file with one clip_id per line: run only these")

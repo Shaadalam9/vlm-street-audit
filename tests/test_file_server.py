@@ -138,7 +138,7 @@ def test_track_file_by_frame_rate_name(tmp_path):
 
 def test_track_file_found_in_the_listing_is_listed_only_once(tmp_path):
     folder = f"{BASE}v/data/browse/pedestrians_in-youtube/data/bbox"
-    files = f"/v/data/files/pedestrians_in-youtube/data/bbox"
+    files = "/v/data/files/pedestrians_in-youtube/data/bbox"
     session = FakeSession({
         folder: f'<a href="{files}/a_120_30.csv"></a><a href="{files}/b_0_25.csv"></a>'.encode(),
         f"{BASE}{files[1:]}/a_120_30.csv": b"a",

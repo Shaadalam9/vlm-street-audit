@@ -52,4 +52,4 @@ logs/
 data/clip_sets/
 
 # Conference paper drafts (IHIET-AI), kept out of git
-paper/
+/paper/

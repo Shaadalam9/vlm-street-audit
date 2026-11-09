@@ -28,8 +28,13 @@
 
 ```
 src/vlm_street_audit/   package: config, file_server (CROWD videos and track CSVs), mapping,
-                        snippets + semantics (choosing and cutting snippets), figures
-scripts/                sample_cities.py, fetch_data.py, make_snippets.py, plot_city_sample.py
+                        snippets + semantics (choosing and cutting snippets), jaad (labels),
+                        vlm (audit prompt, schema, client), evaluation (statistics), figures
+scripts/                sample_cities.py, fetch_data.py, make_snippets.py, build_clip_sets.py,
+                        run_vlm.py, judge_suggestions.py, analyse_audit.py, paper_figures.py,
+                        plot_city_sample.py
+serve/                  vLLM environment and launcher
+outputs/vlm/            published answers, judge ratings and analysis tables
 configs/                models.toml (the VLMs), snippet_prompts.json (snippet ranking)
 data/                   mapping, city sample; videos/frames/bbox are downloaded, not tracked
 tests/                  uv run pytest

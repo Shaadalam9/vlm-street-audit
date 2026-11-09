@@ -28,7 +28,6 @@ Run:  uv run python scripts/analyse_audit.py [--no-png]
 import argparse
 import json
 import sys
-from itertools import combinations
 
 import numpy as np
 import pandas as pd
@@ -36,16 +35,25 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from analyse import BLUES, LABELS, MODEL_COLOURS, MODEL_NAMES, MODEL_ORDER, PAIR, markdown, pct, save
-from vlm_street_audit.config import load_config, project_path
+from vlm_street_audit.config import PROJECT_ROOT, load_config, project_path
 from vlm_street_audit.evaluation import SCENE_BOOLEANS, binary_scores, cohen_kappa, fleiss_kappa, wilson
-from vlm_street_audit.vlm import CROSSING_ITEMS, INFORMAL_OR_NONE, NEEDED, ROAD_ITEMS, SIDE_ITEMS, expected_needs
+from vlm_street_audit.figures import save_figure, style
+from vlm_street_audit.vlm import CROSSING_ITEMS, NEEDED, ROAD_ITEMS, SIDE_ITEMS, expected_needs
 
-# The audit has five models: analyse.py's four (open and checklist runs) plus Ministral, added on 2026-11-07 from
-# a third country of origin (France). Its colour continues the same validated categorical order (slot 5).
-MODEL_ORDER = MODEL_ORDER + ["ministral3-14b"]
-MODEL_NAMES = MODEL_NAMES | {"ministral3-14b": "Ministral 3 14B"}
-MODEL_COLOURS = MODEL_COLOURS | {"Ministral 3 14B": "#e87ba4"}
+# Five models from five developers in three countries; Ministral was added on 2026-11-07 (EXAONE 4.5 was tried
+# and dropped, see configs/models.toml).
+MODEL_ORDER = ["qwen3.8-27b", "gemma4-31b", "molmo2-8b", "internvl3.5-8b", "ministral3-14b"]
+MODEL_NAMES = {"qwen3.8-27b": "Qwen3.8-27B", "gemma4-31b": "Gemma 4 31B", "molmo2-8b": "Molmo2-8B",
+               "internvl3.5-8b": "InternVL3.5-8B", "ministral3-14b": "Ministral 3 14B"}
+# Categorical colours in a fixed order, checked for colour-blind separation: one per model, the first two for
+# two-way comparisons. Magnitudes use one blue ramp, light to dark.
+MODEL_COLOURS = {"Qwen3.8-27B": "#2a78d6", "Gemma 4 31B": "#eb6834", "Molmo2-8B": "#1baf7a",
+                 "InternVL3.5-8B": "#eda100", "Ministral 3 14B": "#e87ba4"}
+PAIR = ["#2a78d6", "#eb6834"]
+BLUES = ["#f4f8fd", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
+FIGURES = PROJECT_ROOT / "docs" / "figures"
+SCENE_LABELS = {"zebra_crossing_visible": "Zebra crossing", "traffic_signal_visible": "Traffic signal",
+                "pedestrians_visible": "Pedestrians visible", "pedestrians_in_carriageway": "Pedestrians in road"}
 # A consensus needs at least 4 answers, and an item counts when two thirds of them have it (4 of 5, 3 of 4).
 MIN_ANSWERS, CONSENSUS = 4, 2 / 3
 
@@ -89,6 +97,27 @@ CRITERIA = {"deficit_visible": "Deficit visible", "addresses_deficit": "Fixes th
             "specific": "Specific to the street", "feasible": "Feasible", "about_behaviour": "About behaviour"}
 SEED = 20261028
 
+
+
+def pct(value: float) -> str:
+    return "–" if value != value else f"{100 * value:.0f}%"
+
+
+def markdown(table: pd.DataFrame) -> str:
+    header = "| " + " | ".join(table.columns) + " |"
+    rule = "|" + "|".join("---" for _ in table.columns) + "|"
+    rows = ["| " + " | ".join(str(v) for v in row) + " |" for row in table.itertuples(index=False)]
+    return "\n".join([header, rule, *rows])
+
+
+def save(fig: go.Figure, name: str, png: bool) -> None:
+    """Interactive HTML in outputs/figures and docs/figures, and a PNG for the README. No titles: captions say it."""
+    style(fig)
+    fig.update_layout(title=None, margin=dict(l=10, r=10, t=30, b=10), legend_title_text="")
+    save_figure(fig, name)
+    save_figure(fig, name, directory=FIGURES)
+    if png:
+        fig.write_image(FIGURES / f"{name}.png", width=1100, height=fig.layout.height or 500, scale=2)
 
 def present(answer: dict) -> dict:
     sides = [answer[s] for s in ("left_side", "right_side") if answer[s]["footway"] != "not_visible"]
@@ -229,7 +258,7 @@ def main() -> int:
                              **binary_scores(target, predicted.reset_index(drop=True))})
     validity = pd.DataFrame(rows)
     validity.to_csv(out / "jaad_validity.csv", index=False)
-    field_labels = {**LABELS, "crossing_marked": "Crossing facility (iRAP item)"}
+    field_labels = {**SCENE_LABELS, "crossing_marked": "Crossing facility (iRAP item)"}
     table = validity[validity.run == MAIN].pivot(index="field", columns="model", values="balanced_accuracy")
     table = table.reindex(index=fields, columns=MODEL_ORDER)
     md.append("### JAAD: balanced accuracy against the labels\n")

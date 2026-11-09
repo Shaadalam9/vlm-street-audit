@@ -4,8 +4,8 @@ import subprocess
 import numpy as np
 import pytest
 
-from vlm_street_audit.semantics import load_prompts, score_windows
 from vlm_street_audit.config import PROJECT_ROOT
+from vlm_street_audit.semantics import load_prompts, score_windows
 from vlm_street_audit.snippets import (
     Window,
     extract_snippet,

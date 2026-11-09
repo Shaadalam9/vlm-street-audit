@@ -1,519 +1,268 @@
-# VLM Street Audit
+# What Pedestrians Lack Around the World
 
-Using vision-language models (VLMs) to analyse real-world street footage, identify
-pedestrian-related problems, localise them in the scene, and suggest street improvements.
+**Auditing street infrastructure in 75 cities with on-device vision-language models**
 
-## Background
+[![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
+[![uv](https://img.shields.io/badge/managed%20with-uv-6340ac.svg)](https://docs.astral.sh/uv/)
+[![Paper: IHIET-AI 2027](https://img.shields.io/badge/paper-IHIET--AI%202027-2a78d6.svg)](#citation)
 
-The original concept was a browser-based interface in which people pause street footage,
-mark a location in the frame, and describe an observed pedestrian issue and a possible
-intervention. The project has since moved away from human participants: the task is now
-carried out entirely by VLMs/LLMs.
+Code, model answers and analysis for the paper
 
-## Goal
+> Md Shadab Alam, Alexandros Rouchitsas and Pavlo Bazilinskyy (2027).
+> *What Pedestrians Lack Around the World: Auditing Street Infrastructure in 75 Cities with On-Device
+> Vision-Language Models.* Human Interaction and Emerging Technologies (IHIET-AI 2027), Palma de Mallorca,
+> Spain. Accepted for oral presentation.
 
-Given street footage, a VLM should:
+Five open vision-language models (VLMs), run locally on one GPU, audit pedestrian infrastructure in dashcam
+clips from 75 cities on six continents. They code each street with items from two established instruments,
+the [iRAP](https://irap.org) road attributes and the MAPS-Mini streetscape audit, list what is missing, point
+to it in the frame and suggest a change to the street. No footage leaves the machine.
 
-1. **Detect** pedestrian or infrastructure issues (e.g. missing or blocked pavements,
-   unsafe crossings, poor visibility, conflicts with vehicles).
-2. **Localise** each issue in the frame (timestamp + bounding box or point).
-3. **Describe** the issue in plain language.
-4. **Suggest** a concrete improvement or intervention.
+![Needs reported by the models on six continents](docs/figures/paper/fig1_examples.png)
 
-## On-device models only
+**Figure 1.** Needs reported by the models on six continents, with the point each model gave (ring) on the
+frame it named. Suggestions: (a) a marked crossing with a central refuge island; (b) remove the cart and
+debris to clear the path; (c) a marked crossing with dropped kerbs at the sign; (d) a continuous sidewalk;
+(e) a no-parking zone and relocating the stalls. (f) A false report: the bridge's footway is separated from
+the roadway and not visible from the car. Three of five models made it, short of the 4-of-5 consensus.
 
-All model inference runs locally (e.g. Hugging Face `transformers` or Ollama).
-No cloud APIs: footage and frames never leave the machine.
+## Contents
 
-### Models (RTX 5090, 32 GB)
+- [How it works](#how-it-works)
+- [Main findings](#main-findings)
+- [Data and materials](#data-and-materials)
+- [Models](#models)
+- [Reproducing the study](#reproducing-the-study)
+- [Repository structure](#repository-structure)
+- [Citation](#citation)
+- [Licence](#licence)
 
-Several VLMs from different developers do the same task on the same frames, one
-model at a time. Details and checkpoints in [`configs/models.toml`](configs/models.toml).
+## How it works
 
-| Model | Developer | Run as | Weights | Why it is in the set |
-|---|---|---|---|---|
-| Qwen3.8-27B | Alibaba | 4-bit (W4A16) | ~17 GB | Newest and strongest general model; images and video |
-| Gemma 4 31B | Google | 4-bit (Google's QAT) | ~19 GB | Second large model from another lineage; detection and pointing |
-| Molmo2-8B | Ai2 | BF16 | ~18 GB | Localisation specialist (points, video tracks); open training data |
-| InternVL3.5-8B | Shanghai AI Lab | BF16 | ~17 GB | Fourth lineage; an older baseline |
-| Ministral 3 14B | Mistral AI | FP8 (Mistral's own) | ~16 GB | European developer (added 7 November) |
+```mermaid
+flowchart LR
+    A["CROWD dashcam mapping<br/>(cities worldwide)"] --> B["75 cities<br/>spatially balanced<br/>probability sample"]
+    B --> C["150 city clips<br/>10 s, 5 frames<br/>(best-ranked + random)"]
+    J["120 JAAD clips<br/>with human labels"] --> D
+    C --> D["5 VLMs on one GPU<br/>iRAP + MAPS-Mini items<br/>JSON schema enforced"]
+    D --> E["Needs, points<br/>and suggestions"]
+    D --> R["Robustness runs<br/>reworded, 1 frame,<br/>640 px, T = 0.7"]
+    E --> F["2 VLM judges<br/>rate each need"]
+    D --> G["Analysis<br/>consensus, κ,<br/>bootstrap over cities"]
+    R --> G
+    F --> G
+```
 
-- 27-31B models do not fit 32 GB in BF16 (~55-62 GB), so they run as 4-bit checkpoints.
-- Served with vLLM (Linux/WSL2, CUDA 12.8+ for Blackwell) on localhost through its
-  OpenAI-compatible API, so one client works for every model. Ollama works too, but its
-  GGUF quantisations and image resizing differ per model, which makes coordinates harder
-  to compare.
-- Fixed per run: frames, prompt, image resolution, temperature 0, and each model's
-  checkpoint revision.
-- Ministral runs with Mistral's own tokeniser and weight format, as Mistral documents it; with the Hugging Face
-  tokeniser its answers were valid JSON but nonsense.
-- EXAONE 4.5 33B (LG AI Research) was tried as a sixth model and dropped: under vLLM 0.32 it answers text
-  correctly, but every image came back as nonsense. Its larger builds do not fit 32 GB.
+1. **Cities.** 75 cities in 43 countries are drawn from the CROWD mapping of dashcam videos to cities with the
+   Local Pivotal Method, a spatially balanced probability sample, with inclusion probability proportional to
+   the square root of population ([`scripts/sample_cities.py`](scripts/sample_cities.py)).
+2. **Clips.** For each city, the video with the most daytime car footage is cut into 10 s windows. Windows are
+   ranked with SigLIP2 image–text embeddings for pedestrian-relevant scenes, and one random window is added,
+   so each city gives one best-ranked and one random clip ([`scripts/make_snippets.py`](scripts/make_snippets.py),
+   [`scripts/build_clip_sets.py`](scripts/build_clip_sets.py)). 120 clips from the JAAD dataset, with human labels,
+   check validity.
+3. **Audit.** Each model sees five frames, 2 s apart, and codes the street as a road-safety auditor would code a
+   100 m segment: road, each side's footway, and the crossing (iRAP and MAPS-Mini items). From the item answers,
+   eight needs follow by fixed rules, and the model lists each one with evidence, a point on the frame, a standard
+   measure and a one-sentence suggestion. vLLM enforces the JSON schema during decoding, so every answer
+   holds every item ([`src/vlm_street_audit/vlm.py`](src/vlm_street_audit/vlm.py)).
+4. **Robustness.** The audit is repeated with a reworded prompt, one frame instead of five, half the
+   resolution (640 px) and twice at temperature 0.7 ([`scripts/run_vlm.py`](scripts/run_vlm.py)).
+5. **Judges.** The two larger models rate every listed need: is the deficit visible, would the suggestion fix it,
+   is it specific to the street, is it feasible, and does it tell people how to behave
+   ([`scripts/judge_suggestions.py`](scripts/judge_suggestions.py)).
+6. **Analysis.** An item counts for a clip when at least two thirds of the models agree (4 of 5). Cities are
+   the unit, with 95% intervals from a bootstrap over cities ([`scripts/analyse_audit.py`](scripts/analyse_audit.py)).
 
-## Research questions
+An answer, abridged (Qwen3.8-27B on the Kinshasa clip of Figure 1a; the full file is
+[`outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json`](outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json)):
 
-- Which pedestrian infrastructure is present on ordinary streets around the world, and which is missing?
-- How does that differ between continents, and does it follow country indicators (road deaths, median age, inequality, literacy)?
-- Do the models audit streets outside Europe and North America as reliably as inside (model bias by region)?
-- How robust are the answers to rewording, fewer frames, lower resolution and resampling?
-- Are the suggested improvements real, specific and feasible, as rated by VLM judges?
+```json
+{
+  "road": {"area_type": "urban", "land_use": "mixed", "number_of_lanes": "2", "street_lighting": "none", "...": "..."},
+  "left_side": {"footway": "informal_path_1m_or_more", "obstruction": "partly_blocked", "trip_hazards": "some"},
+  "crossing": {"crossing_demand": true, "crossing_facility": "none", "crossing_quality": "not_applicable",
+               "kerb_ramps": "no_crossing"},
+  "needed": [
+    {"need": "no_crossing", "where": "road", "frame": 1, "x": 500, "y": 750,
+     "evidence": "There is a high demand for crossing due to the market stalls and buildings, but no marked or purpose-built crossing is present.",
+     "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe place for people to cross the road."},
+    "..."
+  ]
+}
+```
 
-## Results (28 October – 9 November 2026)
+Points are integers from 0 to 1000 on the named frame, x from the left and y from the top.
 
-**Method.** Each model audits a clip (5 frames over 10 s) with items from two established instruments:
+## Main findings
 
-- **iRAP road attributes** (iRAP Coding Manual, Version 5.3, drive-on-left edition, 2022): pedestrian crossing facility
-  (grade separated, signalised or marked, with or without a refuge, raised, refuge only, none) and its quality,
-  footway provision per side (physical barrier, ≥ 3 m, 1–3 m, < 1 m, informal path, none), pedestrian fencing,
-  number of lanes, median. iRAP codes 100 m segments, about what a 10 s clip covers.
-- **MAPS-Mini** (Sallis et al. 2015, *Preventing Chronic Disease* 12:150098): street lighting, traffic calming,
-  kerb ramps, footway obstructions and trip hazards, transit stops, bike facilities, land use.
+**The crossing item is valid where it can be checked.** On JAAD's labelled clips, the iRAP crossing-facility
+item finds marked crossings with a balanced accuracy of 0.86–0.92 for all five models.
 
-From the item answers, eight needs follow by fixed rules (e.g. no or informal footway on a side → *footway needed*;
-people have a reason to cross and there is no facility → *crossing needed*; 4+ lanes with an at-grade crossing and no
-refuge → *refuge needed*). The model also lists each need itself, with evidence, a measure and a suggested change.
-Prompt and schema are in `src/vlm_street_audit/vlm.py`; answers are constrained to the JSON schema by vLLM.
+**A crossing where people have reason to cross is the most common gap.** By consensus, street lighting is the most
+common feature (82% of cities), a formal footway on both sides is found in 51%, and a crossing facility in only 21%.
+In 39 of the 75 cities at least one clip needs a crossing, in 22 a footway, and in 12 both.
 
-**Data.** 6,900 valid answers from five models, none missing:
+![What pedestrians lack in each of the 75 cities](docs/figures/paper/fig2_map.png)
 
-| Run | Clips | Answers |
-|---|---|---|
-| Main audit (temperature 0) | 120 JAAD + 150 city clips (2 per city, 75 cities) | 1,350 |
-| Reworded prompt | same | 1,350 |
-| One frame (the middle one) | same | 1,350 |
-| Half resolution (640 px) | same | 1,350 |
-| Two samples at temperature 0.7 | 150 city clips | 2 × 750 |
+**Figure 2.** What pedestrians lack in each of the 75 cities: needs on which at least four of the five models agree
+in at least one of the city's two clips.
 
-Two judges (Qwen3.8 and Gemma 4) then rated each listed need and suggestion of the main run's 603 city answers that
-list any: 1,874 needs, each rated by both. All numbers come from `scripts/analyse_audit.py`; its tables and CSVs are
-in `outputs/vlm/analysis_audit/`. *Consensus* means at least two thirds of the models agree (4 of 5); cities are the
-unit, each city's two clips averaged, with 95% intervals from a bootstrap over cities (seed 20261028).
+**The gaps differ by continent.** A crossing is needed in 57% of African cities and 23% of North American ones. A
+footway is needed in 50% of African and 23% of North American cities, against 10–12% in Europe and Asia: in Africa
+basic provision is often absent, while many North American roads are built without footways.
 
-**Published data.** Every answer on the city clips and every judge rating is in this repository (text only, no
-frames), so each number can be checked:
+![Share of cities needing each item, by continent](docs/figures/paper/fig3_continents.png)
 
-| Folder | Contents |
+**Figure 3.** Share of cities needing each of the three most common items, by continent (number of cities in
+brackets). Oceania, with one city, is left out.
+
+**Needs follow road deaths.** The number of needs per clip rises with the country's road deaths per 100,000
+(Spearman's ρ = 0.34, 95% CI 0.11 to 0.52) and falls with median age (−0.41) and literacy (−0.46). These are
+country-level figures that track national income, so they describe a pattern, not a cause.
+
+![Missing items per clip against road deaths](docs/figures/paper/fig4_road_deaths.png)
+
+**Figure 4.** Missing items per street clip (consensus of the five models, averaged over each city's two clips)
+against the country's road deaths per 100,000 people. Each dot is a city; the dashed line is a least-squares fit.
+
+**The models agree somewhat less outside Europe and North America, and not at all on footway type.** Agreement on
+the crossing items and lighting is lower for clips from the rest of the world (reason to cross κ = 0.33 against 0.46;
+the intervals overlap). Footway type (κ = 0.03), trip hazards and kerb ramps are not reliable in any region.
+
+![Agreement between the models, by region](docs/figures/paper/fig5_agreement.png)
+
+**Figure 5.** Agreement between the five models on each item (Fleiss' κ) for clips from Europe and North America (60)
+and from the rest of the world (90). The shaded band marks agreement below 0.2.
+
+**Only the two largest models are sound auditors.** The judges see 81% of the needs listed by Qwen3.8 and Gemma 4
+in the frames, against 28–31% for the three smaller models, and Gemma 4's needs always follow from its own items.
+Rewording the prompt or halving the resolution changes few answers (mean κ 0.73 and 0.74); one frame (0.57) and
+resampling (0.55) change more.
+
+<p align="center"><img src="docs/figures/paper/fig6_models.png" width="560" alt="The five models as auditors"></p>
+
+**Figure 6.** The five models as auditors: share of their listed needs that the judges rated visible in the frames
+(mean of two judges) against the share backed by the model's own item answers.
+
+All tables (with 95% intervals) are in [`outputs/vlm/analysis_audit/tables.md`](outputs/vlm/analysis_audit/tables.md).
+Further figures, each with an interactive HTML version, are in [`docs/figures/`](docs/figures/):
+
+| Figure | Shows |
 |---|---|
-| `outputs/vlm/<run>/cities/<model>/<clip_id>.json` | 4,500 answers: runs `audit`, `audit-reworded`, `audit-1frame`, `audit-640px`, `audit-t07-s1`, `audit-t07-s2`. Each holds the model's checkpoint and revision, the prompt version, the condition (temperature, seed, frames, image size), the frame paths, the raw text and the parsed answer, with its `needed` list (need, evidence, frame, point, measure, suggestion) |
-| `outputs/vlm/judge/<judge>/<auditor>/<clip_id>.json` | 1,206 rated answers: the needs as listed and one rating per need |
-| `outputs/vlm/analysis_audit/` | The CSV tables behind every number above, and `tables.md` |
+| [`audit_jaad_validity`](docs/figures/audit_jaad_validity.png) | Scene facts and the crossing item against JAAD's labels, per model |
+| [`audit_present_by_continent`](docs/figures/audit_present_by_continent.png) | Infrastructure present, by continent |
+| [`audit_needed_by_continent`](docs/figures/audit_needed_by_continent.png) | Infrastructure needed, by continent |
+| [`audit_country_indicators`](docs/figures/audit_country_indicators.png) | Spearman's ρ with road deaths, median age, Gini and literacy |
+| [`audit_agreement_by_region`](docs/figures/audit_agreement_by_region.png) | Fleiss' κ per item and region, with intervals |
+| [`audit_robustness`](docs/figures/audit_robustness.png) | Cohen's κ under each changed condition |
+| [`audit_suggestion_quality`](docs/figures/audit_suggestion_quality.png) | Judges' ratings per auditor model |
 
-A clip's frames can be rebuilt from its id (`<video_id>_<start ms>_<length ms>`) with the CROWD videos and
-`scripts/make_snippets.py`. The answers on the JAAD clips are not included; their scores are in
-`outputs/vlm/analysis_audit/jaad_validity.csv`.
+## Data and materials
 
-### Main findings
+| What | Where |
+|---|---|
+| Video clips (150 city clips, 10 s each), their frames, and a snapshot of the code | [Dropbox folder](https://www.dropbox.com/scl/fo/cl1e4cgdjlj43i5gy4gsy/ALxGI5IgWYm9RRxrfey5AYA?rlkey=cu2udsf5ooey7cp2ff6efu4ut&st=zjngk7m6&dl=0) |
+| Every model answer on the city clips: main audit and the four robustness runs (4,500 files) | [`outputs/vlm/<run>/cities/<model>/`](outputs/vlm/) |
+| Every judge rating (1,206 rated answers, 1,874 needs rated by both judges) | [`outputs/vlm/judge/<judge>/<auditor>/`](outputs/vlm/judge/) |
+| The tables behind every number, as CSV | [`outputs/vlm/analysis_audit/`](outputs/vlm/analysis_audit/) |
+| The city sample and its design (inclusion probabilities, weights, diagnostics) | [`data/city_sample/`](data/city_sample/) |
+| The sampling frame (CROWD mapping of videos to cities) | [`data/mapping_original.csv`](data/mapping_original.csv) |
 
-1. **The crossing item is valid where it can be checked.** On JAAD's labelled clips the iRAP crossing-facility item
-   finds marked crossings with a balanced accuracy of 0.86–0.92 for all five models. *Pedestrians in the road*
-   remains the weakest scene fact (0.57–0.71).
-2. **What is there.** Street lighting is the most common feature (82% of cities by consensus), then a footway set
-   back at least 1 m and a formal footway on both sides (51% each). A crossing facility is in view in 21% of
-   cities and a signalised one in 5%; refuge islands and traffic calming are never agreed on.
-3. **What is missing differs by continent.**
-   - A **crossing where people have reason to cross** is the most common need: 37% of cities, 57% in Africa,
-     41% in Asia, 37% in Europe and 23% in North America.
-   - A **footway** (none or only an informal path) is needed in 50% of African cities and 23% of North American
-     ones, against 10–12% in Europe and Asia. North America's share comes from roads built without footways,
-     not from poor ones.
-   - African cities have the fewest formal footways on both sides (14% against 50–80% elsewhere) and crossings
-     (7%). Africa has 7 cities, South America 5 and Oceania 1, so their intervals are wide.
-4. **Needs follow country indicators.** Over the 75 cities, the number of needs rises with road deaths per
-   100,000 (Spearman's rho 0.34, 0.11 to 0.52) and falls with median age (−0.41) and literacy (−0.46, 51 cities
-   with data). Formal footways on both sides rise with median age and literacy (0.43 each). Inequality (Gini)
-   shows little, except more cities needing footways where it is higher (0.27). These are country-level figures
-   and correlate with national income, so they describe a pattern, not a cause.
-5. **Model bias by region: a slight lean, not a clear gap.**
-   - The five models agree on the crossing items a little less in the rest of the world than in Europe and North
-     America: reason to cross kappa 0.33 against 0.46, crossing quality 0.48 against 0.56, crossing facility 0.48
-     against 0.54, street lighting 0.21 against 0.27. The intervals overlap for each item. With four models the
-     gap was larger; Ministral narrows it.
-   - Qwen3.8 lists needs that match its own item answers in 57% of answers in Europe and North America but in 33%
-     elsewhere; Gemma 4 is consistent in 90% of answers in both, Ministral in 28–29%.
-   - The footway items have kappa near 0 in both regions: the models do not agree on a side's footway type, so the
-     footway results above rest on the clips where at least 4 of 5 happen to agree. Kerb ramps (0.02) and traffic
-     calming are not usable.
-6. **Robust to wording and resolution, less to fewer frames and resampling.** Against the main answers, mean
-   Cohen's kappa over items and models is 0.73 for a reworded prompt and 0.74 at half resolution, but 0.57 with one
-   frame instead of five, and two samples at temperature 0.7 agree with each other at only 0.55. The footway item
-   is the least stable (0.32 between samples). Robustness is about the same in both regions.
-7. **The large models' suggestions hold up; the smaller models' do not.**
-   - Both judges rate most needs listed by Qwen3.8 and Gemma 4 as visible in the frames (70–92%), but most of
-     Molmo2's, InternVL3.5's and Ministral's as not (13–49%). Ministral lists the most needs (621, about four
-     per clip, often one per side), so more is not better.
-   - Almost every suggestion would fix its stated deficit (both judges, 67–99%; judge agreement kappa 0.70).
-     Suggestions are seldom specific to the street (0–61%), and none tells people to behave differently.
-   - The judges disagree on feasibility (kappa 0.06): Gemma rates 76% of the large models' suggestions feasible,
-     Qwen 10–13%. Gemma is more lenient on every auditor by a similar margin, including Qwen's own suggestions,
-     so there is no clear sign that a judge favours its own model.
-   - Judged quality is about the same for both regions (deficit visible 44% against 47%).
+Each answer file holds the model's checkpoint and revision, the prompt version (a hash of prompt and schema), the
+condition (temperature, seed, frames, image size), the frame paths, the raw text and the parsed answer. A clip's
+id is `<YouTube video id>_<start ms>_<length ms>`, so each clip can be traced to its source video. The footage itself
+comes from YouTube via the CROWD dataset; this repository holds no video. JAAD's clips and labels come from
+[the JAAD dataset](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/); the answers on them are not included, but
+their scores are in [`jaad_validity.csv`](outputs/vlm/analysis_audit/jaad_validity.csv).
 
-**Earlier runs (27–28 October).** An open prompt ("list up to five problems") made the models collapse onto one
-problem type and ignore streets without people; a six-type checklist fixed that but gave no basis for comparing
-countries, which is why the audit uses iRAP and MAPS-Mini items. Only Qwen3.8 localised problems reliably
-(83% of its points on a labelled pedestrian in JAAD); Molmo2 and InternVL3.5 mostly returned placeholder points.
-Those results are in commit e3020d3.
+## Models
 
-**Limits.**
-- There is no human ground truth for the city clips; agreement between models is not correctness, and the
-  footway items are not reliable.
-- JAAD is North American and European footage, so validity outside those regions is not checked.
-- Two clips per city, from YouTube driving videos: the figures describe the streets those videos cover, not a
-  city's streets as a whole.
-- Country indicators are national, and literacy is missing for 24 cities.
+All models run on one NVIDIA RTX 5090 (32 GB) with [vLLM](https://github.com/vllm-project/vllm) through its
+OpenAI-compatible API on localhost, at temperature 0, each pinned to a checkpoint revision in
+[`configs/models.toml`](configs/models.toml).
 
-### Figures
-
-Each figure links to its Plotly HTML in `docs/figures/`; download it and open it in a browser for the
-interactive version (GitHub shows HTML files as source).
-
-[![Validity on JAAD](docs/figures/audit_jaad_validity.png)](docs/figures/audit_jaad_validity.html)
-
-**Figure 1.** Scene facts and the iRAP crossing-facility item against JAAD's labels (120 clips): balanced
-accuracy per model, where 0.5 (dotted line) is chance.
-
-[![Infrastructure present by continent](docs/figures/audit_present_by_continent.png)](docs/figures/audit_present_by_continent.html)
-
-**Figure 2.** Share of cities where at least 4 of the 5 models agree a feature is present, by continent (number of
-cities in brackets). Refuge islands and traffic calming are at 0% everywhere and only in the table.
-
-[![Infrastructure needed by continent](docs/figures/audit_needed_by_continent.png)](docs/figures/audit_needed_by_continent.html)
-
-**Figure 3.** Share of cities with each need, by continent. Needs that no city has (blocked footway, better
-crossing, kerb ramps) are only in the table.
-
-[![Country indicators](docs/figures/audit_country_indicators.png)](docs/figures/audit_country_indicators.html)
-
-**Figure 4.** Spearman's rho between what cities have or need and their country's indicators (73–75 cities; 51
-for literacy). An asterisk marks a 95% bootstrap interval that excludes 0; blank cells have too few cities with
-or without the feature.
-
-[![Agreement by region](docs/figures/audit_agreement_by_region.png)](docs/figures/audit_agreement_by_region.html)
-
-**Figure 5.** Agreement between the five models (Fleiss' kappa) on each item, for clips from Europe and North
-America and from the rest of the world, with 95% bootstrap intervals over clips. Road items above the first line,
-footway items (per side) between the lines, crossing items below.
-
-[![Robustness](docs/figures/audit_robustness.png)](docs/figures/audit_robustness.html)
-
-**Figure 6.** Cohen's kappa between the main answers and each changed condition, mean of the five models (city
-clips); "Resampled" compares two temperature-0.7 samples with each other. Traffic calming is almost never
-reported, so its kappa is 0.
-
-[![Suggestion quality](docs/figures/audit_suggestion_quality.png)](docs/figures/audit_suggestion_quality.html)
-
-**Figure 7.** Share of each auditor model's listed needs and suggestions rated yes, by each judge, with 95% Wilson
-intervals. No suggestion was rated as about behaviour, so that criterion is only in the table.
-
-### Tables
-
-120 JAAD clips and 150 city clips (75 cities) answered by all five models.
-
-#### JAAD: balanced accuracy against the labels
-
-| Item | Qwen3.8-27B | Gemma 4 31B | Molmo2-8B | InternVL3.5-8B | Ministral 3 14B |
-|---|---|---|---|---|---|
-| Zebra crossing | 0.92 | 0.90 | 0.92 | 0.91 | 0.86 |
-| Traffic signal | 0.98 | 0.73 | 0.82 | 0.95 | 0.82 |
-| Pedestrians visible | 0.90 | 0.99 | 0.98 | 0.99 | 0.98 |
-| Pedestrians in road | 0.71 | 0.64 | 0.67 | 0.62 | 0.57 |
-| Crossing facility (iRAP item) | 0.92 | 0.88 | 0.92 | 0.89 | 0.86 |
-
-The crossing-facility item counts a marked, signalised or raised crossing and is scored against JAAD's crossing label.
-
-
-#### Infrastructure present, by continent (share of cities; at least 4 of 5 models agree)
-
-|  | Asia (32) | Europe (15) | North America (15) | Africa (7) | South America (5) | Oceania (1) | All (75) |
-|---|---|---|---|---|---|---|---|
-| Formal footway on both sides | 52% (36%–67%) | 60% (43%–77%) | 50% (30%–70%) | 14% (0%–36%) | 80% (60%–100%) | 50% | 51% (41%–61%) |
-| Footway set back ≥ 1 m or behind a barrier | 53% (38%–69%) | 60% (40%–80%) | 47% (27%–67%) | 29% (7%–43%) | 60% (30%–90%) | 50% | 51% (42%–60%) |
-| Footways free of obstruction | 60% (40%–76%) | 50% (23%–77%) | 82% (59%–100%) | 67% (0%–100%) | 80% (60%–100%) | 100% | 65% (54%–76%) |
-| Crossing facility | 17% (8%–27%) | 20% (7%–33%) | 27% (10%–47%) | 7% (0%–21%) | 50% (20%–80%) | 0% | 21% (15%–27%) |
-| Signalised or grade-separated crossing | 3% (0%–8%) | 7% (0%–17%) | 7% (0%–20%) | 0% (0%–0%) | 20% (0%–40%) | 0% | 5% (2%–10%) |
-| Refuge island | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
-| Kerb ramps at the crossing | 12% (0%–38%) | 33% (0%–100%) | 25% (0%–75%) | – | 0% (0%–0%) | – | 18% (0%–39%) |
-| Street lighting | 94% (88%–98%) | 83% (67%–97%) | 70% (50%–87%) | 50% (29%–71%) | 80% (40%–100%) | 100% | 82% (75%–89%) |
-| Traffic calming | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
-| Pedestrian fencing | 5% (0%–12%) | 3% (0%–10%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 3% (0%–7%) |
-| Bike facility | 3% (0%–8%) | 0% (0%–0%) | 7% (0%–17%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 3% (1%–5%) |
-| Transit stop | 12% (5%–20%) | 3% (0%–10%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 6% (3%–10%) |
-
-#### Infrastructure needed, by continent (share of cities)
-
-|  | Asia (32) | Europe (15) | North America (15) | Africa (7) | South America (5) | Oceania (1) | All (75) |
-|---|---|---|---|---|---|---|---|
-| Footway (none or informal) | 12% (5%–22%) | 10% (0%–20%) | 23% (10%–40%) | 50% (21%–79%) | 10% (0%–30%) | 0% | 17% (11%–25%) |
-| Clear a blocked footway | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
-| Repair trip hazards | 2% (0%–5%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 10% (0%–30%) | 0% | 1% (0%–3%) |
-| Crossing where people need one | 41% (27%–55%) | 37% (17%–57%) | 23% (7%–43%) | 57% (36%–79%) | 40% (10%–70%) | 0% | 37% (29%–46%) |
-| Better crossing | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
-| Refuge on a wide road | 5% (0%–9%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 10% (0%–30%) | 0% | 3% (1%–5%) |
-| Kerb ramps | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% (0%–0%) | 0% | 0% (0%–0%) |
-| Street lighting | 2% (0%–5%) | 3% (0%–10%) | 10% (0%–27%) | 7% (0%–21%) | 0% (0%–0%) | 0% | 4% (1%–8%) |
-
-Cities are the unit: each city's two clips are averaged, and intervals come from a bootstrap over cities. Oceania is one city.
-
-
-#### Infrastructure and country indicators (Spearman's rho over cities, 95% bootstrap interval)
-
-|  | Road deaths per 100k (n = 73) | Median age (n = 75) | Gini index (n = 74) | Literacy rate (n = 51) |
-|---|---|---|---|---|
-| Formal footway on both sides | -0.17 (-0.39 to 0.07) | 0.43 (0.22 to 0.61) | -0.04 (-0.27 to 0.21) | 0.43 (0.19 to 0.62) |
-| Footway set back ≥ 1 m or behind a barrier | -0.18 (-0.41 to 0.06) | 0.38 (0.16 to 0.58) | -0.16 (-0.37 to 0.08) | 0.34 (0.10 to 0.56) |
-| Footways free of obstruction | 0.01 (-0.28 to 0.27) | -0.06 (-0.33 to 0.25) | -0.01 (-0.27 to 0.27) | -0.07 (-0.43 to 0.29) |
-| Crossing facility | -0.22 (-0.42 to 0.01) | 0.24 (0.02 to 0.44) | 0.01 (-0.22 to 0.25) | 0.11 (-0.16 to 0.36) |
-| Signalised or grade-separated crossing | -0.05 (-0.30 to 0.21) | -0.02 (-0.20 to 0.17) | 0.10 (-0.17 to 0.33) | -0.02 (-0.23 to 0.22) |
-| Street lighting | -0.26 (-0.44 to -0.04) | 0.37 (0.17 to 0.56) | -0.27 (-0.48 to -0.05) | 0.28 (-0.01 to 0.53) |
-| Transit stop | -0.03 (-0.29 to 0.23) | 0.18 (-0.00 to 0.35) | -0.23 (-0.40 to -0.06) | 0.34 (0.13 to 0.51) |
-| Needed: Footway (none or informal) | 0.22 (-0.01 to 0.42) | -0.39 (-0.59 to -0.17) | 0.27 (0.06 to 0.46) | -0.53 (-0.72 to -0.27) |
-| Needed: Crossing where people need one | 0.21 (-0.01 to 0.42) | -0.33 (-0.51 to -0.12) | 0.02 (-0.21 to 0.25) | -0.32 (-0.55 to -0.06) |
-| Needed: Street lighting | 0.11 (-0.09 to 0.29) | -0.06 (-0.27 to 0.15) | -0.01 (-0.24 to 0.18) | – |
-| Number of needs | 0.34 (0.11 to 0.52) | -0.41 (-0.59 to -0.19) | 0.19 (-0.06 to 0.42) | -0.46 (-0.67 to -0.19) |
-
-Country figures from the city sample (CROWD mapping); a positive rho means the item is more common where the indicator is higher.
-
-
-#### Agreement between the five models, by region (Fleiss' kappa, city clips, 95% interval)
-
-| Item | All clips | Europe & North America (60 clips) | Rest of the world (90 clips) |
+| Model | Developer (country) | Run as | Checkpoint |
 |---|---|---|---|
-| Area type | 0.74 | 0.70 (0.50 to 0.82) | 0.78 (0.25 to 0.95) |
-| Land use | 0.37 | 0.38 (0.23 to 0.49) | 0.35 (0.24 to 0.45) |
-| Lanes | 0.38 | 0.28 (0.17 to 0.36) | 0.37 (0.29 to 0.46) |
-| Median | 0.14 | 0.03 (-0.06 to 0.12) | 0.18 (0.10 to 0.26) |
-| Street lighting | 0.24 | 0.27 (0.15 to 0.38) | 0.21 (0.11 to 0.30) |
-| Traffic calming | -0.00 | -0.00 (-0.01 to -0.00) | -0.00 (-0.01 to -0.00) |
-| Pedestrian fencing | 0.30 | 0.28 (0.07 to 0.44) | 0.30 (0.19 to 0.40) |
-| Transit stops | 0.28 | 0.31 (0.05 to 0.53) | 0.25 (0.14 to 0.35) |
-| Bike facility | 0.43 | 0.36 (0.14 to 0.59) | 0.54 (0.12 to 0.83) |
-| Footway (per side) | 0.03 | 0.02 (-0.03 to 0.06) | 0.04 (-0.01 to 0.08) |
-| Footway obstruction (per side) | 0.10 | 0.10 (0.04 to 0.15) | 0.10 (0.06 to 0.15) |
-| Trip hazards (per side) | 0.05 | 0.04 (-0.03 to 0.09) | 0.05 (0.00 to 0.10) |
-| Reason to cross | 0.40 | 0.46 (0.30 to 0.59) | 0.33 (0.19 to 0.45) |
-| Crossing facility | 0.50 | 0.54 (0.42 to 0.64) | 0.48 (0.40 to 0.56) |
-| Crossing quality | 0.51 | 0.56 (0.45 to 0.66) | 0.48 (0.38 to 0.57) |
-| Kerb ramps | 0.02 | 0.01 (-0.05 to 0.06) | 0.03 (-0.02 to 0.07) |
+| Qwen3.8-27B | Alibaba (China) | 4-bit, W4A16 | [RedHatAI/Qwen3.8-27B-INT4](https://huggingface.co/RedHatAI/Qwen3.8-27B-INT4) |
+| Gemma 4 31B | Google (US) | 4-bit, quantisation-aware | [google/gemma-4-31B-it-qat-w4a16-ct](https://huggingface.co/google/gemma-4-31B-it-qat-w4a16-ct) |
+| Molmo2-8B | Allen Institute for AI (US) | BF16 | [allenai/Molmo2-8B](https://huggingface.co/allenai/Molmo2-8B) |
+| InternVL3.5-8B | Shanghai AI Laboratory (China) | BF16 | [OpenGVLab/InternVL3_5-8B-HF](https://huggingface.co/OpenGVLab/InternVL3_5-8B-HF) |
+| Ministral 3 14B | Mistral AI (France) | FP8, the developer's release | [mistralai/Ministral-3-14B-Instruct-2512](https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512) |
 
-#### Listed needs against the item answers, by region
+Ministral runs with Mistral's own tokeniser and weight format, as Mistral documents it; with the Hugging Face
+tokeniser its answers were valid JSON but nonsense. EXAONE 4.5 33B (LG AI Research, South Korea) was tried as a
+sixth model and excluded: under vLLM 0.32 it answered text correctly but returned nonsense for every image.
 
-| Model | Region | Needs per clip | Item needs listed | Listed needs backed by an item | Answers fully consistent |
-|---|---|---|---|---|---|
-| Qwen3.8-27B | Europe & North America | 1.4 | 86% | 80% | 57% |
-| Qwen3.8-27B | Rest of the world | 1.6 | 83% | 75% | 33% |
-| Gemma 4 31B | Europe & North America | 1.4 | 94% | 100% | 90% |
-| Gemma 4 31B | Rest of the world | 1.8 | 95% | 100% | 90% |
-| Molmo2-8B | Europe & North America | 0.6 | 67% | 24% | 43% |
-| Molmo2-8B | Rest of the world | 0.6 | 88% | 28% | 52% |
-| InternVL3.5-8B | Europe & North America | 1.2 | 40% | 25% | 15% |
-| InternVL3.5-8B | Rest of the world | 1.5 | 53% | 37% | 21% |
-| Ministral 3 14B | Europe & North America | 1.6 | 94% | 57% | 28% |
-| Ministral 3 14B | Rest of the world | 2.0 | 92% | 61% | 29% |
+## Reproducing the study
 
-#### Robustness: Cohen's kappa with the main answers (city clips, mean of the five models)
+### Setup
 
-| Item | Reworded prompt | One frame | Half resolution | Resampled (T = 0.7) |
-|---|---|---|---|---|
-| Area type | 0.85 | 0.84 | 0.91 | 0.85 |
-| Land use | 0.89 | 0.75 | 0.85 | 0.55 |
-| Lanes | 0.84 | 0.78 | 0.85 | 0.67 |
-| Median | 0.82 | 0.65 | 0.79 | 0.49 |
-| Street lighting | 0.87 | 0.60 | 0.83 | 0.52 |
-| Traffic calming | 0.39 | 0.00 | 0.22 | 0.19 |
-| Pedestrian fencing | 0.63 | 0.64 | 0.66 | 0.57 |
-| Transit stops | 0.90 | 0.54 | 0.77 | 0.74 |
-| Bike facility | 0.79 | 0.35 | 0.68 | 0.57 |
-| Footway | 0.50 | 0.48 | 0.71 | 0.32 |
-| Footway obstruction | 0.57 | 0.49 | 0.69 | 0.39 |
-| Trip hazards | 0.53 | 0.48 | 0.67 | 0.38 |
-| Reason to cross | 0.80 | 0.64 | 0.76 | 0.64 |
-| Crossing facility | 0.77 | 0.64 | 0.76 | 0.66 |
-| Crossing quality | 0.77 | 0.64 | 0.79 | 0.73 |
-| Kerb ramps | 0.54 | 0.43 | 0.67 | 0.40 |
-
-#### Robustness by region (mean Cohen's kappa over items and models, city clips)
-
-| Change | Europe & North America | Rest of the world |
-|---|---|---|
-| Reworded prompt | 0.73 | 0.72 |
-| One frame | 0.59 | 0.56 |
-| Half resolution | 0.74 | 0.75 |
-| Resampled (T = 0.7) | 0.57 | 0.54 |
-
-"Resampled" compares two runs at temperature 0.7 with each other, not with the main run.
-
-
-#### Suggestions: share rated yes by each judge (city clips)
-
-
-##### Judge: Qwen3.8-27B
-
-| Criterion | Qwen3.8-27B (n = 307) | Gemma 4 31B (n = 282) | Molmo2-8B (n = 289) | InternVL3.5-8B (n = 375) | Ministral 3 14B (n = 621) |
-|---|---|---|---|---|---|
-| Deficit visible | 70% | 71% | 22% | 13% | 13% |
-| Fixes the deficit | 97% | 98% | 96% | 67% | 97% |
-| Specific to the street | 41% | 18% | 3% | 0% | 2% |
-| Feasible | 13% | 10% | 1% | 1% | 2% |
-| About behaviour | 0% | 0% | 0% | 0% | 0% |
-
-##### Judge: Gemma 4 31B
-
-| Criterion | Qwen3.8-27B (n = 307) | Gemma 4 31B (n = 282) | Molmo2-8B (n = 289) | InternVL3.5-8B (n = 375) | Ministral 3 14B (n = 621) |
-|---|---|---|---|---|---|
-| Deficit visible | 92% | 91% | 34% | 47% | 49% |
-| Fixes the deficit | 96% | 99% | 95% | 72% | 94% |
-| Specific to the street | 61% | 45% | 9% | 6% | 7% |
-| Feasible | 76% | 76% | 51% | 38% | 54% |
-| About behaviour | 0% | 0% | 0% | 0% | 0% |
-
-##### Judged quality by region (both judges, all auditors)
-
-| Criterion | Europe & North America (n = 1356) | Rest of the world (n = 2392) |
-|---|---|---|
-| Deficit visible | 44% | 47% |
-| Fixes the deficit | 88% | 92% |
-| Specific to the street | 13% | 18% |
-| Feasible | 30% | 31% |
-| About behaviour | 0% | 0% |
-
-##### Agreement between the judges (1874 suggestions rated by both)
-
-| Criterion | Same rating | Cohen's kappa |
-|---|---|---|
-| Deficit visible | 68% | 0.40 |
-| Fixes the deficit | 95% | 0.70 |
-| Specific to the street | 83% | 0.40 |
-| Feasible | 47% | 0.06 |
-| About behaviour | 100% | 1.00 |
-
-##### Self-preference: a judge's yes-share minus the other judge's, in points
-
-| Judge | Criterion | On its own model | On the models that do not judge |
-|---|---|---|---|
-| Qwen3.8-27B | Deficit visible | -22 | -28 |
-| Qwen3.8-27B | Fixes the deficit | +1 | -0 |
-| Qwen3.8-27B | Specific to the street | -21 | -5 |
-| Qwen3.8-27B | Feasible | -62 | -46 |
-| Qwen3.8-27B | About behaviour | +0 | +0 |
-| Gemma 4 31B | Deficit visible | +20 | +28 |
-| Gemma 4 31B | Fixes the deficit | +1 | +0 |
-| Gemma 4 31B | Specific to the street | +27 | +5 |
-| Gemma 4 31B | Feasible | +67 | +46 |
-| Gemma 4 31B | About behaviour | +0 | +0 |
-
-## Setup
-
-The project uses [uv](https://docs.astral.sh/uv/) (Python 3.12):
+The project uses [uv](https://docs.astral.sh/uv/) with Python 3.12; vLLM has its own environment in
+[`serve/`](serve/).
 
 ```bash
 uv sync
-cp default.secret secret      # then fill in the file-server login (never commit it)
-uv run pytest                 # tests, no network needed
+uv run pytest                  # tests, no network or GPU needed
+cd serve && uv sync            # vLLM, on the GPU machine (Linux or WSL2, CUDA 12.8+ for Blackwell)
 ```
 
-Settings live in `default.config`; to change one locally, copy it to `config` and edit
-that (an unknown setting there is an error). Code and text follow [AGENTS.md](AGENTS.md):
-British English, Plotly for every figure, uv for every package operation.
+Settings are in [`default.config`](default.config); to change one locally, copy it to `config` and edit that (an
+unknown setting is an error). Downloading CROWD footage needs a login to the CROWD file server: copy
+`default.secret` to `secret` and fill it in (both `config` and `secret` are ignored by git).
 
-## Getting the footage
+### The analysis from the published answers
 
-Videos and CROWD's YOLO track CSVs come from the CROWD file server
-(`files.mobility-squad.com`). It is an authenticated HTTP server, though its login is
-stored as `ftp_username` / `ftp_password` in `secret`, as in the other CROWD projects.
-`vlm_street_audit.file_server.FileServer` looks in this order:
-
-1. the local drives (`video_dirs`, `bbox_dirs`; they exist on lin4080),
-2. the download folders (`data/videos/`, `data/bbox/`),
-3. the server: the file's URL under each alias (`tue4`, `tue5`, `tue3`, `tue2`, `tue1` for
-   videos, `data` for track files), then a walk of the server's folder pages.
-
-Downloads are written to a `.part` file and renamed only when complete.
-
-The 75 cities hold about 5,500 videos, so fetch a selection: the videos with the most
-qualifying footage per city.
+The published answers and ratings are enough to recompute every table and figure, without a GPU:
 
 ```bash
-uv run python scripts/fetch_data.py --dry-run                   # what would be fetched
-uv run python scripts/fetch_data.py --videos-per-city 1 --tracks
-uv run python scripts/fetch_data.py --country Japan --videos-per-city 3
+uv run python scripts/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/
+uv run python scripts/paper_figures.py    # the paper's six figures in docs/figures/paper/ (Figure 1 needs the frames)
 ```
 
-## Snippets for the VLMs
+The JAAD validity table also needs JAAD's labels for the sampled clips (`data/clip_sets/jaad_labels.json`, built
+by `scripts/build_clip_sets.py` from the JAAD annotations). Static PNGs need a Chromium browser for Kaleido; set
+`BROWSER_PATH` if Chrome is not installed, or pass `--no-png` to `analyse_audit.py` for HTML only.
 
-The VLMs see short snippets, not whole drives. They are chosen the way
-opticarvis-global chooses its candidate clips (`src/candidates/` there), retuned for
-pedestrian problems:
-
-1. **Windows**: 10 s windows every 5 s inside each mapped (daytime, car) segment.
-2. **Semantic rank**: SigLIP2 (`google/siglip2-base-patch16-224`) embeds keyframes at
-   least 2 s apart. For each window, each prompt group in
-   [`configs/snippet_prompts.json`](configs/snippet_prompts.json) (pavement condition,
-   pavement obstruction, crossing facilities, pedestrian exposure, accessibility,
-   vulnerable users) is scored by how much it beats the best routine-scene prompt
-   (motorway, countryside, tunnel, tidy street) on the same keyframes.
-3. **Tie break**: packet energy, the encoded bytes per second from ffprobe (no decoding).
-4. **One window per event**: the best window claims its neighbours within 30 s.
-5. **Per video**: the 3 best events plus 1 random window. The random ones are not
-   chosen for problems, so they show what an ordinary stretch looks like and keep
-   prevalence estimates honest.
-6. **Output**: an H.264 clip and 1 frame per second as JPEGs, plus
-   `data/snippets/snippets.csv` with every snippet's scores and selection type.
-   A video fetched into `data/videos/` is deleted once its snippets are cut (it can be
-   fetched again at any time); `--keep-downloads` keeps it. Videos on the local drives stay.
+### The full pipeline
 
 ```bash
-uv run python scripts/make_snippets.py --videos-per-city 1            # local videos only
-uv run python scripts/make_snippets.py --videos-per-city 1 --download # fetch missing ones
-uv run python scripts/make_snippets.py --local-only                  # only videos already on disk
-uv run python scripts/make_snippets.py --video some_clip.mp4          # one file, whole length
+uv run python scripts/sample_cities.py                         # draw the 75 cities (seed 20260818, alpha 0.5)
+uv run python scripts/fetch_data.py --videos-per-city 1        # fetch each city's video with the most footage
+uv run python scripts/make_snippets.py --videos-per-city 1     # rank 10 s windows, cut clips and frames
+uv run python scripts/build_clip_sets.py                       # city and JAAD clip sets
+uv run python scripts/run_vlm.py --start-server --models all --sets jaad cities          # main audit
+uv run python scripts/run_vlm.py --start-server --prompt audit_reworded --tag audit-reworded
+uv run python scripts/run_vlm.py --start-server --tag audit-1frame --frames 3
+uv run python scripts/run_vlm.py --start-server --tag audit-640px --max-side 640
+uv run python scripts/run_vlm.py --start-server --tag audit-t07-s1 --temperature 0.7 --seed 1 --sets cities
+uv run python scripts/run_vlm.py --start-server --tag audit-t07-s2 --temperature 0.7 --seed 2 --sets cities
+uv run python scripts/judge_suggestions.py --start-server       # Qwen3.8 and Gemma 4 rate every listed need
+uv run python scripts/analyse_audit.py
+uv run python scripts/paper_figures.py
 ```
 
-All numbers are settings in `default.config` (`snippet_*`, `semantic_*`). On wsl5090
-a 49-minute drive takes about a minute (591 windows); keyframe embeddings are cached in
-`data/embeddings/`, so changing the prompts or the selection reruns quickly.
+`run_vlm.py --start-server` starts vLLM for each model in turn, answers every clip and stops it; answered clips
+are skipped, so a stopped run resumes where it left off. On one RTX 5090, each model's share of the audit (1,380
+answers) takes about half a day to a day.
 
-## Figures
+<details>
+<summary><b>How the cities are drawn</b></summary>
 
-All figures are made with Plotly and saved by `vlm_street_audit.figures.save_figure` to
-`outputs/figures/` as HTML (static PNG/PDF through Kaleido on request). The README's figures are
-in `docs/figures/` as PNG and interactive HTML.
+Cities are drawn from the CROWD mapping ([`data/mapping_original.csv`](data/mapping_original.csv), from
+[opticarvis-global](https://github.com/Shaadalam9/opticarvis-global)) with the Local Pivotal Method
+([lpm-sampling](https://github.com/M-Colley/lpm-sampling)), a spatially balanced probability sample, with inclusion
+probability proportional to population^0.5 (at 75 cities, 0.5 nearly doubles the effective sample size against 0.75,
+42 against 24, for about 8% sparser coverage).
 
-```bash
-uv run python scripts/plot_city_sample.py    # world map of the drawn cities
-uv run python scripts/analyse_audit.py       # the Results: tables, docs/figures/audit_*.png and *.html
-```
-
-Static PNGs need a Chromium browser for Kaleido. If Chrome is not installed, point
-`BROWSER_PATH` at another one (e.g. Brave or Edge), or pass `--no-png` for HTML only.
-
-## Choosing the cities
-
-Cities, and with them the countries, are drawn from the CROWD mapping
-(`data/mapping_original.csv`, copied from
-[opticarvis-global](https://github.com/Shaadalam9/opticarvis-global/blob/main/docs/mapping_original.csv))
-with the same design as opticarvis-global (see its
-[docs/CITY_SAMPLING.md](https://github.com/Shaadalam9/opticarvis-global/blob/main/docs/CITY_SAMPLING.md)):
-a spatially balanced probability sample drawn with the Local Pivotal Method
-([lpm-sampling](https://github.com/M-Colley/lpm-sampling)), with inclusion
-probability proportional to population^0.5 (opticarvis-global uses 0.75; at 75
-cities 0.5 nearly doubles the effective sample size, 42 vs 24, for ~8% sparser coverage).
-
-- Eligibility comes first: at least 1 h of daytime footage of vehicle type 0, valid
-  coordinates and population. Filtering after the draw would break the probabilities.
+- Eligibility comes first: at least 1 h of daytime car footage, valid coordinates and population. Filtering after the
+  draw would break the probabilities.
 - No one-city-per-country rule: large countries get several cities, small ones at most one.
 - `1/pi` is each city's design weight, kept in `design_manifest.csv`.
-- A drawn city with no usable footage is reported as missing, never swapped for a neighbour.
+- A drawn city with no usable footage would be reported as missing, never swapped for a neighbour (none was).
 
-```bash
-uv run python scripts/sample_cities.py            # defaults: n=75, seed 20260818, alpha 0.5, LPM2
-uv run python scripts/sample_cities.py --help     # change n, alpha, seed, method, filters
-```
-
-The design follows opticarvis-global, which draws 150; this project draws 75 cities
-(43 countries with the defaults).
-Output in `data/city_sample/`:
-
-| File | Contents |
+| File in `data/city_sample/` | Contents |
 |---|---|
 | `mapping.csv` | The drawn cities in mapping format, holding only the qualifying footage |
 | `design_manifest.csv` | The drawn cities with `pi` and `design_weight` |
@@ -521,26 +270,76 @@ Output in `data/city_sample/`:
 | `selected_cities_by_country.csv` | Cities drawn per country |
 | `diagnostics.txt` | Spatial balance, nearest-city distance, effective sample size, weights |
 
-## Structure
+</details>
+
+<details>
+<summary><b>How the clips are chosen</b></summary>
+
+1. **Windows**: 10 s windows every 5 s inside each mapped daytime car segment.
+2. **Semantic rank**: SigLIP2 (`google/siglip2-base-patch16-224`) embeds keyframes at least 2 s apart. Each window
+   is scored by how much the prompt groups in [`configs/snippet_prompts.json`](configs/snippet_prompts.json)
+   (footway condition, obstruction, crossings, pedestrian exposure, accessibility, vulnerable users) beat the best
+   routine-scene prompt (motorway, countryside, tunnel, tidy street) on the same keyframes.
+3. **Tie break**: packet energy, the encoded bytes per second from ffprobe.
+4. **One window per event**: the best window claims its neighbours within 30 s.
+5. **Per video**: the best-ranked events plus one random window. The random windows are not chosen for problems,
+   so they show what an ordinary stretch looks like and keep prevalence estimates honest.
+
+Each snippet is written as an H.264 clip and JPEG frames, with every snippet's scores in `data/snippets/snippets.csv`.
+Downloaded videos are deleted once cut (`--keep-downloads` keeps them). All numbers are settings in
+`default.config` (`snippet_*`, `semantic_*`).
+
+</details>
+
+## Repository structure
 
 ```
-configs/       models.toml (the VLMs), snippet_prompts.json (snippet ranking)
-scripts/       sample_cities.py, fetch_data.py, make_snippets.py, build_clip_sets.py, run_vlm.py,
-               judge_suggestions.py, analyse_audit.py (analyse.py: the earlier prompts), plot_city_sample.py
-src/vlm_street_audit/       config, file_server, mapping, snippets, semantics, figures
-tests/         pytest, no network
-default.config / default.secret   settings and an empty login (local copies: config, secret)
-data/mapping_original.csv   the CROWD mapping (sampling frame)
-data/city_sample/           the drawn sample and its design files
-data/videos/   downloaded footage, deleted once cut (not tracked in git)
-data/bbox/     downloaded YOLO track CSVs (not tracked in git)
-data/snippets/ snippet clips, frames and snippets.csv (not tracked in git)
-data/frames/   extracted frames (not tracked in git)
-prompts/       prompt templates for detection, localisation and suggestions
-notebooks/     exploration and analysis
-outputs/       model responses and results (not tracked in git)
+configs/
+  models.toml              the five VLMs: checkpoints, revisions, serving settings
+  snippet_prompts.json     prompts that rank the 10 s windows
+data/
+  mapping_original.csv     the sampling frame (CROWD mapping)
+  city_sample/             the drawn cities and their design files
+docs/figures/              the README's figures (PNG and interactive HTML); paper/ holds the paper's six
+outputs/vlm/
+  audit*/cities/<model>/   the model answers (main run and robustness runs)
+  judge/<judge>/<auditor>/ the judges' ratings
+  analysis_audit/          every table, as CSV and Markdown
+scripts/                   sample_cities, fetch_data, make_snippets, build_clip_sets, run_vlm,
+                           judge_suggestions, analyse_audit, paper_figures, plot_city_sample
+serve/                     vLLM environment and launcher (serve.py)
+src/vlm_street_audit/      prompt and schema (vlm), statistics (evaluation), snippets, semantics,
+                           JAAD labels, CROWD file server, configuration, figure style
+tests/                     pytest, no network or GPU
 ```
+
+Downloaded videos, snippets, frames and logs stay out of git. Code and text follow [AGENTS.md](AGENTS.md):
+British English, Plotly for every figure, uv for every package operation, on-device models only.
+
+## Citation
+
+If you use this code or data, please cite the paper:
+
+```bibtex
+@inproceedings{alam2027pedestrians,
+  author    = {Alam, Md Shadab and Rouchitsas, Alexandros and Bazilinskyy, Pavlo},
+  title     = {What Pedestrians Lack Around the World: Auditing Street Infrastructure in 75 Cities
+               with On-Device Vision-Language Models},
+  booktitle = {Human Interaction and Emerging Technologies (IHIET-AI 2027): Artificial Intelligence
+               and Future Applications},
+  address   = {Palma de Mallorca, Spain},
+  publisher = {AHFE International},
+  year      = {2027},
+  note      = {Accepted for publication}
+}
+```
+
+Citation metadata is also in [`CITATION.cff`](CITATION.cff).
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). Security reports: see [SECURITY.md](SECURITY.md).
+The code is released under the MIT licence, see [LICENSE](LICENSE). The model answers and ratings are released under
+the same terms. The video footage belongs to its creators on YouTube and is not redistributed here. Security reports:
+see [SECURITY.md](SECURITY.md).
+
+Contact: Md Shadab Alam, Eindhoven University of Technology, [m.s.alam@tue.nl](mailto:m.s.alam@tue.nl).
