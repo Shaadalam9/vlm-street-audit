@@ -1,0 +1,65 @@
+{
+ "clip_id": "0ccMXmE7fYg_03038000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 900,
+   "y": 300,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights visible along the road in an urban or semi-urban setting",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety during nighttime."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by trees and a fence, making it impossible to confirm the absence of a footway, and a raised crossing does not address the lack of a continuous sidewalk."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obscured by trees and a guardrail, making it impossible to confirm the absence of a footway, and a raised crossing does not address the lack of a continuous sidewalk."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Only one street light is visible in the distance, so it is unclear if the road is unlit, but adding street lighting would address the deficit if it exists."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "RKIPWCWldzE_01836000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by stalls and goods",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by stalls and goods",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by stalls and goods on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction by stalls and goods on the footway",
+   "frame": 1,
+   "x": 750,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 1,
+   "x": 150,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing the road without a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to provide a safe crossing facility for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is heavily encroached upon by restaurant stalls and signage, making the usable path very narrow."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obstructed by parked cars and commercial activity, leaving little to no dedicated footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Stalls and goods are clearly visible blocking the pedestrian area on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side is blocked by vehicles and equipment, hindering pedestrian flow."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific uneven sections or trip hazards on the ground."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The ground surface on the right is too obscured by vehicles and objects to determine if there are trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road haphazardly without any marked crossing facilities."
+  }
+ ],
+ "error": null
+}

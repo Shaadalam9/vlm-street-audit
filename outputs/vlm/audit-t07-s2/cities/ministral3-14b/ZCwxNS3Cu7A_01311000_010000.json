@@ -1,0 +1,122 @@
+{
+ "clip_id": "ZCwxNS3Cu7A_01311000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_002.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_004.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_006.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_008.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is less than 1m wide\",\"frame\":4,\"x\":750,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Extend the narrow right sidewalk to at least 1.5m width for safe pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction from people and potential parked vehicles on narrow sidewalk\",\"frame\":2,\"x\":300,\"y\":480,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the left sidewalk remains clear of obstructions and maintain its width for pedestrian access.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven surface seen on the narrow right footway\",\"frame\":3,\"x\":600,\"y\":400,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and smooth the uneven sections on the right footway to eliminate trip hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"zebra crossing obstructed and poorly visible due to parked or stopped vehicles\",\"frame\":1,\"x\":500,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement pedestrian signal lights and clear visibility for the crossing, ensuring vehicles do not obstruct pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"missing kerb ramps at zebra crossing\",\"frame\":5,\"x\":450,\"y\":430,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs or tactile paving at the crossing to aid pedestrian access and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is less than 1m wide",
+    "frame": 4,
+    "x": 750,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Extend the narrow right sidewalk to at least 1.5m width for safe pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction from people and potential parked vehicles on narrow sidewalk",
+    "frame": 2,
+    "x": 300,
+    "y": 480,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the left sidewalk remains clear of obstructions and maintain its width for pedestrian access."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven surface seen on the narrow right footway",
+    "frame": 3,
+    "x": 600,
+    "y": 400,
+    "measure": "repair_footway",
+    "suggestion": "Repair and smooth the uneven sections on the right footway to eliminate trip hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "zebra crossing obstructed and poorly visible due to parked or stopped vehicles",
+    "frame": 1,
+    "x": 500,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Implement pedestrian signal lights and clear visibility for the crossing, ensuring vehicles do not obstruct pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "missing kerb ramps at zebra crossing",
+    "frame": 5,
+    "x": 450,
+    "y": 430,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs or tactile paving at the crossing to aid pedestrian access and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 24.32,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7925,
+  "completion_tokens": 596,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

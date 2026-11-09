@@ -1,0 +1,65 @@
+{
+ "clip_id": "DtA5JoPL7U8_01247000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk on the roadway",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk on the roadway",
+   "frame": 1,
+   "x": 900,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights visible along the road in an urban/rural residential area",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the measure 'add_raised_crossing' does not address the lack of a footway; a sidewalk is needed instead."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but the measure 'add_raised_crossing' does not address the lack of a footway; a sidewalk is needed instead."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No street lighting is visible in the frames, and the suggested change directly addresses this."
+  }
+ ],
+ "error": null
+}

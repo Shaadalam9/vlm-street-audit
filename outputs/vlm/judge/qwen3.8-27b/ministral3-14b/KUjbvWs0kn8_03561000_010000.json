@@ -1,0 +1,47 @@
+{
+ "clip_id": "KUjbvWs0kn8_03561000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked pedestrian crossing is hard to see and lacks clear visibility due to parked cars and traffic.",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install raised platforms and reflective markings at the crossing to enhance visibility and ensure drivers stop."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "The crossing lacks dropped kerbs, making it difficult for pedestrians with mobility issues to cross safely.",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at the crossing to ensure accessibility for all pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the crossing clearly enough to confirm the deficit, and the suggestion is a generic measure that would apply to any street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the crossing clearly enough to confirm the deficit, and the suggestion is a generic measure that would apply to any street."
+  }
+ ],
+ "error": null
+}

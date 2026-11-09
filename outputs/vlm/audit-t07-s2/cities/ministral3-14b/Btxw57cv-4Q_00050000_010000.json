@@ -1,0 +1,152 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00050000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no-purpose-built continuous sidewalk, informal paths seen with trip hazards\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install continuous, usable sidewalks with a width of at least 1.5m on both sides of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no-purpose-built continuous sidewalk, informal paths seen with trip hazards\",\"frame\":1,\"x\":750,\"y\":500,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install continuous, usable sidewalks with a width of at least 1.5m on both sides of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction by parked vehicles and stalls blocking informal paths\",\"frame\":3,\"x\":120,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions on informal paths to enable clear pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction by parked vehicles and stalls blocking informal paths\",\"frame\":3,\"x\":880,\"y\":480,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions on informal paths to enable clear pedestrian movement.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"broken and uneven sections on informal paths\",\"frame\":3,\"x\":100,\"y\":490,\"measure\":\"repair_footway\",\"suggestion\":\"Repair or resurface uneven sections of informal paths to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"broken and uneven sections on informal paths\",\"frame\":3,\"x\":700,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repair or resurface uneven sections of informal paths to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"pedestrians crossing in absence of a crossing facility\",\"frame\":4,\"x\":450,\"y\":370,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Introduce a marked pedestrian crossing with signalisation to facilitate safe crossing at busy intersections.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"dropped kerbs absent at informal crossing\",\"frame\":5,\"x\":440,\"y\":430,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs and tactile paving at pedestrian crossings to ensure accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no-purpose-built continuous sidewalk, informal paths seen with trip hazards",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install continuous, usable sidewalks with a width of at least 1.5m on both sides of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no-purpose-built continuous sidewalk, informal paths seen with trip hazards",
+    "frame": 1,
+    "x": 750,
+    "y": 500,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install continuous, usable sidewalks with a width of at least 1.5m on both sides of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction by parked vehicles and stalls blocking informal paths",
+    "frame": 3,
+    "x": 120,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions on informal paths to enable clear pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction by parked vehicles and stalls blocking informal paths",
+    "frame": 3,
+    "x": 880,
+    "y": 480,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions on informal paths to enable clear pedestrian movement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "broken and uneven sections on informal paths",
+    "frame": 3,
+    "x": 100,
+    "y": 490,
+    "measure": "repair_footway",
+    "suggestion": "Repair or resurface uneven sections of informal paths to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "broken and uneven sections on informal paths",
+    "frame": 3,
+    "x": 700,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repair or resurface uneven sections of informal paths to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "pedestrians crossing in absence of a crossing facility",
+    "frame": 4,
+    "x": 450,
+    "y": 370,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Introduce a marked pedestrian crossing with signalisation to facilitate safe crossing at busy intersections."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "dropped kerbs absent at informal crossing",
+    "frame": 5,
+    "x": 440,
+    "y": 430,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs and tactile paving at pedestrian crossings to ensure accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.8,
+ "usage": {
+  "prompt_tokens": 5919,
+  "total_tokens": 6743,
+  "completion_tokens": 824,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

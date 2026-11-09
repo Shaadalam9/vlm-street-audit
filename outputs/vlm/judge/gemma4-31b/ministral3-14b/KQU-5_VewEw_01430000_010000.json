@@ -1,0 +1,47 @@
+{
+ "clip_id": "KQU-5_VewEw_01430000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "Dropped kerbs are missing at the pedestrian crossing",
+   "frame": 5,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the pedestrian crossing to ensure accessibility for people with disabilities and mobility aids."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "Wide road with 4 or more lanes and no refuge island for pedestrians",
+   "frame": 5,
+   "x": 500,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians crossing the wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The suggestion to add a raised crossing is a different measure than adding kerb ramps, though both address accessibility."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with multiple lanes and lacks a central refuge for pedestrians."
+  }
+ ],
+ "error": null
+}

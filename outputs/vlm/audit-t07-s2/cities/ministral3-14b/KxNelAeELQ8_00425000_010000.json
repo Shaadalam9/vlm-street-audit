@@ -1,0 +1,122 @@
+{
+ "clip_id": "KxNelAeELQ8_00425000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_002.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_004.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_006.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_008.jpg",
+  "data/snippets/KxNelAeELQ8/KxNelAeELQ8_00425000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway; pedestrians walking on the roadway.\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous and usable sidewalk along the left side with a physical barrier to separate pedestrians from the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Sidewalk partly blocked by parked vehicles and street stalls.\",\"frame\":4,\"x\":700,\"y\":450,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Remove obstructions and build a physical barrier or widen the sidewalk to ensure safe pedestrian movement.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Uneven sections on the sidewalk that pose trip hazards.\",\"frame\":5,\"x\":800,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the sidewalk to eliminate trip hazards and create a smooth walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians crossing without marked or protected crossings.\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install marked pedestrian crossings with dropped kerbs and refuge islands to improve crossing safety.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Street lighting is only some and inadequate in places.\",\"frame\":1,\"x\":300,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install ample street lighting along the road to enhance safety during low light and nighttime conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway; pedestrians walking on the roadway.",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous and usable sidewalk along the left side with a physical barrier to separate pedestrians from the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Sidewalk partly blocked by parked vehicles and street stalls.",
+    "frame": 4,
+    "x": 700,
+    "y": 450,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Remove obstructions and build a physical barrier or widen the sidewalk to ensure safe pedestrian movement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Uneven sections on the sidewalk that pose trip hazards.",
+    "frame": 5,
+    "x": 800,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the sidewalk to eliminate trip hazards and create a smooth walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians crossing without marked or protected crossings.",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install marked pedestrian crossings with dropped kerbs and refuge islands to improve crossing safety."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Street lighting is only some and inadequate in places.",
+    "frame": 1,
+    "x": 300,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install ample street lighting along the road to enhance safety during low light and nighttime conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.62,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7936,
+  "completion_tokens": 607,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

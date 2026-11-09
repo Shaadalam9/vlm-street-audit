@@ -1,0 +1,101 @@
+{
+ "clip_id": "HFqbSPeAPbU_00733000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction on footway by parked vehicles or other objects",
+   "frame": 3,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven or broken sections on the footway",
+   "frame": 2,
+   "x": 180,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 4,
+   "x": 400,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install dropped kerbs at the crossing to facilitate safe pedestrian movement."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "crossing is hard to see and drivers may not stop",
+   "frame": 5,
+   "x": 350,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Improve the visibility of the crossing with better signage and markings to ensure drivers stop for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is too distant and obscured to verify the footway width or condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The specific obstruction on the left footway is not clearly visible in the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Surface quality of the left footway cannot be determined from this distance."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing area is not clearly visible to confirm the presence or absence of kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The visibility of the crossing and driver behaviour cannot be assessed from these frames."
+  }
+ ],
+ "error": null
+}

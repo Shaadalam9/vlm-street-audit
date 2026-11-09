@@ -1,0 +1,102 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_002.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_004.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_006.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_008.jpg",
+  "data/snippets/MlUNun68Clg/MlUNun68Clg_00080000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven and trodden surface of informal path with potential hazards\",\"frame\":1,\"x\":75,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a dedicated, properly paved sidewalk along the left side to eliminate trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven and trodden surface of informal path with potential hazards\",\"frame\":1,\"x\":850,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a dedicated, properly paved sidewalk along the right side to eliminate trip hazards for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"only some street lights are visible, and there are gaps under street lighting\",\"frame\":3,\"x\":300,\"y\":250,\"measure\":\"add_street_lighting\",\"suggestion\":\"Add street lights along the entire road to ensure adequate lighting, especially in areas lacking illumination.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven and trodden surface of informal path with potential hazards",
+    "frame": 1,
+    "x": 75,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a dedicated, properly paved sidewalk along the left side to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven and trodden surface of informal path with potential hazards",
+    "frame": 1,
+    "x": 850,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a dedicated, properly paved sidewalk along the right side to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "only some street lights are visible, and there are gaps under street lighting",
+    "frame": 3,
+    "x": 300,
+    "y": 250,
+    "measure": "add_street_lighting",
+    "suggestion": "Add street lights along the entire road to ensure adequate lighting, especially in areas lacking illumination."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.5,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7775,
+  "completion_tokens": 446,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

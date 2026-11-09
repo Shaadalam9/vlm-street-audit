@@ -1,0 +1,100 @@
+{
+ "clip_id": "rSqSgrCGwRA_04183000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/rSqSgrCGwRA/rSqSgrCGwRA_04183000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles and informal use\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, usable sidewalk of at least 1m width on the left side, ensuring it is free from obstructions and properly maintained.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians visible crossing the carriageway with no crossing facility\",\"frame\":1,\"x\":400,\"y\":450,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a marked pedestrian crossing with refuge islands at this location to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban road with only some street lights visible\",\"frame\":1,\"x\":600,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights along the road to ensure ample lighting for safety, particularly in areas with limited visibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles and informal use",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, usable sidewalk of at least 1m width on the left side, ensuring it is free from obstructions and properly maintained."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians visible crossing the carriageway with no crossing facility",
+    "frame": 1,
+    "x": 400,
+    "y": 450,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a marked pedestrian crossing with refuge islands at this location to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban road with only some street lights visible",
+    "frame": 1,
+    "x": 600,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights along the road to ensure ample lighting for safety, particularly in areas with limited visibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 10.69,
+ "usage": {
+  "prompt_tokens": 2373,
+  "total_tokens": 2840,
+  "completion_tokens": 467,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

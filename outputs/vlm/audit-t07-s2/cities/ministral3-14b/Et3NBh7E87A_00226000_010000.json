@@ -1,0 +1,132 @@
+{
+ "clip_id": "Et3NBh7E87A_00226000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_002.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_004.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_006.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_008.jpg",
+  "data/snippets/Et3NBh7E87A/Et3NBh7E87A_00226000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Informal footpath under 1m width, partly blocked by obstructions and trip hazards\",\"frame\":1,\"x\":342,\"y\":387,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised sidewalk at least 1m wide along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Informal footpath under 1m width, also partly obstructed by parked cars and debris\",\"frame\":1,\"x\":658,\"y\":410,\"measure\":\"improve_crossing\",\"suggestion\":\"Install bollards or low fencing to prevent vehicles from parking on or blocking the informal footpath.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven and broken sections along the informal path\",\"frame\":1,\"x\":371,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the informal path to address the uneven and broken sections.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"No proper crossing facility visible despite crossing demand indicated by pedestrian presence\",\"frame\":2,\"x\":500,\"y\":258,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Introduce a marked zebra crossing with traffic signals and a refuge island for safe pedestrian crossing.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Crossing is poorly marked with potentially obscured visibility for drivers\",\"frame\":2,\"x\":502,\"y\":246,\"measure\":\"improve_crossing\",\"suggestion\":\"Paint the zebra crossing with high-visibility markings and install additional lighting to improve visibility at the crossing.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps or dropped kerbs seen at the crossing location\",\"frame\":3,\"x\":455,\"y\":445,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps at the crossing to ensure safe access for pedestrians, including those with mobility challenges.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Informal footpath under 1m width, partly blocked by obstructions and trip hazards",
+    "frame": 1,
+    "x": 342,
+    "y": 387,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised sidewalk at least 1m wide along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Informal footpath under 1m width, also partly obstructed by parked cars and debris",
+    "frame": 1,
+    "x": 658,
+    "y": 410,
+    "measure": "improve_crossing",
+    "suggestion": "Install bollards or low fencing to prevent vehicles from parking on or blocking the informal footpath."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven and broken sections along the informal path",
+    "frame": 1,
+    "x": 371,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the informal path to address the uneven and broken sections."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "No proper crossing facility visible despite crossing demand indicated by pedestrian presence",
+    "frame": 2,
+    "x": 500,
+    "y": 258,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Introduce a marked zebra crossing with traffic signals and a refuge island for safe pedestrian crossing."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Crossing is poorly marked with potentially obscured visibility for drivers",
+    "frame": 2,
+    "x": 502,
+    "y": 246,
+    "measure": "improve_crossing",
+    "suggestion": "Paint the zebra crossing with high-visibility markings and install additional lighting to improve visibility at the crossing."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps or dropped kerbs seen at the crossing location",
+    "frame": 3,
+    "x": 455,
+    "y": 445,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps at the crossing to ensure safe access for pedestrians, including those with mobility challenges."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.49,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8034,
+  "completion_tokens": 705,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

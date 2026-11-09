@@ -1,0 +1,119 @@
+{
+ "clip_id": "MlUNun68Clg_00080000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 150,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 850,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 3,
+   "x": 100,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards on the left side."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 3,
+   "x": 900,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards on the right side."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstructions on the footway",
+   "frame": 2,
+   "x": 200,
+   "y": 420,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable on the left side."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstructions on the footway",
+   "frame": 2,
+   "x": 800,
+   "y": 420,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable on the right side."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a proper, continuous sidewalk of sufficient width."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a proper, continuous sidewalk of sufficient width."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The resolution is too low to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The resolution is too low to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Vegetation and structures obstruct the narrow pedestrian area on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The pedestrian area on the right is obstructed by poles and greenery."
+  }
+ ],
+ "error": null
+}

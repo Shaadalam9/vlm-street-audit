@@ -1,0 +1,65 @@
+{
+ "clip_id": "ySNSVE0rRzc_06305000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "Informal path under 1m wide, not usable for pedestrians",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven sections on informal path",
+   "frame": 1,
+   "x": 850,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the informal path to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing in the absence of a crossing facility",
+   "frame": 1,
+   "x": 600,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a path, but its width and usability are not clear enough to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the path is not visible in enough detail to confirm trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrian is seen crossing the road in the provided frames, so the deficit is not visible."
+  }
+ ],
+ "error": null
+}

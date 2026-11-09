@@ -1,0 +1,102 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_002.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_004.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_006.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_008.jpg",
+  "data/snippets/mhJaRDYV1Cg/mhJaRDYV1Cg_00560000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"dropped kerbs not visible at the crossing\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install raised platforms at the crossing to ensure visibility and force drivers to slow down.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing markings are faint and not easily noticeable\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Repaint the crossing markings with high-visibility paint to improve their visibility to drivers.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"no refuge island on a wide road with multiple lanes\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a refuge island in the middle of the crossing to provide a safe place for pedestrians to wait when crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "dropped kerbs not visible at the crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install raised platforms at the crossing to ensure visibility and force drivers to slow down."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "crossing markings are faint and not easily noticeable",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Repaint the crossing markings with high-visibility paint to improve their visibility to drivers."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "no refuge island on a wide road with multiple lanes",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a refuge island in the middle of the crossing to provide a safe place for pedestrians to wait when crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 9.66,
+ "usage": {
+  "prompt_tokens": 2779,
+  "total_tokens": 3222,
+  "completion_tokens": 443,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

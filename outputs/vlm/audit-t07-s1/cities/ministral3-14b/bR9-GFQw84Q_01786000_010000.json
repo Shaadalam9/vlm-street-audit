@@ -1,0 +1,122 @@
+{
+ "clip_id": "bR9-GFQw84Q_01786000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_01786000_010000/frame_002.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_01786000_010000/frame_004.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_01786000_010000/frame_006.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_01786000_010000/frame_008.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_01786000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no footway visible, pedestrians would have to use the roadway\",\"frame\":1,\"x\":0,\"y\":480,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1.5 metres wide along the entire left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no footway visible, pedestrians would have to use the roadway\",\"frame\":1,\"x\":0,\"y\":475,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1.5 metres wide along the entire right side of the road.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"marked pedestrian crossing without adequate safety measures for users\",\"frame\":3,\"x\":450,\"y\":480,\"measure\":\"improve_crossing\",\"suggestion\":\"Add pedestrian traffic signals and introduce a refuge island at this crossing to improve pedestrian safety.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing but poor quality, no refuge, poor visibility for drivers\",\"frame\":3,\"x\":450,\"y\":480,\"measure\":\"add_refuge_island\",\"suggestion\":\"Introduce a signalised crossing with refuge islands to ensure pedestrians can safely cross this wide road.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no kerb ramps to facilitate wheelchair or pram access at the crossing\",\"frame\":3,\"x\":450,\"y\":480,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps to provide accessible crossing points for all users, including those with mobility issues.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no footway visible, pedestrians would have to use the roadway",
+    "frame": 1,
+    "x": 0,
+    "y": 480,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1.5 metres wide along the entire left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no footway visible, pedestrians would have to use the roadway",
+    "frame": 1,
+    "x": 0,
+    "y": 475,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1.5 metres wide along the entire right side of the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "marked pedestrian crossing without adequate safety measures for users",
+    "frame": 3,
+    "x": 450,
+    "y": 480,
+    "measure": "improve_crossing",
+    "suggestion": "Add pedestrian traffic signals and introduce a refuge island at this crossing to improve pedestrian safety."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing but poor quality, no refuge, poor visibility for drivers",
+    "frame": 3,
+    "x": 450,
+    "y": 480,
+    "measure": "add_refuge_island",
+    "suggestion": "Introduce a signalised crossing with refuge islands to ensure pedestrians can safely cross this wide road."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no kerb ramps to facilitate wheelchair or pram access at the crossing",
+    "frame": 3,
+    "x": 450,
+    "y": 480,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps to provide accessible crossing points for all users, including those with mobility issues."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 29.89,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7940,
+  "completion_tokens": 611,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal path under 1m, partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the left side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal path under 1m, partly blocked by obstructions",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction on informal path",
+   "frame": 1,
+   "x": 250,
+   "y": 520,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the informal path on the left side to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction on informal path",
+   "frame": 1,
+   "x": 750,
+   "y": 520,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the informal path on the right side to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on informal path",
+   "frame": 1,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the left side informal path to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on informal path",
+   "frame": 1,
+   "x": 800,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the right side informal path to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal footway, though space is limited by buildings."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal footway, consisting of narrow, uneven edges."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Obstructions like poles and debris are visible on the left edge."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right edge is blocked by walls and uneven terrain."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The informal paths on both sides are clearly uneven and unpaved."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right edge shows significant unevenness and trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road without any designated crossing facilities."
+  }
+ ],
+ "error": null
+}

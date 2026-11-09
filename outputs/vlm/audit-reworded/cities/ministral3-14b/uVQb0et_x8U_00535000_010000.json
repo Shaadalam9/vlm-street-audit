@@ -1,0 +1,102 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_002.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_004.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_006.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_008.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_00535000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and obstructed, frame 1, point (300, 450)\",\"frame\":1,\"x\":300,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen the footway to at least 1.5m and ensure it is clear of obstructions by removing parked vehicles and market stalls.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and obstructed, frame 1, point (700, 450)\",\"frame\":1,\"x\":700,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen the footway to at least 1.5m and ensure it is clear of obstructions by removing parked vehicles and market stalls.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand is true with no crossing facility, frame 1, point (500, 300)\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked zebra crossing with traffic signals to facilitate safe pedestrian crossing at this location.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and obstructed, frame 1, point (300, 450)",
+    "frame": 1,
+    "x": 300,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Widen the footway to at least 1.5m and ensure it is clear of obstructions by removing parked vehicles and market stalls."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and obstructed, frame 1, point (700, 450)",
+    "frame": 1,
+    "x": 700,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Widen the footway to at least 1.5m and ensure it is clear of obstructions by removing parked vehicles and market stalls."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand is true with no crossing facility, frame 1, point (500, 300)",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked zebra crossing with traffic signals to facilitate safe pedestrian crossing at this location."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 18.44,
+ "usage": {
+  "prompt_tokens": 7352,
+  "total_tokens": 7881,
+  "completion_tokens": 529,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

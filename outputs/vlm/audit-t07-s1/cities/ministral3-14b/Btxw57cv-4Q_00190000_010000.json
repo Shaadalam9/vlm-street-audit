@@ -1,0 +1,132 @@
+{
+ "clip_id": "Btxw57cv-4Q_00190000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_002.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_004.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_006.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_008.jpg",
+  "data/snippets/Btxw57cv-4Q/Btxw57cv-4Q_00190000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal paths and narrow sidewalks partly blocked by obstructions\",\"frame\":2,\"x\":750,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, physically separated sidewalk with adequate width and remove obstructions to provide safe pedestrian access.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstructions along the sidewalk particularly close to the intersections\",\"frame\":1,\"x\":600,\"y\":525,\"measure\":\"clear_footway\",\"suggestion\":\"Remove parked vehicles and other obstructions from the sidewalk to ensure unobstructed pedestrian movement.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven pavement visible along the sidewalk\",\"frame\":3,\"x\":150,\"y\":580,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the sidewalk to eliminate trip hazards and improve pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"people crossing in a carriageway with no designated crossing facility\",\"frame\":4,\"x\":500,\"y\":450,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Implement a marked pedestrian crossing at this location to guide and facilitate safe pedestrian crossings.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"no designated crossing facility increases the risk of pedestrians crossing against traffic\",\"frame\":5,\"x\":400,\"y\":450,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Introduce a signalised pedestrian crossing to ensure that drivers stop and pedestrians cross safely.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"no refuge island on a wide road without designated pedestrian crossing\",\"frame\":1,\"x\":500,\"y\":420,\"measure\":\"add_refuge_island\",\"suggestion\":\"Provide refuge islands at mid-block crossings to enable pedestrians to safely cross wide streets by giving a safe place midway.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal paths and narrow sidewalks partly blocked by obstructions",
+    "frame": 2,
+    "x": 750,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, physically separated sidewalk with adequate width and remove obstructions to provide safe pedestrian access."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstructions along the sidewalk particularly close to the intersections",
+    "frame": 1,
+    "x": 600,
+    "y": 525,
+    "measure": "clear_footway",
+    "suggestion": "Remove parked vehicles and other obstructions from the sidewalk to ensure unobstructed pedestrian movement."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven pavement visible along the sidewalk",
+    "frame": 3,
+    "x": 150,
+    "y": 580,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the sidewalk to eliminate trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "people crossing in a carriageway with no designated crossing facility",
+    "frame": 4,
+    "x": 500,
+    "y": 450,
+    "measure": "add_marked_crossing",
+    "suggestion": "Implement a marked pedestrian crossing at this location to guide and facilitate safe pedestrian crossings."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "no designated crossing facility increases the risk of pedestrians crossing against traffic",
+    "frame": 5,
+    "x": 400,
+    "y": 450,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Introduce a signalised pedestrian crossing to ensure that drivers stop and pedestrians cross safely."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "no refuge island on a wide road without designated pedestrian crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 420,
+    "measure": "add_refuge_island",
+    "suggestion": "Provide refuge islands at mid-block crossings to enable pedestrians to safely cross wide streets by giving a safe place midway."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 33.38,
+ "usage": {
+  "prompt_tokens": 5919,
+  "total_tokens": 6607,
+  "completion_tokens": 688,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

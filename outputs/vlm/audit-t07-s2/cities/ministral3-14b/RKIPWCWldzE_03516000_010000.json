@@ -1,0 +1,142 @@
+{
+ "clip_id": "RKIPWCWldzE_03516000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_002.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_004.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_006.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_008.jpg",
+  "data/snippets/RKIPWCWldzE/RKIPWCWldzE_03516000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk is under 1m with obstructions and trip hazards\",\"frame\":4,\"x\":650,\"y\":420,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk of at least 1m width along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk is under 1m with obstructions and trip hazards\",\"frame\":3,\"x\":300,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Improve and widen the sidewalk on the right side, ensuring it is free from obstructions and trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on the narrow left sidewalk\",\"frame\":2,\"x\":500,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections of the sidewalk on the left, and provide tactile paving for safer pedestrian use.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections on the narrow right sidewalk\",\"frame\":2,\"x\":150,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections of the sidewalk on the right to create a safe and smooth walking path.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"visible pedestrian crossing on a busy road without proper safety measures\",\"frame\":5,\"x\":500,\"y\":390,\"measure\":\"improve_crossing\",\"suggestion\":\"Install signalized pedestrian crossings with adequate signage, lighting, and refuge islands to ensure safety for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing but poor quality and no traffic signals\",\"frame\":1,\"x\":700,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Improve the crossing quality by adding traffic signals and ensuring drivers can see pedestrians clearly.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"crossing lacks dropped kerbs\",\"frame\":1,\"x\":650,\"y\":440,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add dropped kerbs at all crossings to ensure accessibility and safety for pedestrians crossing the street.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk is under 1m with obstructions and trip hazards",
+    "frame": 4,
+    "x": 650,
+    "y": 420,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "sidewalk is under 1m with obstructions and trip hazards",
+    "frame": 3,
+    "x": 300,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Improve and widen the sidewalk on the right side, ensuring it is free from obstructions and trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on the narrow left sidewalk",
+    "frame": 2,
+    "x": 500,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections of the sidewalk on the left, and provide tactile paving for safer pedestrian use."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections on the narrow right sidewalk",
+    "frame": 2,
+    "x": 150,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections of the sidewalk on the right to create a safe and smooth walking path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "visible pedestrian crossing on a busy road without proper safety measures",
+    "frame": 5,
+    "x": 500,
+    "y": 390,
+    "measure": "improve_crossing",
+    "suggestion": "Install signalized pedestrian crossings with adequate signage, lighting, and refuge islands to ensure safety for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing but poor quality and no traffic signals",
+    "frame": 1,
+    "x": 700,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Improve the crossing quality by adding traffic signals and ensuring drivers can see pedestrians clearly."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "crossing lacks dropped kerbs",
+    "frame": 1,
+    "x": 650,
+    "y": 440,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add dropped kerbs at all crossings to ensure accessibility and safety for pedestrians crossing the street."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.07,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8090,
+  "completion_tokens": 761,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

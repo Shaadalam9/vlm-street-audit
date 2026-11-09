@@ -1,0 +1,65 @@
+{
+ "clip_id": "XcfBhMUAK_8_01907000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "Dropped kerbs are absent at the zebra crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install dropped kerbs at the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked crossing is hard to see and drivers do not appear to stop",
+   "frame": 1,
+   "x": 400,
+   "y": 550,
+   "measure": "improve_crossing",
+   "suggestion": "Add reflective markings and traffic calming measures to improve visibility and enforce stopping at the crossing."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The crossing is on a wide road with no refuge island",
+   "frame": 2,
+   "x": 450,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the kerb profile at the crossing, so the absence of ramps cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible but driver behaviour is not shown, so the claim of poor visibility and non-stopping is unverified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is wide, but the frames do not clearly show the absence of a refuge island at the crossing."
+  }
+ ],
+ "error": null
+}

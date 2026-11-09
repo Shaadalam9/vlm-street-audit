@@ -1,0 +1,122 @@
+{
+ "clip_id": "bh3HnAo71Po_06651000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_002.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_004.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_006.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_008.jpg",
+  "data/snippets/bh3HnAo71Po/bh3HnAo71Po_06651000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal path under 1m and partly blocked by parked vehicles and scooters\",\"frame\":3,\"x\":850,\"y\":500,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a proper sidewalk with physical barriers to separate pedestrians from the roadway.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction by parked vehicles and scooters under sidewalk_under_1m\",\"frame\":3,\"x\":800,\"y\":520,\"measure\":\"clear_footway\",\"suggestion\":\"Introduce designated parking areas away from footways to ensure footpaths remain unobstructed.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven surface under the sidewalk\",\"frame\":3,\"x\":100,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repave and level the sidewalk to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven surface under the sidewalk\",\"frame\":3,\"x\":850,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repave and level the sidewalk to provide a safer pedestrian environment.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"demand for pedestrian crossing as people are present and the road is wide\",\"frame\":3,\"x\":500,\"y\":450,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with refuge to accommodate safe crossing on this busy road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal path under 1m and partly blocked by parked vehicles and scooters",
+    "frame": 3,
+    "x": 850,
+    "y": 500,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a proper sidewalk with physical barriers to separate pedestrians from the roadway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction by parked vehicles and scooters under sidewalk_under_1m",
+    "frame": 3,
+    "x": 800,
+    "y": 520,
+    "measure": "clear_footway",
+    "suggestion": "Introduce designated parking areas away from footways to ensure footpaths remain unobstructed."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven surface under the sidewalk",
+    "frame": 3,
+    "x": 100,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repave and level the sidewalk to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven surface under the sidewalk",
+    "frame": 3,
+    "x": 850,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repave and level the sidewalk to provide a safer pedestrian environment."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "demand for pedestrian crossing as people are present and the road is wide",
+    "frame": 3,
+    "x": 500,
+    "y": 450,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with refuge to accommodate safe crossing on this busy road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 26.73,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7926,
+  "completion_tokens": 597,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

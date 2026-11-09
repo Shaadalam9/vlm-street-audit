@@ -1,0 +1,137 @@
+{
+ "clip_id": "KQU-5_VewEw_00195000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction on the footway by parked vehicles or other items",
+   "frame": 3,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow safe pedestrian movement."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction on the footway by parked vehicles or other items",
+   "frame": 3,
+   "x": 850,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow safe pedestrian movement."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 100,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 900,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "street lighting is only some, and the road is urban",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights to ensure ample lighting along the entire road for safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a yellow barrier and the road curves, making it impossible to verify the footway's width or condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially visible but the specific width and condition of the footway cannot be confirmed from the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No parked vehicles or obstructions are clearly visible on the footway in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is not clearly detailed enough to confirm if the footway is blocked by obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the footway is not visible in enough detail to identify trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the footway is not visible in enough detail to identify trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so the presence or absence of street lighting cannot be assessed."
+  }
+ ],
+ "error": null
+}

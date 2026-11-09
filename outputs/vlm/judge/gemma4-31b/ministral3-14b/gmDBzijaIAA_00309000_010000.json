@@ -1,0 +1,155 @@
+{
+ "clip_id": "gmDBzijaIAA_00309000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction on footway by parked vehicles or stalls",
+   "frame": 3,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction on footway by parked vehicles or stalls",
+   "frame": 3,
+   "x": 750,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 100,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 800,
+   "y": 500,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections of the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 4,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes with no refuge on crossing",
+   "frame": 5,
+   "x": 500,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing wide roads."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway is narrow and obstructed by trees and poles."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a continuous, usable footway for pedestrians."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked motorcycles and street furniture obstruct the left footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked vehicles and greenery obstruct the right-side pedestrian area."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked pedestrian crossings visible despite the urban environment."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with multiple lanes and lacks a central refuge for crossing pedestrians."
+  }
+ ],
+ "error": null
+}

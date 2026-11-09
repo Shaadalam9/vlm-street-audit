@@ -1,0 +1,130 @@
+{
+ "clip_id": "c0LUgjnV9KE_00440000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/c0LUgjnV9KE/c0LUgjnV9KE_00440000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles, making it unusable\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"repair_footway\",\"suggestion\":\"Widen and pave the left footway to a minimum of 1.5m width and ensure it is clear of obstructions.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Install bollards or parking restrictions to prevent vehicles from parking on the narrow right footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on the footway\",\"frame\":1,\"x\":150,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the left footway to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections on the footway\",\"frame\":1,\"x\":850,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the right footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians crossing in the absence of a crossing facility\",\"frame\":1,\"x\":500,\"y\":350,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked zebra crossing at this location to provide a safe crossing for pedestrians.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"road has 4 or more lanes and no refuge for pedestrians at the crossing\",\"frame\":1,\"x\":500,\"y\":350,\"measure\":\"add_refuge_island\",\"suggestion\":\"Introduce a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing a wide road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles, making it unusable",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "repair_footway",
+    "suggestion": "Widen and pave the left footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Install bollards or parking restrictions to prevent vehicles from parking on the narrow right footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on the footway",
+    "frame": 1,
+    "x": 150,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the left footway to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections on the footway",
+    "frame": 1,
+    "x": 850,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the right footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians crossing in the absence of a crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 350,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked zebra crossing at this location to provide a safe crossing for pedestrians."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "road has 4 or more lanes and no refuge for pedestrians at the crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 350,
+    "measure": "add_refuge_island",
+    "suggestion": "Introduce a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing a wide road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 15.62,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 3115,
+  "completion_tokens": 695,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,119 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 3,
+   "x": 150,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway is clear for pedestrian use."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 2,
+   "x": 100,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing without refuge on a wide road",
+   "frame": 4,
+   "x": 400,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "crossing is hard to see and obstructed",
+   "frame": 5,
+   "x": 350,
+   "y": 350,
+   "measure": "improve_crossing",
+   "suggestion": "Improve visibility of the crossing with better markings and signage, and ensure it is not obstructed by vehicles or other items."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 450,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to facilitate safe pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left-side footway is obscured by trees and parked cars, making it impossible to verify its width or condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The view of the left-side footway is blocked, so it is unclear if it is obstructed by parked vehicles."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the left-side footway is not visible in the frames to confirm trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The wide crossing is clearly visible without a refuge island, and the suggestion to add one is specific to this layout."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible but the suggestion to improve visibility is a generic measure applicable to any crossing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The kerbs at the crossing are not clearly visible to confirm the absence of ramps."
+  }
+ ],
+ "error": null
+}

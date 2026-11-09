@@ -1,0 +1,83 @@
+{
+ "clip_id": "94bxMILuMGU_10153000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are missing at the zebra crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked zebra crossing is obstructed by parked cars and lacks visibility",
+   "frame": 1,
+   "x": 400,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Widen the zebra crossing and ensure it is clear of obstructions to improve visibility and safety for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "The footway is under 1m wide and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a proper sidewalk at least 1m wide and ensure it is free from obstructions."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "The footway is partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Enforce parking regulations to keep the footway clear and accessible."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a zebra crossing but the specific kerb profile at the edges is not clear enough to confirm the absence of ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible, but the claim that it is obstructed by parked cars is not clearly supported by the frames, and the suggestion is a generic improvement."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is mostly obscured by the fence and parked cars, making it impossible to verify the footway width or blockage."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": true,
+   "reason": "The right side is occupied by parked cars, but it is unclear if this is a designated footway or just the road edge, and the suggestion is a behavioural enforcement measure."
+  }
+ ],
+ "error": null
+}

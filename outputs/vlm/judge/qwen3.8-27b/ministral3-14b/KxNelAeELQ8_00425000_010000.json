@@ -1,0 +1,83 @@
+{
+ "clip_id": "KxNelAeELQ8_00425000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people must walk in the roadway.",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Informal path on the right side is partly blocked by parked vehicles and other obstructions.",
+   "frame": 3,
+   "x": 700,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and widen the informal path on the right side to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven and broken sections on the informal path on the right side pose trip hazards.",
+   "frame": 2,
+   "x": 800,
+   "y": 470,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the informal path on the right side to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a demand for crossing due to residential and commercial buildings on both sides, but no crossing facility is present.",
+   "frame": 4,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a footway, but the suggestion is a generic standard measure and the available space is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Parked vehicles block the right-side path, but the suggestion is generic and the space for a proper footway is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side path is uneven, but the suggestion is generic and the feasibility of repair is unclear."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but the suggestion is generic and the space for a marked crossing is unclear."
+  }
+ ],
+ "error": null
+}

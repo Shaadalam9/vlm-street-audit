@@ -1,0 +1,122 @@
+{
+ "clip_id": "3XBeKuoFjCQ_03930000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_002.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_004.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_006.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_008.jpg",
+  "data/snippets/3XBeKuoFjCQ/3XBeKuoFjCQ_03930000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Footway is narrow and under 1m, effectively restricting pedestrian usability\",\"frame\":1,\"x\":300,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a continuous, wider sidewalk or separate the footway from the carriageway with a physical barrier.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Footway is partially obstructed by bins and structures\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions and ensure the footway is unblocked and clearly demarcated from the carriageway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven and broken sections on the footway\",\"frame\":4,\"x\":200,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and smooth out the uneven sections of the footway to eliminate tripping hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Tripping hazards present on narrow footway\",\"frame\":4,\"x\":900,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the footway surface to remove any obstacles and tripping hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians crossing the carriageway without marked crossings or refuges\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with adequate refuge space for safe crossing of the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Footway is narrow and under 1m, effectively restricting pedestrian usability",
+    "frame": 1,
+    "x": 300,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a continuous, wider sidewalk or separate the footway from the carriageway with a physical barrier."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Footway is partially obstructed by bins and structures",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions and ensure the footway is unblocked and clearly demarcated from the carriageway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven and broken sections on the footway",
+    "frame": 4,
+    "x": 200,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Repair and smooth out the uneven sections of the footway to eliminate tripping hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Tripping hazards present on narrow footway",
+    "frame": 4,
+    "x": 900,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the footway surface to remove any obstacles and tripping hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians crossing the carriageway without marked crossings or refuges",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with adequate refuge space for safe crossing of the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.32,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7935,
+  "completion_tokens": 606,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

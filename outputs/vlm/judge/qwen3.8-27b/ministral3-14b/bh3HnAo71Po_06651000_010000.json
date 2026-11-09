@@ -1,0 +1,119 @@
+{
+ "clip_id": "bh3HnAo71Po_06651000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and obstructed, forcing pedestrians onto the road",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk of at least 1.5m width along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles and other obstructions",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the left-side footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections and trip hazards on the narrow footway",
+   "frame": 3,
+   "x": 150,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards on the left side."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections and trip hazards on the narrow footway",
+   "frame": 3,
+   "x": 750,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards on the right side."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing the carriageway without a designated crossing facility",
+   "frame": 2,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a refuge island at this busy location to improve safety for crossing pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes with no refuge on any crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians on this wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway is obscured by parked scooters and construction, making its width and condition impossible to verify."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left-side footway is not clearly visible in the frames to confirm if it is blocked by parked vehicles."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the left-side footway is not visible enough to identify trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the right-side footway is obscured by parked scooters and construction barriers."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing the road in the frames, so the lack of a crossing cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width is difficult to determine due to traffic congestion, and no crossing is visible to check for a refuge."
+  }
+ ],
+ "error": null
+}

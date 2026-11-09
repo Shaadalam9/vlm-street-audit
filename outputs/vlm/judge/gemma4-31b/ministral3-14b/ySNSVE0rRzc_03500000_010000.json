@@ -1,0 +1,65 @@
+{
+ "clip_id": "ySNSVE0rRzc_03500000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are missing at the zebra crossing",
+   "frame": 5,
+   "x": 600,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install dropped kerbs on both sides of the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked crossing is obstructed and drivers do not seem to stop",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge island to enhance visibility and safety for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "Wide road with 4 or more lanes and no refuge island",
+   "frame": 4,
+   "x": 500,
+   "y": 450,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A raised crossing is not the same as dropped kerbs, though it would solve the access issue."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing is wide and lacks signals, making the suggestion appropriate."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with multiple lanes and lacks a central refuge for pedestrians."
+  }
+ ],
+ "error": null
+}

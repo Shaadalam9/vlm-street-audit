@@ -1,0 +1,119 @@
+{
+ "clip_id": "0ccMXmE7fYg_04570000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 2,
+   "x": 300,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to create a dedicated, wider sidewalk at least 1m from the road edge."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 2,
+   "x": 700,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 200,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 800,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing is obstructed and hard to see",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "improve_crossing",
+   "suggestion": "Install a refuge island and improve visibility of the crossing with better markings and signage."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to ensure accessibility for pedestrians with disabilities."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is mostly obscured by glare and reflections, making it impossible to verify footway width or condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially obscured by trees and reflections, making it hard to identify specific obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The image resolution and glare prevent the identification of specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The image resolution and glare prevent the identification of specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No clear marked crossing is visible in the frames to evaluate its condition or visibility."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No specific crossing point is clearly visible to determine the presence or absence of kerb ramps."
+  }
+ ],
+ "error": null
+}

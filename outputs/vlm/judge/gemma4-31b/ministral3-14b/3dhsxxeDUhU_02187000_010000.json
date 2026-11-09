@@ -1,0 +1,83 @@
+{
+ "clip_id": "3dhsxxeDUhU_02187000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 900,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the right side of the road."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 3,
+   "x": 150,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repave and level the footway to eliminate trip hazards on the left side."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 3,
+   "x": 850,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repave and level the footway to eliminate trip hazards on the right side."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The measure 'improve_crossing' does not address the lack of a footway; a sidewalk construction is needed instead."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The measure 'improve_crossing' does not address the lack of a footway; a sidewalk construction is needed instead."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The image resolution is too low to identify specific uneven sections or trip hazards on the narrow margins."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The image resolution is too low to identify specific uneven sections or trip hazards on the narrow margins."
+  }
+ ],
+ "error": null
+}

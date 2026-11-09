@@ -1,0 +1,119 @@
+{
+ "clip_id": "eDgNu3SpFgM_02702000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 3,
+   "x": 200,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous, usable sidewalk of at least 1.5m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 3,
+   "x": 800,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the right-side footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 150,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards on the left side."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 850,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards on the right side."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing is hard to see and obstructed",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge to improve visibility and safety."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to ensure accessibility for pedestrians with disabilities."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is mostly obscured by a fence and greenery, making it impossible to determine the exact width or condition of the footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obscured by trees and parked cars, so the footway's width and condition cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The resolution and obstructions prevent the identification of specific uneven sections or trip hazards on the left side."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The resolution and obstructions prevent the identification of specific uneven sections or trip hazards on the right side."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While a zebra crossing is visible in frame 3, the frames do not provide enough detail to judge if it is 'hard to see' or 'obstructed'."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The angle and distance of the crossing in frame 3 do not allow for a clear view of the kerb ramps."
+  }
+ ],
+ "error": null
+}

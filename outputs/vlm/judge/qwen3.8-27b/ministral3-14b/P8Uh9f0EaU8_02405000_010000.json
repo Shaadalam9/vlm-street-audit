@@ -1,0 +1,101 @@
+{
+ "clip_id": "P8Uh9f0EaU8_02405000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 3,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1.5m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 3,
+   "x": 700,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right-side footway to ensure it is fully usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 150,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the footway on the left side to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 2,
+   "x": 750,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the footway on the right side to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing in the absence of a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to provide a safe crossing facility for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is obscured by a large red truck, making it impossible to verify the condition or width of the footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway is visible but the specific 'obstructions' or 'unevenness' claimed are not clearly distinguishable in the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is blocked from view by the truck, so trip hazards cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway appears relatively flat in the visible sections, and specific trip hazards are not evident."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While pedestrians are visible on the right, they are not actively crossing the road in the frames, so the deficit of a missing crossing cannot be confirmed."
+  }
+ ],
+ "error": null
+}

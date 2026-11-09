@@ -1,0 +1,65 @@
+{
+ "clip_id": "VKouHxAtC5E_02881000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 3,
+   "x": 700,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide on the right side, ensuring it is clear of obstructions."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "No crossing facility despite pedestrian demand",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Introduce a signalised pedestrian crossing with a refuge island to safely accommodate pedestrian crossings at this location."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "No kerb ramps at the crossing point",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_raised_crossing",
+   "suggestion": "Implement kerb ramps at the crossing to ensure accessibility for pedestrians, including those with disabilities."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the right-side footway clearly enough to verify its width or obstruction, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing facility is visible, but the frames do not provide enough detail to confirm the absence of a crossing or the presence of pedestrian demand."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the crossing point in sufficient detail to verify the absence of kerb ramps."
+  }
+ ],
+ "error": null
+}

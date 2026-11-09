@@ -1,0 +1,152 @@
+{
+ "clip_id": "HmHCTeUYA9c_03952000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_03952000_010000/frame_002.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_03952000_010000/frame_004.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_03952000_010000/frame_006.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_03952000_010000/frame_008.jpg",
+  "data/snippets/HmHCTeUYA9c/HmHCTeUYA9c_03952000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"painted_line\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway width less than 1m, informal path adherence\",\"frame\":1,\"x\":500,\"y\":530,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk of at least 1.5m width along the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway width less than 1m, informal path adherence\",\"frame\":1,\"x\":600,\"y\":530,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk of at least 1.5m width along the right side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction on footway due to parked vehicles or goods\",\"frame\":4,\"x\":300,\"y\":535,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the footway is clear of obstructions, whether from parked vehicles, market stalls, or goods.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction on footway due to parked vehicles or goods\",\"frame\":4,\"x\":800,\"y\":535,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the footway is clear of obstructions, whether from parked vehicles, market stalls, or goods.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven pavement potentially causing trips\",\"frame\":2,\"x\":290,\"y\":560,\"measure\":\"repair_footway\",\"suggestion\":\"Repair hazardous sections of the pavement to make it smooth and level.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven pavement potentially causing trips\",\"frame\":3,\"x\":820,\"y\":560,\"measure\":\"repair_footway\",\"suggestion\":\"Repair hazardous sections of the pavement to make it smooth and level.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing, poor visibility, no refuge\",\"frame\":1,\"x\":700,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Convert the marked crossing to a signalised crossing with a refuge for safer pedestrian crossing.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at crossing\",\"frame\":5,\"x\":700,\"y\":375,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs at the crossing to facilitate smoother access for pedestrians and wheelchair users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "painted_line"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway width less than 1m, informal path adherence",
+    "frame": 1,
+    "x": 500,
+    "y": 530,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk of at least 1.5m width along the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway width less than 1m, informal path adherence",
+    "frame": 1,
+    "x": 600,
+    "y": 530,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk of at least 1.5m width along the right side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction on footway due to parked vehicles or goods",
+    "frame": 4,
+    "x": 300,
+    "y": 535,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the footway is clear of obstructions, whether from parked vehicles, market stalls, or goods."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction on footway due to parked vehicles or goods",
+    "frame": 4,
+    "x": 800,
+    "y": 535,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the footway is clear of obstructions, whether from parked vehicles, market stalls, or goods."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven pavement potentially causing trips",
+    "frame": 2,
+    "x": 290,
+    "y": 560,
+    "measure": "repair_footway",
+    "suggestion": "Repair hazardous sections of the pavement to make it smooth and level."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven pavement potentially causing trips",
+    "frame": 3,
+    "x": 820,
+    "y": 560,
+    "measure": "repair_footway",
+    "suggestion": "Repair hazardous sections of the pavement to make it smooth and level."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing, poor visibility, no refuge",
+    "frame": 1,
+    "x": 700,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Convert the marked crossing to a signalised crossing with a refuge for safer pedestrian crossing."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at crossing",
+    "frame": 5,
+    "x": 700,
+    "y": 375,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs at the crossing to facilitate smoother access for pedestrians and wheelchair users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 33.28,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8151,
+  "completion_tokens": 822,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

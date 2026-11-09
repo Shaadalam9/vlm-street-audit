@@ -1,0 +1,65 @@
+{
+ "clip_id": "hNW7SLma26g_00827000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, pedestrians walking in the carriageway",
+   "frame": 1,
+   "x": 600,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, pedestrians walking in the carriageway",
+   "frame": 1,
+   "x": 100,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the road without a designated crossing facility",
+   "frame": 1,
+   "x": 400,
+   "y": 250,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to ensure safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side consists of a stone wall with no sidewalk, though space for one is limited."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side has buildings and parked cars with no dedicated footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing the road without a designated crossing facility."
+  }
+ ],
+ "error": null
+}

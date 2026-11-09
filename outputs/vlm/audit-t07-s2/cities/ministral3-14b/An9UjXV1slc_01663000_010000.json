@@ -1,0 +1,132 @@
+{
+ "clip_id": "An9UjXV1slc_01663000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_002.jpg",
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_004.jpg",
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_006.jpg",
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_008.jpg",
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"Dropped kerbs are absent at the zebra crossing, creating a tripping hazard\",\"frame\":3,\"x\":450,\"y\":520,\"measure\":\"build_footway\",\"suggestion\":\"Install kerb ramps at the zebra crossing to ensure safe pedestrian access across lanes.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The crossing is not clearly visible or well-marked, potentially causing drivers not to stop\",\"frame\":1,\"x\":400,\"y\":470,\"measure\":\"improve_crossing\",\"suggestion\":\"Upgrade the zebra crossing with raised platforms and better markings to improve visibility and safety for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The sidewalk has uneven sections that act as trip hazards\",\"frame\":2,\"x\":700,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and resurface the sidewalk to eliminate uneven patches.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The sidewalk on the left has uneven surfaces that create trip hazards\",\"frame\":3,\"x\":200,\"y\":530,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections of the sidewalk to ensure safe pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Obstructions on the footway partially block pedestrian access\",\"frame\":4,\"x\":650,\"y\":580,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions and ensure the footway remains clear and usable for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Informal path or inadequate sidewalk for safer pedestrian movement\",\"frame\":1,\"x\":150,\"y\":560,\"measure\":\"build_footway\",\"suggestion\":\"Construct or upgrade the left sidewalk to a minimum width of 1m to ensure safe pedestrian pathways.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "Dropped kerbs are absent at the zebra crossing, creating a tripping hazard",
+    "frame": 3,
+    "x": 450,
+    "y": 520,
+    "measure": "build_footway",
+    "suggestion": "Install kerb ramps at the zebra crossing to ensure safe pedestrian access across lanes."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The crossing is not clearly visible or well-marked, potentially causing drivers not to stop",
+    "frame": 1,
+    "x": 400,
+    "y": 470,
+    "measure": "improve_crossing",
+    "suggestion": "Upgrade the zebra crossing with raised platforms and better markings to improve visibility and safety for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The sidewalk has uneven sections that act as trip hazards",
+    "frame": 2,
+    "x": 700,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Repair and resurface the sidewalk to eliminate uneven patches."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The sidewalk on the left has uneven surfaces that create trip hazards",
+    "frame": 3,
+    "x": 200,
+    "y": 530,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections of the sidewalk to ensure safe pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Obstructions on the footway partially block pedestrian access",
+    "frame": 4,
+    "x": 650,
+    "y": 580,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions and ensure the footway remains clear and usable for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Informal path or inadequate sidewalk for safer pedestrian movement",
+    "frame": 1,
+    "x": 150,
+    "y": 560,
+    "measure": "build_footway",
+    "suggestion": "Construct or upgrade the left sidewalk to a minimum width of 1m to ensure safe pedestrian pathways."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.51,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8003,
+  "completion_tokens": 674,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

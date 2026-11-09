@@ -1,0 +1,132 @@
+{
+ "clip_id": "_VLyPvcbb2o_00940000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_00940000_010000/frame_002.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_00940000_010000/frame_004.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_00940000_010000/frame_006.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_00940000_010000/frame_008.jpg",
+  "data/snippets/_VLyPvcbb2o/_VLyPvcbb2o_00940000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1m wide along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction by parked vehicles on the narrow footway\",\"frame\":1,\"x\":150,\"y\":550,\"measure\":\"improve_crossing\",\"suggestion\":\"Introduce a physical barrier to prevent vehicles from parking on the footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on the footway\",\"frame\":3,\"x\":100,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and resurface the footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"pedestrians crossing without a proper crossing facility\",\"frame\":1,\"x\":500,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked zebra crossing with a refuge island to improve pedestrian safety.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"zebra crossing is poorly marked and obstructed\",\"frame\":2,\"x\":500,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Upgrade the crossing to a signalised crossing with clear markings and a refuge.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at the crossing\",\"frame\":1,\"x\":500,\"y\":450,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps at both sides of the crossing to facilitate wheelchair and stroller access.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction by parked vehicles on the narrow footway",
+    "frame": 1,
+    "x": 150,
+    "y": 550,
+    "measure": "improve_crossing",
+    "suggestion": "Introduce a physical barrier to prevent vehicles from parking on the footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on the footway",
+    "frame": 3,
+    "x": 100,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "pedestrians crossing without a proper crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked zebra crossing with a refuge island to improve pedestrian safety."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "zebra crossing is poorly marked and obstructed",
+    "frame": 2,
+    "x": 500,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Upgrade the crossing to a signalised crossing with clear markings and a refuge."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at the crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 450,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps at both sides of the crossing to facilitate wheelchair and stroller access."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.65,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7985,
+  "completion_tokens": 656,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

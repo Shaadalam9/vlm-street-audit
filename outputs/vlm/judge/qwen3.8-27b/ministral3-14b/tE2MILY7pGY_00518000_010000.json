@@ -1,0 +1,65 @@
+{
+ "clip_id": "tE2MILY7pGY_00518000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs not visible at zebra crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at both ends of the zebra crossing to ensure accessibility for pedestrians with disabilities and mobility aids."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "Zebra crossing is obstructed by parked vehicles and not clearly visible to drivers",
+   "frame": 3,
+   "x": 450,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Widen the zebra crossing and ensure it is free from obstructions by enforcing parking regulations and adding high-visibility markings."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "Wide road with no refuge island in the middle of the crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians crossing a wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the kerb ends of the crossing, so the absence of ramps cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible but the claim of obstruction by parked vehicles is not evident in the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road is wide, but the frames do not clearly show the full width of the crossing to confirm the lack of a refuge island."
+  }
+ ],
+ "error": null
+}

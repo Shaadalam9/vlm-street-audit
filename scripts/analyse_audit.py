@@ -9,8 +9,8 @@ sample, and writes:
   docs/figures/audit_*.html and *.png
 
 - Validity: the scene facts and the crossing items against JAAD's labels.
-- Infrastructure present and needed, by continent: the consensus of the four models (at
-  least 3 of 4) per clip, averaged per city; intervals from a bootstrap over cities, as each
+- Infrastructure present and needed, by continent: the consensus of the five models (at
+  least 4 of 5) per clip, averaged per city; intervals from a bootstrap over cities, as each
   city gives two clips.
 - Country indicators: Spearman's rho between a city's infrastructure and its country's road
   traffic mortality, median age, Gini and literacy (bootstrap intervals over cities).
@@ -40,6 +40,14 @@ from analyse import BLUES, LABELS, MODEL_COLOURS, MODEL_NAMES, MODEL_ORDER, PAIR
 from vlm_street_audit.config import load_config, project_path
 from vlm_street_audit.evaluation import SCENE_BOOLEANS, binary_scores, cohen_kappa, fleiss_kappa, wilson
 from vlm_street_audit.vlm import CROSSING_ITEMS, INFORMAL_OR_NONE, NEEDED, ROAD_ITEMS, SIDE_ITEMS, expected_needs
+
+# The audit has five models: analyse.py's four (open and checklist runs) plus Ministral, added on 2026-11-07 from
+# a third country of origin (France). Its colour continues the same validated categorical order (slot 5).
+MODEL_ORDER = MODEL_ORDER + ["ministral3-14b"]
+MODEL_NAMES = MODEL_NAMES | {"ministral3-14b": "Ministral 3 14B"}
+MODEL_COLOURS = MODEL_COLOURS | {"Ministral 3 14B": "#e87ba4"}
+# A consensus needs at least 4 answers, and an item counts when two thirds of them have it (4 of 5, 3 of 4).
+MIN_ANSWERS, CONSENSUS = 4, 2 / 3
 
 MAIN = "audit"
 # Robustness comparisons: (label, run, run it is compared with).
@@ -201,7 +209,7 @@ def main() -> int:
     main_cities["west"] = main_cities.continent.isin(WEST)
     main_jaad = runs[(MAIN, "jaad")]
     md.append(f"{main_jaad.clip_id.nunique()} JAAD clips and {main_cities.clip_id.nunique()} city clips "
-              f"({main_cities.locality.nunique()} cities) answered by all four models.\n")
+              f"({main_cities.locality.nunique()} cities) answered by all five models.\n")
 
     # ---- Validity on JAAD ------------------------------------------------------------------
     fields = SCENE_BOOLEANS + ["crossing_marked"]
@@ -244,11 +252,13 @@ def main() -> int:
     figure.update_traces(hovertemplate="%{x}<br>%{y:.2f}")
     save(figure, "audit_jaad_validity", png)
 
-    # ---- Present and needed, by continent (consensus of the four models) --------------------------
+    # ---- Present and needed, by continent (consensus of the five models) --------------------------
     keys = [f"has_{k}" for k in PRESENT] + [f"need_{k}" for k in NEEDED]
-    consensus = (main_cities.groupby(["clip_id", "role", "locality", "country", "continent"])[keys]
-                 .agg(lambda s: np.nan if s.notna().sum() < 3 else float(s.dropna().astype(float).sum()
-                                                                           >= 3 * s.notna().sum() / 4))
+    def agreed(s: pd.Series) -> float:
+        answers = s.dropna().astype(float)
+        return np.nan if len(answers) < MIN_ANSWERS else float(answers.sum() >= CONSENSUS * len(answers) - 1e-9)
+
+    consensus = (main_cities.groupby(["clip_id", "role", "locality", "country", "continent"])[keys].agg(agreed)
                  .reset_index())
     consensus.to_csv(out / "cities_consensus.csv", index=False)
     city = consensus.groupby(["locality", "country", "continent"])[keys].mean().reset_index().merge(
@@ -278,7 +288,7 @@ def main() -> int:
         return pd.DataFrame({"": [labels[k.removeprefix(prefix)] for k in t.index],
                             **{names[c]: t[c] for c in order}})
 
-    md.append("\n### Infrastructure present, by continent (share of cities; at least 3 of 4 models agree)\n")
+    md.append("\n### Infrastructure present, by continent (share of cities; at least 4 of 5 models agree)\n")
     md.append(markdown(continent_table("has_", PRESENT)))
     md.append("\n### Infrastructure needed, by continent (share of cities)\n")
     md.append(markdown(continent_table("need_", NEED_LABELS)))
@@ -367,7 +377,7 @@ def main() -> int:
     bias = pd.DataFrame(rows)
     bias.to_csv(out / "agreement_by_region.csv", index=False)
     overall = kappa_by_item(main_cities)
-    md.append("\n### Agreement between the four models, by region (Fleiss' kappa, city clips, 95% interval)\n")
+    md.append("\n### Agreement between the five models, by region (Fleiss' kappa, city clips, 95% interval)\n")
     t = bias.assign(cell=[fmt(r.fleiss_kappa, r.low, r.high) for r in bias.itertuples()]).pivot(
         index="item", columns="region", values="cell").reindex(ITEMS)
     clips_per = bias.drop_duplicates("region").set_index("region").clips
@@ -387,7 +397,7 @@ def main() -> int:
         figure.add_hline(y=boundary - 0.5, line_color="#52514e", line_width=1)
     figure.update_layout(barmode="group", bargap=0.25, bargroupgap=0.05, height=700,
                          yaxis=dict(autorange="reversed"), legend=dict(orientation="h", y=1.05, x=0),
-                         xaxis=dict(title="Fleiss' kappa between the four models", range=[-0.2, 1], dtick=0.2,
+                         xaxis=dict(title="Fleiss' kappa between the five models", range=[-0.2, 1], dtick=0.2,
                                     zeroline=True, zerolinecolor="#52514e"))
     save(figure, "audit_agreement_by_region", png)
 
@@ -441,7 +451,7 @@ def main() -> int:
         city_all = robust[(robust.set == "cities") & (robust.region == "All")]
         heat = city_all.groupby(["item", "comparison"]).cohen_kappa.mean().unstack("comparison")
         heat = heat.reindex(index=ITEMS, columns=labels_here)
-        md.append("\n### Robustness: Cohen's kappa with the main answers (city clips, mean of the four models)\n")
+        md.append("\n### Robustness: Cohen's kappa with the main answers (city clips, mean of the five models)\n")
         md.append(markdown(pd.DataFrame({"Item": [ITEM_LABELS[i] for i in heat.index],
                                          **{c: [fmt(v) for v in heat[c]] for c in heat.columns}})))
         by_region = (robust[(robust.set == "cities") & (robust.region != "All")]
@@ -524,7 +534,7 @@ def main() -> int:
             md.append(markdown(pd.DataFrame([{
                 "Judge": MODEL_NAMES[r.judge], "Criterion": CRITERIA[r.criterion],
                 "On its own model": f"{100 * r.own_model:+.0f}",
-                "On the two neutral models": f"{100 * r.neutral_models:+.0f}"} for r in self_pref.itertuples()])))
+                "On the models that do not judge": f"{100 * r.neutral_models:+.0f}"} for r in self_pref.itertuples()])))
         figure = make_subplots(rows=len(judges), cols=1, shared_xaxes=True, vertical_spacing=0.14,
                                subplot_titles=[f"Judge: {MODEL_NAMES[j]}" for j in judges])
         for row, judge in enumerate(judges, start=1):

@@ -1,0 +1,137 @@
+{
+ "clip_id": "R_FR8kB12sg_00263000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk is under 1m and partly blocked by barriers and obstructions",
+   "frame": 5,
+   "x": 300,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1.5m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "sidewalk is under 1m and partly blocked by barriers and obstructions",
+   "frame": 5,
+   "x": 300,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the right-side footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the sidewalk",
+   "frame": 3,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the sidewalk to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven and broken sections on the sidewalk",
+   "frame": 3,
+   "x": 700,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the sidewalk to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing without adequate kerb ramps",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "improve_crossing",
+   "suggestion": "Install proper kerb ramps and ensure the crossing is clearly visible and accessible for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing is obstructed and hard to see",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "improve_crossing",
+   "suggestion": "Improve the visibility of the crossing and ensure it is not obstructed by barriers or other objects."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no kerb ramps at the crossing",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at the crossing to facilitate safe pedestrian movement."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a large tree and a billboard, making it impossible to verify the width or condition of the footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is blocked from view by a bus and a motorcyclist, preventing assessment of the footway's condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left sidewalk is not clearly visible in the frames to confirm the presence of trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right sidewalk is obscured by traffic, so the presence of trip hazards cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible but the kerbs are not clearly shown, making it impossible to confirm the lack of ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is visible but the specific issue of obstruction or poor visibility is not clearly demonstrated in the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not provide a clear view of the kerbs at the crossing to confirm the absence of ramps."
+  }
+ ],
+ "error": null
+}

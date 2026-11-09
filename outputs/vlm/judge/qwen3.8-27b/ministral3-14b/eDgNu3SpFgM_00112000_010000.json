@@ -1,0 +1,29 @@
+{
+ "clip_id": "eDgNu3SpFgM_00112000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "No purpose-built crossing facility visible despite pedestrian demand",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked pedestrian crossing with refuge islands to provide a safe crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show pedestrians crossing a wide, multi-lane road without a marked crossing or refuge island, confirming the deficit; the suggestion is a standard, generic fix that is physically feasible."
+  }
+ ],
+ "error": null
+}

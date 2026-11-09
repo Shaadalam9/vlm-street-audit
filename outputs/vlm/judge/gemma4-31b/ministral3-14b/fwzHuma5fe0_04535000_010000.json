@@ -1,0 +1,101 @@
+{
+ "clip_id": "fwzHuma5fe0_04535000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+   "frame": 3,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway that pose trip hazards",
+   "frame": 2,
+   "x": 180,
+   "y": 460,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "crossing demand is high due to mixed land use, but no crossing facility is present",
+   "frame": 5,
+   "x": 500,
+   "y": 350,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a refuge island to accommodate crossing demand safely."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "road has 4 or more lanes and no refuge on the crossing",
+   "frame": 4,
+   "x": 500,
+   "y": 350,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is mostly obscured by the gas station canopy and vehicles."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is not clearly visible to confirm obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The resolution and angle do not allow for the detection of trip hazards on the left."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a junction, but the full extent of crossing demand and existing facilities is not clear."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The road width and crossing configuration are not fully visible in the provided frames."
+  }
+ ],
+ "error": null
+}

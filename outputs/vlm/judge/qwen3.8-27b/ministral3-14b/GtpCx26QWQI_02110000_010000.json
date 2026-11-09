@@ -1,0 +1,47 @@
+{
+ "clip_id": "GtpCx26QWQI_02110000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are absent at the zebra crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 450,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked zebra crossing is obstructed by vehicles and not clearly visible to drivers",
+   "frame": 3,
+   "x": 450,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge to enhance visibility and safety for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the kerb edge or crossing clearly enough to confirm the absence of ramps, and the suggestion is a generic fix."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The view is obstructed by the vehicles, making it impossible to confirm the crossing is obstructed, and the suggestion is a generic upgrade."
+  }
+ ],
+ "error": null
+}

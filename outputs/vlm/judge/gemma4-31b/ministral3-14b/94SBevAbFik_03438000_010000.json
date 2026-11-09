@@ -1,0 +1,101 @@
+{
+ "clip_id": "94SBevAbFik_03438000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions, making it unusable",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles and other obstructions",
+   "frame": 1,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway is clear for pedestrian use."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections and trip hazards on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing the road without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this location to ensure safe crossing for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "no kerb ramps at the crossing points for pedestrians",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at pedestrian crossing points to facilitate safe access for people with disabilities and others."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway is clearly wider than 1m and usable."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The footway is not blocked by vehicles; only a few rental scooters are present."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific trip hazards or uneven sections."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is a signalised crossing visible in the foreground/immediate area."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Kerb ramps are visible where the footway meets the road crossing."
+  }
+ ],
+ "error": null
+}

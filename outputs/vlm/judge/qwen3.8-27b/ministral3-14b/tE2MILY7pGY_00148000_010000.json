@@ -1,0 +1,47 @@
+{
+ "clip_id": "tE2MILY7pGY_00148000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the right side of the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by the large bus, so the footway width cannot be verified, and the suggestion is a generic template."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is blocked by the white car, making it impossible to see the footway, and the suggestion is a generic template."
+  }
+ ],
+ "error": null
+}

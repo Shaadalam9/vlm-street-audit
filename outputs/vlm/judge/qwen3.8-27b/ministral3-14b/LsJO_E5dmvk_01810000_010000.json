@@ -1,0 +1,47 @@
+{
+ "clip_id": "LsJO_E5dmvk_01810000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous view of the left roadside to confirm the absence of a footway, and the suggestion is a generic measure that does not reference any specific feature of this."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially obscured by parked vehicles and buildings, making it impossible to confirm the deficit, and the suggestion is a generic measure that does not reference any specific feature"
+  }
+ ],
+ "error": null
+}

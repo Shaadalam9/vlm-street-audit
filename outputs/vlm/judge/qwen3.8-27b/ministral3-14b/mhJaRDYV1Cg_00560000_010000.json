@@ -1,0 +1,65 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs not present at the marked pedestrian crossing",
+   "frame": 1,
+   "x": 600,
+   "y": 550,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the pedestrian crossing to ensure accessibility for people using wheelchairs or strollers."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Sidewalk width is under 1 meter",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the narrow sidewalk on the left side to at least 1.5 meters to provide safer pedestrian space."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "Sidewalk width is under 1 meter",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the narrow sidewalk on the right side to at least 1.5 meters to provide safer pedestrian space."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a marked pedestrian crossing or the specific kerb condition at the location, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the street is not clearly visible in the frames, making it impossible to verify the sidewalk width."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the street is not clearly visible in the frames, making it impossible to verify the sidewalk width."
+  }
+ ],
+ "error": null
+}

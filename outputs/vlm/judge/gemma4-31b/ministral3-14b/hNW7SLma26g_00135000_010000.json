@@ -1,0 +1,155 @@
+{
+ "clip_id": "hNW7SLma26g_00135000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+   "frame": 1,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections and trip hazards on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards and ensure pedestrian safety."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+   "frame": 1,
+   "x": 850,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections and trip hazards on the footway",
+   "frame": 1,
+   "x": 750,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards and ensure pedestrian safety."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand is present but no crossing facility is visible",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "street lighting is only some, and the road is urban",
+   "frame": 1,
+   "x": 400,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights to ensure adequate illumination along the road, enhancing safety for both drivers and pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is mostly obscured by buildings and trees, making it impossible to determine the exact width or condition of the footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Obstructions on the left footway are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The resolution and angle do not allow for the identification of specific trip hazards on the left side."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a visible path, but its exact width and continuity cannot be definitively measured from these frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "It is unclear if the right footway is blocked by vehicles or other obstructions in these specific frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Surface irregularities on the right footway are not clearly discernible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While a pedestrian is seen crossing, the frames do not show the entire stretch to confirm the total absence of marked crossings."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during daylight, so the adequacy of street lighting cannot be assessed."
+  }
+ ],
+ "error": null
+}

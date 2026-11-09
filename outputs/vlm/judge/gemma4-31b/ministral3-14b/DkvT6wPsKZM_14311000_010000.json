@@ -1,0 +1,83 @@
+{
+ "clip_id": "DkvT6wPsKZM_14311000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, pedestrians walking on the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous sidewalk of at least 1 metre width along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, pedestrians walking on the carriageway",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous sidewalk of at least 1 metre width along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing at this location to provide a safe crossing point for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "road",
+   "evidence": "No crossing facility present, pedestrians crossing in the middle of the roadway",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "improve_crossing",
+   "suggestion": "Introduce a signalised crossing with a refuge island to ensure safe crossing for pedestrians and reduce the risk of accidents."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a proper footway, though a narrow strip exists; a sidewalk would fix this."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side has a grass verge but no paved footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing in these frames to justify a specific crossing location."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing is visible, but there is no evidence of pedestrians crossing in the middle of the road in these frames."
+  }
+ ],
+ "error": null
+}

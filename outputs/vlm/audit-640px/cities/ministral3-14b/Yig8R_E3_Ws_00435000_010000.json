@@ -1,0 +1,92 @@
+{
+ "clip_id": "Yig8R_E3_Ws_00435000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/snippets/Yig8R_E3_Ws/Yig8R_E3_Ws_00435000_010000/frame_002.jpg",
+  "data/snippets/Yig8R_E3_Ws/Yig8R_E3_Ws_00435000_010000/frame_004.jpg",
+  "data/snippets/Yig8R_E3_Ws/Yig8R_E3_Ws_00435000_010000/frame_006.jpg",
+  "data/snippets/Yig8R_E3_Ws/Yig8R_E3_Ws_00435000_010000/frame_008.jpg",
+  "data/snippets/Yig8R_E3_Ws/Yig8R_E3_Ws_00435000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"motorway\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible on the left side of the road\",\"frame\":1,\"x\":200,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk along the left side of the road to provide safe pedestrian access.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible on the right side of the road\",\"frame\":1,\"x\":700,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk along the right side of the road to provide safe pedestrian access.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "motorway",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible on the left side of the road",
+    "frame": 1,
+    "x": 200,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk along the left side of the road to provide safe pedestrian access."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible on the right side of the road",
+    "frame": 1,
+    "x": 700,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk along the right side of the road to provide safe pedestrian access."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 8.18,
+ "usage": {
+  "prompt_tokens": 2779,
+  "total_tokens": 3135,
+  "completion_tokens": 356,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -226,7 +226,7 @@ Answer with JSON only, in British English."""
 
 # ---- "audit" variant -----------------------------------------------------------------
 # The audit as standard instruments instead of problem types of our own (2026-10-28): the
-# pedestrian attributes of the iRAP Star Rating (iRAP Coding Manual, drive-on-left edition 3.2:
+# pedestrian attributes of the iRAP Star Rating (iRAP Coding Manual, Version 5.3, drive-on-left edition, 2022:
 # area type, lanes, median, lighting, pedestrian fencing, footway provision per side, crossing
 # facility and its quality), which are coded the same way in over 100 countries, plus the
 # MAPS-Mini items iRAP lacks (Sallis et al. 2015, Preventing Chronic Disease 12:150098; land use,
@@ -500,8 +500,11 @@ def build_messages(frames: list[Path], seconds: float, max_side: int, variant: s
 
 def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 600,
         max_tokens: int = 2048, session=None, variant: str = "open", temperature: float = 0, seed: int = 0,
-        schema: dict | None = None) -> dict:
-    """One request; returns the raw text, the parsed answer (or None) and timing."""
+        schema: dict | None = None, thinking_switch: bool = True) -> dict:
+    """One request; returns the raw text, the parsed answer (or None) and timing.
+
+    `thinking_switch=False` leaves out chat_template_kwargs, for models served with Mistral's own tokenizer,
+    which rejects them (and have no thinking mode to switch off)."""
     import requests
 
     body: dict[str, Any] = {
@@ -512,9 +515,9 @@ def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 
         "max_tokens": max_tokens,
         "response_format": {"type": "json_schema", "json_schema": {
             "name": "street_audit", "schema": schema or VARIANTS[variant][1], "strict": True}},
-        # Qwen and other "thinking" models: answer directly, so the output is the JSON alone.
-        "chat_template_kwargs": {"enable_thinking": False},
     }
+    if thinking_switch:  # Qwen, EXAONE and other "thinking" models: answer directly, the output is the JSON alone
+        body["chat_template_kwargs"] = {"enable_thinking": False}
     started = time.perf_counter()
     response = (session or requests).post(f"{base_url}/v1/chat/completions", json=body, timeout=timeout_s)
     elapsed = time.perf_counter() - started

@@ -93,3 +93,28 @@ approx_weights_gb = 17
 license = "apache-2.0"
 role = "fourth lineage; older (Aug 2025), a reference point for how much newer models gain"
 notes = "The -HF checkpoint loads with plain transformers, no remote code."
+
+# Added 2026-11-07 (Shadab): a developer from Europe, so the set covers three countries of origin (US, China,
+# France) for the cross-cultural comparison.
+
+[[model]]
+key = "ministral3-14b"
+family = "Mistral (Mistral AI)"
+checkpoint = "mistralai/Ministral-3-14B-Instruct-2512"   # Mistral's own FP8 release (Dec 2025)
+revision = "29439f81c2be264d8d393273f99e7db9c0961120"   # downloaded 2026-11-07
+base = "mistralai/Ministral-3-14B-Instruct-2512-BF16"
+precision = "fp8 (official)"
+approx_weights_gb = 16
+license = "apache-2.0"
+role = "European developer; dense 14B with a Pixtral-style vision encoder"
+notes = "Mistral advises temperature below 0.1."
+# Served as Mistral documents it: Mistral's own tokenizer, config and weights. Its tokenizer rejects any request
+# with chat_template_kwargs (400 Bad Request, 2026-11-07), so they are left out for this model (it has no thinking
+# mode). The Hugging Face tokenizer instead gave valid JSON that was nonsense (identical answers for different
+# streets, point (1, 1), words like "nod_visibl_e"; 2026-11-08), so it is not used.
+vllm_args = ["--tokenizer-mode", "mistral", "--config-format", "mistral", "--load-format", "mistral"]
+thinking_switch = false
+
+# EXAONE 4.5 33B (LGAI-EXAONE/EXAONE-4.5-33B-AWQ, revision 31e6a965) was tried on 2026-11-09 and dropped (Shadab):
+# under vLLM 0.32 it answers text correctly, but every image request came back as nonsense (lines of "-", or
+# "rural, 1 lane" for downtown Toronto) with either vision attention backend. Its larger builds do not fit 32 GB.

@@ -1,0 +1,142 @@
+{
+ "clip_id": "ZCwxNS3Cu7A_01311000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_002.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_004.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_006.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_008.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01311000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Footway is obstructed with a narrow, informal and partly usable sidewalk under 1m wide, with trip hazards\",\"frame\":3,\"x\":500,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a wider, continuous sidewalk on the left side at least 1 metre wide, free of obstructions and trip hazards.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Footway is partly blocked by people and narrow width\",\"frame\":4,\"x\":200,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the left sidewalk and ensure there are no blockages to maintain a usable walking space.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven sections and obstructions make left footway a trip hazard\",\"frame\":5,\"x\":450,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the footway to eliminate tripping hazards and ensure a smooth walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"No signalised crossing facilities or refuge island visible, despite high pedestrian crossing demand\",\"frame\":2,\"x\":650,\"y\":350,\"measure\":\"build_footway\",\"suggestion\":\"Install a signalised crossing with a refuge island to safely accommodate high pedestrian demand.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Marked zebra crossing without kerb ramps and high traffic volume, potentially leading to poor driver compliance\",\"frame\":3,\"x\":700,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install traffic signals and kerb ramps at the zebra crossing to ensure safe pedestrian crossing.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps at the zebra crossing\",\"frame\":5,\"x\":680,\"y\":380,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at both ends of the zebra crossing to aid wheelchair users and pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Insufficient street lighting, particularly on the commercial road\",\"frame\":3,\"x\":850,\"y\":200,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights along the road to enhance visibility and safety during low-light periods.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Footway is obstructed with a narrow, informal and partly usable sidewalk under 1m wide, with trip hazards",
+    "frame": 3,
+    "x": 500,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a wider, continuous sidewalk on the left side at least 1 metre wide, free of obstructions and trip hazards."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Footway is partly blocked by people and narrow width",
+    "frame": 4,
+    "x": 200,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Clear the left sidewalk and ensure there are no blockages to maintain a usable walking space."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven sections and obstructions make left footway a trip hazard",
+    "frame": 5,
+    "x": 450,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the footway to eliminate tripping hazards and ensure a smooth walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "No signalised crossing facilities or refuge island visible, despite high pedestrian crossing demand",
+    "frame": 2,
+    "x": 650,
+    "y": 350,
+    "measure": "build_footway",
+    "suggestion": "Install a signalised crossing with a refuge island to safely accommodate high pedestrian demand."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Marked zebra crossing without kerb ramps and high traffic volume, potentially leading to poor driver compliance",
+    "frame": 3,
+    "x": 700,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install traffic signals and kerb ramps at the zebra crossing to ensure safe pedestrian crossing."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps at the zebra crossing",
+    "frame": 5,
+    "x": 680,
+    "y": 380,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at both ends of the zebra crossing to aid wheelchair users and pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Insufficient street lighting, particularly on the commercial road",
+    "frame": 3,
+    "x": 850,
+    "y": 200,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights along the road to enhance visibility and safety during low-light periods."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.2,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8113,
+  "completion_tokens": 784,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,137 @@
+{
+ "clip_id": "_OaB4tNm8hg_03080000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 1,
+   "x": 200,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow free pedestrian movement."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "no dropped kerbs at potential crossing points",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at crossing points to ensure accessibility for pedestrians with disabilities."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway on the right side to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 1,
+   "x": 800,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow free pedestrian movement."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway is extremely narrow and often obstructed, though widening may be limited by building facades."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Obstructions like signs and shop fixtures are visible on the left footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to confirm specific trip hazards or broken sections."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings visible in this residential/commercial street segment."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No dropped kerbs or ramps are visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side footway is mostly obscured or too distant to identify specific trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obstructed by parked cars and outdoor seating/awnings."
+  }
+ ],
+ "error": null
+}

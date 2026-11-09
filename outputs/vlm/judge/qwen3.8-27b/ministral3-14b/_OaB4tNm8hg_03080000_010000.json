@@ -1,0 +1,137 @@
+{
+ "clip_id": "_OaB4tNm8hg_03080000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 1,
+   "x": 200,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow free pedestrian movement."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "no dropped kerbs at potential crossing points",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at crossing points to ensure accessibility for pedestrians with disabilities."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway on the right side to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 1,
+   "x": 800,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow free pedestrian movement."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not provide a clear view of the footway width or condition to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if the footway is blocked by obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if there are trip hazards on the footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if there is a lack of pedestrian crossing facilities."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if there are no kerb ramps at crossing points."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if there are trip hazards on the right-side footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show enough detail to confirm if the right-side footway is blocked by obstructions."
+  }
+ ],
+ "error": null
+}

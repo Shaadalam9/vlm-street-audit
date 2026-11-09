@@ -1,0 +1,112 @@
+{
+ "clip_id": "E8KlsWIZGD0_04355000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/E8KlsWIZGD0/E8KlsWIZGD0_04355000_010000/frame_002.jpg",
+  "data/snippets/E8KlsWIZGD0/E8KlsWIZGD0_04355000_010000/frame_004.jpg",
+  "data/snippets/E8KlsWIZGD0/E8KlsWIZGD0_04355000_010000/frame_006.jpg",
+  "data/snippets/E8KlsWIZGD0/E8KlsWIZGD0_04355000_010000/frame_008.jpg",
+  "data/snippets/E8KlsWIZGD0/E8KlsWIZGD0_04355000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Footway is less than 1m wide and unusable due to insufficient space between road and sidewalk.\",\"frame\":4,\"x\":800,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Extend and properly pave the footway to at least 1.5m width along the entire road segment.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Footway is less than 1m wide and unusable due to insufficient space between road and sidewalk.\",\"frame\":4,\"x\":100,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Extend and properly pave the footway to at least 1.5m width along the entire road segment.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"The zebra crossing lacks a refuge, and the visibility for drivers to stop is poor due to parked cars and insufficient warning signs.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a raised refuge island in the middle of the crossing to ensure pedestrians can safely wait and be visible to drivers in both directions.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"Dropped kerbs not visible at the crossing, posing potential barriers for pedestrians and wheelchairs.\",\"frame\":1,\"x\":500,\"y\":350,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both sides of the crossing to facilitate smooth pedestrian movement.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Footway is less than 1m wide and unusable due to insufficient space between road and sidewalk.",
+    "frame": 4,
+    "x": 800,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Extend and properly pave the footway to at least 1.5m width along the entire road segment."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Footway is less than 1m wide and unusable due to insufficient space between road and sidewalk.",
+    "frame": 4,
+    "x": 100,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Extend and properly pave the footway to at least 1.5m width along the entire road segment."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "The zebra crossing lacks a refuge, and the visibility for drivers to stop is poor due to parked cars and insufficient warning signs.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a raised refuge island in the middle of the crossing to ensure pedestrians can safely wait and be visible to drivers in both directions."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "Dropped kerbs not visible at the crossing, posing potential barriers for pedestrians and wheelchairs.",
+    "frame": 1,
+    "x": 500,
+    "y": 350,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both sides of the crossing to facilitate smooth pedestrian movement."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 24.52,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7907,
+  "completion_tokens": 578,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,132 @@
+{
+ "clip_id": "m2BHJJ2x9oo_02168000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_02168000_010000/frame_002.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_02168000_010000/frame_004.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_02168000_010000/frame_006.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_02168000_010000/frame_008.jpg",
+  "data/snippets/m2BHJJ2x9oo/m2BHJJ2x9oo_02168000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs seen at pedestrian crossing\",\"frame\":3,\"x\":500,\"y\":540,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs at both ends of this pedestrian crossing to ensure accessibility for people with mobility issues.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"vehicles do not seem to stop adequately\",\"frame\":3,\"x\":400,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Provide physical barriers or wider sidewalks to improve the visibility of the crossing and enforce vehicle compliance.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sidewalk surfaces\",\"frame\":1,\"x\":200,\"y\":620,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the footway along this stretch to eliminate trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sidewalk surfaces\",\"frame\":1,\"x\":800,\"y\":610,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the footway to ensure a safe pedestrian environment.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"parked vehicles encroaching on footway\",\"frame\":2,\"x\":150,\"y\":600,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a physical barrier to separate parked vehicles from the footway and ensure it is always clear.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"encroachment on footway\",\"frame\":2,\"x\":850,\"y\":590,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install bollards or a fence to separate the footway from any encroachments.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs seen at pedestrian crossing",
+    "frame": 3,
+    "x": 500,
+    "y": 540,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs at both ends of this pedestrian crossing to ensure accessibility for people with mobility issues."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "vehicles do not seem to stop adequately",
+    "frame": 3,
+    "x": 400,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Provide physical barriers or wider sidewalks to improve the visibility of the crossing and enforce vehicle compliance."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sidewalk surfaces",
+    "frame": 1,
+    "x": 200,
+    "y": 620,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the footway along this stretch to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sidewalk surfaces",
+    "frame": 1,
+    "x": 800,
+    "y": 610,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the footway to ensure a safe pedestrian environment."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "parked vehicles encroaching on footway",
+    "frame": 2,
+    "x": 150,
+    "y": 600,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a physical barrier to separate parked vehicles from the footway and ensure it is always clear."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "encroachment on footway",
+    "frame": 2,
+    "x": 850,
+    "y": 590,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install bollards or a fence to separate the footway from any encroachments."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 16.34,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7997,
+  "completion_tokens": 668,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

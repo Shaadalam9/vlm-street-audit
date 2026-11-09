@@ -1,0 +1,102 @@
+{
+ "clip_id": "bR9-GFQw84Q_00206000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_00206000_010000/frame_002.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_00206000_010000/frame_004.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_00206000_010000/frame_006.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_00206000_010000/frame_008.jpg",
+  "data/snippets/bR9-GFQw84Q/bR9-GFQw84Q_00206000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections in sidewalk on the right\",\"frame\":1,\"x\":700,\"y\":480,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the uneven sections of the right sidewalk to remove trip hazards.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at marked crossing\",\"frame\":2,\"x\":600,\"y\":500,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs at the crossing for accessibility and safety of pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"long crossing distance without refuge and poor visibility for drivers\",\"frame\":3,\"x\":550,\"y\":470,\"measure\":\"add_refuge_island\",\"suggestion\":\"Implement a mid-road refuge to shorten crossing distance and improve pedestrian safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections in sidewalk on the right",
+    "frame": 1,
+    "x": 700,
+    "y": 480,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the uneven sections of the right sidewalk to remove trip hazards."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at marked crossing",
+    "frame": 2,
+    "x": 600,
+    "y": 500,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs at the crossing for accessibility and safety of pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "long crossing distance without refuge and poor visibility for drivers",
+    "frame": 3,
+    "x": 550,
+    "y": 470,
+    "measure": "add_refuge_island",
+    "suggestion": "Implement a mid-road refuge to shorten crossing distance and improve pedestrian safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.41,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7761,
+  "completion_tokens": 432,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

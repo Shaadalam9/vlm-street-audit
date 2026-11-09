@@ -1,0 +1,119 @@
+{
+ "clip_id": "uVQb0et_x8U_00535000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right-side footway to ensure it is fully usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 150,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the footway on the left side to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 850,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the footway on the right side to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "urban road with only some street lighting",
+   "frame": 1,
+   "x": 300,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights along the road to ensure ample lighting for safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is dominated by a fence and narrow verge, making a standard footway absent or insufficient."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side has narrow, obstructed areas where pedestrians are forced onto the road."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is too low to identify specific uneven sections or trip hazards on the footways."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is too low to identify specific uneven sections or trip hazards on the footways."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked pedestrian crossings visible at the intersection despite the urban environment."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Lighting is sparse and inconsistent across the visible stretch of the urban road."
+  }
+ ],
+ "error": null
+}

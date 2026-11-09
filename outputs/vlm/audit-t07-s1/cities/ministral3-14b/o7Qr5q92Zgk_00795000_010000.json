@@ -1,0 +1,122 @@
+{
+ "clip_id": "o7Qr5q92Zgk_00795000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_002.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_004.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_006.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_008.jpg",
+  "data/snippets/o7Qr5q92Zgk/o7Qr5q92Zgk_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible, pedestrians walking in road\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk at least 1m wide along the left and right sides of the road to separate pedestrians from vehicular traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible, pedestrians walking in road\",\"frame\":1,\"x\":200,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dedicated footpaths on both sides of the road to protect pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Marked crossing not easily visible and no kerb ramps\",\"frame\":3,\"x\":450,\"y\":580,\"measure\":\"improve_crossing\",\"suggestion\":\"Add raised kerb ramps and enhance visibility of the crossing with better markings and signs.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps at the crossing\",\"frame\":3,\"x\":430,\"y\":590,\"measure\":\"improve_crossing\",\"suggestion\":\"Install adequate kerb ramps at the crossing to facilitate safe pedestrian movement.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Insufficient street lighting along the urban road\",\"frame\":5,\"x\":200,\"y\":100,\"measure\":\"improve_crossing\",\"suggestion\":\"Increase the number of street lights to ensure ample lighting throughout the road for safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible, pedestrians walking in road",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk at least 1m wide along the left and right sides of the road to separate pedestrians from vehicular traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible, pedestrians walking in road",
+    "frame": 1,
+    "x": 200,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install dedicated footpaths on both sides of the road to protect pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Marked crossing not easily visible and no kerb ramps",
+    "frame": 3,
+    "x": 450,
+    "y": 580,
+    "measure": "improve_crossing",
+    "suggestion": "Add raised kerb ramps and enhance visibility of the crossing with better markings and signs."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps at the crossing",
+    "frame": 3,
+    "x": 430,
+    "y": 590,
+    "measure": "improve_crossing",
+    "suggestion": "Install adequate kerb ramps at the crossing to facilitate safe pedestrian movement."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Insufficient street lighting along the urban road",
+    "frame": 5,
+    "x": 200,
+    "y": 100,
+    "measure": "improve_crossing",
+    "suggestion": "Increase the number of street lights to ensure ample lighting throughout the road for safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 26.32,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7920,
+  "completion_tokens": 591,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

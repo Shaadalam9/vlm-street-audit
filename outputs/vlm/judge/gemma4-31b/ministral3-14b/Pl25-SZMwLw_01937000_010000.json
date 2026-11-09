@@ -1,0 +1,119 @@
+{
+ "clip_id": "Pl25-SZMwLw_01937000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles on the narrow footway",
+   "frame": 1,
+   "x": 250,
+   "y": 420,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction by parked vehicles on the narrow footway",
+   "frame": 1,
+   "x": 750,
+   "y": 420,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 1,
+   "x": 200,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards and ensure a smooth walking surface."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the narrow footway",
+   "frame": 1,
+   "x": 700,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards and ensure a smooth walking surface."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a proper continuous sidewalk, especially as the road progresses."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side lacks a proper continuous sidewalk, particularly in the later frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly encroaching on the narrow pedestrian space on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly encroaching on the narrow pedestrian space on the right."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific trip hazards or uneven sections."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific trip hazards or uneven sections."
+  }
+ ],
+ "error": null
+}

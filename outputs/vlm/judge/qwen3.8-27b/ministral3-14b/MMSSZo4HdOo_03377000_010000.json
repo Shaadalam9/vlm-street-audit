@@ -1,0 +1,119 @@
+{
+ "clip_id": "MMSSZo4HdOo_03377000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway present, people walking in the roadway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway present, people walking in the roadway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Obstructions such as parked vehicles and market stalls block the roadway",
+   "frame": 1,
+   "x": 150,
+   "y": 350,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the roadway is clear for both vehicles and pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Obstructions such as parked vehicles and market stalls block the roadway",
+   "frame": 1,
+   "x": 750,
+   "y": 350,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the roadway is clear for both vehicles and pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the road without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to provide a safe crossing point for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "Insufficient street lighting along the road",
+   "frame": 1,
+   "x": 400,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights to improve visibility and safety for both pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a paved area on the left, but it is heavily obstructed by market stalls and parked vehicles, making it impossible to confirm if a footway is entirely absent or just blocked."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A clear, paved footway is visible on the right side of the road, so the deficit of 'no footway' is not present."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is clearly blocked by market stalls and parked vehicles, and clearing them would address the deficit."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway appears largely clear of obstructions in the frames, so the deficit is not visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road without a marked crossing, and adding one would address the safety issue."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken during the day, so it is impossible to determine if street lighting is insufficient."
+  }
+ ],
+ "error": null
+}

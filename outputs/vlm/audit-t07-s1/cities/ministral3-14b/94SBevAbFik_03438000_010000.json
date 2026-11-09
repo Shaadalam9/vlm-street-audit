@@ -1,0 +1,132 @@
+{
+ "clip_id": "94SBevAbFik_03438000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/94SBevAbFik/94SBevAbFik_03438000_010000/frame_002.jpg",
+  "data/snippets/94SBevAbFik/94SBevAbFik_03438000_010000/frame_004.jpg",
+  "data/snippets/94SBevAbFik/94SBevAbFik_03438000_010000/frame_006.jpg",
+  "data/snippets/94SBevAbFik/94SBevAbFik_03438000_010000/frame_008.jpg",
+  "data/snippets/94SBevAbFik/94SBevAbFik_03438000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"parked bicycles and people partially obstructing the narrow footway\",\"frame\":1,\"x\":300,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a physical barrier or widen the footway to allow clear pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"narrow sidewalk partially blocked by parked cars and other obstructions\",\"frame\":1,\"x\":600,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install bollards to separate parking from the sidewalk and increase footway width.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven footpath causing a trip hazard\",\"frame\":3,\"x\":150,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the footway to eliminate trip hazards and improve pedestrian safety.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections of the narrow footway\",\"frame\":3,\"x\":850,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the footway to ensure it is smooth and even across its width.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\" pedestrians crossing in front of the car despite signals, which might indicate poor visibility or non-compliance from drivers\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Add highly visible crossing signage and tactile paving to improve crossing visibility and compliance.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at the signalised crossing\",\"frame\":5,\"x\":500,\"y\":375,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the crossing to ensure accessibility for wheelchair users and those with mobility issues.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "parked bicycles and people partially obstructing the narrow footway",
+    "frame": 1,
+    "x": 300,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a physical barrier or widen the footway to allow clear pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "narrow sidewalk partially blocked by parked cars and other obstructions",
+    "frame": 1,
+    "x": 600,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install bollards to separate parking from the sidewalk and increase footway width."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven footpath causing a trip hazard",
+    "frame": 3,
+    "x": 150,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the footway to eliminate trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections of the narrow footway",
+    "frame": 3,
+    "x": 850,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the footway to ensure it is smooth and even across its width."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": " pedestrians crossing in front of the car despite signals, which might indicate poor visibility or non-compliance from drivers",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Add highly visible crossing signage and tactile paving to improve crossing visibility and compliance."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at the signalised crossing",
+    "frame": 5,
+    "x": 500,
+    "y": 375,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the crossing to ensure accessibility for wheelchair users and those with mobility issues."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 21.9,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8018,
+  "completion_tokens": 689,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

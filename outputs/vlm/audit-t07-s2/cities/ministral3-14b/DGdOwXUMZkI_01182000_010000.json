@@ -1,0 +1,132 @@
+{
+ "clip_id": "DGdOwXUMZkI_01182000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_002.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_004.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_006.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_008.jpg",
+  "data/snippets/DGdOwXUMZkI/DGdOwXUMZkI_01182000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Informal path width under 1m and part of the footway obstructed by parked vehicles\",\"frame\":2,\"x\":300,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk wider than 1m along the left side to ensure safe pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Obstructions on the footway from parked vehicles and goods\",\"frame\":1,\"x\":700,\"y\":520,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions and maintain a clear, continuous footway on the right side for pedestrian safety.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Broken or uneven sections on the footpath\",\"frame\":5,\"x\":200,\"y\":530,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level uneven sections along the left footway to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Broken or uneven sections on the footpath\",\"frame\":3,\"x\":850,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level uneven sections along the right footway to prevent tripping hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Marked crossing that is hard to see and not well-maintained\",\"frame\":4,\"x\":500,\"y\":390,\"measure\":\"improve_crossing\",\"suggestion\":\"Install reflective markings and signs at the crossing to enhance visibility and ensure drivers stop for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"Dropped kerbs are absent at the marked crossing\",\"frame\":1,\"x\":480,\"y\":410,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at both sides of the pedestrian crossing to enable safe and accessible crossing for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Informal path width under 1m and part of the footway obstructed by parked vehicles",
+    "frame": 2,
+    "x": 300,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk wider than 1m along the left side to ensure safe pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Obstructions on the footway from parked vehicles and goods",
+    "frame": 1,
+    "x": 700,
+    "y": 520,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions and maintain a clear, continuous footway on the right side for pedestrian safety."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Broken or uneven sections on the footpath",
+    "frame": 5,
+    "x": 200,
+    "y": 530,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level uneven sections along the left footway to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Broken or uneven sections on the footpath",
+    "frame": 3,
+    "x": 850,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level uneven sections along the right footway to prevent tripping hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Marked crossing that is hard to see and not well-maintained",
+    "frame": 4,
+    "x": 500,
+    "y": 390,
+    "measure": "improve_crossing",
+    "suggestion": "Install reflective markings and signs at the crossing to enhance visibility and ensure drivers stop for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "Dropped kerbs are absent at the marked crossing",
+    "frame": 1,
+    "x": 480,
+    "y": 410,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at both sides of the pedestrian crossing to enable safe and accessible crossing for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 34.46,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8020,
+  "completion_tokens": 691,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

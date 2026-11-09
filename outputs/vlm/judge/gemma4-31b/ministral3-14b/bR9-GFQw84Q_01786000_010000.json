@@ -1,0 +1,65 @@
+{
+ "clip_id": "bR9-GFQw84Q_01786000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier or widen the footway to at least 1m along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier or widen the footway to at least 1m along the right side of the road."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more lanes and signalised crossing without a refuge",
+   "frame": 3,
+   "x": 500,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side shows a very narrow or non-existent footway, though the bridge supports limit space."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a narrow strip of pavement, but bridge supports constrain the area."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing is wide with multiple lanes and no central refuge island."
+  }
+ ],
+ "error": null
+}

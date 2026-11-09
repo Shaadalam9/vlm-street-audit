@@ -1,0 +1,65 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians visible crossing the road without a crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Introduce a marked pedestrian crossing at this location to provide a safe crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a clear, continuous footway on the left side to confirm the deficit, and the suggestion is a generic standard for any street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a dirt shoulder with parked cars, making it impossible to verify a footway width, and the suggestion is generic."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are clearly visible crossing the road in the frames, so the deficit is not confirmed, and the suggestion is a generic standard."
+  }
+ ],
+ "error": null
+}

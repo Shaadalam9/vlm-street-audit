@@ -1,0 +1,100 @@
+{
+ "clip_id": "An9UjXV1slc_01663000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/An9UjXV1slc/An9UjXV1slc_01663000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"Dropped kerbs are absent at the zebra crossing\",\"frame\":1,\"x\":500,\"y\":450,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install dropped kerbs on both sides of the zebra crossing to ensure safe pedestrian access.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The zebra crossing is obstructed by vehicles and lacks clear visibility for drivers\",\"frame\":1,\"x\":450,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install traffic signals and a refuge island to enhance the safety and visibility of the crossing.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"The crossing is on a wide road with four or more lanes and lacks a refuge\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_refuge_island\",\"suggestion\":\"Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "Dropped kerbs are absent at the zebra crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 450,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install dropped kerbs on both sides of the zebra crossing to ensure safe pedestrian access."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The zebra crossing is obstructed by vehicles and lacks clear visibility for drivers",
+    "frame": 1,
+    "x": 450,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install traffic signals and a refuge island to enhance the safety and visibility of the crossing."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "The crossing is on a wide road with four or more lanes and lacks a refuge",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_refuge_island",
+    "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 9.91,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 2879,
+  "completion_tokens": 459,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

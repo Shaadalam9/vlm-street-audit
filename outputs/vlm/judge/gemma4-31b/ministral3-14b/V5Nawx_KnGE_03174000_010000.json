@@ -1,0 +1,47 @@
+{
+ "clip_id": "V5Nawx_KnGE_03174000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1m."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1m."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side has very narrow or non-existent footways obstructed by trees and parked cars."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side similarly lacks a clear, wide footway due to parking and vegetation."
+  }
+ ],
+ "error": null
+}

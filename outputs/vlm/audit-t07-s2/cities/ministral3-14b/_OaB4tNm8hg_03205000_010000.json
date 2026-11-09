@@ -1,0 +1,152 @@
+{
+ "clip_id": "_OaB4tNm8hg_03205000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_002.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_004.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_006.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_008.jpg",
+  "data/snippets/_OaB4tNm8hg/_OaB4tNm8hg_03205000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions, informal path adherence\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk wider than 1m on the left side to provide safe walking space\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions, informal path adherence\",\"frame\":1,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk wider than 1m on the right side to ensure safe pedestrian walking space\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction on footway due to parked vehicles or street furniture\",\"frame\":2,\"x\":300,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the obstructions, and maintain a clear edge for footways to facilitate pedestrian movement\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction on footway due to parked vehicles or street furniture\",\"frame\":2,\"x\":600,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions from the right footway to create a safe and clear walking path\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven surfaces on footway\",\"frame\":3,\"x\":350,\"y\":720,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections of the footway to eliminate trip hazards\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven surfaces on footway\",\"frame\":3,\"x\":650,\"y\":720,\"measure\":\"repair_footway\",\"suggestion\":\"Fix the uneven sections along the right footway to ensure a smooth and safe walking surface\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"no clear crossing facility at the busy pedestrian crossing point\",\"frame\":1,\"x\":600,\"y\":450,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install signalised pedestrian crossings to control vehicle traffic and ensure safe crossing opportunities\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"markings alone are not sufficient, and there are no traffic signals or refuges\",\"frame\":1,\"x\":600,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Upgrade the pedestrian crossing facility with a refuge or traffic signals to enhance safety\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions, informal path adherence",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk wider than 1m on the left side to provide safe walking space"
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions, informal path adherence",
+    "frame": 1,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk wider than 1m on the right side to ensure safe pedestrian walking space"
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction on footway due to parked vehicles or street furniture",
+    "frame": 2,
+    "x": 300,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Clear the obstructions, and maintain a clear edge for footways to facilitate pedestrian movement"
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction on footway due to parked vehicles or street furniture",
+    "frame": 2,
+    "x": 600,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions from the right footway to create a safe and clear walking path"
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven surfaces on footway",
+    "frame": 3,
+    "x": 350,
+    "y": 720,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections of the footway to eliminate trip hazards"
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven surfaces on footway",
+    "frame": 3,
+    "x": 650,
+    "y": 720,
+    "measure": "repair_footway",
+    "suggestion": "Fix the uneven sections along the right footway to ensure a smooth and safe walking surface"
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "no clear crossing facility at the busy pedestrian crossing point",
+    "frame": 1,
+    "x": 600,
+    "y": 450,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install signalised pedestrian crossings to control vehicle traffic and ensure safe crossing opportunities"
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "markings alone are not sufficient, and there are no traffic signals or refuges",
+    "frame": 1,
+    "x": 600,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Upgrade the pedestrian crossing facility with a refuge or traffic signals to enhance safety"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.14,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8142,
+  "completion_tokens": 813,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

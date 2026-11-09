@@ -1,0 +1,101 @@
+{
+ "clip_id": "DGdOwXUMZkI_01262000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 3,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+   "frame": 2,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Ensure the footway is clear of obstructions to allow safe pedestrian movement."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 4,
+   "x": 100,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to facilitate safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "crossing quality is poor due to visibility and potential driver non-compliance",
+   "frame": 3,
+   "x": 450,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Improve the crossing visibility with better signage and markings to ensure drivers stop for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway is obscured by the white car and the crowd, making it impossible to verify its width or condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The view of the left sidewalk is blocked by the white car, so it is unclear if it is obstructed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the left footway is not visible in the frames to assess for trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The kerbs at the crossing are obscured by the large crowd of pedestrians, so the presence of ramps cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While the crossing is busy, the specific quality of markings or visibility for drivers is not clearly discernible from this angle."
+  }
+ ],
+ "error": null
+}

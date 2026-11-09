@@ -1,0 +1,119 @@
+{
+ "clip_id": "bphPeweI7Rg_00677000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are missing at the pedestrian crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 550,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the pedestrian crossing to ensure accessibility for people with disabilities and mobility aids."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "Crossing is obstructed by vehicles and not clearly visible to drivers",
+   "frame": 2,
+   "x": 400,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing with better signage and lighting to enhance visibility and ensure drivers stop for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Uneven sections on the narrow sidewalk",
+   "frame": 1,
+   "x": 100,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repave the uneven sections of the sidewalk to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven sections on the narrow sidewalk",
+   "frame": 1,
+   "x": 900,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repave the uneven sections of the sidewalk to ensure a smooth walking surface."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Obstructions on the narrow sidewalk",
+   "frame": 4,
+   "x": 150,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the sidewalk to provide a clear and unobstructed walking path."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Obstructions on the narrow sidewalk",
+   "frame": 4,
+   "x": 850,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the sidewalk to provide a clear and unobstructed walking path."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The pedestrian crossing is not clearly visible in the frames to assess kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The pedestrian crossing is not clearly visible in the frames to assess its condition."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The sidewalk surface is not visible enough to identify trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The sidewalk surface is not visible enough to identify trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The sidewalk is not clearly visible to identify obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The sidewalk is not clearly visible to identify obstructions."
+  }
+ ],
+ "error": null
+}

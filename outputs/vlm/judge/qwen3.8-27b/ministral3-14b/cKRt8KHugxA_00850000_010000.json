@@ -1,0 +1,47 @@
+{
+ "clip_id": "cKRt8KHugxA_00850000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk in the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by parked cars and trees, making it impossible to confirm the absence of a footway, and the suggestion is a generic template."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is heavily shaded by trees and parked cars, preventing a clear view of the road edge to confirm the deficit, and the suggestion is generic."
+  }
+ ],
+ "error": null
+}

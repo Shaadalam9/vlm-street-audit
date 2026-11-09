@@ -1,0 +1,83 @@
+{
+ "clip_id": "PYFB7nMiFTM_01951000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, pedestrians must walk in the carriageway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, pedestrians must walk in the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians are crossing the road without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Introduce a marked pedestrian crossing at this location to ensure safe crossing for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights visible along the road in an urban/rural residential area",
+   "frame": 1,
+   "x": 400,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety during low-light conditions."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is a steep, vegetated embankment, making the absence of a footway clear, but the suggestion is generic and feasibility is unclear due to the terrain."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is a narrow dirt shoulder with no pavement, confirming the deficit, but the suggestion is generic and feasibility is unclear."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a pedestrian walking along the side of the road, not crossing it, so the deficit of a missing crossing is not visible."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No street lights are visible in the frames, confirming the deficit, but the suggestion is generic and feasibility is unclear."
+  }
+ ],
+ "error": null
+}

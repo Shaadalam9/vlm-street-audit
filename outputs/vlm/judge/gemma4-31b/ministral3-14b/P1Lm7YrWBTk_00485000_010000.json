@@ -1,0 +1,65 @@
+{
+ "clip_id": "P1Lm7YrWBTk_00485000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people walking in the carriageway",
+   "frame": 1,
+   "x": 200,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people walking in the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a designated crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "improve_crossing",
+   "suggestion": "Introduce a marked zebra crossing or a signalised crossing at this location to ensure pedestrian safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "no",
+   "about_behaviour": false,
+   "reason": "A brick-paved footway is clearly visible on the left side of the road."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road appears to have a paved area for pedestrians."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road in an area without designated crossing markings."
+  }
+ ],
+ "error": null
+}

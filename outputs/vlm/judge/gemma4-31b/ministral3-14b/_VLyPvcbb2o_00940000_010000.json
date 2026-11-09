@@ -1,0 +1,119 @@
+{
+ "clip_id": "_VLyPvcbb2o_00940000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles on the narrow footway",
+   "frame": 1,
+   "x": 150,
+   "y": 550,
+   "measure": "improve_crossing",
+   "suggestion": "Introduce a physical barrier to prevent vehicles from parking on the footway."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 100,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "pedestrians crossing without a proper crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked zebra crossing with a refuge island to improve pedestrian safety."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "zebra crossing is poorly marked and obstructed",
+   "frame": 2,
+   "x": 500,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with clear markings and a refuge."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 450,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at both sides of the crossing to facilitate wheelchair and stroller access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side has a wide, clear footway well over 1m wide."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There are no parked vehicles blocking the footway on the left side."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific trip hazards or uneven sections."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "A marked zebra crossing is clearly visible in the frames."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The zebra crossing markings are clearly visible and not obstructed."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing appears to have dropped kerbs for accessibility."
+  }
+ ],
+ "error": null
+}

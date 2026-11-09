@@ -1,0 +1,83 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03081000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway on the right side of the road, pedestrians must walk in the carriageway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk on the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Obstructions on the narrow left footway, reducing its usability",
+   "frame": 3,
+   "x": 200,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and widen the left footway to ensure it is fully accessible and usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Uneven sections on the left footway that pose trip hazards",
+   "frame": 2,
+   "x": 150,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the left footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "No crossing facility despite pedestrian demand",
+   "frame": 4,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing with refuge islands to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side consists of a concrete barrier and grass with no pedestrian path."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway is mostly obscured by the shelter structure, making obstructions hard to verify."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The resolution and angle do not allow for the detection of small uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked pedestrian crossings are visible along the stretch of road shown."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,101 @@
+{
+ "clip_id": "bh3HnAo71Po_02821000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway on the left side of the road, people must walk in the roadway.",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "The right side footway is partly blocked by parked vehicles and other obstructions.",
+   "frame": 3,
+   "x": 700,
+   "y": 350,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the right side footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven and broken sections on the right side footway pose trip hazards.",
+   "frame": 4,
+   "x": 600,
+   "y": 370,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the right side footway to eliminate trip hazards and ensure a smooth walking surface."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "There is a demand for crossing due to shops and homes on both sides, but no crossing facility is present.",
+   "frame": 2,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "The street lighting is inadequate, especially in the urban area.",
+   "frame": 1,
+   "x": 300,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights along the road to improve visibility and safety for both pedestrians and drivers."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a dedicated footway, and there is sufficient space to build one."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked scooters and vehicles are clearly obstructing the right-side walking area."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right-side footway shows visible cracks and uneven surfaces."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There are no marked crossings despite the presence of shops and residential buildings."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Street lighting poles are visible along the road, contradicting the claim that lighting is missing."
+  }
+ ],
+ "error": null
+}

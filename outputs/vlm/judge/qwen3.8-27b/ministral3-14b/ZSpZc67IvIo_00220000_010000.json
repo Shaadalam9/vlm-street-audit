@@ -1,0 +1,101 @@
+{
+ "clip_id": "ZSpZc67IvIo_00220000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 3,
+   "x": 700,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is partly blocked by parked vehicles and stalls",
+   "frame": 3,
+   "x": 650,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the footway to ensure it is fully accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections and trip hazards on the footway",
+   "frame": 4,
+   "x": 750,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing the road without a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing at this location to ensure safe crossing for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "4_or_more lanes with no refuge on the crossing",
+   "frame": 5,
+   "x": 500,
+   "y": 400,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing wide roads."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a barrier but the width and condition of the footway behind it are not clear enough to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "It is not possible to see the footway clearly to confirm if it is blocked by parked vehicles or stalls."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface of the footway is not visible in the frames, so trip hazards cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing the road in the provided frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a crossing or a wide enough road to confirm the need for a refuge island."
+  }
+ ],
+ "error": null
+}

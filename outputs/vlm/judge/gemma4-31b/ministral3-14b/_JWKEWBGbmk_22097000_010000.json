@@ -1,0 +1,137 @@
+{
+ "clip_id": "_JWKEWBGbmk_22097000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 300,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right-side footway to ensure it is fully usable."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 1,
+   "x": 250,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the left-side footway to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 1,
+   "x": 750,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the right-side footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians crossing without a proper crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing with proper signage and kerb ramps at this location to facilitate safe pedestrian crossings."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "road",
+   "evidence": "marked crossing is poorly maintained and obstructed",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge island to ensure visibility and safety for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to allow wheelchair and stroller access, ensuring compliance with accessibility standards."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side has narrow areas and obstructions like planters, though a footway exists."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side is heavily obstructed by vendors and crowds."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific uneven sections or trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road in areas without marked crossings."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no visible marked crossing in the frames to be judged as poorly maintained."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No specific crossing facility is visible to evaluate the presence of kerb ramps."
+  }
+ ],
+ "error": null
+}

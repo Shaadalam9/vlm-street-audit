@@ -1,0 +1,112 @@
+{
+ "clip_id": "cKRt8KHugxA_02030000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_002.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_004.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_006.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_008.jpg",
+  "data/snippets/cKRt8KHugxA/cKRt8KHugxA_02030000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible on the left side, pedestrians are forced to walk on the road.\",\"frame\":1,\"x\":400,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1.5 metres wide along the road's left edge.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible on the right side, pedestrians must use the roadway.\",\"frame\":1,\"x\":600,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk on the right side of the road.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrian crossing is poorly marked and there are no kerb ramps, leading to potential obstruction and unsafe crossing.\",\"frame\":1,\"x\":450,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a raised pedestrian crossing with proper kerb ramps to enhance safety for crossing pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No kerb ramps at the pedestrian crossing, forcing pedestrians to step directly into the traffic.\",\"frame\":1,\"x\":450,\"y\":450,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at both ends of the crossing to assist pedestrians safely crossing the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible on the left side, pedestrians are forced to walk on the road.",
+    "frame": 1,
+    "x": 400,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1.5 metres wide along the road's left edge."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible on the right side, pedestrians must use the roadway.",
+    "frame": 1,
+    "x": 600,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk on the right side of the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrian crossing is poorly marked and there are no kerb ramps, leading to potential obstruction and unsafe crossing.",
+    "frame": 1,
+    "x": 450,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a raised pedestrian crossing with proper kerb ramps to enhance safety for crossing pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No kerb ramps at the pedestrian crossing, forcing pedestrians to step directly into the traffic.",
+    "frame": 1,
+    "x": 450,
+    "y": 450,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at both ends of the crossing to assist pedestrians safely crossing the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 17.51,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7878,
+  "completion_tokens": 549,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

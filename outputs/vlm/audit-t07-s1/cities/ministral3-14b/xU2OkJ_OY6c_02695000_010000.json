@@ -1,0 +1,112 @@
+{
+ "clip_id": "xU2OkJ_OY6c_02695000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_002.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_004.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_006.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_008.jpg",
+  "data/snippets/xU2OkJ_OY6c/xU2OkJ_OY6c_02695000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"rural\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no sidewalk or informal path for pedestrians on left side\",\"frame\":1,\"x\":200,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk along the left side of the road to provide safe pedestrian pathways.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"informal path obstructed on the right side, partly unusable\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the informal path on the right side is cleared and maintained to provide an accessible pedestrian route.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections under footway on the right side\",\"frame\":3,\"x\":650,\"y\":440,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections along the informal path on the right side to eliminate trip hazards for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"no street lights along the road in a rural residential area\",\"frame\":2,\"x\":450,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install adequate street lighting along the road to enhance visibility and safety during nighttime.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no sidewalk or informal path for pedestrians on left side",
+    "frame": 1,
+    "x": 200,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk along the left side of the road to provide safe pedestrian pathways."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "informal path obstructed on the right side, partly unusable",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the informal path on the right side is cleared and maintained to provide an accessible pedestrian route."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections under footway on the right side",
+    "frame": 3,
+    "x": 650,
+    "y": 440,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections along the informal path on the right side to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "no street lights along the road in a rural residential area",
+    "frame": 2,
+    "x": 450,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install adequate street lighting along the road to enhance visibility and safety during nighttime."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.31,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7855,
+  "completion_tokens": 526,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

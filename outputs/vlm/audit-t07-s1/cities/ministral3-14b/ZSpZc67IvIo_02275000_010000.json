@@ -1,0 +1,92 @@
+{
+ "clip_id": "ZSpZc67IvIo_02275000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_002.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_004.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_006.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_008.jpg",
+  "data/snippets/ZSpZc67IvIo/ZSpZc67IvIo_02275000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"physical_barrier\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"People visible walking along the roadside, crossing demand is present with mixed land use, and no crossing facility exists\",\"frame\":3,\"x\":860,\"y\":380,\"measure\":\"improve_crossing\",\"suggestion\":\"Incorporate a marked zebra crossing with dropped kerbs to facilitate pedestrian crossing safely in this high-demand area.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Obstruction on the narrow sidewalk due to informal blockages, reducing its usability\",\"frame\":1,\"x\":900,\"y\":470,\"measure\":\"improve_crossing\",\"suggestion\":\"Clear and widen the right-hand sidewalk to ensure adequate pedestrian movement space and improve infrastructure to prevent impromptu obstacles.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "physical_barrier",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "People visible walking along the roadside, crossing demand is present with mixed land use, and no crossing facility exists",
+    "frame": 3,
+    "x": 860,
+    "y": 380,
+    "measure": "improve_crossing",
+    "suggestion": "Incorporate a marked zebra crossing with dropped kerbs to facilitate pedestrian crossing safely in this high-demand area."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Obstruction on the narrow sidewalk due to informal blockages, reducing its usability",
+    "frame": 1,
+    "x": 900,
+    "y": 470,
+    "measure": "improve_crossing",
+    "suggestion": "Clear and widen the right-hand sidewalk to ensure adequate pedestrian movement space and improve infrastructure to prevent impromptu obstacles."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.24,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7720,
+  "completion_tokens": 391,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

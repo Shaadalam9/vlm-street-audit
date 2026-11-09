@@ -1,0 +1,132 @@
+{
+ "clip_id": "_JWKEWBGbmk_22097000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_002.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_004.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_006.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_008.jpg",
+  "data/snippets/_JWKEWBGbmk/_JWKEWBGbmk_22097000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal_path_1m_or_more on the right side is not purpose-built and is barely usable\",\"frame\":1,\"x\":800,\"y\":530,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk along the right side of the street.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk is partly blocked by obstructions\",\"frame\":1,\"x\":150,\"y\":460,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the left sidewalk is clear of obstructions and maintain it free from encroachments.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"some trip hazards on the sidewalk\",\"frame\":2,\"x\":200,\"y\":490,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven sections on the left-side sidewalk to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"some trip hazards on the informal path\",\"frame\":3,\"x\":850,\"y\":540,\"measure\":\"repair_footway\",\"suggestion\":\"Upgrade and level the informal path on the right side to prevent tripping hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"zebra crossing is present but people are seen crossing the carriageway without stopping\",\"frame\":1,\"x\":500,\"y\":550,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a refuge island or signalize the crossing to ensure safer pedestrian crossings.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"lack of kerb ramps at zebra crossing\",\"frame\":1,\"x\":600,\"y\":560,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at the zebra crossing to facilitate safe access for pedestrians with disabilities.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal_path_1m_or_more on the right side is not purpose-built and is barely usable",
+    "frame": 1,
+    "x": 800,
+    "y": 530,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk along the right side of the street."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "sidewalk is partly blocked by obstructions",
+    "frame": 1,
+    "x": 150,
+    "y": 460,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the left sidewalk is clear of obstructions and maintain it free from encroachments."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "some trip hazards on the sidewalk",
+    "frame": 2,
+    "x": 200,
+    "y": 490,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven sections on the left-side sidewalk to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "some trip hazards on the informal path",
+    "frame": 3,
+    "x": 850,
+    "y": 540,
+    "measure": "repair_footway",
+    "suggestion": "Upgrade and level the informal path on the right side to prevent tripping hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "zebra crossing is present but people are seen crossing the carriageway without stopping",
+    "frame": 1,
+    "x": 500,
+    "y": 550,
+    "measure": "improve_crossing",
+    "suggestion": "Install a refuge island or signalize the crossing to ensure safer pedestrian crossings."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "lack of kerb ramps at zebra crossing",
+    "frame": 1,
+    "x": 600,
+    "y": 560,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at the zebra crossing to facilitate safe access for pedestrians with disabilities."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 20.59,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7992,
+  "completion_tokens": 663,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "Et3NBh7E87A_00381000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate and widen the footway to at least 1m, ensuring it is clear of obstructions."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Enforce parking regulations to ensure the footway remains clear of parked vehicles."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "none",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights to ensure ample lighting along the entire road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the road is heavily obscured by trees, making it impossible to determine the footway width or presence of obstructions."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side footway is largely hidden by trees and a bus shelter, so the deficit cannot be verified."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Street lighting is clearly visible on the right side of the road in multiple frames."
+  }
+ ],
+ "error": null
+}

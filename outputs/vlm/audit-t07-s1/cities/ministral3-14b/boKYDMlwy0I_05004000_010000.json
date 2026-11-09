@@ -1,0 +1,112 @@
+{
+ "clip_id": "boKYDMlwy0I_05004000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_05004000_010000/frame_002.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_05004000_010000/frame_004.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_05004000_010000/frame_006.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_05004000_010000/frame_008.jpg",
+  "data/snippets/boKYDMlwy0I/boKYDMlwy0I_05004000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Informal path nonexistent, obstructed with no footway infrastructure\",\"frame\":1,\"x\":100,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a continuous and usable sidewalk along left side to facilitate pedestrian movement and provide a safe walking space.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Informal path partially blocked by vehicles and other obstructions\",\"frame\":2,\"x\":350,\"y\":575,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Set up clear barriers or signs to prevent encroachments on the informal path and create designated pedestrian zones.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Uneven terrain and informal path surface posing trip hazards\",\"frame\":4,\"x\":600,\"y\":450,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Pave the informal path and add physical barriers to eliminate trip hazards and improve pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"No visible crossing despite high pedestrian presence and crossing demand\",\"frame\":5,\"x\":400,\"y\":400,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a zebra or marked crossing at high pedestrian crossing points to ensure safety and visibility for both vehicles and pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Informal path nonexistent, obstructed with no footway infrastructure",
+    "frame": 1,
+    "x": 100,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a continuous and usable sidewalk along left side to facilitate pedestrian movement and provide a safe walking space."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Informal path partially blocked by vehicles and other obstructions",
+    "frame": 2,
+    "x": 350,
+    "y": 575,
+    "measure": "add_raised_crossing",
+    "suggestion": "Set up clear barriers or signs to prevent encroachments on the informal path and create designated pedestrian zones."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Uneven terrain and informal path surface posing trip hazards",
+    "frame": 4,
+    "x": 600,
+    "y": 450,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Pave the informal path and add physical barriers to eliminate trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "No visible crossing despite high pedestrian presence and crossing demand",
+    "frame": 5,
+    "x": 400,
+    "y": 400,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a zebra or marked crossing at high pedestrian crossing points to ensure safety and visibility for both vehicles and pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.77,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7873,
+  "completion_tokens": 544,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

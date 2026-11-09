@@ -1,0 +1,101 @@
+{
+ "clip_id": "An9UjXV1slc_07952000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1m."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked cars on the narrow footway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Enforce parking regulations to ensure the footway remains clear of obstructions."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1m."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction by parked cars on the narrow footway",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "clear_footway",
+   "suggestion": "Enforce parking regulations to ensure the footway remains clear of obstructions."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "crossing_demand is true due to mixed land use and no crossing facility visible",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised pedestrian crossing with a refuge island to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway is not clearly visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway is not clearly visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right footway is not clearly visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right footway is not clearly visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No crossing facility is visible, but the frames do not show enough to confirm the deficit."
+  }
+ ],
+ "error": null
+}

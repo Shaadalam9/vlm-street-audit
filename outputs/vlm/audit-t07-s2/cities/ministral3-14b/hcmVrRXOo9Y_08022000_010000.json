@@ -1,0 +1,102 @@
+{
+ "clip_id": "hcmVrRXOo9Y_08022000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_002.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_004.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_006.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_008.jpg",
+  "data/snippets/hcmVrRXOo9Y/hcmVrRXOo9Y_08022000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"rural_road\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"rural\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"visible lack of footway for pedestrian walking along the road, people must walk in the carriageway\",\"frame\":1,\"x\":350,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous sidewalk along both sides of the road to provide safe walking space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"people crossing the carriageway without any designated crossing facility\",\"frame\":4,\"x\":450,\"y\":350,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install marked pedestrian crossings at intervals, particularly near areas with visible pedestrian movement, to ensure safe crossing.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"no street lighting visible in the rural road setting\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to ensure visibility and safety during low-light conditions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "rural_road",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "visible lack of footway for pedestrian walking along the road, people must walk in the carriageway",
+    "frame": 1,
+    "x": 350,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous sidewalk along both sides of the road to provide safe walking space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "people crossing the carriageway without any designated crossing facility",
+    "frame": 4,
+    "x": 450,
+    "y": 350,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install marked pedestrian crossings at intervals, particularly near areas with visible pedestrian movement, to ensure safe crossing."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "no street lighting visible in the rural road setting",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to ensure visibility and safety during low-light conditions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 28.23,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7767,
+  "completion_tokens": 438,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

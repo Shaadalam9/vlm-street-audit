@@ -1,0 +1,65 @@
+{
+ "clip_id": "7WEhoRTNbGQ_00755000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk in the roadway",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk in the roadway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "No street lights visible along the road in a rural area",
+   "frame": 1,
+   "x": 500,
+   "y": 200,
+   "measure": "add_street_lighting",
+   "suggestion": "Install street lights along the road to improve visibility and safety during nighttime."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but a raised crossing does not provide the continuous walking space the suggestion describes."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible, but a raised crossing does not provide the continuous walking space the suggestion describes."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The deficit is visible and the measure addresses it, but the suggestion is generic and feasibility is unclear."
+  }
+ ],
+ "error": null
+}

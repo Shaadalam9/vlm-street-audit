@@ -1,0 +1,137 @@
+{
+ "clip_id": "R_FR8kB12sg_00263000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "sidewalk is under 1m and partly blocked by barriers and obstructions",
+   "frame": 5,
+   "x": 300,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1.5m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "sidewalk is under 1m and partly blocked by barriers and obstructions",
+   "frame": 5,
+   "x": 300,
+   "y": 500,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the right-side footway is clear and accessible for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the sidewalk",
+   "frame": 3,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the sidewalk to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven and broken sections on the sidewalk",
+   "frame": 3,
+   "x": 700,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections of the sidewalk to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing without adequate kerb ramps",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "improve_crossing",
+   "suggestion": "Install proper kerb ramps and ensure the crossing is clearly visible and accessible for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing is obstructed and hard to see",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "improve_crossing",
+   "suggestion": "Improve the visibility of the crossing and ensure it is not obstructed by barriers or other objects."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no kerb ramps at the crossing",
+   "frame": 1,
+   "x": 400,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at the crossing to facilitate safe pedestrian movement."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side has narrow, obstructed footways that would benefit from widening."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway is not clearly visible in the frames to assess obstructions."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left footway shows visible degradation and uneven surfaces."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right-side footway is not sufficiently visible to identify trip hazards."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing area lacks visible, accessible kerb ramps."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing is partially obscured by street furniture and barriers."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Kerb ramps are missing at the pedestrian crossing point."
+  }
+ ],
+ "error": null
+}

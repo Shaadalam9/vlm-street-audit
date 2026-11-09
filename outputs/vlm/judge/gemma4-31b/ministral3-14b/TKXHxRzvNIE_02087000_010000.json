@@ -1,0 +1,65 @@
+{
+ "clip_id": "TKXHxRzvNIE_02087000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 100,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a proper, continuous sidewalk at least 1m wide along the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians visible crossing the road without a crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 350,
+   "measure": "add_marked_crossing",
+   "suggestion": "Introduce a marked pedestrian crossing at this location to provide a safe crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side lacks a continuous, standard-width sidewalk."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The right side consists of a dirt shoulder/parking area without a proper sidewalk."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A pedestrian is seen crossing the road in the fourth frame without a designated crossing."
+  }
+ ],
+ "error": null
+}

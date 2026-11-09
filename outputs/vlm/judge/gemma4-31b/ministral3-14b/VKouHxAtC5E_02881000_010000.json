@@ -1,0 +1,65 @@
+{
+ "clip_id": "VKouHxAtC5E_02881000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked vehicles",
+   "frame": 3,
+   "x": 700,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide on the right side, ensuring it is clear of obstructions."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "No crossing facility despite pedestrian demand",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Introduce a signalised pedestrian crossing with a refuge island to safely accommodate pedestrian crossings at this location."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "No kerb ramps at the crossing point",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_raised_crossing",
+   "suggestion": "Implement kerb ramps at the crossing to ensure accessibility for pedestrians, including those with disabilities."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "A wide, clear sidewalk is visible on the right side of the street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no marked or signalised pedestrian crossing at this intersection."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The curb edge at the potential crossing point is not clearly visible enough to determine the presence of ramps."
+  }
+ ],
+ "error": null
+}

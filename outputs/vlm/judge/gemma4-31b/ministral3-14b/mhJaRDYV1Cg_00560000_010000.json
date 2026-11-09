@@ -1,0 +1,65 @@
+{
+ "clip_id": "mhJaRDYV1Cg_00560000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs not present at the marked pedestrian crossing",
+   "frame": 1,
+   "x": 600,
+   "y": 550,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the pedestrian crossing to ensure accessibility for people using wheelchairs or strollers."
+  },
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Sidewalk width is under 1 meter",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the narrow sidewalk on the left side to at least 1.5 meters to provide safer pedestrian space."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "Sidewalk width is under 1 meter",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Widen the narrow sidewalk on the right side to at least 1.5 meters to provide safer pedestrian space."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is no marked pedestrian crossing visible in the frames to evaluate kerb ramps."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side of the image shows a parking lot and distant greenery, not a defined street footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side shows a building wall and parking area, not a defined street footway."
+  }
+ ],
+ "error": null
+}

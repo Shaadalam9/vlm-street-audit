@@ -1,0 +1,101 @@
+{
+ "clip_id": "R_FR8kB12sg_00298000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "footway is partly blocked by parked vehicles and other obstructions",
+   "frame": 3,
+   "x": 150,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway is clear for pedestrian use."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 2,
+   "x": 100,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "crossing demand is high due to mixed land use but no crossing facility is present",
+   "frame": 5,
+   "x": 500,
+   "y": 200,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a marked pedestrian crossing with a refuge island to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "no kerb ramps at potential crossing points",
+   "frame": 4,
+   "x": 400,
+   "y": 350,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at pedestrian crossing points to ensure accessibility for all users."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left footway appears narrow and obstructed, though total width is hard to confirm from the dashcam angle."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Obstructions like poles and signage are visible on the left footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The image resolution is insufficient to identify specific trip hazards or broken pavement sections."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "No marked pedestrian crossings are visible in the immediate vicinity despite the urban environment."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames do not show any specific crossing points where kerb ramps would be required."
+  }
+ ],
+ "error": null
+}

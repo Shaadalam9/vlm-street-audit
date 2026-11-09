@@ -1,0 +1,112 @@
+{
+ "clip_id": "tE2MILY7pGY_00148000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_002.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_004.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_006.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_008.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00148000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no purpose-built footway on left side of the road for pedestrians\",\"frame\":1,\"x\":60,\"y\":280,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous and usable sidewalk along the left side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway on the right is partially obstructed by parked cars\",\"frame\":3,\"x\":80,\"y\":300,\"measure\":\"clear_footway\",\"suggestion\":\"Set up clear barriers or signs to prevent parking on the narrow footway and ensure its accessibility for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections and potential trip hazards on the right sidewalk\",\"frame\":4,\"x\":300,\"y\":300,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and maintain the sidewalk to eliminate any trip hazards and make it safe for pedestrian use.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"inconsistent street lighting on the mixed-use urban road\",\"frame\":2,\"x\":600,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights to improve visibility and ensure the road is well-lit during all times of the day.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no purpose-built footway on left side of the road for pedestrians",
+    "frame": 1,
+    "x": 60,
+    "y": 280,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous and usable sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway on the right is partially obstructed by parked cars",
+    "frame": 3,
+    "x": 80,
+    "y": 300,
+    "measure": "clear_footway",
+    "suggestion": "Set up clear barriers or signs to prevent parking on the narrow footway and ensure its accessibility for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections and potential trip hazards on the right sidewalk",
+    "frame": 4,
+    "x": 300,
+    "y": 300,
+    "measure": "repair_footway",
+    "suggestion": "Repair and maintain the sidewalk to eliminate any trip hazards and make it safe for pedestrian use."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "inconsistent street lighting on the mixed-use urban road",
+    "frame": 2,
+    "x": 600,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights to improve visibility and ensure the road is well-lit during all times of the day."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 24.89,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7868,
+  "completion_tokens": 539,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

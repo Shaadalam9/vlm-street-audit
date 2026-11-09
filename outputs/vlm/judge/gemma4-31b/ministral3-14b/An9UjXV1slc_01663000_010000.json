@@ -1,0 +1,65 @@
+{
+ "clip_id": "An9UjXV1slc_01663000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "Dropped kerbs are missing at the zebra crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at both ends of the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The crossing is hard to see and drivers do not stop for pedestrians",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge island to improve visibility and enforce driver stops."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The crossing is on a wide road with no refuge for pedestrians",
+   "frame": 3,
+   "x": 500,
+   "y": 450,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe place for pedestrians to wait before crossing the remaining lanes."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The suggestion to add a raised crossing is a different measure than adding kerb ramps, though it would solve the access issue."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing markings are faded and the road is wide, making a signalised crossing a valid improvement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is clearly wide with multiple lanes and no central refuge for pedestrians."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "uVQb0et_x8U_01380000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_002.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_004.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_006.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_008.jpg",
+  "data/snippets/uVQb0et_x8U/uVQb0et_x8U_01380000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No pedestrian pathway visible on either side of the road, people must walk in the roadway.\",\"frame\":5,\"x\":600,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Construct dedicated sidewalks along both sides of the road to improve pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Visible demand for crossing from people crossing the road, no zebra crossing or pedestrian crossing aid in view.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install marked zebra crossings at intervals to allow safe pedestrian crossings and improve overall road safety.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Areas of the road are poorly lit due to sparse street lighting.\",\"frame\":1,\"x\":50,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights to ensure sufficient illumination and enhance safety during nighttime.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No pedestrian pathway visible on either side of the road, people must walk in the roadway.",
+    "frame": 5,
+    "x": 600,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Construct dedicated sidewalks along both sides of the road to improve pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Visible demand for crossing from people crossing the road, no zebra crossing or pedestrian crossing aid in view.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install marked zebra crossings at intervals to allow safe pedestrian crossings and improve overall road safety."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Areas of the road are poorly lit due to sparse street lighting.",
+    "frame": 1,
+    "x": 50,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights to ensure sufficient illumination and enhance safety during nighttime."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 21.03,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7780,
+  "completion_tokens": 451,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

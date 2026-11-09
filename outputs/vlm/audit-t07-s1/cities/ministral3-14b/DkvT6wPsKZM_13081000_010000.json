@@ -1,0 +1,122 @@
+{
+ "clip_id": "DkvT6wPsKZM_13081000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_002.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_004.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_006.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_008.jpg",
+  "data/snippets/DkvT6wPsKZM/DkvT6wPsKZM_13081000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"There is no designated footway on the left side of the road; pedestrians would have to walk in the carriageway.\",\"frame\":1,\"x\":100,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous sidewalk along the left side of the road at least 1 metre wide, separated by a physical barrier to ensure pedestrian safety.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right side is partly blocked by parked vehicles, stalls, or other obstructions.\",\"frame\":2,\"x\":500,\"y\":600,\"measure\":\"clear_footway\",\"suggestion\":\"Install a physical barrier to separate the footway and prevent encroachment by vehicles or vendors.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right side has broken or uneven sections that pose trip hazards.\",\"frame\":3,\"x\":600,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the informal path on the right side to eliminate trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a demand for crossing, but no purpose-built crossing facilities are visible.\",\"frame\":4,\"x\":300,\"y\":300,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install zebra crossings at strategic points along the road, particularly where pedestrian movement is frequent, to improve crossing safety.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Street lighting is inadequate with 'some' lights, insufficient for a fully urban environment.\",\"frame\":1,\"x\":750,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional streetlights along the entire road segment to ensure adequate illumination for pedestrian and vehicle safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "There is no designated footway on the left side of the road; pedestrians would have to walk in the carriageway.",
+    "frame": 1,
+    "x": 100,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous sidewalk along the left side of the road at least 1 metre wide, separated by a physical barrier to ensure pedestrian safety."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The informal path on the right side is partly blocked by parked vehicles, stalls, or other obstructions.",
+    "frame": 2,
+    "x": 500,
+    "y": 600,
+    "measure": "clear_footway",
+    "suggestion": "Install a physical barrier to separate the footway and prevent encroachment by vehicles or vendors."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right side has broken or uneven sections that pose trip hazards.",
+    "frame": 3,
+    "x": 600,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the informal path on the right side to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a demand for crossing, but no purpose-built crossing facilities are visible.",
+    "frame": 4,
+    "x": 300,
+    "y": 300,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install zebra crossings at strategic points along the road, particularly where pedestrian movement is frequent, to improve crossing safety."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Street lighting is inadequate with 'some' lights, insufficient for a fully urban environment.",
+    "frame": 1,
+    "x": 750,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional streetlights along the entire road segment to ensure adequate illumination for pedestrian and vehicle safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.37,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7983,
+  "completion_tokens": 654,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

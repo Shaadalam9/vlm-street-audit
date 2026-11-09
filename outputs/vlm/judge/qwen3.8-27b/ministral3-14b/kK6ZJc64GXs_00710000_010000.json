@@ -1,0 +1,137 @@
+{
+ "clip_id": "kK6ZJc64GXs_00710000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "informal path under 1m, partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the left side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "informal path under 1m, partly blocked by obstructions",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction on informal path",
+   "frame": 1,
+   "x": 250,
+   "y": 520,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the informal path on the left side to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "obstruction on informal path",
+   "frame": 1,
+   "x": 750,
+   "y": 520,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the informal path on the right side to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on informal path",
+   "frame": 1,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the left side informal path to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "uneven sections on informal path",
+   "frame": 1,
+   "x": 800,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair uneven sections on the right side informal path to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrian crossing demand with no crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a narrow verge but do not provide enough detail to confirm the width or specific obstructions of a footway on the left."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side has a raised stone wall and a narrow path, but the frames do not clearly show the condition or width of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Specific obstructions on a left-side footway are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Specific obstructions on a right-side footway are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Uneven sections on a left-side footway are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Uneven sections on a right-side footway are not clearly visible in the provided frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "While pedestrians are present, the frames do not show a specific location with high crossing demand that lacks a facility."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,101 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03391000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people must walk in the roadway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people must walk in the roadway",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "High pedestrian demand to cross the road but no crossing facility is present",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked zebra crossing with a refuge island in the middle of the road to facilitate safe pedestrian crossing."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "road",
+   "evidence": "No crossing facility, pedestrians are forced to cross the wide road without any protection",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Introduce a signalised crossing with a refuge to ensure safe crossing for pedestrians on this busy road."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "Insufficient street lighting along the urban road",
+   "frame": 1,
+   "x": 300,
+   "y": 100,
+   "measure": "improve_crossing",
+   "suggestion": "Install additional street lights to ensure adequate illumination for both vehicles and pedestrians during nighttime."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is blocked by construction barriers, making a footway currently impossible but a deficit in normal conditions."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is entirely occupied by construction hoarding and equipment."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a short segment of road with no crossing visible, but not enough to determine overall demand or total absence."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Similar to the previous point, no crossing is visible in these frames to judge its quality."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The images are taken during daylight, so the adequacy of street lighting cannot be determined."
+  }
+ ],
+ "error": null
+}

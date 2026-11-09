@@ -121,7 +121,8 @@ def run_set(model: dict, set_name: str, settings: dict, base_url: str, limit: in
             record.update(ask(model["key"], build_messages([PROJECT_ROOT / f for f in names], float(clip.seconds),
                                                            condition["max_side"], variant),
                               base_url, timeout_s=timeout_s, max_tokens=int(model.get("max_answer_tokens", 2048)),
-                              variant=variant, temperature=condition["temperature"], seed=condition["seed"]))
+                              variant=variant, temperature=condition["temperature"], seed=condition["seed"],
+                              thinking_switch=bool(model.get("thinking_switch", True))))
         except requests.RequestException as error:
             record.update({"answer": None, "error": f"request failed: {error}"})
         path = out_dir / f"{clip.clip_id}.json"

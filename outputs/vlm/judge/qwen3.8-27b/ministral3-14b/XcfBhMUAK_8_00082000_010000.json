@@ -1,0 +1,65 @@
+{
+ "clip_id": "XcfBhMUAK_8_00082000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to create a dedicated, wider sidewalk along the left side of the road."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is less than 1m wide",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to create a dedicated, wider sidewalk along the right side of the road."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "4_or_more lanes and signalised crossing without a refuge",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left-side footway, so the deficit cannot be confirmed, and the suggestion is a generic measure."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the right-side footway, so the deficit cannot be confirmed, and the suggestion is a generic measure."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The wide, signalised crossing lacks a refuge island, and adding one is a specific and appropriate measure, though feasibility is unclear due to the overhead structure."
+  }
+ ],
+ "error": null
+}

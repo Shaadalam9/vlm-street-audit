@@ -1,0 +1,92 @@
+{
+ "clip_id": "GtpCx26QWQI_02110000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_02110000_010000/frame_002.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_02110000_010000/frame_004.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_02110000_010000/frame_006.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_02110000_010000/frame_008.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_02110000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"poor_crossing\",\"where\":\"right_side\",\"evidence\":\"crossing is hard to see and marked crossing lacks clear visibility due to traffic volume\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install raised platforms or reflective markers at the zebra crossing to enhance visibility and ensure drivers stop for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at the zebra crossing\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at the zebra crossing to facilitate safe pedestrian access and compliance with accessibility standards.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "poor_crossing",
+    "where": "right_side",
+    "evidence": "crossing is hard to see and marked crossing lacks clear visibility due to traffic volume",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install raised platforms or reflective markers at the zebra crossing to enhance visibility and ensure drivers stop for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at the zebra crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at the zebra crossing to facilitate safe pedestrian access and compliance with accessibility standards."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 16.36,
+ "usage": {
+  "prompt_tokens": 7352,
+  "total_tokens": 7733,
+  "completion_tokens": 381,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

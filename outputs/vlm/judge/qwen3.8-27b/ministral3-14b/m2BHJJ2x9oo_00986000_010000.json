@@ -1,0 +1,137 @@
+{
+ "clip_id": "m2BHJJ2x9oo_00986000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Informal path under 1m wide, obstructed and hazardous",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the left side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "Informal path under 1m wide, obstructed and hazardous",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Obstruction by stalls and goods on the informal path",
+   "frame": 1,
+   "x": 250,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the left-side informal path to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Obstruction by stalls and goods on the informal path",
+   "frame": 1,
+   "x": 750,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions from the right-side informal path to ensure it is fully usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Broken or uneven sections on the informal path",
+   "frame": 1,
+   "x": 200,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the left-side informal path to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Broken or uneven sections on the informal path",
+   "frame": 1,
+   "x": 700,
+   "y": 550,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the right-side informal path to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to provide a safe crossing point for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a formal sidewalk, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a formal sidewalk, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Stalls are clearly obstructing the path on the left, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Stalls are clearly obstructing the path on the right, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface on the left appears uneven, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The surface on the right appears uneven, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are crossing the road without a marked crossing, but the suggestion is a generic template that does not address the specific layout or constraints of this street."
+  }
+ ],
+ "error": null
+}

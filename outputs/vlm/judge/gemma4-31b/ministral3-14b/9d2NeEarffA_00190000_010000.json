@@ -1,0 +1,119 @@
+{
+ "clip_id": "9d2NeEarffA_00190000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by obstructions",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked vehicles and other items on the footway",
+   "frame": 3,
+   "x": 150,
+   "y": 550,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway is clear for pedestrian use."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven and broken sections on the footway",
+   "frame": 2,
+   "x": 100,
+   "y": 520,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "crossing",
+   "evidence": "marked crossing without refuge on a wide road",
+   "frame": 4,
+   "x": 400,
+   "y": 300,
+   "measure": "add_refuge_island",
+   "suggestion": "Add a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "crossing is hard to see and obstructed",
+   "frame": 5,
+   "x": 350,
+   "y": 350,
+   "measure": "improve_crossing",
+   "suggestion": "Improve visibility of the crossing with better markings and signage, and ensure it is not obstructed by vehicles or other items."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the crossing",
+   "frame": 1,
+   "x": 450,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing to facilitate safe pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The left side has a very narrow, fragmented verge rather than a proper footway."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Vegetation and poles obstruct the narrow pedestrian area on the left."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The resolution is too low to definitively identify specific trip hazards or broken pavement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide and the zebra crossing lacks a central refuge island."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing markings are faded and often obscured by turning vehicles."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The angle of the frames does not clearly show the kerb edge at the crossing points."
+  }
+ ],
+ "error": null
+}

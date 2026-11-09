@@ -1,0 +1,83 @@
+{
+ "clip_id": "KxNelAeELQ8_00025000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible, people walking in the roadway",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible, people walking in the roadway",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "People crossing the road without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to ensure safe crossing for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "road",
+   "evidence": "No crossing facility, pedestrians crossing in the middle of the roadway",
+   "frame": 5,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Introduce a signalised crossing with a refuge island to improve pedestrian safety at this location."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not clearly show the left side of the road, so it is impossible to confirm the absence of a footway."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is partially visible but lacks clear evidence of pedestrians or the full extent of the road edge to confirm the deficit."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are clearly visible crossing the road in the provided frames to support the claim of a missing crossing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "As no crossing activity is visible, the deficit of a poor crossing cannot be confirmed from the visual evidence."
+  }
+ ],
+ "error": null
+}

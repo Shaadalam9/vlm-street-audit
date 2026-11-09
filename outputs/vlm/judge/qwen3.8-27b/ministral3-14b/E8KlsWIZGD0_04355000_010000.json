@@ -1,0 +1,29 @@
+{
+ "clip_id": "E8KlsWIZGD0_04355000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are absent at the zebra crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install dropped kerbs at the zebra crossing to ensure safe pedestrian access."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The frames show a zebra crossing with a continuous, raised kerb on the right side, confirming the absence of a dropped kerb, which the suggested change would fix."
+  }
+ ],
+ "error": null
+}

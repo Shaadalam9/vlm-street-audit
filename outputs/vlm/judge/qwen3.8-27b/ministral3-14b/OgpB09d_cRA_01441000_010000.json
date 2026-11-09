@@ -1,0 +1,29 @@
+{
+ "clip_id": "OgpB09d_cRA_01441000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "No crossing facility visible despite crossing demand from shops and homes on both sides of the road",
+   "frame": 3,
+   "x": 500,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked zebra crossing with refuge islands to provide a safe crossing for pedestrians at this location."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, multi-lane road with no visible pedestrian crossing, but the specific location and crossing demand are not clearly defined, making the suggestion generic and feasibility hard."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,155 @@
+{
+ "clip_id": "8dWgC409JbI_01130000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Informal paths under 1m wide, obstructed by stalls and goods",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the left side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "Informal paths under 1m wide, obstructed by stalls and goods",
+   "frame": 1,
+   "x": 700,
+   "y": 400,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide safe pedestrian access."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "Obstructions from parked vehicles and market stalls",
+   "frame": 3,
+   "x": 150,
+   "y": 350,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway remains clear for pedestrian use."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Obstructions from parked vehicles and market stalls",
+   "frame": 3,
+   "x": 750,
+   "y": 350,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the footway remains clear for pedestrian use."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Uneven and broken sections on informal paths",
+   "frame": 2,
+   "x": 250,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Uneven and broken sections on informal paths",
+   "frame": 2,
+   "x": 700,
+   "y": 450,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the footway to eliminate trip hazards for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "Insufficient street lighting along the urban road",
+   "frame": 5,
+   "x": 500,
+   "y": 100,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights to improve visibility and safety along the road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is heavily obstructed by market stalls and goods, leaving no clear path for pedestrians."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is also crowded with stalls and parked vehicles, making it impossible to walk safely."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is clearly blocked by market stalls and goods, preventing safe pedestrian movement."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is obstructed by parked vehicles and market stalls, blocking pedestrian access."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The informal paths on the left side appear uneven and broken, posing a trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The informal paths on the right side are uneven and broken, creating a trip hazard."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "Pedestrians are seen crossing the road without any marked crossing facility."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "There is a lack of street lighting visible along the urban road, which could affect visibility and safety."
+  }
+ ],
+ "error": null
+}

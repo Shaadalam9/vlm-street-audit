@@ -1,0 +1,122 @@
+{
+ "clip_id": "GtpCx26QWQI_00795000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_002.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_004.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_006.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_008.jpg",
+  "data/snippets/GtpCx26QWQI/GtpCx26QWQI_00795000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Informal footpath under 1m width, partly blocked by obstructions.\",\"frame\":1,\"x\":450,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, properly maintained sidewalk with adequate width on the left side.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Informal footpath under 1m width, frequently obstructed.\",\"frame\":2,\"x\":300,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the vegetation and obstructions that are frequently blocking the right-side footpath.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven informal path acting as a trip hazard.\",\"frame\":3,\"x\":250,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and smooth the uneven sections of the informal footpath to eliminate trip hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Lack of driver attention and unmarked crossing.\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a signalised crossing with clear markings and a refuge to improve safety for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No dropped kerbs provided.\",\"frame\":1,\"x\":500,\"y\":330,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Provide kerb ramps at the crossing points to ensure safe and accessible pedestrian movement.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Informal footpath under 1m width, partly blocked by obstructions.",
+    "frame": 1,
+    "x": 450,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, properly maintained sidewalk with adequate width on the left side."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Informal footpath under 1m width, frequently obstructed.",
+    "frame": 2,
+    "x": 300,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Clear the vegetation and obstructions that are frequently blocking the right-side footpath."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven informal path acting as a trip hazard.",
+    "frame": 3,
+    "x": 250,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair and smooth the uneven sections of the informal footpath to eliminate trip hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Lack of driver attention and unmarked crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a signalised crossing with clear markings and a refuge to improve safety for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No dropped kerbs provided.",
+    "frame": 1,
+    "x": 500,
+    "y": 330,
+    "measure": "add_raised_crossing",
+    "suggestion": "Provide kerb ramps at the crossing points to ensure safe and accessible pedestrian movement."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.01,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7925,
+  "completion_tokens": 596,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

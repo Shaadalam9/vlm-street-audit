@@ -1,0 +1,101 @@
+{
+ "clip_id": "E8KlsWIZGD0_03847000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 3,
+   "x": 300,
+   "y": 400,
+   "measure": "widen_or_separate_footway",
+   "suggestion": "Install a physical barrier to separate the footway from the carriageway and extend the footway to at least 1m width."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "obstruction by parked cars",
+   "frame": 3,
+   "x": 200,
+   "y": 450,
+   "measure": "clear_footway",
+   "suggestion": "Enforce parking regulations to ensure the footway remains clear of obstructions."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "uneven sections on the footway",
+   "frame": 3,
+   "x": 250,
+   "y": 420,
+   "measure": "repair_footway",
+   "suggestion": "Repair and resurface the footway to eliminate trip hazards."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "no dropped kerbs at the zebra crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the zebra crossing to ensure accessibility for pedestrians with disabilities."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "zebra crossing is hard to see and obstructed by parked cars",
+   "frame": 1,
+   "x": 450,
+   "y": 520,
+   "measure": "improve_crossing",
+   "suggestion": "Improve visibility of the zebra crossing with better markings and ensure it is not obstructed by parked vehicles."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a footway on the left side, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the left side in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No footway is visible on the left side in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No zebra crossing is visible in the frames, so the deficit cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No zebra crossing is visible in the frames, so the deficit cannot be confirmed."
+  }
+ ],
+ "error": null
+}

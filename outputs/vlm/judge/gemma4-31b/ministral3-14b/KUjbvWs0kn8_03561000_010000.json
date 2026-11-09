@@ -1,0 +1,47 @@
+{
+ "clip_id": "KUjbvWs0kn8_03561000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked pedestrian crossing is hard to see and lacks clear visibility due to parked cars and traffic.",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install raised platforms and reflective markings at the crossing to enhance visibility and ensure drivers stop."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "The crossing lacks dropped kerbs, making it difficult for pedestrians with mobility issues to cross safely.",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Add kerb ramps at the crossing to ensure accessibility for all pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The crossing markings are faded and partially obscured, making the deficit visible and the fix feasible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": false,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The kerb edges at the crossing are not clearly visible in the frames, and the suggested measure 'add_raised_crossing' does not directly address the lack of ramps."
+  }
+ ],
+ "error": null
+}

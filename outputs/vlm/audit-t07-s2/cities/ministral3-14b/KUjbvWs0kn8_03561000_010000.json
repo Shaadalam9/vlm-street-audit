@@ -1,0 +1,112 @@
+{
+ "clip_id": "KUjbvWs0kn8_03561000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/KUjbvWs0kn8/KUjbvWs0kn8_03561000_010000/frame_002.jpg",
+  "data/snippets/KUjbvWs0kn8/KUjbvWs0kn8_03561000_010000/frame_004.jpg",
+  "data/snippets/KUjbvWs0kn8/KUjbvWs0kn8_03561000_010000/frame_006.jpg",
+  "data/snippets/KUjbvWs0kn8/KUjbvWs0kn8_03561000_010000/frame_008.jpg",
+  "data/snippets/KUjbvWs0kn8/KUjbvWs0kn8_03561000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at pedestrian crossing\",\"frame\":5,\"x\":540,\"y\":560,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at all pedestrian crossing points to assist wheelchair users and improve accessibility.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing is not raised, marked poorly and crossing quality is poor\",\"frame\":4,\"x\":480,\"y\":520,\"measure\":\"improve_crossing\",\"suggestion\":\"Upgrade the pedestrian crossing to a raised or signalised crossing to increase safety and visibility for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven and broken sections on narrow footway\",\"frame\":2,\"x\":200,\"y\":490,\"measure\":\"repair_footway\",\"suggestion\":\"Repave and level the footpath on the left side to eliminate trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections on the narrow footway\",\"frame\":3,\"x\":800,\"y\":480,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the footpath on the right side to ensure a smooth surface and prevent hazards for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at pedestrian crossing",
+    "frame": 5,
+    "x": 540,
+    "y": 560,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at all pedestrian crossing points to assist wheelchair users and improve accessibility."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "crossing is not raised, marked poorly and crossing quality is poor",
+    "frame": 4,
+    "x": 480,
+    "y": 520,
+    "measure": "improve_crossing",
+    "suggestion": "Upgrade the pedestrian crossing to a raised or signalised crossing to increase safety and visibility for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven and broken sections on narrow footway",
+    "frame": 2,
+    "x": 200,
+    "y": 490,
+    "measure": "repair_footway",
+    "suggestion": "Repave and level the footpath on the left side to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections on the narrow footway",
+    "frame": 3,
+    "x": 800,
+    "y": 480,
+    "measure": "repair_footway",
+    "suggestion": "Repave the footpath on the right side to ensure a smooth surface and prevent hazards for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 20.97,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7844,
+  "completion_tokens": 515,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

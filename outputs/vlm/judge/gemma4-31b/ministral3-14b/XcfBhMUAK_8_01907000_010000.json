@@ -1,0 +1,65 @@
+{
+ "clip_id": "XcfBhMUAK_8_01907000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "Dropped kerbs are absent at the zebra crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 600,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install dropped kerbs at the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked crossing is hard to see and drivers do not appear to stop",
+   "frame": 1,
+   "x": 400,
+   "y": 550,
+   "measure": "improve_crossing",
+   "suggestion": "Add reflective markings and traffic calming measures to improve visibility and enforce stopping at the crossing."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The crossing is on a wide road with no refuge island",
+   "frame": 2,
+   "x": 450,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Install a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": false,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The auditor suggests a raised crossing to fix missing kerb ramps, which are different infrastructure types; dropped kerbs are the correct fix."
+  },
+  {
+   "deficit_visible": "no",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The zebra crossing markings are clear and highly visible in the frames."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide and lacks a central refuge for pedestrians."
+  }
+ ],
+ "error": null
+}

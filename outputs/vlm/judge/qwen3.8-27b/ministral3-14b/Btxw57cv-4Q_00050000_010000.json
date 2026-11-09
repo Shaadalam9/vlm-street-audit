@@ -1,0 +1,83 @@
+{
+ "clip_id": "Btxw57cv-4Q_00050000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, pedestrians walking in the carriageway",
+   "frame": 1,
+   "x": 200,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, pedestrians walking in the carriageway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a designated crossing facility",
+   "frame": 3,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Introduce a marked zebra crossing at this location to provide a safe crossing point for pedestrians."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "road",
+   "evidence": "No crossing facility present, pedestrians crossing in the middle of the traffic",
+   "frame": 5,
+   "x": 500,
+   "y": 400,
+   "measure": "add_signalised_crossing",
+   "suggestion": "Install a signalised crossing with a refuge to ensure safe crossing for pedestrians and reduce the risk of accidents."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is obscured by a black car, so the presence of a footway cannot be confirmed from the frames."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is crowded with motorbikes, making it impossible to verify if a footway exists behind them."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are visible crossing the road in the provided frames, so the deficit is not shown."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show any pedestrians attempting to cross, so the claim of poor crossing conditions is not visible."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "KUjbvWs0kn8_00281000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "No footway visible on the left side of the road, people would have to walk in the roadway",
+   "frame": 1,
+   "x": 100,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "No footway visible on the right side of the road, people would have to walk in the roadway",
+   "frame": 1,
+   "x": 800,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left roadside clearly enough to confirm the absence of a footway, and the suggestion is a generic measure that does not reference any specific feature of this street."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right roadside is obscured by the traffic gantry and trees, so the absence of a footway cannot be confirmed, and the suggestion is a generic measure that does not reference any specific feature of"
+  }
+ ],
+ "error": null
+}

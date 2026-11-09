@@ -1,0 +1,152 @@
+{
+ "clip_id": "VKouHxAtC5E_02881000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02881000_010000/frame_002.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02881000_010000/frame_004.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02881000_010000/frame_006.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02881000_010000/frame_008.jpg",
+  "data/snippets/VKouHxAtC5E/VKouHxAtC5E_02881000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is less than 1m wide and partly obstructed in frames 1-5\",\"frame\":3,\"x\":250,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk at least 1m wide along the left side to allow safe pedestrian movement.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is less than 1m wide and obstructed in frames 1-5\",\"frame\":3,\"x\":650,\"y\":450,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk at least 1m wide along the right side to ensure safe pedestrian access.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstacles on the footway in frames 1-5\",\"frame\":3,\"x\":280,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Remove parked vehicles and other obstructions to keep the footway clear and accessible.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstacles on the footway in frames 1-5\",\"frame\":3,\"x\":600,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the footway remains clear by preventing obstructions and parking on footpaths.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on the footway in frames 1-5\",\"frame\":3,\"x\":300,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair broken and uneven parts of the footway to prevent tripping hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections on the footway in frames 1-5\",\"frame\":3,\"x\":620,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair uneven surfaces and tripping hazards on the right footway to ensure pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"crossing demand due to presence of pedestrians and shops but no crossing facility in frames 1-5\",\"frame\":3,\"x\":500,\"y\":300,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with a refuge island on this busy road to provide a safe way for pedestrians to cross.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"road has 4 or more lanes with traffic signals but no refuge island in frames 1-5\",\"frame\":3,\"x\":500,\"y\":300,\"measure\":\"add_refuge_island\",\"suggestion\":\"Construct a refuge island at the pedestrian crossing to reduce the crossing distance and improve safety for pedestrians on this wide road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is less than 1m wide and partly obstructed in frames 1-5",
+    "frame": 3,
+    "x": 250,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side to allow safe pedestrian movement."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is less than 1m wide and obstructed in frames 1-5",
+    "frame": 3,
+    "x": 650,
+    "y": 450,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the right side to ensure safe pedestrian access."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstacles on the footway in frames 1-5",
+    "frame": 3,
+    "x": 280,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Remove parked vehicles and other obstructions to keep the footway clear and accessible."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstacles on the footway in frames 1-5",
+    "frame": 3,
+    "x": 600,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the footway remains clear by preventing obstructions and parking on footpaths."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on the footway in frames 1-5",
+    "frame": 3,
+    "x": 300,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair broken and uneven parts of the footway to prevent tripping hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections on the footway in frames 1-5",
+    "frame": 3,
+    "x": 620,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair uneven surfaces and tripping hazards on the right footway to ensure pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "crossing demand due to presence of pedestrians and shops but no crossing facility in frames 1-5",
+    "frame": 3,
+    "x": 500,
+    "y": 300,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a marked pedestrian crossing with a refuge island on this busy road to provide a safe way for pedestrians to cross."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "road has 4 or more lanes with traffic signals but no refuge island in frames 1-5",
+    "frame": 3,
+    "x": 500,
+    "y": 300,
+    "measure": "add_refuge_island",
+    "suggestion": "Construct a refuge island at the pedestrian crossing to reduce the crossing distance and improve safety for pedestrians on this wide road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 30.25,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8215,
+  "completion_tokens": 886,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,65 @@
+{
+ "clip_id": "TKXHxRzvNIE_01842000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "sidewalk is under 1m and informal, not usable",
+   "frame": 1,
+   "x": 700,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Construct a continuous, usable sidewalk of at least 1m width along the right side of the road."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "pedestrians visible crossing the road without a crossing facility",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked zebra crossing at this location to provide a safe crossing point for pedestrians."
+  },
+  {
+   "need": "no_kerb_ramps",
+   "where": "road",
+   "evidence": "no kerb ramps at potential crossing points",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at the crossing points to ensure accessibility for pedestrians, including those with disabilities."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide, paved promenade on the right, but its exact width and usability as a footway are not clearly discernible, making the deficit and the feasibility of the suggested change unclear"
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing the road in the provided frames, so the deficit of a missing crossing cannot be confirmed, and the feasibility of adding one is unclear"
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show any potential crossing points where kerb ramps would be needed, so the deficit and the feasibility of the suggested change cannot be assessed"
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,47 @@
+{
+ "clip_id": "EEkHGo8tVSw_00260000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "right_side",
+   "evidence": "No crossing facility visible at the junction despite crossing demand from shops and buildings on both sides",
+   "frame": 1,
+   "x": 600,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked zebra crossing with a refuge island to provide a safe crossing for pedestrians at this junction."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "road",
+   "evidence": "The road has 4 or more lanes and no refuge for pedestrians at the crossing",
+   "frame": 1,
+   "x": 500,
+   "y": 350,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to ensure pedestrian safety on this wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "There is no marked crossing on the right side of the junction despite the presence of a gas station and other buildings."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "specific",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The road is wide with multiple lanes and lacks a central refuge island for pedestrians."
+  }
+ ],
+ "error": null
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "P1Lm7YrWBTk_01595000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_002.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_004.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_006.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_008.jpg",
+  "data/snippets/P1Lm7YrWBTk/P1Lm7YrWBTk_01595000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"painted_line\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked_with_refuge\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"one_kerb\"},\"needed\":[{\"need\":\"no_refuge_on_wide_road\",\"where\":\"right_side\",\"evidence\":\"The crossing lacks a refuge for pedestrians despite having more than four lanes\",\"frame\":3,\"x\":650,\"y\":350,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a centrally located refuge island to allow pedestrians a safe mid-crossing point, reducing crossing time and enhancing safety.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"Lack of visibility for vehicles turning right, along with pedestrians crossing an open roadway\",\"frame\":1,\"x\":350,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Increase the visibility of the crossing by adding raised platforms and high-contrast markings to ensure drivers can see pedestrians more clearly.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"Only one kerb is ramped for pedestrians, creating obstacles\",\"frame\":3,\"x\":640,\"y\":390,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps on both sides of the crossing to facilitate unimpeded pedestrian access and ensure compliance with accessibility standards.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "painted_line"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked_with_refuge",
+   "crossing_quality": "poor",
+   "kerb_ramps": "one_kerb"
+  },
+  "needed": [
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "right_side",
+    "evidence": "The crossing lacks a refuge for pedestrians despite having more than four lanes",
+    "frame": 3,
+    "x": 650,
+    "y": 350,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a centrally located refuge island to allow pedestrians a safe mid-crossing point, reducing crossing time and enhancing safety."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "Lack of visibility for vehicles turning right, along with pedestrians crossing an open roadway",
+    "frame": 1,
+    "x": 350,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Increase the visibility of the crossing by adding raised platforms and high-contrast markings to ensure drivers can see pedestrians more clearly."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "Only one kerb is ramped for pedestrians, creating obstacles",
+    "frame": 3,
+    "x": 640,
+    "y": 390,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps on both sides of the crossing to facilitate unimpeded pedestrian access and ensure compliance with accessibility standards."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.53,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7821,
+  "completion_tokens": 492,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

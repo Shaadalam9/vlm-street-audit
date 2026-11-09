@@ -1,0 +1,29 @@
+{
+ "clip_id": "EEkHGo8tVSw_01480000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "No crossing facility at the junction despite crossing demand",
+   "frame": 1,
+   "x": 500,
+   "y": 300,
+   "measure": "improve_crossing",
+   "suggestion": "Install a marked zebra crossing with kerb ramps at this junction to facilitate safe pedestrian crossing."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames show a wide intersection with no visible pedestrian crossing, but the absence of a crossing is not definitively confirmed as a deficit without more context on pedestrian demand or local by-"
+  }
+ ],
+ "error": null
+}

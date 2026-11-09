@@ -1,0 +1,101 @@
+{
+ "clip_id": "xU2OkJ_OY6c_01755000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "left_side",
+   "evidence": "parked cars obstructing the narrow footway",
+   "frame": 1,
+   "x": 200,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install physical barriers to prevent parking on the footway and enforce parking regulations."
+  },
+  {
+   "need": "no_footway",
+   "where": "right_side",
+   "evidence": "footway is under 1m and partly blocked by parked cars",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "parked cars obstructing the narrow footway",
+   "frame": 1,
+   "x": 800,
+   "y": 400,
+   "measure": "improve_crossing",
+   "suggestion": "Install physical barriers to prevent parking on the footway and enforce parking regulations."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "street_lighting is only some, with gaps along the road",
+   "frame": 1,
+   "x": 500,
+   "y": 100,
+   "measure": "improve_crossing",
+   "suggestion": "Install additional street lights to ensure ample lighting along the entire road segment."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side lacks a proper footway and is obstructed by parked cars, though widening may be limited by building walls."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly obstructing the narrow pedestrian area on the left."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side lacks a dedicated footway and is obstructed by parked cars."
+  },
+  {
+   "deficit_visible": "yes",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "Parked cars are clearly obstructing the narrow pedestrian area on the right."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "yes",
+   "about_behaviour": false,
+   "reason": "The images are taken during daylight, making it impossible to determine the adequacy of street lighting."
+  }
+ ],
+ "error": null
+}

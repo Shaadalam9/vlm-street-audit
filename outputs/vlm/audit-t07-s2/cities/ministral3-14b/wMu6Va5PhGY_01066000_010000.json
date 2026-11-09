@@ -1,0 +1,132 @@
+{
+ "clip_id": "wMu6Va5PhGY_01066000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_01066000_010000/frame_002.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_01066000_010000/frame_004.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_01066000_010000/frame_006.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_01066000_010000/frame_008.jpg",
+  "data/snippets/wMu6Va5PhGY/wMu6Va5PhGY_01066000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"one_kerb\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m wide and adherence to standards would require it to be at least 1m\",\"frame\":1,\"x\":550,\"y\":650,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Extend the footway on the left side to a minimum width of 1.5m to ensure safe pedestrian movement.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"obstruction on footway by parked vehicles\",\"frame\":3,\"x\":450,\"y\":580,\"measure\":\"clear_footway\",\"suggestion\":\"Install barriers or enforce parking regulations to maintain a clear and accessible footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections visible on footway\",\"frame\":4,\"x\":350,\"y\":620,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and resurface the footway to eliminate uneven sections and reduce trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections visible on footway\",\"frame\":3,\"x\":600,\"y\":610,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and resurface the footway on the right side to provide a smooth walking surface.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing without clear visibility and potential poor compliance from drivers\",\"frame\":2,\"x\":500,\"y\":420,\"measure\":\"improve_crossing\",\"suggestion\":\"Install additional traffic calming measures or pedestrian signals to enhance the visibility and safety of the crossing.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"4 or more lanes without a refuge island\",\"frame\":5,\"x\":480,\"y\":410,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a refuge island at the crossing to protect pedestrians when crossing wide roads.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "one_kerb"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m wide and adherence to standards would require it to be at least 1m",
+    "frame": 1,
+    "x": 550,
+    "y": 650,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Extend the footway on the left side to a minimum width of 1.5m to ensure safe pedestrian movement."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "obstruction on footway by parked vehicles",
+    "frame": 3,
+    "x": 450,
+    "y": 580,
+    "measure": "clear_footway",
+    "suggestion": "Install barriers or enforce parking regulations to maintain a clear and accessible footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections visible on footway",
+    "frame": 4,
+    "x": 350,
+    "y": 620,
+    "measure": "repair_footway",
+    "suggestion": "Repair and resurface the footway to eliminate uneven sections and reduce trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections visible on footway",
+    "frame": 3,
+    "x": 600,
+    "y": 610,
+    "measure": "repair_footway",
+    "suggestion": "Repair and resurface the footway on the right side to provide a smooth walking surface."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing without clear visibility and potential poor compliance from drivers",
+    "frame": 2,
+    "x": 500,
+    "y": 420,
+    "measure": "improve_crossing",
+    "suggestion": "Install additional traffic calming measures or pedestrian signals to enhance the visibility and safety of the crossing."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "4 or more lanes without a refuge island",
+    "frame": 5,
+    "x": 480,
+    "y": 410,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a refuge island at the crossing to protect pedestrians when crossing wide roads."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 24.79,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8012,
+  "completion_tokens": 683,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,110 @@
+{
+ "clip_id": "Sy3SPt1cNyg_03391000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/Sy3SPt1cNyg/Sy3SPt1cNyg_03391000_010000/frame_006.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible, people walking in the roadway\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk along the left side of the road to provide safe walking space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible, people walking in the roadway\",\"frame\":1,\"x\":600,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk along the right side of the road to provide safe walking space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People crossing the road without a designated crossing facility\",\"frame\":1,\"x\":400,\"y\":350,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a marked pedestrian crossing with refuge islands to facilitate safe crossing at this busy location.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"Urban road with only some street lighting visible\",\"frame\":1,\"x\":800,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights to ensure adequate illumination along the entire road, enhancing safety for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible, people walking in the roadway",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk along the left side of the road to provide safe walking space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible, people walking in the roadway",
+    "frame": 1,
+    "x": 600,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk along the right side of the road to provide safe walking space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People crossing the road without a designated crossing facility",
+    "frame": 1,
+    "x": 400,
+    "y": 350,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a marked pedestrian crossing with refuge islands to facilitate safe crossing at this busy location."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "Urban road with only some street lighting visible",
+    "frame": 1,
+    "x": 800,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights to ensure adequate illumination along the entire road, enhancing safety for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 11.5,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 2941,
+  "completion_tokens": 521,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

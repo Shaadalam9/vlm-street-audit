@@ -1,0 +1,112 @@
+{
+ "clip_id": "fwzHuma5fe0_02305000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/fwzHuma5fe0/fwzHuma5fe0_02305000_010000/frame_002.jpg",
+  "data/snippets/fwzHuma5fe0/fwzHuma5fe0_02305000_010000/frame_004.jpg",
+  "data/snippets/fwzHuma5fe0/fwzHuma5fe0_02305000_010000/frame_006.jpg",
+  "data/snippets/fwzHuma5fe0/fwzHuma5fe0_02305000_010000/frame_008.jpg",
+  "data/snippets/fwzHuma5fe0/fwzHuma5fe0_02305000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrian visible crossing carriageway in frame 3, no zebra crossing or traffic signalled crossing\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a marked zebra crossing with kerb ramps to provide a safe crossing point for pedestrians at this location.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven footway near sidewalk\",\"frame\":3,\"x\":200,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the uneven sections on the left-side footway to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven footway near sidewalk\",\"frame\":3,\"x\":800,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the uneven sections on the right-side footway to eliminate trip hazards.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"none (in urban setting with high pedestrian activity, lighting appears sufficient but obstructions may require more evenly spaced lights)\",\"frame\":1,\"x\":300,\"y\":100,\"measure\":\"improve_crossing\",\"suggestion\":\"Ensure street lighting is consistent and properly placed around pedestrian crossings and intersections to improve night-time visibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrian visible crossing carriageway in frame 3, no zebra crossing or traffic signalled crossing",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a marked zebra crossing with kerb ramps to provide a safe crossing point for pedestrians at this location."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven footway near sidewalk",
+    "frame": 3,
+    "x": 200,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Repave the uneven sections on the left-side footway to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven footway near sidewalk",
+    "frame": 3,
+    "x": 800,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Repave the uneven sections on the right-side footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "none (in urban setting with high pedestrian activity, lighting appears sufficient but obstructions may require more evenly spaced lights)",
+    "frame": 1,
+    "x": 300,
+    "y": 100,
+    "measure": "improve_crossing",
+    "suggestion": "Ensure street lighting is consistent and properly placed around pedestrian crossings and intersections to improve night-time visibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.61,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7879,
+  "completion_tokens": 550,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

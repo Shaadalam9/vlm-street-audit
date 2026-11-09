@@ -1,0 +1,122 @@
+{
+ "clip_id": "1X4xmd0Izaw_04295000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 1,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_002.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_004.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_006.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_008.jpg",
+  "data/snippets/1X4xmd0Izaw/1X4xmd0Izaw_04295000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"2_or_more\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no footway visible, pedestrians walking on road\",\"frame\":1,\"x\":570,\"y\":570,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the right side of at least 1-metre width and remove obstructions for pedestrian safety.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no footway visible, lack of usable space for pedestrians\",\"frame\":3,\"x\":20,\"y\":580,\"measure\":\"build_footway\",\"suggestion\":\"Install a sidewalk on the left side with a dedicated 1.5-metre width to provide safe walking space.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing obstructed and poorly defined, pedestrians crossing in hazard\",\"frame\":2,\"x\":500,\"y\":420,\"measure\":\"improve_crossing\",\"suggestion\":\"Install traffic signals and introduce a refuge island at this crossing to improve pedestrian safety and ensure motorists stop.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at pedestrian crossing\",\"frame\":4,\"x\":450,\"y\":420,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Provide kerb ramps or a raised platform at the crossing to create a level and accessible crossing for pedestrians with disabilities and ease visibility for motorists.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"inadequate lighting along the street, particularly where visible in frames\",\"frame\":5,\"x\":200,\"y\":30,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lamps spaced every 30 metres along the road to enhance visibility and safety for both pedestrians and motorists.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "2_or_more",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no footway visible, pedestrians walking on road",
+    "frame": 1,
+    "x": 570,
+    "y": 570,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the right side of at least 1-metre width and remove obstructions for pedestrian safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no footway visible, lack of usable space for pedestrians",
+    "frame": 3,
+    "x": 20,
+    "y": 580,
+    "measure": "build_footway",
+    "suggestion": "Install a sidewalk on the left side with a dedicated 1.5-metre width to provide safe walking space."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing obstructed and poorly defined, pedestrians crossing in hazard",
+    "frame": 2,
+    "x": 500,
+    "y": 420,
+    "measure": "improve_crossing",
+    "suggestion": "Install traffic signals and introduce a refuge island at this crossing to improve pedestrian safety and ensure motorists stop."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at pedestrian crossing",
+    "frame": 4,
+    "x": 450,
+    "y": 420,
+    "measure": "add_raised_crossing",
+    "suggestion": "Provide kerb ramps or a raised platform at the crossing to create a level and accessible crossing for pedestrians with disabilities and ease visibility for motorists."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "inadequate lighting along the street, particularly where visible in frames",
+    "frame": 5,
+    "x": 200,
+    "y": 30,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lamps spaced every 30 metres along the road to enhance visibility and safety for both pedestrians and motorists."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.24,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7954,
+  "completion_tokens": 625,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,119 @@
+{
+ "clip_id": "boKYDMlwy0I_05004000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_footway",
+   "where": "left_side",
+   "evidence": "Informal path under 1m wide, partly blocked by parked cars and trip hazards",
+   "frame": 3,
+   "x": 200,
+   "y": 300,
+   "measure": "build_footway",
+   "suggestion": "Construct a continuous, usable sidewalk at least 1m wide along the left side of the road."
+  },
+  {
+   "need": "blocked_footway",
+   "where": "right_side",
+   "evidence": "Informal path under 1m wide, partly blocked by parked cars and trip hazards",
+   "frame": 3,
+   "x": 700,
+   "y": 300,
+   "measure": "clear_footway",
+   "suggestion": "Remove obstructions and ensure the right-side informal path is clear and usable for pedestrians."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "left_side",
+   "evidence": "Broken or uneven sections on the informal path",
+   "frame": 3,
+   "x": 250,
+   "y": 350,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the left informal path to eliminate trip hazards."
+  },
+  {
+   "need": "trip_hazards",
+   "where": "right_side",
+   "evidence": "Broken or uneven sections on the informal path",
+   "frame": 3,
+   "x": 750,
+   "y": 350,
+   "measure": "repair_footway",
+   "suggestion": "Repair and level the uneven sections on the right informal path to eliminate trip hazards."
+  },
+  {
+   "need": "no_crossing",
+   "where": "road",
+   "evidence": "Pedestrians crossing the carriageway without a crossing facility",
+   "frame": 1,
+   "x": 400,
+   "y": 200,
+   "measure": "add_marked_crossing",
+   "suggestion": "Install a marked pedestrian crossing at this location to provide a safe crossing facility for pedestrians."
+  },
+  {
+   "need": "no_street_lighting",
+   "where": "road",
+   "evidence": "Urban road with only some street lighting",
+   "frame": 1,
+   "x": 800,
+   "y": 50,
+   "measure": "add_street_lighting",
+   "suggestion": "Install additional street lights along the road to ensure ample lighting for safety."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show the left side of the road, so the presence of a footway or its condition cannot be verified."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side of the road is not visible in the frames, making it impossible to confirm the state of a footway there."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The left side is not shown, so any trip hazards on a path there cannot be observed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The right side is not shown, so any trip hazards on a path there cannot be observed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No pedestrians are seen crossing the road in the frames, so the need for a crossing cannot be confirmed."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames are taken in daylight, so the adequacy of street lighting for night-time safety cannot be assessed."
+  }
+ ],
+ "error": null
+}

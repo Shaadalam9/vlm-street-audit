@@ -1,0 +1,65 @@
+{
+ "clip_id": "HmHCTeUYA9c_03952000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "gemma4-31b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "crossing",
+   "evidence": "Dropped kerbs not visible at the crossing",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install raised platforms with tactile paving at the crossing to ensure safe pedestrian access and improve visibility for drivers."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "Crossing is marked but lacks visibility and safety features",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "improve_crossing",
+   "suggestion": "Upgrade the crossing to a signalised crossing with a refuge island to enhance safety and ensure drivers stop for pedestrians."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "Wide road with 4 or more lanes and no refuge island",
+   "frame": 3,
+   "x": 500,
+   "y": 500,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians crossing a wide road."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The crossing point is not clearly visible in the frames to determine if kerb ramps are missing."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The specific crossing markings and their current safety features are not clearly visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The full width and lane configuration of the road at the crossing are not clearly visible."
+  }
+ ],
+ "error": null
+}

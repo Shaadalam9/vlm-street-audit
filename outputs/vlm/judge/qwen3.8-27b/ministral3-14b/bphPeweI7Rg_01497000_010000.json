@@ -1,0 +1,65 @@
+{
+ "clip_id": "bphPeweI7Rg_01497000_010000",
+ "auditor": "ministral3-14b",
+ "judge": "qwen3.8-27b",
+ "judge_version": "2026-10-28",
+ "deficits": [
+  {
+   "need": "no_kerb_ramps",
+   "where": "right_side",
+   "evidence": "Dropped kerbs are missing at the zebra crossing, making it difficult for pedestrians to cross safely.",
+   "frame": 4,
+   "x": 500,
+   "y": 500,
+   "measure": "add_raised_crossing",
+   "suggestion": "Install kerb ramps at both ends of the zebra crossing to ensure safe pedestrian access."
+  },
+  {
+   "need": "poor_crossing",
+   "where": "crossing",
+   "evidence": "The marked zebra crossing is poorly visible and lacks adequate signage or signals, increasing the risk for pedestrians.",
+   "frame": 3,
+   "x": 450,
+   "y": 450,
+   "measure": "improve_crossing",
+   "suggestion": "Add reflective markings and pedestrian signals to improve the visibility and safety of the zebra crossing."
+  },
+  {
+   "need": "no_refuge_on_wide_road",
+   "where": "crossing",
+   "evidence": "The wide road lacks a refuge island in the middle of the crossing, putting pedestrians at risk when crossing.",
+   "frame": 1,
+   "x": 500,
+   "y": 400,
+   "measure": "add_refuge_island",
+   "suggestion": "Introduce a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+  }
+ ],
+ "ratings": [
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a zebra crossing or the specific location of the deficit, so the evidence is not visible."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "No zebra crossing is visible in the provided frames to assess its visibility or signage."
+  },
+  {
+   "deficit_visible": "cannot_tell",
+   "addresses_deficit": true,
+   "specific": "generic",
+   "feasible": "unclear",
+   "about_behaviour": false,
+   "reason": "The frames do not show a pedestrian crossing where a refuge island would be relevant."
+  }
+ ],
+ "error": null
+}

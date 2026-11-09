@@ -1,0 +1,132 @@
+{
+ "clip_id": "ZCwxNS3Cu7A_01916000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_002.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_004.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_006.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_008.jpg",
+  "data/snippets/ZCwxNS3Cu7A/ZCwxNS3Cu7A_01916000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway exists but is under 1m wide and obstructed, creating a tripping hazard\",\"frame\":2,\"x\":300,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk wider than 1m along the left side to ensure pedestrian safety from vehicular traffic.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is narrow under 1m and obstructed by objects\",\"frame\":3,\"x\":600,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions on the right-side footway to ensure it is fully usable and expand the footway to a minimum width of 1m.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven and broken footway sections\",\"frame\":4,\"x\":150,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the left-side footway to eliminate trip hazards and ensure a smooth walking surface.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven and broken footway sections\",\"frame\":1,\"x\":850,\"y\":550,\"measure\":\"repair_footway\",\"suggestion\":\"Repave the right-side footway to remove trip hazards and improve pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"demand for crossing due to mixed land use and lack of any pedestrian crossing facility\",\"frame\":5,\"x\":500,\"y\":300,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a zebra crossing with kerb ramps at this location to provide safe pedestrian crossing for people using shops and homes on both sides.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"road has 4_or_more lanes and no visible refuge for pedestrians at any crossing\",\"frame\":5,\"x\":500,\"y\":250,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a refuge island in the middle of the crossing to protect pedestrians while crossing the wide, multi-lane road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway exists but is under 1m wide and obstructed, creating a tripping hazard",
+    "frame": 2,
+    "x": 300,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk wider than 1m along the left side to ensure pedestrian safety from vehicular traffic."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is narrow under 1m and obstructed by objects",
+    "frame": 3,
+    "x": 600,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions on the right-side footway to ensure it is fully usable and expand the footway to a minimum width of 1m."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven and broken footway sections",
+    "frame": 4,
+    "x": 150,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repave the left-side footway to eliminate trip hazards and ensure a smooth walking surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven and broken footway sections",
+    "frame": 1,
+    "x": 850,
+    "y": 550,
+    "measure": "repair_footway",
+    "suggestion": "Repave the right-side footway to remove trip hazards and improve pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "demand for crossing due to mixed land use and lack of any pedestrian crossing facility",
+    "frame": 5,
+    "x": 500,
+    "y": 300,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a zebra crossing with kerb ramps at this location to provide safe pedestrian crossing for people using shops and homes on both sides."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "road has 4_or_more lanes and no visible refuge for pedestrians at any crossing",
+    "frame": 5,
+    "x": 500,
+    "y": 250,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a refuge island in the middle of the crossing to protect pedestrians while crossing the wide, multi-lane road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 23.48,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 8053,
+  "completion_tokens": 724,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}
