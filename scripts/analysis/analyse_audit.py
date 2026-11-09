@@ -9,8 +9,8 @@ sample, and writes:
   docs/figures/audit_*.html and *.png
 
 - Validity: the scene facts and the crossing items against JAAD's labels.
-- Infrastructure present and needed, by continent: the consensus of the five models (at
-  least 4 of 5) per clip, averaged per city; intervals from a bootstrap over cities, as each
+- Infrastructure present and needed, by continent: the consensus of the models (two
+  thirds of at least 4 answers) per clip, averaged per city; intervals from a bootstrap over cities, as each
   city gives two clips.
 - Country indicators: Spearman's rho between a city's infrastructure and its country's road
   traffic mortality, median age, Gini and literacy (bootstrap intervals over cities).
@@ -40,15 +40,24 @@ from vlm_street_audit.evaluation import SCENE_BOOLEANS, binary_scores, cohen_kap
 from vlm_street_audit.figures import save_figure, style
 from vlm_street_audit.vlm import CROSSING_ITEMS, NEEDED, ROAD_ITEMS, SIDE_ITEMS, expected_needs
 
-# Five models from five developers in three countries; Ministral was added on 2026-11-07 (EXAONE 4.5 was tried
-# and dropped, see configs/models.toml).
-MODEL_ORDER = ["qwen3.8-27b", "gemma4-31b", "molmo2-8b", "internvl3.5-8b", "ministral3-14b"]
+# Six models from six developers in four countries: Ministral was added on 2026-11-07, Kanana on 2026-11-09
+# (EXAONE 4.5, HyperCLOVA X, North-Micro-Vision and Aya Vision were tried and dropped, see configs/models.toml).
+MODEL_ORDER = [
+    "qwen3.8-27b",
+    "gemma4-31b",
+    "molmo2-8b",
+    "internvl3.5-8b",
+    "ministral3-14b",
+    "kanana-1.5-v-3b",
+]
+N_MODELS = {5: "five", 6: "six", 7: "seven"}[len(MODEL_ORDER)]
 MODEL_NAMES = {
     "qwen3.8-27b": "Qwen3.8-27B",
     "gemma4-31b": "Gemma 4 31B",
     "molmo2-8b": "Molmo2-8B",
     "internvl3.5-8b": "InternVL3.5-8B",
     "ministral3-14b": "Ministral 3 14B",
+    "kanana-1.5-v-3b": "Kanana-1.5-V 3B",
 }
 # Categorical colours in a fixed order, checked for colour-blind separation: one per model, the first two for
 # two-way comparisons. Magnitudes use one blue ramp, light to dark.
@@ -58,6 +67,7 @@ MODEL_COLOURS = {
     "Molmo2-8B": "#1baf7a",
     "InternVL3.5-8B": "#eda100",
     "Ministral 3 14B": "#e87ba4",
+    "Kanana-1.5-V 3B": "#008300",
 }
 PAIR = ["#2a78d6", "#eb6834"]
 BLUES = ["#f4f8fd", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
@@ -68,7 +78,7 @@ SCENE_LABELS = {
     "pedestrians_visible": "Pedestrians visible",
     "pedestrians_in_carriageway": "Pedestrians in road",
 }
-# A consensus needs at least 4 answers, and an item counts when two thirds of them have it (4 of 5, 3 of 4).
+# A consensus needs at least 4 answers, and an item counts when two thirds of them have it (4 of 6 or 5).
 MIN_ANSWERS, CONSENSUS = 4, 2 / 3
 
 MAIN = "audit"
@@ -314,7 +324,7 @@ def main() -> int:
     main_jaad = runs[(MAIN, "jaad")]
     md.append(
         f"{main_jaad.clip_id.nunique()} JAAD clips and {main_cities.clip_id.nunique()} city clips "
-        f"({main_cities.locality.nunique()} cities) answered by all five models.\n"
+        f"({main_cities.locality.nunique()} cities) answered by all {N_MODELS} models.\n"
     )
 
     # ---- Validity on JAAD ------------------------------------------------------------------
@@ -382,7 +392,7 @@ def main() -> int:
     figure.update_traces(hovertemplate="%{x}<br>%{y:.2f}")
     save(figure, "audit_jaad_validity", png)
 
-    # ---- Present and needed, by continent (consensus of the five models) --------------------------
+    # ---- Present and needed, by continent (consensus of the models) --------------------------
     keys = [f"has_{k}" for k in PRESENT] + [f"need_{k}" for k in NEEDED]
 
     def agreed(s: pd.Series) -> float:
@@ -434,7 +444,7 @@ def main() -> int:
         )
         return pd.DataFrame({"": [labels[k.removeprefix(prefix)] for k in t.index], **{names[c]: t[c] for c in order}})
 
-    md.append("\n### Infrastructure present, by continent (share of cities; at least 4 of 5 models agree)\n")
+    md.append("\n### Infrastructure present, by continent (share of cities; two thirds of the models agree)\n")
     md.append(markdown(continent_table("has_", PRESENT)))
     md.append("\n### Infrastructure needed, by continent (share of cities)\n")
     md.append(markdown(continent_table("need_", NEED_LABELS)))
@@ -580,7 +590,7 @@ def main() -> int:
     bias = pd.DataFrame(rows)
     bias.to_csv(out / "agreement_by_region.csv", index=False)
     overall = kappa_by_item(main_cities)
-    md.append("\n### Agreement between the five models, by region (Fleiss' kappa, city clips, 95% interval)\n")
+    md.append(f"\n### Agreement between the {N_MODELS} models, by region (Fleiss' kappa, city clips, 95% interval)\n")
     t = (
         bias.assign(cell=[fmt(r.fleiss_kappa, r.low, r.high) for r in bias.itertuples()])
         .pivot(index="item", columns="region", values="cell")
@@ -628,7 +638,7 @@ def main() -> int:
         yaxis=dict(autorange="reversed"),
         legend=dict(orientation="h", y=1.05, x=0),
         xaxis=dict(
-            title="Fleiss' kappa between the five models",
+            title=f"Fleiss' kappa between the {N_MODELS} models",
             range=[-0.2, 1],
             dtick=0.2,
             zeroline=True,
@@ -716,7 +726,9 @@ def main() -> int:
         city_all = robust[(robust.set == "cities") & (robust.region == "All")]
         heat = city_all.groupby(["item", "comparison"]).cohen_kappa.mean().unstack("comparison")
         heat = heat.reindex(index=ITEMS, columns=labels_here)
-        md.append("\n### Robustness: Cohen's kappa with the main answers (city clips, mean of the five models)\n")
+        md.append(
+            f"\n### Robustness: Cohen's kappa with the main answers (city clips, mean of the {N_MODELS} models)\n"
+        )
         md.append(
             markdown(
                 pd.DataFrame(

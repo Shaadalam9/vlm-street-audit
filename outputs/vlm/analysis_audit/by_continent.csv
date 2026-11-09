@@ -2,30 +2,30 @@ continent,cities,key,share,low,high,n
 Asia,32,has_footway_both,0.515625,0.359375,0.671875,32
 Asia,32,has_footway_separated,0.53125,0.375,0.6875,32
 Asia,32,has_footway_clear,0.5952380952380952,0.40476190476190477,0.7619047619047619,21
-Asia,32,has_crossing,0.171875,0.078125,0.265625,32
-Asia,32,has_crossing_protected,0.03125,0.0,0.078125,32
+Asia,32,has_crossing,0.1875,0.09375,0.296875,32
+Asia,32,has_crossing_protected,0.0625,0.015625,0.125,32
 Asia,32,has_refuge,0.0,0.0,0.0,32
 Asia,32,has_kerb_ramps,0.125,0.0,0.375,4
-Asia,32,has_lighting,0.9375,0.875,0.984375,32
+Asia,32,has_lighting,0.953125,0.890625,1.0,32
 Asia,32,has_traffic_calming,0.0,0.0,0.0,32
 Asia,32,has_fencing,0.046875,0.0,0.125,32
 Asia,32,has_bike,0.03125,0.0,0.078125,32
-Asia,32,has_transit,0.125,0.046875,0.203125,32
+Asia,32,has_transit,0.203125,0.109375,0.296875,32
 Asia,32,need_no_footway,0.125,0.046875,0.21875,32
 Asia,32,need_blocked_footway,0.0,0.0,0.0,32
 Asia,32,need_trip_hazards,0.015625,0.0,0.046875,32
-Asia,32,need_no_crossing,0.40625,0.265625,0.546875,32
+Asia,32,need_no_crossing,0.421875,0.28125,0.5625,32
 Asia,32,need_poor_crossing,0.0,0.0,0.0,32
 Asia,32,need_no_refuge_on_wide_road,0.046875,0.0,0.09375,32
 Asia,32,need_no_kerb_ramps,0.0,0.0,0.0,32
-Asia,32,need_no_street_lighting,0.015625,0.0,0.046875,32
+Asia,32,need_no_street_lighting,0.03125,0.0,0.078125,32
 Europe,15,has_footway_both,0.6,0.43333333333333335,0.7666666666666667,15
 Europe,15,has_footway_separated,0.6,0.4,0.8,15
 Europe,15,has_footway_clear,0.5,0.2261363636363637,0.7727272727272727,11
 Europe,15,has_crossing,0.2,0.06666666666666667,0.3333333333333333,15
 Europe,15,has_crossing_protected,0.06666666666666667,0.0,0.16666666666666666,15
 Europe,15,has_refuge,0.0,0.0,0.0,15
-Europe,15,has_kerb_ramps,0.3333333333333333,0.0,1.0,3
+Europe,15,has_kerb_ramps,0.2,0.0,0.6,5
 Europe,15,has_lighting,0.8333333333333334,0.6666666666666666,0.9666666666666667,15
 Europe,15,has_traffic_calming,0.0,0.0,0.0,15
 Europe,15,has_fencing,0.03333333333333333,0.0,0.1,15
@@ -78,7 +78,7 @@ Africa,7,need_no_crossing,0.5714285714285714,0.35714285714285715,0.7857142857142
 Africa,7,need_poor_crossing,0.0,0.0,0.0,7
 Africa,7,need_no_refuge_on_wide_road,0.0,0.0,0.0,7
 Africa,7,need_no_kerb_ramps,0.0,0.0,0.0,7
-Africa,7,need_no_street_lighting,0.07142857142857142,0.0,0.21428571428571427,7
+Africa,7,need_no_street_lighting,0.14285714285714285,0.0,0.35714285714285715,7
 South America,5,has_footway_both,0.8,0.6,1.0,5
 South America,5,has_footway_separated,0.6,0.3,0.9,5
 South America,5,has_footway_clear,0.8,0.6,1.0,5
@@ -86,11 +86,11 @@ South America,5,has_crossing,0.5,0.2,0.8,5
 South America,5,has_crossing_protected,0.2,0.0,0.4,5
 South America,5,has_refuge,0.0,0.0,0.0,5
 South America,5,has_kerb_ramps,0.0,0.0,0.0,3
-South America,5,has_lighting,0.8,0.4,1.0,5
+South America,5,has_lighting,0.9,0.7,1.0,5
 South America,5,has_traffic_calming,0.0,0.0,0.0,5
 South America,5,has_fencing,0.0,0.0,0.0,5
 South America,5,has_bike,0.0,0.0,0.0,5
-South America,5,has_transit,0.0,0.0,0.0,5
+South America,5,has_transit,0.1,0.0,0.3,5
 South America,5,need_no_footway,0.1,0.0,0.3,5
 South America,5,need_blocked_footway,0.0,0.0,0.0,5
 South America,5,need_trip_hazards,0.1,0.0,0.3,5
@@ -102,8 +102,8 @@ South America,5,need_no_street_lighting,0.0,0.0,0.0,5
 Oceania,1,has_footway_both,0.5,,,1
 Oceania,1,has_footway_separated,0.5,,,1
 Oceania,1,has_footway_clear,1.0,,,1
-Oceania,1,has_crossing,0.0,,,1
-Oceania,1,has_crossing_protected,0.0,,,1
+Oceania,1,has_crossing,0.5,,,1
+Oceania,1,has_crossing_protected,0.5,,,1
 Oceania,1,has_refuge,0.0,,,1
 Oceania,1,has_kerb_ramps,,,,0
 Oceania,1,has_lighting,1.0,,,1
@@ -122,20 +122,20 @@ Oceania,1,need_no_street_lighting,0.0,,,1
 All,75,has_footway_both,0.5133333333333333,0.41333333333333333,0.6066666666666667,75
 All,75,has_footway_separated,0.5133333333333333,0.42,0.6,75
 All,75,has_footway_clear,0.6538461538461539,0.5384615384615384,0.7596153846153846,52
-All,75,has_crossing,0.20666666666666667,0.14666666666666667,0.2733333333333333,75
-All,75,has_crossing_protected,0.05333333333333334,0.02,0.1,75
+All,75,has_crossing,0.22,0.15333333333333332,0.2866666666666667,75
+All,75,has_crossing_protected,0.07333333333333333,0.03333333333333333,0.12,75
 All,75,has_refuge,0.0,0.0,0.0,75
-All,75,has_kerb_ramps,0.17857142857142858,0.0,0.39285714285714285,14
-All,75,has_lighting,0.82,0.7466666666666667,0.8866666666666667,75
+All,75,has_kerb_ramps,0.15625,0.0,0.34375,16
+All,75,has_lighting,0.8333333333333334,0.7666666666666667,0.8933333333333333,75
 All,75,has_traffic_calming,0.0,0.0,0.0,75
 All,75,has_fencing,0.02666666666666667,0.0,0.06666666666666667,75
 All,75,has_bike,0.02666666666666667,0.006666666666666667,0.05333333333333334,75
-All,75,has_transit,0.06,0.02666666666666667,0.1,75
+All,75,has_transit,0.1,0.05333333333333334,0.15333333333333332,75
 All,75,need_no_footway,0.17333333333333334,0.11333333333333333,0.24666666666666667,75
 All,75,need_blocked_footway,0.0,0.0,0.0,75
 All,75,need_trip_hazards,0.013333333333333334,0.0,0.03333333333333333,75
-All,75,need_no_crossing,0.37333333333333335,0.2866666666666667,0.46,75
+All,75,need_no_crossing,0.38,0.29333333333333333,0.47333333333333333,75
 All,75,need_poor_crossing,0.0,0.0,0.0,75
 All,75,need_no_refuge_on_wide_road,0.02666666666666667,0.006666666666666667,0.05333333333333334,75
 All,75,need_no_kerb_ramps,0.0,0.0,0.0,75
-All,75,need_no_street_lighting,0.04,0.006666666666666667,0.08,75
+All,75,need_no_street_lighting,0.05333333333333334,0.02,0.09333333333333334,75

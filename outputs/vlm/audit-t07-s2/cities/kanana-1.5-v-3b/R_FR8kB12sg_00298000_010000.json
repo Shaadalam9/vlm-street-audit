@@ -1,0 +1,71 @@
+{
+ "clip_id": "R_FR8kB12sg_00298000_010000",
+ "set": "cities",
+ "role": "main",
+ "model": "kanana-1.5-v-3b",
+ "checkpoint": "kakaocorp/kanana-1.5-v-3b-instruct",
+ "revision": "2e00ef13ccec2e99459a8eada18a1bfd05bff44b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/R_FR8kB12sg/R_FR8kB12sg_00298000_010000/frame_002.jpg",
+  "data/snippets/R_FR8kB12sg/R_FR8kB12sg_00298000_010000/frame_004.jpg",
+  "data/snippets/R_FR8kB12sg/R_FR8kB12sg_00298000_010000/frame_006.jpg",
+  "data/snippets/R_FR8kB12sg/R_FR8kB12sg_00298000_010000/frame_008.jpg",
+  "data/snippets/R_FR8kB12sg/R_FR8kB12sg_00298000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"3\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"not_visible\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "3",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "not_visible",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": []
+ },
+ "error": null,
+ "seconds": 7.01,
+ "usage": {
+  "prompt_tokens": 7257,
+  "total_tokens": 7458,
+  "completion_tokens": 201,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

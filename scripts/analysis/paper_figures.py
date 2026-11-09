@@ -28,6 +28,7 @@ MODEL_NAMES = {
     "molmo2-8b": "Molmo2-8B",
     "internvl3.5-8b": "InternVL3.5-8B",
     "ministral3-14b": "Ministral 3 14B",
+    "kanana-1.5-v-3b": "Kanana-1.5-V 3B",
 }
 MODEL_COLOURS = {
     "qwen3.8-27b": "#2a78d6",
@@ -35,7 +36,9 @@ MODEL_COLOURS = {
     "molmo2-8b": "#1baf7a",
     "internvl3.5-8b": "#eda100",
     "ministral3-14b": "#e87ba4",
+    "kanana-1.5-v-3b": "#008300",
 }
+N_MODELS = {5: "five", 6: "six", 7: "seven"}[len(MODEL_NAMES)]
 CONTINENT_COLOURS = {
     "Asia": "#2a78d6",
     "Europe": "#1baf7a",
@@ -372,7 +375,7 @@ def figure_agreement(agreement: pd.DataFrame) -> None:
         )
     fig.add_vrect(x0=-0.1, x1=0.2, fillcolor="#f3f2ee", line_width=0, layer="below")
     fig.update_xaxes(
-        title="Agreement between the five models (Fleiss’ κ)",
+        title=f"Agreement between the {N_MODELS} models (Fleiss’ κ)",
         range=[-0.1, 0.8],
         dtick=0.2,
         gridcolor="#ecebe8",
@@ -412,6 +415,8 @@ def figure_models(quality: pd.DataFrame, consistency: pd.DataFrame) -> pd.DataFr
     )
     rows = []
     for model, name in MODEL_NAMES.items():
+        if model not in visible.index:  # lists no needs (Kanana), so nothing was judged
+            continue
         fig.add_trace(
             go.Scatter(
                 x=[visible[model]],

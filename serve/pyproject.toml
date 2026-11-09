@@ -6,6 +6,7 @@ requires-python = ">=3.12,<3.13"
 # vLLM pins its own torch and transformers, which clash with the analysis
 # environment one folder up, so the server lives in its own uv project.
 dependencies = [
+    "timm>=1.0.31",
     "vllm==0.32.0",
     "ziglang>=0.17.0",
 ]

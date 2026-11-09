@@ -115,30 +115,9 @@ notes = "Mistral advises temperature below 0.1."
 vllm_args = ["--tokenizer-mode", "mistral", "--config-format", "mistral", "--load-format", "mistral"]
 thinking_switch = false
 
-[[model]]
-key = "exaone4.5-33b"
-family = "EXAONE (LG AI Research)"
-checkpoint = "LGAI-EXAONE/EXAONE-4.5-33B-AWQ"   # LG's own 4-bit release (Jul 2026)
-revision = "31e6a965d0661bbe4a8b895e22a77f8271772ba0"   # downloaded 2026-11-07
-base = "LGAI-EXAONE/EXAONE-4.5-33B"
-precision = "int4-awq (official)"
-approx_weights_gb = 23
-license = "other (EXAONE AI Model License)"
-role = "South Korean developer; the largest of the set"
-notes = "Thinks by default: requests set enable_thinking=false, as for Qwen."
-# The largest model: 23 GB of weights leave room for a small KV cache only, so 12k of context; fits only while the
-# CROWD workers make way. 3 GiB held 12,272 tokens, just short of 12,288 (2026-11-09).
-max_model_len = 12288
-kv_cache_gib = 3.25
-gpu_memory_utilization = 0.84
-# vLLM's own EXAONE 4.5 code answered text correctly but returned nonsense for every image ("rural, 1 lane" for downtown
-# Toronto, lines of "-"), with either vision attention backend (2026-11-09). Transformers' implementation instead.
-vllm_args = ["--model-impl", "transformers"]
-
-# Added 2026-11-09 (Shadab): developers from South Korea and Canada, for the cross-cultural comparison. Kanana runs
-# beside another GPU job, on 0.27 of the card. HyperCLOVA X SEED Vision 3B (Naver) was the first Korean choice, but
-# vLLM dropped its architecture after 0.28 and its config does not load in Transformers 5; Aya Vision (Cohere) runs
-# through Transformers' implementation (below).
+# Added 2026-11-09 (Shadab): a developer from South Korea, for the cross-cultural comparison. Kanana runs beside
+# another GPU job, on 0.27 of the card. HyperCLOVA X SEED Vision 3B (Naver) was the first Korean choice, but vLLM
+# dropped its architecture after 0.28 and its config does not load in Transformers 5.
 
 [[model]]
 key = "kanana-1.5-v-3b"
@@ -159,20 +138,18 @@ kv_cache_gib = 2.25   # 2 GiB held 16,368 tokens, just short of 16,384 (2026-11-
 # by serve/prepare_tokenizers.py is loaded instead (relative to serve/, where vLLM starts).
 vllm_args = ["--tokenizer", "../data/tokenizers/kanana-1.5-v-fast"]
 
-[[model]]
-key = "aya-vision-8b"
-family = "Aya (Cohere)"
-checkpoint = "CohereLabs/aya-vision-8b"   # gated: accept Cohere's terms, then `hf auth login` on the GPU machine
-revision = "d7601ac8fd3baf6f59c5fc9514c618ef0f24268f"   # downloaded 2026-11-09
-base = "CohereLabs/aya-vision-8b"
-precision = "bf16"
-approx_weights_gb = 17
-license = "cc-by-nc-4.0"
-role = "Canadian developer; multilingual (23 languages)"
-# vLLM dropped its own Aya Vision code after 0.24; Transformers' implementation instead.
-vllm_args = ["--model-impl", "transformers"]
-
-# North-Micro-Vision (Cohere, Canada; CohereLabs/North-Micro-Vision-Instruct, revision fa548d9a) was run on
-# 2026-11-09 and excluded (Shadab): it describes frames correctly, but in the audit all 588 listed needs sat at point
-# (0, 0), 367 with the evidence "none", footways were only "none" or "physical_barrier" (even in downtown Toronto) and
-# it found zebra crossings in JAAD at chance (balanced accuracy 0.57). Its answers are in logs/ on wsl5090, not outputs/.
+# Tried and excluded (Shadab), so not downloaded by serve/download_models.sh:
+# - EXAONE 4.5 33B (LG AI Research, South Korea; LGAI-EXAONE/EXAONE-4.5-33B-AWQ, revision 31e6a965), 2026-11-09:
+#   vLLM's own EXAONE 4.5 code answered text correctly but returned nonsense for every image ("rural, 1 lane" for
+#   downtown Toronto, lines of "-") with either vision attention backend, and through Transformers' implementation
+#   (--model-impl transformers) every image request failed ("Failed to apply prompt replacement").
+# - Aya Vision 8B (Cohere, Canada; CohereLabs/aya-vision-8b, revision d7601ac8, served with --model-impl
+#   transformers), 2026-11-09: it describes frames correctly, but in the audit 148 of 150 city answers listed all 8
+#   needs, none with a point, crossings were "marked_with_refuge" in 256 of 270 clips, and in JAAD it found zebra
+#   crossings, signals and pedestrians at chance (balanced accuracy 0.58, 0.54, 0.50). Its main-audit answers are in
+#   logs/aya-vision-8b-excluded/ on wsl5090, not outputs/.
+# - North-Micro-Vision (Cohere, Canada; CohereLabs/North-Micro-Vision-Instruct, revision fa548d9a), 2026-11-09: it
+#   describes frames correctly, but in the audit all 588 listed needs sat at point (0, 0), 367 with the evidence
+#   "none", footways were only "none" or "physical_barrier" (even in downtown Toronto) and it found zebra crossings in
+#   JAAD at chance (balanced accuracy 0.57). Its answers are in logs/ on wsl5090, not outputs/.
+# - HyperCLOVA X SEED Vision 3B (Naver, South Korea), 2026-11-09: see above; never run.

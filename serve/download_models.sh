@@ -5,8 +5,8 @@
 #   bash serve/download_models.sh molmo2-8b ...    # only these keys
 #
 # Run on the GPU machine after `cd serve && uv sync`; the files go to the Hugging Face cache (HF_HOME, default
-# ~/.cache/huggingface), where vLLM finds them. Gated models (Aya Vision) need their terms accepted on the model's
-# Hugging Face page and `uv run --project serve hf auth login` first. All models together take about 160 GB.
+# ~/.cache/huggingface), where vLLM finds them. Gated models need their terms accepted on the model's
+# Hugging Face page and `uv run --project serve hf auth login` first. The six models take about 130 GB.
 # If downloads stall (seen on WSL2 with several parallel connections), set HF_MAX_WORKERS=1.
 set -euo pipefail
 cd "$(dirname "$0")/.."

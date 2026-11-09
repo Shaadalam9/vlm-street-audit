@@ -1,0 +1,102 @@
+{
+ "clip_id": "tE2MILY7pGY_00518000_010000",
+ "set": "cities",
+ "role": "control",
+ "model": "kanana-1.5-v-3b",
+ "checkpoint": "kakaocorp/kanana-1.5-v-3b-instruct",
+ "revision": "2e00ef13ccec2e99459a8eada18a1bfd05bff44b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.7,
+  "seed": 2,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00518000_010000/frame_002.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00518000_010000/frame_004.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00518000_010000/frame_006.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00518000_010000/frame_008.jpg",
+  "data/snippets/tE2MILY7pGY/tE2MILY7pGY_00518000_010000/frame_010.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"3\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised_with_refuge\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"one_kerb\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"pedestrians walking on the road\",\"frame\":2,\"x\":300,\"y\":300,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous and secure sidewalk on both sides of the road to ensure pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"people crossing\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a proper crossing with a refuge to prioritize pedestrian safety.\"},{\"need\":\"no_street_lighting\",\"where\":\"left_side\",\"evidence\":\"no street lights on the side\",\"frame\":4,\"x\":200,\"y\":300,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the footpath to improve visibility for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "3",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised_with_refuge",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "one_kerb"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "pedestrians walking on the road",
+    "frame": 2,
+    "x": 300,
+    "y": 300,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous and secure sidewalk on both sides of the road to ensure pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "people crossing",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a proper crossing with a refuge to prioritize pedestrian safety."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "left_side",
+    "evidence": "no street lights on the side",
+    "frame": 4,
+    "x": 200,
+    "y": 300,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the footpath to improve visibility for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 9.68,
+ "usage": {
+  "prompt_tokens": 7257,
+  "total_tokens": 7645,
+  "completion_tokens": 388,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}
