@@ -29,16 +29,23 @@
 ```
 src/vlm_street_audit/   package: config, file_server (CROWD videos and track CSVs), mapping,
                         snippets + semantics (choosing and cutting snippets), jaad (labels),
-                        vlm (audit prompt, schema, client), evaluation (statistics), figures
-scripts/                sample_cities.py, fetch_data.py, make_snippets.py, build_clip_sets.py,
-                        run_vlm.py, judge_suggestions.py, analyse_audit.py, paper_figures.py,
-                        plot_city_sample.py
-serve/                  vLLM environment and launcher
+                        vlm (audit prompt, schema, client), server (vLLM start and stop),
+                        evaluation (statistics), figures
+scripts/data/           sample_cities.py, plot_city_sample.py, fetch_data.py, make_snippets.py,
+                        build_clip_sets.py
+scripts/audit/          run_vlm.py, judge_suggestions.py
+scripts/analysis/       analyse_audit.py, paper_figures.py
+serve/                  vLLM environment (GPU machine): serve.py, download_models.sh (the pinned
+                        weights), prepare_tokenizers.py
+docs/figures/           paper/ (the paper's figures) and audit/ (further figures)
 outputs/vlm/            published answers, judge ratings and analysis tables
 configs/                models.toml (the VLMs), snippet_prompts.json (snippet ranking)
 data/                   mapping, city sample; videos/frames/bbox are downloaded, not tracked
 tests/                  uv run pytest
 ```
+
+Code is formatted and linted with ruff (`uvx ruff format .` and `uvx ruff check .`; settings in
+`pyproject.toml`).
 
 ## Data access
 
@@ -46,11 +53,11 @@ Videos and YOLO track CSVs come from the CROWD file server (`files.mobility-squa
 authenticated HTTP server; its login is called `ftp_username` / `ftp_password`). Use
 `FileServer.from_config()`: it takes local drives first (`video_dirs`, `bbox_dirs`, present on
 lin4080), then the download folders, then the server. The sample holds ~5,500 videos, so
-fetch a selection (`scripts/fetch_data.py --videos-per-city N`), not everything.
+fetch a selection (`scripts/data/fetch_data.py --videos-per-city N`), not everything.
 
 ## Snippets
 
-`scripts/make_snippets.py` follows opticarvis-global's candidate selection: windows inside
+`scripts/data/make_snippets.py` follows opticarvis-global's candidate selection: windows inside
 the mapped segments, SigLIP2 keyframe margins over routine-scene prompts, packet energy
 as tie break, one window per event, plus random windows. Keep the random windows: they
 are the unbiased part of the sample. Changing `configs/snippet_prompts.json` changes which

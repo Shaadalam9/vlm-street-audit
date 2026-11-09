@@ -64,15 +64,35 @@ def test_messages_hold_the_frames_then_the_prompt(tmp_path):
 
 def audit_answer(**changes):
     side = {"footway": "sidewalk_1_to_3m", "obstruction": "none", "trip_hazards": "none"}
-    answer = {"scene": {"road_type": "urban_street", "zebra_crossing_visible": True, "traffic_signal_visible": False,
-                        "pedestrians_visible": True, "pedestrians_in_carriageway": False},
-              "road": {"area_type": "urban", "land_use": "commercial", "number_of_lanes": "2", "median": "none",
-                       "street_lighting": "some", "traffic_calming": "not_present", "pedestrian_fencing": "not_present",
-                       "transit_stops": "1", "bike_facility": "none"},
-              "left_side": dict(side), "right_side": dict(side),
-              "crossing": {"crossing_demand": True, "crossing_facility": "marked", "crossing_quality": "adequate",
-                           "kerb_ramps": "both_kerbs"},
-              "needed": []}
+    answer = {
+        "scene": {
+            "road_type": "urban_street",
+            "zebra_crossing_visible": True,
+            "traffic_signal_visible": False,
+            "pedestrians_visible": True,
+            "pedestrians_in_carriageway": False,
+        },
+        "road": {
+            "area_type": "urban",
+            "land_use": "commercial",
+            "number_of_lanes": "2",
+            "median": "none",
+            "street_lighting": "some",
+            "traffic_calming": "not_present",
+            "pedestrian_fencing": "not_present",
+            "transit_stops": "1",
+            "bike_facility": "none",
+        },
+        "left_side": dict(side),
+        "right_side": dict(side),
+        "crossing": {
+            "crossing_demand": True,
+            "crossing_facility": "marked",
+            "crossing_quality": "adequate",
+            "kerb_ramps": "both_kerbs",
+        },
+        "needed": [],
+    }
     for path, value in changes.items():
         part, item = path.split("__")
         answer[part][item] = value
@@ -107,15 +127,42 @@ def test_expected_needs_follow_the_item_answers():
     from vlm_street_audit.vlm import expected_needs, issues_of
 
     assert expected_needs(audit_answer()) == set()
-    answer = audit_answer(left_side__footway="informal_path_under_1m", right_side__obstruction="blocked",
-                          road__number_of_lanes="4_or_more", crossing__kerb_ramps="none",
-                          road__street_lighting="none")
-    assert expected_needs(answer) == {("no_footway", "left_side"), ("blocked_footway", "right_side"),
-                                      ("no_refuge_on_wide_road", "crossing"), ("no_kerb_ramps", "crossing"),
-                                      ("no_street_lighting", "road")}
+    answer = audit_answer(
+        left_side__footway="informal_path_under_1m",
+        right_side__obstruction="blocked",
+        road__number_of_lanes="4_or_more",
+        crossing__kerb_ramps="none",
+        road__street_lighting="none",
+    )
+    assert expected_needs(answer) == {
+        ("no_footway", "left_side"),
+        ("blocked_footway", "right_side"),
+        ("no_refuge_on_wide_road", "crossing"),
+        ("no_kerb_ramps", "crossing"),
+        ("no_street_lighting", "road"),
+    }
     # No crossing is a need only where people have a reason to cross; dark rural roads are not flagged.
-    assert expected_needs(audit_answer(crossing__crossing_facility="none", crossing__crossing_demand=False,
-                                       road__area_type="rural", road__street_lighting="none")) == set()
-    answer["needed"] = [{"need": "no_footway", "where": "left_side", "evidence": "trodden verge", "frame": 2,
-                         "x": 100, "y": 800, "measure": "build_footway", "suggestion": "Build a footway."}]
+    assert (
+        expected_needs(
+            audit_answer(
+                crossing__crossing_facility="none",
+                crossing__crossing_demand=False,
+                road__area_type="rural",
+                road__street_lighting="none",
+            )
+        )
+        == set()
+    )
+    answer["needed"] = [
+        {
+            "need": "no_footway",
+            "where": "left_side",
+            "evidence": "trodden verge",
+            "frame": 2,
+            "x": 100,
+            "y": 800,
+            "measure": "build_footway",
+            "suggestion": "Build a footway.",
+        }
+    ]
     assert [(i["category"], i["where"]) for i in issues_of(answer)] == [("no_footway", "left_side")]

@@ -48,8 +48,11 @@ class Window:
 
 def normalise_intervals(intervals: list[tuple[float, float]]) -> list[tuple[float, float]]:
     """Sorted, merged, finite (start, end) ranges with end > start."""
-    clean = sorted((float(s), float(e)) for s, e in intervals
-                   if math.isfinite(float(s)) and math.isfinite(float(e)) and float(e) > float(s) >= 0)
+    clean = sorted(
+        (float(s), float(e))
+        for s, e in intervals
+        if math.isfinite(float(s)) and math.isfinite(float(e)) and float(e) > float(s) >= 0
+    )
     merged: list[tuple[float, float]] = []
     for start, end in clean:
         if merged and start <= merged[-1][1]:
@@ -69,8 +72,20 @@ def _tool(name: str) -> str:
 def probe_packets(video: Path, intervals: list[tuple[float, float]]) -> list[tuple[float, int]]:
     """(time_s, bytes) of every video packet inside the intervals; no decoding."""
     read = ",".join(f"{start:.3f}%{end:.3f}" for start, end in intervals)
-    command = [_tool("ffprobe"), "-v", "error", "-select_streams", "v:0", "-show_entries", "packet=pts_time,size",
-               "-of", "csv=p=0", "-read_intervals", read, str(video)]
+    command = [
+        _tool("ffprobe"),
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "packet=pts_time,size",
+        "-of",
+        "csv=p=0",
+        "-read_intervals",
+        read,
+        str(video),
+    ]
     result = subprocess.run(command, capture_output=True, text=True, check=False)
     if result.returncode != 0:
         raise RuntimeError(result.stderr.strip() or f"ffprobe failed on {video}")
@@ -102,8 +117,13 @@ def robust_scores(values: list[float]) -> list[float]:
     return [(v - mean) / spread for v in logged]
 
 
-def make_windows(video_id: str, intervals: list[tuple[float, float]], packets: list[tuple[float, int]],
-                 length_s: float, stride_s: float) -> list[Window]:
+def make_windows(
+    video_id: str,
+    intervals: list[tuple[float, float]],
+    packets: list[tuple[float, int]],
+    length_s: float,
+    stride_s: float,
+) -> list[Window]:
     """Every full window inside each interval, with its packet energy score."""
     if length_s <= 0 or stride_s <= 0:
         raise ValueError("length_s and stride_s must be positive")
@@ -117,8 +137,16 @@ def make_windows(video_id: str, intervals: list[tuple[float, float]], packets: l
         while start + length_s <= seg_end + 1e-9:
             left, right = bisect_left(times, start), bisect_left(times, start + length_s)
             if right > left:
-                windows.append(Window(video_id, seg_start, seg_end, round(start, 3), round(start + length_s, 3),
-                                      packet_bytes_per_s=(prefix[right] - prefix[left]) / length_s))
+                windows.append(
+                    Window(
+                        video_id,
+                        seg_start,
+                        seg_end,
+                        round(start, 3),
+                        round(start + length_s, 3),
+                        packet_bytes_per_s=(prefix[right] - prefix[left]) / length_s,
+                    )
+                )
             start += stride_s
     for window, score in zip(windows, robust_scores([w.packet_bytes_per_s for w in windows])):
         window.packet_score = score
@@ -127,8 +155,10 @@ def make_windows(video_id: str, intervals: list[tuple[float, float]], packets: l
 
 def rank_windows(windows: list[Window]) -> list[Window]:
     """Rank by semantic score (when present), then packet energy, then time."""
-    ordered = sorted(windows, key=lambda w: (-(w.semantic_score if w.semantic_score is not None else -math.inf),
-                                             -w.packet_score, w.start_s))
+    ordered = sorted(
+        windows,
+        key=lambda w: (-(w.semantic_score if w.semantic_score is not None else -math.inf), -w.packet_score, w.start_s),
+    )
     for rank, window in enumerate(ordered, start=1):
         window.rank = rank
     return ordered
@@ -148,13 +178,16 @@ def cluster_events(windows: list[Window], min_gap_s: float) -> None:
         unassigned = [w for w in unassigned if w.cluster == 0]
 
 
-def select_windows(windows: list[Window], ranked_per_video: int, random_per_video: int, min_gap_s: float,
-                   seed: int) -> list[tuple[Window, str]]:
+def select_windows(
+    windows: list[Window], ranked_per_video: int, random_per_video: int, min_gap_s: float, seed: int
+) -> list[tuple[Window, str]]:
     """Top-ranked event representatives, then random windows away from them."""
     rank_windows(windows)
     cluster_events(windows, min_gap_s)
-    chosen = [(w, "ranked") for w in sorted((w for w in windows if w.is_representative), key=lambda w: w.rank)
-              [:ranked_per_video]]
+    chosen = [
+        (w, "ranked")
+        for w in sorted((w for w in windows if w.is_representative), key=lambda w: w.rank)[:ranked_per_video]
+    ]
     rng = random.Random(f"{seed}:{windows[0].video_id}" if windows else seed)
     pool = [w for w in windows if all(abs(w.start_s - c.start_s) >= min_gap_s for c, _ in chosen)]
     rng.shuffle(pool)
@@ -170,14 +203,31 @@ def snippet_name(video_id: str, start_s: float, length_s: float) -> str:
     return f"{video_id}_{int(round(start_s * 1000)):08d}_{int(round(length_s * 1000)):06d}"
 
 
-def extract_snippet(video: Path, start_s: float, length_s: float, clip_path: Path, frames_dir: Path,
-                    frames_fps: float) -> list[Path]:
+def extract_snippet(
+    video: Path, start_s: float, length_s: float, clip_path: Path, frames_dir: Path, frames_fps: float
+) -> list[Path]:
     """Write the H.264 clip and its frames; returns the frame paths. Skips work already done."""
     clip_path.parent.mkdir(parents=True, exist_ok=True)
     if not (clip_path.is_file() and clip_path.stat().st_size > 0):
         partial = clip_path.with_suffix(".part.mp4")
-        command = [_tool("ffmpeg"), "-y", "-loglevel", "error", "-ss", f"{start_s:.3f}", "-i", str(video),
-                   "-t", f"{length_s:.3f}", "-c:v", "libx264", "-pix_fmt", "yuv420p", "-an", str(partial)]
+        command = [
+            _tool("ffmpeg"),
+            "-y",
+            "-loglevel",
+            "error",
+            "-ss",
+            f"{start_s:.3f}",
+            "-i",
+            str(video),
+            "-t",
+            f"{length_s:.3f}",
+            "-c:v",
+            "libx264",
+            "-pix_fmt",
+            "yuv420p",
+            "-an",
+            str(partial),
+        ]
         result = subprocess.run(command, capture_output=True, text=True, check=False)
         if result.returncode != 0 or not partial.is_file():
             partial.unlink(missing_ok=True)
@@ -186,8 +236,19 @@ def extract_snippet(video: Path, start_s: float, length_s: float, clip_path: Pat
     frames = sorted(frames_dir.glob("frame_*.jpg"))
     if not frames:
         frames_dir.mkdir(parents=True, exist_ok=True)
-        command = [_tool("ffmpeg"), "-y", "-loglevel", "error", "-i", str(clip_path), "-vf", f"fps={frames_fps}",
-                   "-q:v", "2", str(frames_dir / "frame_%03d.jpg")]
+        command = [
+            _tool("ffmpeg"),
+            "-y",
+            "-loglevel",
+            "error",
+            "-i",
+            str(clip_path),
+            "-vf",
+            f"fps={frames_fps}",
+            "-q:v",
+            "2",
+            str(frames_dir / "frame_%03d.jpg"),
+        ]
         result = subprocess.run(command, capture_output=True, text=True, check=False)
         if result.returncode != 0:
             raise RuntimeError((result.stderr or "ffmpeg failed").strip()[:500])
@@ -196,8 +257,22 @@ def extract_snippet(video: Path, start_s: float, length_s: float, clip_path: Pat
 
 
 MANIFEST_COLUMNS = [
-    "snippet", "locality", "country", "video_id", "segment_start_s", "segment_end_s", "start_s", "end_s",
-    "selection", "rank", "windows_in_video", "semantic_score", "top_group", "packet_score", "clip", "frames_dir",
+    "snippet",
+    "locality",
+    "country",
+    "video_id",
+    "segment_start_s",
+    "segment_end_s",
+    "start_s",
+    "end_s",
+    "selection",
+    "rank",
+    "windows_in_video",
+    "semantic_score",
+    "top_group",
+    "packet_score",
+    "clip",
+    "frames_dir",
     "frame_count",
 ]
 

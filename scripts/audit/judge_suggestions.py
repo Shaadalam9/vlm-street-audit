@@ -12,7 +12,7 @@ judge favours its own model's suggestions.
 Ratings go to outputs/vlm/judge/<judge>/<auditor model>/<clip_id>.json; finished ones are skipped.
 
 Run on wsl5090:
-    uv run python scripts/judge_suggestions.py --start-server --judges qwen3.8-27b gemma4-31b
+    uv run python scripts/audit/judge_suggestions.py --start-server --judges qwen3.8-27b gemma4-31b
 """
 
 import argparse
@@ -23,8 +23,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
-from run_vlm import start_server, stop_server, wait_until_ready
 from vlm_street_audit.config import PROJECT_ROOT, load_config, project_path
+from vlm_street_audit.server import start_server, stop_server, wait_until_ready
 from vlm_street_audit.vlm import encode_image, load_models
 
 logger = logging.getLogger("judge_suggestions")
@@ -66,24 +66,43 @@ Judge only from the frames. Answer with JSON only, in British English."""
 
 
 def deficit_text(issues: list[dict]) -> str:
-    return "\n".join(f"{i}. {d['need']} ({d['where']}). Evidence: {d['evidence']} Measure: {d['measure']}. "
-                     f"Suggestion: {d['suggestion']}" for i, d in enumerate(issues, start=1))
+    return "\n".join(
+        f"{i}. {d['need']} ({d['where']}). Evidence: {d['evidence']} Measure: {d['measure']}. "
+        f"Suggestion: {d['suggestion']}"
+        for i, d in enumerate(issues, start=1)
+    )
 
 
 def judge_one(judge: str, record: dict, base_url: str, max_side: int, timeout_s: float, max_tokens: int) -> dict:
     deficits = record["answer"]["needed"]
-    schema = {"type": "object", "additionalProperties": False, "required": ["ratings"],
-              "properties": {"ratings": {"type": "array", "items": RATING,
-                                         "minItems": len(deficits), "maxItems": len(deficits)}}}
-    content = [{"type": "image_url", "image_url": {"url": encode_image(PROJECT_ROOT / f, max_side)}}
-               for f in record["frames"]]
+    schema = {
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["ratings"],
+        "properties": {
+            "ratings": {"type": "array", "items": RATING, "minItems": len(deficits), "maxItems": len(deficits)}
+        },
+    }
+    content = [
+        {"type": "image_url", "image_url": {"url": encode_image(PROJECT_ROOT / f, max_side)}} for f in record["frames"]
+    ]
     content.append({"type": "text", "text": PROMPT.format(n=len(record["frames"]), deficits=deficit_text(deficits))})
-    body = {"model": judge, "messages": [{"role": "user", "content": content}], "temperature": 0, "seed": 0,
-            "max_tokens": max_tokens, "chat_template_kwargs": {"enable_thinking": False},
-            "response_format": {"type": "json_schema",
-                                "json_schema": {"name": "judge", "schema": schema, "strict": True}}}
-    result = {"clip_id": record["clip_id"], "auditor": record["model"], "judge": judge,
-              "judge_version": JUDGE_VERSION, "deficits": deficits}
+    body = {
+        "model": judge,
+        "messages": [{"role": "user", "content": content}],
+        "temperature": 0,
+        "seed": 0,
+        "max_tokens": max_tokens,
+        "chat_template_kwargs": {"enable_thinking": False},
+        "response_format": {"type": "json_schema", "json_schema": {"name": "judge", "schema": schema, "strict": True}},
+    }
+    result = {
+        "clip_id": record["clip_id"],
+        "auditor": record["model"],
+        "judge": judge,
+        "judge_version": JUDGE_VERSION,
+        "deficits": deficits,
+    }
     try:
         response = requests.post(f"{base_url}/v1/chat/completions", json=body, timeout=timeout_s)
         response.raise_for_status()
@@ -133,8 +152,9 @@ def main() -> int:
             def rate(record: dict) -> dict:
                 # Up to 8 short ratings; Gemma's 4k context must hold the frames and the deficits too.
                 max_tokens = min(1200, int(models[judge].get("max_answer_tokens", 2048)))
-                result = judge_one(judge, record, base_url, int(settings["vlm_image_max_side"]), args.timeout,
-                                   max_tokens)
+                result = judge_one(
+                    judge, record, base_url, int(settings["vlm_image_max_side"]), args.timeout, max_tokens
+                )
                 path = out / record["model"] / f"{record['clip_id']}.json"
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(json.dumps(result, indent=1, ensure_ascii=False), encoding="utf-8")
@@ -142,8 +162,15 @@ def main() -> int:
 
             with ThreadPoolExecutor(max_workers=int(server.get("parallel_requests", 1))) as pool:
                 for done, result in enumerate(pool.map(rate, todo), start=1):
-                    logger.info("%s judged %s %s [%d/%d]%s", judge, result["auditor"], result["clip_id"], done,
-                                len(todo), f": {result['error']}" if result["error"] else "")
+                    logger.info(
+                        "%s judged %s %s [%d/%d]%s",
+                        judge,
+                        result["auditor"],
+                        result["clip_id"],
+                        done,
+                        len(todo),
+                        f": {result['error']}" if result["error"] else "",
+                    )
         except (RuntimeError, TimeoutError) as error:
             failures.append(judge)
             logger.error("%s skipped: %s", judge, error)

@@ -35,8 +35,10 @@ def test_busier_windows_score_higher_on_packet_energy():
 
 
 def _windows(scores):
-    return [Window("v", 0, 1000, start, start + 10, semantic_score=score)
-            for start, score in zip(range(0, 10 * len(scores), 10), scores)]
+    return [
+        Window("v", 0, 1000, start, start + 10, semantic_score=score)
+        for start, score in zip(range(0, 10 * len(scores), 10), scores)
+    ]
 
 
 def test_selection_keeps_one_window_per_event_and_adds_random_ones():
@@ -52,7 +54,9 @@ def test_selection_keeps_one_window_per_event_and_adds_random_ones():
 
 
 def test_random_choice_is_reproducible():
-    pick = lambda: [w.start_s for w, k in select_windows(_windows([0.0] * 40), 1, 3, 30, seed=7) if k == "random"]
+    def pick() -> list[float]:
+        return [w.start_s for w, k in select_windows(_windows([0.0] * 40), 1, 3, 30, seed=7) if k == "random"]
+
     assert pick() == pick()
 
 
@@ -73,8 +77,25 @@ def test_shipped_prompts_are_valid():
 @pytest.mark.skipif(shutil.which("ffmpeg") is None, reason="needs ffmpeg")
 def test_probe_and_extract_on_a_generated_video(tmp_path):
     video = tmp_path / "source.mp4"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc=size=320x240:rate=10",
-                    "-t", "12", "-c:v", "libx264", "-g", "10", str(video)], check=True)
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-loglevel",
+            "error",
+            "-f",
+            "lavfi",
+            "-i",
+            "testsrc=size=320x240:rate=10",
+            "-t",
+            "12",
+            "-c:v",
+            "libx264",
+            "-g",
+            "10",
+            str(video),
+        ],
+        check=True,
+    )
     packets = probe_packets(video, [(2.0, 8.0)])
     assert packets and all(2.0 <= t < 8.0 for t, _ in packets)
     frames = extract_snippet(video, 2.0, 4.0, tmp_path / "out" / "clip.mp4", tmp_path / "out" / "clip", 1)

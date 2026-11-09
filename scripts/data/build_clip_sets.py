@@ -8,7 +8,7 @@ jaad    a seeded sample of JAAD clips, half with a zebra crossing visible and ha
 Both send `vlm_frames_per_clip` frames spread over at most 10 s.
 Output: data/clip_sets/{cities,jaad}.csv, data/clip_sets/jaad_labels.json, JAAD frames.
 
-Run:  uv run python scripts/build_clip_sets.py
+Run:  uv run python scripts/data/build_clip_sets.py
 """
 
 import argparse
@@ -36,8 +36,11 @@ def evenly(items: list, n: int) -> list:
 
 
 def relative(path: Path) -> str:
-    return path.resolve().relative_to(PROJECT_ROOT.resolve()).as_posix() if path.resolve().is_relative_to(
-        PROJECT_ROOT.resolve()) else str(path)
+    return (
+        path.resolve().relative_to(PROJECT_ROOT.resolve()).as_posix()
+        if path.resolve().is_relative_to(PROJECT_ROOT.resolve())
+        else str(path)
+    )
 
 
 def city_rows(settings: dict) -> list[dict]:
@@ -45,15 +48,25 @@ def city_rows(settings: dict) -> list[dict]:
     snippets = pd.read_csv(snippet_dir / "snippets.csv")
     rows = []
     for video_id, group in snippets.groupby("video_id"):
-        picks = [("main", group[group.selection == "ranked"].sort_values("rank").head(1)),
-                 ("control", group[group.selection == "random"].head(1))]
+        picks = [
+            ("main", group[group.selection == "ranked"].sort_values("rank").head(1)),
+            ("control", group[group.selection == "random"].head(1)),
+        ]
         for role, pick in picks:
             for snippet in pick.itertuples():
                 frames = sorted((snippet_dir / snippet.frames_dir).glob("frame_*.jpg"))
                 chosen = evenly(frames, int(settings["vlm_frames_per_clip"]))
-                rows.append({"clip_id": snippet.snippet, "set": "cities", "role": role, "locality": snippet.locality,
-                             "country": snippet.country, "seconds": snippet.end_s - snippet.start_s,
-                             "frames": ";".join(relative(f) for f in chosen)})
+                rows.append(
+                    {
+                        "clip_id": snippet.snippet,
+                        "set": "cities",
+                        "role": role,
+                        "locality": snippet.locality,
+                        "country": snippet.country,
+                        "seconds": snippet.end_s - snippet.start_s,
+                        "frames": ";".join(relative(f) for f in chosen),
+                    }
+                )
     return rows
 
 
@@ -63,8 +76,24 @@ def extract_frames(video: Path, numbers: list[int], out_dir: Path) -> list[Path]
     if all(p.is_file() for p in paths):
         return paths
     select = "+".join(f"eq(n\\,{n})" for n in numbers)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-vf", f"select={select}",
-                    "-fps_mode", "vfr", "-q:v", "2", str(out_dir / "tmp_%02d.jpg")], check=True)
+    subprocess.run(
+        [
+            "ffmpeg",
+            "-y",
+            "-loglevel",
+            "error",
+            "-i",
+            str(video),
+            "-vf",
+            f"select={select}",
+            "-fps_mode",
+            "vfr",
+            "-q:v",
+            "2",
+            str(out_dir / "tmp_%02d.jpg"),
+        ],
+        check=True,
+    )
     for index, path in enumerate(paths, start=1):
         (out_dir / f"tmp_{index:02d}.jpg").replace(path)
     return paths
@@ -88,9 +117,17 @@ def jaad_rows(settings: dict, out_dir: Path) -> tuple[list[dict], dict]:
     rows, truth = [], {}
     for video, numbers, label in sorted(sample):
         frames = extract_frames(jaad_dir / "JAAD_clips" / f"{video}.mp4", numbers, out_dir / "jaad_frames" / video)
-        rows.append({"clip_id": video, "set": "jaad", "role": "main", "locality": "", "country": "",
-                     "seconds": round(label["seconds"], 1),
-                     "frames": ";".join(relative(f) for f in frames)})
+        rows.append(
+            {
+                "clip_id": video,
+                "set": "jaad",
+                "role": "main",
+                "locality": "",
+                "country": "",
+                "seconds": round(label["seconds"], 1),
+                "frames": ";".join(relative(f) for f in frames),
+            }
+        )
         truth[video] = {"frames": numbers, **label}
     return rows, truth
 
@@ -111,14 +148,18 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     cities = city_rows(settings)
     write(cities, out_dir / "cities.csv")
-    print(f"cities: {len(cities)} clips ({sum(r['role'] == 'main' for r in cities)} main, "
-          f"{sum(r['role'] == 'control' for r in cities)} control)")
+    print(
+        f"cities: {len(cities)} clips ({sum(r['role'] == 'main' for r in cities)} main, "
+        f"{sum(r['role'] == 'control' for r in cities)} control)"
+    )
     if not args.skip_jaad:
         rows, truth = jaad_rows(settings, out_dir)
         write(rows, out_dir / "jaad.csv")
         (out_dir / "jaad_labels.json").write_text(json.dumps(truth, indent=1), encoding="utf-8")
-        print(f"jaad: {len(rows)} clips ({sum(t['zebra_crossing_visible'] for t in truth.values())} with a zebra "
-              f"crossing, {sum(t['pedestrians_in_carriageway'] for t in truth.values())} with someone crossing)")
+        print(
+            f"jaad: {len(rows)} clips ({sum(t['zebra_crossing_visible'] for t in truth.values())} with a zebra "
+            f"crossing, {sum(t['pedestrians_in_carriageway'] for t in truth.values())} with someone crossing)"
+        )
     return 0
 
 

@@ -41,7 +41,7 @@ outputs/vlm/audit*/*
 # Downloaded track files
 data/bbox/*
 
-# Snippets and embedding caches (rebuilt by scripts/make_snippets.py)
+# Snippets and embedding caches (rebuilt by scripts/data/make_snippets.py)
 data/snippets/
 data/embeddings/
 
@@ -53,3 +53,6 @@ data/clip_sets/
 
 # Conference paper drafts (IHIET-AI), kept out of git
 /paper/
+
+# Tokeniser folders built by serve/prepare_tokenizers.py
+data/tokenizers/

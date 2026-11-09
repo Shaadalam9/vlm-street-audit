@@ -28,13 +28,23 @@ def command(key: str) -> list[str]:
     # The vllm entry point of this environment, which need not be on PATH.
     executable = Path(sys.executable).with_name("vllm")
     args = [
-        str(executable) if executable.is_file() else "vllm", "serve", model["checkpoint"],
-        "--served-model-name", key,
-        "--host", "127.0.0.1", "--port", str(server["port"]),
-        "--gpu-memory-utilization", str(model.get("gpu_memory_utilization", server["gpu_memory_utilization"])),
-        "--max-model-len", str(model.get("max_model_len", server["max_model_len"])),
-        "--limit-mm-per-prompt", json.dumps({"image": server["max_images"], "video": 0}),
-        "--seed", "0",
+        str(executable) if executable.is_file() else "vllm",
+        "serve",
+        model["checkpoint"],
+        "--served-model-name",
+        key,
+        "--host",
+        "127.0.0.1",
+        "--port",
+        str(server["port"]),
+        "--gpu-memory-utilization",
+        str(model.get("gpu_memory_utilization", server["gpu_memory_utilization"])),
+        "--max-model-len",
+        str(model.get("max_model_len", server["max_model_len"])),
+        "--limit-mm-per-prompt",
+        json.dumps({"image": server["max_images"], "video": 0}),
+        "--seed",
+        "0",
     ]
     if model.get("revision"):
         args += ["--revision", model["revision"]]

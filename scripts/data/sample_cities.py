@@ -18,7 +18,7 @@ small ones at most one, as a PPS design does by itself. Countries are whatever
 the drawn cities fall in. If a drawn city later has no usable footage, do not
 swap in a neighbour; report it as missing.
 
-Run:  uv run python scripts/sample_cities.py [--n 75] [--alpha 0.5] ...
+Run:  uv run python scripts/data/sample_cities.py [--n 75] [--alpha 0.5] ...
 """
 
 import argparse
@@ -36,7 +36,7 @@ from lpm_sampling import (
     unit_sphere_xyz,
 )
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 INPUT_CSV = PROJECT_ROOT / "data" / "mapping_original.csv"
 OUTPUT_DIR = PROJECT_ROOT / "data" / "city_sample"
 
@@ -52,8 +52,14 @@ REQUIRED_TIME_OF_DAY = 0  # daytime
 MIN_FOOTAGE_HOURS = 1.0
 
 DESIGN_COLUMNS = [
-    "source_row", "footage_hours_used", "size_measure", "pi", "design_weight",
-    "sphere_x", "sphere_y", "sphere_z",
+    "source_row",
+    "footage_hours_used",
+    "size_measure",
+    "pi",
+    "design_weight",
+    "sphere_x",
+    "sphere_y",
+    "sphere_z",
 ]
 
 
@@ -134,9 +140,9 @@ def prepare_frame(df, args):
     ].copy()
     frame["footage_hours_used"] = frame.apply(
         lambda row: sum(
-            merged_seconds(segments)
-            for _, segments in qualifying_segments(row, args.vehicle_type, args.time_of_day)
-        ) / 3600,
+            merged_seconds(segments) for _, segments in qualifying_segments(row, args.vehicle_type, args.time_of_day)
+        )
+        / 3600,
         axis=1,
     )
     frame = frame[frame["footage_hours_used"] >= args.min_hours]
@@ -166,11 +172,12 @@ def clean_mapping(sample, args):
         clean.at[index, "videos"] = "[" + ",".join(video for video, _ in records) + "]"
         clean.at[index, "vehicle_type"] = json.dumps([args.vehicle_type] * len(records), **compact)
         clean.at[index, "time_of_day"] = json.dumps(
-            [[args.time_of_day] * len(segments) for _, segments in records], **compact)
+            [[args.time_of_day] * len(segments) for _, segments in records], **compact
+        )
         clean.at[index, "start_time"] = json.dumps(
-            [[start for start, _ in segments] for _, segments in records], **compact)
-        clean.at[index, "end_time"] = json.dumps(
-            [[end for _, end in segments] for _, segments in records], **compact)
+            [[start for start, _ in segments] for _, segments in records], **compact
+        )
+        clean.at[index, "end_time"] = json.dumps([[end for _, end in segments] for _, segments in records], **compact)
     clean.insert(0, "id", np.arange(1, len(clean) + 1))
     return clean
 
@@ -204,8 +211,9 @@ def main():
     frame.to_csv(out / "eligible_frame_with_pi.csv", index=False)
     sample.to_csv(out / "design_manifest.csv", index=False)
     clean.to_csv(out / "mapping.csv", index=False)
-    clean["country"].value_counts().rename_axis("country").reset_index(
-        name="selected_city_count").to_csv(out / "selected_cities_by_country.csv", index=False)
+    clean["country"].value_counts().rename_axis("country").reset_index(name="selected_city_count").to_csv(
+        out / "selected_cities_by_country.csv", index=False
+    )
 
     weights = 1 / pi[selected]
     population = frame[POPULATION_COLUMN].to_numpy(float)
@@ -215,16 +223,14 @@ def main():
         "Implementation: M-Colley/lpm-sampling",
         f"Input rows: {len(df)}",
         f"Eligible cities: {len(frame)} in {frame['country'].nunique()} countries",
-        f"Vehicle type: {args.vehicle_type}, time of day: {args.time_of_day}, "
-        f"minimum footage: {args.min_hours} h",
+        f"Vehicle type: {args.vehicle_type}, time of day: {args.time_of_day}, minimum footage: {args.min_hours} h",
         f"Sample size: {args.n}, method: {args.method.upper()}, seed: {args.seed}, alpha: {args.alpha}",
         f"sum(pi): {pi.sum():.12f}",
         f"Certainty cities: {len(certainty)}",
         f"Selected countries: {clean['country'].nunique()}",
         f"Spatial balance (lower is better): {spatial_balance(pi, xyz, selected):.6f}",
-        "Population-weighted distance to nearest selected city (km): "
-        f"{np.average(nearest_km, weights=population):.2f}",
-        f"Kish effective sample size: {weights.sum() ** 2 / np.sum(weights ** 2):.2f}",
+        f"Population-weighted distance to nearest selected city (km): {np.average(nearest_km, weights=population):.2f}",
+        f"Kish effective sample size: {weights.sum() ** 2 / np.sum(weights**2):.2f}",
         f"Design weight range: {weights.min():.2f} - {weights.max():.2f}",
     ]
     (out / "diagnostics.txt").write_text("\n".join(diagnostics) + "\n", encoding="utf-8")

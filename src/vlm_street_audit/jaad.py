@@ -49,12 +49,16 @@ def labels(jaad_dir: Path, video: str, frames: list[int]) -> dict:
             attributes = {a.get("name"): a.text for a in box.findall("attribute")}
             is_crossing = attributes.get("cross") == "crossing"
             crossing |= is_crossing
-            boxes[number].append({
-                # Corners scaled to 0-1000, like the VLM points.
-                "x1": round(1000 * float(box.get("xtl")) / width), "y1": round(1000 * float(box.get("ytl")) / height),
-                "x2": round(1000 * float(box.get("xbr")) / width), "y2": round(1000 * float(box.get("ybr")) / height),
-                "crossing": is_crossing,
-            })
+            boxes[number].append(
+                {
+                    # Corners scaled to 0-1000, like the VLM points.
+                    "x1": round(1000 * float(box.get("xtl")) / width),
+                    "y1": round(1000 * float(box.get("ytl")) / height),
+                    "x2": round(1000 * float(box.get("xbr")) / width),
+                    "y2": round(1000 * float(box.get("ybr")) / height),
+                    "crossing": is_crossing,
+                }
+            )
     return {
         "road_type": road_type,
         "zebra_crossing_visible": zebra,

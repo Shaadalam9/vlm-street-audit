@@ -48,15 +48,19 @@ def top_k_mean(values: np.ndarray, k: int) -> float:
     return float(np.mean(np.partition(values, values.size - count)[-count:]))
 
 
-def score_windows(windows: list[Window], times: np.ndarray, images: np.ndarray, texts: dict[str, np.ndarray],
-                  top_k: int = 2) -> None:
+def score_windows(
+    windows: list[Window], times: np.ndarray, images: np.ndarray, texts: dict[str, np.ndarray], top_k: int = 2
+) -> None:
     """Set `semantic_score` and `group_scores` of each window from keyframe embeddings."""
     if len(times) == 0:
         return
     images = unit_rows(images)
     baseline = np.max(images @ unit_rows(texts["negative"]).T, axis=1)
-    margins = {group: np.max(images @ unit_rows(emb).T, axis=1) - baseline
-               for group, emb in texts.items() if group != "negative"}
+    margins = {
+        group: np.max(images @ unit_rows(emb).T, axis=1) - baseline
+        for group, emb in texts.items()
+        if group != "negative"
+    }
     for window in windows:
         inside = np.flatnonzero((times >= window.start_s) & (times < window.end_s))
         if not len(inside):
@@ -84,8 +88,11 @@ class KeyframeEncoder:
         self._torch = torch
         self._device = "cuda" if torch.cuda.is_available() else "cpu"
         self._processor = AutoProcessor.from_pretrained(self.model_id)
-        self._model = AutoModel.from_pretrained(
-            self.model_id, dtype=torch.float16 if self._device == "cuda" else torch.float32).to(self._device).eval()
+        self._model = (
+            AutoModel.from_pretrained(self.model_id, dtype=torch.float16 if self._device == "cuda" else torch.float32)
+            .to(self._device)
+            .eval()
+        )
 
     @staticmethod
     def _pooled(output):
@@ -148,8 +155,15 @@ class KeyframeEncoder:
 class SemanticScorer:
     """Prompt embeddings plus per-video keyframe embeddings cached as .npz."""
 
-    def __init__(self, prompts_path: Path, cache_dir: Path, model_id: str, batch_size: int = 32,
-                 min_frame_gap_s: float = 2.0, top_k: int = 2) -> None:
+    def __init__(
+        self,
+        prompts_path: Path,
+        cache_dir: Path,
+        model_id: str,
+        batch_size: int = 32,
+        min_frame_gap_s: float = 2.0,
+        top_k: int = 2,
+    ) -> None:
         self.prompts = load_prompts(prompts_path)
         self.prompts_hash = prompts_hash(self.prompts)
         self.cache_dir = Path(cache_dir)
@@ -159,15 +173,24 @@ class SemanticScorer:
 
     def texts(self) -> dict[str, np.ndarray]:
         if self._texts is None:
-            self._texts = {group: self.encoder.encode_texts(prompts)
-                           for group, prompts in self.prompts["positive_groups"].items()}
+            self._texts = {
+                group: self.encoder.encode_texts(prompts) for group, prompts in self.prompts["positive_groups"].items()
+            }
             self._texts["negative"] = self.encoder.encode_texts(self.prompts["negative_prompts"])
         return self._texts
 
     def _cache_key(self, video: Path, intervals: list[tuple[float, float]]) -> str:
         stat = video.stat()
-        payload = json.dumps([CACHE_VERSION, self.encoder.model_id, self.encoder.min_frame_gap_s, stat.st_size,
-                              stat.st_mtime_ns, intervals])
+        payload = json.dumps(
+            [
+                CACHE_VERSION,
+                self.encoder.model_id,
+                self.encoder.min_frame_gap_s,
+                stat.st_size,
+                stat.st_mtime_ns,
+                intervals,
+            ]
+        )
         return hashlib.sha256(payload.encode()).hexdigest()
 
     def keyframes(self, video_id: str, video: Path, intervals: list[tuple[float, float]]):

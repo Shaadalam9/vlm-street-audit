@@ -5,8 +5,12 @@ import math
 import numpy as np
 import pandas as pd
 
-SCENE_BOOLEANS = ["zebra_crossing_visible", "traffic_signal_visible", "pedestrians_visible",
-                  "pedestrians_in_carriageway"]
+SCENE_BOOLEANS = [
+    "zebra_crossing_visible",
+    "traffic_signal_visible",
+    "pedestrians_visible",
+    "pedestrians_in_carriageway",
+]
 
 
 def binary_scores(truth: pd.Series, predicted: pd.Series) -> dict:
@@ -17,9 +21,15 @@ def binary_scores(truth: pd.Series, predicted: pd.Series) -> dict:
     specificity = tn / (tn + fp) if tn + fp else float("nan")
     precision = tp / (tp + fp) if tp + fp else float("nan")
     f1 = 2 * precision * recall / (precision + recall) if precision + recall else float("nan")
-    return {"n": len(t), "positives": int(t.sum()), "accuracy": (tp + tn) / len(t) if len(t) else float("nan"),
-            "balanced_accuracy": np.nanmean([recall, specificity]), "precision": precision, "recall": recall,
-            "f1": f1}
+    return {
+        "n": len(t),
+        "positives": int(t.sum()),
+        "accuracy": (tp + tn) / len(t) if len(t) else float("nan"),
+        "balanced_accuracy": np.nanmean([recall, specificity]),
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+    }
 
 
 def cohen_kappa(a: pd.Series, b: pd.Series) -> float:
@@ -37,9 +47,9 @@ def fleiss_kappa(table: pd.DataFrame) -> float:
     raters = counts.sum(axis=1)
     if len(counts) == 0 or raters.min() < 2:
         return float("nan")
-    per_item = (np.sum(counts ** 2, axis=1) - raters) / (raters * (raters - 1))
+    per_item = (np.sum(counts**2, axis=1) - raters) / (raters * (raters - 1))
     shares = counts.sum(axis=0) / counts.sum()
-    expected = float(np.sum(shares ** 2))
+    expected = float(np.sum(shares**2))
     return (float(per_item.mean()) - expected) / (1 - expected) if expected < 1 else float("nan")
 
 

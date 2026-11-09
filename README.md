@@ -56,11 +56,11 @@ flowchart LR
 
 1. **Cities.** 75 cities in 43 countries are drawn from the CROWD mapping of dashcam videos to cities with the
    Local Pivotal Method, a spatially balanced probability sample, with inclusion probability proportional to
-   the square root of population ([`scripts/sample_cities.py`](scripts/sample_cities.py)).
+   the square root of population ([`scripts/data/sample_cities.py`](scripts/data/sample_cities.py)).
 2. **Clips.** For each city, the video with the most daytime car footage is cut into 10 s windows. Windows are
    ranked with SigLIP2 image–text embeddings for pedestrian-relevant scenes, and one random window is added,
-   so each city gives one best-ranked and one random clip ([`scripts/make_snippets.py`](scripts/make_snippets.py),
-   [`scripts/build_clip_sets.py`](scripts/build_clip_sets.py)). 120 clips from the JAAD dataset, with human labels,
+   so each city gives one best-ranked and one random clip ([`scripts/data/make_snippets.py`](scripts/data/make_snippets.py),
+   [`scripts/data/build_clip_sets.py`](scripts/data/build_clip_sets.py)). 120 clips from the JAAD dataset, with human labels,
    check validity.
 3. **Audit.** Each model sees five frames, 2 s apart, and codes the street as a road-safety auditor would code a
    100 m segment: road, each side's footway, and the crossing (iRAP and MAPS-Mini items). From the item answers,
@@ -68,12 +68,12 @@ flowchart LR
    measure and a one-sentence suggestion. vLLM enforces the JSON schema during decoding, so every answer
    holds every item ([`src/vlm_street_audit/vlm.py`](src/vlm_street_audit/vlm.py)).
 4. **Robustness.** The audit is repeated with a reworded prompt, one frame instead of five, half the
-   resolution (640 px) and twice at temperature 0.7 ([`scripts/run_vlm.py`](scripts/run_vlm.py)).
+   resolution (640 px) and twice at temperature 0.7 ([`scripts/audit/run_vlm.py`](scripts/audit/run_vlm.py)).
 5. **Judges.** The two larger models rate every listed need: is the deficit visible, would the suggestion fix it,
    is it specific to the street, is it feasible, and does it tell people how to behave
-   ([`scripts/judge_suggestions.py`](scripts/judge_suggestions.py)).
+   ([`scripts/audit/judge_suggestions.py`](scripts/audit/judge_suggestions.py)).
 6. **Analysis.** An item counts for a clip when at least two thirds of the models agree (4 of 5). Cities are
-   the unit, with 95% intervals from a bootstrap over cities ([`scripts/analyse_audit.py`](scripts/analyse_audit.py)).
+   the unit, with 95% intervals from a bootstrap over cities ([`scripts/analysis/analyse_audit.py`](scripts/analysis/analyse_audit.py)).
 
 An answer, abridged (Qwen3.8-27B on the Kinshasa clip of Figure 1a; the full file is
 [`outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json`](outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json)):
@@ -147,17 +147,17 @@ resampling (0.55) change more.
 (mean of two judges) against the share backed by the model's own item answers.
 
 All tables (with 95% intervals) are in [`outputs/vlm/analysis_audit/tables.md`](outputs/vlm/analysis_audit/tables.md).
-Further figures, each with an interactive HTML version, are in [`docs/figures/`](docs/figures/):
+Further figures, each with an interactive HTML version, are in [`docs/figures/audit/`](docs/figures/audit/):
 
 | Figure | Shows |
 |---|---|
-| [`audit_jaad_validity`](docs/figures/audit_jaad_validity.png) | Scene facts and the crossing item against JAAD's labels, per model |
-| [`audit_present_by_continent`](docs/figures/audit_present_by_continent.png) | Infrastructure present, by continent |
-| [`audit_needed_by_continent`](docs/figures/audit_needed_by_continent.png) | Infrastructure needed, by continent |
-| [`audit_country_indicators`](docs/figures/audit_country_indicators.png) | Spearman's ρ with road deaths, median age, Gini and literacy |
-| [`audit_agreement_by_region`](docs/figures/audit_agreement_by_region.png) | Fleiss' κ per item and region, with intervals |
-| [`audit_robustness`](docs/figures/audit_robustness.png) | Cohen's κ under each changed condition |
-| [`audit_suggestion_quality`](docs/figures/audit_suggestion_quality.png) | Judges' ratings per auditor model |
+| [`jaad_validity`](docs/figures/audit/jaad_validity.png) | Scene facts and the crossing item against JAAD's labels, per model |
+| [`present_by_continent`](docs/figures/audit/present_by_continent.png) | Infrastructure present, by continent |
+| [`needed_by_continent`](docs/figures/audit/needed_by_continent.png) | Infrastructure needed, by continent |
+| [`country_indicators`](docs/figures/audit/country_indicators.png) | Spearman's ρ with road deaths, median age, Gini and literacy |
+| [`agreement_by_region`](docs/figures/audit/agreement_by_region.png) | Fleiss' κ per item and region, with intervals |
+| [`robustness`](docs/figures/audit/robustness.png) | Cohen's κ under each changed condition |
+| [`suggestion_quality`](docs/figures/audit/suggestion_quality.png) | Judges' ratings per auditor model |
 
 ## Data and materials
 
@@ -206,7 +206,12 @@ The project uses [uv](https://docs.astral.sh/uv/) with Python 3.12; vLLM has its
 uv sync
 uv run pytest                  # tests, no network or GPU needed
 cd serve && uv sync            # vLLM, on the GPU machine (Linux or WSL2, CUDA 12.8+ for Blackwell)
+bash download_models.sh       # the weights at the pinned revisions (~160 GB)
 ```
+
+[`serve/download_models.sh`](serve/download_models.sh) fetches exactly the checkpoints and revisions in [`configs/models.toml`](configs/models.toml)
+(pass model keys to fetch only some) and builds the local tokeniser Kanana needs. Gated models need their terms
+accepted on Hugging Face and `uv run --project serve hf auth login` first.
 
 Settings are in [`default.config`](default.config); to change one locally, copy it to `config` and edit that (an
 unknown setting is an error). Downloading CROWD footage needs a login to the CROWD file server: copy
@@ -217,30 +222,30 @@ unknown setting is an error). Downloading CROWD footage needs a login to the CRO
 The published answers and ratings are enough to recompute every table and figure, without a GPU:
 
 ```bash
-uv run python scripts/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/
-uv run python scripts/paper_figures.py    # the paper's six figures in docs/figures/paper/ (Figure 1 needs the frames)
+uv run python scripts/analysis/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/
+uv run python scripts/analysis/paper_figures.py    # the paper's six figures in docs/figures/paper/ (Figure 1 needs the frames)
 ```
 
 The JAAD validity table also needs JAAD's labels for the sampled clips (`data/clip_sets/jaad_labels.json`, built
-by `scripts/build_clip_sets.py` from the JAAD annotations). Static PNGs need a Chromium browser for Kaleido; set
+by `scripts/data/build_clip_sets.py` from the JAAD annotations). Static PNGs need a Chromium browser for Kaleido; set
 `BROWSER_PATH` if Chrome is not installed, or pass `--no-png` to `analyse_audit.py` for HTML only.
 
 ### The full pipeline
 
 ```bash
-uv run python scripts/sample_cities.py                         # draw the 75 cities (seed 20260818, alpha 0.5)
-uv run python scripts/fetch_data.py --videos-per-city 1        # fetch each city's video with the most footage
-uv run python scripts/make_snippets.py --videos-per-city 1     # rank 10 s windows, cut clips and frames
-uv run python scripts/build_clip_sets.py                       # city and JAAD clip sets
-uv run python scripts/run_vlm.py --start-server --models all --sets jaad cities          # main audit
-uv run python scripts/run_vlm.py --start-server --prompt audit_reworded --tag audit-reworded
-uv run python scripts/run_vlm.py --start-server --tag audit-1frame --frames 3
-uv run python scripts/run_vlm.py --start-server --tag audit-640px --max-side 640
-uv run python scripts/run_vlm.py --start-server --tag audit-t07-s1 --temperature 0.7 --seed 1 --sets cities
-uv run python scripts/run_vlm.py --start-server --tag audit-t07-s2 --temperature 0.7 --seed 2 --sets cities
-uv run python scripts/judge_suggestions.py --start-server       # Qwen3.8 and Gemma 4 rate every listed need
-uv run python scripts/analyse_audit.py
-uv run python scripts/paper_figures.py
+uv run python scripts/data/sample_cities.py                         # draw the 75 cities (seed 20260818, alpha 0.5)
+uv run python scripts/data/fetch_data.py --videos-per-city 1        # fetch each city's video with the most footage
+uv run python scripts/data/make_snippets.py --videos-per-city 1     # rank 10 s windows, cut clips and frames
+uv run python scripts/data/build_clip_sets.py                       # city and JAAD clip sets
+uv run python scripts/audit/run_vlm.py --start-server --models all --sets jaad cities          # main audit
+uv run python scripts/audit/run_vlm.py --start-server --prompt audit_reworded --tag audit-reworded
+uv run python scripts/audit/run_vlm.py --start-server --tag audit-1frame --frames 3
+uv run python scripts/audit/run_vlm.py --start-server --tag audit-640px --max-side 640
+uv run python scripts/audit/run_vlm.py --start-server --tag audit-t07-s1 --temperature 0.7 --seed 1 --sets cities
+uv run python scripts/audit/run_vlm.py --start-server --tag audit-t07-s2 --temperature 0.7 --seed 2 --sets cities
+uv run python scripts/audit/judge_suggestions.py --start-server       # Qwen3.8 and Gemma 4 rate every listed need
+uv run python scripts/analysis/analyse_audit.py
+uv run python scripts/analysis/paper_figures.py
 ```
 
 `run_vlm.py --start-server` starts vLLM for each model in turn, answers every clip and stops it; answered clips
@@ -295,21 +300,26 @@ Downloaded videos are deleted once cut (`--keep-downloads` keeps them). All numb
 
 ```
 configs/
-  models.toml              the five VLMs: checkpoints, revisions, serving settings
+  models.toml              the VLMs: checkpoints, revisions, serving settings
   snippet_prompts.json     prompts that rank the 10 s windows
 data/
   mapping_original.csv     the sampling frame (CROWD mapping)
   city_sample/             the drawn cities and their design files
-docs/figures/              the README's figures (PNG and interactive HTML); paper/ holds the paper's six
+docs/figures/
+  paper/                   the paper's six figures (PNG and interactive HTML)
+  audit/                   the further analysis figures
 outputs/vlm/
-  audit*/cities/<model>/   the model answers (main run and robustness runs)
+  audit*/<set>/<model>/    the model answers (main run and robustness runs; JAAD and city clips)
   judge/<judge>/<auditor>/ the judges' ratings
   analysis_audit/          every table, as CSV and Markdown
-scripts/                   sample_cities, fetch_data, make_snippets, build_clip_sets, run_vlm,
-                           judge_suggestions, analyse_audit, paper_figures, plot_city_sample
-serve/                     vLLM environment and launcher (serve.py)
-src/vlm_street_audit/      prompt and schema (vlm), statistics (evaluation), snippets, semantics,
-                           JAAD labels, CROWD file server, configuration, figure style
+scripts/
+  data/                    sample_cities, plot_city_sample, fetch_data, make_snippets, build_clip_sets
+  audit/                   run_vlm (the audit), judge_suggestions (the judges)
+  analysis/                analyse_audit (tables and figures), paper_figures
+serve/                     vLLM environment (run on the GPU machine): serve.py starts one model,
+                           download_models.sh fetches the pinned weights, prepare_tokenizers.py
+src/vlm_street_audit/      prompt and schema (vlm), vLLM start and stop (server), statistics (evaluation),
+                           snippets, semantics, JAAD labels, CROWD file server, configuration, figure style
 tests/                     pytest, no network or GPU
 ```
 

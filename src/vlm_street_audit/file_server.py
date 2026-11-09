@@ -131,8 +131,9 @@ class FileServer:
         self._listings: dict[tuple[str, ...], list[str]] = {}
 
     @classmethod
-    def from_config(cls, settings: dict[str, Any] | None = None, secret: dict[str, str] | None = None,
-                    require_login: bool = True) -> "FileServer":
+    def from_config(
+        cls, settings: dict[str, Any] | None = None, secret: dict[str, str] | None = None, require_login: bool = True
+    ) -> "FileServer":
         """A client from the settings and `secret`; without `require_login` it may only look up local copies."""
         settings = settings or load_config()
         if secret is None:
@@ -188,8 +189,11 @@ class FileServer:
         _safe_name(video_id)
         for folder in [*self.bbox_dirs, self.bbox_download_dir]:
             if folder.is_dir():
-                found = sorted(p for p in folder.glob(f"{video_id}_{start_second}_*.csv")
-                               if is_track_file_for(p.name, video_id, start_second))
+                found = sorted(
+                    p
+                    for p in folder.glob(f"{video_id}_{start_second}_*.csv")
+                    if is_track_file_for(p.name, video_id, start_second)
+                )
                 if found:
                     return found[0]
         if not self.bbox_server_folder:
@@ -221,8 +225,12 @@ class FileServer:
                     self._save(response, destination)
                     return destination
             target = name.lower()
-            found = self._crawl(session, [self._browse_url(a) for a in self.video_aliases],
-                                lambda file_name: file_name.lower() == target, first_only=True)
+            found = self._crawl(
+                session,
+                [self._browse_url(a) for a in self.video_aliases],
+                lambda file_name: file_name.lower() == target,
+                first_only=True,
+            )
             if found:
                 self._save(self._get(session, found[0], stream=True, allow_not_found=False), destination)
                 return destination
@@ -230,8 +238,11 @@ class FileServer:
 
     def _download_track_file(self, video_id: str, start_second: int, fps: float | None) -> Path | None:
         # CROWD names track files with the truncated frame rate; try it and the rounded one.
-        names = list(dict.fromkeys(f"{video_id}_{start_second}_{value}.csv" for value in (int(fps), round(fps)))
-                     ) if fps else []
+        names = (
+            list(dict.fromkeys(f"{video_id}_{start_second}_{value}.csv" for value in (int(fps), round(fps))))
+            if fps
+            else []
+        )
         with self._session() as session:
             for alias in self.bbox_aliases:
                 for name in names:
@@ -255,14 +266,19 @@ class FileServer:
                         return destination
         return None
 
-    def _get(self, session: Any, url: str, *, stream: bool, allow_not_found: bool,
-             read_timeout: int | None = None) -> Any | None:
+    def _get(
+        self, session: Any, url: str, *, stream: bool, allow_not_found: bool, read_timeout: int | None = None
+    ) -> Any | None:
         self._require_same_origin(url)
-        timeout = self.timeout_seconds if read_timeout is None else (
-            self.timeout_seconds, max(self.timeout_seconds, read_timeout))
+        timeout = (
+            self.timeout_seconds
+            if read_timeout is None
+            else (self.timeout_seconds, max(self.timeout_seconds, read_timeout))
+        )
         try:
-            response = session.get(url, timeout=timeout, stream=stream,
-                                   params={"token": self.token} if self.token else None)
+            response = session.get(
+                url, timeout=timeout, stream=stream, params={"token": self.token} if self.token else None
+            )
         except Exception as error:
             raise TransientDownloadError("File server request failed") from error
         if response.status_code in {401, 403}:
@@ -284,8 +300,9 @@ class FileServer:
             raise DownloadError("File server redirected to another origin")
         return response
 
-    def _crawl(self, session: Any, start_urls: list[str], matches: Callable[[str], bool],
-               first_only: bool = False) -> list[str]:
+    def _crawl(
+        self, session: Any, start_urls: list[str], matches: Callable[[str], bool], first_only: bool = False
+    ) -> list[str]:
         """File URLs whose name matches, found by walking the browse pages (downwards only)."""
         found: list[str] = []
         visited: set[str] = set()
@@ -298,8 +315,9 @@ class FileServer:
             visited.add(url)
             if len(visited) > self.crawl_page_limit:
                 raise DownloadError(f"File search passed {self.crawl_page_limit} browse pages")
-            response = self._get(session, url, stream=False, allow_not_found=True,
-                                 read_timeout=LISTING_READ_TIMEOUT_SECONDS)
+            response = self._get(
+                session, url, stream=False, allow_not_found=True, read_timeout=LISTING_READ_TIMEOUT_SECONDS
+            )
             if response is None:
                 continue
             try:

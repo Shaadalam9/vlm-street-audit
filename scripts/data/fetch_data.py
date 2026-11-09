@@ -4,9 +4,9 @@ The 75-city sample holds about 5,500 videos, far too many to copy whole, so this
 takes the N videos with the most qualifying footage per city (default 1). Files
 already on a local drive (lin4080) or in the download folder are not fetched again.
 
-Run:  uv run python scripts/fetch_data.py --dry-run
-      uv run python scripts/fetch_data.py --videos-per-city 2 --tracks
-      uv run python scripts/fetch_data.py --country Japan --videos-per-city 1
+Run:  uv run python scripts/data/fetch_data.py --dry-run
+      uv run python scripts/data/fetch_data.py --videos-per-city 2 --tracks
+      uv run python scripts/data/fetch_data.py --country Japan --videos-per-city 1
 """
 
 import argparse
@@ -31,7 +31,8 @@ def main() -> int:
 
     settings = load_config()
     segments = [
-        s for s in read_segments(project_path(settings["mapping"]))
+        s
+        for s in read_segments(project_path(settings["mapping"]))
         if (not args.city or s.locality in args.city) and (not args.country or s.country in args.country)
     ]
     chosen = pick_videos(segments, args.videos_per_city)
@@ -40,8 +41,10 @@ def main() -> int:
     for segment in plan:
         if segment.video_id not in cities[(segment.locality, segment.country)]:
             cities[(segment.locality, segment.country)].append(segment.video_id)
-    print(f"{len(cities)} cities, {len(chosen)} videos, {len(plan)} segments, "
-          f"{sum(s.duration_seconds for s in plan) / 3600:.1f} h of qualifying footage")
+    print(
+        f"{len(cities)} cities, {len(chosen)} videos, {len(plan)} segments, "
+        f"{sum(s.duration_seconds for s in plan) / 3600:.1f} h of qualifying footage"
+    )
     if args.dry_run:
         for (locality, country), videos in sorted(cities.items()):
             print(f"  {locality}, {country}: {', '.join(videos)}")

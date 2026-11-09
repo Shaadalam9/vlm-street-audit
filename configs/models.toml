@@ -16,7 +16,7 @@ port = 8000
 # (kv_cache_gib), so this is only that start-up check: 0.72 failed on 2026-10-26 when the
 # CROWD workers held 12 GB; 0.60 (19.1 GB) still leaves room for the largest model's weights.
 gpu_memory_utilization = 0.60
-# Requests sent at once by scripts/run_vlm.py (each server allows --max-num-seqs 4).
+# Requests sent at once by scripts/audit/run_vlm.py (each server allows --max-num-seqs 4).
 parallel_requests = 4
 max_model_len = 16384
 max_images = 10
@@ -115,6 +115,64 @@ notes = "Mistral advises temperature below 0.1."
 vllm_args = ["--tokenizer-mode", "mistral", "--config-format", "mistral", "--load-format", "mistral"]
 thinking_switch = false
 
-# EXAONE 4.5 33B (LGAI-EXAONE/EXAONE-4.5-33B-AWQ, revision 31e6a965) was tried on 2026-11-09 and dropped (Shadab):
-# under vLLM 0.32 it answers text correctly, but every image request came back as nonsense (lines of "-", or
-# "rural, 1 lane" for downtown Toronto) with either vision attention backend. Its larger builds do not fit 32 GB.
+[[model]]
+key = "exaone4.5-33b"
+family = "EXAONE (LG AI Research)"
+checkpoint = "LGAI-EXAONE/EXAONE-4.5-33B-AWQ"   # LG's own 4-bit release (Jul 2026)
+revision = "31e6a965d0661bbe4a8b895e22a77f8271772ba0"   # downloaded 2026-11-07
+base = "LGAI-EXAONE/EXAONE-4.5-33B"
+precision = "int4-awq (official)"
+approx_weights_gb = 23
+license = "other (EXAONE AI Model License)"
+role = "South Korean developer; the largest of the set"
+notes = "Thinks by default: requests set enable_thinking=false, as for Qwen."
+# The largest model: 23 GB of weights leave room for a small KV cache only, so 12k of context; fits only while the
+# CROWD workers make way. 3 GiB held 12,272 tokens, just short of 12,288 (2026-11-09).
+max_model_len = 12288
+kv_cache_gib = 3.25
+gpu_memory_utilization = 0.84
+# vLLM's own EXAONE 4.5 code answered text correctly but returned nonsense for every image ("rural, 1 lane" for downtown
+# Toronto, lines of "-"), with either vision attention backend (2026-11-09). Transformers' implementation instead.
+vllm_args = ["--model-impl", "transformers"]
+
+# Added 2026-11-09 (Shadab): developers from South Korea and Canada, for the cross-cultural comparison. Kanana runs
+# beside another GPU job, on 0.27 of the card. HyperCLOVA X SEED Vision 3B (Naver) was the first Korean choice, but
+# vLLM dropped its architecture after 0.28 and its config does not load in Transformers 5; Aya Vision (Cohere) runs
+# through Transformers' implementation (below).
+
+[[model]]
+key = "kanana-1.5-v-3b"
+family = "Kanana (Kakao)"
+checkpoint = "kakaocorp/kanana-1.5-v-3b-instruct"
+revision = "2e00ef13ccec2e99459a8eada18a1bfd05bff44b"   # downloaded 2026-11-09
+base = "kakaocorp/kanana-1.5-v-3b-instruct"
+precision = "bf16"
+approx_weights_gb = 7.3
+license = "other (Kanana License)"
+role = "South Korean developer"
+notes = "Needs timm in serve/ and the tokeniser built by serve/prepare_tokenizers.py."
+trust_remote_code = true   # code reviewed at this revision 2026-11-09: no network, shell, file or pickle access
+gpu_memory_utilization = 0.27
+kv_cache_gib = 2.25   # 2 GiB held 16,368 tokens, just short of 16,384 (2026-11-09)
+# Its repository loads a slow tokeniser that neither structured-output engine can read (xgrammar garbled the keys,
+# guidance refused), and with Transformers 5 its fast class splits text into single characters. The fixed copy built
+# by serve/prepare_tokenizers.py is loaded instead (relative to serve/, where vLLM starts).
+vllm_args = ["--tokenizer", "../data/tokenizers/kanana-1.5-v-fast"]
+
+[[model]]
+key = "aya-vision-8b"
+family = "Aya (Cohere)"
+checkpoint = "CohereLabs/aya-vision-8b"   # gated: accept Cohere's terms, then `hf auth login` on the GPU machine
+revision = "d7601ac8fd3baf6f59c5fc9514c618ef0f24268f"   # downloaded 2026-11-09
+base = "CohereLabs/aya-vision-8b"
+precision = "bf16"
+approx_weights_gb = 17
+license = "cc-by-nc-4.0"
+role = "Canadian developer; multilingual (23 languages)"
+# vLLM dropped its own Aya Vision code after 0.24; Transformers' implementation instead.
+vllm_args = ["--model-impl", "transformers"]
+
+# North-Micro-Vision (Cohere, Canada; CohereLabs/North-Micro-Vision-Instruct, revision fa548d9a) was run on
+# 2026-11-09 and excluded (Shadab): it describes frames correctly, but in the audit all 588 listed needs sat at point
+# (0, 0), 367 with the evidence "none", footways were only "none" or "physical_barrier" (even in downtown Toronto) and
+# it found zebra crossings in JAAD at chance (balanced accuracy 0.57). Its answers are in logs/ on wsl5090, not outputs/.

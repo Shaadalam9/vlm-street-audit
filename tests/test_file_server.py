@@ -25,7 +25,7 @@ class FakeResponse:
 
     def iter_content(self, chunk_size: int):
         for start in range(0, len(self._body), chunk_size):
-            yield self._body[start:start + chunk_size]
+            yield self._body[start : start + chunk_size]
 
     def close(self) -> None:
         self.closed = True
@@ -89,11 +89,13 @@ def test_video_prefers_a_local_copy(tmp_path):
 
 
 def test_video_found_by_walking_the_browse_pages(tmp_path):
-    session = FakeSession({
-        f"{BASE}v/tue4/browse": b'<a href="/v/tue4/browse/sub">sub</a><a href="/v/tue4/browse/..">up</a>',
-        f"{BASE}v/tue4/browse/sub": b'<a href="/v/tue4/files/sub/xyz.mp4">xyz</a>',
-        f"{BASE}v/tue4/files/sub/xyz.mp4": b"deep",
-    })
+    session = FakeSession(
+        {
+            f"{BASE}v/tue4/browse": b'<a href="/v/tue4/browse/sub">sub</a><a href="/v/tue4/browse/..">up</a>',
+            f"{BASE}v/tue4/browse/sub": b'<a href="/v/tue4/files/sub/xyz.mp4">xyz</a>',
+            f"{BASE}v/tue4/files/sub/xyz.mp4": b"deep",
+        }
+    )
     assert make_server(tmp_path, session).video("xyz").read_bytes() == b"deep"
 
 
@@ -139,11 +141,13 @@ def test_track_file_by_frame_rate_name(tmp_path):
 def test_track_file_found_in_the_listing_is_listed_only_once(tmp_path):
     folder = f"{BASE}v/data/browse/pedestrians_in-youtube/data/bbox"
     files = "/v/data/files/pedestrians_in-youtube/data/bbox"
-    session = FakeSession({
-        folder: f'<a href="{files}/a_120_30.csv"></a><a href="{files}/b_0_25.csv"></a>'.encode(),
-        f"{BASE}{files[1:]}/a_120_30.csv": b"a",
-        f"{BASE}{files[1:]}/b_0_25.csv": b"b",
-    })
+    session = FakeSession(
+        {
+            folder: f'<a href="{files}/a_120_30.csv"></a><a href="{files}/b_0_25.csv"></a>'.encode(),
+            f"{BASE}{files[1:]}/a_120_30.csv": b"a",
+            f"{BASE}{files[1:]}/b_0_25.csv": b"b",
+        }
+    )
     server = make_server(tmp_path, session)
     assert server.track_file("a", 120).name == "a_120_30.csv"
     assert server.track_file("b", 0).name == "b_0_25.csv"
@@ -157,8 +161,15 @@ def test_parse_track_filename_keeps_underscores_in_the_video_id():
 
 def test_credentials_in_the_url_are_refused(tmp_path):
     with pytest.raises(ValueError, match="secret"):
-        FileServer("https://user:pw@files.example.org/", "u", "p", video_aliases=["tue4"],
-                   video_download_dir=tmp_path, bbox_download_dir=tmp_path, session_factory=FakeSession)
+        FileServer(
+            "https://user:pw@files.example.org/",
+            "u",
+            "p",
+            video_aliases=["tue4"],
+            video_download_dir=tmp_path,
+            bbox_download_dir=tmp_path,
+            session_factory=FakeSession,
+        )
 
 
 def test_server_errors_are_retried_then_reported(tmp_path, monkeypatch):

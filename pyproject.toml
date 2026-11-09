@@ -33,3 +33,17 @@ dev = [
     "kaleido>=1.5.0",
     "pytest>=9.1.1",
 ]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["paper", "serve/.venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]   # verbatim annotation XML
+
+[tool.ruff.lint.isort]
+known-first-party = ["vlm_street_audit"]

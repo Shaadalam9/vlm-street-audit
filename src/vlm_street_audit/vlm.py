@@ -41,39 +41,73 @@ NOT_VISIBLE = "not_visible"
 ROAD_TYPES = ["urban_street", "residential_street", "arterial_road", "motorway", "rural_road", "parking_area", "other"]
 ROAD_ITEMS: dict[str, tuple[str, list[str]]] = {
     "area_type": ("Urban if buildings line the road, rural otherwise.", ["urban", "rural"]),
-    "land_use": ("Mostly homes (residential), shops and offices (commercial), both (mixed), or other.",
-                 ["residential", "commercial", "mixed", "other"]),
-    "number_of_lanes": ("Lanes for motor traffic across the whole road, both directions.",
-                        ["1", "2", "3", "4_or_more"]),
+    "land_use": (
+        "Mostly homes (residential), shops and offices (commercial), both (mixed), or other.",
+        ["residential", "commercial", "mixed", "other"],
+    ),
+    "number_of_lanes": (
+        "Lanes for motor traffic across the whole road, both directions.",
+        ["1", "2", "3", "4_or_more"],
+    ),
     "median": ("What separates the two directions.", ["none", "painted", "physical", NOT_VISIBLE]),
     "street_lighting": ("Street lights along the road.", ["none", "some", "ample"]),
     "traffic_calming": ("Speed humps, raised tables, chicanes or narrowings.", ["present", "not_present"]),
-    "pedestrian_fencing": ("Fences or barriers along the road that stop people crossing anywhere.",
-                           ["present", "not_present"]),
+    "pedestrian_fencing": (
+        "Fences or barriers along the road that stop people crossing anywhere.",
+        ["present", "not_present"],
+    ),
     "transit_stops": ("Public transport stops (bus, tram) visible.", ["0", "1", "2_or_more"]),
     "bike_facility": ("A designated bike lane or path.", ["none", "painted_line", "physical_barrier"]),
 }
-FOOTWAY = ["physical_barrier", "sidewalk_3m_or_more", "sidewalk_1_to_3m", "sidewalk_under_1m",
-           "informal_path_1m_or_more", "informal_path_under_1m", "none", NOT_VISIBLE]
+FOOTWAY = [
+    "physical_barrier",
+    "sidewalk_3m_or_more",
+    "sidewalk_1_to_3m",
+    "sidewalk_under_1m",
+    "informal_path_1m_or_more",
+    "informal_path_under_1m",
+    "none",
+    NOT_VISIBLE,
+]
 SIDE_ITEMS: dict[str, tuple[str, list[str]]] = {
-    "footway": ("The footway on this side. A sidewalk is purpose-built, continuous and usable; its distance is from "
-                "the edge of the nearest driving lane (parking and shoulder included); physical_barrier means "
-                "bollards, a fence, wall or hedge that would stop a car (a kerb is not one). An informal path is a "
-                "trodden strip without a sidewalk, or a sidewalk so blocked that it is only partly usable. none: "
-                "people must walk in the road.", FOOTWAY),
-    "obstruction": ("Parked vehicles, stalls, goods or works on the footway.",
-                    ["none", "partly_blocked", "blocked", "no_footway", NOT_VISIBLE]),
-    "trip_hazards": ("Broken or uneven sections that are major trip hazards.",
-                     ["none", "some", "no_footway", NOT_VISIBLE]),
+    "footway": (
+        "The footway on this side. A sidewalk is purpose-built, continuous and usable; its distance is from "
+        "the edge of the nearest driving lane (parking and shoulder included); physical_barrier means "
+        "bollards, a fence, wall or hedge that would stop a car (a kerb is not one). An informal path is a "
+        "trodden strip without a sidewalk, or a sidewalk so blocked that it is only partly usable. none: "
+        "people must walk in the road.",
+        FOOTWAY,
+    ),
+    "obstruction": (
+        "Parked vehicles, stalls, goods or works on the footway.",
+        ["none", "partly_blocked", "blocked", "no_footway", NOT_VISIBLE],
+    ),
+    "trip_hazards": (
+        "Broken or uneven sections that are major trip hazards.",
+        ["none", "some", "no_footway", NOT_VISIBLE],
+    ),
 }
-CROSSING_FACILITIES = ["grade_separated", "signalised_with_refuge", "signalised", "marked_with_refuge", "marked",
-                       "raised", "refuge_only", "none"]
+CROSSING_FACILITIES = [
+    "grade_separated",
+    "signalised_with_refuge",
+    "signalised",
+    "marked_with_refuge",
+    "marked",
+    "raised",
+    "refuge_only",
+    "none",
+]
 CROSSING_ITEMS: dict[str, tuple[str, list[str]]] = {
-    "crossing_facility": ("The purpose-built crossing in view (the riskiest if several). signalised needs signals "
-                          "for pedestrians; a refuge is a proper island midway; grade_separated is a footbridge or "
-                          "underpass; raised is a speed-reducing platform.", CROSSING_FACILITIES),
-    "crossing_quality": ("poor if drivers would not stop, the crossing is hard to see or it is obstructed.",
-                         ["adequate", "poor", "not_applicable"]),
+    "crossing_facility": (
+        "The purpose-built crossing in view (the riskiest if several). signalised needs signals "
+        "for pedestrians; a refuge is a proper island midway; grade_separated is a footbridge or "
+        "underpass; raised is a speed-reducing platform.",
+        CROSSING_FACILITIES,
+    ),
+    "crossing_quality": (
+        "poor if drivers would not stop, the crossing is hard to see or it is obstructed.",
+        ["adequate", "poor", "not_applicable"],
+    ),
     "kerb_ramps": ("Dropped kerbs at the crossing.", ["both_kerbs", "one_kerb", "none", "no_crossing", NOT_VISIBLE]),
 }
 INFORMAL_OR_NONE = {"informal_path_1m_or_more", "informal_path_under_1m", "none"}
@@ -87,9 +121,21 @@ NEEDED: dict[str, str] = {
     "no_kerb_ramps": "kerb_ramps is none",
     "no_street_lighting": "an urban road with street_lighting none",
 }
-MEASURES_AUDIT = ["build_footway", "widen_or_separate_footway", "clear_footway", "repair_footway",
-                  "add_marked_crossing", "add_signalised_crossing", "add_refuge_island", "add_raised_crossing",
-                  "improve_crossing", "add_dropped_kerbs", "add_street_lighting", "traffic_calming", "other"]
+MEASURES_AUDIT = [
+    "build_footway",
+    "widen_or_separate_footway",
+    "clear_footway",
+    "repair_footway",
+    "add_marked_crossing",
+    "add_signalised_crossing",
+    "add_refuge_island",
+    "add_raised_crossing",
+    "improve_crossing",
+    "add_dropped_kerbs",
+    "add_street_lighting",
+    "traffic_calming",
+    "other",
+]
 
 
 def _enum(options: list[str]) -> dict:
@@ -109,12 +155,25 @@ AUDIT_SCHEMA: dict[str, Any] = {
         "scene": {
             "type": "object",
             "additionalProperties": False,
-            "required": ["road_type", "zebra_crossing_visible", "traffic_signal_visible", "pedestrians_visible",
-                         "pedestrians_in_carriageway"],
-            "properties": {"road_type": _enum(ROAD_TYPES),
-                           **{fact: {"type": "boolean"} for fact in (
-                               "zebra_crossing_visible", "traffic_signal_visible", "pedestrians_visible",
-                               "pedestrians_in_carriageway")}},
+            "required": [
+                "road_type",
+                "zebra_crossing_visible",
+                "traffic_signal_visible",
+                "pedestrians_visible",
+                "pedestrians_in_carriageway",
+            ],
+            "properties": {
+                "road_type": _enum(ROAD_TYPES),
+                **{
+                    fact: {"type": "boolean"}
+                    for fact in (
+                        "zebra_crossing_visible",
+                        "traffic_signal_visible",
+                        "pedestrians_visible",
+                        "pedestrians_in_carriageway",
+                    )
+                },
+            },
         },
         "road": _block(ROAD_ITEMS),
         "left_side": _block(SIDE_ITEMS),
@@ -219,8 +278,10 @@ def frames_intro(n: int, seconds: float, step: float) -> str:
     """How the frames are introduced; one frame is a still, not a clip."""
     if n == 1:
         return "this image, a still from a dashcam video."
-    return (f"these {n} images, frames from a {seconds:.0f}-second dashcam clip in time order, about {step:.0f} s "
-            f"apart (frame 1 is the first).")
+    return (
+        f"these {n} images, frames from a {seconds:.0f}-second dashcam clip in time order, about {step:.0f} s "
+        f"apart (frame 1 is the first)."
+    )
 
 
 VARIANTS: dict[str, tuple[str, dict]] = {
@@ -262,8 +323,14 @@ def prompt_version(variant: str) -> str:
 
 def issues_of(answer: dict) -> list[dict]:
     """The answer's "needed" entries as flat issue dicts (category = the need)."""
-    return [{"category": d["need"], "description": d["evidence"], **{k: d[k] for k in (
-        "where", "frame", "x", "y", "measure", "suggestion")}} for d in answer.get("needed", [])]
+    return [
+        {
+            "category": d["need"],
+            "description": d["evidence"],
+            **{k: d[k] for k in ("where", "frame", "x", "y", "measure", "suggestion")},
+        }
+        for d in answer.get("needed", [])
+    ]
 
 
 def load_models() -> dict[str, dict]:
@@ -287,14 +354,30 @@ def build_messages(frames: list[Path], seconds: float, max_side: int, variant: s
     step = seconds / max(1, len(frames))
     content: list[dict] = [{"type": "image_url", "image_url": {"url": encode_image(f, max_side)}} for f in frames]
     prompt = VARIANTS[variant][0]
-    content.append({"type": "text", "text": prompt.format(n=len(frames), seconds=seconds, step=step,
-                                                          intro=frames_intro(len(frames), seconds, step))})
+    content.append(
+        {
+            "type": "text",
+            "text": prompt.format(
+                n=len(frames), seconds=seconds, step=step, intro=frames_intro(len(frames), seconds, step)
+            ),
+        }
+    )
     return [{"role": "user", "content": content}]
 
 
-def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 600,
-        max_tokens: int = 2048, session=None, variant: str = "audit", temperature: float = 0, seed: int = 0,
-        schema: dict | None = None, thinking_switch: bool = True) -> dict:
+def ask(
+    model_key: str,
+    messages: list[dict],
+    base_url: str,
+    timeout_s: float = 600,
+    max_tokens: int = 2048,
+    session=None,
+    variant: str = "audit",
+    temperature: float = 0,
+    seed: int = 0,
+    schema: dict | None = None,
+    thinking_switch: bool = True,
+) -> dict:
     """One request; returns the raw text, the parsed answer (or None) and timing.
 
     `thinking_switch=False` leaves out chat_template_kwargs, for models served with Mistral's own tokenizer,
@@ -307,8 +390,10 @@ def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 
         "temperature": temperature,
         "seed": seed,
         "max_tokens": max_tokens,
-        "response_format": {"type": "json_schema", "json_schema": {
-            "name": "street_audit", "schema": schema or VARIANTS[variant][1], "strict": True}},
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {"name": "street_audit", "schema": schema or VARIANTS[variant][1], "strict": True},
+        },
     }
     if thinking_switch:  # Qwen, EXAONE and other "thinking" models: answer directly, the output is the JSON alone
         body["chat_template_kwargs"] = {"enable_thinking": False}
@@ -323,5 +408,11 @@ def ask(model_key: str, messages: list[dict], base_url: str, timeout_s: float = 
         error = None
     except json.JSONDecodeError as exc:
         parsed, error = None, f"invalid JSON: {exc}"
-    return {"text": text, "answer": parsed, "error": error, "seconds": round(elapsed, 2),
-            "usage": data.get("usage", {}), "finish_reason": data["choices"][0].get("finish_reason")}
+    return {
+        "text": text,
+        "answer": parsed,
+        "error": error,
+        "seconds": round(elapsed, 2),
+        "usage": data.get("usage", {}),
+        "finish_reason": data["choices"][0].get("finish_reason"),
+    }
