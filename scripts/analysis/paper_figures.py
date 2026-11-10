@@ -19,11 +19,13 @@ import plotly.graph_objects as go
 from PIL import Image
 from plotly.subplots import make_subplots
 
-from vlm_street_audit.config import PROJECT_ROOT
+from vlm_street_audit.config import load_config, project_path
 
-ROOT = PROJECT_ROOT
-OUT = ROOT / "docs" / "figures" / "paper"
-TABLES = ROOT / "outputs" / "vlm" / "analysis_audit"
+SETTINGS = load_config()
+ANSWERS = project_path(SETTINGS["vlm_output_dir"])  # the published answers, ratings and analysis tables
+OUT = project_path(SETTINGS["figures_dir"]) / "paper"
+TABLES = ANSWERS / "analysis_audit"
+SNIPPETS = project_path(SETTINGS["snippet_dir"])  # answer files name frames under data/snippets/
 # The seven frames shown in Figures 1 and 3, copied from data/snippets/ (not in git) so the figures can be redrawn
 # from a fresh clone.
 FRAMES = OUT / "frames"
@@ -138,8 +140,8 @@ WORLD_GEO = dict(
 
 
 def frame_file(record: dict, number: int) -> Path:
-    """The answer's frame `number` (1-based): the copy in FRAMES, made from data/snippets/ the first time."""
-    source = ROOT / record["frames"][number - 1]
+    """The answer's frame `number` (1-based): the copy in FRAMES, made from the snippet frames the first time."""
+    source = SNIPPETS / Path(record["frames"][number - 1]).relative_to("data/snippets")
     copy = FRAMES / f"{record['clip_id']}_{source.name}"
     if not copy.exists():
         FRAMES.mkdir(parents=True, exist_ok=True)
@@ -148,7 +150,7 @@ def frame_file(record: dict, number: int) -> Path:
 
 
 def need_entry(clip: str, auditor: str, need: str, side: str) -> tuple[dict, dict]:
-    record = json.loads((ROOT / "outputs/vlm/audit/cities" / auditor / f"{clip}.json").read_text())
+    record = json.loads((ANSWERS / "audit/cities" / auditor / f"{clip}.json").read_text())
     entry = next(d for d in record["answer"]["needed"] if d["need"] == need and d["where"] == side)
     return record, entry
 
@@ -522,10 +524,9 @@ STREET_COLUMNS = [
 def figure_one_street() -> None:
     width, height = 2400, 800
     answers = {
-        m: json.loads((ROOT / "outputs/vlm/audit/cities" / m / f"{STREET_CLIP}.json").read_text())["answer"]
-        for m in MODEL_NAMES
+        m: json.loads((ANSWERS / "audit/cities" / m / f"{STREET_CLIP}.json").read_text())["answer"] for m in MODEL_NAMES
     }
-    record = json.loads((ROOT / "outputs/vlm/audit/cities/qwen3.8-27b" / f"{STREET_CLIP}.json").read_text())
+    record = json.loads((ANSWERS / "audit/cities/qwen3.8-27b" / f"{STREET_CLIP}.json").read_text())
     frame = frame_file(record, STREET_FRAME)
     fig = go.Figure()
     img_w = 0.47

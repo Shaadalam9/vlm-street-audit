@@ -35,7 +35,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from vlm_street_audit.config import PROJECT_ROOT, load_config, project_path
+from vlm_street_audit.config import load_config, project_path
 from vlm_street_audit.evaluation import SCENE_BOOLEANS, binary_scores, cohen_kappa, fleiss_kappa, wilson
 from vlm_street_audit.figures import save_figure, style
 from vlm_street_audit.vlm import CROSSING_ITEMS, NEEDED, ROAD_ITEMS, SIDE_ITEMS, expected_needs
@@ -71,7 +71,7 @@ MODEL_COLOURS = {
 }
 PAIR = ["#2a78d6", "#eb6834"]
 BLUES = ["#f4f8fd", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]
-FIGURES = PROJECT_ROOT / "docs" / "figures" / "audit"
+FIGURES = project_path(load_config()["figures_dir"]) / "audit"
 SCENE_LABELS = {
     "zebra_crossing_visible": "Zebra crossing",
     "traffic_signal_visible": "Traffic signal",
