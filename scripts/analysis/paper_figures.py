@@ -68,13 +68,52 @@ def save(fig: go.Figure, name: str, width: int, height: int) -> None:
 
 
 # ---- Figure 1: what pedestrians lack, city by city, with six of the streets ---------------------------------
-EXAMPLES = [  # (clip, auditor, need, panel title, tag), in reading order: north row then south row, west to east
-    ("8wdxcC3VkQY_00160000_010000", "gemma4-31b", "no_footway", "Spring Hill, United States", "No footway"),
-    ("cKRt8KHugxA_02030000_010000", "qwen3.8-27b", "no_crossing", "Kazan, Russia", "Sign, but no crossing"),
-    ("MMSSZo4HdOo_02862000_010000", "qwen3.8-27b", "blocked_footway", "Peshawar, Pakistan", "Path blocked"),
-    ("m2BHJJ2x9oo_00986000_010000", "qwen3.8-27b", "blocked_footway", "Valledupar, Colombia", "Path blocked"),
-    ("Q3WvZW9zBk8_00851000_010000", "qwen3.8-27b", "no_crossing", "Kinshasa, DR Congo", "Crossing needed"),
-    ("wMu6Va5PhGY_00171000_010000", "qwen3.8-27b", "no_footway", "Sydney, Australia", "“No footway” (wrong)"),
+# (clip, auditor, need, side, panel title, tag), in reading order: north row then south row, west to east. Each was
+# checked against its frame (2026-11-10): the side picks the entry whose point lies on the problem itself, e.g. the
+# grass verge in Spring Hill rather than a driveway, and the stalls and motorbikes in Valledupar rather than a taxi in
+# the road. In Kazan the sign, tactile paving and kerb gap mark a crossing point whose road markings are missing.
+EXAMPLES = [
+    (
+        "8wdxcC3VkQY_00160000_010000",
+        "gemma4-31b",
+        "no_footway",
+        "right_side",
+        "Spring Hill, United States",
+        "No footway",
+    ),
+    (
+        "cKRt8KHugxA_02030000_010000",
+        "qwen3.8-27b",
+        "no_crossing",
+        "left_side",
+        "Kazan, Russia",
+        "Sign, but no markings",
+    ),
+    (
+        "MMSSZo4HdOo_02862000_010000",
+        "qwen3.8-27b",
+        "blocked_footway",
+        "left_side",
+        "Peshawar, Pakistan",
+        "Path blocked",
+    ),
+    (
+        "m2BHJJ2x9oo_00986000_010000",
+        "qwen3.8-27b",
+        "blocked_footway",
+        "right_side",
+        "Valledupar, Colombia",
+        "Path blocked",
+    ),
+    ("Q3WvZW9zBk8_00851000_010000", "qwen3.8-27b", "no_crossing", "road", "Kinshasa, DR Congo", "Crossing needed"),
+    (
+        "wMu6Va5PhGY_00171000_010000",
+        "qwen3.8-27b",
+        "no_footway",
+        "left_side",
+        "Sydney, Australia",
+        "“No footway” (wrong)",
+    ),
 ]
 GAP_COLOURS = {
     "Crossing and footway": "#8f2d56",
@@ -108,9 +147,9 @@ def frame_file(record: dict, number: int) -> Path:
     return copy
 
 
-def need_entry(clip: str, auditor: str, need: str) -> tuple[dict, dict]:
+def need_entry(clip: str, auditor: str, need: str, side: str) -> tuple[dict, dict]:
     record = json.loads((ROOT / "outputs/vlm/audit/cities" / auditor / f"{clip}.json").read_text())
-    entry = next(d for d in record["answer"]["needed"] if d["need"] == need)
+    entry = next(d for d in record["answer"]["needed"] if d["need"] == need and d["where"] == side)
     return record, entry
 
 
@@ -198,8 +237,8 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
 
     used = []
     img_h = ROW_H - 0.035  # the rest of the row is the panel title
-    for n, (clip, auditor, need, title, tag) in enumerate(EXAMPLES):
-        record, entry = need_entry(clip, auditor, need)
+    for n, (clip, auditor, need, side, title, tag) in enumerate(EXAMPLES):
+        record, entry = need_entry(clip, auditor, need, side)
         frame = frame_file(record, entry["frame"])
         top = n < 3
         x0, y0 = 0.015 + (n % 3) * (THUMB_W + 0.0225), (1 - ROW_H if top else 0.0)

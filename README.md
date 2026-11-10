@@ -24,9 +24,9 @@ to it in the frame and suggest a change to the street. No footage leaves the mac
 **Figure 1.** What pedestrians lack in each of the 75 cities (needs on which at least four of the six models agree
 in at least one of the city's two clips), with six of the streets and the point each model gave (ring) on the
 frame it named. Suggestions: (a) a continuous sidewalk; (b) a marked crossing with dropped kerbs at the sign;
-(c) remove the cart and debris to clear the path; (d) a no-parking zone and relocating the stalls; (e) a marked
-crossing with a central refuge island. (f) A false report: the bridge's footway is separated from the roadway and
-not visible from the car. Three of six models made it, short of the 4-of-6 consensus.
+(c) remove the cart and debris to clear the path; (d) regulating the stalls and a no-parking zone for motorcycles;
+(e) a marked crossing with a central refuge island. (f) A false report: the bridge's footway runs behind the barrier
+and fence, separated from the roadway. Three of six models made it, short of the 4-of-6 consensus.
 
 ## Contents
 
