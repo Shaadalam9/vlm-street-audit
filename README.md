@@ -164,7 +164,7 @@ Further figures, each with an interactive HTML version, are in [`docs/figures/au
 
 | What | Where |
 |---|---|
-| Video clips (150 city clips, 10 s each), their frames, and a snapshot of the code | [Dropbox folder](https://www.dropbox.com/scl/fo/cl1e4cgdjlj43i5gy4gsy/ALxGI5IgWYm9RRxrfey5AYA?rlkey=cu2udsf5ooey7cp2ff6efu4ut&st=zjngk7m6&dl=0) |
+| The frames the models saw (five per city clip) and a snapshot of the code | [Dropbox folder](https://www.dropbox.com/scl/fo/cl1e4cgdjlj43i5gy4gsy/ALxGI5IgWYm9RRxrfey5AYA?rlkey=cu2udsf5ooey7cp2ff6efu4ut&st=zjngk7m6&dl=0) |
 | Every model answer on the city clips: main audit and the four robustness runs (5,400 files) | [`outputs/vlm/<run>/cities/<model>/`](outputs/vlm/) |
 | Every model answer on the JAAD clips: main audit, reworded, one frame, half resolution (2,880 files) | [`outputs/vlm/<run>/jaad/<model>/`](outputs/vlm/) |
 | The clip sets and JAAD's labels for the 120 JAAD clips | [`data/clip_sets/`](data/clip_sets/) |
@@ -176,8 +176,11 @@ Further figures, each with an interactive HTML version, are in [`docs/figures/au
 
 Each answer file holds the model's checkpoint and revision, the prompt version (a hash of prompt and schema), the
 condition (temperature, seed, frames, image size), the frame paths, the raw text and the parsed answer. A clip's
-id is `<YouTube video id>_<start ms>_<length ms>`, so each clip can be traced to its source video. The footage itself
-comes from YouTube via the CROWD dataset; this repository holds no video. JAAD's clips and labels come from
+id is `<YouTube video id>_<start ms>_<length ms>`, so each clip can be watched on YouTube: `Q3WvZW9zBk8_00851000_010000`
+(Kinshasa, Figure 1e) is the 10 s from 851 s of
+[youtube.com/watch?v=Q3WvZW9zBk8&t=851s](https://www.youtube.com/watch?v=Q3WvZW9zBk8&t=851s). The videos belong to
+their creators on YouTube and are not shared, here or elsewhere; the footage comes from YouTube via the CROWD dataset.
+JAAD's clips and labels come from
 [the JAAD dataset](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/) (Rasouli et al., 2017; annotations under the
 MIT licence, clips under CC BY 4.0); `data/clip_sets/jaad_labels.json` holds its labels for the 120 sampled clips,
 and the JAAD frames themselves are not included.
