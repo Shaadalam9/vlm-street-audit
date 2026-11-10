@@ -14,18 +14,19 @@ Code, model answers and analysis for the paper
 > Vision-Language Models.* Human Interaction and Emerging Technologies (IHIET-AI 2027), Palma de Mallorca,
 > Spain. Accepted for oral presentation.
 
-Six open vision-language models (VLMs) from four countries, run locally on one GPU, audit pedestrian infrastructure in dashcam
-clips from 75 cities on six continents. They code each street with items from two established instruments,
+Six open vision-language models (VLMs) from four countries, run locally on one GPU, audit pedestrian
+infrastructure in dashcam clips from 75 cities on six continents. They code each street with items from two established instruments,
 the [iRAP](https://irap.org) road attributes and the MAPS-Mini streetscape audit, list what is missing, point
 to it in the frame and suggest a change to the street. No footage leaves the machine.
 
-![Needs reported by the models on six continents](docs/figures/paper/fig1_examples.png)
+![What pedestrians lack in each of the 75 cities, with six of the streets](docs/figures/paper/fig1_world.png)
 
-**Figure 1.** Needs reported by the models on six continents, with the point each model gave (ring) on the
-frame it named. Suggestions: (a) a marked crossing with a central refuge island; (b) remove the cart and
-debris to clear the path; (c) a marked crossing with dropped kerbs at the sign; (d) a continuous sidewalk;
-(e) a no-parking zone and relocating the stalls. (f) A false report: the bridge's footway is separated from
-the roadway and not visible from the car. Three of six models made it, short of the 4-of-6 consensus.
+**Figure 1.** What pedestrians lack in each of the 75 cities (needs on which at least four of the six models agree
+in at least one of the city's two clips), with six of the streets and the point each model gave (ring) on the
+frame it named. Suggestions: (a) a continuous sidewalk; (b) a marked crossing with dropped kerbs at the sign;
+(c) remove the cart and debris to clear the path; (d) a no-parking zone and relocating the stalls; (e) a marked
+crossing with a central refuge island. (f) A false report: the bridge's footway is separated from the roadway and
+not visible from the car. Three of six models made it, short of the 4-of-6 consensus.
 
 ## Contents
 
@@ -75,7 +76,7 @@ flowchart LR
 6. **Analysis.** An item counts for a clip when at least two thirds of the models agree (4 of 6). Cities are
    the unit, with 95% intervals from a bootstrap over cities ([`scripts/analysis/analyse_audit.py`](scripts/analysis/analyse_audit.py)).
 
-An answer, abridged (Qwen3.8-27B on the Kinshasa clip of Figure 1a; the full file is
+An answer, abridged (Qwen3.8-27B on the Kinshasa clip of Figure 1e; the full file is
 [`outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json`](outputs/vlm/audit/cities/qwen3.8-27b/Q3WvZW9zBk8_00851000_010000.json)):
 
 ```json
@@ -103,38 +104,37 @@ Kanana-1.5-V 3B, reaches only 0.57.
 
 **A crossing where people have reason to cross is the most common gap.** By consensus, street lighting is the most
 common feature (83% of cities), a formal footway on both sides is found in 51%, and a crossing facility in only 22%.
-In 39 of the 75 cities at least one clip needs a crossing, in 22 a footway, and in 12 both.
-
-![What pedestrians lack in each of the 75 cities](docs/figures/paper/fig2_map.png)
-
-**Figure 2.** What pedestrians lack in each of the 75 cities: needs on which at least four of the six models agree
-in at least one of the city's two clips.
+In 39 of the 75 cities at least one clip needs a crossing, in 22 a footway, and in 12 both (Figure 1).
 
 **The gaps differ by continent.** A crossing is needed in 57% of African cities and 23% of North American ones. A
 footway is needed in 50% of African and 23% of North American cities, against 10–12% in Europe and Asia: in Africa
 basic provision is often absent, while many North American roads are built without footways.
 
-![Share of cities needing each item, by continent](docs/figures/paper/fig3_continents.png)
-
-**Figure 3.** Share of cities needing each of the three most common items, by continent (number of cities in
-brackets). Oceania, with one city, is left out.
-
 **Needs follow road deaths.** The number of needs per clip rises with the country's road deaths per 100,000
 (Spearman's ρ = 0.33, 95% CI 0.11 to 0.52) and falls with median age (−0.43) and literacy (−0.44). These are
 country-level figures that track national income, so they describe a pattern, not a cause.
 
-![Missing items per clip against road deaths](docs/figures/paper/fig4_road_deaths.png)
+![The gaps by continent, and against road deaths](docs/figures/paper/fig2_gaps.png)
 
-**Figure 4.** Missing items per street clip (consensus of the six models, averaged over each city's two clips)
-against the country's road deaths per 100,000 people. Each dot is a city; the dashed line is a least-squares fit.
+**Figure 2.** (a) Share of cities needing a crossing where people have reason to cross, and a footway, by continent
+(number of cities in brackets; Oceania, one city, is left out). (b) Missing items per street clip (consensus of the
+six models, averaged over each city's two clips) against the country's road deaths per 100,000 people, for 73
+cities; the line joins the means of each quarter of the cities.
 
 **The models agree somewhat less outside Europe and North America, and not at all on footway type.** Agreement on
 the crossing items is lower for clips from the rest of the world (reason to cross κ = 0.23 against 0.35; the
-intervals overlap). Footway type (κ = 0.00), trip hazards and kerb ramps are not reliable in any region.
+intervals overlap). Footway type (κ = 0.00), trip hazards and kerb ramps are not reliable in any region. On one
+Kingston market street, all six models see people walking in the road, a reason to cross and no crossing, but give
+five different answers for each footway.
 
-![Agreement between the models, by region](docs/figures/paper/fig5_agreement.png)
+![One street in Kingston, as coded by the six models](docs/figures/paper/fig3_one_street.png)
 
-**Figure 5.** Agreement between the six models on each item (Fleiss' κ) for clips from Europe and North America (60)
+**Figure 3.** One street in Kingston, Jamaica, as coded by the six models: they agree on what is easy to see and
+give five different answers for each footway.
+
+![Agreement between the models, by region](docs/figures/paper/fig4_agreement.png)
+
+**Figure 4.** Agreement between the six models on each item (Fleiss' κ) for clips from Europe and North America (60)
 and from the rest of the world (90). The shaded band marks agreement below 0.2.
 
 **Only the two largest models are sound auditors.** The judges see 81% of the needs listed by Qwen3.8 and Gemma 4
@@ -142,9 +142,9 @@ in the frames, against 28–31% for Molmo2, InternVL3.5 and Ministral 3, and Gem
 own items; Kanana lists no needs at all. Rewording the prompt or halving the resolution changes few answers (mean κ
 0.68 and 0.73); one frame (0.56) and resampling (0.50) change more.
 
-<p align="center"><img src="docs/figures/paper/fig6_models.png" width="560" alt="The models as auditors"></p>
+<p align="center"><img src="docs/figures/paper/fig5_models.png" width="560" alt="The models as auditors"></p>
 
-**Figure 6.** The five models that listed needs, as auditors: share of their listed needs that the judges rated
+**Figure 5.** The five models that listed needs, as auditors: share of their listed needs that the judges rated
 visible in the frames (mean of two judges) against the share backed by the model's own item answers.
 
 All tables (with 95% intervals) are in [`outputs/vlm/analysis_audit/tables.md`](outputs/vlm/analysis_audit/tables.md).
@@ -237,7 +237,7 @@ The published answers and ratings are enough to recompute every table and figure
 
 ```bash
 uv run python scripts/analysis/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/
-uv run python scripts/analysis/paper_figures.py    # the paper's six figures in docs/figures/paper/ (Figure 1 needs the frames)
+uv run python scripts/analysis/paper_figures.py    # the paper's five figures in docs/figures/paper/ (Figures 1 and 3 need the frames)
 ```
 
 The JAAD validity table also needs JAAD's labels for the sampled clips (`data/clip_sets/jaad_labels.json`, built

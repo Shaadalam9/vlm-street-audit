@@ -1,18 +1,20 @@
-"""The six figures of the paper, made to be understood at a glance.
+"""The five figures of the paper, made to be understood at a glance.
 
-Reads the published answers and analysis tables (outputs/vlm/) and, for Figure 1, the frames of six city
-clips (data/clip_sets/, built by build_clip_sets.py). Writes docs/figures/paper/fig*.png and .html.
+Reads the published answers and analysis tables (outputs/vlm/) and, for Figures 1 and 3, the frames of seven city
+clips (data/snippets/, cut by make_snippets.py). Writes docs/figures/paper/fig*.png and .html.
 
 Run (after analyse_audit.py):  uv run python scripts/analysis/paper_figures.py
 """
 
 import base64
+import io
 import json
 import sys
 
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
+from PIL import Image
 from plotly.subplots import make_subplots
 
 from vlm_street_audit.config import PROJECT_ROOT
@@ -60,15 +62,32 @@ def save(fig: go.Figure, name: str, width: int, height: int) -> None:
     print("wrote", name)
 
 
-# ---- Figure 1: what the models see, on six continents ----------------------------------------------------
-EXAMPLES = [  # (clip, auditor, index of the need in its answer, panel title, tag)
-    ("Q3WvZW9zBk8_00851000_010000", "qwen3.8-27b", "no_crossing", "Kinshasa, DR Congo", "Crossing needed"),
-    ("MMSSZo4HdOo_02862000_010000", "qwen3.8-27b", "blocked_footway", "Peshawar, Pakistan", "Path blocked"),
-    ("cKRt8KHugxA_02030000_010000", "qwen3.8-27b", "no_crossing", "Kazan, Russia", "Sign, but no crossing"),
+# ---- Figure 1: what pedestrians lack, city by city, with six of the streets ---------------------------------
+EXAMPLES = [  # (clip, auditor, need, panel title, tag), in reading order: north row then south row, west to east
     ("8wdxcC3VkQY_00160000_010000", "gemma4-31b", "no_footway", "Spring Hill, United States", "No footway"),
+    ("cKRt8KHugxA_02030000_010000", "qwen3.8-27b", "no_crossing", "Kazan, Russia", "Sign, but no crossing"),
+    ("MMSSZo4HdOo_02862000_010000", "qwen3.8-27b", "blocked_footway", "Peshawar, Pakistan", "Path blocked"),
     ("m2BHJJ2x9oo_00986000_010000", "qwen3.8-27b", "blocked_footway", "Valledupar, Colombia", "Path blocked"),
+    ("Q3WvZW9zBk8_00851000_010000", "qwen3.8-27b", "no_crossing", "Kinshasa, DR Congo", "Crossing needed"),
     ("wMu6Va5PhGY_00171000_010000", "qwen3.8-27b", "no_footway", "Sydney, Australia", "“No footway” (wrong)"),
 ]
+GAP_COLOURS = {
+    "Crossing and footway": "#8f2d56",
+    "Crossing": "#eb6834",
+    "Footway": "#2a78d6",
+    "Lighting or other": "#eda100",
+    "No agreed need": "#c3c2b7",
+}
+WORLD_W, WORLD_H = 2400, 1960
+WORLD_LON, WORLD_LAT = (-128.0, 162.0), (-44.0, 68.0)
+ROW_H, ROW_GAP, THUMB_W = 0.245, 0.03, 0.31  # shares of the figure: frame rows, gap to the map, frame width
+WORLD_GEO = dict(
+    projection_type="equirectangular",
+    lonaxis_range=list(WORLD_LON),
+    lataxis_range=list(WORLD_LAT),
+    showframe=False,
+    domain=dict(x=[0.0, 1.0], y=[ROW_H + ROW_GAP, 1 - ROW_H - ROW_GAP]),
+)
 
 
 def need_entry(clip: str, auditor: str, need: str) -> tuple[dict, dict]:
@@ -77,94 +96,9 @@ def need_entry(clip: str, auditor: str, need: str) -> tuple[dict, dict]:
     return record, entry
 
 
-def figure_examples() -> list[dict]:
-    fig = make_subplots(
-        rows=2,
-        cols=3,
-        horizontal_spacing=0.012,
-        vertical_spacing=0.07,
-        subplot_titles=[f"<b>{'abcdef'[i]}</b>  {e[3]}" for i, e in enumerate(EXAMPLES)],
-    )
-    used = []
-    for i, (clip, auditor, need, title, tag) in enumerate(EXAMPLES):
-        row, col = divmod(i, 3)
-        record, entry = need_entry(clip, auditor, need)
-        frame = ROOT / record["frames"][entry["frame"] - 1]
-        data = base64.b64encode(frame.read_bytes()).decode()
-        fig.add_trace(go.Image(source=f"data:image/jpeg;base64,{data}", hoverinfo="skip"), row=row + 1, col=col + 1)
-        x, y = entry["x"] / 1000 * 1280, entry["y"] / 1000 * 720
-        wrong = "wrong" in tag
-        colour = "#c62828" if not wrong else "#5f5e5a"
-        fig.add_trace(
-            go.Scatter(
-                x=[x],
-                y=[y],
-                mode="markers",
-                hoverinfo="skip",
-                showlegend=False,
-                marker=dict(size=34, color="rgba(0,0,0,0)", line=dict(width=5, color="white")),
-            ),
-            row=row + 1,
-            col=col + 1,
-        )
-        fig.add_trace(
-            go.Scatter(
-                x=[x],
-                y=[y],
-                mode="markers",
-                hoverinfo="skip",
-                showlegend=False,
-                marker=dict(size=30, color="rgba(0,0,0,0)", line=dict(width=3.5, color=colour)),
-            ),
-            row=row + 1,
-            col=col + 1,
-        )
-        axis = "" if i == 0 else str(i + 1)
-        fig.add_annotation(
-            x=x,
-            y=y - 70 if y > 160 else y + 70,
-            xref=f"x{axis}",
-            yref=f"y{axis}",
-            text=f"<b>{tag}</b>",
-            showarrow=False,
-            font=dict(size=17, color="white"),
-            bgcolor=colour,
-            borderpad=5,
-            xanchor="center" if 220 < x < 1060 else ("left" if x <= 220 else "right"),
-        )
-        fig.add_annotation(
-            x=1270,
-            y=712,
-            xref=f"x{axis}",
-            yref=f"y{axis}",
-            text=MODEL_NAMES[auditor],
-            showarrow=False,
-            font=dict(size=13, color="white"),
-            bgcolor="rgba(0,0,0,0.55)",
-            xanchor="right",
-            yanchor="bottom",
-            borderpad=3,
-        )
-        used.append({"panel": "abcdef"[i], "city": title, "model": MODEL_NAMES[auditor], **entry})
-    fig.update_xaxes(visible=False)
-    fig.update_yaxes(visible=False)
-    fig.update_annotations(selector=dict(xref="paper"), font=dict(size=17))
-    fig.update_layout(margin=dict(l=4, r=4, t=34, b=4))
-    save(fig, "fig1_examples", 1200, 500)
-    return used
+def city_gaps(city: pd.DataFrame) -> pd.DataFrame:
+    """Each city's gap for the map: crossing, footway, both, something else, or no agreed need."""
 
-
-# ---- Figure 2: what each city lacks, on a map -------------------------------------------------------------
-GAP_COLOURS = {
-    "Crossing and footway": "#8f2d56",
-    "Crossing": "#eb6834",
-    "Footway": "#2a78d6",
-    "Lighting or other": "#eda100",
-    "No agreed need": "#c3c2b7",
-}
-
-
-def figure_map(city: pd.DataFrame) -> pd.Series:
     def gap(r) -> str:
         crossing, footway = r.need_no_crossing > 0, r.need_no_footway > 0
         other = any(
@@ -174,7 +108,36 @@ def figure_map(city: pd.DataFrame) -> pd.Series:
             return "Crossing and footway"
         return "Crossing" if crossing else "Footway" if footway else "Lighting or other" if other else "No agreed need"
 
-    city = city.assign(gap=city.apply(gap, axis=1))
+    return city.assign(gap=city.apply(gap, axis=1))
+
+
+def geo_to_paper():
+    """Where Plotly draws a longitude and latitude on Figure 1, in paper coordinates. Measured on a render with two
+    markers, since Plotly fits the map into its domain; the projection is equirectangular, so the rest is linear."""
+    probe = go.Figure()
+    points = [(WORLD_LON[0] + 20, WORLD_LAT[0] + 10), (WORLD_LON[1] - 20, WORLD_LAT[1] - 10)]
+    for lon, lat in points:
+        probe.add_trace(go.Scattergeo(lon=[lon], lat=[lat], mode="markers", marker=dict(size=10, color="#ff00ff")))
+    probe.update_geos(**WORLD_GEO, showland=False, showcountries=False, showcoastlines=False)
+    probe.update_layout(width=WORLD_W, height=WORLD_H, margin=dict(l=0, r=0, t=0, b=0), showlegend=False)
+    image = Image.open(io.BytesIO(probe.to_image(format="png", scale=1))).convert("RGB")
+    pixels = np.asarray(image).astype(int)
+    ys, xs = np.nonzero((pixels[..., 0] > 230) & (pixels[..., 1] < 40) & (pixels[..., 2] > 230))
+    west = xs < WORLD_W / 2
+    (x0, y0), (x1, y1) = (xs[west].mean(), ys[west].mean()), (xs[~west].mean(), ys[~west].mean())
+    (lon0, lat0), (lon1, lat1) = points
+
+    def convert(lon: float, lat: float) -> tuple[float, float]:
+        px = x0 + (lon - lon0) / (lon1 - lon0) * (x1 - x0)
+        py = y0 + (lat - lat0) / (lat1 - lat0) * (y1 - y0)
+        return px / WORLD_W, 1 - py / WORLD_H
+
+    return convert
+
+
+def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
+    city = city_gaps(city)
+    to_paper = geo_to_paper()
     fig = go.Figure()
     for label, colour in GAP_COLOURS.items():
         part = city[city.gap == label]
@@ -186,139 +149,434 @@ def figure_map(city: pd.DataFrame) -> pd.Series:
                 name=f"{label} ({len(part)})",
                 text=part.locality + ", " + part.country,
                 hovertemplate="%{text}<extra></extra>",
-                marker=dict(size=13, color=colour, line=dict(width=1.2, color="white")),
+                marker=dict(size=17, color=colour, line=dict(width=1.5, color="white")),
             )
         )
     fig.update_geos(
-        projection_type="natural earth",
+        **WORLD_GEO,
         showland=True,
         landcolor="#ecebe8",
         showcountries=True,
         countrycolor="#ffffff",
-        coastlinecolor="#c3c2b7",
+        coastlinecolor="#d6d5cd",
         showocean=False,
-        showframe=False,
-        lataxis_range=[-50, 72],
-        lonaxis_range=[-130, 160],
     )
+
+    def ring(x: float, y: float, r: float, colour: str, width: float) -> None:
+        dy = r * WORLD_W / WORLD_H  # round on the page, not in paper units
+        fig.add_shape(
+            type="circle",
+            xref="paper",
+            yref="paper",
+            x0=x - r,
+            x1=x + r,
+            y0=y - dy,
+            y1=y + dy,
+            line=dict(color=colour, width=width),
+        )
+
+    used = []
+    img_h = ROW_H - 0.035  # the rest of the row is the panel title
+    for n, (clip, auditor, need, title, tag) in enumerate(EXAMPLES):
+        record, entry = need_entry(clip, auditor, need)
+        frame = ROOT / record["frames"][entry["frame"] - 1]
+        top = n < 3
+        x0, y0 = 0.015 + (n % 3) * (THUMB_W + 0.0225), (1 - ROW_H if top else 0.0)
+        fig.add_layout_image(
+            source="data:image/jpeg;base64," + base64.b64encode(frame.read_bytes()).decode(),
+            xref="paper",
+            yref="paper",
+            x=x0,
+            y=y0 + img_h,
+            sizex=THUMB_W,
+            sizey=img_h,
+            sizing="stretch",
+            xanchor="left",
+            yanchor="top",
+            layer="above",
+        )
+        colour = INK_MUTED if "wrong" in tag else "#c62828"
+        px, py = x0 + entry["x"] / 1000 * THUMB_W, y0 + img_h - entry["y"] / 1000 * img_h
+        ring(px, py, 0.013, "white", 8)
+        ring(px, py, 0.013, colour, 4.5)
+        side = "center" if 250 < entry["x"] < 750 else ("left" if entry["x"] < 500 else "right")
+        fig.add_annotation(
+            x=px,
+            y=py + (0.034 if entry["y"] > 300 else -0.034),
+            xref="paper",
+            yref="paper",
+            text=f"<b>{tag}</b>",
+            showarrow=False,
+            font=dict(size=26, color="white"),
+            bgcolor=colour,
+            borderpad=7,
+            xanchor=side,
+        )
+        fig.add_annotation(
+            x=x0 + THUMB_W,
+            y=y0,
+            xref="paper",
+            yref="paper",
+            text=MODEL_NAMES[auditor],
+            showarrow=False,
+            font=dict(size=18, color="white"),
+            bgcolor="rgba(0,0,0,0.6)",
+            xanchor="right",
+            yanchor="bottom",
+            borderpad=4,
+        )
+        fig.add_annotation(
+            x=x0,
+            y=y0 + img_h + 0.003,
+            xref="paper",
+            yref="paper",
+            text=f"<b>{'abcdef'[n]}</b>  {title}",
+            showarrow=False,
+            font=dict(size=27),
+            xanchor="left",
+            yanchor="bottom",
+        )
+        # a line from the frame to its city on the map
+        c = city[city.locality == title.split(",")[0]].iloc[0]
+        cx, cy = to_paper(c.lon, c.lat)
+        fig.add_shape(
+            type="line",
+            xref="paper",
+            yref="paper",
+            x0=x0 + THUMB_W / 2,
+            y0=y0 if top else ROW_H,
+            x1=cx,
+            y1=cy,
+            line=dict(color="#1f1f1f", width=2),
+        )
+        ring(cx, cy, 0.0085, "#1f1f1f", 3)
+        used.append({"panel": "abcdef"[n], "city": title, "model": MODEL_NAMES[auditor], **entry})
+    # The legend, drawn by hand: Plotly's own draws the dots smaller than on the map.
+    lx, ly, step = 0.02, ROW_H + ROW_GAP + 0.21, 0.031
+    fig.add_annotation(
+        x=lx - 0.006,
+        y=ly + step,
+        xref="paper",
+        yref="paper",
+        text="<b>What pedestrians lack</b>",
+        showarrow=False,
+        xanchor="left",
+        yanchor="middle",
+        font=dict(size=24),
+    )
+    for k, (label, colour) in enumerate(GAP_COLOURS.items()):
+        y = ly - k * step
+        ring(lx, y, 0.0045, "white", 2)
+        fig.add_shape(
+            type="circle",
+            xref="paper",
+            yref="paper",
+            x0=lx - 0.0045,
+            x1=lx + 0.0045,
+            y0=y - 0.0045 * WORLD_W / WORLD_H,
+            y1=y + 0.0045 * WORLD_W / WORLD_H,
+            fillcolor=colour,
+            line=dict(color="white", width=1.5),
+        )
+        fig.add_annotation(
+            x=lx + 0.012,
+            y=y,
+            xref="paper",
+            yref="paper",
+            text=f"{label} ({(city.gap == label).sum()})",
+            showarrow=False,
+            xanchor="left",
+            yanchor="middle",
+            font=dict(size=23),
+        )
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
-        legend=dict(
-            orientation="h",
-            y=-0.02,
-            x=0.5,
-            xanchor="center",
-            font=dict(size=15),
-            title=dict(text="What pedestrians lack:  ", side="left"),
-        ),
+        showlegend=False,
+        font=FONT,
+        template="plotly_white",
+        width=WORLD_W,
+        height=WORLD_H,
+        paper_bgcolor="white",
     )
-    save(fig, "fig2_map", 1200, 560)
-    return city.gap.value_counts()
+    # Drawn at full size (the frames need the pixels), so no further scaling.
+    OUT.mkdir(parents=True, exist_ok=True)
+    fig.write_html(OUT / "fig1_world.html", include_plotlyjs="cdn")
+    fig.write_image(OUT / "fig1_world.png", scale=1)
+    print("wrote fig1_world")
+    return city.gap.value_counts(), used
 
 
-# ---- Figure 3: the three big gaps, by continent ---------------------------------------------------------
-def figure_continents(by_continent: pd.DataFrame) -> None:
-    needs = [
-        ("need_no_crossing", "A crossing where people cross"),
-        ("need_no_footway", "A footway"),
-        ("need_no_street_lighting", "Street lighting"),
-    ]
+# ---- Figure 2: the gaps by continent, and along the road-death gradient -------------------------------------
+def figure_gaps(by_continent: pd.DataFrame, city: pd.DataFrame) -> float:
     order = ["Africa", "Asia", "South America", "Europe", "North America"]
     counts = by_continent[by_continent.key == "need_no_crossing"].set_index("continent").cities
     fig = make_subplots(
-        rows=1, cols=3, shared_yaxes=True, horizontal_spacing=0.03, subplot_titles=[f"<b>{t}</b>" for _, t in needs]
+        rows=1,
+        cols=2,
+        column_widths=[0.46, 0.54],
+        horizontal_spacing=0.1,
+        subplot_titles=[
+            "<b>a</b>  Share of cities lacking each, by continent",
+            "<b>b</b>  More road deaths, more gaps",
+        ],
     )
-    for col, (key, _) in enumerate(needs, start=1):
+    labels = [f"{c} ({counts[c]})" for c in order]
+    for key, name in (("need_no_crossing", "A crossing"), ("need_no_footway", "A footway")):
         part = by_continent[by_continent.key == key].set_index("continent").reindex(order)
+        colour = GAP_COLOURS["Crossing" if key == "need_no_crossing" else "Footway"]
         fig.add_trace(
             go.Bar(
-                y=[f"{c} ({counts[c]})" for c in order],
+                y=labels,
                 x=part.share,
                 orientation="h",
-                showlegend=False,
-                marker_color=[CONTINENT_COLOURS[c] for c in order],
-                text=[f"{v:.0%}" for v in part.share],
-                textposition="outside",
-                textfont=dict(size=17),
-                cliponaxis=False,
+                name=name,
+                marker=dict(color=colour, cornerradius=4),
+                text=[f"<b>{v:.0%}</b>" for v in part.share],
+                textposition="inside",
+                insidetextanchor="end",
+                textfont=dict(size=16, color="white"),
+                hovertemplate="%{y}: %{x:.0%}<extra>" + name + "</extra>",
             ),
             row=1,
-            col=col,
+            col=1,
         )
-    # Intervals are in the text and tables; Africa (7 cities) and South America (5) are wide.
-    fig.update_xaxes(range=[0, 0.8], tickformat=".0%", tickvals=[0, 0.25, 0.5], gridcolor="#ecebe8", zeroline=False)
-    fig.update_yaxes(autorange="reversed", tickfont=dict(size=16))
-    fig.update_annotations(font=dict(size=17))
-    fig.update_layout(margin=dict(l=10, r=20, t=40, b=10), bargap=0.3)
-    save(fig, "fig3_continents", 1200, 380)
+    fig.update_xaxes(range=[0, 0.6], tickformat=".0%", dtick=0.2, gridcolor="#ecebe8", zeroline=False, row=1, col=1)
+    fig.update_yaxes(autorange="reversed", tickfont=dict(size=16), row=1, col=1)
 
-
-# ---- Figure 4: more road deaths, more missing infrastructure -------------------------------------------
-def figure_deaths(city: pd.DataFrame) -> float:
     data = city.dropna(subset=["traffic_mortality", "needs"])
     rho = data.traffic_mortality.rank().corr(data.needs.rank())
-    fig = go.Figure()
-    for continent, colour in CONTINENT_COLOURS.items():
-        part = data[data.continent == continent]
-        fig.add_trace(
-            go.Scatter(
-                x=part.traffic_mortality,
-                y=part.needs,
-                mode="markers",
-                name=continent,
-                text=part.locality,
-                hovertemplate="%{text}: %{x}, %{y}<extra></extra>",
-                marker=dict(size=13, color=colour, opacity=0.85, line=dict(width=1, color="white")),
-            )
-        )
-    slope, intercept = np.polyfit(data.traffic_mortality, data.needs, 1)
-    xs = np.array([data.traffic_mortality.min(), data.traffic_mortality.max()])
     fig.add_trace(
         go.Scatter(
-            x=xs,
-            y=slope * xs + intercept,
-            mode="lines",
+            x=data.traffic_mortality,
+            y=data.needs,
+            mode="markers",
+            showlegend=False,
+            text=data.locality,
+            hovertemplate="%{text}: %{x} deaths, %{y} missing<extra></extra>",
+            marker=dict(size=12, color="#8f2d56", opacity=0.45, line=dict(width=1, color="white")),
+        ),
+        row=1,
+        col=2,
+    )
+    # the gradient: mean missing items per clip in each quarter of the cities by road deaths, with its range
+    quarters = pd.qcut(data.traffic_mortality, 4)
+    binned = data.groupby(quarters, observed=True).agg(x=("traffic_mortality", "median"), y=("needs", "mean"))
+    fig.add_trace(
+        go.Scatter(
+            x=binned.x,
+            y=binned.y,
+            mode="lines+markers",
             showlegend=False,
             hoverinfo="skip",
-            line=dict(color="#1f1f1f", width=2, dash="dash"),
-        )
+            line=dict(color="#1f1f1f", width=3),
+            marker=dict(size=13, color="#1f1f1f", line=dict(width=2, color="white")),
+        ),
+        row=1,
+        col=2,
     )
-    for name in ["Kinshasa", "Kingston", "Peshawar", "Benin City", "Bamberg", "Nijmegen", "Spring Hill"]:
-        row = data[data.locality == name]
-        if not row.empty:
-            r = row.iloc[0]
-            ax, ay = (34, 22) if name == "Spring Hill" else (0, -26)
-            fig.add_annotation(
-                x=r.traffic_mortality,
-                y=r.needs,
-                text=name,
-                showarrow=True,
-                arrowhead=0,
-                ax=ax,
-                ay=ay,
-                font=dict(size=14, color=INK_MUTED),
-                arrowcolor="#9a9993",
-            )
     fig.add_annotation(
-        x=0.01,
-        y=0.98,
-        xref="paper",
-        yref="paper",
-        showarrow=False,
-        xanchor="left",
-        text=f"Spearman’s ρ = {rho:.2f} (75 cities)",
-        font=dict(size=16),
+        x=binned.x.iloc[-1],
+        y=binned.y.iloc[-1],
+        xref="x2",
+        yref="y2",
+        text="mean of each<br>quarter of cities",
+        showarrow=True,
+        arrowhead=0,
+        ax=-10,
+        ay=-62,
+        font=dict(size=14, color="#1f1f1f"),
+        arrowcolor="#1f1f1f",
+        xanchor="center",
     )
-    fig.update_xaxes(title="Road deaths per 100,000 people (country)", gridcolor="#ecebe8", zeroline=False)
-    fig.update_yaxes(title="Missing items per street clip", gridcolor="#ecebe8", zeroline=False, range=[-0.2, 3.85])
+    for name, ax, ay in (
+        ("Kingston", 46, -10),
+        ("Peshawar", -58, -8),
+        ("Kinshasa", 0, -26),
+        ("Benin City", -10, -26),
+        ("Nijmegen", 34, -28),
+    ):
+        r = data[data.locality == name].iloc[0]
+        fig.add_annotation(
+            x=r.traffic_mortality,
+            y=r.needs,
+            xref="x2",
+            yref="y2",
+            text=name,
+            showarrow=True,
+            arrowhead=0,
+            ax=ax,
+            ay=ay,
+            font=dict(size=14, color=INK_MUTED),
+            arrowcolor="#9a9993",
+        )
+    fig.update_xaxes(
+        title="Road deaths per 100,000 people (country)", gridcolor="#ecebe8", zeroline=False, row=1, col=2
+    )
+    fig.update_yaxes(
+        title="Missing items per street clip", gridcolor="#ecebe8", zeroline=False, range=[-0.2, 3.4], row=1, col=2
+    )
+    fig.update_annotations(selector=dict(xref="paper"), font=dict(size=17), xanchor="left", x=0)
+    fig.layout.annotations[1].update(x=0.56, text=f"<b>b</b>  More road deaths, more gaps (Spearman’s ρ = {rho:.2f})")
     fig.update_layout(
-        margin=dict(l=10, r=10, t=10, b=10), legend=dict(orientation="h", y=1.08, x=0, font=dict(size=15))
+        margin=dict(l=10, r=10, t=40, b=10),
+        bargap=0.25,
+        bargroupgap=0.08,
+        legend=dict(orientation="h", x=0.0, y=-0.12, font=dict(size=15)),
     )
-    save(fig, "fig4_road_deaths", 1100, 520)
+    save(fig, "fig2_gaps", 1200, 440)
     return rho
 
 
-# ---- Figure 5: the models agree less outside Europe and North America ---------------------------------
+# ---- Figure 3: one street, six auditors ---------------------------------------------------------------------
+STREET_CLIP, STREET_FRAME = "8dWgC409JbI_00685000_010000", 3  # Kingston, Jamaica: the models' most divided street
+FOOTWAY_CELLS = {  # sidewalks in teal (wider is darker), informal paths in amber, none in red, not visible in grey
+    "sidewalk_3m_or_more": ("Sidewalk ≥ 3 m", "#0b6e69"),
+    "sidewalk_1_to_3m": ("Sidewalk 1–3 m", "#1a9e8f"),
+    "sidewalk_under_1m": ("Sidewalk < 1 m", "#7ccbbd"),
+    "informal_path_1m_or_more": ("Path ≥ 1 m", "#eda100"),
+    "informal_path_under_1m": ("Path < 1 m", "#f5c862"),
+    "physical_barrier": ("Behind barrier", "#2a78d6"),
+    "none": ("None", "#c62828"),
+    "not_visible": ("Not visible", "#b4b2a9"),
+}
+SAME_CELL = "#eceae4"
+STREET_COLUMNS = [
+    ("People in<br>the road", lambda a: ("Yes" if a["scene"]["pedestrians_in_carriageway"] else "No", SAME_CELL)),
+    ("Reason<br>to cross", lambda a: ("Yes" if a["crossing"]["crossing_demand"] else "No", SAME_CELL)),
+    ("Crossing", lambda a: (a["crossing"]["crossing_facility"].replace("_", " ").capitalize(), SAME_CELL)),
+    ("Left<br>footway", lambda a: FOOTWAY_CELLS[a["left_side"]["footway"]]),
+    ("Right<br>footway", lambda a: FOOTWAY_CELLS[a["right_side"]["footway"]]),
+]
+
+
+def figure_one_street() -> None:
+    width, height = 2400, 800
+    answers = {
+        m: json.loads((ROOT / "outputs/vlm/audit/cities" / m / f"{STREET_CLIP}.json").read_text())["answer"]
+        for m in MODEL_NAMES
+    }
+    record = json.loads((ROOT / "outputs/vlm/audit/cities/qwen3.8-27b" / f"{STREET_CLIP}.json").read_text())
+    frame = ROOT / record["frames"][STREET_FRAME - 1]
+    fig = go.Figure()
+    img_w = 0.47
+    img_h = img_w * width / height * 9 / 16
+    fig.add_layout_image(
+        source="data:image/jpeg;base64," + base64.b64encode(frame.read_bytes()).decode(),
+        xref="paper",
+        yref="paper",
+        x=0.0,
+        y=0.47 + img_h / 2,
+        sizex=img_w,
+        sizey=img_h,
+        sizing="stretch",
+        xanchor="left",
+        yanchor="top",
+        layer="below",
+    )
+    fig.add_annotation(
+        x=0.0,
+        y=0.47 + img_h / 2 + 0.012,
+        xref="paper",
+        yref="paper",
+        text="<b>Kingston, Jamaica</b>",
+        showarrow=False,
+        xanchor="left",
+        yanchor="bottom",
+        font=dict(size=30),
+    )
+    gx0, gx1, name_w = 0.5, 0.995, 0.115
+    col_w = (gx1 - gx0 - name_w) / len(STREET_COLUMNS)
+    top, row_h = 0.83, 0.12
+    for j, (header, cell) in enumerate(STREET_COLUMNS):
+        cx = gx0 + name_w + (j + 0.5) * col_w
+        distinct = len({cell(a)[0] for a in answers.values()})
+        verdict = "✓ all agree" if distinct == 1 else f"✗ {distinct} answers"
+        fig.add_annotation(
+            x=cx,
+            y=top + 0.02,
+            xref="paper",
+            yref="paper",
+            text=f"<b>{header}</b>",
+            showarrow=False,
+            xanchor="center",
+            yanchor="bottom",
+            font=dict(size=24),
+        )
+        fig.add_annotation(
+            x=cx,
+            y=top - len(answers) * row_h - 0.02,
+            xref="paper",
+            yref="paper",
+            text=f"<b>{verdict}</b>",
+            showarrow=False,
+            xanchor="center",
+            yanchor="top",
+            font=dict(size=24, color="#1a7f37" if distinct == 1 else "#c62828"),
+        )
+    for i, (model, name) in enumerate(MODEL_NAMES.items()):
+        y1 = top - i * row_h
+        ym = y1 - row_h / 2
+        fig.add_shape(
+            type="circle",
+            xref="paper",
+            yref="paper",
+            x0=gx0,
+            x1=gx0 + 0.01,
+            y0=ym - 0.005 * width / height,
+            y1=ym + 0.005 * width / height,
+            fillcolor=MODEL_COLOURS[model],
+            line_width=0,
+        )
+        fig.add_annotation(
+            x=gx0 + 0.016,
+            y=ym,
+            xref="paper",
+            yref="paper",
+            text=name,
+            showarrow=False,
+            xanchor="left",
+            yanchor="middle",
+            font=dict(size=21),
+        )
+        for j, (_, cell) in enumerate(STREET_COLUMNS):
+            text, colour = cell(answers[model])
+            x0 = gx0 + name_w + j * col_w
+            fig.add_shape(
+                type="rect",
+                xref="paper",
+                yref="paper",
+                x0=x0 + 0.002,
+                x1=x0 + col_w - 0.002,
+                y0=y1 - row_h + 0.006,
+                y1=y1 - 0.006,
+                fillcolor=colour,
+                line_width=0,
+            )
+            dark = colour in ("#0b6e69", "#1a9e8f", "#c62828", "#2a78d6")
+            fig.add_annotation(
+                x=x0 + col_w / 2,
+                y=ym,
+                xref="paper",
+                yref="paper",
+                text=text,
+                showarrow=False,
+                xanchor="center",
+                yanchor="middle",
+                font=dict(size=20, color="white" if dark else "#1f1f1f"),
+            )
+    fig.update_xaxes(visible=False, range=[0, 1])
+    fig.update_yaxes(visible=False, range=[0, 1])
+    fig.update_layout(margin=dict(l=8, r=8, t=8, b=8))
+    OUT.mkdir(parents=True, exist_ok=True)
+    fig.update_layout(
+        font=FONT, template="plotly_white", width=width, height=height, paper_bgcolor="white", plot_bgcolor="white"
+    )
+    fig.write_html(OUT / "fig3_one_street.html", include_plotlyjs="cdn")
+    fig.write_image(OUT / "fig3_one_street.png", scale=1)
+    print("wrote fig3_one_street")
+
+
+# ---- Figure 4: the models agree less outside Europe and North America ---------------------------------
 ITEM_LABELS = {
     "crossing_quality": "Crossing quality",
     "crossing_facility": "Crossing type",
@@ -387,10 +645,10 @@ def figure_agreement(agreement: pd.DataFrame) -> None:
         margin=dict(l=10, r=10, t=30, b=10),
         legend=dict(orientation="h", y=-0.16, x=0.5, xanchor="center", font=dict(size=15)),
     )
-    save(fig, "fig5_agreement", 1000, 560)
+    save(fig, "fig4_agreement", 1000, 560)
 
 
-# ---- Figure 6: which models make good auditors ------------------------------------------------------------
+# ---- Figure 5: which models make good auditors ------------------------------------------------------------
 def figure_models(quality: pd.DataFrame, consistency: pd.DataFrame) -> pd.DataFrame:
     visible = quality[quality.criterion == "deficit_visible"].groupby("auditor").share.mean()
     backed = (
@@ -448,17 +706,17 @@ def figure_models(quality: pd.DataFrame, consistency: pd.DataFrame) -> pd.DataFr
         zeroline=False,
     )
     fig.update_layout(margin=dict(l=10, r=10, t=10, b=10))
-    save(fig, "fig6_models", 800, 520)
+    save(fig, "fig5_models", 800, 520)
     return pd.DataFrame(rows)
 
 
 def main() -> int:
     city = pd.read_csv(TABLES / "cities_infrastructure.csv")
-    used = figure_examples()
+    gaps, used = figure_world(city)
     print(json.dumps(used, indent=1, ensure_ascii=False))
-    print(figure_map(city))
-    figure_continents(pd.read_csv(TABLES / "by_continent.csv"))
-    print("rho", figure_deaths(city))
+    print(gaps)
+    print("rho", figure_gaps(pd.read_csv(TABLES / "by_continent.csv"), city))
+    figure_one_street()
     figure_agreement(pd.read_csv(TABLES / "agreement_by_region.csv"))
     print(figure_models(pd.read_csv(TABLES / "suggestion_quality.csv"), pd.read_csv(TABLES / "needs_consistency.csv")))
     return 0
