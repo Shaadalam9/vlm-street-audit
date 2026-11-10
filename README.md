@@ -198,7 +198,7 @@ tokeniser its answers were valid JSON but nonsense. Kanana runs with a fast toke
 [`serve/prepare_tokenizers.py`](serve/prepare_tokenizers.py), since its own cannot be read by the structured-output
 engine.
 
-Four further models were tried and excluded (details in [`configs/models.toml`](configs/models.toml)):
+Six further models were tried and excluded (details in [`configs/models.toml`](configs/models.toml)):
 
 | Model | Developer (country) | Why excluded |
 |---|---|---|
@@ -206,6 +206,8 @@ Four further models were tried and excluded (details in [`configs/models.toml`](
 | HyperCLOVA X SEED Vision 3B | Naver (South Korea) | Not supported by vLLM after 0.28, and its config does not load in Transformers 5 |
 | Aya Vision 8B | Cohere (Canada) | Degenerate audit: 148 of 150 city answers listed all eight needs, none with a point; JAAD at chance (balanced accuracy 0.50–0.58) |
 | North-Micro-Vision | Cohere (Canada) | Degenerate audit: every need at point (0, 0); JAAD zebra crossings at chance (0.57) |
+| Chitrarth | Krutrim (India) | Not supported by vLLM; served with its own code, one image only. Degenerate audit: no footway and no lighting in all 120 JAAD clips, every need at point (0, 0); crossing item at chance (0.50) |
+| Falcon2-11B-VLM | TII (UAE) | Cannot be served by vLLM 0.32 (FP8 fails in its image projector; neither vLLM's own nor the Transformers implementation runs its Falcon language model) |
 
 ## Reproducing the study
 

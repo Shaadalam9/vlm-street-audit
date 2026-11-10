@@ -153,3 +153,12 @@ vllm_args = ["--tokenizer", "../data/tokenizers/kanana-1.5-v-fast"]
 #   "none", footways were only "none" or "physical_barrier" (even in downtown Toronto) and it found zebra crossings in
 #   JAAD at chance (balanced accuracy 0.57). Its answers are in logs/ on wsl5090, not outputs/.
 # - HyperCLOVA X SEED Vision 3B (Naver, South Korea), 2026-11-09: see above; never run.
+# - Chitrarth (Krutrim, India; krutrim-ai-labs/Chitrarth, revision 5457ead4), 2026-11-10: vLLM cannot run it, so it was
+#   served with its own code (LLaVA-1.5 on Transformers 4.37) and the schema enforced with xgrammar. One 384-px image
+#   and a 4k context, so tested on the one-frame audit: it describes frames correctly, but on all 120 JAAD clips both
+#   footways and the street lighting were "none", all 432 listed needs sat at point (0, 0) with the evidence "none",
+#   and its crossing item was at chance (balanced accuracy 0.50). Its answers are in logs/chitrarth-7b-excluded/ on
+#   wsl5090.
+# - Falcon2-11B-VLM (TII, UAE; tiiuae/falcon-11B-vlm, revision be99415e), 2026-11-10: could not be served by vLLM
+#   0.32: FP8 quantisation fails in its image projector, vLLM's LLaVA-NeXT code expects a language model with
+#   `.model`, which Falcon lacks, and through Transformers' implementation Falcon's attention has no vLLM backend.
