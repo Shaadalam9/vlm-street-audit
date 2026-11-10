@@ -19,7 +19,7 @@ infrastructure in dashcam clips from 75 cities on six continents. They code each
 the [iRAP](https://irap.org) road attributes and the MAPS-Mini streetscape audit, list what is missing, point
 to it in the frame and suggest a change to the street. No footage leaves the machine.
 
-![What pedestrians lack in each of the 75 cities, with six of the streets](docs/figures/paper/fig1_world.png)
+[![What pedestrians lack in each of the 75 cities, with six of the streets](docs/figures/paper/fig1_world.png)](https://htmlpreview.github.io/?https://github.com/Shaadalam9/vlm-street-audit/blob/main/docs/figures/paper/fig1_world.html)
 
 **Figure 1.** What pedestrians lack in each of the 75 cities (needs on which at least four of the six models agree
 in at least one of the city's two clips), with six of the streets and the point each model gave (ring) on the
@@ -98,6 +98,8 @@ Points are integers from 0 to 1000 on the named frame, x from the left and y fro
 
 ## Main findings
 
+Every figure is clickable: it opens an interactive version (hover for values).
+
 **The crossing item is valid where it can be checked.** On JAAD's labelled clips, the iRAP crossing-facility
 item finds marked crossings with a balanced accuracy of 0.86–0.92 for five of the six models; the smallest,
 Kanana-1.5-V 3B, reaches only 0.57.
@@ -114,7 +116,7 @@ basic provision is often absent, while many North American roads are built witho
 (Spearman's ρ = 0.33, 95% CI 0.11 to 0.52) and falls with median age (−0.43) and literacy (−0.44). These are
 country-level figures that track national income, so they describe a pattern, not a cause.
 
-![The gaps by continent, and against road deaths](docs/figures/paper/fig2_gaps.png)
+[![The gaps by continent, and against road deaths](docs/figures/paper/fig2_gaps.png)](https://htmlpreview.github.io/?https://github.com/Shaadalam9/vlm-street-audit/blob/main/docs/figures/paper/fig2_gaps.html)
 
 **Figure 2.** (a) Share of cities needing a crossing where people have reason to cross, and a footway, by continent
 (number of cities in brackets; Oceania, one city, is left out). (b) Missing items per street clip (consensus of the
@@ -127,12 +129,12 @@ intervals overlap). Footway type (κ = 0.00), trip hazards and kerb ramps are no
 Kingston market street, all six models see people walking in the road, a reason to cross and no crossing, but give
 five different answers for each footway.
 
-![One street in Kingston, as coded by the six models](docs/figures/paper/fig3_one_street.png)
+[![One street in Kingston, as coded by the six models](docs/figures/paper/fig3_one_street.png)](https://htmlpreview.github.io/?https://github.com/Shaadalam9/vlm-street-audit/blob/main/docs/figures/paper/fig3_one_street.html)
 
 **Figure 3.** One street in Kingston, Jamaica, as coded by the six models: they agree on what is easy to see and
 give five different answers for each footway.
 
-![Agreement between the models, by region](docs/figures/paper/fig4_agreement.png)
+[![Agreement between the models, by region](docs/figures/paper/fig4_agreement.png)](https://htmlpreview.github.io/?https://github.com/Shaadalam9/vlm-street-audit/blob/main/docs/figures/paper/fig4_agreement.html)
 
 **Figure 4.** Agreement between the six models on each item (Fleiss' κ) for clips from Europe and North America (60)
 and from the rest of the world (90). The shaded band marks agreement below 0.2.
@@ -142,7 +144,7 @@ in the frames, against 28–31% for Molmo2, InternVL3.5 and Ministral 3, and Gem
 own items; Kanana lists no needs at all. Rewording the prompt or halving the resolution changes few answers (mean κ
 0.68 and 0.73); one frame (0.56) and resampling (0.50) change more.
 
-<p align="center"><img src="docs/figures/paper/fig5_models.png" width="560" alt="The models as auditors"></p>
+<p align="center"><a href="https://htmlpreview.github.io/?https://github.com/Shaadalam9/vlm-street-audit/blob/main/docs/figures/paper/fig5_models.html"><img src="docs/figures/paper/fig5_models.png" width="560" alt="The models as auditors"></a></p>
 
 **Figure 5.** The five models that listed needs, as auditors: share of their listed needs that the judges rated
 visible in the frames (mean of two judges) against the share backed by the model's own item answers.

@@ -59,12 +59,15 @@ CONTINENT_COLOURS = {
 WEST, REST = "Europe & North America", "Rest of the world"
 
 
+# HTML_NOTE: the README links each figure to its HTML through htmlpreview.github.io, which shows Plotly only when
+# the library is embedded in the file (include_plotlyjs=True), not loaded from the CDN. A fixed div id keeps reruns
+# identical.
 def save(fig: go.Figure, name: str, width: int, height: int) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     fig.update_layout(
         font=FONT, template="plotly_white", width=width, height=height, paper_bgcolor="white", plot_bgcolor="white"
     )
-    fig.write_html(OUT / f"{name}.html", include_plotlyjs="cdn", div_id=name)  # fixed id, same file
+    fig.write_html(OUT / f"{name}.html", include_plotlyjs=True, div_id=name)  # see HTML_NOTE
     fig.write_image(OUT / f"{name}.png", scale=2)
     print("wrote", name)
 
@@ -80,7 +83,7 @@ EXAMPLES = [
         "gemma4-31b",
         "no_footway",
         "right_side",
-        "Spring Hill, United States",
+        "Spring Hill (FL), United States",
         "No footway",
     ),
     (
@@ -113,7 +116,7 @@ EXAMPLES = [
         "qwen3.8-27b",
         "no_footway",
         "left_side",
-        "Sydney, Australia",
+        "Sydney (NSW), Australia",
         "“No footway” (wrong)",
     ),
 ]
@@ -299,7 +302,7 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
             yanchor="bottom",
         )
         # a line from the frame to its city on the map
-        c = city[city.locality == title.split(",")[0]].iloc[0]
+        c = city[city.locality == title.split(",")[0].split(" (")[0]].iloc[0]  # the title may add a state
         cx, cy = to_paper(c.lon, c.lat)
         fig.add_shape(
             type="line",
@@ -372,7 +375,7 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
     )
     # Drawn at full size (the frames need the pixels), so no further scaling.
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.write_html(OUT / "fig1_world.html", include_plotlyjs="cdn", div_id="fig1_world")
+    fig.write_html(OUT / "fig1_world.html", include_plotlyjs=True, div_id="fig1_world")
     fig.write_image(OUT / "fig1_world.png", scale=1)
     print("wrote fig1_world")
     return city.gap.value_counts(), used
@@ -642,7 +645,7 @@ def figure_one_street() -> None:
     fig.update_layout(
         font=FONT, template="plotly_white", width=width, height=height, paper_bgcolor="white", plot_bgcolor="white"
     )
-    fig.write_html(OUT / "fig3_one_street.html", include_plotlyjs="cdn", div_id="fig3_one_street")
+    fig.write_html(OUT / "fig3_one_street.html", include_plotlyjs=True, div_id="fig3_one_street")
     fig.write_image(OUT / "fig3_one_street.png", scale=1)
     print("wrote fig3_one_street")
 
