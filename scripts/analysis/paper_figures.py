@@ -81,10 +81,13 @@ GAP_COLOURS = {
     "Crossing": "#eb6834",
     "Footway": "#2a78d6",
     "Lighting or other": "#eda100",
-    "No agreed need": "#c3c2b7",
+    "No agreed need": "#dfe4ea",  # pale and neutral, so the gaps stand out on the dark land
 }
 WORLD_W, WORLD_H = 2400, 1960
-WORLD_LON, WORLD_LAT = (-128.0, 162.0), (-44.0, 68.0)
+WORLD_LON, WORLD_LAT = (-180.0, 180.0), (-58.0, 84.0)  # the whole world but Antarctica
+# The map's colours: continents dark enough to read as land, a pale ocean, and every dot ringed in white so it stands
+# out on either.
+MAP = dict(land="#4b5866", ocean="#eef2f6", border="#6b7785", coast="#4b5866", line="#1f1f1f")
 ROW_H, ROW_GAP, THUMB_W = 0.245, 0.03, 0.31  # shares of the figure: frame rows, gap to the map, frame width
 WORLD_GEO = dict(
     projection_type="equirectangular",
@@ -164,17 +167,20 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
                 name=f"{label} ({len(part)})",
                 text=part.locality + ", " + part.country,
                 hovertemplate="%{text}<extra></extra>",
-                marker=dict(size=17, color=colour, line=dict(width=1.5, color="white")),
+                marker=dict(size=18, color=colour, line=dict(width=2.5, color="white")),
             )
         )
     fig.update_geos(
         **WORLD_GEO,
         showland=True,
-        landcolor="#ecebe8",
+        landcolor=MAP["land"],
         showcountries=True,
-        countrycolor="#ffffff",
-        coastlinecolor="#d6d5cd",
-        showocean=False,
+        countrycolor=MAP["border"],
+        coastlinecolor=MAP["coast"],
+        showocean=True,
+        oceancolor=MAP["ocean"],
+        showlakes=True,
+        lakecolor=MAP["ocean"],
     )
 
     def ring(x: float, y: float, r: float, colour: str, width: float) -> None:
@@ -262,9 +268,20 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
             y0=y0 if top else ROW_H,
             x1=cx,
             y1=cy,
-            line=dict(color="#1f1f1f", width=2),
+            line=dict(color="white", width=6),
         )
-        ring(cx, cy, 0.0085, "#1f1f1f", 3)
+        fig.add_shape(
+            type="line",
+            xref="paper",
+            yref="paper",
+            x0=x0 + THUMB_W / 2,
+            y0=y0 if top else ROW_H,
+            x1=cx,
+            y1=cy,
+            line=dict(color=MAP["line"], width=2.2),
+        )  # a dark line on a white halo, visible on land and sea alike
+        ring(cx, cy, 0.0095, "white", 7)
+        ring(cx, cy, 0.0095, MAP["line"], 3.5)
         used.append({"panel": "abcdef"[n], "city": title, "model": MODEL_NAMES[auditor], **entry})
     # The legend, drawn by hand: Plotly's own draws the dots smaller than on the map.
     lx, ly, step = 0.02, ROW_H + ROW_GAP + 0.21, 0.031
@@ -281,7 +298,6 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
     )
     for k, (label, colour) in enumerate(GAP_COLOURS.items()):
         y = ly - k * step
-        ring(lx, y, 0.0045, "white", 2)
         fig.add_shape(
             type="circle",
             xref="paper",
@@ -291,7 +307,7 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
             y0=y - 0.0045 * WORLD_W / WORLD_H,
             y1=y + 0.0045 * WORLD_W / WORLD_H,
             fillcolor=colour,
-            line=dict(color="white", width=1.5),
+            line=dict(color=MAP["land"], width=1.5),
         )
         fig.add_annotation(
             x=lx + 0.012,
