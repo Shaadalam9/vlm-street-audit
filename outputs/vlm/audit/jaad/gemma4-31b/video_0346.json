@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0346",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0346/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0346/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0346/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0346/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0346/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The edge of the road is unpaved and lacks a formal sidewalk.\",\"frame\":4,\"x\":250,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a formal, paved sidewalk on the left side of the road to provide a safe walking space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The edge of the road is unpaved and lacks a formal sidewalk.\",\"frame\":4,\"x\":750,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a formal, paved sidewalk on the right side of the road to provide a safe walking space.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A pedestrian is seen crossing the road in the carriageway without any designated crossing facility.\",\"frame\":4,\"x\":470,\"y\":680,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The edge of the road is unpaved and lacks a formal sidewalk.",
+    "frame": 4,
+    "x": 250,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a formal, paved sidewalk on the left side of the road to provide a safe walking space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The edge of the road is unpaved and lacks a formal sidewalk.",
+    "frame": 4,
+    "x": 750,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a formal, paved sidewalk on the right side of the road to provide a safe walking space."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A pedestrian is seen crossing the road in the carriageway without any designated crossing facility.",
+    "frame": 4,
+    "x": 470,
+    "y": 680,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 166.75,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3026,
+  "completion_tokens": 441,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

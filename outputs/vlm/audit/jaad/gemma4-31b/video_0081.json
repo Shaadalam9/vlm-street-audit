@@ -1,0 +1,142 @@
+{
+ "clip_id": "video_0081",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0081/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is a grass verge/informal path rather than a purpose-built sidewalk.\",\"frame\":1,\"x\":200,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the left side of the road to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is a grass verge/informal path rather than a purpose-built sidewalk.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the right side of the road to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path is uneven and contains puddles and mud.\",\"frame\":1,\"x\":300,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the left-side pedestrian area to remove trip hazards and mud.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is uneven and contains puddles and mud.\",\"frame\":1,\"x\":800,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the right-side pedestrian area to remove trip hazards and mud.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road in the carriageway without any designated crossing facility.\",\"frame\":4,\"x\":370,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The lack of any crossing facility makes the crossing point unsafe and hard for drivers to anticipate.\",\"frame\":4,\"x\":370,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Implement a marked crossing with clear signage to improve visibility and safety for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs where pedestrians are crossing.\",\"frame\":4,\"x\":370,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install dropped kerbs at the designated crossing point to improve accessibility for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is a grass verge/informal path rather than a purpose-built sidewalk.",
+    "frame": 1,
+    "x": 200,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is a grass verge/informal path rather than a purpose-built sidewalk.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the right side of the road to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path is uneven and contains puddles and mud.",
+    "frame": 1,
+    "x": 300,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the left-side pedestrian area to remove trip hazards and mud."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is uneven and contains puddles and mud.",
+    "frame": 1,
+    "x": 800,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the right-side pedestrian area to remove trip hazards and mud."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road in the carriageway without any designated crossing facility.",
+    "frame": 4,
+    "x": 370,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and designated point for people to cross the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The lack of any crossing facility makes the crossing point unsafe and hard for drivers to anticipate.",
+    "frame": 4,
+    "x": 370,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Implement a marked crossing with clear signage to improve visibility and safety for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs where pedestrians are crossing.",
+    "frame": 4,
+    "x": 370,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install dropped kerbs at the designated crossing point to improve accessibility for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 227.75,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3318,
+  "completion_tokens": 733,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

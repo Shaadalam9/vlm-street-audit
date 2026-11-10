@@ -1,0 +1,120 @@
+{
+ "clip_id": "video_0335",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0335/frame_00084.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible, pedestrians walking in the roadway\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk of at least 1 metre width along the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible, pedestrians walking in the roadway\",\"frame\":1,\"x\":700,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk of at least 1 metre width along the right side of the road.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"Zebra crossing is poorly marked and obstructed by parked cars\",\"frame\":1,\"x\":400,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Repaint the zebra crossing clearly and ensure it is free from obstructions by enforcing parking regulations.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No dropped kerbs at the zebra crossing\",\"frame\":1,\"x\":400,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dropped kerbs at both ends of the zebra crossing to facilitate safe pedestrian crossing.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights visible along the road\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lights along the road to improve visibility and safety for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible, pedestrians walking in the roadway",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk of at least 1 metre width along the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible, pedestrians walking in the roadway",
+    "frame": 1,
+    "x": 700,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk of at least 1 metre width along the right side of the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "Zebra crossing is poorly marked and obstructed by parked cars",
+    "frame": 1,
+    "x": 400,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Repaint the zebra crossing clearly and ensure it is free from obstructions by enforcing parking regulations."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No dropped kerbs at the zebra crossing",
+    "frame": 1,
+    "x": 400,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install dropped kerbs at both ends of the zebra crossing to facilitate safe pedestrian crossing."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights visible along the road",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lights along the road to improve visibility and safety for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 13.08,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 3010,
+  "completion_tokens": 590,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

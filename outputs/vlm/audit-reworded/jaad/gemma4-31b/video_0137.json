@@ -1,0 +1,82 @@
+{
+ "clip_id": "video_0137",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0137/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0137/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0137/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0137/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0137/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A pedestrian is crossing the road in the carriageway away from the signalised crossing.\",\"frame\":4,\"x\":505,\"y\":725,\"measure\":\"improve_crossing\",\"suggestion\":\"Provide additional marked pedestrian crossings to accommodate pedestrian demand.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A pedestrian is crossing the road in the carriageway away from the signalised crossing.",
+    "frame": 4,
+    "x": 505,
+    "y": 725,
+    "measure": "improve_crossing",
+    "suggestion": "Provide additional marked pedestrian crossings to accommodate pedestrian demand."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 161.52,
+ "usage": {
+  "prompt_tokens": 2611,
+  "total_tokens": 2888,
+  "completion_tokens": 277,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

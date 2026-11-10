@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0188",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0188/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0188/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0188/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0188/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0188/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk is visible on the left side of the road; the area is an open, unpaved lot with parked cars and people standing on it.\",\"frame\":4,\"x\":100,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway along the left side of the road, separated from the carriageway by a kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous sidewalk is visible on the right side of the road; the area is an open, unpaved lot with trees and a building entrance.\",\"frame\":4,\"x\":900,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous footway along the right side of the road, separated from the carriageway by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear demand for crossing due to the presence of buildings, parked cars, and people on both sides, but no marked or purpose-built crossing facility (\",\"frame\":4,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at a logical point between the buildings and parking areas.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames.\",\"frame\":4,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility and safety for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk is visible on the left side of the road; the area is an open, unpaved lot with parked cars and people standing on it.",
+    "frame": 4,
+    "x": 100,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway along the left side of the road, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous sidewalk is visible on the right side of the road; the area is an open, unpaved lot with trees and a building entrance.",
+    "frame": 4,
+    "x": 900,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous footway along the right side of the road, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear demand for crossing due to the presence of buildings, parked cars, and people on both sides, but no marked or purpose-built crossing facility (",
+    "frame": 4,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point between the buildings and parking areas."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames.",
+    "frame": 4,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 284.26,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6163,
+  "completion_tokens": 552,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0086",
+ "set": "jaad",
+ "role": "main",
+ "model": "molmo2-8b",
+ "checkpoint": "allenai/Molmo2-8B",
+ "revision": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0086/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0086/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0086/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0086/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0086/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"not_visible\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"right_side\":{\"footway\":\"not_visible\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"not_visible\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no_footway\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous footway along the left side of the road to provide a safe pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no_footway\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous footway along the right side of the road to provide a safe pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand true and crossing_facility none\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"crossing\",\"evidence\":\"2 lanes and no refuge facility\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no_kerb_ramps and no_refuge_on_wide_road\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"urban road with street_lighting none\",\"frame\":1,\"x\":0,\"y\":0,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "not_visible",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "right_side": {
+   "footway": "not_visible",
+   "obstruction": "no_footway",
+   "trip_hazards": "not_visible"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no_footway",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous footway along the left side of the road to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no_footway",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous footway along the right side of the road to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand true and crossing_facility none",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "crossing",
+    "evidence": "2 lanes and no refuge facility",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no_kerb_ramps and no_refuge_on_wide_road",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a pedestrian refuge island in the middle of the road to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "urban road with street_lighting none",
+    "frame": 1,
+    "x": 0,
+    "y": 0,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 17.91,
+ "usage": {
+  "prompt_tokens": 7132,
+  "total_tokens": 7719,
+  "completion_tokens": 587,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

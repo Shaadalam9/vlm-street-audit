@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0052",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0052/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0052/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0052/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0052/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0052/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"pedestrians are walking in the carriageway next to parked cars\",\"frame\":1,\"x\":185,\"y\":730,\"measure\":\"build_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"no designated walking area provided for pedestrians\",\"frame\":1,\"x\":750,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous sidewalk on the right side to provide a safe path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"pedestrians are crossing the driving lanes without any designated crossing facility\",\"frame\":1,\"x\":185,\"y\":730,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe and visible point for people to cross the parking lot.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "pedestrians are walking in the carriageway next to parked cars",
+    "frame": 1,
+    "x": 185,
+    "y": 730,
+    "measure": "build_footway",
+    "suggestion": "Construct a dedicated sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "no designated walking area provided for pedestrians",
+    "frame": 1,
+    "x": 750,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous sidewalk on the right side to provide a safe path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "pedestrians are crossing the driving lanes without any designated crossing facility",
+    "frame": 1,
+    "x": 185,
+    "y": 730,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe and visible point for people to cross the parking lot."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 150.05,
+ "usage": {
+  "prompt_tokens": 2612,
+  "total_tokens": 3035,
+  "completion_tokens": 423,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

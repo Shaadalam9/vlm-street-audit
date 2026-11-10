@@ -1,0 +1,120 @@
+{
+ "clip_id": "video_0038",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0038/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"painted\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a physical barrier to separate the footway from the carriageway and widen it to at least 1.5m.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce no-parking zones on the footway to ensure it remains clear for pedestrian use.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a physical barrier to separate the footway from the carriageway and widen it to at least 1.5m.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce no-parking zones on the footway to ensure it remains clear for pedestrian use.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians crossing in the absence of a crossing facility\",\"frame\":1,\"x\":500,\"y\":550,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing with a refuge island to provide a safe crossing point for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "painted",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1.5m."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Enforce no-parking zones on the footway to ensure it remains clear for pedestrian use."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a physical barrier to separate the footway from the carriageway and widen it to at least 1.5m."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Enforce no-parking zones on the footway to ensure it remains clear for pedestrian use."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians crossing in the absence of a crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 550,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing with a refuge island to provide a safe crossing point for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 13.5,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 3049,
+  "completion_tokens": 629,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

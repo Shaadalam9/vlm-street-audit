@@ -1,0 +1,100 @@
+{
+ "clip_id": "video_0283",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0283/frame_00036.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"painted\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous, purpose-built sidewalk is present on the left side, so the 'no_footway' condition (informal path or none) is not met.\",\"frame\":1,\"x\":100,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"No action is required as a suitable footway already exists on this side.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A pedestrian is actively crossing the carriageway in the middle of the road, and there are destinations on both sides, but no marked or signalised crossing is\",\"frame\":1,\"x\":420,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at this location to provide a safe and legal place for people to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"As there is no formal crossing, there are no dropped kerbs to facilitate pedestrian access to a crossing point.\",\"frame\":1,\"x\":420,\"y\":650,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Construct dropped kerbs at the new crossing location to ensure safe and accessible passage for all pedestrians, including those with mobility\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "painted",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous, purpose-built sidewalk is present on the left side, so the 'no_footway' condition (informal path or none) is not met.",
+    "frame": 1,
+    "x": 100,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "No action is required as a suitable footway already exists on this side."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A pedestrian is actively crossing the carriageway in the middle of the road, and there are destinations on both sides, but no marked or signalised crossing is",
+    "frame": 1,
+    "x": 420,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at this location to provide a safe and legal place for people to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "As there is no formal crossing, there are no dropped kerbs to facilitate pedestrian access to a crossing point.",
+    "frame": 1,
+    "x": 420,
+    "y": 650,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Construct dropped kerbs at the new crossing location to ensure safe and accessible passage for all pedestrians, including those with mobility"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 28.35,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2532,
+  "completion_tokens": 469,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

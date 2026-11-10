@@ -1,0 +1,90 @@
+{
+ "clip_id": "video_0204",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0204/frame_00060.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left pavement has visibly broken, uneven and heaved sections that would catch a foot.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Re-lay the damaged left pavement with a smooth, level surface to remove the trip risk.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The right pavement shows cracked and uneven slabs that form major trip hazards.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Re-lay the damaged right pavement with a smooth, level surface to remove the trip risk.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left pavement has visibly broken, uneven and heaved sections that would catch a foot.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Re-lay the damaged left pavement with a smooth, level surface to remove the trip risk."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The right pavement shows cracked and uneven slabs that form major trip hazards.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Re-lay the damaged right pavement with a smooth, level surface to remove the trip risk."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 18.34,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2418,
+  "completion_tokens": 355,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

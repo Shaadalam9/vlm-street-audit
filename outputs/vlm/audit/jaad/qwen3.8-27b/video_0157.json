@@ -1,0 +1,92 @@
+{
+ "clip_id": "video_0157",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0157/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0157/frame_00018.jpg",
+  "data/clip_sets/jaad_frames/video_0157/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0157/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0157/frame_00072.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A large advertising board and a bus shelter structure occupy the sidewalk, narrowing the usable path for pedestrians.\",\"frame\":1,\"x\":600,\"y\":650,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the advertising board and bus shelter to a position that leaves a minimum 1.5m clear width on the sidewalk.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"The kerbs at the pedestrian crossing appear to be at standard height with no visible dropped sections to assist wheelchair users or those with prams.\",\"frame\":4,\"x\":450,\"y\":750,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both ends of the pedestrian crossing to create a level transition for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A large advertising board and a bus shelter structure occupy the sidewalk, narrowing the usable path for pedestrians.",
+    "frame": 1,
+    "x": 600,
+    "y": 650,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the advertising board and bus shelter to a position that leaves a minimum 1.5m clear width on the sidewalk."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "The kerbs at the pedestrian crossing appear to be at standard height with no visible dropped sections to assist wheelchair users or those with prams.",
+    "frame": 4,
+    "x": 450,
+    "y": 750,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both ends of the pedestrian crossing to create a level transition for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 321.32,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 5989,
+  "completion_tokens": 378,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

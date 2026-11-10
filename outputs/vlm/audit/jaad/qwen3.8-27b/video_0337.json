@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0337",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0337/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00024.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is heavily obstructed by a continuous line of parked vehicles, forcing pedestrians to use the narrow, snow-covered edge or the roadway.\",\"frame\":4,\"x\":200,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a row of street lamps along the left side to improve visibility of the narrow, obstructed footway and the parked cars.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A line of parked cars, including a white van and a dark sedan, completely blocks the usable width of the left footway.\",\"frame\":4,\"x\":200,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Add street lighting to the left side to make the blocked footway and the adjacent parking area safer for any pedestrians who must use it.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left footway is covered in uneven, packed snow and ice, creating significant trip hazards for pedestrians.\",\"frame\":4,\"x\":200,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Provide street lighting on the left to highlight the uneven, snowy surface of the footway and reduce the risk of trips and falls.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The right footway is covered in deep, uneven snow and ice, with a person seen shovelling, indicating a major trip hazard.\",\"frame\":4,\"x\":800,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights on the right side to illuminate the deep snow and ice on the footway, making the trip hazards more visible.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to shops and homes on both sides, but no marked or purpose-built crossing facility is visible in the 100m segment.\",\"frame\":4,\"x\":500,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Add street lighting to the entire road segment to improve overall visibility and make the lack of a crossing more apparent to drivers.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"While some street lights are visible, they are sparse and do not provide adequate illumination for the entire urban road segment, especially in the winter light\",\"frame\":4,\"x\":500,\"y\":700,\"measure\":\"add_street_lighting\",\"suggestion\":\"Increase the density of street lighting along the road to ensure consistent and safe illumination for all road users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left footway is heavily obstructed by a continuous line of parked vehicles, forcing pedestrians to use the narrow, snow-covered edge or the roadway.",
+    "frame": 4,
+    "x": 200,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a row of street lamps along the left side to improve visibility of the narrow, obstructed footway and the parked cars."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A line of parked cars, including a white van and a dark sedan, completely blocks the usable width of the left footway.",
+    "frame": 4,
+    "x": 200,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Add street lighting to the left side to make the blocked footway and the adjacent parking area safer for any pedestrians who must use it."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left footway is covered in uneven, packed snow and ice, creating significant trip hazards for pedestrians.",
+    "frame": 4,
+    "x": 200,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Provide street lighting on the left to highlight the uneven, snowy surface of the footway and reduce the risk of trips and falls."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The right footway is covered in deep, uneven snow and ice, with a person seen shovelling, indicating a major trip hazard.",
+    "frame": 4,
+    "x": 800,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights on the right side to illuminate the deep snow and ice on the footway, making the trip hazards more visible."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to shops and homes on both sides, but no marked or purpose-built crossing facility is visible in the 100m segment.",
+    "frame": 4,
+    "x": 500,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Add street lighting to the entire road segment to improve overall visibility and make the lack of a crossing more apparent to drivers."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "While some street lights are visible, they are sparse and do not provide adequate illumination for the entire urban road segment, especially in the winter light",
+    "frame": 4,
+    "x": 500,
+    "y": 700,
+    "measure": "add_street_lighting",
+    "suggestion": "Increase the density of street lighting along the road to ensure consistent and safe illumination for all road users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 211.49,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6383,
+  "completion_tokens": 772,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

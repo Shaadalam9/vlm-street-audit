@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0293",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0293/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0293/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0293/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0293/frame_00162.jpg",
+  "data/clip_sets/jaad_frames/video_0293/frame_00216.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions\",\"frame\":5,\"x\":300,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"footway is partly blocked by parked vehicles or other obstructions\",\"frame\":5,\"x\":250,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Install bollards or barriers to prevent vehicles from parking on the footway.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven and broken sections on the footway\",\"frame\":5,\"x\":350,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repave and level the footway to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing without refuge or signals\",\"frame\":4,\"x\":400,\"y\":400,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing is hard to see and drivers do not stop\",\"frame\":4,\"x\":450,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Add pedestrian signals and improve crossing visibility with raised platforms and high-contrast markings.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at the crossing\",\"frame\":4,\"x\":400,\"y\":450,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps at the crossing to ensure accessibility for pedestrians, including those with disabilities.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions",
+    "frame": 5,
+    "x": 300,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+    "frame": 5,
+    "x": 250,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Install bollards or barriers to prevent vehicles from parking on the footway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven and broken sections on the footway",
+    "frame": 5,
+    "x": 350,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repave and level the footway to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing without refuge or signals",
+    "frame": 4,
+    "x": 400,
+    "y": 400,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a refuge island in the middle of the crossing to provide a safe waiting area for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "crossing is hard to see and drivers do not stop",
+    "frame": 4,
+    "x": 450,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Add pedestrian signals and improve crossing visibility with raised platforms and high-contrast markings."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at the crossing",
+    "frame": 4,
+    "x": 400,
+    "y": 450,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps at the crossing to ensure accessibility for pedestrians, including those with disabilities."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 28.03,
+ "usage": {
+  "prompt_tokens": 7328,
+  "total_tokens": 7993,
+  "completion_tokens": 665,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

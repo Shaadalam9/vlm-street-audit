@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0147",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0147/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0147/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0147/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0147/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0147/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk_1_to_3m\",\"frame\":1,\"x\":700,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Expand the sidewalk on the right side to provide a safer pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk_1_to_3m\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Expand the sidewalk on the left side to provide a safer pedestrian path.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install pedestrian signals to enhance safety at the crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk_1_to_3m",
+    "frame": 1,
+    "x": 700,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Expand the sidewalk on the right side to provide a safer pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk_1_to_3m",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Expand the sidewalk on the left side to provide a safer pedestrian path."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install pedestrian signals to enhance safety at the crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.73,
+ "usage": {
+  "prompt_tokens": 12707,
+  "total_tokens": 13087,
+  "completion_tokens": 380,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

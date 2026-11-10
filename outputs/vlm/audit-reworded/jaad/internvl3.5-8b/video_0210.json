@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0210",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0210/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0210/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0210/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0210/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0210/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"rural\",\"land_use\":\"other\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Frame 1, 0, 500, The footway is not visible and people must walk in the road.\",\"frame\":1,\"x\":0,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk along the left side of the road to provide a safe walking path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Frame 1, 500, 900, The footway is not visible and people must walk in the road.\",\"frame\":1,\"x\":500,\"y\":900,\"measure\":\"build_footway\",\"suggestion\":\"Construct a sidewalk along the right side of the road to provide a safe walking path.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Frame 1, 500, 500, Pedestrians are visible but there is no crossing facility.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at this location to allow safe crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "rural",
+   "land_use": "other",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Frame 1, 0, 500, The footway is not visible and people must walk in the road.",
+    "frame": 1,
+    "x": 0,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk along the left side of the road to provide a safe walking path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Frame 1, 500, 900, The footway is not visible and people must walk in the road.",
+    "frame": 1,
+    "x": 500,
+    "y": 900,
+    "measure": "build_footway",
+    "suggestion": "Construct a sidewalk along the right side of the road to provide a safe walking path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Frame 1, 500, 500, Pedestrians are visible but there is no crossing facility.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at this location to allow safe crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.23,
+ "usage": {
+  "prompt_tokens": 12729,
+  "total_tokens": 13166,
+  "completion_tokens": 437,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

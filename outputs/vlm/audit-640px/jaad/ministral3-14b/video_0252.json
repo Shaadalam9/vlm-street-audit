@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0252",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0252/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0252/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0252/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0252/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0252/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"none\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No footway visible on the left side of the road, pedestrians must walk in the roadway.\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway visible on the right side of the road, pedestrians must walk in the roadway.\",\"frame\":1,\"x\":700,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrians are crossing the road without a designated crossing facility.\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a marked zebra crossing at this location to provide a safe crossing point for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"No crossing facility is present, forcing pedestrians to cross in potentially unsafe conditions.\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised crossing with a refuge to ensure safe crossing for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "none",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No footway visible on the left side of the road, pedestrians must walk in the roadway.",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway visible on the right side of the road, pedestrians must walk in the roadway.",
+    "frame": 1,
+    "x": 700,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrians are crossing the road without a designated crossing facility.",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a marked zebra crossing at this location to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "No crossing facility is present, forcing pedestrians to cross in potentially unsafe conditions.",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised crossing with a refuge to ensure safe crossing for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 11.83,
+ "usage": {
+  "prompt_tokens": 2778,
+  "total_tokens": 3318,
+  "completion_tokens": 540,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

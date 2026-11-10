@@ -1,0 +1,90 @@
+{
+ "clip_id": "video_0153",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0153/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous row of parked cars occupies the left verge, leaving no usable footway for pedestrians.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Relocate the on-street parking bays to a nearby off-street lot to restore a clear, continuous footway on the left.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A bus stop and a shopfront create high crossing demand, but there is no marked or signalised crossing in view.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing at the bus stop to give people a safe, visible place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous row of parked cars occupies the left verge, leaving no usable footway for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Relocate the on-street parking bays to a nearby off-street lot to restore a clear, continuous footway on the left."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A bus stop and a shopfront create high crossing demand, but there is no marked or signalised crossing in view.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing at the bus stop to give people a safe, visible place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.41,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2436,
+  "completion_tokens": 373,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

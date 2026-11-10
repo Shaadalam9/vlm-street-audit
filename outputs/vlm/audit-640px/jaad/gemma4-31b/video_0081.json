@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0081",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0081/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0081/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is a grass verge without a paved surface.\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the left side of the road to provide a safe walking surface.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is a grass verge without a paved surface.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved sidewalk on the right side of the road to provide a safe walking surface.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved surface is uneven and contains puddles.\",\"frame\":1,\"x\":400,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the left-side footway to remove trip hazards and puddles.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved surface is uneven and contains puddles.\",\"frame\":1,\"x\":650,\"y\":650,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the right-side footway to remove trip hazards and puddles.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road where no designated crossing facility exists.\",\"frame\":5,\"x\":540,\"y\":550,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to safely facilitate crossing at this location.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs for pedestrians crossing the road.\",\"frame\":5,\"x\":540,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Install dropped kerbs at the crossing point to improve accessibility.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is a grass verge without a paved surface.",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the left side of the road to provide a safe walking surface."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is a grass verge without a paved surface.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved sidewalk on the right side of the road to provide a safe walking surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved surface is uneven and contains puddles.",
+    "frame": 1,
+    "x": 400,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the left-side footway to remove trip hazards and puddles."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved surface is uneven and contains puddles.",
+    "frame": 1,
+    "x": 650,
+    "y": 650,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the right-side footway to remove trip hazards and puddles."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road where no designated crossing facility exists.",
+    "frame": 5,
+    "x": 540,
+    "y": 550,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to safely facilitate crossing at this location."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs for pedestrians crossing the road.",
+    "frame": 5,
+    "x": 540,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Install dropped kerbs at the crossing point to improve accessibility."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 35.64,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3217,
+  "completion_tokens": 632,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

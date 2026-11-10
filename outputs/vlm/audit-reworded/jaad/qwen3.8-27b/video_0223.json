@@ -1,0 +1,92 @@
+{
+ "clip_id": "video_0223",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0223/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0223/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0223/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0223/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0223/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"signalised\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"both_kerbs\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A red market umbrella and a blue umbrella are set up on the footway, blocking the path for pedestrians.\",\"frame\":1,\"x\":380,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the market stalls and umbrellas to a designated area away from the pedestrian footway to ensure a clear path.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Several pedestrians are walking on the footway, and a black car is parked close to the edge, potentially obstructing the path.\",\"frame\":1,\"x\":700,\"y\":600,\"measure\":\"improve_crossing\",\"suggestion\":\"Enforce parking regulations to prevent vehicles from parking on the footway, ensuring a clear path for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "signalised",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "both_kerbs"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A red market umbrella and a blue umbrella are set up on the footway, blocking the path for pedestrians.",
+    "frame": 1,
+    "x": 380,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the market stalls and umbrellas to a designated area away from the pedestrian footway to ensure a clear path."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Several pedestrians are walking on the footway, and a black car is parked close to the edge, potentially obstructing the path.",
+    "frame": 1,
+    "x": 700,
+    "y": 600,
+    "measure": "improve_crossing",
+    "suggestion": "Enforce parking regulations to prevent vehicles from parking on the footway, ensuring a clear path for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 176.11,
+ "usage": {
+  "prompt_tokens": 5635,
+  "total_tokens": 6016,
+  "completion_tokens": 381,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

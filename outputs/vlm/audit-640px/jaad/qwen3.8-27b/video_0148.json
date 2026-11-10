@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0148",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0148/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0148/frame_00018.jpg",
+  "data/clip_sets/jaad_frames/video_0148/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0148/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0148/frame_00072.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous sidewalk; the edge of the carriageway meets a grass verge and a building setback, so pedestrians would have to walk in the road.\",\"frame\":1,\"x\":150,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway along the left side, set back from the carriageway edge, to give pedestrians a safe place to walk.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk on the right; the road edge is an unpaved shoulder and grass, with no defined pedestrian path.\",\"frame\":1,\"x\":850,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Provide a paved footway on the right side, separated from the carriageway, so pedestrians do not have to use the road.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are seen walking in the carriageway near a junction and buildings on both sides, but there is no marked or signalised crossing.\",\"frame\":4,\"x\":650,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at this junction to give a safe, visible place to cross.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There is no crossing and no dropped kerbs at the point where pedestrians are using the road.\",\"frame\":4,\"x\":650,\"y\":600,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Add dropped kerbs at the new crossing location to allow step-free access for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous sidewalk; the edge of the carriageway meets a grass verge and a building setback, so pedestrians would have to walk in the road.",
+    "frame": 1,
+    "x": 150,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway along the left side, set back from the carriageway edge, to give pedestrians a safe place to walk."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk on the right; the road edge is an unpaved shoulder and grass, with no defined pedestrian path.",
+    "frame": 1,
+    "x": 850,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Provide a paved footway on the right side, separated from the carriageway, so pedestrians do not have to use the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are seen walking in the carriageway near a junction and buildings on both sides, but there is no marked or signalised crossing.",
+    "frame": 4,
+    "x": 650,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at this junction to give a safe, visible place to cross."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There is no crossing and no dropped kerbs at the point where pedestrians are using the road.",
+    "frame": 4,
+    "x": 650,
+    "y": 600,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Add dropped kerbs at the new crossing location to allow step-free access for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 409.7,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 2864,
+  "completion_tokens": 553,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

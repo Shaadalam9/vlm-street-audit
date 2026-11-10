@@ -1,0 +1,92 @@
+{
+ "clip_id": "video_0248",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0248/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0248/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0248/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0248/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0248/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A pedestrian is seen walking in the roadway near a parked car, with no marked crossing or signal visible in the immediate vicinity.\",\"frame\":4,\"x\":520,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at this location to provide a safe place for pedestrians to cross.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A row of parked vehicles, including a white van and a red car, is occupying the space adjacent to the sidewalk, effectively blocking the footway.\",\"frame\":2,\"x\":150,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Designate and enforce a no-parking zone along the left curb to keep the pedestrian footway clear and accessible.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A pedestrian is seen walking in the roadway near a parked car, with no marked crossing or signal visible in the immediate vicinity.",
+    "frame": 4,
+    "x": 520,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at this location to provide a safe place for pedestrians to cross."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A row of parked vehicles, including a white van and a red car, is occupying the space adjacent to the sidewalk, effectively blocking the footway.",
+    "frame": 2,
+    "x": 150,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Designate and enforce a no-parking zone along the left curb to keep the pedestrian footway clear and accessible."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 169.08,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 6016,
+  "completion_tokens": 382,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

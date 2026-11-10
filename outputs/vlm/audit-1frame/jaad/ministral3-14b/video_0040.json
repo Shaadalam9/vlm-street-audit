@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0040",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0040/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, usable sidewalk of at least 1.5m width along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Enforce parking regulations to ensure the footway remains clear of obstructions.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, usable sidewalk of at least 1.5m width along the right side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Enforce parking regulations to ensure the footway remains clear of obstructions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, usable sidewalk of at least 1.5m width along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Enforce parking regulations to ensure the footway remains clear of obstructions."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, usable sidewalk of at least 1.5m width along the right side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Enforce parking regulations to ensure the footway remains clear of obstructions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 11.83,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 2943,
+  "completion_tokens": 523,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

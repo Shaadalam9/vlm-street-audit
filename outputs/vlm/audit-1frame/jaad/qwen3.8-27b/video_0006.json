@@ -1,0 +1,90 @@
+{
+ "clip_id": "video_0006",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0006/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the area is an open paved surface with no defined or purpose-built footway; pedestrians are seen walking in the same open space as the parked/\",\"frame\":1,\"x\":750,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised and clearly demarcated footway along the right edge of the paved area to separate pedestrians from the vehicle\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is clear crossing demand (people walking between the shops on the left and the parking area on the right), but no marked or purpose-built crossing\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility paint and signage across the main pedestrian route between the shops and the parkin\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the area is an open paved surface with no defined or purpose-built footway; pedestrians are seen walking in the same open space as the parked/",
+    "frame": 1,
+    "x": 750,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised and clearly demarcated footway along the right edge of the paved area to separate pedestrians from the vehicle"
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is clear crossing demand (people walking between the shops on the left and the parking area on the right), but no marked or purpose-built crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility paint and signage across the main pedestrian route between the shops and the parkin"
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 34.36,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2452,
+  "completion_tokens": 389,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

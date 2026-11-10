@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0200",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0200/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0200/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0200/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0200/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0200/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road consists of a parking area and a grassy verge with no paved or designated path for pedestrians.\",\"frame\":1,\"x\":150,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a paved footway along the left side of the road, separated from the parking area by a kerb or bollards.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road has a narrow, unpaved strip between the road and the buildings, which is not a usable footway.\",\"frame\":1,\"x\":850,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Create a formal, paved footway on the right side to provide a safe and accessible route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear need to cross the road to access the buildings and parking on the other side, but no marked or unmarked crossing facility is present.\",\"frame\":3,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing (e.g., a zebra crossing) at a logical point, such as near the entrance to the buildings on the right.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road consists of a parking area and a grassy verge with no paved or designated path for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a paved footway along the left side of the road, separated from the parking area by a kerb or bollards."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road has a narrow, unpaved strip between the road and the buildings, which is not a usable footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Create a formal, paved footway on the right side to provide a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear need to cross the road to access the buildings and parking on the other side, but no marked or unmarked crossing facility is present.",
+    "frame": 3,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing (e.g., a zebra crossing) at a logical point, such as near the entrance to the buildings on the right."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 210.87,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 6116,
+  "completion_tokens": 482,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

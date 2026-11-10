@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0335",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0335/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is an open, paved area used for parking and loading, with no defined or continuous footway for pedestrians.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separated from the parking area by a kerb or bollards.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road, in front of the shop, is an open paved area with no defined footway, forcing pedestrians to walk in the roadway.\",\"frame\":1,\"x\":750,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the right side, in front of the shop, to provide a safe path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A marked zebra crossing is visible, but it is not a purpose-built facility like a raised platform or signalised crossing.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked zebra crossing is in a wide, open area with poor visibility and no physical separation from the road, making it difficult for drivers to see and stop\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs at the marked zebra crossing, as there are no kerbs at all.\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any of the frames.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lights along the road to improve visibility for both pedestrians and drivers, especially at the crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is an open, paved area used for parking and loading, with no defined or continuous footway for pedestrians.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, separated from the parking area by a kerb or bollards."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road, in front of the shop, is an open paved area with no defined footway, forcing pedestrians to walk in the roadway.",
+    "frame": 1,
+    "x": 750,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the right side, in front of the shop, to provide a safe path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A marked zebra crossing is visible, but it is not a purpose-built facility like a raised platform or signalised crossing.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked zebra crossing is in a wide, open area with poor visibility and no physical separation from the road, making it difficult for drivers to see and stop",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs at the marked zebra crossing, as there are no kerbs at all.",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing at the marked zebra crossing to improve safety and visibility."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any of the frames.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lights along the road to improve visibility for both pedestrians and drivers, especially at the crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 235.4,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 3019,
+  "completion_tokens": 708,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

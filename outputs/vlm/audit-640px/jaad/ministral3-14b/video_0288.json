@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0288",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0288/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0288/frame_00024.jpg",
+  "data/clip_sets/jaad_frames/video_0288/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0288/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0288/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is less than 1m wide\",\"frame\":3,\"x\":300,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a proper sidewalk at least 1m wide along the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is less than 1m wide\",\"frame\":3,\"x\":700,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Install a proper sidewalk at least 1m wide along the right side of the road.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians crossing without a designated crossing facility\",\"frame\":2,\"x\":500,\"y\":350,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Introduce a marked pedestrian crossing at this location to ensure safe crossing for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"no dropped kerbs at crossing points\",\"frame\":2,\"x\":500,\"y\":350,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps at pedestrian crossing points to facilitate safe access for pedestrians, including those with disabilities.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is less than 1m wide",
+    "frame": 3,
+    "x": 300,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a proper sidewalk at least 1m wide along the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is less than 1m wide",
+    "frame": 3,
+    "x": 700,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Install a proper sidewalk at least 1m wide along the right side of the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians crossing without a designated crossing facility",
+    "frame": 2,
+    "x": 500,
+    "y": 350,
+    "measure": "add_marked_crossing",
+    "suggestion": "Introduce a marked pedestrian crossing at this location to ensure safe crossing for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "no dropped kerbs at crossing points",
+    "frame": 2,
+    "x": 500,
+    "y": 350,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps at pedestrian crossing points to facilitate safe access for pedestrians, including those with disabilities."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 10.34,
+ "usage": {
+  "prompt_tokens": 2778,
+  "total_tokens": 3296,
+  "completion_tokens": 518,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

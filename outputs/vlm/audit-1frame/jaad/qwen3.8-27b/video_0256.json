@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0256",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0256/frame_00048.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A pedestrian is walking in the carriageway on the left side of the road.\",\"frame\":1,\"x\":325,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built sidewalk on the left side to provide a safe, off-road path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial and residential land use, but no marked or signalised crossing is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at a logical point to provide a safe and legal place for people to cross the road.\"},{\"need\":\"poor_crossing\",\"where\":\"road\",\"evidence\":\"The absence of any crossing facility on a road with high crossing demand creates a poor and dangerous situation for pedestrians.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Improve the crossing situation by adding a marked crossing with good visibility and, if necessary, a pedestrian refuge.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible at any potential crossing point.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install a raised crossing with dropped kerbs to improve accessibility and safety for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A pedestrian is walking in the carriageway on the left side of the road.",
+    "frame": 1,
+    "x": 325,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built sidewalk on the left side to provide a safe, off-road path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial and residential land use, but no marked or signalised crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at a logical point to provide a safe and legal place for people to cross the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "road",
+    "evidence": "The absence of any crossing facility on a road with high crossing demand creates a poor and dangerous situation for pedestrians.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Improve the crossing situation by adding a marked crossing with good visibility and, if necessary, a pedestrian refuge."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible at any potential crossing point.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install a raised crossing with dropped kerbs to improve accessibility and safety for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 36.54,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2590,
+  "completion_tokens": 527,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

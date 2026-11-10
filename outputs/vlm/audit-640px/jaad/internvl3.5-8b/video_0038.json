@@ -1,0 +1,92 @@
+{
+ "clip_id": "video_0038",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0038/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0038/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0038/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0038/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0038/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"sidewalk_1_to_3m\",\"frame\":1,\"x\":100,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a wider sidewalk to enhance pedestrian safety.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"sidewalk_1_to_3m\",\"frame\":1,\"x\":800,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a wider sidewalk to enhance pedestrian safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "sidewalk_1_to_3m",
+    "frame": 1,
+    "x": 100,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a wider sidewalk to enhance pedestrian safety."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "sidewalk_1_to_3m",
+    "frame": 1,
+    "x": 800,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install a wider sidewalk to enhance pedestrian safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 38.38,
+ "usage": {
+  "prompt_tokens": 5027,
+  "total_tokens": 5342,
+  "completion_tokens": 315,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

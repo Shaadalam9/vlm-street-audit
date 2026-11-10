@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0232",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0232/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0232/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0232/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0232/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0232/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m wide, not usable\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a proper 1m+ wide sidewalk along the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m wide, not usable\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Construct a proper 1m+ wide sidewalk along the right side of the road.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing is hard to see and obstructed by pedestrians in the carriageway\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a refuge island and traffic signals to improve crossing safety.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no dropped kerbs at the crossing\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at the crossing to ensure accessibility for pedestrians with strollers or wheelchairs.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m wide, not usable",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a proper 1m+ wide sidewalk along the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m wide, not usable",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Construct a proper 1m+ wide sidewalk along the right side of the road."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing is hard to see and obstructed by pedestrians in the carriageway",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Install a refuge island and traffic signals to improve crossing safety."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no dropped kerbs at the crossing",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at the crossing to ensure accessibility for pedestrians with strollers or wheelchairs."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 26.86,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7851,
+  "completion_tokens": 522,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0252",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0252/frame_00060.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The usable footway on the right is a narrow strip, and the space immediately beside the carriageway is occupied by a large parked truck, leaving no clear, safe,\",\"frame\":1,\"x\":850,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Rebuild the right-hand pavement to a minimum 1.5 m clear width and install a physical barrier to keep the parked truck off the pedestrian route.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A stack of wooden pallets and other goods are stored directly on the left pavement, blocking the path for pedestrians.\",\"frame\":1,\"x\":110,\"y\":620,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce a no-storage zone on the left pavement and provide a designated off-street loading bay for the adjacent commercial units.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear need to cross due to the commercial buildings and parked cars on both sides, but there is no marked or signalised crossing\",\"frame\":1,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility signage at the junction of the side road and the main carriageway.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the length of the road in the frame, which is a significant safety concern for pedestrians and\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of LED street lights along both sides of the road to improve visibility for all road users during the evening and night hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The usable footway on the right is a narrow strip, and the space immediately beside the carriageway is occupied by a large parked truck, leaving no clear, safe,",
+    "frame": 1,
+    "x": 850,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Rebuild the right-hand pavement to a minimum 1.5 m clear width and install a physical barrier to keep the parked truck off the pedestrian route."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A stack of wooden pallets and other goods are stored directly on the left pavement, blocking the path for pedestrians.",
+    "frame": 1,
+    "x": 110,
+    "y": 620,
+    "measure": "clear_footway",
+    "suggestion": "Enforce a no-storage zone on the left pavement and provide a designated off-street loading bay for the adjacent commercial units."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear need to cross due to the commercial buildings and parked cars on both sides, but there is no marked or signalised crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility signage at the junction of the side road and the main carriageway."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the length of the road in the frame, which is a significant safety concern for pedestrians and",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of LED street lights along both sides of the road to improve visibility for all road users during the evening and night hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 41.86,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2651,
+  "completion_tokens": 588,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

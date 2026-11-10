@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0172",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0172/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The entire left side of the road is occupied by stacked goods and parked vehicles, leaving no space for pedestrians to walk outside the carriageway.\",\"frame\":1,\"x\":200,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a dedicated sidewalk on the left side to provide a safe walking space for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Although a zebra crossing is marked, it is obstructed by parked vehicles and pedestrians are seen walking in the active traffic lane, indicating a lack of asafe\",\"frame\":5,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a raised pedestrian crossing with clear sightlines to ensure a safe and visible crossing point.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is obstructed by parked vehicles and pedestrians are forced to walk in the roadway, making it difficult for drivers to see and stop for\",\"frame\":5,\"x\":500,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Clear the area around the crossing and install a refuge island to improve visibility and safety for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any of the frames, which is a concern for an urban commercial area.\",\"frame\":1,\"x\":500,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for both pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The entire left side of the road is occupied by stacked goods and parked vehicles, leaving no space for pedestrians to walk outside the carriageway.",
+    "frame": 1,
+    "x": 200,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a dedicated sidewalk on the left side to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Although a zebra crossing is marked, it is obstructed by parked vehicles and pedestrians are seen walking in the active traffic lane, indicating a lack of asafe",
+    "frame": 5,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a raised pedestrian crossing with clear sightlines to ensure a safe and visible crossing point."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is obstructed by parked vehicles and pedestrians are forced to walk in the roadway, making it difficult for drivers to see and stop for",
+    "frame": 5,
+    "x": 500,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Clear the area around the crossing and install a refuge island to improve visibility and safety for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any of the frames, which is a concern for an urban commercial area.",
+    "frame": 1,
+    "x": 500,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for both pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 406.8,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6152,
+  "completion_tokens": 541,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

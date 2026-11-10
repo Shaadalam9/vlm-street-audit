@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0294",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0294/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0294/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0294/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0294/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0294/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is a snow-covered verge with no defined, usable footway.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, snow-cleared footway on the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is a snow-covered verge with no defined, usable footway.\",\"frame\":1,\"x\":750,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, snow-cleared footway on the right side of the road.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A pedestrian is seen crossing the road in front of a commercial building, but there is no marked or signalised crossing facility.\",\"frame\":4,\"x\":620,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the point where the pedestrian is crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is a snow-covered verge with no defined, usable footway.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, snow-cleared footway on the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is a snow-covered verge with no defined, usable footway.",
+    "frame": 1,
+    "x": 750,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, snow-cleared footway on the right side of the road."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A pedestrian is seen crossing the road in front of a commercial building, but there is no marked or signalised crossing facility.",
+    "frame": 4,
+    "x": 620,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the point where the pedestrian is crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 512.35,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6032,
+  "completion_tokens": 421,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

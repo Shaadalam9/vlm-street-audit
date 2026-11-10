@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0145",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0145/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0145/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0145/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0145/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0145/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"frame 3, (100, 400)\",\"frame\":3,\"x\":100,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a wider sidewalk on the left side to provide a safer pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"frame 4, (700, 400)\",\"frame\":4,\"x\":700,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a wider sidewalk on the right side to provide a safer pedestrian path.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"frame 2, (500, 300)\",\"frame\":2,\"x\":500,\"y\":300,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing to improve safety at this crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "frame 3, (100, 400)",
+    "frame": 3,
+    "x": 100,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a wider sidewalk on the left side to provide a safer pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "frame 4, (700, 400)",
+    "frame": 4,
+    "x": 700,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a wider sidewalk on the right side to provide a safer pedestrian path."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "frame 2, (500, 300)",
+    "frame": 2,
+    "x": 500,
+    "y": 300,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing to improve safety at this crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 32.57,
+ "usage": {
+  "prompt_tokens": 12730,
+  "total_tokens": 13135,
+  "completion_tokens": 405,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -26,6 +26,7 @@ outputs/vlm/*
 !outputs/vlm/audit-t07-s2/
 outputs/vlm/audit*/*
 !outputs/vlm/audit*/cities/
+!outputs/vlm/audit*/jaad/
 !outputs/vlm/judge/
 !outputs/vlm/analysis_audit/
 
@@ -48,8 +49,9 @@ data/embeddings/
 # Run logs
 logs/
 
-# Clip sets (JAAD frames may not be redistributed)
-data/clip_sets/
+# Clip sets: the lists and JAAD's labels are tracked (needed by the analysis); the JAAD frames are not
+data/clip_sets/jaad_frames/
+data/clip_sets/trial_checklist.txt
 
 # Conference paper drafts (IHIET-AI), kept out of git
 /paper/

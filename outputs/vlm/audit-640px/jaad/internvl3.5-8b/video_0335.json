@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0335",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0335/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"no footway present\",\"frame\":1,\"x\":100,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a proper footway on the left side to provide a safe pedestrian path.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Remove parked vehicles blocking the footway on the right side to ensure it is fully usable.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"crossing_demand is true but no crossing facility is present\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_signalised_crossing\",\"suggestion\":\"Install a signalised pedestrian crossing to improve safety at this location.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"no crossing facility present despite pedestrian demand\",\"frame\":1,\"x\":500,\"y\":300,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a refuge island to provide a safe waiting area for pedestrians crossing the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "no footway present",
+    "frame": 1,
+    "x": 100,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install a proper footway on the left side to provide a safe pedestrian path."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Remove parked vehicles blocking the footway on the right side to ensure it is fully usable."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "crossing_demand is true but no crossing facility is present",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_signalised_crossing",
+    "suggestion": "Install a signalised pedestrian crossing to improve safety at this location."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "no crossing facility present despite pedestrian demand",
+    "frame": 1,
+    "x": 500,
+    "y": 300,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a refuge island to provide a safe waiting area for pedestrians crossing the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 47.76,
+ "usage": {
+  "prompt_tokens": 5026,
+  "total_tokens": 5484,
+  "completion_tokens": 458,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

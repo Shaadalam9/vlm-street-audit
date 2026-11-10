@@ -1,0 +1,122 @@
+{
+ "clip_id": "video_0324",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0324/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0324/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0324/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0324/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0324/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an unpaved, snow-covered informal path.\",\"frame\":4,\"x\":150,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the left side of the road to provide a safe walking surface.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is an unpaved, snow-covered informal path.\",\"frame\":4,\"x\":850,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, continuous sidewalk on the right side of the road to provide a safe walking surface.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The unpaved path is uneven and covered in snow and slush.\",\"frame\":4,\"x\":150,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the left-side footway to remove trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The unpaved path is uneven and covered in snow and slush.\",\"frame\":4,\"x\":850,\"y\":850,\"measure\":\"repair_footway\",\"suggestion\":\"Level and pave the right-side footway to remove trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road without any designated crossing facility.\",\"frame\":4,\"x\":520,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe point for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an unpaved, snow-covered informal path.",
+    "frame": 4,
+    "x": 150,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the left side of the road to provide a safe walking surface."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is an unpaved, snow-covered informal path.",
+    "frame": 4,
+    "x": 850,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, continuous sidewalk on the right side of the road to provide a safe walking surface."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The unpaved path is uneven and covered in snow and slush.",
+    "frame": 4,
+    "x": 150,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the left-side footway to remove trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The unpaved path is uneven and covered in snow and slush.",
+    "frame": 4,
+    "x": 850,
+    "y": 850,
+    "measure": "repair_footway",
+    "suggestion": "Level and pave the right-side footway to remove trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road without any designated crossing facility.",
+    "frame": 4,
+    "x": 520,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe point for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 235.34,
+ "usage": {
+  "prompt_tokens": 2611,
+  "total_tokens": 3188,
+  "completion_tokens": 577,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

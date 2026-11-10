@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0265",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0265/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0265/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0265/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0265/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0265/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions, frame 3, point (400, 350)\",\"frame\":3,\"x\":400,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen the footway to at least 1.5m and ensure it is clear of obstructions to provide a safe walking space.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"zebra crossing without kerb ramps, frame 3, point (500, 400)\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Install kerb ramps at the zebra crossing to ensure accessibility for pedestrians, including those with mobility aids.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"zebra crossing is obstructed and hard to see, frame 3, point (500, 400)\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Add reflective markers and signage to improve the visibility of the zebra crossing and ensure it is not obstructed by parked vehicles or other obstructions.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions, frame 3, point (400, 350)",
+    "frame": 3,
+    "x": 400,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Widen the footway to at least 1.5m and ensure it is clear of obstructions to provide a safe walking space."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "zebra crossing without kerb ramps, frame 3, point (500, 400)",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "add_raised_crossing",
+    "suggestion": "Install kerb ramps at the zebra crossing to ensure accessibility for pedestrians, including those with mobility aids."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "zebra crossing is obstructed and hard to see, frame 3, point (500, 400)",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Add reflective markers and signage to improve the visibility of the zebra crossing and ensure it is not obstructed by parked vehicles or other obstructions."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.88,
+ "usage": {
+  "prompt_tokens": 7351,
+  "total_tokens": 7875,
+  "completion_tokens": 524,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

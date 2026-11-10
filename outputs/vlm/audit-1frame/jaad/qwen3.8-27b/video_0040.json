@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0040",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0040/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left footway is a narrow sidewalk that is partly blocked by a row of parked vehicles, including a white van and a police car, forcing pedestrians to step to\",\"frame\":1,\"x\":100,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the on-street parking bays further from the building line and install a continuous, unobstructed sidewalk of at least 1.8 m to provide a clear, safe path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right footway is a narrow sidewalk that is partly blocked by a row of parked vehicles, including a black sedan and a white van, forcing pedestrians to step\",\"frame\":1,\"x\":900,\"y\":700,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Relocate the on-street parking bays further from the building line and install a continuous, unobstructed sidewalk of at least 1.8 m to provide a clear, safe path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a high demand for crossing due to the commercial nature of the street with shops and offices on both sides, but there is no visible pedestrian crossing\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility signage and dropped kerbs at a logical point along the street to provide a safe and legal place for peop\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The street is an urban road with no visible street lights, which would make it dark and unsafe for pedestrians and drivers at night.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of energy-efficient LED street lights along both sides of the road to improve visibility and safety for all road users during the evening and night hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left footway is a narrow sidewalk that is partly blocked by a row of parked vehicles, including a white van and a police car, forcing pedestrians to step to",
+    "frame": 1,
+    "x": 100,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the on-street parking bays further from the building line and install a continuous, unobstructed sidewalk of at least 1.8 m to provide a clear, safe path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right footway is a narrow sidewalk that is partly blocked by a row of parked vehicles, including a black sedan and a white van, forcing pedestrians to step",
+    "frame": 1,
+    "x": 900,
+    "y": 700,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Relocate the on-street parking bays further from the building line and install a continuous, unobstructed sidewalk of at least 1.8 m to provide a clear, safe path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a high demand for crossing due to the commercial nature of the street with shops and offices on both sides, but there is no visible pedestrian crossing",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility signage and dropped kerbs at a logical point along the street to provide a safe and legal place for peop"
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The street is an urban road with no visible street lights, which would make it dark and unsafe for pedestrians and drivers at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of energy-efficient LED street lights along both sides of the road to improve visibility and safety for all road users during the evening and night hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 103.47,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2707,
+  "completion_tokens": 644,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0004",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0004/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0004/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0004/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0004/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0004/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the parking area is an open, unmarked expanse of tarmac with no defined pedestrian path.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway along the left edge of the parking area to provide a safe, dedicated path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the parking area is an open, unmarked expanse of tarmac with no defined pedestrian path.\",\"frame\":1,\"x\":750,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway along the right edge of the parking area to provide a safe, dedicated path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand for crossing due to the commercial nature of the area, but no marked or purpose-built crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a clearly marked pedestrian crossing with high-visibility paint and signage to provide a safe and legal place for people to cross the parking area.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the parking area is an open, unmarked expanse of tarmac with no defined pedestrian path.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway along the left edge of the parking area to provide a safe, dedicated path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the parking area is an open, unmarked expanse of tarmac with no defined pedestrian path.",
+    "frame": 1,
+    "x": 750,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway along the right edge of the parking area to provide a safe, dedicated path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand for crossing due to the commercial nature of the area, but no marked or purpose-built crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a clearly marked pedestrian crossing with high-visibility paint and signage to provide a safe and legal place for people to cross the parking area."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 141.74,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 2783,
+  "completion_tokens": 472,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

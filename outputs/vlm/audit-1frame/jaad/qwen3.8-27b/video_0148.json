@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0148",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0148/frame_00036.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous paved sidewalk; only a grassy verge and a trodden strip between the road edge and the buildings.\",\"frame\":1,\"x\":200,\"y\":620,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway at least 1.5 m wide along the left side, separated from the carriageway by a raised kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No formal sidewalk; pedestrians are walking on an uneven dirt and gravel shoulder beside the road.\",\"frame\":1,\"x\":800,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Build a paved footway on the right side with a dropped kerb at the junction to give pedestrians a safe, level route off the carriageway.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is uneven, with loose gravel, potholes and a mound of earth.\",\"frame\":1,\"x\":850,\"y\":680,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the right-side path, removing the earth mound and filling potholes to create a smooth, even walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a junction and activity on both sides creating crossing demand, but no marked or purpose-built crossing is visible.\",\"frame\":1,\"x\":500,\"y\":600,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility markings and signage at the junction to give pedestrians a defined, safer place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous paved sidewalk; only a grassy verge and a trodden strip between the road edge and the buildings.",
+    "frame": 1,
+    "x": 200,
+    "y": 620,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway at least 1.5 m wide along the left side, separated from the carriageway by a raised kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No formal sidewalk; pedestrians are walking on an uneven dirt and gravel shoulder beside the road.",
+    "frame": 1,
+    "x": 800,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Build a paved footway on the right side with a dropped kerb at the junction to give pedestrians a safe, level route off the carriageway."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right is uneven, with loose gravel, potholes and a mound of earth.",
+    "frame": 1,
+    "x": 850,
+    "y": 680,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the right-side path, removing the earth mound and filling potholes to create a smooth, even walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a junction and activity on both sides creating crossing demand, but no marked or purpose-built crossing is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 600,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility markings and signage at the junction to give pedestrians a defined, safer place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 36.74,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2621,
+  "completion_tokens": 558,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

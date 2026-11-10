@@ -1,0 +1,130 @@
+{
+ "clip_id": "video_0150",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0150/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal path under 1m, partly blocked by obstructions\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk on the left side to provide safe pedestrian access.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"obstruction by parked vehicles or debris on informal path\",\"frame\":1,\"x\":150,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions and ensure the left-side informal path is clear for pedestrian use.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven or broken sections on informal path\",\"frame\":1,\"x\":250,\"y\":420,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections on the left-side informal path to prevent tripping hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven or broken sections on narrow sidewalk\",\"frame\":1,\"x\":600,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections on the right-side sidewalk to ensure pedestrian safety.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians crossing in the absence of a crossing facility\",\"frame\":1,\"x\":400,\"y\":470,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"inadequate street lighting along the urban road\",\"frame\":1,\"x\":300,\"y\":100,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install additional street lights to improve visibility and safety along the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal path under 1m, partly blocked by obstructions",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk on the left side to provide safe pedestrian access."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "obstruction by parked vehicles or debris on informal path",
+    "frame": 1,
+    "x": 150,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions and ensure the left-side informal path is clear for pedestrian use."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven or broken sections on informal path",
+    "frame": 1,
+    "x": 250,
+    "y": 420,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections on the left-side informal path to prevent tripping hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven or broken sections on narrow sidewalk",
+    "frame": 1,
+    "x": 600,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections on the right-side sidewalk to ensure pedestrian safety."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians crossing in the absence of a crossing facility",
+    "frame": 1,
+    "x": 400,
+    "y": 470,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at this location to facilitate safe crossing for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "inadequate street lighting along the urban road",
+    "frame": 1,
+    "x": 300,
+    "y": 100,
+    "measure": "add_street_lighting",
+    "suggestion": "Install additional street lights to improve visibility and safety along the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 13.17,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 3070,
+  "completion_tokens": 650,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

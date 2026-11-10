@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0067",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0067/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0067/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0067/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0067/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0067/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"Pedestrians are walking on the road surface next to the parked car, indicating a lack of a safe, continuous footway.\",\"frame\":4,\"x\":150,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved sidewalk on the left side to provide a safe walking surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Multiple pedestrians are seen crossing the road at an unmarked location, indicating a high demand for a safe crossing facility.\",\"frame\":5,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing with appropriate signage to provide a safe and legal place for people to cross the street.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible along the road in any of the frames, which is a safety concern in an urban area.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of streetlights along the road to improve visibility and safety for both pedestrians and drivers during the evening and night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "Pedestrians are walking on the road surface next to the parked car, indicating a lack of a safe, continuous footway.",
+    "frame": 4,
+    "x": 150,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved sidewalk on the left side to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Multiple pedestrians are seen crossing the road at an unmarked location, indicating a high demand for a safe crossing facility.",
+    "frame": 5,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing with appropriate signage to provide a safe and legal place for people to cross the street."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible along the road in any of the frames, which is a safety concern in an urban area.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of streetlights along the road to improve visibility and safety for both pedestrians and drivers during the evening and night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 322.52,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6071,
+  "completion_tokens": 460,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

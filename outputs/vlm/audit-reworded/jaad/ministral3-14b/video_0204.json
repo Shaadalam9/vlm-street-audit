@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0204",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0204/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0204/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0204/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0204/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0204/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":true,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and obstructed, frame 1, point (300, 400)\",\"frame\":1,\"x\":300,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Extend and widen the footway on the left side to at least 1.5 meters and ensure it is free from obstructions to provide a safe walking space.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and obstructed, frame 1, point (700, 400)\",\"frame\":1,\"x\":700,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Extend and widen the footway on the right side to at least 1.5 meters and ensure it is free from obstructions to provide a safe walking space.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing is hard to see and obstructed, frame 3, point (500, 350)\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a refuge island and enhance the visibility of the crossing with better markings and signage to ensure drivers stop for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no kerb ramps at the crossing, frame 3, point (500, 350)\",\"frame\":3,\"x\":500,\"y\":350,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at both sides of the crossing to facilitate safe access for pedestrians, including those with mobility issues.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": true,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and obstructed, frame 1, point (300, 400)",
+    "frame": 1,
+    "x": 300,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Extend and widen the footway on the left side to at least 1.5 meters and ensure it is free from obstructions to provide a safe walking space."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and obstructed, frame 1, point (700, 400)",
+    "frame": 1,
+    "x": 700,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Extend and widen the footway on the right side to at least 1.5 meters and ensure it is free from obstructions to provide a safe walking space."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing is hard to see and obstructed, frame 3, point (500, 350)",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "improve_crossing",
+    "suggestion": "Install a refuge island and enhance the visibility of the crossing with better markings and signage to ensure drivers stop for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no kerb ramps at the crossing, frame 3, point (500, 350)",
+    "frame": 3,
+    "x": 500,
+    "y": 350,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at both sides of the crossing to facilitate safe access for pedestrians, including those with mobility issues."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 25.05,
+ "usage": {
+  "prompt_tokens": 7351,
+  "total_tokens": 7973,
+  "completion_tokens": 622,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

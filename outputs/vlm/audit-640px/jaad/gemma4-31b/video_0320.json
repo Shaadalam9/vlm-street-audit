@@ -1,0 +1,152 @@
+{
+ "clip_id": "video_0320",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0320/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an informal path heavily obstructed by snow.\",\"frame\":5,\"x\":100,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper, raised sidewalk on the left side of the road.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is an informal path heavily obstructed by snow.\",\"frame\":5,\"x\":900,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a proper, raised sidewalk on the right side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Large piles of snow completely block the walking area.\",\"frame\":5,\"x\":100,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a regular snow removal programme to keep the left footway clear.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Large piles of snow completely block the walking area.\",\"frame\":5,\"x\":900,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a regular snow removal programme to keep the right footway clear.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven snow and ice create significant trip hazards.\",\"frame\":5,\"x\":100,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Level the surface and treat it with grit to prevent slips and trips on the left side.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Uneven snow and ice create significant trip hazards.\",\"frame\":5,\"x\":900,\"y\":800,\"measure\":\"repair_footway\",\"suggestion\":\"Level the surface and treat it with grit to prevent slips and trips on the right side.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the road without any designated crossing facility.\",\"frame\":5,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe place for people to cross.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The lack of any crossing facility and the presence of snow make crossing dangerous.\",\"frame\":5,\"x\":500,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Install a signalised or marked crossing to improve safety for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an informal path heavily obstructed by snow.",
+    "frame": 5,
+    "x": 100,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper, raised sidewalk on the left side of the road."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is an informal path heavily obstructed by snow.",
+    "frame": 5,
+    "x": 900,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a proper, raised sidewalk on the right side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Large piles of snow completely block the walking area.",
+    "frame": 5,
+    "x": 100,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement a regular snow removal programme to keep the left footway clear."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Large piles of snow completely block the walking area.",
+    "frame": 5,
+    "x": 900,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement a regular snow removal programme to keep the right footway clear."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven snow and ice create significant trip hazards.",
+    "frame": 5,
+    "x": 100,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Level the surface and treat it with grit to prevent slips and trips on the left side."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Uneven snow and ice create significant trip hazards.",
+    "frame": 5,
+    "x": 900,
+    "y": 800,
+    "measure": "repair_footway",
+    "suggestion": "Level the surface and treat it with grit to prevent slips and trips on the right side."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the road without any designated crossing facility.",
+    "frame": 5,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe place for people to cross."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The lack of any crossing facility and the presence of snow make crossing dangerous.",
+    "frame": 5,
+    "x": 500,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Install a signalised or marked crossing to improve safety for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 297.51,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3340,
+  "completion_tokens": 755,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

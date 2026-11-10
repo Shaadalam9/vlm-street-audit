@@ -1,7 +1,7 @@
 """The five figures of the paper, made to be understood at a glance.
 
-Reads the published answers and analysis tables (outputs/vlm/) and, for Figures 1 and 3, the frames of seven city
-clips (data/snippets/, cut by make_snippets.py). Writes docs/figures/paper/fig*.png and .html.
+Reads the published answers and analysis tables (outputs/vlm/) and, for Figures 1 and 3, seven frames kept in
+docs/figures/paper/frames/. Writes docs/figures/paper/fig*.png and .html.
 
 Run (after analyse_audit.py):  uv run python scripts/analysis/paper_figures.py
 """
@@ -9,7 +9,9 @@ Run (after analyse_audit.py):  uv run python scripts/analysis/paper_figures.py
 import base64
 import io
 import json
+import shutil
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -22,6 +24,9 @@ from vlm_street_audit.config import PROJECT_ROOT
 ROOT = PROJECT_ROOT
 OUT = ROOT / "docs" / "figures" / "paper"
 TABLES = ROOT / "outputs" / "vlm" / "analysis_audit"
+# The seven frames shown in Figures 1 and 3, copied from data/snippets/ (not in git) so the figures can be redrawn
+# from a fresh clone.
+FRAMES = OUT / "frames"
 FONT = dict(family="Arial", size=15, color="#1f1f1f")
 INK_MUTED = "#5f5e5a"
 MODEL_NAMES = {
@@ -57,7 +62,7 @@ def save(fig: go.Figure, name: str, width: int, height: int) -> None:
     fig.update_layout(
         font=FONT, template="plotly_white", width=width, height=height, paper_bgcolor="white", plot_bgcolor="white"
     )
-    fig.write_html(OUT / f"{name}.html", include_plotlyjs="cdn")
+    fig.write_html(OUT / f"{name}.html", include_plotlyjs="cdn", div_id=name)  # fixed id, same file
     fig.write_image(OUT / f"{name}.png", scale=2)
     print("wrote", name)
 
@@ -88,6 +93,16 @@ WORLD_GEO = dict(
     showframe=False,
     domain=dict(x=[0.0, 1.0], y=[ROW_H + ROW_GAP, 1 - ROW_H - ROW_GAP]),
 )
+
+
+def frame_file(record: dict, number: int) -> Path:
+    """The answer's frame `number` (1-based): the copy in FRAMES, made from data/snippets/ the first time."""
+    source = ROOT / record["frames"][number - 1]
+    copy = FRAMES / f"{record['clip_id']}_{source.name}"
+    if not copy.exists():
+        FRAMES.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, copy)
+    return copy
 
 
 def need_entry(clip: str, auditor: str, need: str) -> tuple[dict, dict]:
@@ -179,7 +194,7 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
     img_h = ROW_H - 0.035  # the rest of the row is the panel title
     for n, (clip, auditor, need, title, tag) in enumerate(EXAMPLES):
         record, entry = need_entry(clip, auditor, need)
-        frame = ROOT / record["frames"][entry["frame"] - 1]
+        frame = frame_file(record, entry["frame"])
         top = n < 3
         x0, y0 = 0.015 + (n % 3) * (THUMB_W + 0.0225), (1 - ROW_H if top else 0.0)
         fig.add_layout_image(
@@ -300,7 +315,7 @@ def figure_world(city: pd.DataFrame) -> tuple[pd.Series, list[dict]]:
     )
     # Drawn at full size (the frames need the pixels), so no further scaling.
     OUT.mkdir(parents=True, exist_ok=True)
-    fig.write_html(OUT / "fig1_world.html", include_plotlyjs="cdn")
+    fig.write_html(OUT / "fig1_world.html", include_plotlyjs="cdn", div_id="fig1_world")
     fig.write_image(OUT / "fig1_world.png", scale=1)
     print("wrote fig1_world")
     return city.gap.value_counts(), used
@@ -456,7 +471,7 @@ def figure_one_street() -> None:
         for m in MODEL_NAMES
     }
     record = json.loads((ROOT / "outputs/vlm/audit/cities/qwen3.8-27b" / f"{STREET_CLIP}.json").read_text())
-    frame = ROOT / record["frames"][STREET_FRAME - 1]
+    frame = frame_file(record, STREET_FRAME)
     fig = go.Figure()
     img_w = 0.47
     img_h = img_w * width / height * 9 / 16
@@ -571,7 +586,7 @@ def figure_one_street() -> None:
     fig.update_layout(
         font=FONT, template="plotly_white", width=width, height=height, paper_bgcolor="white", plot_bgcolor="white"
     )
-    fig.write_html(OUT / "fig3_one_street.html", include_plotlyjs="cdn")
+    fig.write_html(OUT / "fig3_one_street.html", include_plotlyjs="cdn", div_id="fig3_one_street")
     fig.write_image(OUT / "fig3_one_street.png", scale=1)
     print("wrote fig3_one_street")
 

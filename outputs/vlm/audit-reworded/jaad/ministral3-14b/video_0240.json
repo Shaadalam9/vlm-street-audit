@@ -1,0 +1,122 @@
+{
+ "clip_id": "video_0240",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0240/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0240/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0240/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0240/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0240/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions, frame 5, point (400, 350)\",\"frame\":5,\"x\":400,\"y\":350,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the narrow footway on the left side to at least 1.5m and ensure it is clear of obstructions to provide a safe walking space.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions, frame 5, point (600, 350)\",\"frame\":5,\"x\":600,\"y\":350,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the obstructions on the right-side footway to ensure it is fully usable for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on the footway, frame 4, point (300, 400)\",\"frame\":4,\"x\":300,\"y\":400,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections on the left-side footway to eliminate trip hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing without kerb ramps and poor visibility, frame 3, point (500, 300)\",\"frame\":3,\"x\":500,\"y\":300,\"measure\":\"improve_crossing\",\"suggestion\":\"Install kerb ramps and enhance the visibility of the crossing with better markings and signage to improve pedestrian safety.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"no kerb ramps at the crossing, frame 3, point (500, 300)\",\"frame\":3,\"x\":500,\"y\":300,\"measure\":\"add_raised_crossing\",\"suggestion\":\"Add kerb ramps at the crossing to ensure accessibility and safety for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions, frame 5, point (400, 350)",
+    "frame": 5,
+    "x": 400,
+    "y": 350,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the narrow footway on the left side to at least 1.5m and ensure it is clear of obstructions to provide a safe walking space."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions, frame 5, point (600, 350)",
+    "frame": 5,
+    "x": 600,
+    "y": 350,
+    "measure": "clear_footway",
+    "suggestion": "Clear the obstructions on the right-side footway to ensure it is fully usable for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on the footway, frame 4, point (300, 400)",
+    "frame": 4,
+    "x": 300,
+    "y": 400,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections on the left-side footway to eliminate trip hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing without kerb ramps and poor visibility, frame 3, point (500, 300)",
+    "frame": 3,
+    "x": 500,
+    "y": 300,
+    "measure": "improve_crossing",
+    "suggestion": "Install kerb ramps and enhance the visibility of the crossing with better markings and signage to improve pedestrian safety."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "no kerb ramps at the crossing, frame 3, point (500, 300)",
+    "frame": 3,
+    "x": 500,
+    "y": 300,
+    "measure": "add_raised_crossing",
+    "suggestion": "Add kerb ramps at the crossing to ensure accessibility and safety for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.19,
+ "usage": {
+  "prompt_tokens": 7351,
+  "total_tokens": 8051,
+  "completion_tokens": 700,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

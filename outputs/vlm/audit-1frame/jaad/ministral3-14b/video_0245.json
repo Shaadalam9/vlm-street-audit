@@ -1,0 +1,110 @@
+{
+ "clip_id": "video_0245",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0245/frame_00048.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No footway on the right side, pedestrians must walk in the road\",\"frame\":1,\"x\":700,\"y\":400,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, usable sidewalk along the right side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Obstruction on the left footway due to parked vehicles and snow piles\",\"frame\":1,\"x\":100,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Remove obstructions and ensure the left footway is clear and accessible for pedestrians by enforcing parking regulations and clearing snow regularly.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven and broken sections on the left footway\",\"frame\":1,\"x\":200,\"y\":450,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and resurface the left footway to eliminate trip hazards and ensure a smooth walking surface.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"Pedestrian crossing demand due to shops and homes on both sides, but no crossing facility\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with adequate signage to facilitate safe crossing for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No footway on the right side, pedestrians must walk in the road",
+    "frame": 1,
+    "x": 700,
+    "y": 400,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, usable sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Obstruction on the left footway due to parked vehicles and snow piles",
+    "frame": 1,
+    "x": 100,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Remove obstructions and ensure the left footway is clear and accessible for pedestrians by enforcing parking regulations and clearing snow regularly."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven and broken sections on the left footway",
+    "frame": 1,
+    "x": 200,
+    "y": 450,
+    "measure": "repair_footway",
+    "suggestion": "Repair and resurface the left footway to eliminate trip hazards and ensure a smooth walking surface."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "Pedestrian crossing demand due to shops and homes on both sides, but no crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with adequate signage to facilitate safe crossing for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 11.89,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 2963,
+  "completion_tokens": 543,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

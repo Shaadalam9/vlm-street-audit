@@ -1,0 +1,82 @@
+{
+ "clip_id": "video_0165",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0165/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0165/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0165/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0165/frame_00162.jpg",
+  "data/clip_sets/jaad_frames/video_0165/frame_00216.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"poor_crossing\",\"where\":\"right_side\",\"evidence\":\"zebra crossing is poorly marked and hard to see, pedestrians crossing in front of vehicles without clear signalisation\",\"frame\":3,\"x\":500,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Install raised platforms or reflective road markings at the zebra crossing to enhance visibility and ensure drivers stop for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "poor_crossing",
+    "where": "right_side",
+    "evidence": "zebra crossing is poorly marked and hard to see, pedestrians crossing in front of vehicles without clear signalisation",
+    "frame": 3,
+    "x": 500,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Install raised platforms or reflective road markings at the zebra crossing to enhance visibility and ensure drivers stop for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.28,
+ "usage": {
+  "prompt_tokens": 7351,
+  "total_tokens": 7653,
+  "completion_tokens": 302,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

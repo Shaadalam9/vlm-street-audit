@@ -1,0 +1,90 @@
+{
+ "clip_id": "video_0288",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0288/frame_00048.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"right_side\",\"evidence\":\"A pedestrian is walking in the carriageway on the right, and there are homes and a building on both sides creating a reason to cross, but no marked or signalled\",\"frame\":1,\"x\":620,\"y\":720,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the point where the pedestrian is walking to provide a safe, visible place to cross.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"It is an urban residential street with buildings on both sides, but no street lights are visible along the road in the daytime\",\"frame\":1,\"x\":500,\"y\":400,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility for pedestrians and drivers, especially given the lack of a formal crossing.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "right_side",
+    "evidence": "A pedestrian is walking in the carriageway on the right, and there are homes and a building on both sides creating a reason to cross, but no marked or signalled",
+    "frame": 1,
+    "x": 620,
+    "y": 720,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the point where the pedestrian is walking to provide a safe, visible place to cross."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "It is an urban residential street with buildings on both sides, but no street lights are visible along the road in the daytime",
+    "frame": 1,
+    "x": 500,
+    "y": 400,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility for pedestrians and drivers, especially given the lack of a formal crossing."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 22.89,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2454,
+  "completion_tokens": 391,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,140 @@
+{
+ "clip_id": "video_0317",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0317/frame_00108.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous purpose-built sidewalk; only a trodden strip between the snow bank and the building line.\",\"frame\":1,\"x\":250,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, snow-cleared sidewalk on the left to give pedestrians a safe, level route away from the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous purpose-built sidewalk; only a trodden strip between the snow bank and the building line.\",\"frame\":1,\"x\":750,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, snow-cleared sidewalk on the right to give pedestrians a safe, level route away from the carriageway.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A parked vehicle and piled snow encroach on the usable walking strip.\",\"frame\":1,\"x\":50,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Relocate the parked vehicle and clear the snow pile to restore a clear, unobstructed walking strip on the left.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"A large snow bank and roadside structures encroach on the usable walking strip.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the snow bank and remove roadside obstructions to restore a clear, unobstructed walking strip on the right.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The walking strip is uneven and broken by snow ridges and slush.\",\"frame\":1,\"x\":250,\"y\":720,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the left walking strip to remove the uneven, slushy trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The walking strip is uneven and broken by snow ridges and slush.\",\"frame\":1,\"x\":750,\"y\":720,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface and level the right walking strip to remove the uneven, slushy trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"People are seen in the carriageway with no marked or signalised crossing, while shops and homes line both sides.\",\"frame\":1,\"x\":480,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at this high-demand point to give people a safe place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous purpose-built sidewalk; only a trodden strip between the snow bank and the building line.",
+    "frame": 1,
+    "x": 250,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, snow-cleared sidewalk on the left to give pedestrians a safe, level route away from the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous purpose-built sidewalk; only a trodden strip between the snow bank and the building line.",
+    "frame": 1,
+    "x": 750,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, snow-cleared sidewalk on the right to give pedestrians a safe, level route away from the carriageway."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A parked vehicle and piled snow encroach on the usable walking strip.",
+    "frame": 1,
+    "x": 50,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Relocate the parked vehicle and clear the snow pile to restore a clear, unobstructed walking strip on the left."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "A large snow bank and roadside structures encroach on the usable walking strip.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Clear the snow bank and remove roadside obstructions to restore a clear, unobstructed walking strip on the right."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The walking strip is uneven and broken by snow ridges and slush.",
+    "frame": 1,
+    "x": 250,
+    "y": 720,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the left walking strip to remove the uneven, slushy trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The walking strip is uneven and broken by snow ridges and slush.",
+    "frame": 1,
+    "x": 750,
+    "y": 720,
+    "measure": "repair_footway",
+    "suggestion": "Resurface and level the right walking strip to remove the uneven, slushy trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "People are seen in the carriageway with no marked or signalised crossing, while shops and homes line both sides.",
+    "frame": 1,
+    "x": 480,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at this high-demand point to give people a safe place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 38.61,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2827,
+  "completion_tokens": 764,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

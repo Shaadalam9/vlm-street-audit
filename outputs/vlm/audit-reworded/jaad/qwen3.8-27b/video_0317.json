@@ -1,0 +1,142 @@
+{
+ "clip_id": "video_0317",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0317/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0317/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0317/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0317/frame_00162.jpg",
+  "data/clip_sets/jaad_frames/video_0317/frame_00216.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has no proper sidewalk; the path is a narrow, snow-covered strip between the parked cars and the buildings.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separated from the carriageway by a raised kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side has no proper sidewalk; the path is a narrow, snow-covered strip between the road and the buildings.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a continuous, paved footway on the right side, separated from the carriageway by a raised kerb.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is obstructed by a row of parked vehicles, including a silver car and a green van.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Provide designated off-street parking or a parking bay that does not encroach on the pedestrian path.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The path on the left is uneven and covered in packed snow and slush, creating a significant trip hazard.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Ensure the footway is properly graded and maintained to be free of snow and ice.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The path on the right is uneven and covered in packed snow and slush, creating a significant trip hazard.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Ensure the footway is properly graded and maintained to be free of snow and ice.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is poorly visible due to the wide, unlit road and the lack of a refuge, making it difficult for drivers to see pedestrians.\",\"frame\":3,\"x\":500,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a raised pedestrian crossing with a central refuge island to improve visibility and safety.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs at the marked crossing, making it difficult for pedestrians, especially those with mobility issues, to cross.\",\"frame\":3,\"x\":500,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dropped kerbs at both ends of the pedestrian crossing to provide a smooth transition for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has no proper sidewalk; the path is a narrow, snow-covered strip between the parked cars and the buildings.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous, paved footway on the left side, separated from the carriageway by a raised kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side has no proper sidewalk; the path is a narrow, snow-covered strip between the road and the buildings.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a continuous, paved footway on the right side, separated from the carriageway by a raised kerb."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The informal path on the left is obstructed by a row of parked vehicles, including a silver car and a green van.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Provide designated off-street parking or a parking bay that does not encroach on the pedestrian path."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The path on the left is uneven and covered in packed snow and slush, creating a significant trip hazard.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Ensure the footway is properly graded and maintained to be free of snow and ice."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The path on the right is uneven and covered in packed snow and slush, creating a significant trip hazard.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Ensure the footway is properly graded and maintained to be free of snow and ice."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is poorly visible due to the wide, unlit road and the lack of a refuge, making it difficult for drivers to see pedestrians.",
+    "frame": 3,
+    "x": 500,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install a raised pedestrian crossing with a central refuge island to improve visibility and safety."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs at the marked crossing, making it difficult for pedestrians, especially those with mobility issues, to cross.",
+    "frame": 3,
+    "x": 500,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install dropped kerbs at both ends of the pedestrian crossing to provide a smooth transition for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 266.2,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 6451,
+  "completion_tokens": 817,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

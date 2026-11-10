@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0121",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0121/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0121/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0121/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0121/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0121/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":false,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":false,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions\",\"frame\":1,\"x\":200,\"y\":400,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"footway is partly blocked by parked vehicles or other obstructions\",\"frame\":1,\"x\":150,\"y\":450,\"measure\":\"clear_footway\",\"suggestion\":\"Install barriers to prevent parking or stalls on the footway and enforce regulations to keep it clear.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by obstructions\",\"frame\":1,\"x\":800,\"y\":450,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is partly blocked by parked vehicles or other obstructions\",\"frame\":1,\"x\":850,\"y\":400,\"measure\":\"clear_footway\",\"suggestion\":\"Install barriers to prevent parking or stalls on the footway and enforce regulations to keep it clear.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": false,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": false,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions",
+    "frame": 1,
+    "x": 200,
+    "y": 400,
+    "measure": "improve_crossing",
+    "suggestion": "Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+    "frame": 1,
+    "x": 150,
+    "y": 450,
+    "measure": "clear_footway",
+    "suggestion": "Install barriers to prevent parking or stalls on the footway and enforce regulations to keep it clear."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by obstructions",
+    "frame": 1,
+    "x": 800,
+    "y": 450,
+    "measure": "improve_crossing",
+    "suggestion": "Widen and pave the footway to a minimum of 1.5m width and ensure it is clear of obstructions."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is partly blocked by parked vehicles or other obstructions",
+    "frame": 1,
+    "x": 850,
+    "y": 400,
+    "measure": "clear_footway",
+    "suggestion": "Install barriers to prevent parking or stalls on the footway and enforce regulations to keep it clear."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 27.33,
+ "usage": {
+  "prompt_tokens": 7329,
+  "total_tokens": 7876,
+  "completion_tokens": 547,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

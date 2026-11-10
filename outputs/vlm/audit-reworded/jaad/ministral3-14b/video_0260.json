@@ -1,0 +1,122 @@
+{
+ "clip_id": "video_0260",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0260/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0260/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0260/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0260/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0260/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"informal path under 1m, frame 1, (x: 300, y: 500)\",\"frame\":1,\"x\":300,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, usable sidewalk along the left side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"informal path under 1m, frame 1, (x: 700, y: 500)\",\"frame\":1,\"x\":700,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a continuous, usable sidewalk along the right side of the road to provide a safe walking space for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"marked crossing without clear visibility and no kerb ramps, frame 3, (x: 500, y: 550)\",\"frame\":3,\"x\":500,\"y\":550,\"measure\":\"improve_crossing\",\"suggestion\":\"Add traffic signals and kerb ramps at the crossing to enhance visibility and ensure drivers stop for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"uneven sections on informal path, frame 1, (x: 250, y: 520)\",\"frame\":1,\"x\":250,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections of the informal path to eliminate trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"uneven sections on informal path, frame 1, (x: 750, y: 520)\",\"frame\":1,\"x\":750,\"y\":520,\"measure\":\"repair_footway\",\"suggestion\":\"Repair and level the uneven sections of the informal path to eliminate trip hazards for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "informal path under 1m, frame 1, (x: 300, y: 500)",
+    "frame": 1,
+    "x": 300,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, usable sidewalk along the left side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "informal path under 1m, frame 1, (x: 700, y: 500)",
+    "frame": 1,
+    "x": 700,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a continuous, usable sidewalk along the right side of the road to provide a safe walking space for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "marked crossing without clear visibility and no kerb ramps, frame 3, (x: 500, y: 550)",
+    "frame": 3,
+    "x": 500,
+    "y": 550,
+    "measure": "improve_crossing",
+    "suggestion": "Add traffic signals and kerb ramps at the crossing to enhance visibility and ensure drivers stop for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "uneven sections on informal path, frame 1, (x: 250, y: 520)",
+    "frame": 1,
+    "x": 250,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections of the informal path to eliminate trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "uneven sections on informal path, frame 1, (x: 750, y: 520)",
+    "frame": 1,
+    "x": 750,
+    "y": 520,
+    "measure": "repair_footway",
+    "suggestion": "Repair and level the uneven sections of the informal path to eliminate trip hazards for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 26.47,
+ "usage": {
+  "prompt_tokens": 7351,
+  "total_tokens": 8038,
+  "completion_tokens": 687,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

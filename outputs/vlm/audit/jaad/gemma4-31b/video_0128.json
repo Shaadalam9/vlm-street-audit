@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0128",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0128/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0128/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0128/frame_00120.jpg",
+  "data/clip_sets/jaad_frames/video_0128/frame_00180.jpg",
+  "data/clip_sets/jaad_frames/video_0128/frame_00240.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The footway is an informal path covered in snow without a purpose-built sidewalk.\",\"frame\":4,\"x\":150,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a raised, paved sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The footway is an informal path covered in snow without a purpose-built sidewalk.\",\"frame\":4,\"x\":850,\"y\":800,\"measure\":\"build_footway\",\"suggestion\":\"Construct a raised, paved sidewalk on the right side to provide a safe, dedicated space for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is heavily obscured by snow and lacks visibility.\",\"frame\":3,\"x\":570,\"y\":650,\"measure\":\"improve_crossing\",\"suggestion\":\"Install high-visibility thermoplastic markings and clear the snow from the crossing area to improve driver awareness.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The footway is an informal path covered in snow without a purpose-built sidewalk.",
+    "frame": 4,
+    "x": 150,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a raised, paved sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The footway is an informal path covered in snow without a purpose-built sidewalk.",
+    "frame": 4,
+    "x": 850,
+    "y": 800,
+    "measure": "build_footway",
+    "suggestion": "Construct a raised, paved sidewalk on the right side to provide a safe, dedicated space for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is heavily obscured by snow and lacks visibility.",
+    "frame": 3,
+    "x": 570,
+    "y": 650,
+    "measure": "improve_crossing",
+    "suggestion": "Install high-visibility thermoplastic markings and clear the snow from the crossing area to improve driver awareness."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 285.55,
+ "usage": {
+  "prompt_tokens": 2586,
+  "total_tokens": 3026,
+  "completion_tokens": 440,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

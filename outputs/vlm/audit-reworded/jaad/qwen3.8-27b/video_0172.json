@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0172",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0172/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The area to the left of the vehicle is an open, paved surface with no defined sidewalk; it is occupied by stacked goods and parked cars, forcing pedestrians to \",\"frame\":1,\"x\":200,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a dedicated, paved footway along the left side of the road, separated from the vehicle area by a kerb.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked pedestrian crossing is obstructed by a large stack of goods on the left and a parked car on the right, severely limiting visibility and safe passage.\",\"frame\":5,\"x\":500,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the stacked goods and enforce a no-parking zone immediately adjacent to the crossing to ensure clear sightlines and a safe path for pedestrians.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"The pedestrian crossing is marked on the flat pavement, but there are no visible dropped kerbs or ramps to facilitate access for wheelchairs or prams.\",\"frame\":5,\"x\":500,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Install dropped kerbs at both ends of the marked crossing to create a level transition for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The area to the left of the vehicle is an open, paved surface with no defined sidewalk; it is occupied by stacked goods and parked cars, forcing pedestrians to ",
+    "frame": 1,
+    "x": 200,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a dedicated, paved footway along the left side of the road, separated from the vehicle area by a kerb."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked pedestrian crossing is obstructed by a large stack of goods on the left and a parked car on the right, severely limiting visibility and safe passage.",
+    "frame": 5,
+    "x": 500,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the stacked goods and enforce a no-parking zone immediately adjacent to the crossing to ensure clear sightlines and a safe path for pedestrians."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "The pedestrian crossing is marked on the flat pavement, but there are no visible dropped kerbs or ramps to facilitate access for wheelchairs or prams.",
+    "frame": 5,
+    "x": 500,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Install dropped kerbs at both ends of the marked crossing to create a level transition for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 328.87,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 6128,
+  "completion_tokens": 494,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

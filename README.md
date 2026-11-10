@@ -166,6 +166,9 @@ Further figures, each with an interactive HTML version, are in [`docs/figures/au
 |---|---|
 | Video clips (150 city clips, 10 s each), their frames, and a snapshot of the code | [Dropbox folder](https://www.dropbox.com/scl/fo/cl1e4cgdjlj43i5gy4gsy/ALxGI5IgWYm9RRxrfey5AYA?rlkey=cu2udsf5ooey7cp2ff6efu4ut&st=zjngk7m6&dl=0) |
 | Every model answer on the city clips: main audit and the four robustness runs (5,400 files) | [`outputs/vlm/<run>/cities/<model>/`](outputs/vlm/) |
+| Every model answer on the JAAD clips: main audit, reworded, one frame, half resolution (2,880 files) | [`outputs/vlm/<run>/jaad/<model>/`](outputs/vlm/) |
+| The clip sets and JAAD's labels for the 120 JAAD clips | [`data/clip_sets/`](data/clip_sets/) |
+| The seven frames shown in Figures 1 and 3 | [`docs/figures/paper/frames/`](docs/figures/paper/frames/) |
 | Every judge rating (1,206 rated answers, 1,874 needs rated by both judges) | [`outputs/vlm/judge/<judge>/<auditor>/`](outputs/vlm/judge/) |
 | The tables behind every number, as CSV | [`outputs/vlm/analysis_audit/`](outputs/vlm/analysis_audit/) |
 | The city sample and its design (inclusion probabilities, weights, diagnostics) | [`data/city_sample/`](data/city_sample/) |
@@ -175,8 +178,9 @@ Each answer file holds the model's checkpoint and revision, the prompt version (
 condition (temperature, seed, frames, image size), the frame paths, the raw text and the parsed answer. A clip's
 id is `<YouTube video id>_<start ms>_<length ms>`, so each clip can be traced to its source video. The footage itself
 comes from YouTube via the CROWD dataset; this repository holds no video. JAAD's clips and labels come from
-[the JAAD dataset](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/); the answers on them are not included, but
-their scores are in [`jaad_validity.csv`](outputs/vlm/analysis_audit/jaad_validity.csv).
+[the JAAD dataset](https://data.nvision2.eecs.yorku.ca/JAAD_dataset/) (Rasouli et al., 2017; annotations under the
+MIT licence, clips under CC BY 4.0); `data/clip_sets/jaad_labels.json` holds its labels for the 120 sampled clips,
+and the JAAD frames themselves are not included.
 
 ## Models
 
@@ -233,16 +237,21 @@ unknown setting is an error). Downloading CROWD footage needs a login to the CRO
 
 ### The analysis from the published answers
 
-The published answers and ratings are enough to recompute every table and figure, without a GPU:
+Everything the analysis reads is in this repository (the answers, the judge ratings, the clip sets with JAAD's
+labels, the city sample and the frames shown in the figures), so a fresh clone recomputes every table and figure of
+the paper and this README, without a GPU or the footage:
 
 ```bash
-uv run python scripts/analysis/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/
-uv run python scripts/analysis/paper_figures.py    # the paper's five figures in docs/figures/paper/ (Figures 1 and 3 need the frames)
+uv sync
+uv run python scripts/analysis/analyse_audit.py    # tables in outputs/vlm/analysis_audit/, figures in docs/figures/audit/
+uv run python scripts/analysis/paper_figures.py    # the paper's five figures in docs/figures/paper/
+git status                                          # nothing changes: the tables and figures are the published ones
 ```
 
-The JAAD validity table also needs JAAD's labels for the sampled clips (`data/clip_sets/jaad_labels.json`, built
-by `scripts/data/build_clip_sets.py` from the JAAD annotations). Static PNGs need a Chromium browser for Kaleido; set
-`BROWSER_PATH` if Chrome is not installed, or pass `--no-png` to `analyse_audit.py` for HTML only.
+The bootstraps use fixed seeds, so the tables come out identical; the figures do too where Arial is installed (other
+fonts shift the PNGs' pixels, not their content). Static PNGs need a Chromium browser for Kaleido
+(set `BROWSER_PATH` if Chrome is not installed, or pass `--no-png` to `analyse_audit.py` for HTML only), and the
+maps need an internet connection for Plotly's world outlines.
 
 ### The full pipeline
 

@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0335",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0335/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"People are walking and pushing trolleys directly on the asphalt surface without a designated sidewalk.\",\"frame\":1,\"x\":310,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a raised sidewalk on the left side to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"Pedestrians are standing and walking on the asphalt surface next to the building entrance.\",\"frame\":1,\"x\":620,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a dedicated pedestrian footway along the building frontage to improve safety.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is faded, poorly defined, and obstructed by pedestrians and trolleys.\",\"frame\":1,\"x\":400,\"y\":850,\"measure\":\"improve_crossing\",\"suggestion\":\"Repaint the zebra crossing with high-visibility thermoplastic paint to clearly define the pedestrian priority zone.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "People are walking and pushing trolleys directly on the asphalt surface without a designated sidewalk.",
+    "frame": 1,
+    "x": 310,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a raised sidewalk on the left side to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "Pedestrians are standing and walking on the asphalt surface next to the building entrance.",
+    "frame": 1,
+    "x": 620,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a dedicated pedestrian footway along the building frontage to improve safety."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is faded, poorly defined, and obstructed by pedestrians and trolleys.",
+    "frame": 1,
+    "x": 400,
+    "y": 850,
+    "measure": "improve_crossing",
+    "suggestion": "Repaint the zebra crossing with high-visibility thermoplastic paint to clearly define the pedestrian priority zone."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 551.23,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3011,
+  "completion_tokens": 426,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,142 @@
+{
+ "clip_id": "video_0281",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0281/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has a snow-covered, trodden path with no clear, continuous sidewalk, forcing pedestrians to navigate through snow and potential obstacles.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, snow-cleared sidewalk on the left side to provide a safe and accessible path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side also has a snow-covered, trodden path with no clear, continuous sidewalk, similar to the left side.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, snow-cleared sidewalk on the right side to provide a safe and accessible path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"The left side's informal path is partially blocked by snow piles and possibly other obstacles, making it difficult for pedestrians to pass.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Regularly clear snow and remove obstacles from the left side's path to ensure it remains passable for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The right side's informal path is also partially blocked by snow piles and possibly other obstacles.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Regularly clear snow and remove obstacles from the right side's path to ensure it remains passable for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left side's path has uneven sections due to snow accumulation, which can be a trip hazard for pedestrians.\",\"frame\":1,\"x\":150,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Smooth out the uneven sections on the left side's path to reduce trip hazards for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The right side's path also has uneven sections due to snow accumulation, posing a trip hazard.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Smooth out the uneven sections on the right side's path to reduce trip hazards for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no visible pedestrian crossing facility on this stretch of road, despite the presence of buildings and potential pedestrian activity.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at a suitable location to provide a safe crossing point for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has a snow-covered, trodden path with no clear, continuous sidewalk, forcing pedestrians to navigate through snow and potential obstacles.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, snow-cleared sidewalk on the left side to provide a safe and accessible path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side also has a snow-covered, trodden path with no clear, continuous sidewalk, similar to the left side.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, snow-cleared sidewalk on the right side to provide a safe and accessible path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "The left side's informal path is partially blocked by snow piles and possibly other obstacles, making it difficult for pedestrians to pass.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Regularly clear snow and remove obstacles from the left side's path to ensure it remains passable for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The right side's informal path is also partially blocked by snow piles and possibly other obstacles.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Regularly clear snow and remove obstacles from the right side's path to ensure it remains passable for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left side's path has uneven sections due to snow accumulation, which can be a trip hazard for pedestrians.",
+    "frame": 1,
+    "x": 150,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Smooth out the uneven sections on the left side's path to reduce trip hazards for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The right side's path also has uneven sections due to snow accumulation, posing a trip hazard.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Smooth out the uneven sections on the right side's path to reduce trip hazards for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no visible pedestrian crossing facility on this stretch of road, despite the presence of buildings and potential pedestrian activity.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at a suitable location to provide a safe crossing point for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 420.63,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 3094,
+  "completion_tokens": 783,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

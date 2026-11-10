@@ -1,0 +1,100 @@
+{
+ "clip_id": "video_0055",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0055/frame_00084.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is an open paved area with no purpose-built footway, forcing pedestrians to walk in the road.\",\"frame\":1,\"x\":250,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built footway along the left side of the road to provide a safe walking surface for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side of the road is an open paved area with no purpose-built footway, forcing pedestrians to walk in the road.\",\"frame\":1,\"x\":750,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, purpose-built footway along the right side of the road to provide a safe walking surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a clear need to cross the road to access the commercial buildings and parking areas, but no formal crossing facility is present.\",\"frame\":1,\"x\":500,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with a central refuge island to provide a safe and visible place for people to cross the road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is an open paved area with no purpose-built footway, forcing pedestrians to walk in the road.",
+    "frame": 1,
+    "x": 250,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built footway along the left side of the road to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side of the road is an open paved area with no purpose-built footway, forcing pedestrians to walk in the road.",
+    "frame": 1,
+    "x": 750,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, purpose-built footway along the right side of the road to provide a safe walking surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a clear need to cross the road to access the commercial buildings and parking areas, but no formal crossing facility is present.",
+    "frame": 1,
+    "x": 500,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with a central refuge island to provide a safe and visible place for people to cross the road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 47.46,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2523,
+  "completion_tokens": 460,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

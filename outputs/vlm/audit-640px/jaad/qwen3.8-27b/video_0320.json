@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0320",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0320/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0320/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No sidewalk is visible on the left; the area is covered in snow with hedges and trees, forcing pedestrians to walk in the road.\",\"frame\":1,\"x\":250,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, snow-cleared sidewalk on the left side, separated from the carriageway by a kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No sidewalk is visible on the right; the area is a wide, snow-covered bank with no defined path for pedestrians.\",\"frame\":1,\"x\":750,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved, snow-cleared sidewalk on the right side, providing a safe and accessible route for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are seen crossing the road in the middle of the clip, but there is no marked or signalised crossing facility.\",\"frame\":4,\"x\":500,\"y\":800,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility signage to provide a safe and legal place for people to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No sidewalk is visible on the left; the area is covered in snow with hedges and trees, forcing pedestrians to walk in the road.",
+    "frame": 1,
+    "x": 250,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, snow-cleared sidewalk on the left side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No sidewalk is visible on the right; the area is a wide, snow-covered bank with no defined path for pedestrians.",
+    "frame": 1,
+    "x": 750,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved, snow-cleared sidewalk on the right side, providing a safe and accessible route for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are seen crossing the road in the middle of the clip, but there is no marked or signalised crossing facility.",
+    "frame": 4,
+    "x": 500,
+    "y": 800,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility signage to provide a safe and legal place for people to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 228.75,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 2767,
+  "completion_tokens": 456,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

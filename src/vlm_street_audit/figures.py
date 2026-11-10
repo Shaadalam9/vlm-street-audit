@@ -25,7 +25,7 @@ def style(fig: go.Figure) -> go.Figure:
 def save_figure(fig: go.Figure, name: str, formats: Iterable[str] = (), directory: Path = FIGURE_DIR) -> Path:
     directory.mkdir(parents=True, exist_ok=True)
     html = directory / f"{name}.html"
-    fig.write_html(html, include_plotlyjs="cdn")
+    fig.write_html(html, include_plotlyjs="cdn", div_id=name)  # a fixed id: the same figure gives the same file
     for extension in formats:
         fig.write_image(directory / f"{name}.{extension}", scale=2)
     return html

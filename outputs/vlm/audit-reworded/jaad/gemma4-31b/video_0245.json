@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0245",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0245/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0245/frame_00024.jpg",
+  "data/clip_sets/jaad_frames/video_0245/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0245/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0245/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"The sidewalk is almost entirely blocked by large piles of snow, forcing pedestrians to walk on the edge of the road.\",\"frame\":4,\"x\":850,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Implement a more effective snow removal programme to keep the footways clear and usable for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The accumulation of snow and ice on the footway creates significant trip and slip hazards.\",\"frame\":4,\"x\":850,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Regularly clear snow and apply grit to the footways to prevent ice build-up and trip hazards.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The zebra crossing is poorly marked and partially obscured by snow, making it less visible to drivers.\",\"frame\":4,\"x\":500,\"y\":900,\"measure\":\"improve_crossing\",\"suggestion\":\"Repaint the zebra crossing with high-visibility thermoplastic paint and ensure it is kept clear of snow.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "The sidewalk is almost entirely blocked by large piles of snow, forcing pedestrians to walk on the edge of the road.",
+    "frame": 4,
+    "x": 850,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Implement a more effective snow removal programme to keep the footways clear and usable for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The accumulation of snow and ice on the footway creates significant trip and slip hazards.",
+    "frame": 4,
+    "x": 850,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Regularly clear snow and apply grit to the footways to prevent ice build-up and trip hazards."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The zebra crossing is poorly marked and partially obscured by snow, making it less visible to drivers.",
+    "frame": 4,
+    "x": 500,
+    "y": 900,
+    "measure": "improve_crossing",
+    "suggestion": "Repaint the zebra crossing with high-visibility thermoplastic paint and ensure it is kept clear of snow."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 131.8,
+ "usage": {
+  "prompt_tokens": 2611,
+  "total_tokens": 3067,
+  "completion_tokens": 456,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

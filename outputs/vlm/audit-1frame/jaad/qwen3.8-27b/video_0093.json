@@ -1,0 +1,130 @@
+{
+ "clip_id": "video_0093",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0093/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous, purpose-built sidewalk is visible on the left; the area between the road and the properties is an uneven, snow-covered strip.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the left side, separated from the carriageway by a kerb.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous, purpose-built sidewalk is visible on the right; the area is an uneven, snow-covered strip.\",\"frame\":1,\"x\":850,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway on the right side, separated from the carriageway by a kerb.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven and covered with snow, creating significant trip hazards.\",\"frame\":1,\"x\":150,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the left-side footway with a smooth, level surface to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path on the right is uneven and covered with snow, creating significant trip hazards.\",\"frame\":1,\"x\":850,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the right-side footway with a smooth, level surface to eliminate trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is a clear demand for crossing due to residential properties on both sides, but no marked or purpose-built crossing facility is visible.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at a logical point along this residential street.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"road\",\"evidence\":\"No kerb ramps are visible as there is no formal crossing or defined kerb line.\",\"frame\":1,\"x\":500,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct dropped kerbs at the new pedestrian crossing to provide safe and accessible access for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous, purpose-built sidewalk is visible on the left; the area between the road and the properties is an uneven, snow-covered strip.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the left side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous, purpose-built sidewalk is visible on the right; the area is an uneven, snow-covered strip.",
+    "frame": 1,
+    "x": 850,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway on the right side, separated from the carriageway by a kerb."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven and covered with snow, creating significant trip hazards.",
+    "frame": 1,
+    "x": 150,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the left-side footway with a smooth, level surface to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path on the right is uneven and covered with snow, creating significant trip hazards.",
+    "frame": 1,
+    "x": 850,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the right-side footway with a smooth, level surface to eliminate trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is a clear demand for crossing due to residential properties on both sides, but no marked or purpose-built crossing facility is visible.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a logical point along this residential street."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "road",
+    "evidence": "No kerb ramps are visible as there is no formal crossing or defined kerb line.",
+    "frame": 1,
+    "x": 500,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Construct dropped kerbs at the new pedestrian crossing to provide safe and accessible access for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 169.31,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2756,
+  "completion_tokens": 693,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

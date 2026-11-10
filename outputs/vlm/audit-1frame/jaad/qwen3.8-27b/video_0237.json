@@ -1,0 +1,90 @@
+{
+ "clip_id": "video_0237",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0237/frame_00072.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is a paved parking area with no dedicated footway; a red shelter and parked cars occupy the space, so pedestrians would have to walkin\",\"frame\":1,\"x\":200,\"y\":600,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, raised footway along the left edge of the carriageway, separated from the parking bays by a physical barrier.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a clear demand to cross to the exit building on the right, but the only facility is a basic painted zebra crossing with no refuge or signal.\",\"frame\":1,\"x\":350,\"y\":750,\"measure\":\"add_refuge_island\",\"suggestion\":\"Install a central pedestrian refuge island in the middle of the carriageway to allow users to cross one direction of traffic at a time.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is a paved parking area with no dedicated footway; a red shelter and parked cars occupy the space, so pedestrians would have to walkin",
+    "frame": 1,
+    "x": 200,
+    "y": 600,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, raised footway along the left edge of the carriageway, separated from the parking bays by a physical barrier."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a clear demand to cross to the exit building on the right, but the only facility is a basic painted zebra crossing with no refuge or signal.",
+    "frame": 1,
+    "x": 350,
+    "y": 750,
+    "measure": "add_refuge_island",
+    "suggestion": "Install a central pedestrian refuge island in the middle of the carriageway to allow users to cross one direction of traffic at a time."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 26.06,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2457,
+  "completion_tokens": 394,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,92 @@
+{
+ "clip_id": "video_0055",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0055/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0055/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0055/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0055/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0055/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"pedestrians are walking on the grass or in the carriageway as there is no paved footway\",\"frame\":4,\"x\":215,\"y\":620,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous sidewalk on the left side of the road to provide a safe path for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"pedestrians are crossing the carriageway without any designated crossing facility\",\"frame\":4,\"x\":855,\"y\":630,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to safely facilitate movement across the parking area.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "pedestrians are walking on the grass or in the carriageway as there is no paved footway",
+    "frame": 4,
+    "x": 215,
+    "y": 620,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous sidewalk on the left side of the road to provide a safe path for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "pedestrians are crossing the carriageway without any designated crossing facility",
+    "frame": 4,
+    "x": 855,
+    "y": 630,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to safely facilitate movement across the parking area."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 146.41,
+ "usage": {
+  "prompt_tokens": 2611,
+  "total_tokens": 2973,
+  "completion_tokens": 362,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

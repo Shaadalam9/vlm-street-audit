@@ -1,0 +1,112 @@
+{
+ "clip_id": "video_0335",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0335/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00042.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00084.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00126.jpg",
+  "data/clip_sets/jaad_frames/video_0335/frame_00168.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side of the road is a parking area with no dedicated footway, forcing pedestrians to walk in the carriageway.\",\"frame\":1,\"x\":200,\"y\":700,\"measure\":\"build_footway\",\"suggestion\":\"Construct a paved footway along the left side of the road to provide a safe path for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is obstructed by a pallet of goods and is located in a wet, poorly lit area with no refuge.\",\"frame\":1,\"x\":400,\"y\":800,\"measure\":\"improve_crossing\",\"suggestion\":\"Relocate the marked crossing to a clearer, well-lit position and add a pedestrian refuge island to improve safety.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs at the marked crossing, making it difficult for pedestrians with mobility issues to cross.\",\"frame\":1,\"x\":400,\"y\":800,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at both ends of the marked crossing to facilitate easier access for all pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"The road is an urban commercial area with no street lighting, making it dark and unsafe for pedestrians at night.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install street lighting along the road to improve visibility and safety for pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side of the road is a parking area with no dedicated footway, forcing pedestrians to walk in the carriageway.",
+    "frame": 1,
+    "x": 200,
+    "y": 700,
+    "measure": "build_footway",
+    "suggestion": "Construct a paved footway along the left side of the road to provide a safe path for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is obstructed by a pallet of goods and is located in a wet, poorly lit area with no refuge.",
+    "frame": 1,
+    "x": 400,
+    "y": 800,
+    "measure": "improve_crossing",
+    "suggestion": "Relocate the marked crossing to a clearer, well-lit position and add a pedestrian refuge island to improve safety."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs at the marked crossing, making it difficult for pedestrians with mobility issues to cross.",
+    "frame": 1,
+    "x": 400,
+    "y": 800,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at both ends of the marked crossing to facilitate easier access for all pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "The road is an urban commercial area with no street lighting, making it dark and unsafe for pedestrians at night.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install street lighting along the road to improve visibility and safety for pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 250.77,
+ "usage": {
+  "prompt_tokens": 5611,
+  "total_tokens": 6142,
+  "completion_tokens": 531,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

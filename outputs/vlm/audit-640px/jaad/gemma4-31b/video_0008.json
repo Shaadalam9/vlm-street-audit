@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0008",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0008/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0008/frame_00030.jpg",
+  "data/clip_sets/jaad_frames/video_0008/frame_00060.jpg",
+  "data/clip_sets/jaad_frames/video_0008/frame_00090.jpg",
+  "data/clip_sets/jaad_frames/video_0008/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"People are walking in the parking area next to parked cars with no designated sidewalk.\",\"frame\":3,\"x\":820,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a designated sidewalk on the right side of the parking area to separate pedestrians from vehicle traffic.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrians are crossing the parking area to access shops without any marked or signalised crossing facility.\",\"frame\":3,\"x\":500,\"y\":650,\"measure\":\"build_footway\",\"suggestion\":\"Install a marked pedestrian crossing to provide a safe path for people moving between the parking area and the shops.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"No street lights are visible in this urban commercial area.\",\"frame\":1,\"x\":500,\"y\":200,\"measure\":\"build_footway\",\"suggestion\":\"Install street lighting throughout the parking area to improve visibility and safety for pedestrians and drivers at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "People are walking in the parking area next to parked cars with no designated sidewalk.",
+    "frame": 3,
+    "x": 820,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a designated sidewalk on the right side of the parking area to separate pedestrians from vehicle traffic."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrians are crossing the parking area to access shops without any marked or signalised crossing facility.",
+    "frame": 3,
+    "x": 500,
+    "y": 650,
+    "measure": "build_footway",
+    "suggestion": "Install a marked pedestrian crossing to provide a safe path for people moving between the parking area and the shops."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "No street lights are visible in this urban commercial area.",
+    "frame": 1,
+    "x": 500,
+    "y": 200,
+    "measure": "build_footway",
+    "suggestion": "Install street lighting throughout the parking area to improve visibility and safety for pedestrians and drivers at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 158.69,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3022,
+  "completion_tokens": 437,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

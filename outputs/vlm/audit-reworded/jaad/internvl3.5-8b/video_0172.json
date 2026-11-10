@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0172",
+ "set": "jaad",
+ "role": "main",
+ "model": "internvl3.5-8b",
+ "checkpoint": "OpenGVLab/InternVL3_5-8B-HF",
+ "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0172/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00036.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0172/frame_00144.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"parking_area\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"1\",\"median\":\"not_visible\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"stacks of goods on sidewalk\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Remove the stacks of goods to allow unobstructed pedestrian access.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"wet and uneven surface\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections of the sidewalk to prevent trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"wet and uneven surface\",\"frame\":1,\"x\":700,\"y\":500,\"measure\":\"repair_footway\",\"suggestion\":\"Repair the uneven sections of the sidewalk to prevent trip hazards.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "parking_area",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "1",
+   "median": "not_visible",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "stacks of goods on sidewalk",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Remove the stacks of goods to allow unobstructed pedestrian access."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "wet and uneven surface",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections of the sidewalk to prevent trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "wet and uneven surface",
+    "frame": 1,
+    "x": 700,
+    "y": 500,
+    "measure": "repair_footway",
+    "suggestion": "Repair the uneven sections of the sidewalk to prevent trip hazards."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 33.1,
+ "usage": {
+  "prompt_tokens": 12729,
+  "total_tokens": 13105,
+  "completion_tokens": 376,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0328",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0328/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0328/frame_00024.jpg",
+  "data/clip_sets/jaad_frames/video_0328/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0328/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0328/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"ample\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"1\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has a narrow, informal path with snow and debris, not a proper sidewalk.\",\"frame\":1,\"x\":100,\"y\":850,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved sidewalk on the left side, separated from the road by a kerb.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"A pedestrian is crossing the road at an unmarked location, indicating a need for a formal crossing.\",\"frame\":4,\"x\":400,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with high-visibility paint and signage at this location.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"There are no dropped kerbs at the unmarked crossing point where the pedestrian is walking.\",\"frame\":4,\"x\":400,\"y\":750,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the new marked crossing to provide safe and accessible access for all pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "ample",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "1",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has a narrow, informal path with snow and debris, not a proper sidewalk.",
+    "frame": 1,
+    "x": 100,
+    "y": 850,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved sidewalk on the left side, separated from the road by a kerb."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "A pedestrian is crossing the road at an unmarked location, indicating a need for a formal crossing.",
+    "frame": 4,
+    "x": 400,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with high-visibility paint and signage at this location."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "There are no dropped kerbs at the unmarked crossing point where the pedestrian is walking.",
+    "frame": 4,
+    "x": 400,
+    "y": 750,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the new marked crossing to provide safe and accessible access for all pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 175.69,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 2745,
+  "completion_tokens": 434,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

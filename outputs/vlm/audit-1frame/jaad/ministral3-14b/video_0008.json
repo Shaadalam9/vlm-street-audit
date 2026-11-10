@@ -1,0 +1,130 @@
+{
+ "clip_id": "video_0008",
+ "set": "jaad",
+ "role": "main",
+ "model": "ministral3-14b",
+ "checkpoint": "mistralai/Ministral-3-14B-Instruct-2512",
+ "revision": "29439f81c2be264d8d393273f99e7db9c0961120",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0008/frame_00060.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"4_or_more\",\"median\":\"physical\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_under_1m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1.5m wide along the left side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":200,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"footway is under 1m and partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"build_footway\",\"suggestion\":\"Install a continuous, usable sidewalk at least 1.5m wide along the right side of the road.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"footway is partly blocked by parked vehicles\",\"frame\":1,\"x\":800,\"y\":500,\"measure\":\"clear_footway\",\"suggestion\":\"Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"pedestrians crossing in the absence of a crossing facility\",\"frame\":1,\"x\":500,\"y\":550,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with refuge islands at this location to facilitate safe crossing for pedestrians.\"},{\"need\":\"no_refuge_on_wide_road\",\"where\":\"road\",\"evidence\":\"4_or_more lanes and no refuge on any crossing facility\",\"frame\":1,\"x\":500,\"y\":550,\"measure\":\"add_refuge_island\",\"suggestion\":\"Add a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing a wide road.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "4_or_more",
+   "median": "physical",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_under_1m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1.5m wide along the left side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 200,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "footway is under 1m and partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "build_footway",
+    "suggestion": "Install a continuous, usable sidewalk at least 1.5m wide along the right side of the road."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "footway is partly blocked by parked vehicles",
+    "frame": 1,
+    "x": 800,
+    "y": 500,
+    "measure": "clear_footway",
+    "suggestion": "Ensure the footway is clear of obstructions by enforcing parking regulations and providing designated parking areas away from the footway."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "pedestrians crossing in the absence of a crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 550,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing with refuge islands at this location to facilitate safe crossing for pedestrians."
+   },
+   {
+    "need": "no_refuge_on_wide_road",
+    "where": "road",
+    "evidence": "4_or_more lanes and no refuge on any crossing facility",
+    "frame": 1,
+    "x": 500,
+    "y": 550,
+    "measure": "add_refuge_island",
+    "suggestion": "Add a refuge island in the middle of the road to provide a safe waiting area for pedestrians crossing a wide road."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 15.9,
+ "usage": {
+  "prompt_tokens": 2420,
+  "total_tokens": 3123,
+  "completion_tokens": 703,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

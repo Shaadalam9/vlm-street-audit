@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0281",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0281/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0281/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"right_side\":{\"footway\":\"none\",\"obstruction\":\"no_footway\",\"trip_hazards\":\"no_footway\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The sidewalk is completely buried under deep snow, forcing pedestrians into the road.\",\"frame\":5,\"x\":200,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement regular snow removal on the left-hand sidewalk to ensure pedestrian accessibility.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The sidewalk is completely buried under deep snow, forcing pedestrians into the road.\",\"frame\":5,\"x\":800,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement regular snow removal on the right-hand sidewalk to ensure pedestrian accessibility.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is almost entirely obscured by snow, making it invisible to drivers.\",\"frame\":3,\"x\":620,\"y\":550,\"measure\":\"clear_footway\",\"suggestion\":\"Prioritise snow clearance at the marked pedestrian crossing to improve visibility and safety.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "right_side": {
+   "footway": "none",
+   "obstruction": "no_footway",
+   "trip_hazards": "no_footway"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The sidewalk is completely buried under deep snow, forcing pedestrians into the road.",
+    "frame": 5,
+    "x": 200,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement regular snow removal on the left-hand sidewalk to ensure pedestrian accessibility."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The sidewalk is completely buried under deep snow, forcing pedestrians into the road.",
+    "frame": 5,
+    "x": 800,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement regular snow removal on the right-hand sidewalk to ensure pedestrian accessibility."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is almost entirely obscured by snow, making it invisible to drivers.",
+    "frame": 3,
+    "x": 620,
+    "y": 550,
+    "measure": "clear_footway",
+    "suggestion": "Prioritise snow clearance at the marked pedestrian crossing to improve visibility and safety."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 347.34,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3005,
+  "completion_tokens": 420,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

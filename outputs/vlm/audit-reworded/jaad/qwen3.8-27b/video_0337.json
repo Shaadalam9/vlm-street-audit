@@ -1,0 +1,132 @@
+{
+ "clip_id": "video_0337",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0337/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00024.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00072.jpg",
+  "data/clip_sets/jaad_frames/video_0337/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":false},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The left side has a narrow, informal path that is partially blocked by parked vehicles and snow, making it difficult for pedestrians to use.\",\"frame\":4,\"x\":100,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen the left-side footway to a minimum of 1.5 meters and clear the snow to ensure a safe and accessible path for pedestrians.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The right side has a narrow, informal path that is partially blocked by snow and pedestrians, making it difficult for pedestrians to use.\",\"frame\":4,\"x\":900,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Widen the right-side footway to a minimum of 1.5 meters and clear the snow to ensure a safe and accessible path for pedestrians.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The left-side footway has uneven sections and snow, which are major trip hazards for pedestrians.\",\"frame\":4,\"x\":100,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the left-side footway to create a smooth, even surface and install snow-clearing measures to reduce trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The right-side footway has uneven sections and snow, which are major trip hazards for pedestrians.\",\"frame\":4,\"x\":900,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Resurface the right-side footway to create a smooth, even surface and install snow-clearing measures to reduce trip hazards.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"There is no marked or purpose-built pedestrian crossing visible in any frame, despite the presence of pedestrians and shops.\",\"frame\":4,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at a suitable location to provide a safe crossing point for pedestrians.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in any frame, which is a concern for pedestrian safety, especially in low-light conditions.\",\"frame\":4,\"x\":500,\"y\":500,\"measure\":\"improve_crossing\",\"suggestion\":\"Install street lights along the road to improve visibility and safety for pedestrians and drivers, especially during evening and night hours.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": false
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The left side has a narrow, informal path that is partially blocked by parked vehicles and snow, making it difficult for pedestrians to use.",
+    "frame": 4,
+    "x": 100,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Widen the left-side footway to a minimum of 1.5 meters and clear the snow to ensure a safe and accessible path for pedestrians."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The right side has a narrow, informal path that is partially blocked by snow and pedestrians, making it difficult for pedestrians to use.",
+    "frame": 4,
+    "x": 900,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Widen the right-side footway to a minimum of 1.5 meters and clear the snow to ensure a safe and accessible path for pedestrians."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The left-side footway has uneven sections and snow, which are major trip hazards for pedestrians.",
+    "frame": 4,
+    "x": 100,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the left-side footway to create a smooth, even surface and install snow-clearing measures to reduce trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The right-side footway has uneven sections and snow, which are major trip hazards for pedestrians.",
+    "frame": 4,
+    "x": 900,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Resurface the right-side footway to create a smooth, even surface and install snow-clearing measures to reduce trip hazards."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "There is no marked or purpose-built pedestrian crossing visible in any frame, despite the presence of pedestrians and shops.",
+    "frame": 4,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at a suitable location to provide a safe crossing point for pedestrians."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in any frame, which is a concern for pedestrian safety, especially in low-light conditions.",
+    "frame": 4,
+    "x": 500,
+    "y": 500,
+    "measure": "improve_crossing",
+    "suggestion": "Install street lights along the road to improve visibility and safety for pedestrians and drivers, especially during evening and night hours."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 160.11,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 6394,
+  "completion_tokens": 760,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

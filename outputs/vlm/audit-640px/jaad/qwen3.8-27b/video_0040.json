@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0040",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0040/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0040/frame_00048.jpg",
+  "data/clip_sets/jaad_frames/video_0040/frame_00096.jpg",
+  "data/clip_sets/jaad_frames/video_0040/frame_00144.jpg",
+  "data/clip_sets/jaad_frames/video_0040/frame_00192.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A person is standing in the roadway next to a parked van, indicating the footway is obstructed or unusable.\",\"frame\":2,\"x\":390,\"y\":750,\"measure\":\"widen_or_separate_footway\",\"suggestion\":\"Widen the left-side footway to provide a clear, unobstructed path for pedestrians.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"A white van is parked on the footway, blocking the path.\",\"frame\":2,\"x\":200,\"y\":750,\"measure\":\"clear_footway\",\"suggestion\":\"Enforce no-parking on the left-side footway to keep it clear for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"There is a high demand for crossing due to shops and offices on both sides, but no marked or signalised crossing is visible.\",\"frame\":3,\"x\":500,\"y\":750,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at a logical point along this stretch to provide a safe place to cross.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A person is standing in the roadway next to a parked van, indicating the footway is obstructed or unusable.",
+    "frame": 2,
+    "x": 390,
+    "y": 750,
+    "measure": "widen_or_separate_footway",
+    "suggestion": "Widen the left-side footway to provide a clear, unobstructed path for pedestrians."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "A white van is parked on the footway, blocking the path.",
+    "frame": 2,
+    "x": 200,
+    "y": 750,
+    "measure": "clear_footway",
+    "suggestion": "Enforce no-parking on the left-side footway to keep it clear for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "There is a high demand for crossing due to shops and offices on both sides, but no marked or signalised crossing is visible.",
+    "frame": 3,
+    "x": 500,
+    "y": 750,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at a logical point along this stretch to provide a safe place to cross."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 115.31,
+ "usage": {
+  "prompt_tokens": 2311,
+  "total_tokens": 2761,
+  "completion_tokens": 450,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

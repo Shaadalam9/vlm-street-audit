@@ -1,0 +1,140 @@
+{
+ "clip_id": "video_0281",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0281/frame_00096.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"The sidewalk is completely covered in snow, forcing pedestrians into the road.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement regular snow removal to maintain a clear and usable footway on the left side.\"},{\"need\":\"blocked_footway\",\"where\":\"left_side\",\"evidence\":\"Snow piles block the entire width of the footway.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the snow piles from the left footway to restore pedestrian access.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"Uneven snow and ice create significant trip hazards.\",\"frame\":1,\"x\":150,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Grit and clear the left footway to remove ice and uneven snow accumulations.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The sidewalk is completely covered in snow, forcing pedestrians into the road.\",\"frame\":1,\"x\":850,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Implement regular snow removal to maintain a clear and usable footway on the right side.\"},{\"need\":\"blocked_footway\",\"where\":\"right_side\",\"evidence\":\"Snow piles block the entire width of the footway.\",\"frame\":1,\"x\":850,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Clear the snow piles from the right footway to restore pedestrian access.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"Uneven snow and ice create significant trip hazards.\",\"frame\":1,\"x\":850,\"y\":800,\"measure\":\"clear_footway\",\"suggestion\":\"Grit and clear the right footway to remove ice and uneven snow accumulations.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The marked crossing is almost entirely obscured by snow, making it invisible to drivers.\",\"frame\":1,\"x\":715,\"y\":510,\"measure\":\"clear_footway\",\"suggestion\":\"Clear snow from the marked pedestrian crossing to ensure it is visible to motorists.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "poor",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "The sidewalk is completely covered in snow, forcing pedestrians into the road.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement regular snow removal to maintain a clear and usable footway on the left side."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "left_side",
+    "evidence": "Snow piles block the entire width of the footway.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Clear the snow piles from the left footway to restore pedestrian access."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "Uneven snow and ice create significant trip hazards.",
+    "frame": 1,
+    "x": 150,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Grit and clear the left footway to remove ice and uneven snow accumulations."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The sidewalk is completely covered in snow, forcing pedestrians into the road.",
+    "frame": 1,
+    "x": 850,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Implement regular snow removal to maintain a clear and usable footway on the right side."
+   },
+   {
+    "need": "blocked_footway",
+    "where": "right_side",
+    "evidence": "Snow piles block the entire width of the footway.",
+    "frame": 1,
+    "x": 850,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Clear the snow piles from the right footway to restore pedestrian access."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "Uneven snow and ice create significant trip hazards.",
+    "frame": 1,
+    "x": 850,
+    "y": 800,
+    "measure": "clear_footway",
+    "suggestion": "Grit and clear the right footway to remove ice and uneven snow accumulations."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The marked crossing is almost entirely obscured by snow, making it invisible to drivers.",
+    "frame": 1,
+    "x": 715,
+    "y": 510,
+    "measure": "clear_footway",
+    "suggestion": "Clear snow from the marked pedestrian crossing to ensure it is visible to motorists."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 263.52,
+ "usage": {
+  "prompt_tokens": 1500,
+  "total_tokens": 2194,
+  "completion_tokens": 694,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

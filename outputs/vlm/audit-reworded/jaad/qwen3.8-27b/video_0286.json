@@ -1,0 +1,82 @@
+{
+ "clip_id": "video_0286",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit_reworded",
+ "prompt_version": "72c35a95db4e",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0286/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00162.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00216.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":true,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"marked\",\"crossing_quality\":\"adequate\",\"kerb_ramps\":\"not_visible\"},\"needed\":[{\"need\":\"no_kerb_ramps\",\"where\":\"right_side\",\"evidence\":\"The pedestrian is stepping down from a high, vertical kerb onto the road surface without a visible ramp.\",\"frame\":4,\"x\":750,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Install a dropped kerb at the pedestrian crossing to provide a smooth, level transition for pedestrians.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": true,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "marked",
+   "crossing_quality": "adequate",
+   "kerb_ramps": "not_visible"
+  },
+  "needed": [
+   {
+    "need": "no_kerb_ramps",
+    "where": "right_side",
+    "evidence": "The pedestrian is stepping down from a high, vertical kerb onto the road surface without a visible ramp.",
+    "frame": 4,
+    "x": 750,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Install a dropped kerb at the pedestrian crossing to provide a smooth, level transition for pedestrians."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 117.81,
+ "usage": {
+  "prompt_tokens": 5634,
+  "total_tokens": 5913,
+  "completion_tokens": 279,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

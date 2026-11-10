@@ -1,0 +1,100 @@
+{
+ "clip_id": "video_0031",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0031/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"other\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"commercial\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_3m_or_more\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A continuous, purpose-built concrete sidewalk runs along the left side of the road, separated from the carriageway by a kerb.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"improve_crossing\",\"suggestion\":\"Install a marked pedestrian crossing with dropped kerbs at the entrance to the Canadian Tire store to provide a safe, designated crossing point.\"},{\"need\":\"no_crossing\",\"where\":\"left_side\",\"evidence\":\"There is a high demand for crossing due to the large retail store on the left, but no marked or signalised crossing is visible in the immediate vicinity.\",\"frame\":1,\"x\":400,\"y\":700,\"measure\":\"improve_crossing\",\"suggestion\":\"Construct a raised pedestrian crossing with high-visibility markings to slow traffic and provide a safe crossing point for shoppers.\"},{\"need\":\"poor_crossing\",\"where\":\"left_side\",\"evidence\":\"The lack of a formal crossing facility in front of a major retail destination creates a poor crossing environment, forcing pedestrians to cross at unmarked, un-\",\"frame\":1,\"x\":450,\"y\":720,\"measure\":\"improve_crossing\",\"suggestion\":\"Implement a pedestrian refuge island in the centre of the road to break the crossing distance and improve visibility for both pedestrians and drivers.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "other",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "commercial",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_3m_or_more",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A continuous, purpose-built concrete sidewalk runs along the left side of the road, separated from the carriageway by a kerb.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "improve_crossing",
+    "suggestion": "Install a marked pedestrian crossing with dropped kerbs at the entrance to the Canadian Tire store to provide a safe, designated crossing point."
+   },
+   {
+    "need": "no_crossing",
+    "where": "left_side",
+    "evidence": "There is a high demand for crossing due to the large retail store on the left, but no marked or signalised crossing is visible in the immediate vicinity.",
+    "frame": 1,
+    "x": 400,
+    "y": 700,
+    "measure": "improve_crossing",
+    "suggestion": "Construct a raised pedestrian crossing with high-visibility markings to slow traffic and provide a safe crossing point for shoppers."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "left_side",
+    "evidence": "The lack of a formal crossing facility in front of a major retail destination creates a poor crossing environment, forcing pedestrians to cross at unmarked, un-",
+    "frame": 1,
+    "x": 450,
+    "y": 720,
+    "measure": "improve_crossing",
+    "suggestion": "Implement a pedestrian refuge island in the centre of the road to break the crossing distance and improve visibility for both pedestrians and drivers."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 98.24,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2546,
+  "completion_tokens": 483,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

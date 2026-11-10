@@ -1,0 +1,130 @@
+{
+ "clip_id": "video_0200",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0200/frame_00060.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"residential_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"none\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_under_1m\",\"obstruction\":\"none\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"A narrow, un-paved strip of ground and grass runs between the kerb and the hedge, with no continuous, purpose-built sidewalk.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous, paved footway at least 1.5m wide along the left side, separating pedestrians from the carriageway.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"The area to the right of the road is an unpaved shoulder with a hedge, offering no safe, continuous path for pedestrians.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Build a dedicated, paved footway on the right side of the road to provide a safe walking surface away from traffic.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path on the left is uneven, with visible patches of mud and an irregular surface that would be a trip hazard.\",\"frame\":1,\"x\":250,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway with a smooth, level material to eliminate trip hazards.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The ground on the right side is an uneven, unpaved surface with potential for potholes and loose material.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Grade and pave the right-side footway to create a stable and even surface for pedestrians.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A pedestrian is standing in the carriageway, indicating a need to cross, but there is no marked or purpose-built crossing facility visible.\",\"frame\":1,\"x\":680,\"y\":700,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a clearly marked pedestrian crossing at this location to provide a safe and designated point for crossing.\"},{\"need\":\"no_street_lighting\",\"where\":\"road\",\"evidence\":\"There are no street lights visible along the road in the image, which is an urban area.\",\"frame\":1,\"x\":500,\"y\":500,\"measure\":\"add_street_lighting\",\"suggestion\":\"Install a series of street lights along both sides of the road to improve visibility and safety for all road users at night.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "residential_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "none",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_under_1m",
+   "obstruction": "none",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "A narrow, un-paved strip of ground and grass runs between the kerb and the hedge, with no continuous, purpose-built sidewalk.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous, paved footway at least 1.5m wide along the left side, separating pedestrians from the carriageway."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "The area to the right of the road is an unpaved shoulder with a hedge, offering no safe, continuous path for pedestrians.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Build a dedicated, paved footway on the right side of the road to provide a safe walking surface away from traffic."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path on the left is uneven, with visible patches of mud and an irregular surface that would be a trip hazard.",
+    "frame": 1,
+    "x": 250,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway with a smooth, level material to eliminate trip hazards."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The ground on the right side is an uneven, unpaved surface with potential for potholes and loose material.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Grade and pave the right-side footway to create a stable and even surface for pedestrians."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A pedestrian is standing in the carriageway, indicating a need to cross, but there is no marked or purpose-built crossing facility visible.",
+    "frame": 1,
+    "x": 680,
+    "y": 700,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a clearly marked pedestrian crossing at this location to provide a safe and designated point for crossing."
+   },
+   {
+    "need": "no_street_lighting",
+    "where": "road",
+    "evidence": "There are no street lights visible along the road in the image, which is an urban area.",
+    "frame": 1,
+    "x": 500,
+    "y": 500,
+    "measure": "add_street_lighting",
+    "suggestion": "Install a series of street lights along both sides of the road to improve visibility and safety for all road users at night."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 37.41,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2783,
+  "completion_tokens": 720,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

@@ -1,0 +1,120 @@
+{
+ "clip_id": "video_0295",
+ "set": "jaad",
+ "role": "main",
+ "model": "qwen3.8-27b",
+ "checkpoint": "RedHatAI/Qwen3.8-27B-INT4",
+ "revision": "91bd022d5b49442a868bc35008f6c21e1860edfa",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": [
+   3
+  ],
+  "max_side": 1280
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0295/frame_00120.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"residential\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"right_side\":{\"footway\":\"informal_path_1m_or_more\",\"obstruction\":\"partly_blocked\",\"trip_hazards\":\"some\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"not_applicable\",\"kerb_ramps\":\"no_crossing\"},\"needed\":[{\"need\":\"no_footway\",\"where\":\"left_side\",\"evidence\":\"No continuous paved sidewalk; a trodden strip runs between the parked car and the blue structure.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway on the left side to separate pedestrians from the parked vehicle and the blue structure.\"},{\"need\":\"no_footway\",\"where\":\"right_side\",\"evidence\":\"No continuous paved sidewalk; a trodden strip runs between the parked silver car and the buildings.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"build_footway\",\"suggestion\":\"Construct a continuous paved footway on the right side to separate pedestrians from the parked silver car and the buildings.\"},{\"need\":\"trip_hazards\",\"where\":\"left_side\",\"evidence\":\"The informal path is uneven and broken, with visible potholes and debris.\",\"frame\":1,\"x\":100,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the left-side footway to eliminate the uneven sections and potholes that pose a trip hazard.\"},{\"need\":\"trip_hazards\",\"where\":\"right_side\",\"evidence\":\"The informal path is uneven and broken, with visible potholes and debris.\",\"frame\":1,\"x\":850,\"y\":750,\"measure\":\"repair_footway\",\"suggestion\":\"Resurface the right-side footway to eliminate the uneven sections and potholes that pose a trip hazard.\"},{\"need\":\"no_crossing\",\"where\":\"road\",\"evidence\":\"A pedestrian is crossing the road in the middle of the carriageway with no marked or purpose-built crossing facility visible.\",\"frame\":1,\"x\":550,\"y\":650,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a marked pedestrian crossing at the location where the pedestrian is currently crossing to provide a safe and visible crossing point.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "residential",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "right_side": {
+   "footway": "informal_path_1m_or_more",
+   "obstruction": "partly_blocked",
+   "trip_hazards": "some"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "not_applicable",
+   "kerb_ramps": "no_crossing"
+  },
+  "needed": [
+   {
+    "need": "no_footway",
+    "where": "left_side",
+    "evidence": "No continuous paved sidewalk; a trodden strip runs between the parked car and the blue structure.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway on the left side to separate pedestrians from the parked vehicle and the blue structure."
+   },
+   {
+    "need": "no_footway",
+    "where": "right_side",
+    "evidence": "No continuous paved sidewalk; a trodden strip runs between the parked silver car and the buildings.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "build_footway",
+    "suggestion": "Construct a continuous paved footway on the right side to separate pedestrians from the parked silver car and the buildings."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "left_side",
+    "evidence": "The informal path is uneven and broken, with visible potholes and debris.",
+    "frame": 1,
+    "x": 100,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the left-side footway to eliminate the uneven sections and potholes that pose a trip hazard."
+   },
+   {
+    "need": "trip_hazards",
+    "where": "right_side",
+    "evidence": "The informal path is uneven and broken, with visible potholes and debris.",
+    "frame": 1,
+    "x": 850,
+    "y": 750,
+    "measure": "repair_footway",
+    "suggestion": "Resurface the right-side footway to eliminate the uneven sections and potholes that pose a trip hazard."
+   },
+   {
+    "need": "no_crossing",
+    "where": "road",
+    "evidence": "A pedestrian is crossing the road in the middle of the carriageway with no marked or purpose-built crossing facility visible.",
+    "frame": 1,
+    "x": 550,
+    "y": 650,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a marked pedestrian crossing at the location where the pedestrian is currently crossing to provide a safe and visible crossing point."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 31.17,
+ "usage": {
+  "prompt_tokens": 2063,
+  "total_tokens": 2671,
+  "completion_tokens": 608,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}

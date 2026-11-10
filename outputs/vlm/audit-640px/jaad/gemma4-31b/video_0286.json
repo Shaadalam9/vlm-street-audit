@@ -1,0 +1,102 @@
+{
+ "clip_id": "video_0286",
+ "set": "jaad",
+ "role": "main",
+ "model": "gemma4-31b",
+ "checkpoint": "google/gemma-4-31B-it-qat-w4a16-ct",
+ "revision": "52f3f65bc7a02d555763bc923bd1d9094898219d",
+ "prompt_variant": "audit",
+ "prompt_version": "96eb454ada88",
+ "condition": {
+  "temperature": 0.0,
+  "seed": 0,
+  "frames": null,
+  "max_side": 640
+ },
+ "frames": [
+  "data/clip_sets/jaad_frames/video_0286/frame_00000.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00054.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00108.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00162.jpg",
+  "data/clip_sets/jaad_frames/video_0286/frame_00216.jpg"
+ ],
+ "text": "{\"scene\":{\"road_type\":\"urban_street\",\"zebra_crossing_visible\":false,\"traffic_signal_visible\":false,\"pedestrians_visible\":true,\"pedestrians_in_carriageway\":true},\"road\":{\"area_type\":\"urban\",\"land_use\":\"mixed\",\"number_of_lanes\":\"2\",\"median\":\"none\",\"street_lighting\":\"some\",\"traffic_calming\":\"not_present\",\"pedestrian_fencing\":\"not_present\",\"transit_stops\":\"0\",\"bike_facility\":\"none\"},\"left_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"right_side\":{\"footway\":\"sidewalk_1_to_3m\",\"obstruction\":\"none\",\"trip_hazards\":\"none\"},\"crossing\":{\"crossing_demand\":true,\"crossing_facility\":\"none\",\"crossing_quality\":\"poor\",\"kerb_ramps\":\"none\"},\"needed\":[{\"need\":\"no_crossing\",\"where\":\"crossing\",\"evidence\":\"Pedestrian crossing the road where no marked crossing exists despite high demand.\",\"frame\":5,\"x\":375,\"y\":680,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Install a zebra crossing to provide a safe and designated crossing point for pedestrians.\"},{\"need\":\"poor_crossing\",\"where\":\"crossing\",\"evidence\":\"The crossing is poor as there is no marking or signal to alert drivers to pedestrians.\",\"frame\":5,\"x\":375,\"y\":680,\"measure\":\"add_marked_crossing\",\"suggestion\":\"Implement a marked pedestrian crossing to improve visibility and driver awareness.\"},{\"need\":\"no_kerb_ramps\",\"where\":\"crossing\",\"evidence\":\"No dropped kerbs are visible at the point where the pedestrian is crossing.\",\"frame\":5,\"x\":670,\"y\":720,\"measure\":\"add_dropped_kerbs\",\"suggestion\":\"Install dropped kerbs at the crossing point to improve accessibility for all users.\"}]}",
+ "answer": {
+  "scene": {
+   "road_type": "urban_street",
+   "zebra_crossing_visible": false,
+   "traffic_signal_visible": false,
+   "pedestrians_visible": true,
+   "pedestrians_in_carriageway": true
+  },
+  "road": {
+   "area_type": "urban",
+   "land_use": "mixed",
+   "number_of_lanes": "2",
+   "median": "none",
+   "street_lighting": "some",
+   "traffic_calming": "not_present",
+   "pedestrian_fencing": "not_present",
+   "transit_stops": "0",
+   "bike_facility": "none"
+  },
+  "left_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "right_side": {
+   "footway": "sidewalk_1_to_3m",
+   "obstruction": "none",
+   "trip_hazards": "none"
+  },
+  "crossing": {
+   "crossing_demand": true,
+   "crossing_facility": "none",
+   "crossing_quality": "poor",
+   "kerb_ramps": "none"
+  },
+  "needed": [
+   {
+    "need": "no_crossing",
+    "where": "crossing",
+    "evidence": "Pedestrian crossing the road where no marked crossing exists despite high demand.",
+    "frame": 5,
+    "x": 375,
+    "y": 680,
+    "measure": "add_marked_crossing",
+    "suggestion": "Install a zebra crossing to provide a safe and designated crossing point for pedestrians."
+   },
+   {
+    "need": "poor_crossing",
+    "where": "crossing",
+    "evidence": "The crossing is poor as there is no marking or signal to alert drivers to pedestrians.",
+    "frame": 5,
+    "x": 375,
+    "y": 680,
+    "measure": "add_marked_crossing",
+    "suggestion": "Implement a marked pedestrian crossing to improve visibility and driver awareness."
+   },
+   {
+    "need": "no_kerb_ramps",
+    "where": "crossing",
+    "evidence": "No dropped kerbs are visible at the point where the pedestrian is crossing.",
+    "frame": 5,
+    "x": 670,
+    "y": 720,
+    "measure": "add_dropped_kerbs",
+    "suggestion": "Install dropped kerbs at the crossing point to improve accessibility for all users."
+   }
+  ]
+ },
+ "error": null,
+ "seconds": 150.42,
+ "usage": {
+  "prompt_tokens": 2585,
+  "total_tokens": 3007,
+  "completion_tokens": 422,
+  "prompt_tokens_details": null,
+  "completion_tokens_details": null
+ },
+ "finish_reason": "stop"
+}
