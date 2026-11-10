@@ -166,7 +166,7 @@ Further figures, each with an interactive HTML version, are in [`docs/figures/au
 
 | What | Where |
 |---|---|
-| The frames the models saw (five per city clip) and a snapshot of the code | [Dropbox folder](https://www.dropbox.com/scl/fo/cl1e4cgdjlj43i5gy4gsy/ALxGI5IgWYm9RRxrfey5AYA?rlkey=cu2udsf5ooey7cp2ff6efu4ut&st=zjngk7m6&dl=0) |
+| The supplementary material: the frames the models saw (five per city clip), all answers and ratings, the prompts and a snapshot of the code | [4TU.ResearchData](https://doi.org/10.4121/7d310454-0d45-497c-a341-0f2742b7f904) |
 | Every model answer on the city clips: main audit and the four robustness runs (5,400 files) | [`outputs/vlm/<run>/cities/<model>/`](outputs/vlm/) |
 | Every model answer on the JAAD clips: main audit, reworded, one frame, half resolution (2,880 files) | [`outputs/vlm/<run>/jaad/<model>/`](outputs/vlm/) |
 | The clip sets and JAAD's labels for the 120 JAAD clips | [`data/clip_sets/`](data/clip_sets/) |
